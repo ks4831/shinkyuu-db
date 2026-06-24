@@ -8,7 +8,7 @@ const SITE_URL = process.env.NEXT_PUBLIC_SITE_URL ?? 'https://shinkyuu-db.vercel
 export const metadata: Metadata = {
   title: {
     default: '鍼灸国家試験 頻出分析データベース｜過去問から出題傾向を分析',
-    template: '%s | 鍼灸頻出DB',
+    template: '%s | 鍼灸国家試験 頻出分析DB',
   },
   description:
     '第32回〜第34回の鍼灸国家試験540問を分析。頻出テーマランキング、出題傾向、年度比較から効率的な学習を支援します。',
@@ -26,7 +26,7 @@ export const metadata: Metadata = {
     title: '鍼灸国家試験 頻出分析データベース',
     description: '第32回〜第34回の540問を分析。頻出テーマランキング・年度比較・科目別割合を可視化。',
     url: SITE_URL,
-    siteName: '鍼灸頻出DB',
+    siteName: '鍼灸国家試験 頻出分析データベース',
     locale: 'ja_JP',
     type: 'website',
   },
@@ -80,10 +80,21 @@ export default function RootLayout({
                 </ul>
               </div>
               <div>
-                <p className="font-semibold text-gray-700 mb-2">鍼灸頻出DB</p>
-                <p className="text-xs text-gray-400 leading-relaxed">
-                  第32〜34回の鍼灸国家試験540問を独自分析した非公式データベースです。
-                </p>
+                <p className="font-semibold text-gray-700 mb-2">鍼灸国家試験 頻出分析DB</p>
+                <ul className="space-y-1.5 text-xs text-gray-500">
+                  <li>
+                    <span className="text-gray-400">更新日</span>
+                    <span className="ml-1 font-medium text-gray-600">2026年6月</span>
+                  </li>
+                  <li>
+                    <span className="text-gray-400">分析対象回数</span>
+                    <span className="ml-1 font-medium text-gray-600">第32〜34回（3回分）</span>
+                  </li>
+                  <li>
+                    <span className="text-gray-400">分析問題数</span>
+                    <span className="ml-1 font-medium text-gray-600">540問</span>
+                  </li>
+                </ul>
               </div>
             </div>
             <div className="border-t border-gray-200 pt-4 text-xs text-gray-400 space-y-1">

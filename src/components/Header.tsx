@@ -7,7 +7,7 @@ export default function Header() {
         <Link href="/" className="flex items-center gap-2 group">
           <span className="text-green-600 text-xl">🩺</span>
           <span className="font-bold text-gray-800 group-hover:text-green-700 transition-colors">
-            鍼灸頻出DB
+            鍼灸国家試験 頻出分析DB
           </span>
         </Link>
         <nav className="flex items-center gap-1 text-sm">

@@ -95,7 +95,7 @@ export default function HomePage() {
         </p>
         <h1 className="text-3xl sm:text-4xl font-bold text-gray-900 leading-tight">
           鍼灸国家試験
-          <span className="text-green-600"> 頻出DB</span>
+          <span className="text-green-600"> 頻出分析DB</span>
         </h1>
         <p className="mt-3 text-lg text-gray-600 font-medium">
           過去問サイトではありません。
@@ -365,6 +365,34 @@ export default function HomePage() {
                 </Link>
               )
             })}
+          </div>
+        </section>
+
+        {/* ── 現在の分析対象 ───────────────────────── */}
+        <section>
+          <h2 className="text-lg font-bold text-gray-800 mb-4">現在の分析対象</h2>
+          <div className="bg-white rounded-2xl border border-gray-100 p-5">
+            <ul className="space-y-3 text-sm">
+              {[
+                { label: '第32回国家試験', count: '180問' },
+                { label: '第33回国家試験', count: '180問' },
+                { label: '第34回国家試験', count: '180問' },
+              ].map(item => (
+                <li key={item.label} className="flex items-center justify-between">
+                  <span className="flex items-center gap-2 text-gray-700 font-medium">
+                    <span className="text-green-500 font-bold">✓</span>
+                    {item.label}
+                  </span>
+                  <span className="text-xs text-green-600 font-semibold bg-green-50 border border-green-100 px-2.5 py-0.5 rounded-full">
+                    {item.count} 分析済み
+                  </span>
+                </li>
+              ))}
+            </ul>
+            <div className="mt-4 pt-4 border-t border-gray-100 flex items-center justify-between">
+              <span className="text-sm text-gray-500">合計</span>
+              <span className="text-base font-bold text-green-700">分析済み：540問</span>
+            </div>
           </div>
         </section>
 
