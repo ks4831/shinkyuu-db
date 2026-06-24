@@ -1,0 +1,4 @@
+id,examRound,year,questionNumber,session,subject,officialLarge,officialMedium,officialSmall,normalizedTheme,subTheme,importance,studyPoint,sourceUrl,sourceReliability,blueprintVersion,questionCountMode,memo
+exam29-Q001,29,2021,1,共通,meridians-acupoints,経穴,特定穴,原穴,gen-ketsu,,S,原穴の経脈対応を問う設問,https://ahaki.or.jp/exam/archives/,indexed_official,2020,180,サンプル行
+exam29-Q002,29,2021,2,共通,oriental-overview,東洋医学の基礎理論,陰陽論,陰陽の概念・属性・相互関係,in-yo-ron,,A,陰陽の相互関係に関する設問,https://ahaki.or.jp/exam/archives/,indexed_official,2020,180,サンプル行
+exam29-Q003,29,2021,3,共通,hygiene,健康増進,健康づくり対策,健康日本21（各次）の目標と評価,kenko-nihon-21,,A,健康日本21の目標値に関する設問,https://ahaki.or.jp/exam/archives/,indexed_official,2020,180,サンプル行

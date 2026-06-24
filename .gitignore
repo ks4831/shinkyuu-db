@@ -39,3 +39,9 @@ yarn-error.log*
 # typescript
 *.tsbuildinfo
 next-env.d.ts
+
+# downloaded exam PDFs (local analysis use only, not for distribution)
+/docs/exams/
+
+# local analysis text files
+*.txt
