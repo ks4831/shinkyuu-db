@@ -74,14 +74,14 @@ const RANK_BADGE = [
 ]
 
 const POPULAR_THEMES = [
-  { label: '経絡経穴',   href: '/subjects/meridians-acupoints' },
-  { label: '原穴',       href: '/themes' },
-  { label: '五行',       href: '/subjects/oriental-overview' },
-  { label: '六淫',       href: '/subjects/oriental-overview' },
-  { label: '刺鍼法',     href: '/subjects/acupuncture-theory' },
-  { label: '弁証論治',   href: '/subjects/oriental-clinical' },
-  { label: 'リハビリ',   href: '/subjects/rehabilitation' },
-  { label: '神経疾患',   href: '/subjects/clinical-specific' },
+  { label: '原穴',         href: '/themes/gen-ketsu' },
+  { label: '五兪穴',       href: '/themes/go-yu-ketsu' },
+  { label: '十二経脈',     href: '/themes/juni-kei-myaku' },
+  { label: '五行論',       href: '/themes/go-gyo-ron' },
+  { label: '弁証論治',     href: '/themes/ben-sho-ron-chi' },
+  { label: '経穴主治',     href: '/themes/kei-ketsu-shuchi' },
+  { label: '自律神経',     href: '/themes/jiritsu-shinkei' },
+  { label: '関係法規',     href: '/themes/kanke-hokki' },
 ]
 
 export default function HomePage() {
@@ -183,10 +183,10 @@ export default function HomePage() {
               </Link>
             ))}
             <Link
-              href="/themes"
+              href="/themes/library"
               className="px-3 py-1.5 text-sm bg-green-600 text-white rounded-full hover:bg-green-700 transition-colors shadow-sm font-semibold"
             >
-              すべて見る →
+              テーマ辞典 →
             </Link>
           </div>
         </div>

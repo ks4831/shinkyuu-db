@@ -69,8 +69,9 @@ export default function RootLayout({
                 </ul>
               </div>
               <div>
-                <p className="font-semibold text-gray-700 mb-2">データ検索</p>
+                <p className="font-semibold text-gray-700 mb-2">テーマ辞典・検索</p>
                 <ul className="space-y-1.5">
+                  <li><Link href="/themes/library" className="text-gray-500 hover:text-green-600 transition-colors">テーマ辞典</Link></li>
                   <li><Link href="/subjects" className="text-gray-500 hover:text-green-600 transition-colors">科目一覧</Link></li>
                   <li><Link href="/themes" className="text-gray-500 hover:text-green-600 transition-colors">テーマ検索</Link></li>
                 </ul>

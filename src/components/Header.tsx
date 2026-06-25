@@ -53,10 +53,16 @@ export default function Header() {
             科目一覧
           </Link>
           <Link
+            href="/themes/library"
+            className="px-3 py-1.5 rounded-lg text-gray-600 hover:text-green-700 hover:bg-green-50 transition-colors hidden sm:block"
+          >
+            テーマ辞典
+          </Link>
+          <Link
             href="/themes"
             className="px-3 py-1.5 rounded-lg text-gray-600 hover:text-green-700 hover:bg-green-50 transition-colors"
           >
-            テーマ検索
+            検索
           </Link>
           <Link
             href="/analysis/exam-34"

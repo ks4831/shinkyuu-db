@@ -6,6 +6,10 @@ export type LearningGuide = {
   memoryTips: string[]
   relatedThemeIds: string[]
   recommendedOrder: string[]
+  whyImportant?: string
+  keyPoints?: string[]
+  examTargets?: string[]
+  reviewTiming?: string
 }
 
 export const learningGuides: LearningGuide[] = [
@@ -33,6 +37,16 @@ export const learningGuides: LearningGuide[] = [
     ],
     relatedThemeIds: ['geki-ketsu', 'bo-ketsu', 'go-yu-ketsu'],
     recommendedOrder: ['juni-kei-myaku', 'go-yu-ketsu', 'gen-ketsu', 'geki-ketsu', 'bo-ketsu'],
+    whyImportant: '毎回必ず1〜2問出題される経穴学の最重要テーマ。12穴すべての経脈対応と陰経の規則を知っていれば確実に得点できる。',
+    keyPoints: [
+      '原穴は十二経脈に各1穴（計12穴）',
+      '陰経の原穴＝五兪穴の輸穴（例：肺経→太淵）',
+      '陽経の原穴は輸穴と別穴（例：胃経→衝陽、輸穴は陥谷）',
+      '大腸経の原穴は合谷（間違えやすい頻出ポイント）',
+      '原穴は臓腑の診断・治療に用いる（「原気」が集まる）',
+    ],
+    examTargets: ['穴名と帰属経脈の対応', '陰経の輸穴＝原穴ルール', '治療原則への応用'],
+    reviewTiming: '試験1週間前に「陰経6穴（太系）」「陽経6穴」をセットで再確認する',
   },
   {
     themeId: 'geki-ketsu',
@@ -58,6 +72,16 @@ export const learningGuides: LearningGuide[] = [
     ],
     relatedThemeIds: ['gen-ketsu', 'go-yu-ketsu'],
     recommendedOrder: ['juni-kei-myaku', 'go-yu-ketsu', 'gen-ketsu', 'geki-ketsu'],
+    whyImportant: '十六郄穴は毎回出題されるほぼ確実な得点源。奇経4穴を含む16穴の穴名と対応経脈を押さえると大きく差がつく。',
+    keyPoints: [
+      '郄穴は十二経（12穴）＋奇経4脈（4穴）＝計16穴',
+      '主治：急性疾患・疼痛に用いる特効穴',
+      '陰の郄穴→血証（出血・血瘀）に応用',
+      '陽の郄穴→気証（気滞・気痛）に応用',
+      '奇経：陰維→築賓、陽維→陽交、陰蹻→交信、陽蹻→跗陽',
+    ],
+    examTargets: ['16穴の穴名と帰属経脈', '陰陽の郄穴の主治の違い', '急性疾患への選穴'],
+    reviewTiming: '原穴・五兪穴を覚えた後に郄穴を上乗せ学習する（試験2〜3週間前が最適）',
   },
   {
     themeId: 'bo-ketsu',
@@ -83,6 +107,16 @@ export const learningGuides: LearningGuide[] = [
     ],
     relatedThemeIds: ['gen-ketsu', 'go-yu-ketsu', 'kei-ketsu-shuchi'],
     recommendedOrder: ['juni-kei-myaku', 'go-yu-ketsu', 'gen-ketsu', 'bo-ketsu'],
+    whyImportant: '募穴は背兪穴との組み合わせ（俞募配穴）として頻出。帰属経脈が直感と異なる穴が狙われやすい。',
+    keyPoints: [
+      '募穴は12臓腑に各1穴、胸腹部（前面）に位置',
+      '五臓の募穴：肺→中府、心→巨闕、肝→期門、脾→章門、腎→京門',
+      '胃の募穴は中脘（任脈穴）、帰属経脈は胃経ではない',
+      '俞募配穴：背兪穴＋募穴を対で使う治療法',
+      '肝の募穴は期門、章門は脾の募穴（最多混同ポイント）',
+    ],
+    examTargets: ['12募穴の穴名と位置', '帰属経脈の例外', '俞募配穴の概念'],
+    reviewTiming: '背兪穴と対比しながら学習すると効率的。試験1〜2週間前に前後対比表で確認。',
   },
   {
     themeId: 'go-yu-ketsu',
@@ -108,6 +142,16 @@ export const learningGuides: LearningGuide[] = [
     ],
     relatedThemeIds: ['gen-ketsu', 'geki-ketsu', 'bo-ketsu', 'juni-kei-myaku'],
     recommendedOrder: ['juni-kei-myaku', 'go-yu-ketsu', 'gen-ketsu'],
+    whyImportant: '経穴学の土台中の土台。陰陽で五行配当が逆になる規則が必ず出題される。五兪穴を制する者が経穴学を制する。',
+    keyPoints: [
+      '5種類：井・榮・輸・経・合（四肢末端→肘膝の順）',
+      '陰経の五行：井＝木、榮＝火、輸＝土、経＝金、合＝水',
+      '陽経の五行：井＝金、榮＝水、輸＝木、経＝火、合＝土',
+      '陰経の輸穴＝原穴（陽経の輸穴と原穴は別穴）',
+      '各症状に対応する選穴：熱病→榮穴、体重節痛→輸穴',
+    ],
+    examTargets: ['陰陽の五行配当の違い', '症状別の選穴法', '陰経の輸穴＝原穴ルール'],
+    reviewTiming: '経絡経穴学の最初に学習。試験直前にも陰陽の配当表を再確認する。',
   },
   {
     themeId: 'kiki-hachi-myaku',
@@ -133,6 +177,16 @@ export const learningGuides: LearningGuide[] = [
     ],
     relatedThemeIds: ['juni-kei-myaku', 'kei-myaku-ryuchu'],
     recommendedOrder: ['juni-kei-myaku', 'kei-myaku-ryuchu', 'kiki-hachi-myaku'],
+    whyImportant: '奇経八脈の別称（「陽の海」等）と機能は毎年出題。督脈・任脈のみが独自経穴を持つという規則も必ず狙われる。',
+    keyPoints: [
+      '8脈：督脈・任脈・衝脈・帯脈・陰維・陽維・陰蹻・陽蹻',
+      '督脈＝陽の海（背部正中）、任脈＝陰の海（腹部正中）',
+      '衝脈＝血の海（十二経の海）、帯脈＝唯一の横走経脈',
+      '独自の経穴を持つのは督脈・任脈のみ（他6脈は十二経の穴を流用）',
+      '奇経の郄穴4穴は郄穴テーマと連動して暗記',
+    ],
+    examTargets: ['8脈の別称と機能', '督脈・任脈の独自経穴の規則', '帯脈の横走という特徴'],
+    reviewTiming: '十二経脈の流注を覚えた後に学習。試験2週間前に別称一覧を暗記。',
   },
   {
     themeId: 'juni-kei-myaku',
@@ -158,6 +212,16 @@ export const learningGuides: LearningGuide[] = [
     ],
     relatedThemeIds: ['kiki-hachi-myaku', 'kei-myaku-ryuchu', 'kei-ketsu-shuchi'],
     recommendedOrder: ['juni-kei-myaku', 'kei-myaku-ryuchu', 'kiki-hachi-myaku', 'go-yu-ketsu'],
+    whyImportant: '経絡経穴学の土台。流注の順序は6年連続出題で最も確実な得点ポイント。ここを完全に制覇すると他のテーマの理解も格段に速くなる。',
+    keyPoints: [
+      '流注：肺→大腸→胃→脾→心→小腸→膀胱→腎→心包→三焦→胆→肝',
+      '陰経は臓に属し腑に絡む、陽経は腑に属し臓に絡む（表裏関係）',
+      '手の陰経：内側を走り（胸→手）、手の陽経：外側を走り（手→頭）',
+      '足の陽経：頭→足、足の陰経：足→腹胸へ走行',
+      '表裏経は手足で対を作る（例：手の太陰＝肺経、手の陽明＝大腸経）',
+    ],
+    examTargets: ['流注の順序', '手足と陰陽の分類', '各経脈の走行方向'],
+    reviewTiming: '学習開始第1週に必ず覚える。試験直前に流注の順を口で唱えて再確認。',
   },
   {
     themeId: 'kei-myaku-ryuchu',
@@ -183,6 +247,16 @@ export const learningGuides: LearningGuide[] = [
     ],
     relatedThemeIds: ['juni-kei-myaku', 'kiki-hachi-myaku'],
     recommendedOrder: ['juni-kei-myaku', 'kei-myaku-ryuchu', 'kiki-hachi-myaku'],
+    whyImportant: '各経脈の走行を覚えることで経穴の帰属経脈が推測でき、経穴学全体の理解が深まる。三陰交など交会穴の問題でも必須知識。',
+    keyPoints: [
+      '上肢内側（前→中→後）：肺経→心包経→心経',
+      '上肢外側（前→中→後）：大腸経→三焦経→小腸経',
+      '下肢内側（前→中→後）：脾経→肝経→腎経',
+      '大腸経は手背から顔面（鼻翼脇）へ上行',
+      '三陰交：脾・肝・腎の三陰経が交会する穴（体部位の交会点）',
+    ],
+    examTargets: ['各経脈の走行体部位', '起始・終止', '三陰交などの交会穴'],
+    reviewTiming: '十二経脈の分類後に続けて学習。図を見ながら手足の走行を確認するのが効率的。',
   },
   {
     themeId: 'kei-ketsu-shuchi',
@@ -209,6 +283,16 @@ export const learningGuides: LearningGuide[] = [
     ],
     relatedThemeIds: ['juni-kei-myaku', 'gen-ketsu', 'go-yu-ketsu', 'bo-ketsu'],
     recommendedOrder: ['juni-kei-myaku', 'go-yu-ketsu', 'gen-ketsu', 'kei-ketsu-shuchi'],
+    whyImportant: '6年全回出題の経穴学最頻出テーマ。足三里・三陰交・合谷・百会だけで複数問の得点が狙える。知っているほど点が取れる穴の主治は優先的に暗記。',
+    keyPoints: [
+      '百会（督脈）：頭頂部・気の調節・頭部症状全般',
+      '足三里（胃経合穴）：消化器全般＋全身強壮・免疫',
+      '三陰交（脾経）：肝脾腎三陰の交会→婦人科・生殖・消化',
+      '合谷（大腸経原穴）：顔面・歯・気の調節',
+      '太衝（肝経原穴）：肝気疏泄・血の調節・婦人科',
+    ],
+    examTargets: ['高頻出穴の主治', '帰属経脈と特定穴種別', '経穴の適応疾患'],
+    reviewTiming: '試験全期間を通じて継続的に暗記。直前期は穴名→主治のカードで高速確認。',
   },
   {
     themeId: 'in-yo-ron',
@@ -234,6 +318,16 @@ export const learningGuides: LearningGuide[] = [
     ],
     relatedThemeIds: ['go-gyo-ron', 'ki-ketsu-shin-eki', 'ben-sho-ron-chi'],
     recommendedOrder: ['in-yo-ron', 'go-gyo-ron', 'zo-sho'],
+    whyImportant: '東洋医学のすべての概念に陰陽が絡む。弁証・治則・穴の選穴まで陰陽論なしでは説明できないため、早期に完全理解が必要。',
+    keyPoints: [
+      '陰陽の4関係：対立・互根・消長・転化',
+      '陰の属性：暗・冷・静・裏・下・内',
+      '陽の属性：明・熱・動・表・上・外',
+      '消長：陰陽は逆比関係（陰が消えれば陽が長ずる）',
+      '転化：極に達すると逆転（熱極→寒に転じる）',
+    ],
+    examTargets: ['4関係の定義と具体例', '臓腑の陰陽分類', '陰陽失調の病態'],
+    reviewTiming: '東洋医学の学習開始直後に取り組む。基礎固めとして繰り返し復習。',
   },
   {
     themeId: 'go-gyo-ron',
@@ -259,6 +353,16 @@ export const learningGuides: LearningGuide[] = [
     ],
     relatedThemeIds: ['in-yo-ron', 'zo-sho', 'ki-ketsu-shin-eki'],
     recommendedOrder: ['in-yo-ron', 'go-gyo-ron', 'zo-sho', 'ki-ketsu-shin-eki'],
+    whyImportant: '五行論は東洋医学最大の暗記テーマ。相生・相克の方向と五臓の五色・五味・五季の対応が毎年複数問出題される。対応表の丸暗記が最も効率的。',
+    keyPoints: [
+      '相生（生む順）：木→火→土→金→水→木（循環）',
+      '相克（克する順）：木→土→水→火→金→木（1つ飛ばし）',
+      '相乗：相克と同方向の過剰（正常→過剰）',
+      '相侮：相克の逆方向（反克・侮り）',
+      '肝/木/青/酸/春/東/怒/呼/筋/目（五臓セット）を1セットで暗記',
+    ],
+    examTargets: ['相生・相克の方向と順序', '五臓と五色・五味・五季の対応', '相乗・相侮の方向性'],
+    reviewTiming: '陰陽論の直後に学習。対応表を紙に書いて毎日見る。試験1か月前から集中的に。',
   },
   {
     themeId: 'ki-ketsu-shin-eki',
@@ -284,6 +388,16 @@ export const learningGuides: LearningGuide[] = [
     ],
     relatedThemeIds: ['in-yo-ron', 'zo-sho', 'go-gyo-ron'],
     recommendedOrder: ['in-yo-ron', 'go-gyo-ron', 'zo-sho', 'ki-ketsu-shin-eki'],
+    whyImportant: '気血津液の病変（気虚・気滞・血虚・血瘀等）は弁証問題の基盤。気の4種と営気・衛気の違いは毎年出題される。',
+    keyPoints: [
+      '気の4種：元気（腎）・宗気（胸中）・営気（脈中・栄養）・衛気（脈外・防御）',
+      '営気は脈中を行く、衛気は脈外を行く（逆は誤り）',
+      '津は希薄・流動性大（体表・官竅）、液は濃厚・粘稠（関節・臓腑）',
+      '病変：気虚・気滞・血虚・血瘀・痰飲（水液停滞）',
+      '血の生成：脾胃で吸収→心で赤化→脈中を循行',
+    ],
+    examTargets: ['気の4種と生成場所・機能', '営気と衛気の走行の違い', '津液の病変'],
+    reviewTiming: '臓腑（蔵象）学習と並行して進める。弁証学習の前に完璧にしておく。',
   },
   {
     themeId: 'zo-sho',
@@ -309,6 +423,16 @@ export const learningGuides: LearningGuide[] = [
     ],
     relatedThemeIds: ['go-gyo-ron', 'ki-ketsu-shin-eki', 'in-yo-ron'],
     recommendedOrder: ['in-yo-ron', 'go-gyo-ron', 'zo-sho'],
+    whyImportant: '五臓の機能（「主る」）は弁証・治則・経穴選穴のすべてに関わる最重要基礎知識。腎の3機能と脾の運化は特に頻出。',
+    keyPoints: [
+      '五臓の主機能：心＝血脈、肝＝疏泄・蔵血、脾＝運化・統血、肺＝宣降・主気、腎＝蔵精・主水・納気',
+      '表裏（臓腑対）：心-小腸、肝-胆、脾-胃、肺-大腸、腎-膀胱',
+      '臓は「蔵して瀉さず」、腑は「瀉して蔵さず」',
+      '奇恒の腑：脳・髄・骨・脈・胆・女子胞（6つ）',
+      '胆は六腑と奇恒の腑の両方に属する（二重所属）',
+    ],
+    examTargets: ['五臓の「主る」機能', '表裏関係と開竅・志', '奇恒の腑の構成'],
+    reviewTiming: '陰陽論・五行論の後に取り組む。臓腑ごとに丸ごと暗記するのが効率的。',
   },
   {
     themeId: 'ben-sho-ron-chi',
@@ -334,6 +458,16 @@ export const learningGuides: LearningGuide[] = [
     ],
     relatedThemeIds: ['kei-myaku-byo-sho', 'in-yo-ron', 'zo-sho'],
     recommendedOrder: ['in-yo-ron', 'go-gyo-ron', 'zo-sho', 'ki-ketsu-shin-eki', 'ben-sho-ron-chi'],
+    whyImportant: '臨床問題の核心テーマ。八綱弁証の虚実・表裏・寒熱の定義と症候は必ず1〜2問出題。治則への展開まで一連で理解すると得点力が上がる。',
+    keyPoints: [
+      '八綱：陰陽・表裏・寒熱・虚実の4対（計8綱）',
+      '虚証＝正気不足（舌淡・脈細弱）、実証＝邪気亢盛（舌紅・脈弦数）',
+      '表証＝皮膚・筋肉レベル（発熱・悪寒）、裏証＝臓腑レベル',
+      '半表半裏（少陽病）：往来寒熱・口苦・胸脇苦満',
+      '弁証→治則（汗法・下法・清法・温法など）の流れで整理',
+    ],
+    examTargets: ['八綱の各証の症候比較', '半表半裏の概念', '弁証から治則への展開'],
+    reviewTiming: '東洋医学基礎（陰陽・五行・気血・臓腑）をマスターした後に取り組む。試験2〜3か月前が目安。',
   },
   {
     themeId: 'kei-myaku-byo-sho',
@@ -359,6 +493,16 @@ export const learningGuides: LearningGuide[] = [
     ],
     relatedThemeIds: ['ben-sho-ron-chi', 'juni-kei-myaku'],
     recommendedOrder: ['juni-kei-myaku', 'ben-sho-ron-chi', 'kei-myaku-byo-sho'],
+    whyImportant: '経絡病証は経脈の走行部位と症状を紐づけて覚えることで、経穴選穴にも直結する。是動病・所生病の概念は毎回定義問題が出る。',
+    keyPoints: [
+      '是動病：経脈の変動による症状（経脈自体の問題）',
+      '所生病：臓腑の機能異常による症状（臓腑に所属する病）',
+      '経絡弁証は走行部位の症状（例：肺経→前腕内側の痛み）から判断',
+      '経絡弁証と臓腑弁証は相互補完（どちらか一方ではない）',
+      '十二経脈流注と合わせて学習すると理解が深まる',
+    ],
+    examTargets: ['是動病と所生病の定義の違い', '主要経脈の代表的病証', '経絡弁証の臨床応用'],
+    reviewTiming: '十二経脈流注と弁証論治を覚えた後に取り組む。臨床実践に近い応用テーマ。',
   },
   {
     themeId: 'kin-kishi-teishi',
@@ -384,6 +528,16 @@ export const learningGuides: LearningGuide[] = [
     ],
     relatedThemeIds: ['kansetsu-kozo', 'no-shinkei'],
     recommendedOrder: ['kansetsu-kozo', 'kin-kishi-teishi', 'no-shinkei'],
+    whyImportant: '6年連続出題の解剖学最頻出テーマ。三角筋・大腿四頭筋・腓腹筋など主要筋の起始・停止・神経支配を正確に覚えていれば毎回2〜3問確実に取れる。',
+    keyPoints: [
+      '三角筋：肩峰・肩甲棘・鎖骨外側→三角筋粗面（腋窩神経支配）',
+      '上腕二頭筋：長頭（関節窩上結節）・短頭（烏口突起）→橈骨粗面',
+      '大腿四頭筋：直筋のみ腸骨起始、他3頭は大腿骨→膝蓋靭帯→脛骨粗面',
+      '腓腹筋：大腿骨内外側顆→アキレス腱→踵骨（脛骨神経支配）',
+      '起始が近位、停止が遠位（基本原則として覚える）',
+    ],
+    examTargets: ['主要筋の起始・停止', '支配神経', '作用（屈曲・伸展・外転等）'],
+    reviewTiming: '解剖学の授業と並行して学習。試験2か月前から部位別に集中的に暗記。',
   },
   {
     themeId: 'no-shinkei',
@@ -409,6 +563,16 @@ export const learningGuides: LearningGuide[] = [
     ],
     relatedThemeIds: ['jiritsu-shinkei', 'kin-kishi-teishi'],
     recommendedOrder: ['no-shinkei', 'jiritsu-shinkei'],
+    whyImportant: '12脳神経は番号・名称・機能種別の3点を確実に覚えると毎年安定して得点できる。顔面神経と迷走神経は特に頻出で捨てる選択肢がない。',
+    keyPoints: [
+      '感覚性のみ：Ⅰ嗅・Ⅱ視・Ⅷ内耳（「嗅視聴」は感覚のみ）',
+      '混合性（感覚+運動）：Ⅴ三叉・Ⅶ顔面・Ⅸ舌咽・Ⅹ迷走',
+      '副交感成分を含む4本：Ⅲ動眼・Ⅶ顔面・Ⅸ舌咽・Ⅹ迷走（3790）',
+      '迷走神経：胸腹部内臓の広範囲に副交感支配（「さまよう神経」）',
+      '顔面神経麻痺：中枢性＝前額部免れる、末梢性＝顔面全体麻痺',
+    ],
+    examTargets: ['12脳神経の番号と機能種別', '副交感成分を持つ脳神経', '顔面神経の詳細'],
+    reviewTiming: '自律神経の学習前に脳神経を完成させる。語呂「嗅視動滑三外顔聴舌迷副舌」を丸暗記。',
   },
   {
     themeId: 'jiritsu-shinkei',
@@ -434,6 +598,16 @@ export const learningGuides: LearningGuide[] = [
     ],
     relatedThemeIds: ['no-shinkei', 'junkan-kino'],
     recommendedOrder: ['no-shinkei', 'jiritsu-shinkei', 'junkan-kino'],
+    whyImportant: '自律神経の対比問題は生理学・鍼灸理論の両方で出題される。交感・副交感の各臓器への作用を表形式で覚えると得点力が安定する。',
+    keyPoints: [
+      '交感神経：胸腰髄（T1-L2）出力、ノルアドレナリン産生',
+      '副交感神経：脳幹（Ⅲ・Ⅶ・Ⅸ・Ⅹ）＋仙髄（S2-4）',
+      '交感優位：瞳孔散大・心拍増加・血管収縮・消化抑制',
+      '副交感優位：瞳孔縮小・心拍減少・消化促進・排尿促進',
+      '膀胱の支配：排尿＝副交感（排尿筋収縮）、蓄尿＝交感（括約筋収縮）',
+    ],
+    examTargets: ['交感・副交感の出力部位', '各臓器への作用比較', 'アドレナリン受容体の基本'],
+    reviewTiming: '脳神経（迷走神経）を覚えた後に続けて学習すると理解が深まる。',
   },
   {
     themeId: 'kansen-sho',
@@ -459,6 +633,16 @@ export const learningGuides: LearningGuide[] = [
     ],
     relatedThemeIds: ['seikatsu-shukan-byo', 'menekigaku'],
     recommendedOrder: ['menekigaku', 'kansen-sho', 'seikatsu-shukan-byo'],
+    whyImportant: '感染症法の分類と届出期限は衛生学の必須暗記事項。新型コロナの5類移行など最新の法改正が出題されやすい。',
+    keyPoints: [
+      '1類（7疾患）：直ちに届出、強制入院→エボラ・ペスト・コレラ等',
+      '2類：結核・ジフテリア・SARS・MERS→2日以内届出',
+      '5類：インフルエンザ・梅毒等→7日以内（定点）',
+      '新型コロナは2023年5月から5類に変更（重要最新情報）',
+      '標準予防策：血液・体液すべてを感染性ありとして扱う',
+    ],
+    examTargets: ['感染症法の類型と届出期限', '感染経路と対策', '最新の法改正内容'],
+    reviewTiming: '衛生学の学習ブロックで集中的に。法改正情報は試験年度直前に必ず最新版を確認。',
   },
   {
     themeId: 'kenko-nihon-21',
@@ -484,6 +668,16 @@ export const learningGuides: LearningGuide[] = [
     ],
     relatedThemeIds: ['seikatsu-shukan-byo'],
     recommendedOrder: ['seikatsu-shukan-byo', 'kenko-nihon-21'],
+    whyImportant: '健康日本21の各次の期間と第三次の目標は頻出。メタボ診断基準の数値と特定健診の対象年齢は毎年必ずどちらかが問われる。',
+    keyPoints: [
+      '第一次（2000-2012）・第二次（2013-2023）・第三次（2024-2035）',
+      '第三次キーワード：「誰一人取り残さない健康づくり」',
+      'メタボ腹囲基準：男性85cm以上、女性90cm以上（逆に覚えない）',
+      'メタボ診断：腹囲必須＋血圧・血糖・脂質から2項目以上',
+      '特定健診対象：40〜74歳、医療保険者が実施（市町村のみではない）',
+    ],
+    examTargets: ['各次の実施期間と目標', 'メタボ診断基準の数値', '特定健診・特定保健指導の概要'],
+    reviewTiming: '生活習慣病と同時に学習すると効率的。第三次の内容は試験直前に再確認。',
   },
   {
     themeId: 'kanke-hokki',
@@ -509,6 +703,16 @@ export const learningGuides: LearningGuide[] = [
     ],
     relatedThemeIds: [],
     recommendedOrder: ['kanke-hokki'],
+    whyImportant: 'あはき法の免許申請先と施術所届出期限・届出先は毎回出題される法規の得点源。法改正がなければ知識は安定しているため確実に覚える。',
+    keyPoints: [
+      '業務独占：無免許施術は刑事罰の対象（名称独占と区別）',
+      '免許申請先：厚生労働大臣（都道府県知事ではない）',
+      '施術所開設届出：開設後10日以内に都道府県知事（保健所）へ',
+      '広告できる事項：氏名・施術所名・住所・電話・施術内容・料金など（限定列挙）',
+      '欠格事由：麻薬等の中毒者・罰金以上の刑（経過年数に注意）',
+    ],
+    examTargets: ['免許申請先と届出先の違い', '施術所の届出期限', '広告の許可・禁止事項'],
+    reviewTiming: '関係法規の学習開始時に取り組む。届出先と期限の数字（10日）は丸暗記。',
   },
   {
     themeId: 'hari-risk-kanri',
@@ -534,6 +738,16 @@ export const learningGuides: LearningGuide[] = [
     ],
     relatedThemeIds: ['hari-shigeki-ryo', 'kyu-fukusayo'],
     recommendedOrder: ['hari-shigeki-ryo', 'hari-risk-kanri', 'kyu-fukusayo'],
+    whyImportant: '鍼の副作用・危険穴・緊急対応は臨床問題として毎回出題される。気胸の症状と折鍼の対応は具体的に問われるため実践的に理解する必要がある。',
+    keyPoints: [
+      '折鍼の原因：金属疲労・急な体動、対応：外科的除去が原則',
+      '気胸：胸部深刺→呼吸困難（遅発性もある）→即座に医療機関へ',
+      '折鍼防止：鍼は2/3以上刺入しない、柔らかい鍼・錆鍼を使わない',
+      '感染予防：ディスポーザブル鍼、標準予防策（手袋・マスク）',
+      '内出血：毛細血管・静脈損傷が多い（動脈ではない）',
+    ],
+    examTargets: ['副作用の種類と原因', '気胸の症状と対応', '感染予防のポイント'],
+    reviewTiming: '鍼灸理論の基礎を学んだ後に安全管理としてセットで学習。臨床実習前に必ず確認。',
   },
   {
     themeId: 'seikatsu-shukan-byo',
@@ -559,6 +773,16 @@ export const learningGuides: LearningGuide[] = [
     ],
     relatedThemeIds: ['kenko-nihon-21'],
     recommendedOrder: ['kenko-nihon-21', 'seikatsu-shukan-byo'],
+    whyImportant: '生活習慣病の概念・メタボ診断基準・三次予防の定義は衛生学と臨床問題の両方で出題。健康日本21と連動して覚えると一石二鳥。',
+    keyPoints: [
+      '生活習慣病：食習慣・運動・休養・喫煙・飲酒が関与（遺伝要因だけではない）',
+      'メタボ腹囲：男性85cm以上、女性90cm以上（必須要件）',
+      'メタボ診断：腹囲必須＋血圧/血糖/脂質から2項目以上',
+      '一次予防（発症予防）・二次予防（早期発見）・三次予防（機能回復）',
+      '成人病→生活習慣病の概念変更（1996年）により小児も対象となりえる',
+    ],
+    examTargets: ['メタボ診断基準の数値', '三次予防の定義', '特定健診・特定保健指導の概要'],
+    reviewTiming: '健康日本21と同時に学習。数値（腹囲基準）は直前まで繰り返し確認。',
   },
   {
     themeId: 'menekigaku',
@@ -584,6 +808,16 @@ export const learningGuides: LearningGuide[] = [
     ],
     relatedThemeIds: ['kansen-sho'],
     recommendedOrder: ['menekigaku', 'kansen-sho'],
+    whyImportant: 'アレルギーの4型分類（特にⅠ型IgE）と自己免疫疾患の代表例は生理学・病理学問題で確実に出題される。自然免疫と獲得免疫の担当細胞の違いも頻出。',
+    keyPoints: [
+      '自然免疫：NK細胞・マクロファージ・好中球（抗原提示・非特異的）',
+      '獲得免疫：T細胞（細胞性）・B細胞（液性・抗体産生）',
+      'アレルギーⅠ型（即時型）：IgE媒介、マスト細胞、花粉症・アナフィラキシー',
+      'アレルギーⅣ型（遅延型）：T細胞性免疫、ツベルクリン反応',
+      '自己免疫疾患：SLE（蝶形紅斑）・関節リウマチ（滑膜炎）',
+    ],
+    examTargets: ['自然免疫と獲得免疫の担当細胞', 'アレルギー4型の分類と代表疾患', '自己免疫疾患の特徴'],
+    reviewTiming: '病理学・生理学の免疫ブロックで学習。感染症と並べてセットで覚えると効率的。',
   },
 ]
 
