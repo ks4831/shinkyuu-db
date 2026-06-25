@@ -9,59 +9,54 @@ import ImportanceBadge from '@/components/ImportanceBadge'
 import type { Importance } from '@/lib/types'
 
 export const metadata: Metadata = {
-  title: '第32回 出題分析',
+  title: '第31回 出題分析',
   description:
-    '第32回鍼灸国家試験（2024年）の出題傾向を頻出テーマ・科目・重要度で分析。180問全問の分類データ。',
+    '第31回鍼灸国家試験（2023年）の出題傾向を頻出テーマ・科目・重要度で分析。180問全問の分類データ。',
 }
 
 const THEME_LABELS: Record<string, string> = {
-  'acupuncture-technique':    '刺鍼・灸法・作用機序',
-  'meridians-acupoints':      '経絡経穴',
-  'neurology':                '神経疾患',
-  'orthopedics':              '整形外科疾患',
-  'rehabilitation':           'リハビリテーション',
-  'tcm-clinical':             '弁証論治',
-  'tcm-fundamentals':         '東洋医学基礎理論',
-  'general-pathology':        '病理学総論',
-  'cardiology':               '循環器疾患',
-  'nervous-system':           '神経系解剖',
-  'oncology':                 '腫瘍・悪性疾患',
-  'pulmonology':              '呼吸器疾患',
-  'gastroenterology':         '消化器疾患',
-  'hari-kyu-law':             'あはき法',
-  'endocrinology':            '内分泌疾患',
-  'health-policy':            '健康政策',
-  'neurophysiology':          '神経生理学',
-  'nephrology':               '腎疾患',
-  'hematology':               '血液疾患',
-  'dermatology':              '皮膚疾患',
-  'infectious-disease':       '感染症',
-  'tcm-diagnosis':            '四診法',
-  'musculoskeletal-system':   '筋骨格系解剖',
-  'circulatory-system':       '循環系解剖',
-  'reproductive-system':      '生殖系解剖',
-  'endocrine-system':         '内分泌系解剖',
-  'histology':                '組織学',
-  'visceral-anatomy':         '内臓解剖',
-  'cardiovascular-physiology':'循環生理',
-  'respiratory-physiology':   '呼吸生理',
-  'metabolic-physiology':     '代謝生理',
-  'renal-physiology':         '腎生理',
-  'endocrine-physiology':     '内分泌生理',
-  'reproductive-physiology':  '生殖生理',
-  'gynecology':               '婦人科疾患',
-  'clinical-general':         '臨床医学総論',
-  'urology':                  '泌尿器疾患',
-  'welfare-law':              '福祉法規',
-  'social-security':          '社会保障制度',
-  'maternal-child-health':    '母子保健',
+  'acupuncture-technique':     '刺鍼・灸法・作用機序',
+  'meridians-acupoints':       '経絡経穴',
+  'neurology':                 '神経疾患',
+  'orthopedics':               '整形外科疾患',
+  'rehabilitation':            'リハビリテーション',
+  'tcm-clinical':              '弁証論治',
+  'tcm-fundamentals':          '東洋医学基礎理論',
+  'tcm-diagnosis':             '四診法',
+  'general-pathology':         '病理学総論',
+  'pathology':                 '病理学',
+  'cardiology':                '循環器疾患',
+  'nervous-system':            '神経系解剖',
+  'oncology':                  '腫瘍・悪性疾患',
+  'pulmonology':               '呼吸器疾患',
+  'respiratory':               '呼吸器疾患',
+  'gastroenterology':          '消化器疾患',
+  'hari-kyu-law':              'あはき法',
+  'endocrinology':             '内分泌疾患',
+  'endocrine-disease':         '内分泌疾患',
+  'health-policy':             '健康政策',
+  'neurophysiology':           '神経生理学',
+  'nephrology':                '腎疾患',
+  'renal-urological':          '腎・泌尿器疾患',
+  'hematology':                '血液疾患',
+  'dermatology':               '皮膚疾患',
+  'psychiatry':                '精神疾患',
+  'infectious-disease':        '感染症',
+  'immunology':                '免疫学',
+  'musculoskeletal-system':    '筋骨格系解剖',
+  'musculoskeletal-disease':   '運動器疾患',
+  'circulatory-system':        '循環系解剖',
+  'visceral-anatomy':          '内臓解剖',
+  'cardiovascular-physiology': '循環生理',
+  'respiratory-physiology':    '呼吸生理',
+  'metabolic-physiology':      '代謝生理',
+  'endocrine-physiology':      '内分泌生理',
+  'clinical-general':          '臨床医学総論',
+  'social-security':           '社会保障制度',
+  'epidemiology':              '疫学',
+  'medical-ethics':            '医の倫理',
   'infectious-disease-control':'感染症対策',
-  'school-health':            '学校保健',
-  'epidemiology':             '疫学',
-  'medical-ethics':           '医の倫理',
-  'medical-personnel-law':    '医療職の法規',
-  'health-insurance-law':     '医療保険法規',
-  'mental-health-law':        '精神保健法規',
+  'moxibustion':               '灸法・作用機序',
 }
 
 const IMP_STYLE: Record<
@@ -102,12 +97,12 @@ function pct(count: number, total: number): string {
   return (count / total * 100).toFixed(1)
 }
 
-export default function Exam32AnalysisPage() {
+export default function Exam31AnalysisPage() {
   const allQuestions = loadAllExamQuestions()
-  const exam32 = allQuestions.filter(q => q.examRound === 32)
-  const total = exam32.length
+  const exam31 = allQuestions.filter(q => q.examRound === 31)
+  const total = exam31.length
 
-  const themeAggs = aggregateByTheme(exam32).map(t => ({
+  const themeAggs = aggregateByTheme(exam31).map(t => ({
     ...t,
     importance: calcImportanceByCount(t.count) as Importance,
     label: THEME_LABELS[t.normalizedTheme] ?? t.normalizedTheme,
@@ -120,7 +115,7 @@ export default function Exam32AnalysisPage() {
   for (const t of themeAggs) byImp[t.importance].push(t)
 
   const subjectMap = new Map<string, number>()
-  for (const q of exam32) {
+  for (const q of exam31) {
     const key = q.officialMedium ?? q.subject
     subjectMap.set(key, (subjectMap.get(key) ?? 0) + 1)
   }
@@ -129,46 +124,48 @@ export default function Exam32AnalysisPage() {
     .map(([name, count]) => ({ name, count }))
   const maxSubjectCount = subjectList[0]?.count ?? 1
 
-  const neurologyCount   = themeAggs.find(t => t.normalizedTheme === 'neurology')?.count ?? 0
-  const orthopedicsCount = themeAggs.find(t => t.normalizedTheme === 'orthopedics')?.count ?? 0
-  const rehabCount       = themeAggs.find(t => t.normalizedTheme === 'rehabilitation')?.count ?? 0
-  const clinicalCount    = neurologyCount + orthopedicsCount + rehabCount
+  const acuCount    = themeAggs.find(t => t.normalizedTheme === 'acupuncture-technique')?.count ?? 0
+  const merCount    = themeAggs.find(t => t.normalizedTheme === 'meridians-acupoints')?.count ?? 0
+  const tcmCount    = (themeAggs.find(t => t.normalizedTheme === 'tcm-fundamentals')?.count ?? 0)
+                    + (themeAggs.find(t => t.normalizedTheme === 'tcm-clinical')?.count ?? 0)
+                    + (themeAggs.find(t => t.normalizedTheme === 'tcm-diagnosis')?.count ?? 0)
+  const pmSpecCount = acuCount + merCount + tcmCount
 
   const studyPriorities = [
     {
       rank: 1,
-      theme: 'neurology',
+      theme: 'acupuncture-technique',
       badge: 'S' as Importance,
       strategy:
-        '神経疾患は第32回でも最頻出。意識障害（せん妄・昏睡）、パーキンソン病の4大症状、アルツハイマーのアミロイドβ、ギラン・バレー症候群（先行感染・脱髄）などが出題。ビタミンB1欠乏（脚気・ウェルニッケ）も重要。',
+        '刺鍼・灸法は第31回でも最多出題。はり理論（Q161〜170）・きゅう理論（Q171〜180）の各10問に加え、PM臨床問題でも経穴選択・補瀉手技・鍼の生理作用（軸索反射・DNIC・TRPV1受容体）が出題。灸頭鍼・CNT・鍼尖形状も対策必須。',
     },
     {
       rank: 2,
-      theme: 'rehabilitation',
+      theme: 'meridians-acupoints',
       badge: 'S' as Importance,
       strategy:
-        'リハビリは介護保険・障害福祉の制度区別、ブルンストロームステージ分類、中心性頸髄損傷（上肢優位麻痺）、断端包帯の目的、正常歩行（立脚60%・遊脚40%）が頻出パターン。各職種（PT/OT/ST/MSW）の役割区別も必須。',
+        '経絡経穴は20問出題。十二経筋・奇経八脈の概要、骨度、交会穴（大椎）、兪府・消濼・後頸三角（扶突）など部位問題が中心。五要穴（原穴・絡穴・募穴）と脚気八処・中風七穴などの組合せ穴も頻出。',
     },
     {
       rank: 3,
-      theme: 'orthopedics',
-      badge: 'S' as Importance,
+      theme: 'rehabilitation',
+      badge: 'A' as Importance,
       strategy:
-        '整形外科は神経根レベル（L5・S1の鑑別：アキレス腱反射消失はS1）、各種徒手検査（トーマス・ボンネット等）、関節リウマチ変形（スワンネック・尺側偏位）、上腕骨顆上骨折の正中神経合併が重点。',
+        'リハビリはFIM（セルフケア＝整容）・ブルンストロームステージⅡ（共同運動出現＋痙縮開始）・C5残存頸髄損傷（肩外転可能）・ウィリアムス体操（腰椎前弯改善）・ロコモ度テストが出題。各職種の役割区分（OT＝利き手交換訓練・ST＝嚥下訓練）も確実に。',
     },
     {
       rank: 4,
-      theme: 'general-pathology',
+      theme: 'tcm-fundamentals',
       badge: 'A' as Importance,
       strategy:
-        '病理学は炎症の種類（線維素性・化膿性・肉芽腫性）、アレルギー型とTh1/Th2、細胞老化、腫瘍と発がんウイルス（HBV→肝癌・HPV→子宮頸癌）が出題。疾患の性差（橋本病は女性多い）もよく問われる。',
+        '東洋医学基礎理論は五行色体（五臓五労）・気の種類（原気・宗気・衛気・営気）・六淫（生風は火邪）・七情（喜で気緩み食欲不振）・経脈病証（手の少陽三焦経）など概念の正確な記憶が問われる。湯液療法（鉱物使用・証を立てる）も出題。',
     },
     {
       rank: 5,
-      theme: 'health-policy',
+      theme: 'musculoskeletal-disease',
       badge: 'A' as Importance,
       strategy:
-        '衛生学・医療概論はSDGs・ADL・飲酒リスク量（男性40g/日）・寄与危険度など統計・疫学用語の正確な定義が勝負。関係法規はあはき法の各期限（返納5日・開始届出10日）と施術所基準を確実に覚える。',
+        '運動器疾患はL4神経根障害（膝伸展困難）・S1神経根障害（アキレス腱反射減弱・長母趾屈筋脱力）・ボンネットテスト（梨状筋症候群）・ウィリアムス体操・前十字靭帯（ラックマンテスト）・変形性膝関節症（内側痛・ロッキングなし）が出題パターン。',
     },
   ].map(p => ({
     ...p,
@@ -185,20 +182,20 @@ export default function Exam32AnalysisPage() {
           トップ
         </Link>
         <span>›</span>
-        <span className="text-gray-700">第32回 出題分析</span>
+        <span className="text-gray-700">第31回 出題分析</span>
       </nav>
 
-      {/* ── 1. 概要 ─────────────────────────────── */}
+      {/* ── 1. 概要 */}
       <section>
         <p className="text-xs text-green-600 font-semibold tracking-widest uppercase mb-2">
           EXAM ANALYSIS
         </p>
         <h1 className="text-2xl font-bold text-gray-900">
-          第32回 鍼灸国家試験
+          第31回 鍼灸国家試験
           <span className="text-green-600"> 出題分析</span>
         </h1>
         <p className="text-sm text-gray-500 mt-1">
-          2024年実施（令和6年）/ 出題基準2020年版 / 180問体制
+          2023年実施（令和5年）/ 出題基準2020年版 / 180問体制
         </p>
 
         <div className="mt-5 grid grid-cols-2 sm:grid-cols-4 gap-3">
@@ -220,7 +217,7 @@ export default function Exam32AnalysisPage() {
         </div>
       </section>
 
-      {/* ── 2. 頻出テーマ TOP20 ─────────────────── */}
+      {/* ── 2. 頻出テーマ TOP20 */}
       <section>
         <h2 className="text-lg font-bold text-gray-800 mb-4">
           頻出テーマ ランキング TOP20
@@ -273,7 +270,7 @@ export default function Exam32AnalysisPage() {
         </div>
       </section>
 
-      {/* ── 3. 重要度別分類 ─────────────────────── */}
+      {/* ── 3. 重要度別分類 */}
       <section>
         <h2 className="text-lg font-bold text-gray-800 mb-4">重要度別分類</h2>
         <div className="space-y-4">
@@ -311,7 +308,7 @@ export default function Exam32AnalysisPage() {
         </div>
       </section>
 
-      {/* ── 4. 科目別出題割合 ───────────────────── */}
+      {/* ── 4. 科目別出題割合 */}
       <section>
         <h2 className="text-lg font-bold text-gray-800 mb-4">科目別出題割合</h2>
         <div className="bg-white rounded-2xl border border-gray-100 p-5 space-y-3">
@@ -341,28 +338,28 @@ export default function Exam32AnalysisPage() {
         </div>
       </section>
 
-      {/* ── 5. 第32回の特徴 ─────────────────────── */}
+      {/* ── 5. 第31回の特徴 */}
       <section>
-        <h2 className="text-lg font-bold text-gray-800 mb-4">第32回の特徴</h2>
+        <h2 className="text-lg font-bold text-gray-800 mb-4">第31回の特徴</h2>
 
         <div className="grid grid-cols-1 sm:grid-cols-3 gap-4 mb-5">
           {[
             {
-              label: '神経・整形・リハビリの比率',
-              value: `${pct(clinicalCount, total)}%`,
-              sub:   `神経${neurologyCount}問 + 整形${orthopedicsCount}問 + リハ${rehabCount}問`,
+              label: 'PM専門科目の比率',
+              value: `${pct(pmSpecCount, total)}%`,
+              sub:   `鍼灸${acuCount}問 + 経穴${merCount}問 + 東洋医学${tcmCount}問`,
               color: 'text-orange-700',
             },
             {
-              label: '神経疾患の比率',
-              value: `${pct(neurologyCount, total)}%`,
-              sub:   `${neurologyCount}問 / ${total}問`,
+              label: '刺鍼・灸法の比率',
+              value: `${pct(acuCount, total)}%`,
+              sub:   `${acuCount}問 / ${total}問`,
               color: 'text-blue-700',
             },
             {
-              label: '整形外科の比率',
-              value: `${pct(orthopedicsCount, total)}%`,
-              sub:   `${orthopedicsCount}問 / ${total}問`,
+              label: '経絡経穴の比率',
+              value: `${pct(merCount, total)}%`,
+              sub:   `${merCount}問 / ${total}問`,
               color: 'text-green-700',
             },
           ].map(item => (
@@ -379,28 +376,25 @@ export default function Exam32AnalysisPage() {
 
         <div className="bg-green-50 border border-green-100 rounded-xl p-5 space-y-3 text-sm text-gray-700 leading-relaxed">
           <p>
-            <strong className="text-green-700">神経疾患・整形外科・リハビリ</strong>
-            の3テーマ合計は{clinicalCount}問（{pct(clinicalCount, total)}%）と全体の約2割を占め、
-            臨床系の中核をなします。PM専門科目の鍼灸理論と並ぶ最重要領域です。
-          </p>
-          <p>
             <strong className="text-green-700">刺鍼・灸法・作用機序</strong>
-            がPM科目の主体となり180問中35問（{pct(35, total)}%）とダントツ1位。
-            PM後半の症例問題（Q127〜160）では鍼灸適応・経穴選択・東洋医学弁証が融合して出題されます。
+            がPM科目の主体となります。はり師専用問題（Q161〜170）では鍼の深度計算・鍼尖形状・クリーン・ニードル・テクニック・DNIC・軸索反射が出題。きゅう師専用（Q171〜180）では艾の製造・知熱灸・TRPV1受容体・ヒスタミン・ノルアドレナリンが問われました。
           </p>
           <p>
-            <strong className="text-green-700">経絡経穴</strong>
-            は20問出題。五兪穴・八会穴・下合穴などの特定穴と、頸部・膝窩・腰部など解剖学的取穴が中心です。
+            <strong className="text-green-700">東洋医学概論</strong>
+            は精の生理作用・三焦と原気・六淫（火邪の生風）・七情（喜による気緩み）・湯液療法（鉱物使用）・心腎不交・足の厥陰経病証など、基礎概念の正確な理解を問う問題が多数出題されました。
           </p>
           <p>
-            <strong className="text-green-700">東洋医学（弁証論治・基礎理論）</strong>
-            では三陰三陽病証・経脈病証・裏実証など八綱弁証の精度と、
-            難経69難（母子補瀉）の配穴法が出題されています。
+            <strong className="text-green-700">経絡経穴概論</strong>
+            は20問出題。十二経筋（四肢末端から始まる）・任脈（子宮起始）・大椎（手三陽・足三陽の交会穴）・骨度・兪府（鎖骨下縁）・消濼（肘頭上方5寸）・扶突（後頸三角）が具体的な取穴部位として出題。
+          </p>
+          <p>
+            <strong className="text-green-700">AM後半（Q71〜90）のリハビリ・臨床</strong>
+            は FIM・ブルンストロームステージ・頸髄損傷・脳梗塞のADL訓練（利き手交換）・白血病の診断・過活動膀胱など幅広い臨床知識が必要な構成でした。
           </p>
         </div>
       </section>
 
-      {/* ── 6. 学習優先順位 ─────────────────────── */}
+      {/* ── 6. 学習優先順位 */}
       <section>
         <h2 className="text-lg font-bold text-gray-800 mb-4">
           受験者への学習優先順位
@@ -437,10 +431,20 @@ export default function Exam32AnalysisPage() {
         </div>
       </section>
 
-      {/* ── 7. 他の回と比較 ──────────────────────── */}
+      {/* ── 7. 他の回と比較 */}
       <section>
         <h2 className="text-lg font-bold text-gray-800 mb-4">他の回を見る / 比較する</h2>
         <div className="grid grid-cols-1 sm:grid-cols-2 gap-3">
+          <Link
+            href="/analysis/exam-32"
+            className="bg-white border border-green-100 rounded-xl p-5 text-center hover:border-green-300 hover:shadow-sm transition-all"
+          >
+            <p className="text-sm font-semibold text-gray-800">第32回 出題分析</p>
+            <p className="text-xs text-gray-400 mt-1">2024年実施 / 180問分析</p>
+            <span className="inline-block mt-2 text-xs bg-green-100 text-green-700 px-2 py-0.5 rounded-full">
+              分析を見る →
+            </span>
+          </Link>
           <Link
             href="/analysis/exam-33"
             className="bg-white border border-green-100 rounded-xl p-5 text-center hover:border-green-300 hover:shadow-sm transition-all"
@@ -462,22 +466,12 @@ export default function Exam32AnalysisPage() {
             </span>
           </Link>
           <Link
-            href="/analysis/compare/recent-3-years"
-            className="bg-white border border-purple-100 rounded-xl p-5 text-center hover:border-purple-300 hover:shadow-sm transition-all"
-          >
-            <p className="text-sm font-semibold text-gray-800">直近3年（第32〜34回）比較</p>
-            <p className="text-xs text-gray-400 mt-1">3年間の出題傾向トレンド・増減分析</p>
-            <span className="inline-block mt-2 text-xs bg-purple-100 text-purple-700 px-2 py-0.5 rounded-full">
-              比較を見る →
-            </span>
-          </Link>
-          <Link
             href="/analysis/compare/recent-4-years"
-            className="bg-white border border-orange-100 rounded-xl p-5 text-center hover:border-orange-300 hover:shadow-sm transition-all sm:col-span-2"
+            className="bg-white border border-purple-100 rounded-xl p-5 text-center hover:border-purple-300 hover:shadow-sm transition-all"
           >
             <p className="text-sm font-semibold text-gray-800">直近4年（第31〜34回）比較</p>
             <p className="text-xs text-gray-400 mt-1">4年間の出題傾向トレンド・増減分析</p>
-            <span className="inline-block mt-2 text-xs bg-orange-100 text-orange-700 px-2 py-0.5 rounded-full">
+            <span className="inline-block mt-2 text-xs bg-purple-100 text-purple-700 px-2 py-0.5 rounded-full">
               比較を見る →
             </span>
           </Link>

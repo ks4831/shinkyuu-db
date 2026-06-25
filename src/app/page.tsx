@@ -69,9 +69,9 @@ const RANK_BADGE = [
 export default function HomePage() {
   const allQ = loadAllExamQuestions()
 
-  // 直近3年（第32〜34回）合算 TOP10
-  const recent3Y = allQ.filter(q => q.examRound === 32 || q.examRound === 33 || q.examRound === 34)
-  const recentAgg = aggregateByTheme(recent3Y)
+  // 直近4年（第31〜34回）合算 TOP10
+  const recent4Y = allQ.filter(q => q.examRound === 31 || q.examRound === 32 || q.examRound === 33 || q.examRound === 34)
+  const recentAgg = aggregateByTheme(recent4Y)
     .slice(0, 10)
     .map(t => ({
       theme: t.normalizedTheme,
@@ -83,7 +83,7 @@ export default function HomePage() {
 
   // 全期間 subjects テーマ一覧（DailyThemes 用）
   const allThemes = aggregateToThemes(allQ)
-  const sCount = recent3Y.length
+  const sCount = recent4Y.length
 
   return (
     <main>
@@ -102,17 +102,17 @@ export default function HomePage() {
           <span className="text-green-700 font-bold">出題傾向の分析</span>サイトです。
         </p>
         <p className="mt-2 text-sm text-gray-500 max-w-md mx-auto leading-relaxed">
-          第32〜34回の全540問を独自分析。どのテーマが何問出たか、
+          第31〜34回の全720問を独自分析。どのテーマが何問出たか、
           増えているテーマはどれか、科目ごとの割合はどう変わったかが分かります。
         </p>
 
         {/* Stats */}
         <div className="mt-6 flex justify-center gap-3 flex-wrap">
           {[
-            { label: '分析済み問題数', value: `${sCount}問`, sub: '第32〜34回' },
+            { label: '分析済み問題数', value: `${sCount}問`, sub: '第31〜34回' },
             { label: '出題基準', value: '2020版', sub: '180問体制' },
             { label: '収録科目', value: '14科目', sub: '全科目網羅' },
-            { label: '比較分析', value: '対応済', sub: '33回 vs 34回' },
+            { label: '比較分析', value: '対応済', sub: '直近4年比較' },
           ].map(s => (
             <div
               key={s.label}
@@ -146,10 +146,10 @@ export default function HomePage() {
             第33回・第34回 比較を見る
           </Link>
           <Link
-            href="/analysis/compare/recent-3-years"
+            href="/analysis/compare/recent-4-years"
             className="bg-white text-gray-700 border border-gray-200 px-6 py-2.5 rounded-full font-semibold text-sm hover:bg-gray-50 transition-colors"
           >
-            直近3年（第32〜34回）比較を見る
+            直近4年（第31〜34回）比較を見る
           </Link>
         </div>
       </section>
@@ -216,13 +216,6 @@ export default function HomePage() {
                 href: '/analysis/exam-33',
               },
               {
-                round: '比較分析',
-                year: '第33回 vs 第34回',
-                status: '対応済み',
-                done: true,
-                href: '/analysis/compare/33-vs-34',
-              },
-              {
                 round: '第32回',
                 year: '2024年実施',
                 status: '180問 分析済み',
@@ -230,9 +223,23 @@ export default function HomePage() {
                 href: '/analysis/exam-32',
               },
               {
+                round: '第31回',
+                year: '2023年実施',
+                status: '180問 分析済み',
+                done: true,
+                href: '/analysis/exam-31',
+              },
+              {
+                round: '比較分析',
+                year: '直近4年（第31〜34回）',
+                status: '対応済み',
+                done: true,
+                href: '/analysis/compare/recent-4-years',
+              },
+              {
                 round: '合計',
-                year: '直近3年分',
-                status: '540問 分析済み',
+                year: '直近4年分',
+                status: '720問 分析済み',
                 done: true,
                 href: null,
               },
@@ -271,14 +278,14 @@ export default function HomePage() {
           <div className="flex items-center justify-between mb-4 flex-wrap gap-2">
             <div>
               <h2 className="text-lg font-bold text-gray-800">
-                直近3年（第32〜34回）頻出テーマ TOP10
+                直近4年（第31〜34回）頻出テーマ TOP10
               </h2>
               <p className="text-xs text-gray-400 mt-0.5">
-                第32回 + 第33回 + 第34回の合算問数によるランキング
+                第31回 + 第32回 + 第33回 + 第34回の合算問数によるランキング
               </p>
             </div>
-            <Link href="/analysis/compare/33-vs-34" className="text-sm text-green-600 hover:underline whitespace-nowrap">
-              比較分析を見る →
+            <Link href="/analysis/compare/recent-4-years" className="text-sm text-green-600 hover:underline whitespace-nowrap">
+              4年比較分析を見る →
             </Link>
           </div>
           <div className="bg-white rounded-2xl border border-gray-100 divide-y divide-gray-50">
@@ -307,7 +314,7 @@ export default function HomePage() {
                   </div>
                   <div className="text-right flex-shrink-0 w-14">
                     <p className="text-base font-bold text-green-700">{t.count}問</p>
-                    <p className="text-xs text-gray-400">3年合算</p>
+                    <p className="text-xs text-gray-400">4年合算</p>
                   </div>
                 </div>
               )
@@ -322,6 +329,9 @@ export default function HomePage() {
             </Link>
             <Link href="/analysis/exam-32" className="text-sm text-green-600 hover:underline">
               第32回の分析を見る →
+            </Link>
+            <Link href="/analysis/exam-31" className="text-sm text-green-600 hover:underline">
+              第31回の分析を見る →
             </Link>
           </div>
         </section>
@@ -374,6 +384,7 @@ export default function HomePage() {
           <div className="bg-white rounded-2xl border border-gray-100 p-5">
             <ul className="space-y-3 text-sm">
               {[
+                { label: '第31回国家試験', count: '180問' },
                 { label: '第32回国家試験', count: '180問' },
                 { label: '第33回国家試験', count: '180問' },
                 { label: '第34回国家試験', count: '180問' },
@@ -391,7 +402,7 @@ export default function HomePage() {
             </ul>
             <div className="mt-4 pt-4 border-t border-gray-100 flex items-center justify-between">
               <span className="text-sm text-gray-500">合計</span>
-              <span className="text-base font-bold text-green-700">分析済み：540問</span>
+              <span className="text-base font-bold text-green-700">分析済み：720問</span>
             </div>
           </div>
         </section>
