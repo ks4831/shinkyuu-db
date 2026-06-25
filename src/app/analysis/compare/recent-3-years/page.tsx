@@ -313,7 +313,6 @@ export default function Recent3YearsPage() {
                 <div className="flex items-start justify-between gap-2">
                   <div className="min-w-0">
                     <p className="font-semibold text-sm text-gray-800">{t.label}</p>
-                    <p className="text-xs text-gray-400 font-mono mt-0.5">{t.theme}</p>
                   </div>
                   <div className="flex-shrink-0 flex flex-col items-end gap-1">
                     <ImportanceBadge importance={t.importance} showLabel={false} />
@@ -462,9 +461,9 @@ export default function Recent3YearsPage() {
           <div className="bg-green-50 border border-green-100 rounded-xl p-5">
             <p className="text-sm font-bold text-green-700 mb-2">3年間の傾向まとめ</p>
             <p className="text-sm text-gray-700 leading-relaxed">
-              <strong>刺鍼・灸法・作用機序（acupuncture-technique）</strong>は3回連続1位を維持し、
+              <strong>刺鍼・灸法・作用機序</strong>は3回連続1位を維持し、
               問数も一貫して増加しています（第32回35問・第33回以降さらに増加）。
-              <strong>経絡経穴（meridians-acupoints）</strong>は3年間で2位を安定して確保し、
+              <strong>経絡経穴</strong>は3年間で2位を安定して確保し、
               特定穴・骨度法・経穴部位問題が毎回多数出題されています。
               <strong>整形外科・神経疾患・リハビリ</strong>は3年通じて上位を維持し、
               西洋医学臨床知識の基礎として必須の領域です。

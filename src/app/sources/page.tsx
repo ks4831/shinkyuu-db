@@ -61,7 +61,7 @@ export default function SourcesPage() {
               },
               {
                 title: '分析データのみ掲載',
-                desc: '各問題を「normalizedTheme（テーマキー）」「subject（科目）」などのメタデータに変換し、統計的な傾向分析に利用しています。',
+                desc: '各問題を「テーマキー」「subject（科目）」などのメタデータに変換し、統計的な傾向分析に利用しています。',
               },
               {
                 title: '正答は集計のみ利用',
@@ -84,7 +84,7 @@ export default function SourcesPage() {
             <p><span className="text-green-400">questionNumber</span> <span className="text-gray-500">// 問題番号</span></p>
             <p><span className="text-green-400">session</span>        <span className="text-gray-500">// AM / PM / 共通</span></p>
             <p><span className="text-green-400">subject</span>        <span className="text-gray-500">// 科目ID</span></p>
-            <p><span className="text-green-400">normalizedTheme</span><span className="text-gray-500">// 独自テーマキー</span></p>
+            <p><span className="text-green-400">themeKey</span>       <span className="text-gray-500">// 独自テーマキー</span></p>
             <p><span className="text-green-400">subTheme</span>       <span className="text-gray-500">// 出題内容の要約</span></p>
             <p><span className="text-green-400">importance</span>     <span className="text-gray-500">// S/A/B/C</span></p>
             <p><span className="text-green-400">memo</span>           <span className="text-gray-500">// はり師専用 / きゅう師専用など</span></p>

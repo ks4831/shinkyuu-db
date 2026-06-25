@@ -78,7 +78,7 @@ export default function AboutPage() {
               ['対象回', '第32回（2024年）・第33回（2025年）・第34回（2026年）'],
               ['分析問題数', '540問（各回180問 × 3回）'],
               ['出題基準', '2020年版'],
-              ['分類方法', 'normalizedThemeキーによるテーマ分類（独自基準）'],
+              ['分類方法', '独自テーマキーによるグループ分類'],
             ].map(([label, value]) => (
               <div key={label} className="flex gap-4 px-4 py-3 border-b border-gray-50 last:border-0">
                 <span className="text-xs text-gray-400 w-28 flex-shrink-0 pt-0.5">{label}</span>

@@ -279,7 +279,6 @@ export default function Compare33vs34Page() {
                 <div key={t.theme} className="flex items-center justify-between px-4 py-2.5 gap-2">
                   <div>
                     <p className="text-sm font-medium text-gray-800">{label(t.theme)}</p>
-                    <p className="text-xs text-gray-400 font-mono">{t.theme}</p>
                   </div>
                   <div className="text-right flex-shrink-0">
                     <p className="text-sm font-bold text-blue-600">{t.count33}問</p>
@@ -305,7 +304,6 @@ export default function Compare33vs34Page() {
                 <div key={t.theme} className="flex items-center justify-between px-4 py-2.5 gap-2">
                   <div>
                     <p className="text-sm font-medium text-gray-800">{label(t.theme)}</p>
-                    <p className="text-xs text-gray-400 font-mono">{t.theme}</p>
                   </div>
                   <div className="text-right flex-shrink-0">
                     <p className="text-sm font-bold text-green-600">{t.count34}問</p>
@@ -446,10 +444,10 @@ export default function Compare33vs34Page() {
           <div className="bg-green-50 border border-green-100 rounded-xl p-5">
             <p className="text-sm font-bold text-green-700 mb-2">共通頻出テーマ（連続して重要）</p>
             <p className="text-sm text-gray-700 leading-relaxed">
-              <strong>刺鍼・灸法・作用機序（acupuncture-technique）</strong>と
-              <strong>経絡経穴（meridians-acupoints）</strong>は
+              <strong>刺鍼・灸法・作用機序</strong>と
+              <strong>経絡経穴</strong>は
               第33・34回とも最上位を占め、鍼灸国家試験の核心テーマとして安定した出題が続いています。
-              <strong>弁証論治（tcm-clinical）</strong>・<strong>東洋医学基礎理論（tcm-fundamentals）</strong>も
+              <strong>弁証論治</strong>・<strong>東洋医学基礎理論</strong>も
               両回でS〜A判定を維持しており、東洋医学系の比重の高さは不変です。
               神経疾患・整形外科疾患も両回で上位に位置し、西洋医学臨床の基礎力が問われ続けています。
             </p>

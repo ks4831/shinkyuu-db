@@ -261,9 +261,6 @@ export default function Exam32AnalysisPage() {
                       style={{ width: `${barW}%` }}
                     />
                   </div>
-                  <p className="text-xs text-gray-300 mt-0.5 font-mono">
-                    {theme.normalizedTheme}
-                  </p>
                 </div>
 
                 <div className="text-right flex-shrink-0 w-14">
@@ -387,12 +384,12 @@ export default function Exam32AnalysisPage() {
             臨床系の中核をなします。PM専門科目の鍼灸理論と並ぶ最重要領域です。
           </p>
           <p>
-            <strong className="text-green-700">鍼灸理論（acupuncture-technique）</strong>
+            <strong className="text-green-700">刺鍼・灸法・作用機序</strong>
             がPM科目の主体となり180問中35問（{pct(35, total)}%）とダントツ1位。
             PM後半の症例問題（Q127〜160）では鍼灸適応・経穴選択・東洋医学弁証が融合して出題されます。
           </p>
           <p>
-            <strong className="text-green-700">経絡経穴（meridians-acupoints）</strong>
+            <strong className="text-green-700">経絡経穴</strong>
             は20問出題。五兪穴・八会穴・下合穴などの特定穴と、頸部・膝窩・腰部など解剖学的取穴が中心です。
           </p>
           <p>

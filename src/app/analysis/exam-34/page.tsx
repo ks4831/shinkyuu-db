@@ -163,7 +163,7 @@ export default function Exam34AnalysisPage() {
     {
       rank: 3,
       theme: 'neurology+orthopedics',
-      label: 'neurology + orthopedics（神経疾患・整形外科）',
+      label: '神経疾患・整形外科',
       badge: 'S' as Importance,
       count: neuroOrthoCount,
       strategy:
@@ -172,7 +172,7 @@ export default function Exam34AnalysisPage() {
     {
       rank: 4,
       theme: 'tcm-clinical+tcm-fundamentals',
-      label: 'tcm-clinical + tcm-fundamentals（弁証論治・東洋医学基礎）',
+      label: '弁証論治・東洋医学基礎理論',
       badge: 'S' as Importance,
       count:
         (themeAggs.find(t => t.normalizedTheme === 'tcm-clinical')?.count ?? 0) +
@@ -183,7 +183,7 @@ export default function Exam34AnalysisPage() {
     {
       rank: 5,
       theme: 'general-pathology+cardiology',
-      label: 'general-pathology + cardiology（病理学・循環器）',
+      label: '病理学総論・循環器疾患',
       badge: 'A' as Importance,
       count:
         (themeAggs.find(t => t.normalizedTheme === 'general-pathology')?.count ?? 0) +
@@ -286,9 +286,6 @@ export default function Exam34AnalysisPage() {
                       style={{ width: `${barW}%` }}
                     />
                   </div>
-                  <p className="text-xs text-gray-300 mt-0.5 font-mono">
-                    {theme.normalizedTheme}
-                  </p>
                 </div>
 
                 {/* 件数 */}
@@ -417,8 +414,8 @@ export default function Exam34AnalysisPage() {
             第34回は専門理論の比重が高く、特に作用機序の問題が量・質ともに増加しました。
           </p>
           <p>
-            <strong className="text-green-700">acupuncture-technique</strong>
-            （刺鍼・灸法・作用機序）が37問でダントツ1位。
+            <strong className="text-green-700">刺鍼・灸法・作用機序</strong>
+            が37問でダントツ1位。
             内因性オピオイド・下行性疼痛抑制系・施灸の局所反応（CGRP・フレア現象）など
             神経科学的メカニズムの問題が充実しています。
           </p>

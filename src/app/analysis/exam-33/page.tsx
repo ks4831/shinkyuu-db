@@ -169,7 +169,7 @@ export default function Exam33AnalysisPage() {
     {
       rank: 4,
       theme: 'neurology+orthopedics',
-      label: 'neurology + orthopedics（神経疾患・整形外科）',
+      label: '神経疾患・整形外科',
       badge: 'A' as Importance,
       count: neuroOrthoCount,
       strategy:
@@ -277,9 +277,6 @@ export default function Exam33AnalysisPage() {
                       style={{ width: `${barW}%` }}
                     />
                   </div>
-                  <p className="text-xs text-gray-300 mt-0.5 font-mono">
-                    {theme.normalizedTheme}
-                  </p>
                 </div>
 
                 {/* 件数 */}
@@ -408,8 +405,8 @@ export default function Exam33AnalysisPage() {
             第33回も引き続き専門理論の比重が高い傾向を維持しています。
           </p>
           <p>
-            <strong className="text-green-700">acupuncture-technique</strong>
-            （刺鍼・灸法・作用機序）がトップ。
+            <strong className="text-green-700">刺鍼・灸法・作用機序</strong>
+            がトップ。
             古代九鍼の種類・基本17手技・特殊鍼法（皮内鍼の横刺）・施灸局所反応（軸索反射・補体・ポリモーダル受容器）まで
             幅広い知識が問われました。下行性疼痛抑制系（青斑核→ノルアドレナリン）の出題が第33回の特徴です。
           </p>
