@@ -21,6 +21,16 @@ export async function generateMetadata({
 }
 
 const allRounds = [29, 30, 31, 32, 33, 34]
+const ROUND_YEAR: Record<number, number> = {
+  29: 2021, 30: 2022, 31: 2023, 32: 2024, 33: 2025, 34: 2026,
+}
+
+const IMP_PRIORITY: Record<string, { label: string; color: string; advice: string }> = {
+  S: { label: '最優先', color: 'text-red-700 bg-red-50 border-red-200', advice: '第35回でも高確率で出題が見込まれます。必ず押さえてください。' },
+  A: { label: '優先',   color: 'text-orange-700 bg-orange-50 border-orange-200', advice: '出題頻度が高く、学習コストパフォーマンスが高いテーマです。' },
+  B: { label: '標準',   color: 'text-blue-700 bg-blue-50 border-blue-200', advice: '余裕があれば優先して学習しましょう。複合問題での出題もあります。' },
+  C: { label: '参考',   color: 'text-gray-600 bg-gray-50 border-gray-200', advice: '出題頻度は低めですが、関連テーマとまとめて学ぶと効率的です。' },
+}
 
 export default async function ThemeDetailPage({
   params,
@@ -35,6 +45,17 @@ export default async function ThemeDetailPage({
   const relatedThemes = theme.relatedThemes
     .map(id => getTheme(id))
     .filter(Boolean)
+
+  const priority = IMP_PRIORITY[theme.importance]
+  const isRecent = theme.examRounds.includes(33) || theme.examRounds.includes(34)
+  const streak = (() => {
+    let s = 0
+    for (let i = allRounds.length - 1; i >= 0; i--) {
+      if (theme.examRounds.includes(allRounds[i])) s++
+      else break
+    }
+    return s
+  })()
 
   return (
     <main className="max-w-3xl mx-auto px-4 py-8">
@@ -53,13 +74,12 @@ export default async function ThemeDetailPage({
         <span className="text-gray-700">{theme.name}</span>
       </div>
 
-      {/* Theme header */}
+      {/* Header */}
       <div className="bg-gradient-to-r from-green-50 to-white rounded-2xl border border-green-100 p-6 mb-6">
         <div className="flex items-start gap-3 flex-wrap">
           <h1 className="text-2xl font-bold text-gray-900">{theme.name}</h1>
           <ImportanceBadge importance={theme.importance} />
         </div>
-
         {subject && (
           <Link
             href={`/subjects/${subject.id}`}
@@ -68,7 +88,6 @@ export default async function ThemeDetailPage({
             📚 {subject.name}
           </Link>
         )}
-
         {theme.aliases && theme.aliases.length > 0 && (
           <p className="mt-2 text-xs text-gray-400">
             別名: {theme.aliases.join(' / ')}
@@ -86,7 +105,7 @@ export default async function ThemeDetailPage({
         <div className="bg-white rounded-xl border border-gray-100 p-4 text-center">
           <p className="text-xs text-gray-400 mb-1">直近出題</p>
           <p className="text-2xl font-bold text-green-700">第{theme.latestRound}回</p>
-          <p className="text-xs text-gray-400">{theme.latestRound + 1992}年</p>
+          <p className="text-xs text-gray-400">{ROUND_YEAR[theme.latestRound]}年</p>
         </div>
         <div className="bg-white rounded-xl border border-gray-100 p-4 text-center">
           <p className="text-xs text-gray-400 mb-1">重要度</p>
@@ -95,28 +114,58 @@ export default async function ThemeDetailPage({
         </div>
       </div>
 
-      {/* Round heatmap */}
+      {/* Year-by-year visualization */}
       <section className="bg-white rounded-2xl border border-gray-100 p-5 mb-4">
-        <h2 className="font-bold text-gray-800 mb-3">出題年度</h2>
-        <div className="flex gap-2 flex-wrap">
+        <h2 className="font-bold text-gray-800 mb-4">年度別出題推移（第29〜34回）</h2>
+        <div className="grid grid-cols-6 gap-2">
           {allRounds.map(round => {
             const hit = theme.examRounds.includes(round)
             return (
-              <div
-                key={round}
-                className={`flex flex-col items-center px-3 py-2 rounded-xl text-sm ${
-                  hit
-                    ? 'bg-green-100 text-green-800 font-semibold'
-                    : 'bg-gray-50 text-gray-300'
-                }`}
-              >
-                <span className="text-xs">第{round}回</span>
-                <span className="text-xs">{round + 1992}年</span>
-                <span className="mt-1">{hit ? '✓' : '—'}</span>
+              <div key={round} className="flex flex-col items-center gap-1">
+                <div className="w-full h-16 flex items-end justify-center">
+                  <div
+                    className={`w-8 rounded-t-md transition-all ${
+                      hit ? 'bg-green-400 h-full' : 'bg-gray-100 h-3'
+                    }`}
+                  />
+                </div>
+                <span className={`text-xs font-semibold ${hit ? 'text-green-700' : 'text-gray-300'}`}>
+                  {hit ? '✓' : '—'}
+                </span>
+                <span className="text-xs text-gray-500">第{round}回</span>
+                <span className="text-xs text-gray-400">{ROUND_YEAR[round]}</span>
               </div>
             )
           })}
         </div>
+        {streak >= 2 && (
+          <p className="mt-3 text-xs text-green-700 bg-green-50 px-3 py-1.5 rounded-lg inline-block">
+            直近{streak}回連続出題中
+          </p>
+        )}
+      </section>
+
+      {/* Study priority recommendation */}
+      <section className={`rounded-2xl border p-5 mb-4 ${priority.color}`}>
+        <h2 className="font-bold mb-2">📊 第35回に向けた学習優先度</h2>
+        <div className="flex items-center gap-3 mb-3">
+          <span className={`text-2xl font-black`}>{theme.importance}</span>
+          <div>
+            <p className="font-semibold text-sm">{priority.label}</p>
+            <p className="text-xs opacity-80">{importanceLabel(theme.importance)}</p>
+          </div>
+        </div>
+        <p className="text-sm leading-relaxed">{priority.advice}</p>
+        {isRecent && (
+          <p className="mt-2 text-xs font-semibold">
+            ✓ 直近2年（第33・34回）でも出題されており、継続学習が推奨されます。
+          </p>
+        )}
+        {!isRecent && theme.count >= 4 && (
+          <p className="mt-2 text-xs font-semibold opacity-80">
+            ⚠ 最近は出題が途絶えていますが、高頻度テーマのため復活に注意。
+          </p>
+        )}
       </section>
 
       {/* Official classification */}
@@ -184,15 +233,15 @@ export default async function ThemeDetailPage({
 
       <div className="mt-8 flex gap-4 flex-wrap">
         {subject && (
-          <Link
-            href={`/subjects/${subject.id}`}
-            className="text-sm text-green-600 hover:underline"
-          >
+          <Link href={`/subjects/${subject.id}`} className="text-sm text-green-600 hover:underline">
             ← {subject.name}の一覧に戻る
           </Link>
         )}
         <Link href="/themes" className="text-sm text-green-600 hover:underline">
           テーマ一覧に戻る
+        </Link>
+        <Link href="/study" className="text-sm text-green-600 hover:underline">
+          学習モード →
         </Link>
       </div>
     </main>

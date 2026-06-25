@@ -1,6 +1,7 @@
 import type { Metadata } from 'next'
 import './globals.css'
 import Header from '@/components/Header'
+import ScrollToTop from '@/components/ScrollToTop'
 import Link from 'next/link'
 
 const SITE_URL = process.env.NEXT_PUBLIC_SITE_URL ?? 'https://shinkyuu-db.vercel.app'
@@ -51,6 +52,7 @@ export default function RootLayout({
       <body className="min-h-full flex flex-col bg-white">
         <Header />
         <div className="flex-1">{children}</div>
+        <ScrollToTop />
         <footer className="border-t border-gray-100 bg-gray-50 mt-auto">
           <div className="max-w-4xl mx-auto px-4 py-8">
             <div className="grid grid-cols-2 sm:grid-cols-4 gap-6 mb-6 text-sm">

@@ -114,8 +114,7 @@ export default function Exam34AnalysisPage() {
     importance: calcImportanceByCount(t.count) as Importance,
     label: THEME_LABELS[t.normalizedTheme] ?? t.normalizedTheme,
   }))
-  const top20 = themeAggs.slice(0, 20)
-  const maxThemeCount = top20[0]?.count ?? 1
+  const maxThemeCount = themeAggs[0]?.count ?? 1
   const uniqueThemeCount = themeAggs.length
 
   // ── 重要度グループ ────────────────────────────────
@@ -246,10 +245,11 @@ export default function Exam34AnalysisPage() {
       {/* ── 2. 頻出テーマ TOP20 ─────────────────── */}
       <section>
         <h2 className="text-lg font-bold text-gray-800 mb-4">
-          頻出テーマ ランキング TOP20
+          頻出テーマ ランキング
+          <span className="text-xs text-gray-400 font-normal ml-2">全{themeAggs.length}テーマ / 第34回</span>
         </h2>
         <div className="bg-white rounded-2xl border border-gray-100 divide-y divide-gray-50">
-          {top20.map((theme, i) => {
+          {themeAggs.slice(0, 10).map((theme, i) => {
             const style = IMP_STYLE[theme.importance]
             const barW = Math.round((theme.count / maxThemeCount) * 100)
             return (
@@ -297,6 +297,105 @@ export default function Exam34AnalysisPage() {
             )
           })}
         </div>
+
+        {themeAggs.length > 10 && (
+          <details className="mt-2">
+            <summary className="cursor-pointer select-none text-sm text-green-600 hover:text-green-800 font-semibold px-1 py-2 list-none flex items-center gap-1.5">
+              ▶ 11〜20位を見る
+              <span className="text-gray-400 font-normal">（{Math.min(10, themeAggs.length - 10)}テーマ）</span>
+            </summary>
+            <div className="bg-white rounded-2xl border border-gray-100 divide-y divide-gray-50 mt-1">
+              {themeAggs.slice(10, 20).map((theme, i) => {
+                const style = IMP_STYLE[theme.importance]
+                const barW = Math.round((theme.count / maxThemeCount) * 100)
+                return (
+                  <div key={theme.normalizedTheme} className="flex items-center gap-3 px-4 py-3">
+                    <span className="flex-shrink-0 w-7 h-7 rounded-full flex items-center justify-center text-xs font-bold bg-gray-100 text-gray-500">{i + 11}</span>
+                    <div className="flex-1 min-w-0">
+                      <div className="flex items-center gap-2 mb-1 flex-wrap">
+                        <span className="font-medium text-sm text-gray-800 truncate">{theme.label}</span>
+                        <ImportanceBadge importance={theme.importance} showLabel={false} />
+                      </div>
+                      <div className="w-full bg-gray-100 rounded-full h-1.5">
+                        <div className={`h-1.5 rounded-full ${style.bar}`} style={{ width: `${barW}%` }} />
+                      </div>
+                    </div>
+                    <div className="text-right flex-shrink-0 w-14">
+                      <p className="text-base font-bold text-green-700">{theme.count}問</p>
+                      <p className="text-xs text-gray-400">{pct(theme.count, total)}%</p>
+                    </div>
+                  </div>
+                )
+              })}
+            </div>
+          </details>
+        )}
+
+        {themeAggs.length > 20 && (
+          <details className="mt-2">
+            <summary className="cursor-pointer select-none text-sm text-green-600 hover:text-green-800 font-semibold px-1 py-2 list-none flex items-center gap-1.5">
+              ▶ 21〜40位を見る
+              <span className="text-gray-400 font-normal">（{Math.min(20, themeAggs.length - 20)}テーマ）</span>
+            </summary>
+            <div className="bg-white rounded-2xl border border-gray-100 divide-y divide-gray-50 mt-1">
+              {themeAggs.slice(20, 40).map((theme, i) => {
+                const style = IMP_STYLE[theme.importance]
+                const barW = Math.round((theme.count / maxThemeCount) * 100)
+                return (
+                  <div key={theme.normalizedTheme} className="flex items-center gap-3 px-4 py-3">
+                    <span className="flex-shrink-0 w-7 h-7 rounded-full flex items-center justify-center text-xs font-bold bg-gray-100 text-gray-500">{i + 21}</span>
+                    <div className="flex-1 min-w-0">
+                      <div className="flex items-center gap-2 mb-1 flex-wrap">
+                        <span className="font-medium text-sm text-gray-800 truncate">{theme.label}</span>
+                        <ImportanceBadge importance={theme.importance} showLabel={false} />
+                      </div>
+                      <div className="w-full bg-gray-100 rounded-full h-1.5">
+                        <div className={`h-1.5 rounded-full ${style.bar}`} style={{ width: `${barW}%` }} />
+                      </div>
+                    </div>
+                    <div className="text-right flex-shrink-0 w-14">
+                      <p className="text-base font-bold text-green-700">{theme.count}問</p>
+                      <p className="text-xs text-gray-400">{pct(theme.count, total)}%</p>
+                    </div>
+                  </div>
+                )
+              })}
+            </div>
+          </details>
+        )}
+
+        {themeAggs.length > 40 && (
+          <details className="mt-2">
+            <summary className="cursor-pointer select-none text-sm text-green-600 hover:text-green-800 font-semibold px-1 py-2 list-none flex items-center gap-1.5">
+              ▶ 41位以降を見る
+              <span className="text-gray-400 font-normal">（{themeAggs.length - 40}テーマ）</span>
+            </summary>
+            <div className="bg-white rounded-2xl border border-gray-100 divide-y divide-gray-50 mt-1">
+              {themeAggs.slice(40).map((theme, i) => {
+                const style = IMP_STYLE[theme.importance]
+                const barW = Math.round((theme.count / maxThemeCount) * 100)
+                return (
+                  <div key={theme.normalizedTheme} className="flex items-center gap-3 px-4 py-3">
+                    <span className="flex-shrink-0 w-7 h-7 rounded-full flex items-center justify-center text-xs font-bold bg-gray-100 text-gray-500">{i + 41}</span>
+                    <div className="flex-1 min-w-0">
+                      <div className="flex items-center gap-2 mb-1 flex-wrap">
+                        <span className="font-medium text-sm text-gray-800 truncate">{theme.label}</span>
+                        <ImportanceBadge importance={theme.importance} showLabel={false} />
+                      </div>
+                      <div className="w-full bg-gray-100 rounded-full h-1.5">
+                        <div className={`h-1.5 rounded-full ${style.bar}`} style={{ width: `${barW}%` }} />
+                      </div>
+                    </div>
+                    <div className="text-right flex-shrink-0 w-14">
+                      <p className="text-base font-bold text-green-700">{theme.count}問</p>
+                      <p className="text-xs text-gray-400">{pct(theme.count, total)}%</p>
+                    </div>
+                  </div>
+                )
+              })}
+            </div>
+          </details>
+        )}
       </section>
 
       {/* ── 3. 重要度別分類 ─────────────────────── */}

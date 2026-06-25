@@ -171,6 +171,40 @@ export default function Recent4YearsPage() {
     .sort((a, b) => a.diff3134 - b.diff3134)
     .slice(0, 8)
 
+  // 増加率・減少率ランキング（第31回 2問以上出題テーマ対象）
+  const pctChangeList = trendList
+    .filter(t => t.c31 >= 2 && t.c34 > 0)
+    .map(t => ({ ...t, label: lbl(t.theme), pct: ((t.c34 - t.c31) / t.c31) * 100 }))
+  const topIncreasePct = [...pctChangeList]
+    .sort((a, b) => b.pct - a.pct)
+    .filter(t => t.pct > 0)
+    .slice(0, 6)
+  const topDecreasePct = [...pctChangeList]
+    .sort((a, b) => a.pct - b.pct)
+    .filter(t => t.pct < 0)
+    .slice(0, 6)
+
+  // 初登場テーマ（第29・30回に出題なく、第31〜34回で初登場）
+  const q29 = allQ.filter(q => q.examRound === 29)
+  const q30 = allQ.filter(q => q.examRound === 30)
+  const set2930 = new Set([
+    ...aggregateByTheme(q29).map(t => t.normalizedTheme),
+    ...aggregateByTheme(q30).map(t => t.normalizedTheme),
+  ])
+  const newThemes = Array.from(allThemes)
+    .filter(t => !set2930.has(t))
+    .map(t => ({
+      theme: t,
+      label: lbl(t),
+      c31: map31.get(t) ?? 0,
+      c32: map32.get(t) ?? 0,
+      c33: map33.get(t) ?? 0,
+      c34: map34.get(t) ?? 0,
+      total: (map31.get(t) ?? 0) + (map32.get(t) ?? 0) + (map33.get(t) ?? 0) + (map34.get(t) ?? 0),
+    }))
+    .sort((a, b) => b.total - a.total)
+    .slice(0, 12)
+
   // 科目別4年比較
   const subMap31 = new Map<string, number>()
   const subMap32 = new Map<string, number>()
@@ -444,6 +478,83 @@ export default function Recent4YearsPage() {
           </div>
         </div>
       </section>
+
+      {/* ── 4. 増加率・減少率ランキング */}
+      <section>
+        <h2 className="text-lg font-bold text-gray-800 mb-1">増加率・減少率ランキング（第31→34回比）</h2>
+        <p className="text-sm text-gray-500 mb-4">
+          第31回に2問以上出題されたテーマの出題数変化率
+        </p>
+        <div className="grid grid-cols-1 sm:grid-cols-2 gap-6">
+          <div>
+            <p className="text-sm font-semibold text-green-700 mb-2">増加率 上位</p>
+            <div className="space-y-2">
+              {topIncreasePct.map(t => (
+                <div key={t.theme} className="bg-white rounded-lg border border-gray-100 px-3 py-2.5">
+                  <div className="flex items-start justify-between gap-2">
+                    <p className="text-sm font-medium text-gray-800">{t.label}</p>
+                    <span className="flex-shrink-0 text-sm font-black text-green-600 ml-1">+{t.pct.toFixed(0)}%</span>
+                  </div>
+                  <div className="mt-1 flex items-center gap-1.5 text-xs">
+                    <span className="text-amber-600 font-semibold">{t.c31}問</span>
+                    <span className="text-gray-300">→</span>
+                    <span className="text-green-600 font-semibold">{t.c34}問</span>
+                    <span className="text-gray-400">（+{t.diff3134}問）</span>
+                  </div>
+                </div>
+              ))}
+              {topIncreasePct.length === 0 && <p className="text-sm text-gray-400 italic">該当なし</p>}
+            </div>
+          </div>
+          <div>
+            <p className="text-sm font-semibold text-red-600 mb-2">減少率 上位</p>
+            <div className="space-y-2">
+              {topDecreasePct.map(t => (
+                <div key={t.theme} className="bg-white rounded-lg border border-gray-100 px-3 py-2.5">
+                  <div className="flex items-start justify-between gap-2">
+                    <p className="text-sm font-medium text-gray-800">{t.label}</p>
+                    <span className="flex-shrink-0 text-sm font-black text-red-500 ml-1">{t.pct.toFixed(0)}%</span>
+                  </div>
+                  <div className="mt-1 flex items-center gap-1.5 text-xs">
+                    <span className="text-amber-600 font-semibold">{t.c31}問</span>
+                    <span className="text-gray-300">→</span>
+                    <span className="text-red-500 font-semibold">{t.c34}問</span>
+                    <span className="text-gray-400">（{t.diff3134}問）</span>
+                  </div>
+                </div>
+              ))}
+              {topDecreasePct.length === 0 && <p className="text-sm text-gray-400 italic">該当なし</p>}
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* ── 4.5. 初登場テーマ */}
+      {newThemes.length > 0 && (
+        <section>
+          <h2 className="text-lg font-bold text-gray-800 mb-1">初登場テーマ（第31〜34回）</h2>
+          <p className="text-sm text-gray-500 mb-4">
+            第29・30回には出題がなく、第31〜34回で新たに登場したテーマ
+          </p>
+          <div className="grid grid-cols-1 sm:grid-cols-2 gap-3">
+            {newThemes.map(t => (
+              <div key={t.theme} className="bg-white rounded-xl border border-blue-100 p-4">
+                <div className="flex items-start justify-between gap-2">
+                  <p className="font-semibold text-sm text-gray-800">{t.label}</p>
+                  <span className="text-xs bg-blue-50 text-blue-600 border border-blue-100 px-2 py-0.5 rounded-full font-semibold flex-shrink-0">新登場</span>
+                </div>
+                <div className="mt-2 flex items-center gap-2 text-xs flex-wrap">
+                  {t.c31 > 0 && <span className="text-amber-600 font-semibold bg-amber-50 px-1.5 py-0.5 rounded">31回: {t.c31}問</span>}
+                  {t.c32 > 0 && <span className="text-purple-600 font-semibold bg-purple-50 px-1.5 py-0.5 rounded">32回: {t.c32}問</span>}
+                  {t.c33 > 0 && <span className="text-blue-600 font-semibold bg-blue-50 px-1.5 py-0.5 rounded">33回: {t.c33}問</span>}
+                  {t.c34 > 0 && <span className="text-green-600 font-semibold bg-green-50 px-1.5 py-0.5 rounded">34回: {t.c34}問</span>}
+                  <span className="text-gray-400 ml-1">合計{t.total}問</span>
+                </div>
+              </div>
+            ))}
+          </div>
+        </section>
+      )}
 
       {/* ── 5. 科目別4年比較 */}
       <section>
