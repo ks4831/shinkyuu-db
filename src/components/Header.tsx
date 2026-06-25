@@ -5,39 +5,39 @@ export default function Header() {
     <header className="sticky top-0 z-20 bg-white border-b border-gray-100 shadow-sm">
       <div className="max-w-5xl mx-auto px-4 py-3 flex items-center justify-between">
         <Link href="/" className="flex items-center gap-2.5 group">
-          {/* 鍼灸アイコン：鍼（縦型ハンドル＋シャフト）＋お灸（ドーム＋熱気3本） */}
+          {/* 鍼灸アイコン：鍼（細軸）＋お灸（大きめドーム＋熱気3本） */}
           <svg
             xmlns="http://www.w3.org/2000/svg"
             viewBox="0 0 32 32"
-            width="30"
-            height="30"
+            width="28"
+            height="28"
             fill="none"
             aria-hidden="true"
           >
-            {/* 鍼：ハンドル（円環）＋縦シャフト */}
-            <circle cx="9" cy="5" r="2.2" stroke="#15803d" strokeWidth="1.7" />
+            {/* 鍼：ハンドル（小さめ円）＋細いシャフト */}
+            <circle cx="8" cy="5" r="1.8" stroke="#15803d" strokeWidth="1.3" />
             <line
-              x1="9" y1="7.2" x2="9" y2="25"
-              stroke="#15803d" strokeWidth="1.6" strokeLinecap="round"
+              x1="8" y1="6.8" x2="8" y2="26"
+              stroke="#15803d" strokeWidth="0.9" strokeLinecap="round"
             />
-            {/* お灸：ドーム形状 */}
+            {/* お灸：大きめドーム形状 */}
             <path
-              d="M13 29 Q13 22 20 22 Q27 22 27 29Z"
+              d="M12 29 Q12 20 20.5 20 Q29 20 29 29Z"
               stroke="#15803d" strokeWidth="1.5" strokeLinejoin="round"
             />
             {/* お灸：熱気ライン左 */}
             <path
-              d="M16 21.5 Q15 18 16 14.5"
+              d="M16 19.5 Q14.5 16 16 12.5"
               stroke="#15803d" strokeWidth="1.2" strokeLinecap="round"
             />
             {/* お灸：熱気ライン中央（最も高く） */}
             <path
-              d="M20 21.5 Q19 17 20 13"
+              d="M20.5 19.5 Q19 15 20.5 11"
               stroke="#15803d" strokeWidth="1.2" strokeLinecap="round"
             />
             {/* お灸：熱気ライン右 */}
             <path
-              d="M24 21.5 Q25 18 24 14.5"
+              d="M25 19.5 Q26.5 16 25 12.5"
               stroke="#15803d" strokeWidth="1.2" strokeLinecap="round"
             />
           </svg>

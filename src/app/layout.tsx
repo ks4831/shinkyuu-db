@@ -11,7 +11,7 @@ export const metadata: Metadata = {
     template: '%s | 鍼灸国家試験 頻出分析DB',
   },
   description:
-    '第32回〜第34回の鍼灸国家試験540問を分析。頻出テーマランキング、出題傾向、年度比較から効率的な学習を支援します。',
+    '第31〜34回720問を分析した鍼灸国家試験の出題傾向分析データベース。頻出テーマランキング・年度比較・科目別分析で効率よく学習できます。',
   keywords: [
     '鍼灸国家試験',
     'はり師国家試験',
@@ -24,7 +24,7 @@ export const metadata: Metadata = {
   ],
   openGraph: {
     title: '鍼灸国家試験 頻出分析データベース',
-    description: '第32回〜第34回の540問を分析。頻出テーマランキング・年度比較・科目別割合を可視化。',
+    description: '第31〜34回720問を分析。頻出テーマランキング・年度比較・科目別割合を可視化。',
     url: SITE_URL,
     siteName: '鍼灸国家試験 頻出分析データベース',
     locale: 'ja_JP',
@@ -33,7 +33,7 @@ export const metadata: Metadata = {
   twitter: {
     card: 'summary',
     title: '鍼灸国家試験 頻出分析データベース',
-    description: '第32回〜第34回の540問を分析。頻出テーマランキング・年度比較を可視化。',
+    description: '第31〜34回720問を分析。頻出テーマランキング・年度比較を可視化。',
   },
   metadataBase: new URL(SITE_URL),
   ...(process.env.NEXT_PUBLIC_GSC_VERIFICATION
@@ -60,6 +60,8 @@ export default function RootLayout({
                   <li><Link href="/analysis/exam-34" className="text-gray-500 hover:text-green-600 transition-colors">第34回分析</Link></li>
                   <li><Link href="/analysis/exam-33" className="text-gray-500 hover:text-green-600 transition-colors">第33回分析</Link></li>
                   <li><Link href="/analysis/exam-32" className="text-gray-500 hover:text-green-600 transition-colors">第32回分析</Link></li>
+                  <li><Link href="/analysis/exam-31" className="text-gray-500 hover:text-green-600 transition-colors">第31回分析</Link></li>
+                  <li><Link href="/analysis/compare/recent-4-years" className="text-gray-500 hover:text-green-600 transition-colors">直近4年比較</Link></li>
                   <li><Link href="/analysis/compare/recent-3-years" className="text-gray-500 hover:text-green-600 transition-colors">直近3年比較</Link></li>
                   <li><Link href="/analysis/compare/33-vs-34" className="text-gray-500 hover:text-green-600 transition-colors">33回 vs 34回</Link></li>
                 </ul>
@@ -88,11 +90,11 @@ export default function RootLayout({
                   </li>
                   <li>
                     <span className="text-gray-400">分析対象回数</span>
-                    <span className="ml-1 font-medium text-gray-600">第32〜34回（3回分）</span>
+                    <span className="ml-1 font-medium text-gray-600">第31〜34回（4回分）</span>
                   </li>
                   <li>
                     <span className="text-gray-400">分析問題数</span>
-                    <span className="ml-1 font-medium text-gray-600">540問</span>
+                    <span className="ml-1 font-medium text-gray-600">720問</span>
                   </li>
                 </ul>
               </div>
