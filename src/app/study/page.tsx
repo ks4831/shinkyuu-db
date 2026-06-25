@@ -1,6 +1,6 @@
 'use client'
 
-import { useState, useCallback, useMemo } from 'react'
+import { useState, useCallback, useMemo, useEffect } from 'react'
 import Link from 'next/link'
 import { themes, subjects } from '@/lib/data'
 import ImportanceBadge from '@/components/ImportanceBadge'
@@ -15,6 +15,24 @@ const IMP_COLORS: Record<Importance, { bg: string; border: string; num: string }
   A: { bg: 'bg-orange-50', border: 'border-orange-200', num: 'text-orange-700' },
   B: { bg: 'bg-blue-50',   border: 'border-blue-200',   num: 'text-blue-700' },
   C: { bg: 'bg-gray-50',   border: 'border-gray-200',   num: 'text-gray-500' },
+}
+
+const CHECKED_KEY = 'shinkyuu_checked'
+const FAVORITES_KEY = 'shinkyuu_favorites'
+const WEAKNESS_KEY = 'shinkyuu_weakness'
+
+function getSet(key: string): Set<string> {
+  if (typeof window === 'undefined') return new Set()
+  try {
+    const raw = localStorage.getItem(key)
+    return new Set(raw ? JSON.parse(raw) : [])
+  } catch {
+    return new Set()
+  }
+}
+
+function saveSet(key: string, set: Set<string>) {
+  localStorage.setItem(key, JSON.stringify([...set]))
 }
 
 function getWeightedRandom(seed: number): StudyTheme[] {
@@ -46,6 +64,15 @@ export default function StudyPage() {
   const [seed, setSeed] = useState(() => Date.now())
   const [flipped, setFlipped] = useState<Set<string>>(new Set())
   const [filterImp, setFilterImp] = useState<Importance | ''>('')
+  const [checked, setChecked] = useState(new Set<string>())
+  const [favorites, setFavorites] = useState(new Set<string>())
+  const [weakness, setWeakness] = useState(new Set<string>())
+
+  useEffect(() => {
+    setChecked(getSet(CHECKED_KEY))
+    setFavorites(getSet(FAVORITES_KEY))
+    setWeakness(getSet(WEAKNESS_KEY))
+  }, [])
 
   const daily = useMemo(() => getWeightedRandom(seed), [seed])
   const displayed = filterImp ? daily.filter(t => t.importance === filterImp) : daily
@@ -64,6 +91,14 @@ export default function StudyPage() {
     })
   }, [])
 
+  function toggleAction(key: string, id: string, current: Set<string>, setter: (s: Set<string>) => void) {
+    const next = new Set(current)
+    if (next.has(id)) next.delete(id)
+    else next.add(id)
+    saveSet(key, next)
+    setter(next)
+  }
+
   return (
     <main className="max-w-3xl mx-auto px-4 py-8">
       <nav className="flex items-center gap-2 text-sm text-gray-400 mb-6">
@@ -72,7 +107,7 @@ export default function StudyPage() {
         <span className="text-gray-700">学習モード</span>
       </nav>
 
-      <div className="flex items-start justify-between gap-4 mb-6 flex-wrap">
+      <div className="flex items-start justify-between gap-4 mb-4 flex-wrap">
         <div>
           <p className="text-xs text-green-600 font-semibold tracking-widest uppercase mb-1">
             STUDY MODE
@@ -82,12 +117,20 @@ export default function StudyPage() {
             重要度S優先のランダム10テーマ。カードをタップして学習ポイントを確認。
           </p>
         </div>
-        <button
-          onClick={shuffle}
-          className="flex items-center gap-2 bg-green-600 text-white px-5 py-2.5 rounded-full font-semibold text-sm hover:bg-green-700 active:scale-95 transition-all shadow-sm flex-shrink-0"
-        >
-          <span>🔀</span> シャッフル
-        </button>
+        <div className="flex items-center gap-2 flex-shrink-0">
+          <Link
+            href="/study/dashboard"
+            className="text-sm bg-gray-100 text-gray-600 px-4 py-2 rounded-full hover:bg-green-50 hover:text-green-700 transition-colors font-semibold"
+          >
+            ダッシュボード
+          </Link>
+          <button
+            onClick={shuffle}
+            className="flex items-center gap-2 bg-green-600 text-white px-5 py-2.5 rounded-full font-semibold text-sm hover:bg-green-700 active:scale-95 transition-all shadow-sm"
+          >
+            <span>🔀</span> シャッフル
+          </button>
+        </div>
       </div>
 
       {/* 重要度フィルター */}
@@ -121,6 +164,9 @@ export default function StudyPage() {
             const isFlipped = flipped.has(theme.id)
             const colors = IMP_COLORS[theme.importance]
             const subjectLabel = subjects.find(s => s.id === theme.subject)?.shortName ?? ''
+            const isChecked = checked.has(theme.id)
+            const isFav = favorites.has(theme.id)
+            const isWeak = weakness.has(theme.id)
             return (
               <div
                 key={theme.id}
@@ -142,6 +188,9 @@ export default function StudyPage() {
                           <span className="text-xs text-gray-400 bg-white/70 px-2 py-0.5 rounded-full border border-gray-100">
                             {subjectLabel}
                           </span>
+                        )}
+                        {isChecked && (
+                          <span className="text-xs text-green-700 bg-green-100 px-2 py-0.5 rounded-full font-semibold">覚えた</span>
                         )}
                       </div>
                       <div className="flex items-center gap-3 mt-1 text-xs text-gray-500">
@@ -178,13 +227,47 @@ export default function StudyPage() {
                   <div className="px-5 pb-5 pt-0 border-t border-white/50">
                     <p className="text-xs font-semibold text-green-700 mb-2 mt-3">💡 学習ポイント</p>
                     <p className="text-sm text-gray-700 leading-relaxed">{theme.studyPoint}</p>
-                    <div className="mt-3">
+
+                    {/* アクションボタン */}
+                    <div
+                      className="mt-4 flex gap-2 flex-wrap"
+                      onClick={e => e.stopPropagation()}
+                    >
+                      <button
+                        onClick={() => toggleAction(CHECKED_KEY, theme.id, checked, setChecked)}
+                        className={`text-xs px-3 py-1.5 rounded-full font-semibold transition-all border ${
+                          isChecked
+                            ? 'bg-green-600 text-white border-green-600'
+                            : 'bg-white text-gray-600 border-gray-200 hover:border-green-400 hover:text-green-600'
+                        }`}
+                      >
+                        {isChecked ? '✓ 覚えた！' : '覚えた'}
+                      </button>
+                      <button
+                        onClick={() => toggleAction(FAVORITES_KEY, theme.id, favorites, setFavorites)}
+                        className={`text-xs px-3 py-1.5 rounded-full font-semibold transition-all border ${
+                          isFav
+                            ? 'bg-orange-100 text-orange-700 border-orange-300'
+                            : 'bg-white text-gray-600 border-gray-200 hover:border-orange-300 hover:text-orange-600'
+                        }`}
+                      >
+                        {isFav ? '★ 復習リスト済' : '☆ あとで復習'}
+                      </button>
+                      <button
+                        onClick={() => toggleAction(WEAKNESS_KEY, theme.id, weakness, setWeakness)}
+                        className={`text-xs px-3 py-1.5 rounded-full font-semibold transition-all border ${
+                          isWeak
+                            ? 'bg-red-100 text-red-700 border-red-300'
+                            : 'bg-white text-gray-600 border-gray-200 hover:border-red-300 hover:text-red-600'
+                        }`}
+                      >
+                        {isWeak ? '✗ 苦手登録済' : '苦手に追加'}
+                      </button>
                       <Link
                         href={`/themes/${theme.id}`}
-                        onClick={e => e.stopPropagation()}
-                        className="text-xs text-green-600 hover:underline font-semibold"
+                        className="text-xs text-green-600 hover:underline font-semibold px-2 py-1.5"
                       >
-                        詳細ページを見る →
+                        詳細ページ →
                       </Link>
                     </div>
                   </div>
@@ -202,6 +285,9 @@ export default function StudyPage() {
         >
           🔀 もう一度シャッフル
         </button>
+        <Link href="/study/dashboard" className="text-sm text-green-600 hover:underline font-semibold">
+          ダッシュボードへ →
+        </Link>
         <Link href="/themes" className="text-sm text-green-600 hover:underline">
           テーマ一覧で全て見る →
         </Link>

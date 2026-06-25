@@ -48,7 +48,7 @@ export default function Header() {
         <nav className="flex items-center gap-1 text-sm">
           <Link
             href="/subjects"
-            className="px-3 py-1.5 rounded-lg text-gray-600 hover:text-green-700 hover:bg-green-50 transition-colors"
+            className="px-3 py-1.5 rounded-lg text-gray-600 hover:text-green-700 hover:bg-green-50 transition-colors hidden sm:block"
           >
             科目一覧
           </Link>
@@ -63,6 +63,12 @@ export default function Header() {
             className="px-3 py-1.5 rounded-lg text-gray-600 hover:text-green-700 hover:bg-green-50 transition-colors hidden sm:block"
           >
             第34回分析
+          </Link>
+          <Link
+            href="/study/dashboard"
+            className="px-3 py-1.5 rounded-lg bg-green-600 text-white hover:bg-green-700 transition-colors font-semibold"
+          >
+            学習
           </Link>
         </nav>
       </div>

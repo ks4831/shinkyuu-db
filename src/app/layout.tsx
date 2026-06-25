@@ -76,6 +76,16 @@ export default function RootLayout({
                 </ul>
               </div>
               <div>
+                <p className="font-semibold text-gray-700 mb-2">学習支援</p>
+                <ul className="space-y-1.5">
+                  <li><Link href="/study" className="text-gray-500 hover:text-green-600 transition-colors">今日の10テーマ</Link></li>
+                  <li><Link href="/study/dashboard" className="text-gray-500 hover:text-green-600 transition-colors">学習ダッシュボード</Link></li>
+                  <li><Link href="/study/checklist" className="text-gray-500 hover:text-green-600 transition-colors">チェックリスト</Link></li>
+                  <li><Link href="/study/favorites" className="text-gray-500 hover:text-green-600 transition-colors">復習リスト</Link></li>
+                  <li><Link href="/study/weakness" className="text-gray-500 hover:text-green-600 transition-colors">苦手テーマ</Link></li>
+                </ul>
+              </div>
+              <div>
                 <p className="font-semibold text-gray-700 mb-2">このサイトについて</p>
                 <ul className="space-y-1.5">
                   <li><Link href="/about" className="text-gray-500 hover:text-green-600 transition-colors">About</Link></li>

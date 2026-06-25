@@ -2,7 +2,9 @@ import type { Metadata } from 'next'
 import Link from 'next/link'
 import { notFound } from 'next/navigation'
 import { themes, getTheme, getSubject } from '@/lib/data'
+import { getLearningGuide } from '@/lib/learning'
 import ImportanceBadge from '@/components/ImportanceBadge'
+import StudyActions from '@/components/StudyActions'
 import { importanceLabel } from '@/lib/utils'
 
 export function generateStaticParams() {
@@ -57,6 +59,8 @@ export default async function ThemeDetailPage({
     return s
   })()
 
+  const guide = getLearningGuide(theme.id)
+
   return (
     <main className="max-w-3xl mx-auto px-4 py-8">
       {/* Breadcrumb */}
@@ -94,6 +98,9 @@ export default async function ThemeDetailPage({
           </p>
         )}
       </div>
+
+      {/* 学習管理ボタン */}
+      <StudyActions themeId={theme.id} />
 
       {/* Stats */}
       <div className="grid grid-cols-3 gap-3 mb-6">
@@ -168,6 +175,100 @@ export default async function ThemeDetailPage({
         )}
       </section>
 
+      {/* 学習ガイド（ある場合のみ） */}
+      {guide && (
+        <>
+          {/* 3分で覚える要点 */}
+          <section className="bg-green-50 rounded-2xl border border-green-100 p-5 mb-4">
+            <h2 className="font-bold text-green-800 mb-3">⚡ 3分で覚える要点</h2>
+            <ul className="space-y-2">
+              {guide.quickSummary.map((item, i) => (
+                <li key={i} className="flex items-start gap-2 text-sm text-gray-700">
+                  <span className="text-green-500 font-bold mt-0.5 flex-shrink-0">{i + 1}.</span>
+                  <span>{item}</span>
+                </li>
+              ))}
+            </ul>
+          </section>
+
+          {/* 国家試験で狙われるポイント */}
+          <section className="bg-white rounded-2xl border border-gray-100 p-5 mb-4">
+            <h2 className="font-bold text-gray-800 mb-3">🎯 国家試験で狙われるポイント</h2>
+            <ul className="space-y-2">
+              {guide.examFocus.map((item, i) => (
+                <li key={i} className="flex items-start gap-2 text-sm text-gray-700">
+                  <span className="text-orange-500 mt-0.5 flex-shrink-0">▶</span>
+                  <span>{item}</span>
+                </li>
+              ))}
+            </ul>
+          </section>
+
+          {/* 間違えやすいポイント */}
+          <section className="bg-red-50 rounded-2xl border border-red-100 p-5 mb-4">
+            <h2 className="font-bold text-red-800 mb-3">⚠ 間違えやすいポイント</h2>
+            <ul className="space-y-2">
+              {guide.commonMistakes.map((item, i) => (
+                <li key={i} className="flex items-start gap-2 text-sm text-gray-700">
+                  <span className="text-red-400 mt-0.5 flex-shrink-0">✗</span>
+                  <span>{item}</span>
+                </li>
+              ))}
+            </ul>
+          </section>
+
+          {/* 暗記のコツ */}
+          <section className="bg-blue-50 rounded-2xl border border-blue-100 p-5 mb-4">
+            <h2 className="font-bold text-blue-800 mb-3">💡 暗記のコツ</h2>
+            <ul className="space-y-2">
+              {guide.memoryTips.map((item, i) => (
+                <li key={i} className="flex items-start gap-2 text-sm text-gray-700">
+                  <span className="text-blue-400 mt-0.5 flex-shrink-0">✓</span>
+                  <span>{item}</span>
+                </li>
+              ))}
+            </ul>
+          </section>
+
+          {/* おすすめ学習順 */}
+          {guide.recommendedOrder.length > 0 && (
+            <section className="bg-white rounded-2xl border border-gray-100 p-5 mb-4">
+              <h2 className="font-bold text-gray-800 mb-3">📖 おすすめ学習順</h2>
+              <div className="flex items-center gap-2 flex-wrap">
+                {guide.recommendedOrder.map((id, i) => {
+                  const t = themes.find(th => th.id === id)
+                  if (!t) return null
+                  const isThis = id === theme.id
+                  return (
+                    <span key={id} className="flex items-center gap-1.5">
+                      {i > 0 && <span className="text-gray-300 text-xs">→</span>}
+                      {isThis ? (
+                        <span className="bg-green-600 text-white text-xs font-bold px-3 py-1.5 rounded-full">
+                          {t.name}（今ここ）
+                        </span>
+                      ) : (
+                        <Link
+                          href={`/themes/${t.id}`}
+                          className="text-xs bg-gray-50 text-gray-700 border border-gray-200 hover:border-green-200 hover:bg-green-50 px-3 py-1.5 rounded-full transition-colors"
+                        >
+                          {t.name}
+                        </Link>
+                      )}
+                    </span>
+                  )
+                })}
+              </div>
+            </section>
+          )}
+        </>
+      )}
+
+      {/* Study point */}
+      <section className="bg-green-50 rounded-2xl border border-green-100 p-5 mb-4">
+        <h2 className="font-bold text-green-800 mb-3">💡 学習ポイント</h2>
+        <p className="text-sm text-gray-700 leading-relaxed">{theme.studyPoint}</p>
+      </section>
+
       {/* Official classification */}
       {theme.officialLarge && (
         <section className="bg-white rounded-2xl border border-gray-100 p-5 mb-4">
@@ -199,12 +300,6 @@ export default async function ThemeDetailPage({
           </div>
         </section>
       )}
-
-      {/* Study point */}
-      <section className="bg-green-50 rounded-2xl border border-green-100 p-5 mb-4">
-        <h2 className="font-bold text-green-800 mb-3">💡 学習ポイント</h2>
-        <p className="text-sm text-gray-700 leading-relaxed">{theme.studyPoint}</p>
-      </section>
 
       {/* Related themes */}
       {relatedThemes.length > 0 && (
@@ -242,6 +337,9 @@ export default async function ThemeDetailPage({
         </Link>
         <Link href="/study" className="text-sm text-green-600 hover:underline">
           学習モード →
+        </Link>
+        <Link href="/study/dashboard" className="text-sm text-gray-400 hover:text-green-600 transition-colors">
+          ダッシュボード →
         </Link>
       </div>
     </main>
