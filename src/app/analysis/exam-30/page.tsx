@@ -9,9 +9,9 @@ import ImportanceBadge from '@/components/ImportanceBadge'
 import type { Importance } from '@/lib/types'
 
 export const metadata: Metadata = {
-  title: '第31回 出題分析',
+  title: '第30回 出題分析',
   description:
-    '第31回鍼灸国家試験（2023年）の出題傾向を頻出テーマ・科目・重要度で分析。180問全問の分類データ。',
+    '第30回鍼灸国家試験（2022年）の出題傾向を頻出テーマ・科目・重要度で分析。180問全問の分類データ。',
 }
 
 const THEME_LABELS: Record<string, string> = {
@@ -50,59 +50,46 @@ const THEME_LABELS: Record<string, string> = {
   'cardiovascular-physiology': '循環生理',
   'respiratory-physiology':    '呼吸生理',
   'metabolic-physiology':      '代謝生理',
+  'renal-physiology':          '腎生理',
   'endocrine-physiology':      '内分泌生理',
+  'reproductive-physiology':   '生殖生理',
+  'gynecology':                '婦人科疾患',
   'clinical-general':          '臨床医学総論',
+  'urology':                   '泌尿器疾患',
+  'welfare-law':               '福祉法規',
   'social-security':           '社会保障制度',
+  'maternal-child-health':     '母子保健',
+  'infectious-disease-control':'感染症対策',
+  'school-health':             '学校保健',
   'epidemiology':              '疫学',
   'medical-ethics':            '医の倫理',
-  'infectious-disease-control':'感染症対策',
-  'moxibustion':               '灸法・作用機序',
+  'medical-personnel-law':     '医療職の法規',
+  'health-insurance-law':      '医療保険法規',
+  'mental-health-law':         '精神保健法規',
+  'histology':                 '組織学',
 }
 
 const IMP_STYLE: Record<
   Importance,
   { bg: string; border: string; text: string; bar: string; label: string }
 > = {
-  S: {
-    bg: 'bg-red-50',
-    border: 'border-red-200',
-    text: 'text-red-700',
-    bar: 'bg-red-500',
-    label: '最重要（8問以上）',
-  },
-  A: {
-    bg: 'bg-orange-50',
-    border: 'border-orange-200',
-    text: 'text-orange-700',
-    bar: 'bg-orange-500',
-    label: '重要（5〜7問）',
-  },
-  B: {
-    bg: 'bg-blue-50',
-    border: 'border-blue-200',
-    text: 'text-blue-700',
-    bar: 'bg-blue-500',
-    label: '標準（3〜4問）',
-  },
-  C: {
-    bg: 'bg-gray-50',
-    border: 'border-gray-200',
-    text: 'text-gray-500',
-    bar: 'bg-gray-400',
-    label: '参考（1〜2問）',
-  },
+  S: { bg: 'bg-red-50',    border: 'border-red-200',    text: 'text-red-700',    bar: 'bg-red-500',    label: '最重要（8問以上）' },
+  A: { bg: 'bg-orange-50', border: 'border-orange-200', text: 'text-orange-700', bar: 'bg-orange-500', label: '重要（5〜7問）' },
+  B: { bg: 'bg-blue-50',   border: 'border-blue-200',   text: 'text-blue-700',   bar: 'bg-blue-500',   label: '標準（3〜4問）' },
+  C: { bg: 'bg-gray-50',   border: 'border-gray-200',   text: 'text-gray-500',   bar: 'bg-gray-400',   label: '参考（1〜2問）' },
 }
 
-function pct(count: number, total: number): string {
-  return (count / total * 100).toFixed(1)
+function pct(n: number, total: number): string {
+  if (total === 0) return '0.0'
+  return (n / total * 100).toFixed(1)
 }
 
-export default function Exam31AnalysisPage() {
+export default function Exam30AnalysisPage() {
   const allQuestions = loadAllExamQuestions()
-  const exam31 = allQuestions.filter(q => q.examRound === 31)
-  const total = exam31.length
+  const exam30 = allQuestions.filter(q => q.examRound === 30)
+  const total = exam30.length
 
-  const themeAggs = aggregateByTheme(exam31).map(t => ({
+  const themeAggs = aggregateByTheme(exam30).map(t => ({
     ...t,
     importance: calcImportanceByCount(t.count) as Importance,
     label: THEME_LABELS[t.normalizedTheme] ?? t.normalizedTheme,
@@ -114,7 +101,7 @@ export default function Exam31AnalysisPage() {
   for (const t of themeAggs) byImp[t.importance].push(t)
 
   const subjectMap = new Map<string, number>()
-  for (const q of exam31) {
+  for (const q of exam30) {
     const key = q.officialMedium ?? q.subject
     subjectMap.set(key, (subjectMap.get(key) ?? 0) + 1)
   }
@@ -125,46 +112,47 @@ export default function Exam31AnalysisPage() {
 
   const acuCount    = themeAggs.find(t => t.normalizedTheme === 'acupuncture-technique')?.count ?? 0
   const merCount    = themeAggs.find(t => t.normalizedTheme === 'meridians-acupoints')?.count ?? 0
-  const tcmCount    = (themeAggs.find(t => t.normalizedTheme === 'tcm-fundamentals')?.count ?? 0)
-                    + (themeAggs.find(t => t.normalizedTheme === 'tcm-clinical')?.count ?? 0)
-                    + (themeAggs.find(t => t.normalizedTheme === 'tcm-diagnosis')?.count ?? 0)
+  const tcmClinCount = themeAggs.find(t => t.normalizedTheme === 'tcm-clinical')?.count ?? 0
+  const tcmCount    = (themeAggs.find(t => t.normalizedTheme === 'tcm-fundamentals')?.count ?? 0) + tcmClinCount
+  const rehabCount  = themeAggs.find(t => t.normalizedTheme === 'rehabilitation')?.count ?? 0
+  const neuroCount  = themeAggs.find(t => t.normalizedTheme === 'neurology')?.count ?? 0
   const pmSpecCount = acuCount + merCount + tcmCount
 
   const studyPriorities = [
     {
       rank: 1,
-      theme: 'acupuncture-technique',
+      theme: 'tcm-clinical',
       badge: 'S' as Importance,
       strategy:
-        '刺鍼・灸法は第31回でも最多出題。はり理論（Q161〜170）・きゅう理論（Q171〜180）の各10問に加え、PM臨床問題でも経穴選択・補瀉手技・鍼の生理作用（軸索反射・DNIC・TRPV1受容体）が出題。灸頭鍼・CNT・鍼尖形状も対策必須。',
+        '第30回では弁証論治を中心とした東洋医学臨床論がPM専門科目の最多テーマ。Q98〜Q105（弁証・脈診・経脈病証）、Q127〜Q160（緊張型頭痛・神経根症・顎関節症・月経痛・スポーツ障害・腰痛・浮腫など）と幅広い症例統合問題が出題。「四診→弁証→取穴」の思考過程を実践的に演習することが最優先。',
     },
     {
       rank: 2,
-      theme: 'meridians-acupoints',
+      theme: 'acupuncture-technique',
       badge: 'S' as Importance,
       strategy:
-        '経絡経穴は20問出題。十二経筋・奇経八脈の概要、骨度、交会穴（大椎）、兪府・消濼・後頸三角（扶突）など部位問題が中心。五要穴（原穴・絡穴・募穴）と脚気八処・中風七穴などの組合せ穴も頻出。',
+        'はり・きゅう理論は両科目合計で26問程度出題。はり理論では十二刺の偶刺・古代九鍼（鋒鍼＝三稜鍼）・打鍼法（円鍼形・御園意斎）・折鍼リスク（細径鍼・長時間置鍼）・低周波鍼通電療法の禁忌・ポリモーダル受容器・脊髄分節性鎮痛。きゅう理論では艾の製造工程（けんどん）・無痕灸の種類・熱傷深度・アラキドン酸代謝（COX/LOX経路）・局所炎症反応（CGRP・フレア）が出題。',
     },
     {
       rank: 3,
-      theme: 'rehabilitation',
-      badge: 'A' as Importance,
+      theme: 'meridians-acupoints',
+      badge: 'S' as Importance,
       strategy:
-        'リハビリはFIM（セルフケア＝整容）・ブルンストロームステージⅡ（共同運動出現＋痙縮開始）・C5残存頸髄損傷（肩外転可能）・ウィリアムス体操（腰椎前弯改善）・ロコモ度テストが出題。各職種の役割区分（OT＝利き手交換訓練・ST＝嚥下訓練）も確実に。',
+        '経絡経穴概論は19問出題。奇経八脈（陽跷脈の陽気調節・申脈起始）・八会穴と募穴の重複（中脘・膻中・章門）・骨度法（各部の寸数）・経穴の正確な部位（陽渓＝鼻煙窩・第4〜5中手骨間の液門・中渚）・六つ灸と膏肓の同高さ・五兪穴の難経適用（虚補母・実瀉子）。部位問題は解剖学的ランドマークと照合して暗記する。',
     },
     {
       rank: 4,
-      theme: 'tcm-fundamentals',
+      theme: 'rehabilitation',
       badge: 'A' as Importance,
       strategy:
-        '東洋医学基礎理論は五行色体（五臓五労）・気の種類（原気・宗気・衛気・営気）・六淫（生風は火邪）・七情（喜で気緩み食欲不振）・経脈病証（手の少陽三焦経）など概念の正確な記憶が問われる。湯液療法（鉱物使用・証を立てる）も出題。',
+        'リハビリテーション医学は13問出題。脳性麻痺（はさみ脚歩行＝痙直型両麻痺・定義は生後4週以内の非進行性脳損傷）・社会的リハ（ケアマネジャーが在宅サービス調整）・疾患別異常歩行（PDの小刻み歩行・中殿筋麻痺のトレンデレンブルグ歩行）・装具（コックアップスプリント＝橈骨神経麻痺）・PTB下腿義足・自律神経過反射（T6以上損傷）・変形性膝関節症の内側広筋訓練。',
     },
     {
       rank: 5,
-      theme: 'musculoskeletal-disease',
+      theme: 'neurology',
       badge: 'A' as Importance,
       strategy:
-        '運動器疾患はL4神経根障害（膝伸展困難）・S1神経根障害（アキレス腱反射減弱・長母趾屈筋脱力）・ボンネットテスト（梨状筋症候群）・ウィリアムス体操・前十字靭帯（ラックマンテスト）・変形性膝関節症（内側痛・ロッキングなし）が出題パターン。',
+        '臨床医学各論の神経疾患は9問出題。鷲手（下位型尺骨神経麻痺）・JCS（Ⅲ-300が最重篤な深昏睡）・末梢性と中枢性めまいの鑑別（BPPV＝末梢性）・ALS（Spared systems：眼球運動・感覚・膀胱直腸は保たれる）・パーキンソン病（安静時振戦・pill-rolling）・高血圧性脳出血の最好発部位（被殻60%）・右被殻出血の左半側空間無視・ASD（3主徴）がパターン問題として頻出。',
     },
   ].map(p => ({
     ...p,
@@ -181,7 +169,7 @@ export default function Exam31AnalysisPage() {
           トップ
         </Link>
         <span>›</span>
-        <span className="text-gray-700">第31回 出題分析</span>
+        <span className="text-gray-700">第30回 出題分析</span>
       </nav>
 
       {/* ── 1. 概要 */}
@@ -190,19 +178,19 @@ export default function Exam31AnalysisPage() {
           EXAM ANALYSIS
         </p>
         <h1 className="text-2xl font-bold text-gray-900">
-          第31回 鍼灸国家試験
+          第30回 鍼灸国家試験
           <span className="text-green-600"> 出題分析</span>
         </h1>
         <p className="text-sm text-gray-500 mt-1">
-          2023年実施（令和5年）/ 出題基準2020年版 / 180問体制
+          2022年実施（令和4年）/ 出題基準2020年版 / 180問体制
         </p>
 
         <div className="mt-5 grid grid-cols-2 sm:grid-cols-4 gap-3">
           {[
-            { label: '総問題数',     value: `${total}問`,              sub: 'AM 90問 + PM 90問' },
-            { label: '出題テーマ数', value: `${uniqueThemeCount}種`,   sub: '集計キー別' },
+            { label: '総問題数',     value: `${total}問`,               sub: 'AM 90問 + PM 90問' },
+            { label: '出題テーマ数', value: `${uniqueThemeCount}種`,    sub: '集計キー別' },
             { label: '科目数',       value: `${subjectList.length}科目`, sub: '全科目出題あり' },
-            { label: 'S判定テーマ',  value: `${byImp.S.length}種`,     sub: '8問以上' },
+            { label: 'S判定テーマ',  value: `${byImp.S.length}種`,      sub: '8問以上' },
           ].map(s => (
             <div
               key={s.label}
@@ -216,50 +204,37 @@ export default function Exam31AnalysisPage() {
         </div>
       </section>
 
-      {/* ── 2. 頻出テーマ TOP20 */}
+      {/* ── 2. 頻出テーマ ランキング */}
       <section>
         <h2 className="text-lg font-bold text-gray-800 mb-4">
           頻出テーマ ランキング
-          <span className="text-xs text-gray-400 font-normal ml-2">全{themeAggs.length}テーマ / 第31回</span>
+          <span className="text-xs text-gray-400 font-normal ml-2">全{themeAggs.length}テーマ / 第30回</span>
         </h2>
         <div className="bg-white rounded-2xl border border-gray-100 divide-y divide-gray-50">
           {themeAggs.slice(0, 10).map((theme, i) => {
             const style = IMP_STYLE[theme.importance]
             const barW = Math.round((theme.count / maxThemeCount) * 100)
             return (
-              <div
-                key={theme.normalizedTheme}
-                className="flex items-center gap-3 px-4 py-3"
-              >
+              <div key={theme.normalizedTheme} className="flex items-center gap-3 px-4 py-3">
                 <span
                   className={`flex-shrink-0 w-7 h-7 rounded-full flex items-center justify-center text-xs font-bold ${
-                    i === 0
-                      ? 'bg-yellow-400 text-yellow-900'
-                      : i === 1
-                      ? 'bg-gray-300 text-gray-700'
-                      : i === 2
-                      ? 'bg-orange-300 text-orange-800'
-                      : 'bg-gray-100 text-gray-500'
+                    i === 0 ? 'bg-yellow-400 text-yellow-900'
+                    : i === 1 ? 'bg-gray-300 text-gray-700'
+                    : i === 2 ? 'bg-orange-300 text-orange-800'
+                    : 'bg-gray-100 text-gray-500'
                   }`}
                 >
                   {i + 1}
                 </span>
-
                 <div className="flex-1 min-w-0">
                   <div className="flex items-center gap-2 mb-1 flex-wrap">
-                    <span className="font-medium text-sm text-gray-800 truncate">
-                      {theme.label}
-                    </span>
+                    <span className="font-medium text-sm text-gray-800 truncate">{theme.label}</span>
                     <ImportanceBadge importance={theme.importance} showLabel={false} />
                   </div>
                   <div className="w-full bg-gray-100 rounded-full h-1.5">
-                    <div
-                      className={`h-1.5 rounded-full ${style.bar}`}
-                      style={{ width: `${barW}%` }}
-                    />
+                    <div className={`h-1.5 rounded-full ${style.bar}`} style={{ width: `${barW}%` }} />
                   </div>
                 </div>
-
                 <div className="text-right flex-shrink-0 w-14">
                   <p className="text-base font-bold text-green-700">{theme.count}問</p>
                   <p className="text-xs text-gray-400">{pct(theme.count, total)}%</p>
@@ -379,10 +354,7 @@ export default function Exam31AnalysisPage() {
             const style = IMP_STYLE[imp]
             const totalCount = themes.reduce((s, t) => s + t.count, 0)
             return (
-              <div
-                key={imp}
-                className={`rounded-xl border ${style.border} ${style.bg} p-4`}
-              >
+              <div key={imp} className={`rounded-xl border ${style.border} ${style.bg} p-4`}>
                 <div className="flex items-center gap-2 mb-3 flex-wrap">
                   <span className={`text-xl font-black ${style.text}`}>{imp}</span>
                   <span className="text-sm text-gray-600">{style.label}</span>
@@ -420,26 +392,19 @@ export default function Exam31AnalysisPage() {
                   {name}
                 </span>
                 <div className="flex-1 bg-gray-100 rounded-full h-3">
-                  <div
-                    className="h-3 rounded-full bg-green-500"
-                    style={{ width: `${barW}%` }}
-                  />
+                  <div className="h-3 rounded-full bg-green-500" style={{ width: `${barW}%` }} />
                 </div>
-                <span className="text-sm font-bold text-gray-700 w-8 text-right flex-shrink-0">
-                  {count}
-                </span>
-                <span className="text-xs text-gray-400 w-10 flex-shrink-0">
-                  {p}%
-                </span>
+                <span className="text-sm font-bold text-gray-700 w-8 text-right flex-shrink-0">{count}</span>
+                <span className="text-xs text-gray-400 w-10 flex-shrink-0">{p}%</span>
               </div>
             )
           })}
         </div>
       </section>
 
-      {/* ── 5. 第31回の特徴 */}
+      {/* ── 5. 第30回の特徴 */}
       <section>
-        <h2 className="text-lg font-bold text-gray-800 mb-4">第31回の特徴</h2>
+        <h2 className="text-lg font-bold text-gray-800 mb-4">第30回の特徴</h2>
 
         <div className="grid grid-cols-1 sm:grid-cols-3 gap-4 mb-5">
           {[
@@ -450,22 +415,19 @@ export default function Exam31AnalysisPage() {
               color: 'text-orange-700',
             },
             {
-              label: '刺鍼・灸法の比率',
-              value: `${pct(acuCount, total)}%`,
-              sub:   `${acuCount}問 / ${total}問`,
+              label: '弁証論治の比率',
+              value: `${pct(tcmClinCount, total)}%`,
+              sub:   `${tcmClinCount}問 / ${total}問（最多テーマ）`,
               color: 'text-blue-700',
             },
             {
-              label: '経絡経穴の比率',
-              value: `${pct(merCount, total)}%`,
-              sub:   `${merCount}問 / ${total}問`,
+              label: 'リハビリの比率',
+              value: `${pct(rehabCount, total)}%`,
+              sub:   `${rehabCount}問 / 神経疾患${neuroCount}問`,
               color: 'text-green-700',
             },
           ].map(item => (
-            <div
-              key={item.label}
-              className="bg-white rounded-xl border border-gray-100 p-4 text-center"
-            >
+            <div key={item.label} className="bg-white rounded-xl border border-gray-100 p-4 text-center">
               <p className="text-xs text-gray-500 mb-1">{item.label}</p>
               <p className={`text-3xl font-black ${item.color}`}>{item.value}</p>
               <p className="text-xs text-gray-400 mt-1">{item.sub}</p>
@@ -475,20 +437,23 @@ export default function Exam31AnalysisPage() {
 
         <div className="bg-green-50 border border-green-100 rounded-xl p-5 space-y-3 text-sm text-gray-700 leading-relaxed">
           <p>
-            <strong className="text-green-700">刺鍼・灸法・作用機序</strong>
-            がPM科目の主体となります。はり師専用問題（Q161〜170）では鍼の深度計算・鍼尖形状・クリーン・ニードル・テクニック・DNIC・軸索反射が出題。きゅう師専用（Q171〜180）では艾の製造・知熱灸・TRPV1受容体・ヒスタミン・ノルアドレナリンが問われました。
+            <strong className="text-green-700">
+              東洋医学臨床論（弁証論治）
+            </strong>
+            が第30回の最大テーマ。Q98〜Q105の基礎弁証に加え、Q127〜Q160の30問超が症例型弁証論治問題となっており、月経痛・上腹部痛・スポーツ障害・腰痛・浮腫・顔面神経麻痺・神経根症状など実践的な臨床シナリオから証を特定して治療穴を選択するパターンが特徴的。
           </p>
           <p>
-            <strong className="text-green-700">東洋医学概論</strong>
-            は精の生理作用・三焦と原気・六淫（火邪の生風）・七情（喜による気緩み）・湯液療法（鉱物使用）・心腎不交・足の厥陰経病証など、基礎概念の正確な理解を問う問題が多数出題されました。
+            <strong className="text-green-700">PM専門科目（はり・きゅう + 経絡経穴 + 東洋医学）</strong>
+            の合計は{pmSpecCount}問（{pct(pmSpecCount, total)}%）で全体の約半数を占める。
+            鍼灸専門知識の深さが合否を分ける構成であり、特に東洋医学臨床論の問題量が歴年で最多水準となった。
           </p>
           <p>
-            <strong className="text-green-700">経絡経穴概論</strong>
-            は20問出題。十二経筋（四肢末端から始まる）・任脈（子宮起始）・大椎（手三陽・足三陽の交会穴）・骨度・兪府（鎖骨下縁）・消濼（肘頭上方5寸）・扶突（後頸三角）が具体的な取穴部位として出題。
+            <strong className="text-green-700">はり理論・きゅう理論</strong>
+            では十二刺（偶刺）・打鍼法・古代九鍼（鋒鍼）・折鍼リスク管理・低周波鍼通電の禁忌、艾の製造工程・無痕灸の種類・施灸後の熱傷管理・アラキドン酸代謝系（COX/LOX経路）と局所炎症反応（フレア現象・CGRP）が詳細に問われた。
           </p>
           <p>
-            <strong className="text-green-700">AM後半（Q71〜90）のリハビリ・臨床</strong>
-            は FIM・ブルンストロームステージ・頸髄損傷・脳梗塞のADL訓練（利き手交換）・白血病の診断・過活動膀胱など幅広い臨床知識が必要な構成でした。
+            <strong className="text-green-700">AM後半（Q71〜Q90）</strong>
+            はリハビリテーション医学が13問と多く、脳性麻痺の分類・在宅サービス調整（ケアマネジャー）・装具と疾患の対応・PTB義足・脊髄損傷の自律神経過反射・変形性膝関節症のリハ手技が実践レベルで問われた。
           </p>
         </div>
       </section>
@@ -500,29 +465,20 @@ export default function Exam31AnalysisPage() {
         </h2>
         <div className="space-y-3">
           {studyPriorities.map(item => (
-            <div
-              key={item.rank}
-              className="bg-white rounded-xl border border-gray-100 p-4"
-            >
+            <div key={item.rank} className="bg-white rounded-xl border border-gray-100 p-4">
               <div className="flex items-start gap-3">
                 <div className="flex-shrink-0 w-8 h-8 rounded-full bg-green-600 text-white flex items-center justify-center text-sm font-bold">
                   {item.rank}
                 </div>
                 <div className="flex-1 min-w-0">
                   <div className="flex items-center gap-2 flex-wrap mb-1">
-                    <span className="font-semibold text-sm text-gray-800">
-                      {item.label}
-                    </span>
+                    <span className="font-semibold text-sm text-gray-800">{item.label}</span>
                     <ImportanceBadge importance={item.badge} showLabel={false} />
                     {item.count > 0 && (
-                      <span className="text-xs font-bold text-green-600">
-                        {item.count}問
-                      </span>
+                      <span className="text-xs font-bold text-green-600">{item.count}問</span>
                     )}
                   </div>
-                  <p className="text-xs text-gray-500 leading-relaxed">
-                    {item.strategy}
-                  </p>
+                  <p className="text-xs text-gray-500 leading-relaxed">{item.strategy}</p>
                 </div>
               </div>
             </div>
@@ -530,16 +486,16 @@ export default function Exam31AnalysisPage() {
         </div>
       </section>
 
-      {/* ── 7. 他の回と比較 */}
+      {/* ── 7. 他の回を見る */}
       <section>
         <h2 className="text-lg font-bold text-gray-800 mb-4">他の回を見る / 比較する</h2>
         <div className="grid grid-cols-1 sm:grid-cols-2 gap-3">
           <Link
-            href="/analysis/exam-30"
+            href="/analysis/exam-31"
             className="bg-white border border-green-100 rounded-xl p-5 text-center hover:border-green-300 hover:shadow-sm transition-all"
           >
-            <p className="text-sm font-semibold text-gray-800">第30回 出題分析</p>
-            <p className="text-xs text-gray-400 mt-1">2022年実施 / 180問分析</p>
+            <p className="text-sm font-semibold text-gray-800">第31回 出題分析</p>
+            <p className="text-xs text-gray-400 mt-1">2023年実施 / 180問分析</p>
             <span className="inline-block mt-2 text-xs bg-green-100 text-green-700 px-2 py-0.5 rounded-full">
               分析を見る →
             </span>
@@ -550,6 +506,16 @@ export default function Exam31AnalysisPage() {
           >
             <p className="text-sm font-semibold text-gray-800">第32回 出題分析</p>
             <p className="text-xs text-gray-400 mt-1">2024年実施 / 180問分析</p>
+            <span className="inline-block mt-2 text-xs bg-green-100 text-green-700 px-2 py-0.5 rounded-full">
+              分析を見る →
+            </span>
+          </Link>
+          <Link
+            href="/analysis/exam-33"
+            className="bg-white border border-green-100 rounded-xl p-5 text-center hover:border-green-300 hover:shadow-sm transition-all"
+          >
+            <p className="text-sm font-semibold text-gray-800">第33回 出題分析</p>
+            <p className="text-xs text-gray-400 mt-1">2025年実施 / 180問分析</p>
             <span className="inline-block mt-2 text-xs bg-green-100 text-green-700 px-2 py-0.5 rounded-full">
               分析を見る →
             </span>
@@ -566,7 +532,7 @@ export default function Exam31AnalysisPage() {
           </Link>
           <Link
             href="/analysis/compare/recent-5-years"
-            className="bg-white border border-purple-100 rounded-xl p-5 text-center hover:border-purple-300 hover:shadow-sm transition-all"
+            className="bg-white border border-purple-100 rounded-xl p-5 text-center hover:border-purple-300 hover:shadow-sm transition-all sm:col-span-2"
           >
             <p className="text-sm font-semibold text-gray-800">直近5年（第30〜34回）比較</p>
             <p className="text-xs text-gray-400 mt-1">5年間の出題傾向トレンド・増減分析</p>

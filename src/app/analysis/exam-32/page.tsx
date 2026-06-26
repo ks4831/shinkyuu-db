@@ -572,11 +572,21 @@ export default function Exam32AnalysisPage() {
           </Link>
           <Link
             href="/analysis/compare/recent-4-years"
-            className="bg-white border border-orange-100 rounded-xl p-5 text-center hover:border-orange-300 hover:shadow-sm transition-all sm:col-span-2"
+            className="bg-white border border-orange-100 rounded-xl p-5 text-center hover:border-orange-300 hover:shadow-sm transition-all"
           >
             <p className="text-sm font-semibold text-gray-800">直近4年（第31〜34回）比較</p>
             <p className="text-xs text-gray-400 mt-1">4年間の出題傾向トレンド・増減分析</p>
             <span className="inline-block mt-2 text-xs bg-orange-100 text-orange-700 px-2 py-0.5 rounded-full">
+              比較を見る →
+            </span>
+          </Link>
+          <Link
+            href="/analysis/compare/recent-5-years"
+            className="bg-white border border-teal-100 rounded-xl p-5 text-center hover:border-teal-300 hover:shadow-sm transition-all"
+          >
+            <p className="text-sm font-semibold text-gray-800">直近5年（第30〜34回）比較</p>
+            <p className="text-xs text-gray-400 mt-1">5年間の出題傾向トレンド・増減分析</p>
+            <span className="inline-block mt-2 text-xs bg-teal-100 text-teal-700 px-2 py-0.5 rounded-full">
               比較を見る →
             </span>
           </Link>
