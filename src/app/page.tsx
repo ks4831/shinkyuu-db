@@ -12,9 +12,9 @@ import DailyThemes from '@/components/DailyThemes'
 import type { Importance } from '@/lib/types'
 
 export const metadata: Metadata = {
-  title: '鍼灸国家試験 頻出分析DB | 第30〜34回900問分析',
+  title: '鍼灸国家試験 頻出分析DB | 第29〜34回1,080問分析',
   description:
-    '第30〜34回900問を分析した鍼灸国家試験の出題傾向分析データベース。頻出テーマランキング・年度比較・科目別分析で効率よく学習できます。',
+    '第29〜34回1,080問を分析した鍼灸国家試験の出題傾向分析データベース。頻出テーマランキング・年度比較・科目別分析で効率よく学習できます。',
 }
 
 const THEME_LABELS: Record<string, string> = {
@@ -87,10 +87,10 @@ const POPULAR_THEMES = [
 export default function HomePage() {
   const allQ = loadAllExamQuestions()
 
-  const recent5Y = allQ.filter(
-    q => q.examRound === 30 || q.examRound === 31 || q.examRound === 32 || q.examRound === 33 || q.examRound === 34
+  const recent6Y = allQ.filter(
+    q => q.examRound === 29 || q.examRound === 30 || q.examRound === 31 || q.examRound === 32 || q.examRound === 33 || q.examRound === 34
   )
-  const recentAgg = aggregateByTheme(recent5Y)
+  const recentAgg = aggregateByTheme(recent6Y)
     .slice(0, 10)
     .map(t => ({
       theme: t.normalizedTheme,
@@ -116,8 +116,8 @@ export default function HomePage() {
           <span className="text-green-600"> 頻出分析DB</span>
         </h1>
         <p className="mt-3 text-base sm:text-lg text-gray-700 font-medium leading-snug">
-          第30〜34回・
-          <strong className="text-green-600 font-black">900問</strong>
+          第29〜34回・
+          <strong className="text-green-600 font-black">1,080問</strong>
           を分析した鍼灸国家試験データベース
         </p>
         <p className="mt-2 text-sm text-gray-500 max-w-md mx-auto leading-relaxed">
@@ -159,10 +159,16 @@ export default function HomePage() {
             第30回 分析
           </Link>
           <Link
-            href="/analysis/compare/recent-5-years"
-            className="bg-white text-gray-700 border border-gray-200 px-4 py-2.5 rounded-xl font-semibold text-sm hover:bg-gray-50 transition-colors"
+            href="/analysis/exam-29"
+            className="bg-white text-green-700 border border-green-300 px-4 py-2.5 rounded-xl font-semibold text-sm hover:bg-green-50 transition-colors"
           >
-            直近5年比較
+            第29回 分析
+          </Link>
+          <Link
+            href="/analysis/compare/recent-6-years"
+            className="bg-white text-gray-700 border border-gray-200 px-4 py-2.5 rounded-xl font-semibold text-sm hover:bg-gray-50 transition-colors sm:col-span-3"
+          >
+            直近6年比較（第29〜34回）
           </Link>
         </div>
 
@@ -197,11 +203,11 @@ export default function HomePage() {
         <div className="max-w-4xl mx-auto px-4 py-6">
           <div className="grid grid-cols-2 sm:grid-cols-5 gap-3">
             {[
-              { label: '分析年度',   value: '第30〜34回', sub: '5回分' },
-              { label: '分析問題数', value: '900問',       sub: '各回180問×5回' },
+              { label: '分析年度',   value: '第29〜34回', sub: '6回分' },
+              { label: '分析問題数', value: '1,080問',     sub: '各回180問×6回' },
               { label: '収録テーマ', value: `${themeCount}テーマ`, sub: '自動集計' },
               { label: '収録科目',   value: '14科目',      sub: '全科目網羅' },
-              { label: '比較分析',   value: '5年対応',     sub: '年度別推移あり' },
+              { label: '比較分析',   value: '6年対応',     sub: '年度別推移あり' },
             ].map(s => (
               <div
                 key={s.label}
@@ -310,8 +316,9 @@ export default function HomePage() {
               { round: '第32回', year: '2024年実施', status: '180問 分析済み', href: '/analysis/exam-32' },
               { round: '第31回', year: '2023年実施', status: '180問 分析済み', href: '/analysis/exam-31' },
               { round: '第30回', year: '2022年実施', status: '180問 分析済み', href: '/analysis/exam-30' },
-              { round: '比較分析', year: '直近5年（第30〜34回）', status: '対応済み', href: '/analysis/compare/recent-5-years' },
-              { round: '合計', year: '直近5年分', status: '900問 分析済み', href: null },
+              { round: '第29回', year: '2021年実施', status: '180問 分析済み', href: '/analysis/exam-29' },
+              { round: '比較分析', year: '直近6年（第29〜34回）', status: '対応済み', href: '/analysis/compare/recent-6-years' },
+              { round: '合計', year: '直近6年分', status: '1,080問 分析済み', href: null },
             ].map(item => (
               <div key={item.round} className="flex items-center justify-between px-5 py-3.5">
                 <div>
@@ -338,14 +345,14 @@ export default function HomePage() {
           <div className="flex items-center justify-between mb-4 flex-wrap gap-2">
             <div>
               <h2 className="text-lg font-bold text-gray-800">
-                直近5年（第30〜34回）頻出テーマ TOP10
+                直近6年（第29〜34回）頻出テーマ TOP10
               </h2>
               <p className="text-xs text-gray-400 mt-0.5">
-                第30回〜第34回の合算問数によるランキング
+                第29回〜第34回の合算問数によるランキング
               </p>
             </div>
-            <Link href="/analysis/compare/recent-5-years" className="text-sm text-green-600 hover:underline whitespace-nowrap">
-              5年比較分析を見る →
+            <Link href="/analysis/compare/recent-6-years" className="text-sm text-green-600 hover:underline whitespace-nowrap">
+              6年比較分析を見る →
             </Link>
           </div>
           <div className="bg-white rounded-2xl border border-gray-100 divide-y divide-gray-50">
@@ -374,7 +381,7 @@ export default function HomePage() {
                   </div>
                   <div className="text-right flex-shrink-0 w-14">
                     <p className="text-base font-bold text-green-700">{t.count}問</p>
-                    <p className="text-xs text-gray-400">5年合算</p>
+                    <p className="text-xs text-gray-400">6年合算</p>
                   </div>
                 </div>
               )
@@ -386,6 +393,7 @@ export default function HomePage() {
             <Link href="/analysis/exam-32" className="text-sm text-green-600 hover:underline">第32回の分析 →</Link>
             <Link href="/analysis/exam-31" className="text-sm text-green-600 hover:underline">第31回の分析 →</Link>
             <Link href="/analysis/exam-30" className="text-sm text-green-600 hover:underline">第30回の分析 →</Link>
+            <Link href="/analysis/exam-29" className="text-sm text-green-600 hover:underline">第29回の分析 →</Link>
           </div>
         </section>
 
@@ -437,7 +445,7 @@ export default function HomePage() {
             まずは頻出ランキングから始めましょう
           </h2>
           <p className="text-sm text-green-100 mb-6 leading-relaxed">
-            第30〜34回の900問から導き出した頻出テーマ。<br className="hidden sm:inline" />
+            第29〜34回の1,080問から導き出した頻出テーマ。<br className="hidden sm:inline" />
             効率よく国家試験対策を進めましょう。
           </p>
           <div className="flex flex-wrap justify-center gap-3">
@@ -448,10 +456,10 @@ export default function HomePage() {
               第34回分析を見る
             </Link>
             <Link
-              href="/analysis/compare/recent-5-years"
+              href="/analysis/compare/recent-6-years"
               className="bg-green-500 text-white font-semibold px-6 py-2.5 rounded-full text-sm hover:bg-green-400 transition-colors border border-green-400"
             >
-              直近5年比較を見る
+              直近6年比較を見る
             </Link>
             <Link
               href="/themes"
@@ -468,7 +476,7 @@ export default function HomePage() {
           <p>
             このサイトは<strong className="text-gray-700">問題文・選択肢を掲載しておらず</strong>、
             公益財団法人東洋療法研修試験財団が公表した公式問題をもとに
-            出題テーマを独自に分類した<strong className="text-gray-700">分析データベース</strong>です（第30〜34回900問収録）。
+            出題テーマを独自に分類した<strong className="text-gray-700">分析データベース</strong>です（第29〜34回1,080問収録）。
             正解番号・解説・得点計算機能はありません。
           </p>
           <p>

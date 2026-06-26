@@ -535,6 +535,16 @@ export default function Exam31AnalysisPage() {
         <h2 className="text-lg font-bold text-gray-800 mb-4">他の回を見る / 比較する</h2>
         <div className="grid grid-cols-1 sm:grid-cols-2 gap-3">
           <Link
+            href="/analysis/exam-29"
+            className="bg-white border border-green-100 rounded-xl p-5 text-center hover:border-green-300 hover:shadow-sm transition-all"
+          >
+            <p className="text-sm font-semibold text-gray-800">第29回 出題分析</p>
+            <p className="text-xs text-gray-400 mt-1">2021年実施 / 180問分析</p>
+            <span className="inline-block mt-2 text-xs bg-green-100 text-green-700 px-2 py-0.5 rounded-full">
+              分析を見る →
+            </span>
+          </Link>
+          <Link
             href="/analysis/exam-30"
             className="bg-white border border-green-100 rounded-xl p-5 text-center hover:border-green-300 hover:shadow-sm transition-all"
           >
@@ -565,12 +575,12 @@ export default function Exam31AnalysisPage() {
             </span>
           </Link>
           <Link
-            href="/analysis/compare/recent-5-years"
-            className="bg-white border border-purple-100 rounded-xl p-5 text-center hover:border-purple-300 hover:shadow-sm transition-all"
+            href="/analysis/compare/recent-6-years"
+            className="bg-white border border-teal-100 rounded-xl p-5 text-center hover:border-teal-300 hover:shadow-sm transition-all sm:col-span-2"
           >
-            <p className="text-sm font-semibold text-gray-800">直近5年（第30〜34回）比較</p>
-            <p className="text-xs text-gray-400 mt-1">5年間の出題傾向トレンド・増減分析</p>
-            <span className="inline-block mt-2 text-xs bg-purple-100 text-purple-700 px-2 py-0.5 rounded-full">
+            <p className="text-sm font-semibold text-gray-800">直近6年（第29〜34回）比較</p>
+            <p className="text-xs text-gray-400 mt-1">6年間の出題傾向トレンド・増減分析</p>
+            <span className="inline-block mt-2 text-xs bg-teal-100 text-teal-700 px-2 py-0.5 rounded-full">
               比較を見る →
             </span>
           </Link>

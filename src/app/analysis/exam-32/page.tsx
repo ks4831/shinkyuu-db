@@ -590,6 +590,16 @@ export default function Exam32AnalysisPage() {
               比較を見る →
             </span>
           </Link>
+          <Link
+            href="/analysis/compare/recent-6-years"
+            className="bg-white border border-green-100 rounded-xl p-5 text-center hover:border-green-300 hover:shadow-sm transition-all"
+          >
+            <p className="text-sm font-semibold text-gray-800">直近6年（第29〜34回）比較</p>
+            <p className="text-xs text-gray-400 mt-1">6年間の出題傾向トレンド・増減分析</p>
+            <span className="inline-block mt-2 text-xs bg-green-100 text-green-700 px-2 py-0.5 rounded-full">
+              比較を見る →
+            </span>
+          </Link>
         </div>
       </section>
 

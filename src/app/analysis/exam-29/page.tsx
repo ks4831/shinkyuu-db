@@ -9,9 +9,9 @@ import ImportanceBadge from '@/components/ImportanceBadge'
 import type { Importance } from '@/lib/types'
 
 export const metadata: Metadata = {
-  title: '第30回 出題分析',
+  title: '第29回 出題分析',
   description:
-    '第30回鍼灸国家試験（2022年）の出題傾向を頻出テーマ・科目・重要度で分析。180問全問の分類データ。',
+    '第29回鍼灸国家試験（2021年）の出題傾向を頻出テーマ・科目・重要度で分析。180問全問の分類データ。',
 }
 
 const THEME_LABELS: Record<string, string> = {
@@ -84,12 +84,12 @@ function pct(n: number, total: number): string {
   return (n / total * 100).toFixed(1)
 }
 
-export default function Exam30AnalysisPage() {
+export default function Exam29AnalysisPage() {
   const allQuestions = loadAllExamQuestions()
-  const exam30 = allQuestions.filter(q => q.examRound === 30)
-  const total = exam30.length
+  const exam29 = allQuestions.filter(q => q.examRound === 29)
+  const total = exam29.length
 
-  const themeAggs = aggregateByTheme(exam30).map(t => ({
+  const themeAggs = aggregateByTheme(exam29).map(t => ({
     ...t,
     importance: calcImportanceByCount(t.count) as Importance,
     label: THEME_LABELS[t.normalizedTheme] ?? t.normalizedTheme,
@@ -101,7 +101,7 @@ export default function Exam30AnalysisPage() {
   for (const t of themeAggs) byImp[t.importance].push(t)
 
   const subjectMap = new Map<string, number>()
-  for (const q of exam30) {
+  for (const q of exam29) {
     const key = q.officialMedium ?? q.subject
     subjectMap.set(key, (subjectMap.get(key) ?? 0) + 1)
   }
@@ -110,13 +110,13 @@ export default function Exam30AnalysisPage() {
     .map(([name, count]) => ({ name, count }))
   const maxSubjectCount = subjectList[0]?.count ?? 1
 
-  const acuCount    = themeAggs.find(t => t.normalizedTheme === 'acupuncture-technique')?.count ?? 0
-  const merCount    = themeAggs.find(t => t.normalizedTheme === 'meridians-acupoints')?.count ?? 0
+  const acuCount     = themeAggs.find(t => t.normalizedTheme === 'acupuncture-technique')?.count ?? 0
+  const merCount     = themeAggs.find(t => t.normalizedTheme === 'meridians-acupoints')?.count ?? 0
   const tcmClinCount = themeAggs.find(t => t.normalizedTheme === 'tcm-clinical')?.count ?? 0
-  const tcmCount    = (themeAggs.find(t => t.normalizedTheme === 'tcm-fundamentals')?.count ?? 0) + tcmClinCount
-  const rehabCount  = themeAggs.find(t => t.normalizedTheme === 'rehabilitation')?.count ?? 0
-  const neuroCount  = themeAggs.find(t => t.normalizedTheme === 'neurology')?.count ?? 0
-  const pmSpecCount = acuCount + merCount + tcmCount
+  const tcmCount     = (themeAggs.find(t => t.normalizedTheme === 'tcm-fundamentals')?.count ?? 0) + tcmClinCount
+  const rehabCount   = themeAggs.find(t => t.normalizedTheme === 'rehabilitation')?.count ?? 0
+  const neuroCount   = themeAggs.find(t => t.normalizedTheme === 'neurology')?.count ?? 0
+  const pmSpecCount  = acuCount + merCount + tcmCount
 
   const studyPriorities = [
     {
@@ -124,35 +124,35 @@ export default function Exam30AnalysisPage() {
       theme: 'tcm-clinical',
       badge: 'S' as Importance,
       strategy:
-        '第30回では弁証論治を中心とした東洋医学臨床論がPM専門科目の最多テーマ。Q98〜Q105（弁証・脈診・経脈病証）、Q127〜Q160（緊張型頭痛・神経根症・顎関節症・月経痛・スポーツ障害・腰痛・浮腫など）と幅広い症例統合問題が出題。「四診→弁証→取穴」の思考過程を実践的に演習することが最優先。',
+        '第29回でも弁証論治を中心とした東洋医学臨床論がPM専門科目の最多テーマ。Q101〜Q106の基礎概念問題、Q129〜Q160の症例型弁証問題（腰痛・頭痛・不眠・高血圧・膝痛・月経痛・冷え症など）と幅広い。「四診→弁証→取穴・治法」の思考過程を実践的に演習することが最優先。',
     },
     {
       rank: 2,
-      theme: 'acupuncture-technique',
-      badge: 'S' as Importance,
-      strategy:
-        'はり・きゅう理論は両科目合計で26問程度出題。はり理論では十二刺の偶刺・古代九鍼（鋒鍼＝三稜鍼）・打鍼法（円鍼形・御園意斎）・折鍼リスク（細径鍼・長時間置鍼）・低周波鍼通電療法の禁忌・ポリモーダル受容器・脊髄分節性鎮痛。きゅう理論では艾の製造工程（けんどん）・無痕灸の種類・熱傷深度・アラキドン酸代謝（COX/LOX経路）・局所炎症反応（CGRP・フレア）が出題。',
-    },
-    {
-      rank: 3,
       theme: 'meridians-acupoints',
       badge: 'S' as Importance,
       strategy:
-        '経絡経穴概論は19問出題。奇経八脈（陽跷脈の陽気調節・申脈起始）・八会穴と募穴の重複（中脘・膻中・章門）・骨度法（各部の寸数）・経穴の正確な部位（陽渓＝鼻煙窩・第4〜5中手骨間の液門・中渚）・六つ灸と膏肓の同高さ・五兪穴の難経適用（虚補母・実瀉子）。部位問題は解剖学的ランドマークと照合して暗記する。',
+        '経絡経穴概論は20問以上出題。五兪穴（井・滎・兪・経・合の五行配当）・奇経八脈（八脈交会穴と対応奇経）・骨度法・特定穴（募穴・背兪穴・絡穴・郄穴・八会穴）・各経の経穴部位（12正経全経穴）を整理。部位は解剖学的ランドマークと組み合わせて記憶する。',
+    },
+    {
+      rank: 3,
+      theme: 'acupuncture-technique',
+      badge: 'S' as Importance,
+      strategy:
+        'はり・きゅう理論は合計20問出題。はり理論では刺鍼角度・補法・瀉法（捻転・呼吸・迎随・開闔補瀉）・得気の概念・管鍼法・皮内鍼・低周波鍼通電（周波数別オピオイド）・感染管理・刺鍼禁忌を整理。きゅう理論では透熱灸・知熱灸・間接灸の種類・壮数・禁灸部位を習得する。',
     },
     {
       rank: 4,
       theme: 'rehabilitation',
       badge: 'A' as Importance,
       strategy:
-        'リハビリテーション医学は13問出題。脳性麻痺（はさみ脚歩行＝痙直型両麻痺・定義は生後4週以内の非進行性脳損傷）・社会的リハ（ケアマネジャーが在宅サービス調整）・疾患別異常歩行（PDの小刻み歩行・中殿筋麻痺のトレンデレンブルグ歩行）・装具（コックアップスプリント＝橈骨神経麻痺）・PTB下腿義足・自律神経過反射（T6以上損傷）・変形性膝関節症の内側広筋訓練。',
+        'リハビリテーション医学は10問以上出題。在宅リハ（訪問リハ・通所リハ）・廃用症候群とサルコペニアの鑑別・失語症の分類（ブローカ・ウェルニッケ）・脊髄損傷レベルと機能予後・脳性麻痺の分類（痙直型・アテトーゼ型）・パーキンソン病リハが頻出。ICFモデルとの連動も整理する。',
     },
     {
       rank: 5,
-      theme: 'neurology',
+      theme: 'tcm-fundamentals',
       badge: 'A' as Importance,
       strategy:
-        '臨床医学各論の神経疾患は9問出題。鷲手（下位型尺骨神経麻痺）・JCS（Ⅲ-300が最重篤な深昏睡）・末梢性と中枢性めまいの鑑別（BPPV＝末梢性）・ALS（Spared systems：眼球運動・感覚・膀胱直腸は保たれる）・パーキンソン病（安静時振戦・pill-rolling）・高血圧性脳出血の最好発部位（被殻60%）・右被殻出血の左半側空間無視・ASD（3主徴）がパターン問題として頻出。',
+        '東洋医学概論（Q91〜Q100）は10問固定出題。陰陽の属性・五行の相生相克・気血津液の種類と機能・五臓六腑の生理・六経弁証・六淫の特性・病因の分類（内因・外因・不内外因）を体系的に押さえる。八綱弁証・脈診（脈象と病証対応）も含めて基礎固めが重要。',
     },
   ].map(p => ({
     ...p,
@@ -169,7 +169,7 @@ export default function Exam30AnalysisPage() {
           トップ
         </Link>
         <span>›</span>
-        <span className="text-gray-700">第30回 出題分析</span>
+        <span className="text-gray-700">第29回 出題分析</span>
       </nav>
 
       {/* ── 1. 概要 */}
@@ -178,11 +178,11 @@ export default function Exam30AnalysisPage() {
           EXAM ANALYSIS
         </p>
         <h1 className="text-2xl font-bold text-gray-900">
-          第30回 鍼灸国家試験
+          第29回 鍼灸国家試験
           <span className="text-green-600"> 出題分析</span>
         </h1>
         <p className="text-sm text-gray-500 mt-1">
-          2022年実施（令和4年）/ 出題基準2020年版 / 180問体制
+          2021年実施（令和3年）/ 出題基準2020年版 / 180問体制
         </p>
 
         <div className="mt-5 grid grid-cols-2 sm:grid-cols-4 gap-3">
@@ -208,7 +208,7 @@ export default function Exam30AnalysisPage() {
       <section>
         <h2 className="text-lg font-bold text-gray-800 mb-4">
           頻出テーマ ランキング
-          <span className="text-xs text-gray-400 font-normal ml-2">全{themeAggs.length}テーマ / 第30回</span>
+          <span className="text-xs text-gray-400 font-normal ml-2">全{themeAggs.length}テーマ / 第29回</span>
         </h2>
         <div className="bg-white rounded-2xl border border-gray-100 divide-y divide-gray-50">
           {themeAggs.slice(0, 10).map((theme, i) => {
@@ -402,9 +402,9 @@ export default function Exam30AnalysisPage() {
         </div>
       </section>
 
-      {/* ── 5. 第30回の特徴 */}
+      {/* ── 5. 第29回の特徴 */}
       <section>
-        <h2 className="text-lg font-bold text-gray-800 mb-4">第30回の特徴</h2>
+        <h2 className="text-lg font-bold text-gray-800 mb-4">第29回の特徴</h2>
 
         <div className="grid grid-cols-1 sm:grid-cols-3 gap-4 mb-5">
           {[
@@ -440,20 +440,19 @@ export default function Exam30AnalysisPage() {
             <strong className="text-green-700">
               東洋医学臨床論（弁証論治）
             </strong>
-            が第30回の最大テーマ。Q98〜Q105の基礎弁証に加え、Q127〜Q160の30問超が症例型弁証論治問題となっており、月経痛・上腹部痛・スポーツ障害・腰痛・浮腫・顔面神経麻痺・神経根症状など実践的な臨床シナリオから証を特定して治療穴を選択するパターンが特徴的。
+            が第29回でも最大テーマ。Q101〜Q106の基礎的な弁証・脉診・配穴法問題に続き、Q129〜Q160の約32問が症例型弁証論治問題として出題。腰痛・頭痛・不眠・高血圧・月経痛・冷え症・膝痛・肩凝り・便秘・アレルギー性鼻炎など多彩な疾患への弁証適用が問われた。
           </p>
           <p>
-            <strong className="text-green-700">PM専門科目（はり・きゅう + 経絡経穴 + 東洋医学）</strong>
-            の合計は{pmSpecCount}問（{pct(pmSpecCount, total)}%）で全体の約半数を占める。
-            鍼灸専門知識の深さが合否を分ける構成であり、特に東洋医学臨床論の問題量が歴年で最多水準となった。
-          </p>
-          <p>
-            <strong className="text-green-700">はり理論・きゅう理論</strong>
-            では十二刺（偶刺）・打鍼法・古代九鍼（鋒鍼）・折鍼リスク管理・低周波鍼通電の禁忌、艾の製造工程・無痕灸の種類・施灸後の熱傷管理・アラキドン酸代謝系（COX/LOX経路）と局所炎症反応（フレア現象・CGRP）が詳細に問われた。
+            <strong className="text-green-700">経絡経穴概論</strong>
+            は20問以上出題。五兪穴・奇経八脈（八脈交会穴）・特定穴（募穴・背兪穴・絡穴・郄穴・八会穴）・骨度法・12正経の経穴部位を網羅的に問う出題が続いている。
           </p>
           <p>
             <strong className="text-green-700">AM後半（Q71〜Q90）</strong>
-            はリハビリテーション医学が13問と多く、脳性麻痺の分類・在宅サービス調整（ケアマネジャー）・装具と疾患の対応・PTB義足・脊髄損傷の自律神経過反射・変形性膝関節症のリハ手技が実践レベルで問われた。
+            はリハビリテーション医学と臨床医学各論が混在。在宅リハ・廃用症候群・言語障害・歩行分析・嚥下障害・脊髄損傷・脳性麻痺・呼吸リハ・パーキンソン病リハ・関節リウマチなど幅広い疾患がリハビリ視点で問われた。
+          </p>
+          <p>
+            <strong className="text-green-700">はり・きゅう理論</strong>
+            はQ117・Q127〜Q128（はり理論）とQ161〜Q180（はり・きゅう理論各10問）で合計20問。刺鍼リスク管理・感染予防・低周波鍼通電・補瀉法・得気・灸の種類・壮数・禁忌が問われた。
           </p>
         </div>
       </section>
@@ -491,11 +490,11 @@ export default function Exam30AnalysisPage() {
         <h2 className="text-lg font-bold text-gray-800 mb-4">他の回を見る / 比較する</h2>
         <div className="grid grid-cols-1 sm:grid-cols-2 gap-3">
           <Link
-            href="/analysis/exam-29"
+            href="/analysis/exam-30"
             className="bg-white border border-green-100 rounded-xl p-5 text-center hover:border-green-300 hover:shadow-sm transition-all"
           >
-            <p className="text-sm font-semibold text-gray-800">第29回 出題分析</p>
-            <p className="text-xs text-gray-400 mt-1">2021年実施 / 180問分析</p>
+            <p className="text-sm font-semibold text-gray-800">第30回 出題分析</p>
+            <p className="text-xs text-gray-400 mt-1">2022年実施 / 180問分析</p>
             <span className="inline-block mt-2 text-xs bg-green-100 text-green-700 px-2 py-0.5 rounded-full">
               分析を見る →
             </span>
