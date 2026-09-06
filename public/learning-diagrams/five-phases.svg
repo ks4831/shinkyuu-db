@@ -1,0 +1,44 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 380" role="img" aria-label="五行の相生・相克の図">
+  <style>
+    .t{font-family:'Hiragino Sans','Noto Sans JP',sans-serif;}
+    .h{font-weight:700;fill:#166534;}
+    .node{fill:#ecfdf5;stroke:#16a34a;stroke-width:2;}
+    .nt{fill:#14532d;font-weight:700;}
+    .sheng{stroke:#16a34a;stroke-width:2.5;fill:none;marker-end:url(#g);}
+    .ke{stroke:#dc2626;stroke-width:1.8;fill:none;stroke-dasharray:6 4;marker-end:url(#r);}
+  </style>
+  <defs>
+    <marker id="g" markerWidth="9" markerHeight="9" refX="7" refY="3" orient="auto"><path d="M0 0 L7 3 L0 6 Z" fill="#16a34a"/></marker>
+    <marker id="r" markerWidth="9" markerHeight="9" refX="7" refY="3" orient="auto"><path d="M0 0 L7 3 L0 6 Z" fill="#dc2626"/></marker>
+  </defs>
+  <rect width="400" height="380" fill="#ffffff"/>
+  <text class="t h" x="20" y="28" font-size="17">五行：相生（緑）と相克（赤・点線）</text>
+
+  <!-- pentagon nodes: 木 top, then clockwise 火, 土, 金, 水 -->
+  <!-- coords -->
+  <!-- 木 (200,70) 火 (320,160) 土 (275,300) 金 (125,300) 水 (80,160) -->
+  <g>
+    <!-- 相生：木→火→土→金→水→木 (outer pentagon edges) -->
+    <path class="sheng" d="M222 84 L305 148"/>
+    <path class="sheng" d="M322 182 L285 278"/>
+    <path class="sheng" d="M255 302 L145 302"/>
+    <path class="sheng" d="M115 278 L82 182"/>
+    <path class="sheng" d="M85 140 L185 84"/>
+
+    <!-- 相克：木→土→水→火→金→木 (inner star) -->
+    <path class="ke" d="M198 96 L262 280"/>
+    <path class="ke" d="M255 296 L98 178"/>
+    <path class="ke" d="M92 150 L300 150"/>
+    <path class="ke" d="M305 172 L150 292"/>
+    <path class="ke" d="M132 286 L192 96"/>
+  </g>
+
+  <circle class="node" cx="200" cy="70" r="30"/><text class="t nt" x="200" y="77" font-size="20" text-anchor="middle">木</text>
+  <circle class="node" cx="320" cy="160" r="30"/><text class="t nt" x="320" y="167" font-size="20" text-anchor="middle">火</text>
+  <circle class="node" cx="275" cy="300" r="30"/><text class="t nt" x="275" y="307" font-size="20" text-anchor="middle">土</text>
+  <circle class="node" cx="125" cy="300" r="30"/><text class="t nt" x="125" y="307" font-size="20" text-anchor="middle">金</text>
+  <circle class="node" cx="80" cy="160" r="30"/><text class="t nt" x="80" y="167" font-size="20" text-anchor="middle">水</text>
+
+  <text class="t" x="20" y="352" font-size="12" fill="#16a34a">相生：木→火→土→金→水→木（隣を生む）</text>
+  <text class="t" x="20" y="370" font-size="12" fill="#dc2626">相克：木→土→水→火→金→木（一つ飛ばしで抑える）</text>
+</svg>

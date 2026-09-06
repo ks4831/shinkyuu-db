@@ -79,15 +79,15 @@ export default function SourcesPage() {
         <div>
           <h2 className="font-bold text-gray-800 mb-4">分析データの構造</h2>
           <div className="bg-gray-900 rounded-xl p-5 text-xs font-mono text-gray-300 space-y-1.5 overflow-x-auto">
-            <p className="text-gray-500">// 各問題に付与するメタデータ（CSVカラム例）</p>
-            <p><span className="text-green-400">examRound</span>     <span className="text-gray-500">// 第XX回</span></p>
-            <p><span className="text-green-400">questionNumber</span> <span className="text-gray-500">// 問題番号</span></p>
-            <p><span className="text-green-400">session</span>        <span className="text-gray-500">// AM / PM / 共通</span></p>
-            <p><span className="text-green-400">subject</span>        <span className="text-gray-500">// 科目ID</span></p>
-            <p><span className="text-green-400">themeKey</span>       <span className="text-gray-500">// 独自テーマキー</span></p>
-            <p><span className="text-green-400">subTheme</span>       <span className="text-gray-500">// 出題内容の要約</span></p>
-            <p><span className="text-green-400">importance</span>     <span className="text-gray-500">// S/A/B/C</span></p>
-            <p><span className="text-green-400">memo</span>           <span className="text-gray-500">// はり師専用 / きゅう師専用など</span></p>
+            <p className="text-gray-500">{'// 各問題に付与するメタデータ（CSVカラム例）'}</p>
+            <p><span className="text-green-400">examRound</span>     <span className="text-gray-500">{'// 第XX回'}</span></p>
+            <p><span className="text-green-400">questionNumber</span> <span className="text-gray-500">{'// 問題番号'}</span></p>
+            <p><span className="text-green-400">session</span>        <span className="text-gray-500">{'// AM / PM / 共通'}</span></p>
+            <p><span className="text-green-400">subject</span>        <span className="text-gray-500">{'// 科目ID'}</span></p>
+            <p><span className="text-green-400">themeKey</span>       <span className="text-gray-500">{'// 独自テーマキー'}</span></p>
+            <p><span className="text-green-400">subTheme</span>       <span className="text-gray-500">{'// 出題内容の要約'}</span></p>
+            <p><span className="text-green-400">importance</span>     <span className="text-gray-500">{'// S/A/B/C'}</span></p>
+            <p><span className="text-green-400">memo</span>           <span className="text-gray-500">{'// はり師専用 / きゅう師専用など'}</span></p>
           </div>
         </div>
 

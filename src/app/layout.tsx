@@ -1,6 +1,7 @@
 import type { Metadata } from 'next'
 import './globals.css'
 import Header from '@/components/Header'
+import BottomNav from '@/components/BottomNav'
 import ScrollToTop from '@/components/ScrollToTop'
 import Link from 'next/link'
 
@@ -8,33 +9,34 @@ const SITE_URL = process.env.NEXT_PUBLIC_SITE_URL ?? 'https://shinkyuu-db.vercel
 
 export const metadata: Metadata = {
   title: {
-    default: '鍼灸国家試験 頻出分析データベース｜過去問から出題傾向を分析',
-    template: '%s | 鍼灸国家試験 頻出分析DB',
+    default: '鍼灸国家試験クイズ｜1日10問スマホで国試対策',
+    template: '%s | 鍼灸国試 クイズ＆分析',
   },
   description:
-    '第31〜34回720問を分析した鍼灸国家試験の出題傾向分析データベース。頻出テーマランキング・年度比較・科目別分析で効率よく学習できます。',
+    '過去6年・1,080問の出題分析にもとづくオリジナル問題を、1日10問スマホで。解説・図解・苦手復習つき。経穴学習・出題傾向分析にも対応。',
   keywords: [
     '鍼灸国家試験',
     'はり師国家試験',
     'きゅう師国家試験',
     '国試対策',
-    '頻出問題',
+    '鍼灸 クイズ',
     '経絡経穴',
+    '経穴',
     '東洋医学',
     '鍼灸学生',
   ],
   openGraph: {
-    title: '鍼灸国家試験 頻出分析データベース',
-    description: '第31〜34回720問を分析。頻出テーマランキング・年度比較・科目別割合を可視化。',
+    title: '鍼灸国家試験クイズ｜1日10問スマホで国試対策',
+    description: '過去6年1,080問の出題分析にもとづくオリジナル問題を、1問1画面で。解説・図解・苦手復習つき。',
     url: SITE_URL,
-    siteName: '鍼灸国家試験 頻出分析データベース',
+    siteName: '鍼灸国試 クイズ＆分析',
     locale: 'ja_JP',
     type: 'website',
   },
   twitter: {
     card: 'summary',
-    title: '鍼灸国家試験 頻出分析データベース',
-    description: '第31〜34回720問を分析。頻出テーマランキング・年度比較を可視化。',
+    title: '鍼灸国家試験クイズ｜1日10問スマホで国試対策',
+    description: '過去6年1,080問の分析にもとづくオリジナル問題。1問1画面・解説と図解つき。',
   },
   metadataBase: new URL(SITE_URL),
   ...(process.env.NEXT_PUBLIC_GSC_VERIFICATION
@@ -53,31 +55,34 @@ export default function RootLayout({
         <Header />
         <div className="flex-1">{children}</div>
         <ScrollToTop />
-        <footer className="border-t border-gray-100 bg-gray-50 mt-auto">
+        <BottomNav />
+        <footer className="border-t border-gray-100 bg-gray-50 mt-auto pb-16 sm:pb-0">
           <div className="max-w-4xl mx-auto px-4 py-8">
             <div className="grid grid-cols-2 sm:grid-cols-4 gap-6 mb-6 text-sm">
               <div>
-                <p className="font-semibold text-gray-700 mb-2">分析ページ</p>
+                <p className="font-semibold text-gray-700 mb-2">学習</p>
                 <ul className="space-y-1.5">
-                  <li><Link href="/analysis/exam-34" className="text-gray-500 hover:text-green-600 transition-colors">第34回分析</Link></li>
-                  <li><Link href="/analysis/exam-33" className="text-gray-500 hover:text-green-600 transition-colors">第33回分析</Link></li>
-                  <li><Link href="/analysis/exam-32" className="text-gray-500 hover:text-green-600 transition-colors">第32回分析</Link></li>
-                  <li><Link href="/analysis/exam-31" className="text-gray-500 hover:text-green-600 transition-colors">第31回分析</Link></li>
-                  <li><Link href="/analysis/compare/recent-4-years" className="text-gray-500 hover:text-green-600 transition-colors">直近4年比較</Link></li>
-                  <li><Link href="/analysis/compare/recent-3-years" className="text-gray-500 hover:text-green-600 transition-colors">直近3年比較</Link></li>
-                  <li><Link href="/analysis/compare/33-vs-34" className="text-gray-500 hover:text-green-600 transition-colors">33回 vs 34回</Link></li>
+                  <li><Link href="/quiz" className="text-gray-500 hover:text-green-600 transition-colors">クイズ（10問ずつ）</Link></li>
+                  <li><Link href="/quiz/weak" className="text-gray-500 hover:text-green-600 transition-colors">苦手復習</Link></li>
+                  <li><Link href="/acupoints" className="text-gray-500 hover:text-green-600 transition-colors">経穴から学ぶ</Link></li>
+                  <li><Link href="/acupoints/unasked" className="text-gray-500 hover:text-green-600 transition-colors">未出題の経穴</Link></li>
+                  <li><Link href="/dashboard" className="text-gray-500 hover:text-green-600 transition-colors">学習の記録</Link></li>
+                  <li><Link href="/subjects" className="text-gray-500 hover:text-green-600 transition-colors">科目から探す</Link></li>
                 </ul>
               </div>
               <div>
-                <p className="font-semibold text-gray-700 mb-2">テーマ辞典・検索</p>
+                <p className="font-semibold text-gray-700 mb-2">出題分析</p>
                 <ul className="space-y-1.5">
+                  <li><Link href="/analysis/exam-34" className="text-gray-500 hover:text-green-600 transition-colors">第34回分析</Link></li>
+                  <li><Link href="/analysis/exam-33" className="text-gray-500 hover:text-green-600 transition-colors">第33回分析</Link></li>
+                  <li><Link href="/analysis/compare/recent-6-years" className="text-gray-500 hover:text-green-600 transition-colors">直近6年比較</Link></li>
+                  <li><Link href="/analysis/compare/recent-3-years" className="text-gray-500 hover:text-green-600 transition-colors">直近3年比較</Link></li>
                   <li><Link href="/themes/library" className="text-gray-500 hover:text-green-600 transition-colors">テーマ辞典</Link></li>
-                  <li><Link href="/subjects" className="text-gray-500 hover:text-green-600 transition-colors">科目一覧</Link></li>
                   <li><Link href="/themes" className="text-gray-500 hover:text-green-600 transition-colors">テーマ検索</Link></li>
                 </ul>
               </div>
               <div>
-                <p className="font-semibold text-gray-700 mb-2">学習支援</p>
+                <p className="font-semibold text-gray-700 mb-2">テーマ別の管理</p>
                 <ul className="space-y-1.5">
                   <li><Link href="/study" className="text-gray-500 hover:text-green-600 transition-colors">今日の10テーマ</Link></li>
                   <li><Link href="/study/dashboard" className="text-gray-500 hover:text-green-600 transition-colors">学習ダッシュボード</Link></li>
@@ -89,32 +94,16 @@ export default function RootLayout({
               <div>
                 <p className="font-semibold text-gray-700 mb-2">このサイトについて</p>
                 <ul className="space-y-1.5">
+                  <li><Link href="/menu" className="text-gray-500 hover:text-green-600 transition-colors">すべてのメニュー</Link></li>
                   <li><Link href="/about" className="text-gray-500 hover:text-green-600 transition-colors">About</Link></li>
                   <li><Link href="/sources" className="text-gray-500 hover:text-green-600 transition-colors">データソース</Link></li>
                   <li><Link href="/disclaimer" className="text-gray-500 hover:text-green-600 transition-colors">免責事項</Link></li>
                 </ul>
               </div>
-              <div>
-                <p className="font-semibold text-gray-700 mb-2">鍼灸国家試験 頻出分析DB</p>
-                <ul className="space-y-1.5 text-xs text-gray-500">
-                  <li>
-                    <span className="text-gray-400">更新日</span>
-                    <span className="ml-1 font-medium text-gray-600">2026年6月</span>
-                  </li>
-                  <li>
-                    <span className="text-gray-400">分析対象回数</span>
-                    <span className="ml-1 font-medium text-gray-600">第31〜34回（4回分）</span>
-                  </li>
-                  <li>
-                    <span className="text-gray-400">分析問題数</span>
-                    <span className="ml-1 font-medium text-gray-600">720問</span>
-                  </li>
-                </ul>
-              </div>
             </div>
             <div className="border-t border-gray-200 pt-4 text-xs text-gray-400 space-y-1">
-              <p>鍼灸国家試験 頻出分析データベース — 問題文・選択肢は掲載していません。</p>
-              <p>公益財団法人東洋療法研修試験財団が公表した試験データをもとに独自分析。当サイトは非公式です。</p>
+              <p>鍼灸国試 クイズ＆分析 — クイズは公式過去問の問題文・選択肢を掲載していません（出題傾向にもとづくオリジナル問題）。</p>
+              <p>出題分析は公益財団法人東洋療法研修試験財団が公表した試験データ（第29〜34回1,080問）をもとにした独自分析。当サイトは非公式です。</p>
             </div>
           </div>
         </footer>

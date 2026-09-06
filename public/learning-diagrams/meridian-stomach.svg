@@ -1,0 +1,37 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 300 420" role="img" aria-label="足の陽明胃経の走行（模式図）">
+  <style>
+    .t{font-family:'Hiragino Sans','Noto Sans JP',sans-serif;}
+    .h{font-weight:700;fill:#166534;}
+    .body{fill:#f9fafb;stroke:#9ca3af;stroke-width:2;}
+    .mer{stroke:#ea580c;stroke-width:3;fill:none;}
+    .pt{fill:#ea580c;}
+    .lbl{fill:#1f2937;font-weight:700;}
+  </style>
+  <rect width="300" height="420" fill="#ffffff"/>
+  <text class="t h" x="16" y="24" font-size="15">足の陽明胃経（走行の模式）</text>
+
+  <!-- body outline -->
+  <circle class="body" cx="150" cy="60" r="26"/>
+  <path class="body" d="M124 78 Q112 82 110 110 L104 150 Q100 180 106 210 L106 300 Q106 340 118 360 L118 400 M182 400 L182 360 Q194 340 194 300 L194 210 Q200 180 196 150 L190 110 Q188 82 176 78"/>
+  <path class="body" d="M118 400 L134 400 M166 400 L182 400"/>
+
+  <!-- meridian line: face -> neck -> chest/abdomen (lateral to midline) -> thigh front -> lower leg -> foot 2nd toe -->
+  <path class="mer" d="M140 66
+    Q136 84 138 100
+    L134 150
+    Q132 190 134 230
+    L136 290
+    Q138 330 145 360
+    L150 400
+    L156 408"/>
+
+  <!-- key points -->
+  <circle class="pt" cx="140" cy="66" r="4"/><text class="t lbl" x="150" y="60" font-size="11">承泣（起始）</text>
+  <circle class="pt" cx="136" cy="120" r="4"/><text class="t lbl" x="200" y="122" font-size="11">乳頭線上を下る</text>
+  <circle class="pt" cx="134" cy="170" r="4"/><text class="t lbl" x="200" y="172" font-size="11">天枢（臍の外2寸）</text>
+  <circle class="pt" cx="136" cy="255" r="4"/><text class="t lbl" x="200" y="257" font-size="11">大腿前面</text>
+  <circle class="pt" cx="142" cy="330" r="4"/><text class="t lbl" x="196" y="332" font-size="11">足三里・豊隆</text>
+  <circle class="pt" cx="156" cy="408" r="4"/><text class="t lbl" x="164" y="414" font-size="11">厲兌（第2趾外側／終止）</text>
+
+  <text class="t" x="16" y="406" font-size="10" fill="#6b7280">※ 経脈の走行を大まかに示した模式図。正確な流注は教科書で確認すること。</text>
+</svg>

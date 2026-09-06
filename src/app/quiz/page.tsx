@@ -1,0 +1,80 @@
+import type { Metadata } from 'next'
+import Link from 'next/link'
+import { ALL_QUESTIONS } from '@/lib/quiz'
+import QuizStartCard from '@/components/quiz/QuizStartCard'
+import ProgressStrip from '@/components/quiz/ProgressStrip'
+
+export const metadata: Metadata = {
+  title: '鍼灸国家試験 クイズ｜10問ずつスマホで対策',
+  description:
+    '鍼灸国家試験の出題傾向に基づくオリジナル問題を、1問1画面・10問ずつ解けます。ランダム・頻出・経穴・科目別・苦手復習から選べます。',
+}
+
+const modes = [
+  {
+    href: '/quiz/random',
+    emoji: '🎲',
+    title: '10問ランダム',
+    desc: '全範囲からランダムに10問。今日の1セットに。',
+    accent: 'border-green-200 hover:border-green-400',
+  },
+  {
+    href: '/quiz/frequent',
+    emoji: '🔥',
+    title: '頻出問題',
+    desc: '重要度S・Aの問題を優先して10問。',
+    accent: 'border-orange-200 hover:border-orange-400',
+  },
+  {
+    href: '/quiz/acupoints',
+    emoji: '📍',
+    title: '経穴',
+    desc: '経絡経穴概論を中心に、経穴の問題だけ10問。',
+    accent: 'border-emerald-200 hover:border-emerald-400',
+  },
+  {
+    href: '/quiz/subjects',
+    emoji: '📚',
+    title: '科目別',
+    desc: '科目を選んで、その科目から10問。',
+    accent: 'border-blue-200 hover:border-blue-400',
+  },
+  {
+    href: '/quiz/weak',
+    emoji: '🩹',
+    title: '苦手復習',
+    desc: '間違えた問題・復習登録した問題だけ。',
+    accent: 'border-red-200 hover:border-red-400',
+  },
+]
+
+export default function QuizTopPage() {
+  return (
+    <main className="mx-auto max-w-md px-4 pb-24 pt-6">
+      <nav className="mb-3 text-xs text-gray-400">
+        <Link href="/" className="hover:text-green-600">ホーム</Link>
+        <span className="mx-1">/</span>
+        <span className="text-gray-600">クイズ</span>
+      </nav>
+
+      <h1 className="text-2xl font-bold text-gray-900">何を解く？</h1>
+      <p className="mt-1 text-sm text-gray-500">
+        全{ALL_QUESTIONS.length}問（出題傾向に基づくオリジナル問題）。1回10問・1問1画面。
+      </p>
+
+      <ProgressStrip className="mt-4" />
+
+      <div className="mt-4 space-y-3">
+        {modes.map((m) => (
+          <QuizStartCard key={m.href} {...m} />
+        ))}
+      </div>
+
+      <p className="mt-6 rounded-xl bg-gray-50 p-4 text-xs leading-relaxed text-gray-500">
+        このクイズは公式過去問の問題文・選択肢をそのまま掲載していません。
+        教科書レベルの一般的事実をもとに独自作成した学習用問題です。
+        解答の記録はお使いの端末内（LocalStorage）にのみ保存されます。
+      </p>
+    </main>
+  )
+}

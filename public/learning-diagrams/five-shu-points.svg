@@ -1,0 +1,58 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 480 260" role="img" aria-label="五兪穴と五行配当の表">
+  <style>
+    .t{font-family:'Hiragino Sans','Noto Sans JP',sans-serif;}
+    .h{font-weight:700;fill:#166534;}
+    .lbl{font-weight:700;fill:#374151;}
+    .c{fill:#1f2937;}
+    .box{fill:#fff;stroke:#d1d5db;stroke-width:1.5;}
+    .head{fill:#ecfdf5;stroke:#a7f3d0;stroke-width:1.5;}
+  </style>
+  <rect width="480" height="260" fill="#ffffff"/>
+  <text class="t h" x="20" y="30" font-size="17">五兪穴と五行配当</text>
+
+  <!-- header row -->
+  <rect class="head" x="20" y="46" width="90" height="40"/>
+  <rect class="head" x="110" y="46" width="70" height="40"/>
+  <rect class="head" x="180" y="46" width="70" height="40"/>
+  <rect class="head" x="250" y="46" width="70" height="40"/>
+  <rect class="head" x="320" y="46" width="70" height="40"/>
+  <rect class="head" x="390" y="46" width="70" height="40"/>
+  <text class="t lbl" x="65"  y="71" font-size="14" text-anchor="middle">経の種類</text>
+  <text class="t lbl" x="145" y="71" font-size="15" text-anchor="middle">井</text>
+  <text class="t lbl" x="215" y="71" font-size="15" text-anchor="middle">滎</text>
+  <text class="t lbl" x="285" y="71" font-size="15" text-anchor="middle">輸</text>
+  <text class="t lbl" x="355" y="71" font-size="15" text-anchor="middle">経</text>
+  <text class="t lbl" x="425" y="71" font-size="15" text-anchor="middle">合</text>
+
+  <!-- 陰経 row -->
+  <rect class="box" x="20" y="86" width="90" height="44"/>
+  <rect class="box" x="110" y="86" width="70" height="44"/>
+  <rect class="box" x="180" y="86" width="70" height="44"/>
+  <rect class="box" x="250" y="86" width="70" height="44"/>
+  <rect class="box" x="320" y="86" width="70" height="44"/>
+  <rect class="box" x="390" y="86" width="70" height="44"/>
+  <text class="t lbl" x="65"  y="113" font-size="14" text-anchor="middle">陰経</text>
+  <text class="t c"   x="145" y="113" font-size="16" text-anchor="middle">木</text>
+  <text class="t c"   x="215" y="113" font-size="16" text-anchor="middle">火</text>
+  <text class="t c"   x="285" y="113" font-size="16" text-anchor="middle">土</text>
+  <text class="t c"   x="355" y="113" font-size="16" text-anchor="middle">金</text>
+  <text class="t c"   x="425" y="113" font-size="16" text-anchor="middle">水</text>
+
+  <!-- 陽経 row -->
+  <rect class="box" x="20" y="130" width="90" height="44"/>
+  <rect class="box" x="110" y="130" width="70" height="44"/>
+  <rect class="box" x="180" y="130" width="70" height="44"/>
+  <rect class="box" x="250" y="130" width="70" height="44"/>
+  <rect class="box" x="320" y="130" width="70" height="44"/>
+  <rect class="box" x="390" y="130" width="70" height="44"/>
+  <text class="t lbl" x="65"  y="157" font-size="14" text-anchor="middle">陽経</text>
+  <text class="t c"   x="145" y="157" font-size="16" text-anchor="middle">金</text>
+  <text class="t c"   x="215" y="157" font-size="16" text-anchor="middle">水</text>
+  <text class="t c"   x="285" y="157" font-size="16" text-anchor="middle">木</text>
+  <text class="t c"   x="355" y="157" font-size="16" text-anchor="middle">火</text>
+  <text class="t c"   x="425" y="157" font-size="16" text-anchor="middle">土</text>
+
+  <text class="t" x="20" y="205" font-size="13" fill="#4b5563">・陰経は「原穴＝輸穴」が一致する（例：太淵・太白・太衝・太渓）</text>
+  <text class="t" x="20" y="226" font-size="13" fill="#4b5563">・陰経は木から、陽経は金から始まると覚える</text>
+  <text class="t" x="20" y="247" font-size="13" fill="#4b5563">・合穴＝下合穴が一致：足三里・委中・陽陵泉</text>
+</svg>

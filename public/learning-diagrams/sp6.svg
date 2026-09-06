@@ -1,0 +1,38 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 360" role="img" aria-label="三陰交の位置（下腿内側）">
+  <style>
+    .t{font-family:'Hiragino Sans','Noto Sans JP',sans-serif;}
+    .h{font-weight:700;fill:#166534;}
+    .leg{fill:#f9fafb;stroke:#9ca3af;stroke-width:2;}
+    .bone{stroke:#cbd5e1;stroke-width:2;stroke-dasharray:5 4;}
+    .pt{fill:#16a34a;}
+    .ring{fill:none;stroke:#16a34a;stroke-width:2;}
+    .lbl{fill:#1f2937;font-weight:700;}
+    .meas{stroke:#16a34a;stroke-width:1.2;}
+  </style>
+  <rect width="320" height="360" fill="#ffffff"/>
+  <text class="t h" x="16" y="26" font-size="16">三陰交（SP6）</text>
+
+  <!-- lower leg (medial view): ankle at bottom -->
+  <path class="leg" d="M120 40 Q100 120 108 210 Q112 260 130 300 L150 320 Q180 322 200 305 L210 260 Q214 160 200 60 Q190 40 160 40 Z"/>
+  <!-- medial malleolus -->
+  <circle class="leg" cx="150" cy="312" r="16"/>
+  <text class="t" x="150" y="345" font-size="12" text-anchor="middle" fill="#6b7280">内果</text>
+  <!-- tibial posterior border (dashed line) -->
+  <path class="bone" d="M175 60 Q168 180 158 290"/>
+  <text class="t" x="205" y="150" font-size="11" fill="#9ca3af">脛骨内縁</text>
+
+  <!-- 3寸 measurement from malleolus tip up along posterior border -->
+  <line class="meas" x1="150" y1="298" x2="150" y2="228"/>
+  <line class="meas" x1="144" y1="298" x2="156" y2="298"/>
+  <line class="meas" x1="144" y1="228" x2="156" y2="228"/>
+  <text class="t" x="112" y="266" font-size="12" fill="#16a34a">3寸</text>
+
+  <!-- SP6 point: on posterior border of tibia, 3 cun above malleolus tip -->
+  <circle class="pt" cx="160" cy="224" r="5"/>
+  <circle class="ring" cx="160" cy="224" r="11"/>
+  <text class="t lbl" x="180" y="222" font-size="13">三陰交</text>
+  <text class="t" x="180" y="240" font-size="11" fill="#4b5563">内果尖の上3寸</text>
+  <text class="t" x="180" y="255" font-size="11" fill="#4b5563">脛骨内縁のすぐ後ろ</text>
+
+  <text class="t" x="16" y="352" font-size="11" fill="#6b7280">脾・肝・腎の三陰経が交わる交会穴</text>
+</svg>

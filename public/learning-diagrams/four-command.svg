@@ -1,0 +1,61 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 480 360" role="img" aria-label="四総穴の対応図">
+  <style>
+    .t{font-family:'Hiragino Sans','Noto Sans JP',sans-serif;}
+    .h{font-weight:700;fill:#166534;}
+    .body{fill:#f9fafb;stroke:#9ca3af;stroke-width:2;}
+    .zone{fill:#dcfce7;stroke:#4ade80;stroke-width:1.5;}
+    .lbl{fill:#166534;font-weight:700;}
+    .val{fill:#1f2937;font-weight:700;}
+    .arw{stroke:#16a34a;stroke-width:1.5;marker-end:url(#a);}
+  </style>
+  <defs>
+    <marker id="a" markerWidth="8" markerHeight="8" refX="6" refY="3" orient="auto">
+      <path d="M0 0 L6 3 L0 6 Z" fill="#16a34a"/>
+    </marker>
+  </defs>
+  <rect width="480" height="360" fill="#ffffff"/>
+  <text class="t h" x="20" y="28" font-size="17">四総穴</text>
+
+  <!-- stick figure -->
+  <circle class="body" cx="150" cy="70" r="20"/>
+  <line class="body" x1="150" y1="90" x2="150" y2="200"/>
+  <line class="body" x1="150" y1="120" x2="105" y2="165"/>
+  <line class="body" x1="150" y1="120" x2="195" y2="165"/>
+  <line class="body" x1="150" y1="200" x2="120" y2="300"/>
+  <line class="body" x1="150" y1="200" x2="180" y2="300"/>
+
+  <!-- zones -->
+  <ellipse class="zone" cx="150" cy="58" rx="30" ry="16"/>
+  <text class="t lbl" x="150" y="42" font-size="12" text-anchor="middle">頭項</text>
+
+  <ellipse class="zone" cx="150" cy="150" rx="26" ry="34"/>
+  <text class="t lbl" x="150" y="150" font-size="12" text-anchor="middle">肚腹</text>
+
+  <ellipse class="zone" cx="188" cy="80" rx="16" ry="14"/>
+  <text class="t lbl" x="188" y="70" font-size="11" text-anchor="middle">面口</text>
+
+  <rect class="zone" x="118" y="120" width="64" height="24" rx="6" opacity="0.7"/>
+  <text class="t lbl" x="150" y="112" font-size="11" text-anchor="middle">腰背</text>
+
+  <!-- table -->
+  <g font-size="14">
+    <line class="arw" x1="245" y1="55"  x2="290" y2="55"/>
+    <text class="t lbl" x="245" y="45" font-size="12">頭項</text>
+    <text class="t val" x="298" y="60">列缺（肺経）</text>
+
+    <line class="arw" x1="245" y1="100" x2="290" y2="100"/>
+    <text class="t lbl" x="245" y="90" font-size="12">面口</text>
+    <text class="t val" x="298" y="105">合谷（大腸経）</text>
+
+    <line class="arw" x1="245" y1="150" x2="290" y2="150"/>
+    <text class="t lbl" x="245" y="140" font-size="12">肚腹</text>
+    <text class="t val" x="298" y="155">足三里（胃経）</text>
+
+    <line class="arw" x1="245" y1="200" x2="290" y2="200"/>
+    <text class="t lbl" x="245" y="190" font-size="12">腰背</text>
+    <text class="t val" x="298" y="205">委中（膀胱経）</text>
+  </g>
+
+  <text class="t" x="20" y="325" font-size="13" fill="#4b5563">歌訣：肚腹三里、腰背委中、頭項列缺、面口合谷</text>
+  <text class="t" x="20" y="346" font-size="12" fill="#6b7280">遠隔部の要穴で、その部位の症状に広く用いる。</text>
+</svg>

@@ -1,0 +1,35 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 480 380" role="img" aria-label="体幹前面の主な募穴の位置">
+  <style>
+    .t{font-family:'Hiragino Sans','Noto Sans JP',sans-serif;}
+    .h{font-weight:700;fill:#166534;}
+    .body{fill:#f9fafb;stroke:#9ca3af;stroke-width:2;}
+    .pt{fill:#16a34a;}
+    .lbl{fill:#1f2937;font-weight:700;}
+    .mid{stroke:#d1d5db;stroke-width:1;stroke-dasharray:4 3;}
+  </style>
+  <rect width="480" height="380" fill="#ffffff"/>
+  <text class="t h" x="20" y="28" font-size="17">主な募穴（体幹前面）</text>
+
+  <!-- simple torso -->
+  <path class="body" d="M175 60 Q160 60 158 90 L150 130 Q145 150 150 170 L150 300 Q150 330 175 335 L245 335 Q270 330 270 300 L270 170 Q275 150 270 130 L262 90 Q260 60 245 60 Z"/>
+  <line class="mid" x1="210" y1="60" x2="210" y2="335"/>
+  <!-- shoulders hint -->
+  <path class="body" d="M158 78 Q120 82 110 110" fill="none"/>
+  <path class="body" d="M262 78 Q300 82 310 110" fill="none"/>
+
+  <!-- points (approx) with label to the side -->
+  <g font-size="13">
+    <circle class="pt" cx="170" cy="98" r="4"/><text class="t lbl" x="60" y="102">中府（肺）</text>
+    <circle class="pt" cx="210" cy="120" r="4"/><text class="t lbl" x="300" y="124">膻中（心包）</text>
+    <circle class="pt" cx="178" cy="150" r="4"/><text class="t lbl" x="55" y="150">期門（肝）</text>
+    <circle class="pt" cx="178" cy="168" r="4"/><text class="t lbl" x="300" y="168">日月（胆）</text>
+    <circle class="pt" cx="210" cy="188" r="4"/><text class="t lbl" x="300" y="192">中脘（胃）</text>
+    <circle class="pt" cx="150" cy="196" r="4"/><text class="t lbl" x="45" y="196">章門（脾）</text>
+    <circle class="pt" cx="188" cy="222" r="4"/><text class="t lbl" x="300" y="224">天枢（大腸）</text>
+    <circle class="pt" cx="210" cy="252" r="4"/><text class="t lbl" x="300" y="256">石門（三焦）</text>
+    <circle class="pt" cx="210" cy="268" r="4"/><text class="t lbl" x="45" y="270">関元（小腸）</text>
+    <circle class="pt" cx="210" cy="288" r="4"/><text class="t lbl" x="300" y="292">中極（膀胱）</text>
+    <circle class="pt" cx="150" cy="215" r="4"/><text class="t lbl" x="40" y="238">京門（腎）</text>
+  </g>
+  <text class="t" x="20" y="358" font-size="12" fill="#6b7280">※ 位置は模式的な目安。正確な取穴は教科書で確認すること。</text>
+</svg>

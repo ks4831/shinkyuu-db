@@ -1,0 +1,36 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 480 300" role="img" aria-label="八脈交会穴の配穴表">
+  <style>
+    .t{font-family:'Hiragino Sans','Noto Sans JP',sans-serif;}
+    .h{font-weight:700;fill:#166534;}
+    .box{fill:#fff;stroke:#d1d5db;stroke-width:1.5;}
+    .hd{fill:#ecfdf5;stroke:#a7f3d0;stroke-width:1.5;}
+    .v{fill:#1f2937;font-weight:700;}
+    .k{fill:#374151;}
+    .link{stroke:#16a34a;stroke-width:2;}
+  </style>
+  <rect width="480" height="300" fill="#ffffff"/>
+  <text class="t h" x="20" y="28" font-size="17">八脈交会穴（配穴）</text>
+
+  <g font-size="13.5">
+    <rect class="hd" x="20"  y="44" width="130" height="34"/><text class="t k" x="85"  y="66" text-anchor="middle">上肢の穴（奇経）</text>
+    <rect class="hd" x="330" y="44" width="130" height="34"/><text class="t k" x="395" y="66" text-anchor="middle">下肢の穴（奇経）</text>
+
+    <rect class="box" x="20"  y="84" width="130" height="40"/><text class="t v" x="85"  y="103" text-anchor="middle">内関</text><text class="t k" x="85"  y="119" text-anchor="middle" font-size="11">陰維脈</text>
+    <line class="link" x1="150" y1="104" x2="330" y2="104"/>
+    <rect class="box" x="330" y="84" width="130" height="40"/><text class="t v" x="395" y="103" text-anchor="middle">公孫</text><text class="t k" x="395" y="119" text-anchor="middle" font-size="11">衝脈</text>
+
+    <rect class="box" x="20"  y="128" width="130" height="40"/><text class="t v" x="85"  y="147" text-anchor="middle">後渓</text><text class="t k" x="85"  y="163" text-anchor="middle" font-size="11">督脈</text>
+    <line class="link" x1="150" y1="148" x2="330" y2="148"/>
+    <rect class="box" x="330" y="128" width="130" height="40"/><text class="t v" x="395" y="147" text-anchor="middle">申脈</text><text class="t k" x="395" y="163" text-anchor="middle" font-size="11">陽蹻脈</text>
+
+    <rect class="box" x="20"  y="172" width="130" height="40"/><text class="t v" x="85"  y="191" text-anchor="middle">外関</text><text class="t k" x="85"  y="207" text-anchor="middle" font-size="11">陽維脈</text>
+    <line class="link" x1="150" y1="192" x2="330" y2="192"/>
+    <rect class="box" x="330" y="172" width="130" height="40"/><text class="t v" x="395" y="191" text-anchor="middle">足臨泣</text><text class="t k" x="395" y="207" text-anchor="middle" font-size="11">帯脈</text>
+
+    <rect class="box" x="20"  y="216" width="130" height="40"/><text class="t v" x="85"  y="235" text-anchor="middle">列缺</text><text class="t k" x="85"  y="251" text-anchor="middle" font-size="11">任脈</text>
+    <line class="link" x1="150" y1="236" x2="330" y2="236"/>
+    <rect class="box" x="330" y="216" width="130" height="40"/><text class="t v" x="395" y="235" text-anchor="middle">照海</text><text class="t k" x="395" y="251" text-anchor="middle" font-size="11">陰蹻脈</text>
+  </g>
+
+  <text class="t" x="20" y="284" font-size="12" fill="#6b7280">上肢1穴＋下肢1穴を1組で用いる。内関−公孫は「胃・心・胸」の症状に。</text>
+</svg>

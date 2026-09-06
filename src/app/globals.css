@@ -12,10 +12,38 @@
   }
 }
 
+html {
+  -webkit-text-size-adjust: 100%;
+}
+
 body {
   background: var(--background);
   color: var(--foreground);
   font-family: 'Hiragino Sans', 'Hiragino Kaku Gothic ProN', 'Noto Sans JP',
     'Meiryo', sans-serif;
   -webkit-font-smoothing: antialiased;
+  /* 横スクロールを原則なくす */
+  overflow-x: hidden;
+}
+
+/* iOSでタップ時のハイライトを控えめに */
+a,
+button {
+  -webkit-tap-highlight-color: transparent;
+}
+
+/* 詳細開閉のマーカーを整える */
+details > summary {
+  list-style: none;
+}
+details > summary::-webkit-details-marker {
+  display: none;
+}
+details > summary::after {
+  content: '＋';
+  float: right;
+  color: #9ca3af;
+}
+details[open] > summary::after {
+  content: '−';
 }

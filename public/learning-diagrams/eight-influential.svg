@@ -1,0 +1,37 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 480 300" role="img" aria-label="八会穴の表">
+  <style>
+    .t{font-family:'Hiragino Sans','Noto Sans JP',sans-serif;}
+    .h{font-weight:700;fill:#166534;}
+    .k{font-weight:700;fill:#374151;}
+    .v{fill:#1f2937;font-weight:700;}
+    .box{fill:#fff;stroke:#d1d5db;stroke-width:1.5;}
+    .kb{fill:#ecfdf5;stroke:#a7f3d0;stroke-width:1.5;}
+  </style>
+  <rect width="480" height="300" fill="#ffffff"/>
+  <text class="t h" x="20" y="30" font-size="17">八会穴</text>
+  <g font-size="15">
+    <rect class="kb" x="20"  y="44" width="120" height="36"/><text class="t k" x="80"  y="67" text-anchor="middle">臓会</text>
+    <rect class="box" x="140" y="44" width="100" height="36"/><text class="t v" x="190" y="67" text-anchor="middle">章門</text>
+    <rect class="kb" x="260" y="44" width="120" height="36"/><text class="t k" x="320" y="67" text-anchor="middle">腑会</text>
+    <rect class="box" x="380" y="44" width="80"  height="36"/><text class="t v" x="420" y="67" text-anchor="middle">中脘</text>
+
+    <rect class="kb" x="20"  y="80" width="120" height="36"/><text class="t k" x="80"  y="103" text-anchor="middle">気会</text>
+    <rect class="box" x="140" y="80" width="100" height="36"/><text class="t v" x="190" y="103" text-anchor="middle">膻中</text>
+    <rect class="kb" x="260" y="80" width="120" height="36"/><text class="t k" x="320" y="103" text-anchor="middle">血会</text>
+    <rect class="box" x="380" y="80" width="80"  height="36"/><text class="t v" x="420" y="103" text-anchor="middle">膈兪</text>
+
+    <rect class="kb" x="20"  y="116" width="120" height="36"/><text class="t k" x="80"  y="139" text-anchor="middle">筋会</text>
+    <rect class="box" x="140" y="116" width="100" height="36"/><text class="t v" x="190" y="139" text-anchor="middle">陽陵泉</text>
+    <rect class="kb" x="260" y="116" width="120" height="36"/><text class="t k" x="320" y="139" text-anchor="middle">脈会</text>
+    <rect class="box" x="380" y="116" width="80"  height="36"/><text class="t v" x="420" y="139" text-anchor="middle">太淵</text>
+
+    <rect class="kb" x="20"  y="152" width="120" height="36"/><text class="t k" x="80"  y="175" text-anchor="middle">骨会</text>
+    <rect class="box" x="140" y="152" width="100" height="36"/><text class="t v" x="190" y="175" text-anchor="middle">大杼</text>
+    <rect class="kb" x="260" y="152" width="120" height="36"/><text class="t k" x="320" y="175" text-anchor="middle">髄会</text>
+    <rect class="box" x="380" y="152" width="80"  height="36"/><text class="t v" x="420" y="175" text-anchor="middle">懸鍾</text>
+  </g>
+  <text class="t" x="20" y="222" font-size="13" fill="#4b5563">・「懸鍾」は別名「絶骨」。外果尖の上方3寸。</text>
+  <text class="t" x="20" y="243" font-size="13" fill="#4b5563">・脈会「太淵」は橈骨動脈拍動部（＝肺経の原穴・輸土穴）。</text>
+  <text class="t" x="20" y="264" font-size="13" fill="#4b5563">・血会「膈兪」は第7胸椎の高さ（肩甲骨下角）。</text>
+  <text class="t" x="20" y="285" font-size="13" fill="#4b5563">・筋会「陽陵泉」は腓骨頭前下方（＝胆の下合穴）。</text>
+</svg>
