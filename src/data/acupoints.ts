@@ -22,6 +22,8 @@ export type Acupoint = {
   location: string
   /** 特定穴分類（複数可） */
   specialPoints: string[]
+  /** 別名・異体字・旧表記（出題判定の表記揺れ対策に使用） */
+  aliases?: string[]
   importance: 'S' | 'A' | 'B' | 'C'
   /** 覚え方の一言 */
   memoryTip: string
@@ -85,7 +87,7 @@ export const ACUPOINTS: Acupoint[] = [
   A({ slug: 'st41', code: 'ST41', name: '解渓', reading: 'かいけい', meridian: 'ST', meridianName: '足の陽明胃経', region: '足関節', location: '足関節前面中央の陥凹部、長母趾伸筋腱と長趾伸筋腱の間', specialPoints: ['五兪穴：経（火）'], importance: 'B', memoryTip: '足関節前面の靴ひも部。経火穴', examPoint: '経火穴・足関節前面中央' }),
   A({ slug: 'st42', code: 'ST42', name: '衝陽', reading: 'しょうよう', meridian: 'ST', meridianName: '足の陽明胃経', region: '足背', location: '第2中足骨底部と中間楔状骨の間、足背動脈拍動部', specialPoints: ['原穴'], importance: 'A', memoryTip: '足背動脈の拍動＝胃経の原穴（衝陽脈）', examPoint: '原穴であること・足背動脈拍動部' }),
   A({ slug: 'st44', code: 'ST44', name: '内庭', reading: 'ないてい', meridian: 'ST', meridianName: '足の陽明胃経', region: '足背', location: '第2・第3足趾間、みずかきの後縁、赤白肉際', specialPoints: ['五兪穴：滎（水）'], importance: 'B', memoryTip: '陽経の滎は水。歯痛・胃熱をとる', examPoint: '滎水穴（陽経の滎＝水）' }),
-  A({ slug: 'st45', code: 'ST45', name: '厲兌', reading: 'れいだ', meridian: 'ST', meridianName: '足の陽明胃経', region: '足の第2趾', location: '第2趾、末節骨外側、爪甲角の近位外方1分', specialPoints: ['五兪穴：井（金）'], importance: 'C', memoryTip: '胃経の最終穴＝井金穴。悪夢・多夢に', examPoint: '井金穴・胃経の終止穴' }),
+  A({ slug: 'st45', code: 'ST45', name: '厲兌', reading: 'れいだ', meridian: 'ST', meridianName: '足の陽明胃経', region: '足の第2趾', location: '第2趾、末節骨外側、爪甲角の近位外方1分', specialPoints: ['五兪穴：井（金）'], aliases: ['厲兑', '歴兌'], importance: 'C', memoryTip: '胃経の最終穴＝井金穴。悪夢・多夢に', examPoint: '井金穴・胃経の終止穴' }),
 
   /* ── 足の太陰脾経 ─────────────────────────── */
   A({ slug: 'sp1', code: 'SP1', name: '隠白', reading: 'いんぱく', meridian: 'SP', meridianName: '足の太陰脾経', region: '足の第1趾', location: '足の第1趾、末節骨内側、爪甲角の近位内方1分', specialPoints: ['五兪穴：井（木）'], importance: 'B', memoryTip: '脾経の起始＝井木穴。崩漏（不正出血）に灸', examPoint: '井木穴・不正性器出血への施灸' }),
@@ -110,7 +112,7 @@ export const ACUPOINTS: Acupoint[] = [
 
   /* ── 手の太陽小腸経 ───────────────────────── */
   A({ slug: 'si1', code: 'SI1', name: '少沢', reading: 'しょうたく', meridian: 'SI', meridianName: '手の太陽小腸経', region: '小指', location: '小指、末節骨尺側、爪甲角の近位内方1分', specialPoints: ['五兪穴：井（金）'], importance: 'B', memoryTip: '小指尺側＝井金穴。乳汁分泌不足に灸', examPoint: '井金穴・小指尺側／乳汁分泌への施灸' }),
-  A({ slug: 'si3', code: 'SI3', name: '後渓', reading: 'こうけい', meridian: 'SI', meridianName: '手の太陽小腸経', region: '手', location: '第5中手指節関節尺側の近位陥凹部、赤白肉際、軽く握って手掌横紋の尺側端', specialPoints: ['五兪穴：兪（木）', '八脈交会穴（督脈）'], importance: 'S', memoryTip: '握ってできる横紋の端。輸木穴かつ督脈に通じる。項背部痛', examPoint: '輸木穴・八脈交会穴（督脈）／申脈との配穴' }),
+  A({ slug: 'si3', code: 'SI3', name: '後渓', reading: 'こうけい', meridian: 'SI', meridianName: '手の太陽小腸経', region: '手', location: '第5中手指節関節尺側の近位陥凹部、赤白肉際、軽く握って手掌横紋の尺側端', specialPoints: ['五兪穴：兪（木）', '八脈交会穴（督脈）'], aliases: ['後谿'], importance: 'S', memoryTip: '握ってできる横紋の端。輸木穴かつ督脈に通じる。項背部痛', examPoint: '輸木穴・八脈交会穴（督脈）／申脈との配穴' }),
   A({ slug: 'si4', code: 'SI4', name: '腕骨', reading: 'わんこつ', meridian: 'SI', meridianName: '手の太陽小腸経', region: '手', location: '第5中手骨底部と三角骨の間の陥凹部、赤白肉際', specialPoints: ['原穴'], importance: 'B', memoryTip: '手根部の骨の際＝小腸経の原穴', examPoint: '原穴であること' }),
   A({ slug: 'si5', code: 'SI5', name: '陽谷', reading: 'ようこく', meridian: 'SI', meridianName: '手の太陽小腸経', region: '手関節', location: '三角骨と尺骨茎状突起の間の陥凹部', specialPoints: ['五兪穴：経（火）'], importance: 'C', memoryTip: '尺骨茎状突起の際＝経火穴', examPoint: '経火穴' }),
   A({ slug: 'si6', code: 'SI6', name: '養老', reading: 'ようろう', meridian: 'SI', meridianName: '手の太陽小腸経', region: '前腕', location: '尺骨頭橈側の陥凹部、手関節背側横紋の上方1寸', specialPoints: ['郄穴'], importance: 'B', memoryTip: '老いを養う＝目のかすみ・肩背痛。小腸経の郄穴', examPoint: '郄穴であること・尺骨頭の取穴' }),
@@ -120,7 +122,7 @@ export const ACUPOINTS: Acupoint[] = [
   A({ slug: 'si19', code: 'SI19', name: '聴宮', reading: 'ちょうきゅう', meridian: 'SI', meridianName: '手の太陽小腸経', region: '顔面部', location: '耳珠中央の前縁と下顎骨関節突起の間、口を開けたときの陥凹部', specialPoints: [], importance: 'B', memoryTip: '耳の前・開口で陥凹。耳鳴・難聴（耳門・聴会と並ぶ）', examPoint: '耳疾患の三穴（耳門・聴宮・聴会）の位置関係' }),
 
   /* ── 足の太陽膀胱経 ───────────────────────── */
-  A({ slug: 'bl2', code: 'BL2', name: '攢竹', reading: 'さんちく', meridian: 'BL', meridianName: '足の太陽膀胱経', region: '頭部', location: '眉毛内端の陥凹部、前頭切痕部', specialPoints: [], importance: 'C', memoryTip: '眉頭。眼疾・前頭部痛', examPoint: '眉毛内端という位置' }),
+  A({ slug: 'bl2', code: 'BL2', name: '攢竹', reading: 'さんちく', meridian: 'BL', meridianName: '足の太陽膀胱経', region: '頭部', location: '眉毛内端の陥凹部、前頭切痕部', specialPoints: [], aliases: ['攅竹'], importance: 'C', memoryTip: '眉頭。眼疾・前頭部痛', examPoint: '眉毛内端という位置' }),
   A({ slug: 'bl10', code: 'BL10', name: '天柱', reading: 'てんちゅう', meridian: 'BL', meridianName: '足の太陽膀胱経', region: '項部', location: '僧帽筋外縁の陥凹部、後髪際の上方5分', specialPoints: [], importance: 'B', memoryTip: '僧帽筋外縁・後髪際上5分。後頭部痛・頸肩こり', examPoint: '僧帽筋外縁／風池（胆経）との位置の区別' }),
   A({ slug: 'bl11', code: 'BL11', name: '大杼', reading: 'だいじょ', meridian: 'BL', meridianName: '足の太陽膀胱経', region: '上背部', location: '第1胸椎棘突起下縁と同じ高さ、後正中線の外方1.5寸', specialPoints: ['八会穴（骨会）'], importance: 'A', memoryTip: '骨会。骨疾患・頸椎症。第1胸椎の高さ', examPoint: '八会穴（骨会）であること' }),
   A({ slug: 'bl13', code: 'BL13', name: '肺兪', reading: 'はいゆ', meridian: 'BL', meridianName: '足の太陽膀胱経', region: '上背部', location: '第3胸椎棘突起下縁と同じ高さ、後正中線の外方1.5寸', specialPoints: ['肺の背部兪穴'], importance: 'A', memoryTip: '第3胸椎＝肺兪。咳・喘息。募穴の中府と俞募配穴', examPoint: '背部兪穴（肺）・第3胸椎の高さ' }),
@@ -134,8 +136,8 @@ export const ACUPOINTS: Acupoint[] = [
   A({ slug: 'bl28', code: 'BL28', name: '膀胱兪', reading: 'ぼうこうゆ', meridian: 'BL', meridianName: '足の太陽膀胱経', region: '仙骨部', location: '第2後仙骨孔と同じ高さ、正中仙骨稜の外方1.5寸', specialPoints: ['膀胱の背部兪穴'], importance: 'A', memoryTip: '第2仙骨孔＝膀胱兪。頻尿・排尿障害。募穴は中極', examPoint: '背部兪穴（膀胱）・第2後仙骨孔の高さ' }),
   A({ slug: 'bl40', code: 'BL40', name: '委中', reading: 'いちゅう', meridian: 'BL', meridianName: '足の太陽膀胱経', region: '膝', location: '膝窩横紋の中点', specialPoints: ['五兪穴：合（土）', '膀胱の下合穴', '四総穴（腰背）'], importance: 'S', memoryTip: '「腰背は委中に求む」。膝窩の中央。合土穴＝下合穴', examPoint: '合土穴・下合穴・四総穴（腰背）の三役／膝窩横紋中点' }),
   A({ slug: 'bl57', code: 'BL57', name: '承山', reading: 'しょうざん', meridian: 'BL', meridianName: '足の太陽膀胱経', region: '下腿', location: '腓腹筋筋腹とアキレス腱の移行部、つま先立ちで腓腹筋に「人」の字ができる頂点', specialPoints: [], importance: 'B', memoryTip: '腓腹筋の「人」の字の下＝承山。こむら返り・痔', examPoint: '腓腹筋とアキレス腱の移行部／痔疾への使用' }),
-  A({ slug: 'bl58', code: 'BL58', name: '飛揚', reading: 'ひよう', meridian: 'BL', meridianName: '足の太陽膀胱経', region: '下腿', location: '腓腹筋外側頭下縁とアキレス腱の間、崑崙の上方7寸', specialPoints: ['絡穴'], importance: 'B', memoryTip: '膀胱経の絡穴。腎経へ絡む', examPoint: '絡穴であること' }),
-  A({ slug: 'bl60', code: 'BL60', name: '崑崙', reading: 'こんろん', meridian: 'BL', meridianName: '足の太陽膀胱経', region: '足関節', location: '外果尖とアキレス腱の間の陥凹部', specialPoints: ['五兪穴：経（火）'], importance: 'A', memoryTip: '外果とアキレス腱の間＝経火穴。頭痛・項強・腰痛', examPoint: '経火穴・外果後方／太渓（腎経・内果後方）と対' }),
+  A({ slug: 'bl58', code: 'BL58', name: '飛揚', reading: 'ひよう', meridian: 'BL', meridianName: '足の太陽膀胱経', region: '下腿', location: '腓腹筋外側頭下縁とアキレス腱の間、崑崙の上方7寸', specialPoints: ['絡穴'], aliases: ['飛陽'], importance: 'B', memoryTip: '膀胱経の絡穴。腎経へ絡む', examPoint: '絡穴であること' }),
+  A({ slug: 'bl60', code: 'BL60', name: '崑崙', reading: 'こんろん', meridian: 'BL', meridianName: '足の太陽膀胱経', region: '足関節', location: '外果尖とアキレス腱の間の陥凹部', specialPoints: ['五兪穴：経（火）'], aliases: ['昆侖', '昆崙'], importance: 'A', memoryTip: '外果とアキレス腱の間＝経火穴。頭痛・項強・腰痛', examPoint: '経火穴・外果後方／太渓（腎経・内果後方）と対' }),
   A({ slug: 'bl62', code: 'BL62', name: '申脈', reading: 'しんみゃく', meridian: 'BL', meridianName: '足の太陽膀胱経', region: '足外側', location: '外果尖の直下、外果下縁と踵骨の間の陥凹部', specialPoints: ['八脈交会穴（陽蹻脈）'], importance: 'A', memoryTip: '外果の直下。陽蹻脈に通じる。後渓と組む', examPoint: '八脈交会穴（陽蹻脈）／後渓（督脈）との配穴' }),
   A({ slug: 'bl63', code: 'BL63', name: '金門', reading: 'きんもん', meridian: 'BL', meridianName: '足の太陽膀胱経', region: '足外側', location: '第5中足骨粗面の後方、立方骨下方の陥凹部', specialPoints: ['郄穴'], importance: 'C', memoryTip: '膀胱経の郄穴。急性腰痛・小児のひきつけ', examPoint: '郄穴であること' }),
   A({ slug: 'bl64', code: 'BL64', name: '京骨', reading: 'けいこつ', meridian: 'BL', meridianName: '足の太陽膀胱経', region: '足外側', location: '第5中足骨粗面の遠位、赤白肉際', specialPoints: ['原穴'], importance: 'B', memoryTip: '第5中足骨粗面の前＝膀胱経の原穴（陽経は原≠輸）', examPoint: '原穴であること（陽経なので輸木穴の束骨とは別）' }),
@@ -146,7 +148,7 @@ export const ACUPOINTS: Acupoint[] = [
   A({ slug: 'ki1', code: 'KI1', name: '湧泉', reading: 'ゆうせん', meridian: 'KI', meridianName: '足の少陰腎経', region: '足底', location: '足底、足趾を屈曲したときにできる足底の最陥凹部、およそ足底前1/3', specialPoints: ['五兪穴：井（木）'], importance: 'A', memoryTip: '足底＝腎経の起始＝井木穴。のぼせ・不眠・小児の熱', examPoint: '井木穴・足底という起始部（唯一足底にある正穴）' }),
   A({ slug: 'ki2', code: 'KI2', name: '然谷', reading: 'ねんこく', meridian: 'KI', meridianName: '足の少陰腎経', region: '足内側', location: '舟状骨粗面の下方、赤白肉際', specialPoints: ['五兪穴：滎（火）'], importance: 'C', memoryTip: '舟状骨粗面の下＝滎火穴', examPoint: '滎火穴・舟状骨粗面の下' }),
   A({ slug: 'ki3', code: 'KI3', name: '太渓', reading: 'たいけい', meridian: 'KI', meridianName: '足の少陰腎経', region: '足関節', location: '内果尖とアキレス腱の間の陥凹部', specialPoints: ['原穴', '五兪穴：兪（土）'], importance: 'S', memoryTip: '内果とアキレス腱の間＝原穴＝輸土穴。腎虚の代表穴。崑崙と対', examPoint: '原穴・輸土穴の一致／崑崙（外果側）との位置対比' }),
-  A({ slug: 'ki4', code: 'KI4', name: '大鍾', reading: 'だいしょう', meridian: 'KI', meridianName: '足の少陰腎経', region: '足関節', location: '内果後下方、踵骨上方、アキレス腱付着部内側前方の陥凹部', specialPoints: ['絡穴'], importance: 'B', memoryTip: '腎経の絡穴。膀胱経へ絡む', examPoint: '絡穴であること' }),
+  A({ slug: 'ki4', code: 'KI4', name: '大鍾', reading: 'だいしょう', meridian: 'KI', meridianName: '足の少陰腎経', region: '足関節', location: '内果後下方、踵骨上方、アキレス腱付着部内側前方の陥凹部', specialPoints: ['絡穴'], aliases: ['大鐘'], importance: 'B', memoryTip: '腎経の絡穴。膀胱経へ絡む', examPoint: '絡穴であること' }),
   A({ slug: 'ki5', code: 'KI5', name: '水泉', reading: 'すいせん', meridian: 'KI', meridianName: '足の少陰腎経', region: '足関節', location: '太渓の下方1寸、踵骨隆起前方の陥凹部', specialPoints: ['郄穴'], importance: 'B', memoryTip: '腎経の郄穴。月経痛・排尿困難', examPoint: '郄穴であること' }),
   A({ slug: 'ki6', code: 'KI6', name: '照海', reading: 'しょうかい', meridian: 'KI', meridianName: '足の少陰腎経', region: '足内側', location: '内果尖の下方1寸、内果下方の陥凹部', specialPoints: ['八脈交会穴（陰蹻脈）'], importance: 'A', memoryTip: '内果の下＝陰蹻脈に通じる。咽喉の乾き・不眠。列缺と組む', examPoint: '八脈交会穴（陰蹻脈）／列缺（任脈）との配穴' }),
   A({ slug: 'ki7', code: 'KI7', name: '復溜', reading: 'ふくりゅう', meridian: 'KI', meridianName: '足の少陰腎経', region: '下腿', location: 'アキレス腱の前縁、内果尖の上方2寸', specialPoints: ['五兪穴：経（金）'], importance: 'B', memoryTip: '太渓の上2寸＝経金穴。発汗異常（合谷と組む）', examPoint: '経金穴・内果上2寸／発汗調節' }),
@@ -169,7 +171,7 @@ export const ACUPOINTS: Acupoint[] = [
   A({ slug: 'te7', code: 'TE7', name: '会宗', reading: 'えそう', meridian: 'TE', meridianName: '手の少陽三焦経', region: '前腕', location: '尺骨橈側縁、手関節背側横紋の上方3寸（支溝の尺側）', specialPoints: ['郄穴'], importance: 'C', memoryTip: '三焦経の郄穴。支溝の隣', examPoint: '郄穴であること' }),
   A({ slug: 'te10', code: 'TE10', name: '天井', reading: 'てんせい', meridian: 'TE', meridianName: '手の少陽三焦経', region: '肘', location: '肘頭の上方1寸の陥凹部', specialPoints: ['五兪穴：合（土）'], importance: 'C', memoryTip: '肘頭の上1寸＝合土穴', examPoint: '合土穴・肘頭上方' }),
   A({ slug: 'te17', code: 'TE17', name: '翳風', reading: 'えいふう', meridian: 'TE', meridianName: '手の少陽三焦経', region: '前頸部', location: '乳様突起下端前方、耳垂後方の陥凹部', specialPoints: [], importance: 'B', memoryTip: '耳たぶの後ろの陥凹。顔面神経麻痺・耳疾患・耳下腺炎', examPoint: '耳垂後方・乳様突起前という位置／顔面神経麻痺への使用' }),
-  A({ slug: 'te23', code: 'TE23', name: '糸竹空', reading: 'しちくくう', meridian: 'TE', meridianName: '手の少陽三焦経', region: '頭部', location: '眉毛外端の陥凹部', specialPoints: [], importance: 'C', memoryTip: '眉尻＝三焦経の終止穴。頭痛・眼疾', examPoint: '三焦経の終止穴・眉毛外端' }),
+  A({ slug: 'te23', code: 'TE23', name: '糸竹空', reading: 'しちくくう', meridian: 'TE', meridianName: '手の少陽三焦経', region: '頭部', location: '眉毛外端の陥凹部', specialPoints: [], aliases: ['絲竹空'], importance: 'C', memoryTip: '眉尻＝三焦経の終止穴。頭痛・眼疾', examPoint: '三焦経の終止穴・眉毛外端' }),
 
   /* ── 足の少陽胆経 ─────────────────────────── */
   A({ slug: 'gb2', code: 'GB2', name: '聴会', reading: 'ちょうえ', meridian: 'GB', meridianName: '足の少陽胆経', region: '顔面部', location: '珠間切痕と下顎骨関節突起の間、口を開けたときの陥凹部（聴宮の下）', specialPoints: [], importance: 'C', memoryTip: '耳前・聴宮の下。耳鳴・難聴', examPoint: '耳疾患三穴のうち最も下' }),
@@ -183,8 +185,8 @@ export const ACUPOINTS: Acupoint[] = [
   A({ slug: 'gb34', code: 'GB34', name: '陽陵泉', reading: 'ようりょうせん', meridian: 'GB', meridianName: '足の少陽胆経', region: '下腿', location: '腓骨頭前下方の陥凹部', specialPoints: ['五兪穴：合（土）', '胆の下合穴', '八会穴（筋会）'], importance: 'S', memoryTip: '腓骨頭の前下＝合土穴＝下合穴＝筋会。筋・腱の疾患、下肢痛', examPoint: '合土穴・下合穴・八会穴（筋会）の三役／腓骨頭前下方' }),
   A({ slug: 'gb36', code: 'GB36', name: '外丘', reading: 'がいきゅう', meridian: 'GB', meridianName: '足の少陽胆経', region: '下腿', location: '腓骨の前方、外果尖の上方7寸', specialPoints: ['郄穴'], importance: 'C', memoryTip: '胆経の郄穴。光明のやや上・後ろ', examPoint: '郄穴であること' }),
   A({ slug: 'gb37', code: 'GB37', name: '光明', reading: 'こうめい', meridian: 'GB', meridianName: '足の少陽胆経', region: '下腿', location: '腓骨の前方、外果尖の上方5寸', specialPoints: ['絡穴'], importance: 'A', memoryTip: '「光明」＝目の症状。胆経の絡穴、肝経へ絡む', examPoint: '絡穴であること・眼疾患への使用（名前と主治が一致）' }),
-  A({ slug: 'gb39', code: 'GB39', name: '懸鍾', reading: 'けんしょう', meridian: 'GB', meridianName: '足の少陽胆経', region: '下腿', location: '腓骨の前方、外果尖の上方3寸', specialPoints: ['八会穴（髄会）'], importance: 'A', memoryTip: '別名「絶骨」。髄会。外果上3寸。頸項強ばり・下肢痿弱', examPoint: '八会穴（髄会）・別名「絶骨」・外果上3寸' }),
-  A({ slug: 'gb40', code: 'GB40', name: '丘墟', reading: 'きゅうきょ', meridian: 'GB', meridianName: '足の少陽胆経', region: '足関節', location: '外果の前下方、長趾伸筋腱の外側の陥凹部', specialPoints: ['原穴'], importance: 'A', memoryTip: '外果の前下＝胆経の原穴', examPoint: '原穴であること・外果前下方' }),
+  A({ slug: 'gb39', code: 'GB39', name: '懸鍾', reading: 'けんしょう', meridian: 'GB', meridianName: '足の少陽胆経', region: '下腿', location: '腓骨の前方、外果尖の上方3寸', specialPoints: ['八会穴（髄会）'], aliases: ['絶骨', '懸鐘'], importance: 'A', memoryTip: '別名「絶骨」。髄会。外果上3寸。頸項強ばり・下肢痿弱', examPoint: '八会穴（髄会）・別名「絶骨」・外果上3寸' }),
+  A({ slug: 'gb40', code: 'GB40', name: '丘墟', reading: 'きゅうきょ', meridian: 'GB', meridianName: '足の少陽胆経', region: '足関節', location: '外果の前下方、長趾伸筋腱の外側の陥凹部', specialPoints: ['原穴'], aliases: ['丘虚'], importance: 'A', memoryTip: '外果の前下＝胆経の原穴', examPoint: '原穴であること・外果前下方' }),
   A({ slug: 'gb41', code: 'GB41', name: '足臨泣', reading: 'あしりんきゅう', meridian: 'GB', meridianName: '足の少陽胆経', region: '足背', location: '第4・第5中足骨底接合部の遠位、第5趾の長趾伸筋腱の外側の陥凹部', specialPoints: ['五兪穴：兪（木）', '八脈交会穴（帯脈）'], importance: 'A', memoryTip: '輸木穴かつ帯脈に通じる。外関と組む。偏頭痛・めまい', examPoint: '輸木穴・八脈交会穴（帯脈）／外関との配穴' }),
   A({ slug: 'gb43', code: 'GB43', name: '侠渓', reading: 'きょうけい', meridian: 'GB', meridianName: '足の少陽胆経', region: '足背', location: '第4・第5足趾間、みずかきの後縁、赤白肉際', specialPoints: ['五兪穴：滎（水）'], importance: 'C', memoryTip: '陽経の滎は水。趾間の位置', examPoint: '滎水穴' }),
   A({ slug: 'gb44', code: 'GB44', name: '足竅陰', reading: 'あしきょういん', meridian: 'GB', meridianName: '足の少陽胆経', region: '足の第4趾', location: '第4趾、末節骨外側、爪甲角の近位外方1分', specialPoints: ['五兪穴：井（金）'], importance: 'C', memoryTip: '胆経の最終穴＝井金穴', examPoint: '井金穴・胆経の終止穴' }),

@@ -1,11 +1,17 @@
 import type { Metadata } from 'next'
 import Link from 'next/link'
+import { EXAM_ROUNDS, QUESTIONS_PER_ROUND } from '@/lib/examQuestions'
+import { roundToYear } from '@/lib/utils'
+import { themes } from '@/lib/data'
 
 export const metadata: Metadata = {
   title: 'About',
   description:
     '鍼灸国家試験 頻出分析データベースについて。このサイトは問題文を掲載するサイトではなく、出題テーマを独自分類した分析データベースです。',
 }
+
+const TOTAL_QUESTIONS = EXAM_ROUNDS.length * QUESTIONS_PER_ROUND
+const ROUND_RANGE = `第${EXAM_ROUNDS[0]}回（${roundToYear(EXAM_ROUNDS[0])}年）〜第${EXAM_ROUNDS[EXAM_ROUNDS.length - 1]}回（${roundToYear(EXAM_ROUNDS[EXAM_ROUNDS.length - 1])}年）`
 
 export default function AboutPage() {
   return (
@@ -74,11 +80,12 @@ export default function AboutPage() {
           <h2 className="font-bold text-gray-800 mb-3">分析対象</h2>
           <div className="bg-white border border-gray-100 rounded-xl overflow-hidden">
             {[
-              ['対象試験', '鍼灸国家試験（はり師・きゅう師）'],
-              ['対象回', '第31回（2023年）・第32回（2024年）・第33回（2025年）・第34回（2026年）'],
-              ['分析問題数', '720問（各回180問 × 4回）'],
-              ['出題基準', '2020年版'],
-              ['分類方法', '独自テーマキーによるグループ分類'],
+              ['対象試験', '鍼灸国家試験（はり師・きゅう師 共通）'],
+              ['対象回', `${ROUND_RANGE}（計${EXAM_ROUNDS.length}回）`],
+              ['分析問題数', `${TOTAL_QUESTIONS.toLocaleString()}問（各回${QUESTIONS_PER_ROUND}問 × ${EXAM_ROUNDS.length}回）`],
+              ['収録テーマ数', `${themes.length}テーマ`],
+              ['出題基準', '2020年版（第35回以降は2026年版に切替）'],
+              ['分類方法', '独自テーマキーによるグループ分類（過去問の問題文は非掲載）'],
             ].map(([label, value]) => (
               <div key={label} className="flex gap-4 px-4 py-3 border-b border-gray-50 last:border-0">
                 <span className="text-xs text-gray-400 w-28 flex-shrink-0 pt-0.5">{label}</span>

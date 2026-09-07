@@ -7,7 +7,8 @@
     "build": "next build",
     "start": "next start",
     "lint": "eslint",
-    "download": "npx tsx scripts/download-official-exams.ts"
+    "download": "npx tsx scripts/download-official-exams.ts",
+    "audit:data": "npx tsx scripts/audit-data.mjs"
   },
   "dependencies": {
     "next": "16.2.9",

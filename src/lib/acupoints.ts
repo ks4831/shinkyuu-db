@@ -20,15 +20,21 @@ function buildAppearanceMap(): Map<string, { rounds: Set<number>; mentions: numb
     map.set(a.name, { rounds: new Set(), mentions: 0 })
   }
 
+  // 経穴ごとに「本文で探す語」（正式名称＋別名・異体字）を用意
+  const needles = ACUPOINTS.map((a) => ({
+    name: a.name,
+    terms: [a.name, ...(a.aliases ?? [])],
+  }))
+
   const questions = loadAllExamQuestions()
   for (const q of questions) {
     const haystack = [q.studyPoint, q.subTheme, q.officialSmall, q.normalizedTheme]
       .filter(Boolean)
       .join(' ')
     if (!haystack) continue
-    for (const a of ACUPOINTS) {
-      if (haystack.includes(a.name)) {
-        const entry = map.get(a.name)!
+    for (const n of needles) {
+      if (n.terms.some((t) => haystack.includes(t))) {
+        const entry = map.get(n.name)!
         entry.rounds.add(q.examRound)
         entry.mentions += 1
       }

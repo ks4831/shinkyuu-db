@@ -4,6 +4,8 @@ import {
   loadAllExamQuestions,
   aggregateByTheme,
   calcImportanceByCount,
+  EXAM_ROUNDS,
+  QUESTIONS_PER_ROUND,
 } from '@/lib/examQuestions'
 import { ALL_QUESTIONS } from '@/lib/quiz'
 import { ACUPOINTS } from '@/data/acupoints'
@@ -51,7 +53,7 @@ export default function HomePage() {
             鍼灸国試対策を、<br />今日も<span className="text-green-600">10問</span>。
           </h1>
           <p className="mt-2 text-sm leading-relaxed text-gray-600">
-            過去6年・<strong className="text-gray-800">1,080問</strong>の出題分析から、効率よく学習。
+            過去{EXAM_ROUNDS.length}年・<strong className="text-gray-800">{(EXAM_ROUNDS.length * QUESTIONS_PER_ROUND).toLocaleString()}問</strong>の出題分析から、効率よく学習。
             1問1画面・解説と図解つき。
           </p>
 

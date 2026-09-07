@@ -1,11 +1,16 @@
 import type { Metadata } from 'next'
 import Link from 'next/link'
+import { EXAM_ROUNDS, QUESTIONS_PER_ROUND } from '@/lib/examQuestions'
+import { roundToYear } from '@/lib/utils'
 
 export const metadata: Metadata = {
   title: 'データソース',
   description:
     '鍼灸国家試験 頻出分析データベースで使用しているデータのソース情報。公益財団法人東洋療法研修試験財団が公表する公式資料をもとに分析しています。',
 }
+
+const ROUND_RANGE = `第${EXAM_ROUNDS[0]}回（${roundToYear(EXAM_ROUNDS[0])}年）〜第${EXAM_ROUNDS[EXAM_ROUNDS.length - 1]}回（${roundToYear(EXAM_ROUNDS[EXAM_ROUNDS.length - 1])}年）`
+const TOTAL_QUESTIONS = (EXAM_ROUNDS.length * QUESTIONS_PER_ROUND).toLocaleString()
 
 export default function SourcesPage() {
   return (
@@ -38,7 +43,7 @@ export default function SourcesPage() {
             <div className="divide-y divide-gray-50">
               {[
                 ['データ種別', '国家試験問題・正答肢（公表資料）'],
-                ['対象回', '第31回（2023年）・第32回（2024年）・第33回（2025年）・第34回（2026年）'],
+                ['対象回', `${ROUND_RANGE}（計${EXAM_ROUNDS.length}回・${TOTAL_QUESTIONS}問）`],
                 ['取得方法', '東洋療法研修試験財団が公開するPDFから問題・正答を参照'],
                 ['利用許諾', '公表されている公式資料を参照した独自分析・集計'],
               ].map(([label, value]) => (
