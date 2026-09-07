@@ -231,7 +231,7 @@ export default async function ThemeDetailPage({
       {guide?.keyPoints && (
         <section id="key-points" className="bg-gradient-to-br from-green-600 to-green-700 rounded-2xl p-5 mb-4 text-white shadow-md">
           <h2 className="font-bold mb-3 flex items-center gap-2">
-            <span className="bg-white/20 px-2 py-0.5 rounded text-xs font-bold tracking-wider">MUST</span>
+            <span className="bg-white/20 px-2 py-0.5 rounded text-xs font-bold tracking-wider">最重要</span>
             ここだけ覚える
           </h2>
           <ul className="space-y-2">

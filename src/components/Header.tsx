@@ -24,6 +24,7 @@ export default function Header() {
           <Link href="/acupoints" className="rounded-lg px-3 py-1.5 text-gray-600 hover:bg-green-50 hover:text-green-700">経穴</Link>
           <Link href="/subjects" className="rounded-lg px-3 py-1.5 text-gray-600 hover:bg-green-50 hover:text-green-700">科目</Link>
           <Link href="/analysis/compare/recent-6-years" className="rounded-lg px-3 py-1.5 text-gray-600 hover:bg-green-50 hover:text-green-700">分析</Link>
+          <Link href="/dashboard" className="rounded-lg px-3 py-1.5 text-gray-600 hover:bg-green-50 hover:text-green-700">学習記録</Link>
           <Link href="/menu" className="rounded-lg px-3 py-1.5 text-gray-600 hover:bg-green-50 hover:text-green-700">メニュー</Link>
         </nav>
 

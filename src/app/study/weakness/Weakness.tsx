@@ -50,8 +50,7 @@ export default function Weakness() {
       </nav>
 
       <div className="mb-6">
-        <p className="text-xs text-green-600 font-semibold tracking-widest uppercase mb-1">WEAK POINTS</p>
-        <h1 className="text-2xl font-bold text-gray-900">苦手テーマ</h1>
+        <h1 className="text-2xl font-bold text-gray-900">苦手に登録したテーマ</h1>
         <p className="text-sm text-gray-500 mt-1">重点的に復習が必要なテーマをまとめました</p>
       </div>
 

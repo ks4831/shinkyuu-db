@@ -186,7 +186,7 @@ export default function Compare33vs34Page() {
       {/* ── ヘッダー ─────────────────────────────── */}
       <section>
         <p className="text-xs text-green-600 font-semibold tracking-widest uppercase mb-2">
-          COMPARATIVE ANALYSIS
+          比較分析
         </p>
         <h1 className="text-2xl font-bold text-gray-900">
           第33回 vs 第34回

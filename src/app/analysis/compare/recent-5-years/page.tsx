@@ -237,7 +237,7 @@ export default function Recent5YearsPage() {
       {/* ── ヘッダー */}
       <section>
         <p className="text-xs text-green-600 font-semibold tracking-widest uppercase mb-2">
-          5-YEAR TREND ANALYSIS
+          5年トレンド分析
         </p>
         <h1 className="text-2xl font-bold text-gray-900">
           直近5年（第30〜34回）

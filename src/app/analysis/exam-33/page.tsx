@@ -204,7 +204,7 @@ export default function Exam33AnalysisPage() {
       {/* ── 1. 概要 ─────────────────────────────── */}
       <section>
         <p className="text-xs text-green-600 font-semibold tracking-widest uppercase mb-2">
-          EXAM ANALYSIS
+          出題傾向分析
         </p>
         <h1 className="text-2xl font-bold text-gray-900">
           第33回 鍼灸国家試験

@@ -104,7 +104,7 @@ export default function QuizRunner({
   if (prepared === null) {
     return (
       <div className="mx-auto max-w-md px-4 py-16 text-center text-sm text-gray-400">
-        出題を準備中…
+        問題を読み込み中…
       </div>
     )
   }

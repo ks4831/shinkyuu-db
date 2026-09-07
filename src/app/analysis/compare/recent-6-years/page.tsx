@@ -249,7 +249,7 @@ export default function Recent6YearsPage() {
       {/* ── ヘッダー */}
       <section>
         <p className="text-xs text-green-600 font-semibold tracking-widest uppercase mb-2">
-          6-YEAR TREND ANALYSIS
+          6年トレンド分析
         </p>
         <h1 className="text-2xl font-bold text-gray-900">
           直近6年（第29〜34回）

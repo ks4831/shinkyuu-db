@@ -109,10 +109,10 @@ export default function StudyPage() {
 
       <div className="flex items-start justify-between gap-4 mb-4 flex-wrap">
         <div>
-          <p className="text-xs text-green-600 font-semibold tracking-widest uppercase mb-1">
-            STUDY MODE
+          <p className="text-xs text-green-600 font-semibold tracking-wide mb-1">
+            テーマ学習ツール
           </p>
-          <h1 className="text-2xl font-bold text-gray-900">今日の10テーマ</h1>
+          <h1 className="text-2xl font-bold text-gray-900">テーマを暗記する（今日の10テーマ）</h1>
           <p className="text-sm text-gray-500 mt-1">
             重要度S優先のランダム10テーマ。カードをタップして学習ポイントを確認。
           </p>

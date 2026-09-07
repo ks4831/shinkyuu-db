@@ -213,7 +213,7 @@ export default function Exam34AnalysisPage() {
       {/* ── 1. 概要 ─────────────────────────────── */}
       <section>
         <p className="text-xs text-green-600 font-semibold tracking-widest uppercase mb-2">
-          EXAM ANALYSIS
+          出題傾向分析
         </p>
         <h1 className="text-2xl font-bold text-gray-900">
           第34回 鍼灸国家試験
@@ -567,7 +567,7 @@ export default function Exam34AnalysisPage() {
         </div>
       </section>
 
-      {/* ── 7. 比較リンク（準備中） ──────────────── */}
+      {/* ── 7. 他の回との比較リンク ──────────────── */}
       <section>
         <h2 className="text-lg font-bold text-gray-800 mb-4">他の回と比較する</h2>
         <div className="grid grid-cols-1 sm:grid-cols-2 gap-3">

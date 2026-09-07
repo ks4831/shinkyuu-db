@@ -36,11 +36,7 @@ export default function SubjectsPage() {
             <Link
               key={subject.id}
               href={`/subjects/${subject.id}`}
-              className={`block bg-white rounded-2xl border p-5 transition-all hover:shadow-md ${
-                subjectThemes.length > 0
-                  ? 'border-gray-100 hover:border-green-200'
-                  : 'border-gray-100 opacity-60'
-              }`}
+              className="block bg-white rounded-2xl border border-gray-100 p-5 transition-all hover:shadow-md hover:border-green-200"
             >
               <div className="flex items-start justify-between">
                 <div className="flex-1">
@@ -49,38 +45,32 @@ export default function SubjectsPage() {
                     {subject.description}
                   </p>
                 </div>
-                {subjectThemes.length > 0 && (
-                  <span className="ml-2 flex-shrink-0 text-xs text-green-600 font-semibold bg-green-50 border border-green-100 px-2 py-0.5 rounded-full">
-                    {subjectThemes.length}件
-                  </span>
-                )}
+                <span className="ml-2 flex-shrink-0 text-xs text-green-600 font-semibold bg-green-50 border border-green-100 px-2 py-0.5 rounded-full">
+                  {subjectThemes.length}件
+                </span>
               </div>
 
-              {subjectThemes.length > 0 ? (
-                <div className="mt-4 space-y-2">
-                  <div className="flex gap-3 text-xs text-gray-500">
-                    {sCount > 0 && (
-                      <span className="flex items-center gap-1">
-                        <span className="w-2 h-2 rounded-full bg-red-400 inline-block" />
-                        S×{sCount}
-                      </span>
-                    )}
-                    {aCount > 0 && (
-                      <span className="flex items-center gap-1">
-                        <span className="w-2 h-2 rounded-full bg-orange-400 inline-block" />
-                        A×{aCount}
-                      </span>
-                    )}
-                  </div>
-                  {topTheme && (
-                    <p className="text-xs text-gray-400">
-                      最頻出: <span className="font-medium text-gray-600">{topTheme.name}</span>（{topTheme.count}回出題）
-                    </p>
+              <div className="mt-4 space-y-2">
+                <div className="flex gap-3 text-xs text-gray-500">
+                  {sCount > 0 && (
+                    <span className="flex items-center gap-1">
+                      <span className="w-2 h-2 rounded-full bg-red-400 inline-block" />
+                      S×{sCount}
+                    </span>
+                  )}
+                  {aCount > 0 && (
+                    <span className="flex items-center gap-1">
+                      <span className="w-2 h-2 rounded-full bg-orange-400 inline-block" />
+                      A×{aCount}
+                    </span>
                   )}
                 </div>
-              ) : (
-                <p className="mt-3 text-xs text-gray-300">データ準備中</p>
-              )}
+                {topTheme && (
+                  <p className="text-xs text-gray-400">
+                    最頻出: <span className="font-medium text-gray-600">{topTheme.name}</span>（{topTheme.count}回出題）
+                  </p>
+                )}
+              </div>
             </Link>
           )
         })}

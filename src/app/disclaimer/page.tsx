@@ -18,7 +18,7 @@ export default function DisclaimerPage() {
       </nav>
 
       <section>
-        <p className="text-xs text-gray-500 font-semibold tracking-widest uppercase mb-2">DISCLAIMER</p>
+        <p className="text-xs text-gray-500 font-semibold tracking-wide mb-2">免責事項</p>
         <h1 className="text-2xl font-bold text-gray-900">免責事項</h1>
       </section>
 

@@ -8,13 +8,18 @@ export const metadata: Metadata = {
 
 const groups = [
   {
-    title: '学習',
+    title: '学習する',
     links: [
       { href: '/quiz', label: 'クイズ（10問ずつ）' },
       { href: '/quiz/weak', label: '苦手復習' },
       { href: '/acupoints', label: '経穴から学ぶ' },
-      { href: '/dashboard', label: '学習の記録' },
       { href: '/subjects', label: '科目から探す' },
+    ],
+  },
+  {
+    title: '学習の記録',
+    links: [
+      { href: '/dashboard', label: '学習記録（メイン）', note: '解いた問題数・正答率・連続学習日数・苦手' },
     ],
   },
   {
@@ -29,13 +34,13 @@ const groups = [
     ],
   },
   {
-    title: 'テーマ別の学習管理',
+    title: 'テーマ学習ツール（補助）',
     links: [
-      { href: '/study', label: '今日の10テーマ' },
-      { href: '/study/checklist', label: 'チェックリスト' },
-      { href: '/study/favorites', label: '復習リスト（テーマ）' },
-      { href: '/study/weakness', label: '苦手テーマ' },
-      { href: '/study/dashboard', label: 'テーマ学習ダッシュボード' },
+      { href: '/study', label: 'テーマを暗記する（今日の10テーマ）' },
+      { href: '/study/checklist', label: 'テーマのチェックリスト' },
+      { href: '/study/favorites', label: 'あとで見るテーマ' },
+      { href: '/study/weakness', label: '苦手に登録したテーマ' },
+      { href: '/study/dashboard', label: 'テーマ暗記の進捗' },
     ],
   },
   {
@@ -61,8 +66,13 @@ export default function MenuPage() {
             <ul className="divide-y divide-gray-50 overflow-hidden rounded-2xl border border-gray-100 bg-white">
               {g.links.map((l) => (
                 <li key={l.href}>
-                  <Link href={l.href} className="flex items-center justify-between px-4 py-3.5 text-sm font-semibold text-gray-800">
-                    {l.label}
+                  <Link href={l.href} className="flex items-center justify-between gap-3 px-4 py-3.5 text-sm font-semibold text-gray-800">
+                    <span>
+                      {l.label}
+                      {'note' in l && l.note && (
+                        <span className="mt-0.5 block text-xs font-normal text-gray-400">{l.note}</span>
+                      )}
+                    </span>
                     <span className="text-gray-300">›</span>
                   </Link>
                 </li>

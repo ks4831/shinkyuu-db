@@ -64,9 +64,9 @@ export default function RootLayout({
                 <ul className="space-y-1.5">
                   <li><Link href="/quiz" className="text-gray-500 hover:text-green-600 transition-colors">クイズ（10問ずつ）</Link></li>
                   <li><Link href="/quiz/weak" className="text-gray-500 hover:text-green-600 transition-colors">苦手復習</Link></li>
+                  <li><Link href="/dashboard" className="text-gray-500 hover:text-green-600 transition-colors">学習記録</Link></li>
                   <li><Link href="/acupoints" className="text-gray-500 hover:text-green-600 transition-colors">経穴から学ぶ</Link></li>
                   <li><Link href="/acupoints/unasked" className="text-gray-500 hover:text-green-600 transition-colors">未出題の経穴</Link></li>
-                  <li><Link href="/dashboard" className="text-gray-500 hover:text-green-600 transition-colors">学習の記録</Link></li>
                   <li><Link href="/subjects" className="text-gray-500 hover:text-green-600 transition-colors">科目から探す</Link></li>
                 </ul>
               </div>
@@ -82,13 +82,13 @@ export default function RootLayout({
                 </ul>
               </div>
               <div>
-                <p className="font-semibold text-gray-700 mb-2">テーマ別の管理</p>
+                <p className="font-semibold text-gray-700 mb-2">テーマ学習ツール（補助）</p>
                 <ul className="space-y-1.5">
-                  <li><Link href="/study" className="text-gray-500 hover:text-green-600 transition-colors">今日の10テーマ</Link></li>
-                  <li><Link href="/study/dashboard" className="text-gray-500 hover:text-green-600 transition-colors">学習ダッシュボード</Link></li>
-                  <li><Link href="/study/checklist" className="text-gray-500 hover:text-green-600 transition-colors">チェックリスト</Link></li>
-                  <li><Link href="/study/favorites" className="text-gray-500 hover:text-green-600 transition-colors">復習リスト</Link></li>
-                  <li><Link href="/study/weakness" className="text-gray-500 hover:text-green-600 transition-colors">苦手テーマ</Link></li>
+                  <li><Link href="/study" className="text-gray-500 hover:text-green-600 transition-colors">テーマを暗記する</Link></li>
+                  <li><Link href="/study/dashboard" className="text-gray-500 hover:text-green-600 transition-colors">テーマ暗記の進捗</Link></li>
+                  <li><Link href="/study/checklist" className="text-gray-500 hover:text-green-600 transition-colors">テーマのチェックリスト</Link></li>
+                  <li><Link href="/study/favorites" className="text-gray-500 hover:text-green-600 transition-colors">あとで見るテーマ</Link></li>
+                  <li><Link href="/study/weakness" className="text-gray-500 hover:text-green-600 transition-colors">苦手に登録したテーマ</Link></li>
                 </ul>
               </div>
               <div>

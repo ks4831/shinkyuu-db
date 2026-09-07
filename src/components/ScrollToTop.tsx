@@ -21,7 +21,7 @@ export default function ScrollToTop() {
     <button
       onClick={handleClick}
       aria-label="ページ上部へ戻る"
-      className="fixed bottom-6 right-6 z-50 w-10 h-10 rounded-full bg-green-600 text-white shadow-lg hover:bg-green-700 active:scale-95 transition-all flex items-center justify-center text-lg font-bold"
+      className="fixed right-4 sm:right-6 bottom-[calc(env(safe-area-inset-bottom)+4.75rem)] sm:bottom-6 z-40 w-10 h-10 rounded-full bg-green-600 text-white shadow-lg hover:bg-green-700 active:scale-95 transition-all flex items-center justify-center text-lg font-bold"
     >
       ↑
     </button>

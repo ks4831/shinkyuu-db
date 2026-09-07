@@ -39,7 +39,7 @@ export default function LibraryPage() {
 
       {/* ヘッダー */}
       <div className="mb-8">
-        <p className="text-xs text-green-600 font-semibold tracking-widest uppercase mb-1">THEME DICTIONARY</p>
+        <p className="text-xs text-green-600 font-semibold tracking-wide mb-1">出題テーマ辞典</p>
         <h1 className="text-2xl font-bold text-gray-900 mb-2">鍼灸国家試験 テーマ辞典</h1>
         <p className="text-sm text-gray-500">
           頻出テーマ{themes.length}件を重要度別に収録。出題回数・最新出題年度・学習ポイントを辞典形式でまとめました。

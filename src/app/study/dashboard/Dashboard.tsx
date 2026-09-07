@@ -46,8 +46,7 @@ export default function Dashboard() {
       </nav>
 
       <div className="mb-8">
-        <p className="text-xs text-green-600 font-semibold tracking-widest uppercase mb-1">STUDY DASHBOARD</p>
-        <h1 className="text-2xl font-bold text-gray-900">学習ダッシュボード</h1>
+        <h1 className="text-2xl font-bold text-gray-900">テーマ暗記の進捗</h1>
         <p className="text-sm text-gray-500 mt-1">重要度S・Aテーマの学習進捗を確認できます</p>
       </div>
 

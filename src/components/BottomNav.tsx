@@ -36,11 +36,14 @@ const items = [
     ),
   },
   {
-    href: '/quiz/weak',
-    label: '復習',
-    match: (p: string) => p.startsWith('/quiz/weak') || p.startsWith('/study'),
+    href: '/dashboard',
+    label: '学習記録',
+    match: (p: string) => p.startsWith('/dashboard') || p.startsWith('/quiz/weak') || p.startsWith('/study'),
     icon: (
-      <path d="M20 12a8 8 0 1 1-2.3-5.6M20 4v4h-4" />
+      <>
+        <path d="M4 19V5a1 1 0 0 1 1-1h14a1 1 0 0 1 1 1v14a1 1 0 0 1-1 1H5a1 1 0 0 1-1-1Z" />
+        <path d="M8 15v-3M12 15V9M16 15v-5" />
+      </>
     ),
   },
   {

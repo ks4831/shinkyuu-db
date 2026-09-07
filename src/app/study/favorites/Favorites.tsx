@@ -50,8 +50,7 @@ export default function Favorites() {
       </nav>
 
       <div className="mb-6">
-        <p className="text-xs text-green-600 font-semibold tracking-widest uppercase mb-1">REVIEW LIST</p>
-        <h1 className="text-2xl font-bold text-gray-900">復習リスト</h1>
+        <h1 className="text-2xl font-bold text-gray-900">あとで見るテーマ</h1>
         <p className="text-sm text-gray-500 mt-1">「あとで復習」したテーマをまとめて確認できます</p>
       </div>
 

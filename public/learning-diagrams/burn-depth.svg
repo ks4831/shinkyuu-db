@@ -1,0 +1,47 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 480 280" role="img" aria-label="熱傷の深度と皮膚の層の関係を示した図">
+  <style>
+    .t{font-family:'Hiragino Sans','Noto Sans JP',sans-serif;}
+    .h{font-weight:700;fill:#166534;}
+    .lbl{font-weight:700;fill:#374151;}
+    .sub{fill:#6b7280;}
+    .epi{fill:#fde68a;stroke:#d1d5db;stroke-width:1;}
+    .derm{fill:#fecaca;stroke:#d1d5db;stroke-width:1;}
+    .subc{fill:#fef3c7;stroke:#d1d5db;stroke-width:1;}
+    .line{stroke:#9ca3af;stroke-width:1;}
+    .depth{stroke:#166534;stroke-width:2;}
+  </style>
+  <rect width="480" height="280" fill="#ffffff"/>
+  <text class="t h" x="20" y="28" font-size="16">熱傷の深度と皮膚の層</text>
+
+  <!-- skin layers -->
+  <rect class="epi"  x="40" y="50" width="180" height="26"/>
+  <rect class="derm" x="40" y="76" width="180" height="70"/>
+  <rect class="subc" x="40" y="146" width="180" height="54"/>
+  <text class="t sub" x="230" y="67"  font-size="12">表皮</text>
+  <text class="t sub" x="230" y="115" font-size="12">真皮</text>
+  <text class="t sub" x="230" y="176" font-size="12">皮下組織</text>
+
+  <!-- depth markers -->
+  <line class="depth" x1="40" y1="76"  x2="20" y2="76"/>
+  <line class="depth" x1="40" y1="110" x2="20" y2="110"/>
+  <line class="depth" x1="40" y1="146" x2="20" y2="146"/>
+
+  <!-- table -->
+  <g font-size="12.5">
+    <text class="t lbl" x="300" y="52">Ⅰ度</text>
+    <text class="t" x="300" y="68" fill="#1f2937">表皮のみ・発赤／灼熱感</text>
+
+    <text class="t lbl" x="300" y="96">浅達性Ⅱ度（SDB）</text>
+    <text class="t" x="300" y="112" fill="#1f2937">真皮浅層・水疱・強い痛み・瘢痕なし</text>
+
+    <text class="t lbl" x="300" y="140">深達性Ⅱ度（DDB）</text>
+    <text class="t" x="300" y="156" fill="#1f2937">真皮深層・水疱・知覚鈍麻・瘢痕あり</text>
+
+    <text class="t lbl" x="300" y="184">Ⅲ度</text>
+    <text class="t" x="300" y="200" fill="#1f2937">皮膚全層・壊死・無痛（知覚消失）</text>
+  </g>
+
+  <text class="t" x="20" y="234" font-size="12" fill="#6b7280">※ 打膿灸は意図的に「Ⅱ度」の熱傷をつくる有痕灸。</text>
+  <text class="t" x="20" y="252" font-size="12" fill="#6b7280">※ 痛みが強い＝浅い（Ⅱ度）。Ⅲ度はむしろ痛みを感じない。</text>
+  <text class="t" x="20" y="270" font-size="12" fill="#6b7280">※ 透熱灸では小さな浅達性Ⅱ度の水疱→小灸痕となる。</text>
+</svg>

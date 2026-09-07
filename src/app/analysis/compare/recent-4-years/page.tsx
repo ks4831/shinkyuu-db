@@ -247,7 +247,7 @@ export default function Recent4YearsPage() {
       {/* ── ヘッダー */}
       <section>
         <p className="text-xs text-green-600 font-semibold tracking-widest uppercase mb-2">
-          4-YEAR TREND ANALYSIS
+          4年トレンド分析
         </p>
         <h1 className="text-2xl font-bold text-gray-900">
           直近4年（第31〜34回）

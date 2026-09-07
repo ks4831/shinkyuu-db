@@ -3,6 +3,7 @@ import Link from 'next/link'
 import { notFound } from 'next/navigation'
 import { subjects, getSubject, getThemesBySubject, getTheme } from '@/lib/data'
 import { getSubjectGuide } from '@/lib/subjectGuides'
+import { ALL_QUESTIONS } from '@/lib/quiz'
 import ImportanceBadge from '@/components/ImportanceBadge'
 import SubjectSearch from '@/components/SubjectSearch'
 
@@ -80,6 +81,7 @@ export default async function SubjectDetailPage({
   const priorityThemes = [...sThemes, ...aThemes]
 
   const guide = getSubjectGuide(subjectId)
+  const quizCount = ALL_QUESTIONS.filter(q => q.subject === subjectId).length
 
   const hasToc = subjectThemes.length > 0
 
@@ -118,6 +120,20 @@ export default async function SubjectDetailPage({
         )}
       </div>
 
+      {/* この科目のクイズ */}
+      {quizCount >= 5 && (
+        <Link
+          href={`/quiz/subjects/${subjectId}`}
+          className="flex items-center justify-between gap-3 rounded-2xl border-2 border-green-300 bg-green-50 px-5 py-4 mb-5 transition-colors hover:border-green-400 hover:bg-green-100"
+        >
+          <span>
+            <span className="block text-sm font-bold text-green-800">この科目のクイズを解く</span>
+            <span className="block text-xs text-green-700 mt-0.5">{subject.name}の問題を1問1画面で・解説と図解つき（全{quizCount}問）</span>
+          </span>
+          <span className="text-green-600 text-lg" aria-hidden>›</span>
+        </Link>
+      )}
+
       {/* 目次 */}
       {hasToc && (
         <nav aria-label="目次" className="bg-gray-50 border border-gray-100 rounded-xl px-5 py-4 mb-5 text-sm">
@@ -139,12 +155,7 @@ export default async function SubjectDetailPage({
         </nav>
       )}
 
-      {subjectThemes.length === 0 ? (
-        <div className="text-center py-16 text-gray-400">
-          <p className="text-4xl mb-3">📭</p>
-          <p>このカテゴリのテーマデータは準備中です</p>
-        </div>
-      ) : (
+      {(
         <>
           {/* 出題統計 */}
           <section id="stats" className="bg-white rounded-2xl border border-gray-100 p-5 mb-4">

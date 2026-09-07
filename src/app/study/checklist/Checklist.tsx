@@ -63,7 +63,6 @@ export default function Checklist() {
       </nav>
 
       <div className="mb-6">
-        <p className="text-xs text-green-600 font-semibold tracking-widest uppercase mb-1">CHECKLIST</p>
         <h1 className="text-2xl font-bold text-gray-900">学習チェックリスト</h1>
         <p className="text-sm text-gray-500 mt-1">覚えたテーマにチェックをつけて進捗を管理しましょう</p>
       </div>

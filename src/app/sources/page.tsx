@@ -18,7 +18,7 @@ export default function SourcesPage() {
       </nav>
 
       <section>
-        <p className="text-xs text-gray-500 font-semibold tracking-widest uppercase mb-2">DATA SOURCES</p>
+        <p className="text-xs text-gray-500 font-semibold tracking-wide mb-2">データの出典</p>
         <h1 className="text-2xl font-bold text-gray-900">データソース</h1>
       </section>
 

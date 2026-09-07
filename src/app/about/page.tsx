@@ -18,7 +18,7 @@ export default function AboutPage() {
       </nav>
 
       <section>
-        <p className="text-xs text-green-600 font-semibold tracking-widest uppercase mb-2">ABOUT</p>
+        <p className="text-xs text-green-600 font-semibold tracking-wide mb-2">このサイトについて</p>
         <h1 className="text-2xl font-bold text-gray-900">このサイトについて</h1>
       </section>
 

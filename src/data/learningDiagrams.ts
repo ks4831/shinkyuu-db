@@ -92,6 +92,27 @@ export const LEARNING_DIAGRAMS: Record<string, LearningDiagram> = {
     alt: '顔面から始まり、頸・胸腹部（前正中線の外方）を下り、大腿前面・下腿前外側を通って足の第2趾外側（厲兌）に終わる胃経の走行を線で示した模式図。',
     caption: '陽明経は体の前面を走る。起始は承泣、終止は厲兌。',
   },
+  'goshin-kozo': {
+    id: 'goshin-kozo',
+    file: '/learning-diagrams/goshin-kozo.svg',
+    title: '毫鍼の構造',
+    alt: '毫鍼を鍼柄（持つ部分）・鍼根（鍼体と鍼柄の境目）・鍼体（体部）・鍼尖（先端）に分けて示した模式図。鍼柄の末端が鍼頭。',
+    caption: '鍼尖・鍼体・鍼根・鍼柄。折鍼は応力の集中する鍼根で起こりやすい。',
+  },
+  'nerve-fiber-types': {
+    id: 'nerve-fiber-types',
+    file: '/learning-diagrams/nerve-fiber-types.svg',
+    title: '末梢神経線維の分類',
+    alt: 'Aα・Aβ・Aδ・B・Cの各神経線維について、髄鞘の有無・伝導速度・主な機能を示した表。痛みはAδ（一次痛）とC（二次痛）が伝え、無髄はC線維のみ、Bは細いが有髄。',
+    caption: '痛みを伝えるのはAδ（鋭い一次痛）とC（鈍い二次痛）。B線維は細いが「有髄」の自律神経節前線維。',
+  },
+  'burn-depth': {
+    id: 'burn-depth',
+    file: '/learning-diagrams/burn-depth.svg',
+    title: '熱傷の深度',
+    alt: 'Ⅰ度（表皮・発赤）、浅達性Ⅱ度（真皮浅層・水疱・強い痛み・瘢痕なし）、深達性Ⅱ度（真皮深層・水疱・知覚鈍麻・瘢痕あり）、Ⅲ度（皮膚全層・壊死・無痛）を皮膚の層とともに示した図。',
+    caption: 'Ⅰ度＝発赤、Ⅱ度＝水疱、Ⅲ度＝壊死・無痛。痛みが強いほど浅い。打膿灸は意図的なⅡ度熱傷。',
+  },
 }
 
 export function getDiagram(id?: string): LearningDiagram | null {
