@@ -17,8 +17,8 @@ export const metadata: Metadata = {
 }
 
 export default function HomePage() {
-  // 直近6年の頻出テーマ（統一テーマ themeId 基準）
-  const recentAgg = sixYearThemes().slice(0, 8)
+  // 直近6年の頻出テーマ
+  const recentAgg = sixYearThemes().slice(0, 5)
   const recentMax = recentAgg[0]?.count ?? 1
 
   return (
@@ -83,17 +83,6 @@ export default function HomePage() {
         </div>
       </section>
 
-      {/* ── 今日のひとことガイド ─────────────── */}
-      <section className="px-4 pt-6">
-        <div className="mx-auto max-w-md rounded-2xl bg-green-600 p-5 text-white">
-          <p className="text-sm font-bold">3秒で決める、次にやること</p>
-          <p className="mt-1 text-xs leading-relaxed text-green-100">
-            迷ったら「10問クイズ」。間違えた問題は自動で復習リストに入ります。
-            移動中は経穴の暗記、まとまった時間は科目別クイズがおすすめ。
-          </p>
-        </div>
-      </section>
-
       {/* ── 頻出テーマ（分析ダイジェスト） ───── */}
       <section className="px-4 pt-8">
         <div className="mx-auto max-w-md">
@@ -127,39 +116,25 @@ export default function HomePage() {
         </div>
       </section>
 
-      {/* ── その他の機能 ─────────────────────── */}
-      <section className="px-4 pt-8">
-        <div className="mx-auto max-w-md">
-          <h2 className="mb-3 text-base font-bold text-gray-800">くわしく調べる</h2>
-          <div className="grid grid-cols-2 gap-2.5 text-sm">
-            {[
-              { href: '/themes/library', label: 'テーマ辞典' },
-              { href: '/analysis/exam-34', label: '第34回 分析' },
-              { href: '/study/dashboard', label: 'テーマ学習管理' },
-              { href: '/menu', label: 'すべてのメニュー' },
-            ].map((l) => (
-              <Link
-                key={l.href}
-                href={l.href}
-                className="rounded-xl border border-gray-100 bg-white px-4 py-3 font-semibold text-gray-700 hover:border-green-200"
-              >
-                {l.label}
-              </Link>
-            ))}
-          </div>
-        </div>
-      </section>
-
       {/* ── 注意書き ─────────────────────────── */}
       <section className="px-4 pt-8">
-        <div className="mx-auto max-w-md rounded-2xl border border-gray-100 bg-gray-50 p-4 text-xs leading-relaxed text-gray-500">
-          <p className="font-semibold text-gray-600">このサイトについて</p>
-          <p className="mt-1">
-            クイズは公式過去問の問題文・選択肢をそのまま掲載していません。出題傾向にもとづく
-            オリジナル問題です。出題分析は公益財団法人東洋療法研修試験財団が公表した試験データ
-            （第29〜34回1,080問）をもとにした独自分析で、当サイトは非公式です。
-            学習の記録はお使いの端末内にのみ保存されます。
-          </p>
+        <div className="mx-auto max-w-md">
+          <Link
+            href="/menu"
+            className="flex items-center justify-between rounded-xl border border-gray-100 bg-white px-4 py-3.5 text-sm font-semibold text-gray-700 hover:border-green-200"
+          >
+            テーマ辞典・出題分析・すべてのメニュー
+            <span className="text-gray-300" aria-hidden="true">›</span>
+          </Link>
+          <div className="mt-4 rounded-2xl border border-gray-100 bg-gray-50 p-4 text-xs leading-relaxed text-gray-500">
+            <p className="font-semibold text-gray-600">このサイトについて</p>
+            <p className="mt-1">
+              クイズは公式過去問の問題文・選択肢をそのまま掲載していません。出題傾向にもとづく
+              オリジナル問題です。出題分析は公益財団法人東洋療法研修試験財団が公表した試験データ
+              （第29〜34回1,080問）をもとにした独自分析で、当サイトは非公式です。
+              学習の記録はお使いの端末内にのみ保存されます。
+            </p>
+          </div>
         </div>
       </section>
     </main>

@@ -38,7 +38,7 @@ const items = [
   {
     href: '/dashboard',
     label: '学習記録',
-    match: (p: string) => p.startsWith('/dashboard') || p.startsWith('/quiz/weak') || p.startsWith('/study'),
+    match: (p: string) => p.startsWith('/dashboard') || p.startsWith('/study'),
     icon: (
       <>
         <path d="M4 19V5a1 1 0 0 1 1-1h14a1 1 0 0 1 1 1v14a1 1 0 0 1-1 1H5a1 1 0 0 1-1-1Z" />

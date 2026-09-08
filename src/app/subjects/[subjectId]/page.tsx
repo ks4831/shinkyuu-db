@@ -113,6 +113,9 @@ export default async function SubjectDetailPage({
         )}
         {subjectThemes.length > 0 && (
           <div className="mt-4 flex items-center gap-4 flex-wrap text-sm">
+            {subjectExamTotal > 0 && (
+              <span className="text-gray-500">6年出題数: <strong className="text-green-700">{subjectExamTotal}問</strong></span>
+            )}
             <span className="text-gray-500">収録テーマ: <strong className="text-gray-800">{subjectThemes.length}件</strong></span>
             {sCount > 0 && <span className="text-red-600 font-semibold">S×{sCount}</span>}
             {aCount > 0 && <span className="text-orange-600 font-semibold">A×{aCount}</span>}
@@ -381,17 +384,16 @@ export default async function SubjectDetailPage({
 
       {/* フッターナビ */}
       <div className="mt-8 pt-6 border-t border-gray-100 flex flex-wrap gap-4">
-        <Link href="/subjects" className="text-sm text-green-600 hover:underline font-semibold">
+        {quizCount >= 5 && (
+          <Link href={`/quiz/subjects/${subjectId}`} className="text-sm text-green-600 hover:underline font-semibold">
+            この科目のクイズを解く →
+          </Link>
+        )}
+        <Link href="/subjects" className="text-sm text-green-600 hover:underline">
           ← 科目一覧に戻る
         </Link>
-        <Link href="/themes/library" className="text-sm text-green-600 hover:underline">
+        <Link href="/themes/library" className="text-sm text-gray-400 hover:text-green-600 transition-colors">
           テーマ辞典
-        </Link>
-        <Link href="/study/dashboard" className="text-sm text-gray-400 hover:text-green-600 transition-colors">
-          学習ダッシュボード
-        </Link>
-        <Link href="/themes" className="text-sm text-gray-400 hover:text-green-600 transition-colors">
-          テーマ検索
         </Link>
       </div>
     </main>

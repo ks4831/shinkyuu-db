@@ -7,7 +7,7 @@ export default function ProgressStrip({ className = '' }: { className?: string }
 
   const items = [
     { label: '今日', value: ready ? `${stats.todayCount} / ${stats.todayGoal}` : '– / 10' },
-    { label: '連続', value: ready ? `${stats.streakDays}日` : '–' },
+    { label: 'のべ', value: ready ? `${stats.totalAnswered}問` : '–' },
     { label: '正答率', value: ready && stats.totalAnswered ? `${stats.accuracy}%` : '–' },
     { label: '復習', value: ready ? `${stats.reviewCount + stats.weakCount}問` : '–' },
   ]

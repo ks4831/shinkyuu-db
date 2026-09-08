@@ -95,13 +95,13 @@ export default function ExamAnalysis({ round }: { round: number }) {
           {ROUND_YEAR[round]}年実施 / 出題基準2020年版 / 180問体制
         </p>
         <p className="mt-2 text-xs text-gray-400">
-          集計は統一テーマ（themeId）基準。テーマ名をタップすると詳細と演習問題へ。
+          テーマ名をタップすると、出題データと演習問題を確認できます。
         </p>
 
         <div className="mt-5 grid grid-cols-2 sm:grid-cols-4 gap-3">
           {[
             { label: '総問題数', value: `${total}問`, sub: 'AM 90 + PM 90' },
-            { label: '出題テーマ数', value: `${rows.length}種`, sub: 'themeId 基準' },
+            { label: '出題テーマ数', value: `${rows.length}種`, sub: 'この回で出題' },
             { label: '科目数', value: `${subjectList.length}科目`, sub: '全14科目出題' },
             { label: '8問以上テーマ', value: `${byTier.S.length}種`, sub: 'この回の頻出' },
           ].map(s => (

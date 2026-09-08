@@ -80,7 +80,7 @@ export default function CompareAnalysis({ rounds }: { rounds: number[] }) {
           {sorted.map(rd => `第${rd}回（${ROUND_META[rd].year}年）`).join('・')} / 各180問 / 出題基準2020年版
         </p>
         <p className="mt-2 text-xs text-gray-400">
-          集計は統一テーマ（themeId）基準。テーマ名をタップすると詳細と演習問題へ。
+          テーマ名をタップすると、出題データと演習問題を確認できます。
         </p>
 
         <div className="mt-5 grid grid-cols-2 sm:grid-cols-4 gap-3">

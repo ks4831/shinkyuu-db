@@ -33,10 +33,10 @@ export default function WeakQuizClient({ count = 10 }: { count?: number }) {
           解説の「☆ 復習に追加」でも登録できます。
         </p>
         <Link
-          href="/quiz/random"
+          href="/quiz/daily"
           className="mt-6 inline-block rounded-full bg-green-600 px-6 py-3 text-sm font-bold text-white hover:bg-green-700"
         >
-          まず10問ランダムに解く
+          今日の10問を始める
         </Link>
       </div>
     )

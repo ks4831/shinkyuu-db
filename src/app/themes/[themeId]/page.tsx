@@ -171,12 +171,27 @@ export default async function ThemeDetailPage({
         </div>
       </div>
 
+      {/* このテーマの問題を解く */}
+      {quizCount > 0 && (
+        <Link
+          href={`/quiz/theme/${theme.id}`}
+          className="block bg-gradient-to-r from-green-600 to-green-700 text-white rounded-2xl p-5 mb-4 shadow-md hover:from-green-700 hover:to-green-800 transition-colors"
+        >
+          <span className="font-bold flex items-center gap-2">
+            📝 このテーマの問題を解く
+          </span>
+          <span className="block text-sm text-green-50 mt-0.5">
+            「{theme.name}」の演習問題 {quizCount}問（1問1画面・解説つき）
+          </span>
+        </Link>
+      )}
+
       {/* Year-by-year visualization */}
       <section className="bg-white rounded-2xl border border-gray-100 p-5 mb-4">
         <h2 className="font-bold text-gray-800 mb-1">年度別出題推移（第29〜34回）</h2>
         <p className="text-xs text-gray-400 mb-4">
           {hasExamData
-            ? '国家試験1,080問をテーマIDで集計した実データ（棒の高さ＝その回の出題数）'
+            ? '国家試験1,080問を分類・集計した実データ（棒の高さ＝その回の出題数）'
             : 'このテーマに直接対応する過去問は集計されていません（学習体系上のテーマ）'}
         </p>
         <div className="grid grid-cols-6 gap-2">
@@ -207,21 +222,6 @@ export default async function ThemeDetailPage({
           </p>
         )}
       </section>
-
-      {/* このテーマの問題を解く */}
-      {quizCount > 0 && (
-        <Link
-          href={`/quiz/theme/${theme.id}`}
-          className="block bg-gradient-to-r from-green-600 to-green-700 text-white rounded-2xl p-5 mb-4 shadow-md hover:from-green-700 hover:to-green-800 transition-colors"
-        >
-          <span className="font-bold flex items-center gap-2">
-            📝 このテーマの問題を解く
-          </span>
-          <span className="block text-sm text-green-50 mt-0.5">
-            「{theme.name}」の演習問題 {quizCount}問（1問1画面・解説つき）
-          </span>
-        </Link>
-      )}
 
       {/* Study priority recommendation */}
       <section id="priority" className={`rounded-2xl border p-5 mb-4 ${priority.color}`}>
@@ -479,30 +479,20 @@ export default async function ThemeDetailPage({
         )}
       </section>
 
-      {/* Meta */}
-      <section className="text-xs text-gray-400 space-y-1 p-4 bg-gray-50 rounded-xl border border-gray-100 mb-6">
-        <p>出題基準: {theme.blueprintVersion}年版 / 問題数体制: {theme.questionCountMode}問</p>
-        <p>ソース信頼度: {theme.sourceReliability}</p>
-      </section>
-
       {/* フッターナビ */}
       <div className="flex gap-4 flex-wrap items-center pt-2 border-t border-gray-100">
-        <Link href="/themes/library" className="text-sm text-green-600 hover:underline font-semibold">
-          ← テーマ辞典トップ
-        </Link>
+        {quizCount > 0 && (
+          <Link href={`/quiz/theme/${theme.id}`} className="text-sm text-green-600 hover:underline font-semibold">
+            このテーマの問題を解く →
+          </Link>
+        )}
         {subject && (
           <Link href={`/subjects/${subject.id}`} className="text-sm text-green-600 hover:underline">
             {subject.name}一覧
           </Link>
         )}
-        <Link href="/themes" className="text-sm text-gray-400 hover:text-green-600 transition-colors">
-          テーマ検索
-        </Link>
-        <Link href="/study" className="text-sm text-gray-400 hover:text-green-600 transition-colors">
-          学習モード
-        </Link>
-        <Link href="/study/dashboard" className="text-sm text-gray-400 hover:text-green-600 transition-colors">
-          ダッシュボード
+        <Link href="/themes/library" className="text-sm text-gray-400 hover:text-green-600 transition-colors">
+          テーマ辞典
         </Link>
       </div>
     </main>

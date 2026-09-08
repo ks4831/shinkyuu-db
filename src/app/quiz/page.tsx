@@ -34,18 +34,18 @@ const modes = [
     accent: 'border-orange-200 hover:border-orange-400',
   },
   {
-    href: '/quiz/acupoints',
-    emoji: '📍',
-    title: '経穴',
-    desc: '経絡経穴概論を中心に、経穴の問題だけ10問。',
-    accent: 'border-emerald-200 hover:border-emerald-400',
-  },
-  {
     href: '/quiz/random',
     emoji: '🎲',
     title: 'ランダム',
     desc: '全範囲からランダムに10問。',
     accent: 'border-green-200 hover:border-green-400',
+  },
+  {
+    href: '/quiz/acupoints',
+    emoji: '📍',
+    title: '経穴',
+    desc: '経絡経穴概論を中心に、経穴の問題だけ10問。',
+    accent: 'border-emerald-200 hover:border-emerald-400',
   },
 ]
 

@@ -30,10 +30,10 @@ export default function Header() {
 
         {/* Mobile: single CTA */}
         <Link
-          href="/quiz/random"
+          href="/quiz/daily"
           className="rounded-full bg-green-600 px-4 py-1.5 text-xs font-bold text-white hover:bg-green-700 sm:hidden"
         >
-          10問
+          今日の10問
         </Link>
       </div>
     </header>
