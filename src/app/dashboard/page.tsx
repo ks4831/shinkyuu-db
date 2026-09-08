@@ -1,5 +1,6 @@
 import type { Metadata } from 'next'
 import DashboardClient from '@/components/quiz/DashboardClient'
+import DailyDashboardCard from '@/components/quiz/DailyDashboardCard'
 
 export const metadata: Metadata = {
   title: '学習の記録｜鍼灸国家試験クイズ',
@@ -11,6 +12,7 @@ export default function DashboardPage() {
     <main className="mx-auto max-w-md px-4 pb-24 pt-6">
       <h1 className="text-2xl font-bold text-gray-900">学習の記録</h1>
       <p className="mt-1 text-sm text-gray-500">クイズの解答履歴から集計しています（端末内保存）。</p>
+      <DailyDashboardCard />
       <DashboardClient />
     </main>
   )

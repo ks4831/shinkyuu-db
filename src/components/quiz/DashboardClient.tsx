@@ -18,10 +18,10 @@ export default function DashboardClient() {
         <p className="mt-3 font-bold text-gray-800">まだ記録がありません</p>
         <p className="mt-1 text-sm text-gray-500">クイズを解くと、ここに学習の記録が貯まっていきます。</p>
         <Link
-          href="/quiz/random"
+          href="/quiz/daily"
           className="mt-5 inline-block rounded-full bg-green-600 px-6 py-3 text-sm font-bold text-white hover:bg-green-700"
         >
-          10問はじめる
+          今日の10問をはじめる
         </Link>
       </div>
     )
@@ -78,7 +78,7 @@ export default function DashboardClient() {
         <Link href="/quiz/weak" className="block rounded-xl bg-green-600 px-5 py-3.5 text-center text-sm font-bold text-white hover:bg-green-700">
           苦手を復習する（{stats.reviewCount + stats.weakCount}問）
         </Link>
-        <Link href="/quiz/random" className="block rounded-xl border border-gray-200 bg-white px-5 py-3.5 text-center text-sm font-bold text-gray-700 hover:border-green-300">
+        <Link href="/quiz/daily" className="block rounded-xl border border-gray-200 bg-white px-5 py-3.5 text-center text-sm font-bold text-gray-700 hover:border-green-300">
           今日の10問を解く
         </Link>
       </div>

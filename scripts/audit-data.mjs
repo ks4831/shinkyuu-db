@@ -437,6 +437,43 @@ try {
   info.themeConnected = themes.length - studyOnly.length
   if (orphan.length) W(`過去問もクイズも紐づかない未分類テーマ ${orphan.length}: ${orphan.join(', ')}`)
 
+  /* ── Ver.7.4: 「今日の10問」選定ロジックの監査 ── */
+  try {
+    const { selectDailyQuestionIds, DAILY_COUNT } = await importTS('src/lib/dailySelect.ts')
+    const themeExamCount = {}
+    for (const q of rows) if (q.themeId) themeExamCount[q.themeId] = (themeExamCount[q.themeId] ?? 0) + 1
+    const qById = new Map(Q.map((q) => [q.id, q]))
+    const dailyProblems = []
+    const seeds = ['2026-02-20', '2026-02-21', '2026-06-15', '2027-01-01', '2027-01-02']
+    const perSeed = {}
+    for (const seed of seeds) {
+      const a = selectDailyQuestionIds({ all: Q, themeExamCount, seed })
+      const b = selectDailyQuestionIds({ all: Q, themeExamCount, seed }) // 同一入力 → 決定的
+      perSeed[seed] = a
+      if (a.length !== DAILY_COUNT) dailyProblems.push(`${seed}: 問題数 ${a.length} ≠ ${DAILY_COUNT}`)
+      if (new Set(a).size !== a.length) dailyProblems.push(`${seed}: 重複あり`)
+      if (a.join(',') !== b.join(',')) dailyProblems.push(`${seed}: 非決定的（同一入力で結果が異なる）`)
+      const bad = a.filter((id) => !qById.has(id))
+      if (bad.length) dailyProblems.push(`${seed}: 未知の quiz id ${bad.join(',')}`)
+      const badTheme = a.map((id) => qById.get(id)).filter((q) => q && q.themeId && !themeIdSet.has(q.themeId))
+      if (badTheme.length) dailyProblems.push(`${seed}: 不正 themeId`)
+      const subs = new Set(a.map((id) => qById.get(id)?.subject))
+      if (subs.size < 5) dailyProblems.push(`${seed}: 科目数 ${subs.size} < 5`)
+      const tc = {}
+      for (const id of a) { const t = qById.get(id)?.themeId ?? '?'; tc[t] = (tc[t] ?? 0) + 1 }
+      const over = Object.entries(tc).filter(([, c]) => c > 2)
+      if (over.length) dailyProblems.push(`${seed}: 1テーマ3問以上 ${over.map(([t, c]) => `${t}×${c}`).join(',')}`)
+    }
+    // 隣接する日は別セット（完全一致でない）
+    if (perSeed['2026-02-20'].join(',') === perSeed['2026-02-21'].join(','))
+      dailyProblems.push('連続する日で10問が完全に同一')
+    info.dailySeeds = seeds.length
+    info.dailyProblems = dailyProblems
+    dailyProblems.forEach((m) => E(`今日の10問: ${m}`))
+  } catch (e) {
+    E(`今日の10問の監査に失敗: ${e.message}`)
+  }
+
   // ── diagrams ──
   const diag = await importTS('src/data/learningDiagrams.ts')
   const diagIds = new Set(Object.keys(diag.LEARNING_DIAGRAMS))

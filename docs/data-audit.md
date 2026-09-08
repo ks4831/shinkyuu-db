@@ -1,6 +1,79 @@
-# 鍼灸DB データ監査（Ver.7.2 → Ver.7.3）
+# 鍼灸DB データ監査（Ver.7.2 → Ver.7.4）
 
 最終更新: 2026-09-08 / 実行方法: `npm run audit:data`（`scripts/audit-data.mjs`）
+
+---
+
+## Ver.7.4 スプリント（2026-09-08）— 「今日の10問」デイリー学習
+
+「調べるサイト」から「毎日開く学習サイト」へ。1タップで始められる
+**今日の10問**＋**連続学習日数（streak）**を実装。
+
+### 新規
+
+| ファイル | 役割 |
+|---|---|
+| `src/lib/dailySelect.ts` | 出題選定の**純粋関数**（LocalStorage に触れない・決定的）。client と audit の両方から import |
+| `src/lib/dailyQuiz.ts` | `'use client'`。日付判定（Asia/Tokyo 固定）・DailyState/streak/履歴の LocalStorage 管理 |
+| `src/app/quiz/daily/page.tsx` | `/quiz/daily`。サーバーで themeId×6年出題数マップを算出して client に注入 |
+| `src/components/quiz/DailyQuizClient.tsx` | 生成・途中再開・完了演出（結果画面）のオーケストレーション |
+| `src/components/quiz/DailyTodayCard.tsx` | TOP・`/quiz` の大きな CTA（streak・進捗■■■■□・「始める / 続きを解く」） |
+| `src/components/quiz/DailyDashboardCard.tsx` | `/dashboard` の 今日/連続/最長 ＋ 直近7日カレンダー |
+
+`QuizRunner` に `preserveOrder` / `initialIndex` / `initialResults` / `onAnswered` /
+`onFinished` / `finishSlot` を追加し、**同じクイズシステムを再利用**（二重実装なし）。
+
+### LocalStorage キー（すべて新規追加・既存キーは不変）
+
+| キー | 内容 |
+|---|---|
+| `shinkyuu_daily_quiz_v1` | `{ date, questionIds[10], answers[10], currentIndex, completed }` |
+| `shinkyuu_daily_streak_v1` | `{ currentStreak, longestStreak, lastCompletedDate }` |
+| `shinkyuu_daily_history_v1` | 直近60日の `{ date, correct, total, completed }` |
+
+既存の `shinkyuu_quiz_history_v1` / `_weak_v1` / `_review_v1` は**変更なし**。
+間違えた問題は既存 weak システムへそのまま連携（Daily 専用の苦手DBは作らない）。
+
+### 今日の10問の選定（`selectDailyQuestionIds`）
+
+配分の目安：**頻出40%（themeId×6年出題数の上位）／苦手30%（weak∪review）／
+最近解いていない20%／ランダム10%**。制約：**1テーマ最大2問・最低5科目・重複なし・ちょうど10問**。
+初回ユーザー（履歴なし）は頻出＋科目分散で10問。
+
+**決定性**：日付文字列（`YYYY-MM-DD`）を FNV-1a ハッシュ → mulberry32 PRNG。
+同じ日・同じ入力なら必ず同じ10問。生成結果は `questionIds` として保存され、
+その日はリロードしても変わらない（翌日に再生成）。
+
+### streak ロジック
+
+- 10問**すべて回答**した時のみ「今日完了」。途中離脱は加算しない。
+- `lastCompletedDate === 今日` → 何もしない（同日重複加算なし）。
+- `lastCompletedDate === 昨日` → `currentStreak + 1`、`longestStreak` 更新。
+- それ以外 → `currentStreak = 1`。
+- 表示時：最終完了が今日でも昨日でもなければ current は 0 として表示（`displayStreak`）。
+- 日付は **Asia/Tokyo**（`Intl.DateTimeFormat('en-CA', { timeZone: 'Asia/Tokyo' })`）。
+  日跨ぎ計算は正午 JST 基準で行い、DST の無い日本ではズレない。
+
+### `audit:data` に追加した検査（`selectDailyQuestionIds` を直接実行）
+
+5つの seed 日付について：問題数=10／重複0／**同一入力で決定的**／有効な quiz id・themeId／
+**最低5科目**／**1テーマ最大2問**／隣接する日は非同一。いずれも ERROR。
+
+### 数値
+
+| 指標 | 値 |
+|---|---|
+| 新規ルート | `/quiz/daily`（1本・純増） |
+| 既存URL変更 | 0 |
+| 生成方式 | 日付シード PRNG（決定的）＋ 生成結果を LocalStorage に凍結 |
+| 初回選定 | 頻出＋科目分散（履歴なしでも10問） |
+| 履歴あり選定 | 苦手30%・頻出40%・最近解いてない20%・ランダム10% |
+| 科目分散（実測） | 各日 6〜7科目（seed 3日分） |
+| テーマ分散（実測） | 各日 9テーマ（1テーマ最大2） |
+| audit 今日の10問チェック | seed 5件すべて pass |
+| audit ERROR / WARN | 0 / 0 |
+| build | ✓（444ルート） |
+| tsc / lint | エラー 0 |
 
 ---
 

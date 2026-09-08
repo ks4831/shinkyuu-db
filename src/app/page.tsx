@@ -8,6 +8,7 @@ import { sixYearThemes } from '@/lib/analysisThemes'
 import { ALL_QUESTIONS } from '@/lib/quiz'
 import { ACUPOINTS } from '@/data/acupoints'
 import HomeProgressCard from '@/components/quiz/HomeProgressCard'
+import DailyTodayCard from '@/components/quiz/DailyTodayCard'
 
 export const metadata: Metadata = {
   title: '鍼灸国試対策を、今日も10問｜スマホで解く国家試験クイズ',
@@ -33,12 +34,9 @@ export default function HomePage() {
             1問1画面・解説と図解つき。
           </p>
 
-          <Link
-            href="/quiz/random"
-            className="mt-5 flex w-full items-center justify-center rounded-2xl bg-green-600 px-5 py-4 text-base font-bold text-white shadow-sm transition-colors hover:bg-green-700"
-          >
-            10問クイズを始める
-          </Link>
+          <div className="mt-5">
+            <DailyTodayCard />
+          </div>
           <div className="mt-2.5 grid grid-cols-2 gap-2.5">
             <Link
               href="/quiz/weak"
@@ -57,7 +55,7 @@ export default function HomePage() {
       </section>
 
       {/* ── 学習進捗 ───────────────────────────── */}
-      <section className="px-4">
+      <section className="px-4 pt-3">
         <div className="mx-auto max-w-md">
           <HomeProgressCard />
         </div>

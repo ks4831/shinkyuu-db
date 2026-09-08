@@ -3,6 +3,7 @@ import Link from 'next/link'
 import { ALL_QUESTIONS } from '@/lib/quiz'
 import QuizStartCard from '@/components/quiz/QuizStartCard'
 import ProgressStrip from '@/components/quiz/ProgressStrip'
+import DailyTodayCard from '@/components/quiz/DailyTodayCard'
 
 export const metadata: Metadata = {
   title: '鍼灸国家試験 クイズ｜10問ずつスマホで対策',
@@ -12,11 +13,18 @@ export const metadata: Metadata = {
 
 const modes = [
   {
-    href: '/quiz/random',
-    emoji: '🎲',
-    title: '10問ランダム',
-    desc: '全範囲からランダムに10問。今日の1セットに。',
-    accent: 'border-green-200 hover:border-green-400',
+    href: '/quiz/weak',
+    emoji: '🩹',
+    title: '苦手を復習',
+    desc: '間違えた問題・復習登録した問題だけ。',
+    accent: 'border-red-200 hover:border-red-400',
+  },
+  {
+    href: '/quiz/subjects',
+    emoji: '📚',
+    title: '科目別',
+    desc: '14科目から選んで、その科目だけ10問。',
+    accent: 'border-blue-200 hover:border-blue-400',
   },
   {
     href: '/quiz/frequent',
@@ -33,18 +41,11 @@ const modes = [
     accent: 'border-emerald-200 hover:border-emerald-400',
   },
   {
-    href: '/quiz/subjects',
-    emoji: '📚',
-    title: '科目別',
-    desc: '科目を選んで、その科目から10問。',
-    accent: 'border-blue-200 hover:border-blue-400',
-  },
-  {
-    href: '/quiz/weak',
-    emoji: '🩹',
-    title: '苦手復習',
-    desc: '間違えた問題・復習登録した問題だけ。',
-    accent: 'border-red-200 hover:border-red-400',
+    href: '/quiz/random',
+    emoji: '🎲',
+    title: 'ランダム',
+    desc: '全範囲からランダムに10問。',
+    accent: 'border-green-200 hover:border-green-400',
   },
 ]
 
@@ -57,14 +58,19 @@ export default function QuizTopPage() {
         <span className="text-gray-600">クイズ</span>
       </nav>
 
-      <h1 className="text-2xl font-bold text-gray-900">何を解く？</h1>
+      <h1 className="text-2xl font-bold text-gray-900">今日は何をやる？</h1>
       <p className="mt-1 text-sm text-gray-500">
         全{ALL_QUESTIONS.length}問（出題傾向に基づくオリジナル問題）。1回10問・1問1画面。
       </p>
 
+      <div className="mt-4">
+        <DailyTodayCard />
+      </div>
+
       <ProgressStrip className="mt-4" />
 
-      <div className="mt-4 space-y-3">
+      <p className="mt-6 mb-2 text-xs font-semibold tracking-wider text-gray-400">ほかの解き方</p>
+      <div className="space-y-3">
         {modes.map((m) => (
           <QuizStartCard key={m.href} {...m} />
         ))}

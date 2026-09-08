@@ -1,6 +1,6 @@
 'use client'
 
-import { useEffect, useRef, useState } from 'react'
+import { useEffect, useRef, useState, type ReactNode } from 'react'
 import Link from 'next/link'
 import type { QuizQuestion } from '@/lib/quiz'
 import { subjectLabel } from '@/lib/quiz'
@@ -24,9 +24,12 @@ function buildSet(
   pool: QuizQuestion[],
   count: number,
   biasToStart: boolean,
+  preserveOrder = false,
 ): PreparedQuestion[] {
   let chosen: QuizQuestion[]
-  if (pool.length <= count) {
+  if (preserveOrder) {
+    chosen = pool.slice(0, count)
+  } else if (pool.length <= count) {
     chosen = shuffleInPlace([...pool])
   } else if (biasToStart) {
     // 重要度順に並んだプールの上位 count*2 からランダムに count 問
@@ -51,9 +54,15 @@ export default function QuizRunner({
   pool,
   count = 10,
   biasToStart = false,
+  preserveOrder = false,
+  initialIndex = 0,
+  initialResults,
   title,
   reviewHref = '/quiz/weak',
   retryHref,
+  onAnswered,
+  onFinished,
+  finishSlot,
 }: {
   /** 固定の出題リスト（苦手復習など） */
   questions?: QuizQuestion[]
@@ -61,17 +70,29 @@ export default function QuizRunner({
   pool?: QuizQuestion[]
   count?: number
   biasToStart?: boolean
+  /** questions をシャッフルせず与えられた順で出す（今日の10問など） */
+  preserveOrder?: boolean
+  /** 途中再開する開始位置 */
+  initialIndex?: number
+  /** 途中再開時の既回答結果（initialIndex 個） */
+  initialResults?: boolean[]
   title: string
   reviewHref?: string
   retryHref?: string
+  /** 1問回答するたびに呼ばれる（永続化フック） */
+  onAnswered?: (qid: string, correct: boolean, index: number) => void
+  /** 全問終了時に1度だけ呼ばれる */
+  onFinished?: (results: boolean[]) => void
+  /** 終了画面を差し替える。指定時は既定の結果画面の代わりに描画 */
+  finishSlot?: (o: { score: number; total: number; results: boolean[] }) => ReactNode
 }) {
   // すべての抽選・シャッフルはマウント後（クライアント）で行い、SSR不一致を避ける
   const [prepared, setPrepared] = useState<PreparedQuestion[] | null>(null)
-  const [index, setIndex] = useState(0)
+  const [index, setIndex] = useState(initialIndex)
   const [selected, setSelected] = useState<number | null>(null)
   const [answered, setAnswered] = useState(false)
   const [inReview, setInReview] = useState(false)
-  const [results, setResults] = useState<boolean[]>([])
+  const [results, setResults] = useState<boolean[]>(initialResults ?? [])
   const [finished, setFinished] = useState(false)
 
   // 「次の問題」で問題が切り替わった直後だけ、問題カード先頭へスクロールする
@@ -96,10 +117,10 @@ export default function QuizRunner({
 
   useEffect(() => {
     const src = questions ?? pool ?? []
-    setPrepared(buildSet(src, questions ? src.length : count, biasToStart))
+    setPrepared(buildSet(src, questions ? src.length : count, biasToStart, preserveOrder))
     // questions/pool は親でメモ化されない場合があるため中身の id で依存を張る
     // eslint-disable-next-line react-hooks/exhaustive-deps
-  }, [(questions ?? pool ?? []).map((q) => q.id).join(','), count, biasToStart])
+  }, [(questions ?? pool ?? []).map((q) => q.id).join(','), count, biasToStart, preserveOrder])
 
   if (prepared === null) {
     return (
@@ -132,11 +153,13 @@ export default function QuizRunner({
     setInReview(isInReview(q.id))
     setResults((r) => [...r, isCorrect])
     recordAttempt({ qid: q.id, subject: q.subject, correct: isCorrect })
+    onAnswered?.(q.id, isCorrect, index)
   }
 
   function handleNext() {
     if (index + 1 >= total) {
       setFinished(true)
+      onFinished?.([...results])
       return
     }
     // 最終問題以外：次の問題が描画されたら先頭までスクロール
@@ -155,6 +178,7 @@ export default function QuizRunner({
   if (finished) {
     const score = results.filter(Boolean).length
     const pct = Math.round((score / total) * 100)
+    if (finishSlot) return <>{finishSlot({ score, total, results })}</>
     return (
       <div className="mx-auto max-w-md px-4 py-10">
         <div className="rounded-2xl border border-gray-100 bg-white p-6 text-center shadow-sm">
