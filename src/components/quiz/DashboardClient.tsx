@@ -28,10 +28,10 @@ export default function DashboardClient() {
   }
 
   const cards = [
-    { label: '今日の学習', value: `${stats.todayCount} / ${stats.todayGoal}問` },
-    { label: '連続学習', value: `${stats.streakDays}日` },
-    { label: '累計正答率', value: `${stats.accuracy}%` },
+    { label: 'のべ解答', value: `${stats.totalAnswered}問` },
+    { label: '累計正答率', value: stats.totalAnswered ? `${stats.accuracy}%` : '–' },
     { label: '復習待ち', value: `${stats.reviewCount + stats.weakCount}問` },
+    { label: '学習日数', value: `${stats.streakDays}日連続` },
   ]
 
   return (
