@@ -6,13 +6,15 @@ import {
   type QuizQuestion,
 } from '@/lib/quiz'
 
-type Mode = 'random' | 'frequent' | 'acupoints' | 'subject' | 'theme'
+type Mode = 'random' | 'frequent' | 'acupoints' | 'subject' | 'theme' | 'standard2026'
 
 /** モードごとに「出題プール」を決める（ランダム性はここに入れない） */
 function poolFor(mode: Mode, subjectId?: string, themeId?: string): QuizQuestion[] {
   switch (mode) {
     case 'theme':
       return ALL_QUESTIONS.filter((q) => q.themeId === themeId)
+    case 'standard2026':
+      return ALL_QUESTIONS.filter((q) => q.standard2026)
     case 'frequent': {
       const w = (q: QuizQuestion) => ({ S: 0, A: 1, B: 2, C: 3 }[q.importance])
       return [...ALL_QUESTIONS].sort((a, b) => w(a) - w(b))

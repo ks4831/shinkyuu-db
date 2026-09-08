@@ -1,8 +1,10 @@
 /* ──────────────────────────────────────────────────────────────
    「今日の10問」の出題選定（純粋関数・LocalStorage に触れない）
    - 同じ seed（日付）＋同じ入力なら必ず同じ結果（決定的）
-   - 配分の目安: 頻出40% / 苦手30% / 最近解いていない20% / ランダム10%
+   - 配分の目安: 新基準10%(1問) / 苦手30% / 頻出40% / 最近解いていない20%
    - 制約: 1テーマ最大2問 / 最低5科目 / 重複なし / ちょうど10問
+   - 「新基準」枠は 2026年版出題基準（第35回〜）の新設・拡充領域から 1 問だけ。
+     Daily 全体を新基準問題で埋めない（既存の頻出/苦手/未回答のバランスは維持）。
    client と audit の両方から import する
    ────────────────────────────────────────────────────────────── */
 import type { QuizQuestion } from './quiz'
@@ -88,6 +90,10 @@ export function selectDailyQuestionIds(input: DailySelectInput): string[] {
   // 1) 苦手・復習（30% ≒ 3問）
   const weakPool = shuffled(all.filter((q) => weakIds.has(q.id)), rnd)
   take(weakPool, 3)
+
+  // 1.5) 第35回 新基準（10% ≒ 1問）：2026年版で新設・拡充された領域から 1 問だけ
+  const standardPool = shuffled(all.filter((q) => q.standard2026), rnd)
+  take(standardPool, 1)
 
   // 2) 頻出（40% ≒ 4問）：themeExamCount 降順の上位から
   const freqPool = shuffled(

@@ -282,3 +282,73 @@ newStandardPriority?: {   // 2026年版由来（第35回〜）
 - 2020年版 改訂のお知らせ: https://ahaki.or.jp/examinfo/2020/02/25/
 - 厚生労働省 はり師国家試験の施行: https://www.mhlw.go.jp/kouseiroudoushou/shikaku_shiken/harishi/
 - 二次資料（C）: https://note.com/acupuncture33mmm/n/n02c8332fccad ／ http://www.uhawwwokwww.com/program2.html
+
+---
+
+## 13. 実装記録（Ver.8.0 / 2026-09-09）
+
+Ver.7.6 の調査（§1〜§12）を実際の学習体験へ反映した。**FACT（公式基準の変更）と PREDICTION（当サイト分析）を UI 上でも分離** し、既存の第29〜34回・1,080問分析は一切書き換えていない。
+
+### 13.1 データモデル
+- `Theme` に `standard2026?: { status, priority?, evidence, note }` を追加（`src/lib/types.ts`）。
+  - `status`: `new`（大項目新設）/ `expanded`（既存項目の増補）/ `reorganized`（構造再編）/ `unchanged`。
+  - `evidence`: `A`（2026年版公式PDF本文で直接確認）/ `B`（公式PDF＋当DB照合）。C（二次資料のみ）は UI に出さない。
+  - **既存 `importance` は上書きしない**。`importance` は第29〜34回の実績に基づく学習優先度、`standard2026` は第35回からの公式基準変更で、別軸。
+- `QuizQuestion` に `standard2026?: boolean` を追加。
+- `pastFrequency` 等はテーマへ手入力しない。過去6年の出題数は従来どおり `aggregateByThemeId`（`getThemeExamStats`）から取得（SSoT 維持）。audit で手入力を検出。
+
+### 13.2 テーマ（137 → 142、+5）
+2026年版で大項目新設された領域を最小限追加（すべて `status: 'new'` / `evidence: 'A'` / `blueprintVersion: '2026'` / 過去6年 0 問）：
+
+| id | name | 科目 | priority |
+|---|---|---|---|
+| `oc-ebm-kenkyu` | 根拠に基づいた鍼灸治療（臨床研究とエビデンス） | 東洋医学臨床論 | 1 |
+| `oo-nihon-dento-igaku` | 日本伝統医学（古方派・後世派・折衷派・腹診） | 東洋医学概論 | 1 |
+| `cs-koreisha-shikkan` | 高齢者に多い疾患（フレイル・サルコペニア・ロコモ・老年症候群） | 臨床医学各論 | 2 |
+| `oc-kanwa-care` | 緩和ケアにおける鍼灸 | 東洋医学臨床論 | 2 |
+| `oc-saigai-iryo` | 災害医療と鍼灸師の役割 | 東洋医学臨床論 | 3 |
+
+### 13.3 既存テーマの拡充（+8、テーマ数は増やさない）
+`studyPoint` / `aliases` / `standard2026` を補強：
+
+| id | status | 内容 |
+|---|---|---|
+| `oc-kakka-chiryo` | reorganized | 症候中心化（疾患名割愛・症候6観点）。適否判断・鑑別の思考 |
+| `rh-naibu-shogai` | expanded | 内部障害リハに腎・内分泌を追記、Borg指数 |
+| `rh-haiyo-frailty` | expanded | 各論「高齢者に多い疾患」との横断 |
+| `cs-fujinka-nyusen` | expanded | 産科（妊娠高血圧症候群・妊娠悪阻・骨盤位・女性不妊）、alias「女性疾患」 |
+| `ky-zenshin-sayo` | expanded | 温度感受性TRPチャネル（TRPV1/V2/M8）を明示、alias「TRPチャネル」 |
+| `toyo-rekishi` | expanded | 日中比較、alias「日本伝統医学」 |
+| `mo-i-no-rinri` | expanded | PPI・COI・アドヒアランス・インフォームド・アセント |
+| `ha-kansen-taisaku` | expanded | 飛沫感染防止策・易感染宿主・感染性廃棄物 |
+
+### 13.4 クイズ（170 → 205、+35。`id` 接頭辞 `s26-`）
+2020年版由来の 1,080 問は不変。新基準領域のオリジナル問題を追加（`standard2026: true`）：
+
+| 領域 | themeId | 問数 |
+|---|---|---|
+| EBM・研究倫理 | `oc-ebm-kenkyu` | 5 |
+| 日本伝統医学 | `oo-nihon-dento-igaku` | 5 |
+| 女性疾患・産科 | `cs-fujinka-nyusen` | 5 |
+| 高齢者に多い疾患 | `cs-koreisha-shikkan` | 4 |
+| 内部障害リハ（呼吸・心臓・腎） | `rh-naibu-shogai` | 4 |
+| TRPチャネル・灸の温熱受容 | `ky-zenshin-sayo` | 3 |
+| 緩和ケア | `oc-kanwa-care` | 3 |
+| 災害医療 | `oc-saigai-iryo` | 3 |
+| 症候中心（症候→病態・適否判断） | `oc-kakka-chiryo` | 3 |
+
+新基準0問領域（今回 quiz 未整備・PREDICTION）：感染防止対策の増補、医療倫理の現代概念（`mo-i-no-rinri` の studyPoint では対応済み）。
+
+### 13.5 UI
+- `/exam-35`（新規）：第35回受験生向けの入口。Hero →「出題基準が変わる」説明 → 2026年版で新設（`status:'new'`）→ 拡充・再編 → 新基準クイズCTA → **過去6年の頻出TOP10（別枠・視覚的に分離）** → 今日の10問CTA → 出典（財団2026年版PDF・案内ページへのリンク）。
+- `/quiz/standard-2026`（新規）：`standard2026: true` の問題だけ 10 問。
+- `/themes/[id]`：`standard2026` があるテーマのみ「第35回 新基準」セクション（status バッジ・note・過去6年◯問・「過去頻度と新基準重要度は別指標」の注記）。既存「学習優先度」セクションに「第29〜34回の実績に基づく当サイト分析」の注記を追加。
+- `Standard2026Badge`：`2026年版で新設` / `2026年版で拡充` / `2026年版で再編` のみ。「絶対出る」等の予測・煽り表現は不使用。
+- ホーム：Hero 下に小さく `/exam-35` への導線（Daily CTA が最上位なのは維持）。メニュー：第35回対策グループを追加。
+- `/quiz/daily`：`selectDailyQuestionIds` に「新基準 10%（1問）」枠を追加。Daily 全体を新基準で埋めない（苦手30%・頻出40%・未回答20%のバランス維持、決定的・5科目以上・1テーマ2問まで・ちょうど10問は不変）。
+
+### 13.6 audit:data 追加検査（すべて ERROR 0 / WARN 0）
+`standard2026.status/evidence/priority/note` の妥当性、`pastFrequency`/`newStandardPriority` の手入力検出、新設テーマの `subject`/`blueprintVersion` 検証、`standard2026` クイズが `standard2026` テーマを参照しているか、新設テーマにクイズ最低1問、分析合計 1,080 維持、Daily 10問・決定的・科目多様性。
+
+### 13.7 やらないこと（Ver.8.0 でも維持）
+1,080問（第29〜34回）の再分類／既存 analysis ランキング／URL・科目ID・CSV構造の変更は行わない。二次資料のみ（C）の情報を FACT として UI 表示しない。

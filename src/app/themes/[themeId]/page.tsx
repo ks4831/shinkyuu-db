@@ -5,8 +5,16 @@ import { themes, getTheme, getSubject, getThemesBySubject } from '@/lib/data'
 import { getLearningGuide } from '@/lib/learning'
 import { getThemeExamStats, getThemeQuizCount } from '@/lib/themeStats'
 import ImportanceBadge from '@/components/ImportanceBadge'
+import Standard2026Badge from '@/components/Standard2026Badge'
 import StudyActions from '@/components/StudyActions'
 import { importanceLabel } from '@/lib/utils'
+
+const STANDARD2026_HEADING: Record<string, string> = {
+  new: '🆕 2026年版で新設',
+  expanded: '↑ 2026年版で拡充',
+  reorganized: '⇄ 2026年版で再編',
+  unchanged: '2026年版で変更なし',
+}
 
 const SITE_URL = process.env.NEXT_PUBLIC_SITE_URL ?? 'https://shinkyuu-db.vercel.app'
 
@@ -43,7 +51,7 @@ const ROUND_YEAR: Record<number, number> = {
 }
 
 const IMP_PRIORITY: Record<string, { label: string; color: string; advice: string }> = {
-  S: { label: '最優先', color: 'text-red-700 bg-red-50 border-red-200', advice: '第35回でも高確率で出題が見込まれます。必ず押さえてください。' },
+  S: { label: '最優先', color: 'text-red-700 bg-red-50 border-red-200', advice: '第29〜34回で高頻度に出題されてきた最重要テーマです。優先して確実に押さえましょう。' },
   A: { label: '優先',   color: 'text-orange-700 bg-orange-50 border-orange-200', advice: '出題頻度が高く、学習コストパフォーマンスが高いテーマです。' },
   B: { label: '標準',   color: 'text-blue-700 bg-blue-50 border-blue-200', advice: '余裕があれば優先して学習しましょう。複合問題での出題もあります。' },
   C: { label: '参考',   color: 'text-gray-600 bg-gray-50 border-gray-200', advice: '出題頻度は低めですが、関連テーマとまとめて学ぶと効率的です。' },
@@ -118,6 +126,7 @@ export default async function ThemeDetailPage({
         <div className="flex items-start gap-3 flex-wrap">
           <h1 className="text-2xl font-bold text-gray-900">{theme.name}</h1>
           <ImportanceBadge importance={theme.importance} />
+          {theme.standard2026 && <Standard2026Badge status={theme.standard2026.status} />}
         </div>
         {subject && (
           <Link
@@ -186,6 +195,48 @@ export default async function ThemeDetailPage({
         </Link>
       )}
 
+      {/* 第35回 新基準（2026年版出題基準による変更があるテーマのみ） */}
+      {theme.standard2026 && (
+        <section id="standard-2026" className="rounded-2xl border border-violet-200 bg-violet-50 p-5 mb-4">
+          <h2 className="font-bold text-violet-900">
+            第35回 新基準
+            <span className="ml-2 font-semibold">{STANDARD2026_HEADING[theme.standard2026.status] ?? ''}</span>
+          </h2>
+          <p className="mt-2 text-sm leading-relaxed text-gray-700">{theme.standard2026.note}</p>
+
+          <div className="mt-3 flex flex-wrap gap-4 text-sm">
+            <span className="text-gray-600">
+              過去6年（第29〜34回）：
+              <strong className="text-gray-900">{examStats.count}問</strong>
+            </span>
+          </div>
+          <p className="mt-2 text-xs leading-relaxed text-violet-800/80">
+            ※「過去6年の出題数」は2020年版出題基準での実績、「2026年版で新設／拡充」は第35回から適用される
+            公式の出題基準の変更です。両者は別の指標です。過去0問でも新基準で重要になることがあります。
+          </p>
+
+          <div className="mt-3 flex flex-wrap gap-2">
+            <Link
+              href="/exam-35"
+              className="inline-flex items-center gap-1 rounded-full border border-violet-300 bg-white px-3 py-1.5 text-xs font-bold text-violet-700 hover:bg-violet-100"
+            >
+              第35回 新出題基準まとめ →
+            </Link>
+            {quizCount > 0 && (
+              <Link
+                href={`/quiz/theme/${theme.id}`}
+                className="inline-flex items-center gap-1 rounded-full border border-violet-300 bg-white px-3 py-1.5 text-xs font-bold text-violet-700 hover:bg-violet-100"
+              >
+                このテーマの問題を解く（{quizCount}問）
+              </Link>
+            )}
+          </div>
+          <p className="mt-3 text-[11px] text-gray-400">
+            出典：公益財団法人東洋療法研修試験財団「2026年版 あん摩マッサージ指圧師、はり師及びきゅう師国家試験出題基準」
+          </p>
+        </section>
+      )}
+
       {/* Year-by-year visualization */}
       <section className="bg-white rounded-2xl border border-gray-100 p-5 mb-4">
         <h2 className="font-bold text-gray-800 mb-1">年度別出題推移（第29〜34回）</h2>
@@ -234,6 +285,12 @@ export default async function ThemeDetailPage({
           </div>
         </div>
         <p className="text-sm leading-relaxed">{priority.advice}</p>
+        <p className="mt-2 text-xs opacity-70">
+          ※ 第29〜34回（2020年版出題基準）の出題実績にもとづく当サイトの分析です。第35回から適用される
+          2026年版の新設・拡充テーマは
+          {theme.standard2026 ? '上の「第35回 新基準」' : '「第35回 新出題基準」ページ'}
+          で確認してください。
+        </p>
         {isRecent && (
           <p className="mt-2 text-xs font-semibold">
             ✓ 直近2年（第33・34回）でも出題されており、継続学習が推奨されます。

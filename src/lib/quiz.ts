@@ -20,6 +20,9 @@ export type QuizQuestion = {
   themeId?: string
   difficulty: QuizDifficulty
   importance: 'S' | 'A' | 'B' | 'C'
+  /** 2026年版出題基準（第35回〜）で新設・拡充された領域の問題であることを示す。
+   *  過去6年（第29〜34回）の実績とは無関係。true のときだけ「新基準」枠で扱う */
+  standard2026?: boolean
   /** 関連経穴の slug（src/data/acupoints.ts） */
   relatedAcupoints: string[]
   /** learningDiagrams の id（任意） */
@@ -73,6 +76,17 @@ export function pickAcupoints(count = 10, seed?: number): QuizQuestion[] {
     ),
     seed,
   ).slice(0, count)
+}
+
+/** 第35回 新基準問題：2026年版で新設・拡充された領域の問題だけ */
+export function pickStandard2026(count?: number, seed?: number): QuizQuestion[] {
+  const list = shuffle(ALL_QUESTIONS.filter((q) => q.standard2026), seed)
+  return count ? list.slice(0, count) : list
+}
+
+/** 第35回 新基準問題の収録数 */
+export function standard2026QuizCount(): number {
+  return ALL_QUESTIONS.filter((q) => q.standard2026).length
 }
 
 export function pickBySubject(subjectId: string, count = 10, seed?: number): QuizQuestion[] {

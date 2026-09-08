@@ -51,6 +51,13 @@ export default function HomePage() {
               経穴から学ぶ
             </Link>
           </div>
+          <Link
+            href="/exam-35"
+            className="mt-2.5 flex items-center justify-between rounded-xl border border-violet-200 bg-violet-50 px-3 py-2.5 text-xs font-bold text-violet-700 hover:bg-violet-100"
+          >
+            🆕 第35回は2026年版 新出題基準に対応
+            <span aria-hidden>›</span>
+          </Link>
         </div>
       </section>
 

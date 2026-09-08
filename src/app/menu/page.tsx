@@ -23,6 +23,13 @@ const groups = [
     ],
   },
   {
+    title: '第35回対策（2026年版 新出題基準）',
+    links: [
+      { href: '/exam-35', label: '第35回 新出題基準まとめ', note: '新設・拡充テーマと過去頻出の二軸で整理' },
+      { href: '/quiz/standard-2026', label: '第35回 新基準問題を解く' },
+    ],
+  },
+  {
     title: '出題分析（6年 1,080問）',
     links: [
       { href: '/analysis/exam-34', label: '第34回 分析' },

@@ -364,6 +364,35 @@ try {
   // importance 値チェック
   themes.forEach((t) => { if (!['S', 'A', 'B', 'C'].includes(t.importance)) E(`theme ${t.id} importance 不正: ${t.importance}`) })
 
+  /* ── Ver.8.0: 2026年版出題基準（standard2026）の監査 ── */
+  const S26_STATUS = new Set(['new', 'expanded', 'reorganized', 'unchanged'])
+  const S26_EVIDENCE = new Set(['A', 'B'])
+  const s26Themes = themes.filter((t) => t.standard2026)
+  let newThemeCnt = 0
+  let expandedThemeCnt = 0
+  for (const t of s26Themes) {
+    const s = t.standard2026
+    if (!S26_STATUS.has(s.status)) E(`theme ${t.id} standard2026.status 不正: ${s.status}`)
+    if (!S26_EVIDENCE.has(s.evidence)) E(`theme ${t.id} standard2026.evidence が A/B でない: ${s.evidence}`)
+    if (s.priority != null && ![1, 2, 3].includes(s.priority)) E(`theme ${t.id} standard2026.priority 不正: ${s.priority}`)
+    if (!s.note || !String(s.note).trim()) E(`theme ${t.id} standard2026.note 空`)
+    if (s.status === 'new') newThemeCnt++
+    if (s.status === 'expanded' || s.status === 'reorganized') expandedThemeCnt++
+  }
+  // pastFrequency 等はテーマへ手入力しない（SSoT = aggregateByThemeId）
+  const handInputFreq = themes.filter((t) => 'pastFrequency' in t || 'newStandardPriority' in t)
+  if (handInputFreq.length) E(`theme に pastFrequency/newStandardPriority が手入力されている ${handInputFreq.length}: ${handInputFreq.map((t) => t.id).join(', ')}`)
+  // 2026年版 新設テーマ（過去問実績0）の妥当性
+  const examByThemeEarly = {}
+  for (const q of rows) if (q.themeId) examByThemeEarly[q.themeId] = (examByThemeEarly[q.themeId] ?? 0) + 1
+  const newThemeBad = s26Themes.filter((t) => t.standard2026.status === 'new' && (
+    !ID_SET.has(t.subject) || t.blueprintVersion !== '2026'
+  ))
+  if (newThemeBad.length) E(`2026年版 新設テーマの subject/blueprintVersion 不正 ${newThemeBad.length}: ${newThemeBad.map((t) => t.id).join(', ')}`)
+  info.standard2026ThemeCount = s26Themes.length
+  info.standard2026NewThemes = newThemeCnt
+  info.standard2026ExpandedThemes = expandedThemeCnt
+
   // ── quiz ──
   const quizMod = await importTS('src/lib/quiz.ts')
   const Q = quizMod.ALL_QUESTIONS
@@ -419,6 +448,19 @@ try {
   if (quizNoTheme.length) E(`quiz に themeId 未設定 ${quizNoTheme.length}: ${quizNoTheme.slice(0, 10).map((q) => q.id).join(', ')}`)
   if (quizBadTheme.length) E(`quiz の themeId が themes[] に存在しない ${quizBadTheme.length}: ${quizBadTheme.map((q) => `${q.id}(${q.themeId})`).join(', ')}`)
   if (quizThemeSubjMismatch.length) E(`quiz の themeId 科目とテーマ科目が不一致 ${quizThemeSubjMismatch.length}: ${quizThemeSubjMismatch.map((q) => `${q.id}(${q.subject}≠${themeById.get(q.themeId).subject})`).join(', ')}`)
+
+  /* ── Ver.8.0: 第35回 新基準クイズ（standard2026）の監査 ── */
+  const s26Quiz = Q.filter((q) => q.standard2026 === true)
+  const s26QuizBadTheme = s26Quiz.filter((q) => {
+    const t = themeById.get(q.themeId)
+    return !t || !t.standard2026
+  })
+  info.standard2026QuizCount = s26Quiz.length
+  if (s26QuizBadTheme.length) E(`standard2026 クイズの themeId が standard2026 未設定のテーマを参照 ${s26QuizBadTheme.length}: ${s26QuizBadTheme.map((q) => `${q.id}(${q.themeId})`).join(', ')}`)
+  // 新設テーマにクイズが最低1問あるか（orphan 防止）
+  const allQuizThemeIds = new Set(Q.map((q) => q.themeId).filter(Boolean))
+  const newThemesNoQuiz = themes.filter((t) => t.standard2026?.status === 'new' && !allQuizThemeIds.has(t.id))
+  if (newThemesNoQuiz.length) W(`2026年版 新設テーマにクイズ0問 ${newThemesNoQuiz.length}: ${newThemesNoQuiz.map((t) => t.id).join(', ')}`)
 
   /* ── orphan theme：過去問0問 かつ クイズ0問（学習用テーマは許容だが可視化） ── */
   const examByTheme = {}
@@ -558,6 +600,7 @@ if (j) {
   console.log(`CSV normalizedTheme: ${info.csvThemeCount} 種（空欄 ${info.csvThemeEmpty}）`)
   console.log(`統一テーマ Master: ${info.themeCount} 件（過去問接続 ${info.themeConnected} / 学習用 ${info.themeStudyOnly?.length ?? 0} / orphan ${info.themeOrphan?.length ?? 0}）`)
   console.log(`themeId 接続: 過去問 ${info.examThemeIdConnected}/${info.csvTotal}（未設定 ${info.examThemeIdMissing}）  クイズ ${info.quizThemeIdConnected}/${info.quizCount}`)
+  console.log(`2026年版基準(standard2026): テーマ ${info.standard2026ThemeCount ?? 0} 件（新設 ${info.standard2026NewThemes ?? 0} / 拡充・再編 ${info.standard2026ExpandedThemes ?? 0}）  新基準クイズ ${info.standard2026QuizCount ?? 0} 問`)
   console.log('\n--- 科目別 6年問題数（正規id基準） ---')
   for (const [id, name] of CANONICAL_SUBJECTS) {
     const b = info.bySubject[id]
