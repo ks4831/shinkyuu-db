@@ -509,8 +509,9 @@ export default function Exam34AnalysisPage() {
             <strong className="text-green-700">
               鍼灸専門科目（はり・きゅう理論 + 経絡経穴概論）の合計
             </strong>
-            は{specialtyCount}問（{pct(specialtyCount, total)}%）と全体の約4割。
-            第34回は専門理論の比重が高く、特に作用機序の問題が量・質ともに増加しました。
+            は{specialtyCount}問（{pct(specialtyCount, total)}%）。
+            はり理論・きゅう理論は各10問（Q161〜170／Q171〜180）に固定され、
+            経絡経穴概論20問（Q107〜126）と合わせて専門理論の対策が欠かせません。
           </p>
           <p>
             <strong className="text-green-700">刺鍼・灸法・作用機序</strong>

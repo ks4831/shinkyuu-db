@@ -500,8 +500,9 @@ export default function Exam33AnalysisPage() {
             <strong className="text-green-700">
               鍼灸専門科目（はり・きゅう理論 + 経絡経穴概論）の合計
             </strong>
-            は{specialtyCount}問（{pct(specialtyCount, total)}%）と全体の約4割を占める。
-            第33回も引き続き専門理論の比重が高い傾向を維持しています。
+            は{specialtyCount}問（{pct(specialtyCount, total)}%）。
+            はり理論・きゅう理論は各10問（Q161〜170／Q171〜180）、経絡経穴概論は20問（Q107〜126）で、
+            午後の東洋医学臨床論（Q127〜160＝34問）と合わせた専門理論の対策が合否を分けます。
           </p>
           <p>
             <strong className="text-green-700">刺鍼・灸法・作用機序</strong>

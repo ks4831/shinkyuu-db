@@ -192,6 +192,74 @@ for (const q of rows) {
 }
 info.bySubject = bySubject
 
+/* 3b. 令和2年版(2020年版)出題基準ブループリントとの整合
+   ─ 第29〜34回は全180問・問題番号帯ごとに科目が固定されている。
+   ─ 総合問題帯（午前 83-90 / 午後 151-160）はDBに専用バケットが無く内容で
+     14科目へ割り当てるため、帯チェックから除外する。
+   出典: 東洋療法研修試験財団 出題基準 ＋ reCare鍼灸院 第31〜34回 科目別解答
+   （問33-38＝病理学概論 等を年度別に照合） */
+const BLUEPRINT_RANGES = [
+  [1, 4, 'medical-overview'],
+  [5, 10, 'hygiene'],
+  [11, 14, 'regulations'],
+  [15, 23, 'anatomy'],
+  [24, 32, 'physiology'],
+  [33, 38, 'pathology'],
+  [39, 48, 'clinical-general'],
+  [49, 70, 'clinical-specific'],
+  [71, 82, 'rehabilitation'],
+  // 83-90 総合問題（午前）… 内容分類
+  [91, 106, 'oriental-overview'],
+  [107, 126, 'meridians-acupoints'],
+  [127, 150, 'oriental-clinical'],
+  // 151-160 総合問題（午後）… 実態は東洋医学臨床の症例。oriental-clinical を許容
+  [161, 170, 'acupuncture-theory'],
+  [171, 180, 'moxibustion-theory'],
+]
+const SOUGOU_RANGES = [[83, 90], [151, 160]]
+function blueprintSubjectFor(qn) {
+  for (const [lo, hi, id] of BLUEPRINT_RANGES) if (qn >= lo && qn <= hi) return id
+  return null // 総合問題帯
+}
+const blueprintViolations = []
+for (const q of rows) {
+  const qn = Number(q.questionNumber)
+  const id = normalizeSubjectToId(q.subject)
+  const exp = blueprintSubjectFor(qn)
+  const inSougou = SOUGOU_RANGES.some(([lo, hi]) => qn >= lo && qn <= hi)
+  if (exp && id && id !== exp) blueprintViolations.push({ id: q.id, qn, got: id, exp })
+  // 午後151-160はoriental-clinical以外なら候補として記録（内容次第で可）
+  if (inSougou && qn >= 151 && id && id !== 'oriental-clinical') {
+    blueprintViolations.push({ id: q.id, qn, got: id, exp: 'oriental-clinical(総合)' })
+  }
+}
+info.blueprintViolations = blueprintViolations
+if (blueprintViolations.length) {
+  W(`出題基準ブループリントと不一致の科目分類 ${blueprintViolations.length} 行: ` +
+    blueprintViolations.slice(0, 12).map((v) => `${v.id}(問${v.qn} ${v.got}→${v.exp})`).join(' / '))
+}
+
+/* 3c. 年度別科目分布の急変検出（前年比）
+   前年から一定以上増減した科目を「異常候補」として WARN（ERROR ではない）。
+   閾値: 絶対差 ≥ 6 かつ 相対比 ≥ 1.8倍（または前年0で当年 ≥ 6） */
+const distroAnomalies = []
+for (const [id, name] of CANONICAL_SUBJECTS) {
+  const series = ROUNDS.map((r) => bySubject[id].byRound[r] ?? 0)
+  for (let i = 1; i < series.length; i++) {
+    const prev = series[i - 1]
+    const cur = series[i]
+    const absd = Math.abs(cur - prev)
+    const ratio = prev === 0 ? Infinity : Math.max(cur, prev) / Math.min(cur, prev)
+    if (absd >= 6 && (ratio >= 1.8 || prev === 0)) {
+      distroAnomalies.push(`${name}: 第${ROUNDS[i - 1]}回 ${prev} → 第${ROUNDS[i]}回 ${cur}（差${cur - prev >= 0 ? '+' : ''}${cur - prev}）`)
+    }
+  }
+}
+info.distroAnomalies = distroAnomalies
+if (distroAnomalies.length) {
+  W(`年度別科目分布の急変 ${distroAnomalies.length} 件（異常候補・要内容確認）: ` + distroAnomalies.join(' ／ '))
+}
+
 /* normalizedTheme（CSV側） */
 const csvThemeSet = new Map()
 let emptyNT = 0
