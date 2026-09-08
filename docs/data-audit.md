@@ -1,6 +1,53 @@
-# 鍼灸DB データ監査（Ver.7.2 → Ver.7.2.3）
+# 鍼灸DB データ監査（Ver.7.2 → Ver.7.3）
 
 最終更新: 2026-09-08 / 実行方法: `npm run audit:data`（`scripts/audit-data.mjs`）
+
+---
+
+## Ver.7.3 スプリント（2026-09-08）— 全14科目クイズ化
+
+クイズ未整備だった4科目（医療概論・臨床医学各論・リハビリテーション医学・
+東洋医学臨床論）に **+60問** を追加。**110問 → 170問**、**14科目すべてで演習可能**に。
+
+### 追加内容（themeId 頻度に基づく配分）
+
+| 科目 | 追加 | 主な themeId（6年出題数） |
+|---|---:|---|
+| 医療概論 | 10 | mo-iryo-hoken-seido / mo-kaigo-hoken / mo-informed-consent / mo-i-no-rinri / mo-iryo-teikyo / mo-nanbyo / mo-team-iryo（各2〜5問） |
+| 臨床医学各論 | 20 | cs-kansen(23) ×3 / cs-ketsueki(14) ×2 / cs-jin-hinyoki(14) ×2 / cs-shokaki(12) ×2 / cs-gaisho(12) / cs-hentai-kansetsu(11) / cs-shinkeikin(11) / cs-sekitsui(10) / cs-naibunpi(10) / cs-kokyuki(10) / cs-junkanki(9) / cs-ganka-jibi(7) / cs-ninchisho(6) / cs-fujinka-nyusen(4) / cs-seishin(6) |
+| リハビリテーション医学 | 10 | rh-team(19) ×2 / rh-shinkei-undoki(13) ×2 / rh-sekizui(8) / rh-naibu-shogai(8) / rh-engo-shogai(6) / rh-gishi-sogu(6) / rh-noseimahi(5) / rh-soron(4) |
+| 東洋医学臨床論 | 20 | oc-undoki-shinkei(68) ×6（症例含む） / oc-kakka-chiryo(52) ×5 / oc-keiraku-chiryo(29) ×3 / oc-zofu-bensho(20) ×3 / oc-kiketsu-bensho(18) ×2 / ben-sho-ron-chi(9) |
+
+- 全60問が国家試験問題文の転載なし・教科書レベルの事実に基づくオリジナル。
+- 使用 themeId は全て 137 Theme Master に存在（新テーマ追加なし）。
+- id 接頭辞：`mo-` / `cs-` / `rh-` / `oc-`（既存 quiz id と衝突なし）。
+
+### 統合後の数値（`npm run audit:data`）
+
+| 指標 | 値 |
+|---|---|
+| クイズ総数 | 110 → **170** |
+| クイズ themeId 接続 | **170 / 170（100%）** |
+| クイズがある科目 | **14 / 14** |
+| 科目別クイズ数 | 医療概論10・衛生10・法規10・解剖10・生理10・病理10・臨床総論10・**臨床各論20**・**リハ10**・東洋概論10・経絡経穴20・**東洋臨床論20**・はり理論10・きゅう理論10 |
+| 新規60問で使用した theme 数 | 46（各論15・リハ8・医療概論7・東洋臨床6 ＋ 症例タグ等の重複） |
+| `/quiz/theme/*` ページ | 55 → **91**（クイズのある themeId が増加） |
+| 構造チェック（choices4・正答範囲・必須欄・重複） | 問題 **0**（全170問） |
+| audit ERROR / WARN | **0 / 0** |
+| 既存URL変更 | 0（`/quiz/*` は不変。`/quiz/theme/*` 36本が純増） |
+
+### `/quiz/subjects` の改修
+
+- 14科目すべてを表示（`subjectQuestionCounts()` は count>0 のみ返す → 全科目に問題があるため全14表示）。
+- 各科目に「◯問」＋「◯テーマ」を表示。「準備中」表記は元から存在せず。
+
+### 今回やらなかったこと
+
+- **`/quiz/frequent` の themeId 頻度組み込み**：現状は `q.importance`（S/A/B/C）順。
+  `QuizSession` がクライアントコンポーネントのため、themeId×過去6年頻度で重み付けするには
+  ビルド時マップ生成 or サーバー側での並び替え prop 追加が必要 → P14（提案）。
+  なお追加60問の `importance` は各テーマの実出題頻度に合わせて設定済みで、
+  現行 `pickFrequent` でも頻出テーマ由来の問題が概ね上位に来る。
 
 ---
 
@@ -941,6 +988,8 @@ WARN:  1   （quiz.theme が themes 側に存在しない名称 55種 ← 16.の
 | P11 | 巨大テーマの分割（`oc-undoki-shinkei` 68問／`juni-kei-myaku` 52問／`cg-shokogaku` 42問 等）、近重複2テーマ(`junkan-kino`/`kyu-fukusayo`)の統合 | 低 |
 | P12 | `themes[].importance` の客観ロジック化（頻出度＝themeId実出題数と分離した「学習優先度」の再定義）。旧 P4 を Ver.7.2.3 の分離を前提に再掲 | 中 |
 | P13 | 管理用ページ（`/admin/data-entry-guide/*`）の CSV ヘッダーを19列（themeId 追加）に更新。第35回データ入力の前に必要 | 低 |
+| P14 | `/quiz/frequent` を themeId × 過去6年頻度で重み付け（現状は importance 順） | 中 |
+| P15 | クイズ未整備の残り科目（東洋医学臨床論はテーマ数9で網羅済みだが、各論の细分テーマ・経絡経穴の特定穴カテゴリ別など、テーマ単位のクイズ拡充） | 低 |
 | P5 | 2026年版出題基準に基づく新規テーマ追加（女性疾患・内部障害リハ・日本伝統医学 等）※公式PDF最終版の確認後 | 中 |
 | P6 | 全1,080件 studyPoint・全110クイズの専門家逐条監修 | 中 |
 | ~~P7~~ | ~~`29-117` の questionNumber 検証~~ → Ver.7.2.1 で経絡経穴概論へ是正済み | ✅ |

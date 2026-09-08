@@ -401,6 +401,10 @@ try {
   Q.forEach((q) => (quizBySub[q.subject] = (quizBySub[q.subject] ?? 0) + 1))
   info.quizBySubject = quizBySub
   Object.entries(quizBySub).forEach(([s, c]) => { if (c > 0 && c < 10) W(`quiz 科目 ${s} が ${c} 問（公開は10問以上が原則）`) })
+  // 14科目すべてにクイズがあるか（Ver.7.3：全科目演習可能を目標）
+  const noQuizSubjects = CANONICAL_SUBJECTS.filter(([id]) => !(quizBySub[id] > 0)).map(([, name]) => name)
+  info.quizSubjectCoverage = `${14 - noQuizSubjects.length}/14`
+  if (noQuizSubjects.length) E(`クイズが1問も無い科目 ${noQuizSubjects.length}: ${noQuizSubjects.join('・')}`)
 
   /* ── quiz の themeId 監査（Ver.7.2.2：文字列比較 quiz.theme→themeId 参照に変更） ── */
   const quizNoTheme = Q.filter((q) => !q.themeId)

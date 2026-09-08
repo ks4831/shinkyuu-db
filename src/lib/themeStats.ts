@@ -4,7 +4,7 @@ import { ALL_QUESTIONS } from './quiz'
 import { themes } from './data'
 
 /* ──────────────────────────────────────────────────────────────
-   統一テーマ Master（themes[]）と国家試験1,080問・クイズ110問を
+   統一テーマ Master（themes[]）と国家試験1,080問・オリジナルクイズ（ALL_QUESTIONS.length 問）を
    themeId で接続した集計。ビルド時に一度だけ構築してキャッシュする。
    - ExamQuestion.themeId  … src/data/raw/exam-*.csv の themeId 列
    - QuizQuestion.themeId  … src/data/quizQuestions.ts の themeId

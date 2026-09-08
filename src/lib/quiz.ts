@@ -113,15 +113,19 @@ export function questionsForAcupoint(slug: string): QuizQuestion[] {
   return ALL_QUESTIONS.filter((q) => q.relatedAcupoints.includes(slug))
 }
 
-/** 科目ごとの収録数 */
-export function subjectQuestionCounts(): { id: string; name: string; short: string; count: number }[] {
+/** 科目ごとの収録数（問数・出題テーマ数） */
+export function subjectQuestionCounts(): { id: string; name: string; short: string; count: number; themeCount: number }[] {
   return subjects
-    .map((s) => ({
-      id: s.id,
-      name: s.name,
-      short: s.shortName,
-      count: ALL_QUESTIONS.filter((q) => q.subject === s.id).length,
-    }))
+    .map((s) => {
+      const qs = ALL_QUESTIONS.filter((q) => q.subject === s.id)
+      return {
+        id: s.id,
+        name: s.name,
+        short: s.shortName,
+        count: qs.length,
+        themeCount: new Set(qs.map((q) => q.themeId).filter(Boolean)).size,
+      }
+    })
     .filter((s) => s.count > 0)
     .sort((a, b) => b.count - a.count)
 }
