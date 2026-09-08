@@ -8,8 +8,10 @@ export type SourceReliability =
   | 'third_party_reference'  // 第三者ミラー参照
 
 export type Theme = {
+  /** 永続キー（themeId）。URL slug も兼ねる（/themes/[id]） */
   id: string
   name: string
+  /** subjects[].id */
   subject: string
   examYears: number[]
   examRounds: number[]
@@ -27,7 +29,12 @@ export type Theme = {
   questionCountMode: QuestionCountMode
   sourceReliability: SourceReliability
   sourceUrl?: string
+  /** 上位テーマの id（任意・最小限の階層化に使用） */
+  parentThemeId?: string
 }
+
+/** URL slug は id と同一。将来 slug を分離する場合の互換ヘルパ用に別名を持つ */
+export type ThemeId = string
 
 export type Subject = {
   id: string
@@ -47,7 +54,9 @@ export type ExamQuestion = {
   officialLarge?: string
   officialMedium?: string
   officialSmall?: string
-  normalizedTheme?: string  // テーマ集計キー（テーマID推奨）
+  normalizedTheme?: string  // 旧テーマ集計キー（英語スラッグ・/analysis で使用）
+  /** 統一テーマ Master（themes[].id）への参照。Ver.7.2.2 で全設問へ付与 */
+  themeId?: string
   subTheme?: string
   importance?: Importance   // 任意（集計時に自動上書き）
   studyPoint?: string

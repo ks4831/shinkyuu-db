@@ -3,6 +3,7 @@ import Link from 'next/link'
 import { notFound } from 'next/navigation'
 import { themes, getTheme, getSubject, getThemesBySubject } from '@/lib/data'
 import { getLearningGuide } from '@/lib/learning'
+import { getThemeExamStats, getThemeQuizCount } from '@/lib/themeStats'
 import ImportanceBadge from '@/components/ImportanceBadge'
 import StudyActions from '@/components/StudyActions'
 import { importanceLabel } from '@/lib/utils'
@@ -62,12 +63,22 @@ export default async function ThemeDetailPage({
     .map(id => getTheme(id))
     .filter(Boolean)
 
+  // 国家試験1,080問との themeId 接続から実データ算出
+  const examStats = getThemeExamStats(theme.id)
+  const quizCount = getThemeQuizCount(theme.id)
+  const hasExamData = examStats.count > 0
+  // 表示に使う出題回リスト（実データ優先、無ければ data.ts の examRounds）
+  const roundsHit = hasExamData ? examStats.examRounds : theme.examRounds
+  const appearedRounds = roundsHit.length
+  const latestRound = hasExamData ? examStats.latestRound : theme.latestRound
+  const maxPerRound = Math.max(1, ...allRounds.map(r => examStats.byRound[r] ?? 0))
+
   const priority = IMP_PRIORITY[theme.importance]
-  const isRecent = theme.examRounds.includes(33) || theme.examRounds.includes(34)
+  const isRecent = roundsHit.includes(33) || roundsHit.includes(34)
   const streak = (() => {
     let s = 0
     for (let i = allRounds.length - 1; i >= 0; i--) {
-      if (theme.examRounds.includes(allRounds[i])) s++
+      if (roundsHit.includes(allRounds[i])) s++
       else break
     }
     return s
@@ -141,17 +152,17 @@ export default async function ThemeDetailPage({
       {/* 学習管理ボタン */}
       <StudyActions themeId={theme.id} />
 
-      {/* Stats */}
+      {/* Stats（国家試験1,080問との themeId 接続から算出） */}
       <div className="grid grid-cols-3 gap-3 mb-5">
         <div className="bg-white rounded-xl border border-gray-100 p-4 text-center">
-          <p className="text-xs text-gray-400 mb-1">出題回数</p>
-          <p className="text-2xl font-bold text-green-700">{theme.count}</p>
-          <p className="text-xs text-gray-400">/ 6回</p>
+          <p className="text-xs text-gray-400 mb-1">{hasExamData ? '出題数（6年計）' : '出題回数'}</p>
+          <p className="text-2xl font-bold text-green-700">{hasExamData ? examStats.count : theme.count}</p>
+          <p className="text-xs text-gray-400">{hasExamData ? `${appearedRounds}回で出題` : '/ 6回'}</p>
         </div>
         <div className="bg-white rounded-xl border border-gray-100 p-4 text-center">
           <p className="text-xs text-gray-400 mb-1">直近出題</p>
-          <p className="text-2xl font-bold text-green-700">第{theme.latestRound}回</p>
-          <p className="text-xs text-gray-400">{ROUND_YEAR[theme.latestRound]}年</p>
+          <p className="text-2xl font-bold text-green-700">{latestRound ? `第${latestRound}回` : '—'}</p>
+          <p className="text-xs text-gray-400">{latestRound ? `${ROUND_YEAR[latestRound]}年` : '学習用テーマ'}</p>
         </div>
         <div className="bg-white rounded-xl border border-gray-100 p-4 text-center">
           <p className="text-xs text-gray-400 mb-1">重要度</p>
@@ -162,21 +173,27 @@ export default async function ThemeDetailPage({
 
       {/* Year-by-year visualization */}
       <section className="bg-white rounded-2xl border border-gray-100 p-5 mb-4">
-        <h2 className="font-bold text-gray-800 mb-4">年度別出題推移（第29〜34回）</h2>
+        <h2 className="font-bold text-gray-800 mb-1">年度別出題推移（第29〜34回）</h2>
+        <p className="text-xs text-gray-400 mb-4">
+          {hasExamData
+            ? '国家試験1,080問をテーマIDで集計した実データ（棒の高さ＝その回の出題数）'
+            : 'このテーマに直接対応する過去問は集計されていません（学習体系上のテーマ）'}
+        </p>
         <div className="grid grid-cols-6 gap-2">
           {allRounds.map(round => {
-            const hit = theme.examRounds.includes(round)
+            const n = examStats.byRound[round] ?? 0
+            const hit = hasExamData ? n > 0 : theme.examRounds.includes(round)
+            const h = hasExamData ? (n > 0 ? Math.max(12, Math.round((n / maxPerRound) * 64)) : 3) : (hit ? 64 : 3)
             return (
               <div key={round} className="flex flex-col items-center gap-1">
                 <div className="w-full h-16 flex items-end justify-center">
                   <div
-                    className={`w-8 rounded-t-md transition-all ${
-                      hit ? 'bg-green-400 h-full' : 'bg-gray-100 h-3'
-                    }`}
+                    className={`w-8 rounded-t-md transition-all ${hit ? 'bg-green-400' : 'bg-gray-100'}`}
+                    style={{ height: `${h}px` }}
                   />
                 </div>
                 <span className={`text-xs font-semibold ${hit ? 'text-green-700' : 'text-gray-300'}`}>
-                  {hit ? '✓' : '—'}
+                  {hasExamData ? (n > 0 ? n : '—') : (hit ? '✓' : '—')}
                 </span>
                 <span className="text-xs text-gray-500">第{round}回</span>
                 <span className="text-xs text-gray-400">{ROUND_YEAR[round]}</span>
@@ -190,6 +207,21 @@ export default async function ThemeDetailPage({
           </p>
         )}
       </section>
+
+      {/* このテーマの問題を解く */}
+      {quizCount > 0 && (
+        <Link
+          href={`/quiz/theme/${theme.id}`}
+          className="block bg-gradient-to-r from-green-600 to-green-700 text-white rounded-2xl p-5 mb-4 shadow-md hover:from-green-700 hover:to-green-800 transition-colors"
+        >
+          <span className="font-bold flex items-center gap-2">
+            📝 このテーマの問題を解く
+          </span>
+          <span className="block text-sm text-green-50 mt-0.5">
+            「{theme.name}」の演習問題 {quizCount}問（1問1画面・解説つき）
+          </span>
+        </Link>
+      )}
 
       {/* Study priority recommendation */}
       <section id="priority" className={`rounded-2xl border p-5 mb-4 ${priority.color}`}>

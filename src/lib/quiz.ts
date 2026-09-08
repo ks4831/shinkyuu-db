@@ -14,8 +14,10 @@ export type QuizQuestion = {
   commonMistake: string
   /** subjects の id */
   subject: string
-  /** テーマの短い日本語ラベル */
+  /** テーマの短い日本語ラベル（表示用サブラベル） */
   theme: string
+  /** 統一テーマ Master（themes[].id）への参照。Ver.7.2.2 で全問に付与 */
+  themeId?: string
   difficulty: QuizDifficulty
   importance: 'S' | 'A' | 'B' | 'C'
   /** 関連経穴の slug（src/data/acupoints.ts） */
@@ -78,6 +80,22 @@ export function pickBySubject(subjectId: string, count = 10, seed?: number): Qui
     ALL_QUESTIONS.filter((q) => q.subject === subjectId),
     seed,
   ).slice(0, count)
+}
+
+/** 統一テーマ（themeId）に紐づくクイズ */
+export function pickByTheme(themeId: string, count?: number, seed?: number): QuizQuestion[] {
+  const list = shuffle(ALL_QUESTIONS.filter((q) => q.themeId === themeId), seed)
+  return count ? list.slice(0, count) : list
+}
+
+/** themeId ごとのクイズ収録数 */
+export function quizCountByTheme(themeId: string): number {
+  return ALL_QUESTIONS.filter((q) => q.themeId === themeId).length
+}
+
+/** クイズが1問以上ある themeId の一覧 */
+export function themeIdsWithQuiz(): string[] {
+  return [...new Set(ALL_QUESTIONS.map((q) => q.themeId).filter((v): v is string => Boolean(v)))]
 }
 
 export function pickByIds(ids: string[], count?: number): QuizQuestion[] {

@@ -80,7 +80,7 @@ function parseCSVLine(line) {
 function loadCSV() {
   const rows = []
   const perRound = {}
-  const EXPECTED_HEADER = 'id,examRound,year,questionNumber,session,subject,officialLarge,officialMedium,officialSmall,normalizedTheme,subTheme,importance,studyPoint,sourceUrl,sourceReliability,blueprintVersion,questionCountMode,memo'
+  const EXPECTED_HEADER = 'id,examRound,year,questionNumber,session,subject,officialLarge,officialMedium,officialSmall,normalizedTheme,subTheme,importance,studyPoint,sourceUrl,sourceReliability,blueprintVersion,questionCountMode,memo,themeId'
   for (const r of ROUNDS) {
     const fp = path.join(ROOT, 'src/data/raw', `exam-${r}.csv`)
     if (!fs.existsSync(fp)) { E(`CSV欠落: exam-${r}.csv`); perRound[r] = 0; continue }
@@ -291,6 +291,31 @@ try {
   info.themeCount = themes.length
   info.subjectDefCount = subjects.length
 
+  /* ── 統一テーマ Taxonomy（themeId）の監査 ── */
+  const themeById = new Map(themes.map((t) => [t.id, t]))
+  const themeIdSet = new Set(themes.map((t) => t.id))
+
+  // broken parentThemeId
+  const brokenParent = themes.filter((t) => t.parentThemeId && !themeIdSet.has(t.parentThemeId))
+  if (brokenParent.length) E(`theme parentThemeId 参照切れ ${brokenParent.length}: ${brokenParent.map((t) => `${t.id}→${t.parentThemeId}`).join(', ')}`)
+
+  // exam question themeId
+  const examNoTheme = rows.filter((q) => !q.themeId)
+  const examBadTheme = rows.filter((q) => q.themeId && !themeIdSet.has(q.themeId))
+  // 総合問題帯（午前83-90 / 午後151-160）は科目横断の症例のため、テーマ科目≠設問科目を許容
+  const inSougouBand = (qn) => (qn >= 83 && qn <= 90) || (qn >= 151 && qn <= 160)
+  const examThemeSubjMismatch = rows.filter((q) => {
+    if (!q.themeId) return false
+    if (inSougouBand(Number(q.questionNumber))) return false
+    const t = themeById.get(q.themeId)
+    return t && normalizeSubjectToId(q.subject) && t.subject !== normalizeSubjectToId(q.subject)
+  })
+  info.examThemeIdMissing = examNoTheme.length
+  info.examThemeIdConnected = rows.length - examNoTheme.length
+  if (examBadTheme.length) E(`exam question の themeId が themes[] に存在しない ${examBadTheme.length}: ${examBadTheme.slice(0, 8).map((q) => `${q.id}(${q.themeId})`).join(', ')}`)
+  if (examThemeSubjMismatch.length) E(`exam question の themeId 科目とテーマ科目が不一致 ${examThemeSubjMismatch.length}: ${examThemeSubjMismatch.slice(0, 8).map((q) => `${q.id}(${q.subject}≠${themeById.get(q.themeId).subject})`).join(', ')}`)
+  if (examNoTheme.length) W(`exam question に themeId 未設定 ${examNoTheme.length} 行（要確認）: ${examNoTheme.slice(0, 10).map((q) => q.id).join(', ')}`)
+
   // subjects.id が正規14と一致
   const defIds = new Set(subjects.map((s) => s.id))
   for (const [id] of CANONICAL_SUBJECTS) if (!defIds.has(id)) E(`data.ts subjects に ${id} が無い`)
@@ -372,11 +397,36 @@ try {
   info.quizBySubject = quizBySub
   Object.entries(quizBySub).forEach(([s, c]) => { if (c > 0 && c < 10) W(`quiz 科目 ${s} が ${c} 問（公開は10問以上が原則）`) })
 
-  // quiz.theme が data.ts theme.name/normalizedTheme と一致するか（taxonomy 突合）
-  const themeNames = new Set(themes.flatMap((t) => [t.name, t.normalizedTheme].filter(Boolean)))
-  const quizThemeMismatch = [...new Set(Q.map((q) => q.theme))].filter((t) => !themeNames.has(t))
-  info.quizThemeMismatch = quizThemeMismatch
-  if (quizThemeMismatch.length) W(`quiz.theme が themes 側に存在しない名称 ${quizThemeMismatch.length} 種`)
+  /* ── quiz の themeId 監査（Ver.7.2.2：文字列比較 quiz.theme→themeId 参照に変更） ── */
+  const quizNoTheme = Q.filter((q) => !q.themeId)
+  const quizBadTheme = Q.filter((q) => q.themeId && !themeIdSet.has(q.themeId))
+  const quizThemeSubjMismatch = Q.filter((q) => {
+    if (!q.themeId) return false
+    const t = themeById.get(q.themeId)
+    return t && t.subject !== q.subject
+  })
+  info.quizThemeIdMissing = quizNoTheme.length
+  info.quizThemeIdConnected = Q.length - quizNoTheme.length
+  if (quizNoTheme.length) E(`quiz に themeId 未設定 ${quizNoTheme.length}: ${quizNoTheme.slice(0, 10).map((q) => q.id).join(', ')}`)
+  if (quizBadTheme.length) E(`quiz の themeId が themes[] に存在しない ${quizBadTheme.length}: ${quizBadTheme.map((q) => `${q.id}(${q.themeId})`).join(', ')}`)
+  if (quizThemeSubjMismatch.length) E(`quiz の themeId 科目とテーマ科目が不一致 ${quizThemeSubjMismatch.length}: ${quizThemeSubjMismatch.map((q) => `${q.id}(${q.subject}≠${themeById.get(q.themeId).subject})`).join(', ')}`)
+
+  /* ── orphan theme：過去問0問 かつ クイズ0問（学習用テーマは許容だが可視化） ── */
+  const examByTheme = {}
+  for (const q of rows) if (q.themeId) examByTheme[q.themeId] = (examByTheme[q.themeId] ?? 0) + 1
+  const quizByTheme = {}
+  for (const q of Q) if (q.themeId) quizByTheme[q.themeId] = (quizByTheme[q.themeId] ?? 0) + 1
+  const studyOnly = themes.filter((t) => !examByTheme[t.id]).map((t) => t.id)
+  // 意図的な学習用テーマ（国試に出ない or 上位テーマの補助）。orphan でも WARN にしない
+  const INTENTIONAL_STUDY_THEMES = new Set(['kei-ketsu-shuchi', 'toyo-rekishi', 'menekigaku', 'cg-innai-kansen'])
+  const orphan = themes
+    .filter((t) => !examByTheme[t.id] && !quizByTheme[t.id])
+    .filter((t) => !t.parentThemeId && !INTENTIONAL_STUDY_THEMES.has(t.id))
+    .map((t) => t.id)
+  info.themeStudyOnly = studyOnly
+  info.themeOrphan = orphan
+  info.themeConnected = themes.length - studyOnly.length
+  if (orphan.length) W(`過去問もクイズも紐づかない未分類テーマ ${orphan.length}: ${orphan.join(', ')}`)
 
   // ── diagrams ──
   const diag = await importTS('src/data/learningDiagrams.ts')
@@ -436,6 +486,8 @@ if (j) {
   console.log(`科目定義: ${info.subjectDefCount} / テーマ: ${info.themeCount} / クイズ: ${info.quizCount} / 経穴: ${info.acupointCount}（alias ${info.acupointAliasCount}）/ 図解: ${info.diagramCount}`)
   console.log(`CSV科目値の種類: ${info.subjectRawValues}（正規id化が必要 ${info.subjectNeedsNormalize} 行 / 未解決 ${info.subjectUnresolved} 行）`)
   console.log(`CSV normalizedTheme: ${info.csvThemeCount} 種（空欄 ${info.csvThemeEmpty}）`)
+  console.log(`統一テーマ Master: ${info.themeCount} 件（過去問接続 ${info.themeConnected} / 学習用 ${info.themeStudyOnly?.length ?? 0} / orphan ${info.themeOrphan?.length ?? 0}）`)
+  console.log(`themeId 接続: 過去問 ${info.examThemeIdConnected}/${info.csvTotal}（未設定 ${info.examThemeIdMissing}）  クイズ ${info.quizThemeIdConnected}/${info.quizCount}`)
   console.log('\n--- 科目別 6年問題数（正規id基準） ---')
   for (const [id, name] of CANONICAL_SUBJECTS) {
     const b = info.bySubject[id]

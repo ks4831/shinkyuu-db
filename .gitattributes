@@ -1,0 +1,7 @@
+# データファイルは LF 固定（CRLF 化するとパーサや monorepo スクリプトが壊れる）
+*.csv text eol=lf
+*.ts text eol=lf
+*.tsx text eol=lf
+*.mjs text eol=lf
+*.json text eol=lf
+*.md text eol=lf

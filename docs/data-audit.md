@@ -1,6 +1,105 @@
-# 鍼灸DB データ監査（Ver.7.2 → Ver.7.2.1）
+# 鍼灸DB データ監査（Ver.7.2 → Ver.7.2.2）
 
 最終更新: 2026-09-08 / 実行方法: `npm run audit:data`（`scripts/audit-data.mjs`）
+
+---
+
+## Ver.7.2.2 スプリント（2026-09-08）— 統一テーマ Taxonomy の構築
+
+Ver.7.2 §21 P2（3つのテーマ体系が未統合）を解決。**国家試験1,080問・クイズ110問を
+`themeId` で統一テーマ Master（`themes[]`）に接続**し、テーマページから出題実績と
+関連クイズを一本のデータ構造で辿れるようにした。
+
+### データ構造
+
+```
+ExamQuestion (src/data/raw/exam-*.csv)        QuizQuestion (src/data/quizQuestions.ts)
+      │ subject（Ver.7.2.1で確定した14科目）        │ subject
+      │ themeId  ← 新設19列目                        │ themeId  ← 新設
+      ▼                                              ▼
+             ┌──────────────────────────┐
+             │  Theme Master  themes[]   │  id(=slug=URL) / name / subject
+             │  137テーマ                │  aliases / parentThemeId / studyPoint
+             └──────────────────────────┘
+                ▲                    │
+   /themes/[id] （出題統計を実データ算出）   └─▶ /quiz/theme/[id] （同 themeId のクイズ）
+   /subjects/[id]（出題数ランキングを実データ算出）
+```
+
+- **themeId = slug = URL**。`/themes/*` の既存126 URL はすべて不変。新規テーマ11件が
+  新URLとして増えるのみ（**既存URL変更 0・redirect 0**）。
+- `normalizedTheme`（CSV英語スラッグ52種）は `/analysis/*` の年度別集計用に**併存維持**。
+  `themeId` が新しい正準リンク。
+
+### 3体系の対応（Ver.7.2.2 前）
+
+| 体系 | 場所 | 規模 | 役割 |
+|---|---|---|---|
+| A: `normalizedTheme` | `exam-*.csv` 10列目 | 52スラッグ | `/analysis` 年度別頻出集計（粗い52バケット） |
+| B: `themes[]` | `src/lib/data.ts` | 126テーマ | `/themes/*`・`/subjects/*` の学習コンテンツ |
+| C: `quiz.theme` | `quizQuestions.ts` | 91文字列 | クイズカードの表示ラベル |
+
+A↔B↔C に外部キーが無く、1,080問→126テーマの対応率は **0%**、quiz.theme の
+55種が themes 名と不一致（旧 audit の唯一の WARN）だった。
+
+### Ver.7.2.2 で実施
+
+1. **Theme型を拡張**：`parentThemeId?`（最小限の階層化）を追加。`id` を themeId 兼 slug と明記。
+2. **Theme Master を 126 → 137 に拡張**（削除ゼロ）。被覆ギャップを埋める11テーマを追加：
+   - `cg-shokogaku`（症候学・42問）… 臨床医学総論の中心。Ver.7.2.1で総論が10問/回に増えた分の受け皿
+   - `oo-shinsatsu-bensho`（四診と弁証の枠組み・31問）／`oo-keiraku-keimyaku`（経絡系統と経脈病証・14問）／`oo-chiryo-gairon`（治療総論・6問）… 東洋医学概論の診察・弁証・治療の枠組み（Ver.7.2.1で概論が16問/回に）
+   - `me-kotsudo-shuketsu`（骨度法・取穴法）／`me-kiketsu`（奇穴）／`me-sonota-tokketsu`（絡穴・八会穴・下合穴・四総穴・八脈交会穴・背部兪穴）／`me-shishin-anzen`（危険部位・禁鍼禁灸穴）… 経絡経穴概論の粒度不足（Ver.7.2 §21 P3）を解消
+   - `cs-ganka-jibi`（眼科・耳鼻咽喉科疾患・7問）／`cs-fujinka-nyusen`（女性生殖器・乳腺疾患・4問）… 臨床医学各論の欠落領域
+   - `hy-chiiki-kokusai`（地域保健・精神保健・国際保健・3問）
+3. **CSV に `themeId` 列（19列目）を追加**。1,080問すべてを subject + officialSmall + subTheme +
+   studyPoint のキーワード分類で `themeId` 付与。手動オーバーライド3件、
+   接続率 **1,080/1,080（100%）**、未分類 0。
+4. **クイズ110問に `themeId` を追加**（`theme` 文字列は表示用サブラベルとして併存）。
+   接続率 **110/110（100%）**。
+5. **テーマページ／科目ページを themeId 実データに接続**：出題数・年度推移・直近3年・
+   関連クイズ数を `aggregateByThemeId` から動的算出（ハードコードなし）。`src/lib/themeStats.ts` に集約。
+6. **`/quiz/theme/[themeId]` を新設**：テーマページの「このテーマの問題を解く」から遷移。
+   クイズが1問以上ある55テーマに生成。
+7. **`npm run audit:data` に themeId 監査を追加**：exam/quiz の themeId 未設定・不明ID・
+   科目不一致（総合問題帯は除外）・orphan テーマ・broken parentThemeId・
+   ヘッダー19列。旧「quiz.theme 55種不一致」WARN は themeId 参照チェックに置換。
+
+### 統合後の数値（`npm run audit:data`）
+
+| 指標 | 値 |
+|---|---|
+| A: `normalizedTheme` 種類 | 52（併存維持・変更なし） |
+| B: `themes[]` 旧総数 | 126 |
+| C: `quiz.theme` 旧種類 | 91 |
+| **統一 Theme Master 総数** | **137**（既存126 ＋ 新規11・削除0） |
+| parent テーマ | 2（`ph-junkan-seiri`・`ky-fukusayo-hosoku`） |
+| child テーマ（`parentThemeId` 保有） | 2（`junkan-kino`・`kyu-fukusayo` ＝ 近重複を親子で表現） |
+| alias 総数（`themes[].aliases`） | 422 |
+| 1,080問 themeId 接続 | **1,080 / 1,080（100%）** |
+| 未分類問題 | **0** |
+| 近接テーマ候補あり | 225問（上位スコアのテーマを採用。抜取り検証45件すべて妥当＝「弁証の下位分類」「各科疾患↔運動器神経疾患」等の兄弟テーマ間の僅差で、誤分類ではない） |
+| 110クイズ themeId 接続 | **110 / 110（100%）** |
+| クイズ接続率 | 100% |
+| taxonomy WARN | **0**（旧: 55種不一致） |
+| exam-connected テーマ | 131 / 137 |
+| quiz-connected テーマ | 55 / 137 |
+| 学習用テーマ（過去問0・保持） | 6（`kei-ketsu-shuchi`・`toyo-rekishi`・`menekigaku`・`cg-innai-kansen`＋近重複2） |
+| orphan テーマ（過去問もクイズも0・親も無） | **0** |
+| broken parentThemeId | 0 |
+| 既存URL変更 | **0** |
+| redirect 追加 | **0**（新規テーマURL 11 ＋ `/quiz/theme/*` 55 は純増） |
+| audit ERROR / WARN | **0 / 0** |
+
+### 今回やらなかったこと（次スプリント候補）
+
+- **`/analysis/*`（6+ページ）の themeId 移行**：年度別頻出集計は今も `normalizedTheme`（52バケット）。
+  137テーマ基準に切り替えると SEO ページの表示が大きく変わるため分離。`aggregateByThemeId` は実装済みで移行は容易。
+- **`oc-undoki-shinkei`（68問）の分割**：運動器疾患／神経疾患／症例問題で分けられるが、
+  出題基準の中項目1つに相当するため今回は単一維持。
+- **近重複テーマ2件の統合**：`junkan-kino`⇔`ph-junkan-seiri`、`kyu-fukusayo`⇔`ky-fukusayo-hosoku`。
+  参照が10箇所以上あり、`parentThemeId` で明示するに留めた（削除は次スプリントで検討）。
+- **重要度 S/A/B/C の客観ロジック化**（Ver.7.2 §21 P4）：themeId 接続が済んだので
+  「6年出題＝S / 直近3年2回以上かつ4年以上＝A」等の自動判定が可能になった。
 
 ---
 
@@ -719,9 +818,11 @@ WARN:  1   （quiz.theme が themes 側に存在しない名称 55種 ← 16.の
 | # | 課題 | 優先度 |
 |---|---|---|
 | ~~P1~~ | ~~東洋医学臨床論↔はり理論の年度間分類不整合~~ → **Ver.7.2.1 で解決済み**（冒頭セクション参照） | ✅ |
-| P2 | A（CSV normalizedTheme 52）↔B（themes 126）↔C（quiz theme）の統合（`themeId` 導入） | **高** |
-| P3 | 経絡経穴概論のテーマ拡張（絡穴・八会穴・下合穴・四総穴・八脈交会穴・背部兪穴 等） | 中 |
-| P4 | 重要度 S/A/B/C の客観的自動判定ロジック（P2 実装後） | 中 |
+| ~~P2~~ | ~~A↔B↔C の統合（`themeId` 導入）~~ → **Ver.7.2.2 で解決済み**（冒頭セクション参照）。1,080問・110クイズとも themeId 接続率100% | ✅ |
+| ~~P3~~ | ~~経絡経穴概論のテーマ拡張~~ → Ver.7.2.2 で `me-sonota-tokketsu`（絡穴・八会穴・下合穴・四総穴・八脈交会穴・背部兪穴）・`me-kiketsu`・`me-kotsudo-shuketsu`・`me-shishin-anzen` を追加 | ✅ |
+| P4 | 重要度 S/A/B/C の客観的自動判定ロジック（themeId 接続完了により実装可能に） | 中 |
+| P10 | `/analysis/*` の頻出集計を `normalizedTheme`(52) → `themeId`(137) へ移行（`aggregateByThemeId` 実装済み） | 中 |
+| P11 | `oc-undoki-shinkei`(68問) の分割、近重複2テーマ(`junkan-kino`/`kyu-fukusayo`)の統合 | 低 |
 | P5 | 2026年版出題基準に基づく新規テーマ追加（女性疾患・内部障害リハ・日本伝統医学 等）※公式PDF最終版の確認後 | 中 |
 | P6 | 全1,080件 studyPoint・全110クイズの専門家逐条監修 | 中 |
 | ~~P7~~ | ~~`29-117` の questionNumber 検証~~ → Ver.7.2.1 で経絡経穴概論へ是正済み | ✅ |

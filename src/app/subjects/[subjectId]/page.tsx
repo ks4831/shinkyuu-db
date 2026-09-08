@@ -1,9 +1,10 @@
 import type { Metadata } from 'next'
 import Link from 'next/link'
 import { notFound } from 'next/navigation'
-import { subjects, getSubject, getThemesBySubject, getTheme } from '@/lib/data'
+import { subjects, getSubject, getThemesBySubject } from '@/lib/data'
 import { getSubjectGuide } from '@/lib/subjectGuides'
 import { ALL_QUESTIONS } from '@/lib/quiz'
+import { getThemeExamStats } from '@/lib/themeStats'
 import ImportanceBadge from '@/components/ImportanceBadge'
 import SubjectSearch from '@/components/SubjectSearch'
 
@@ -60,8 +61,14 @@ export default async function SubjectDetailPage({
   if (!subject) notFound()
 
   const subjectThemes = getThemesBySubject(subjectId)
-  const sorted = [...subjectThemes].sort((a, b) => b.count - a.count || (a.importance > b.importance ? 1 : -1))
-  const top20 = sorted.slice(0, 20)
+  // themeId で国家試験1,080問と接続した実出題数
+  const examStatOf = (id: string) => getThemeExamStats(id)
+  const qCount = (id: string) => getThemeExamStats(id).count
+  const sorted = [...subjectThemes].sort(
+    (a, b) => qCount(b.id) - qCount(a.id) || b.count - a.count || (a.importance > b.importance ? 1 : -1),
+  )
+  const top20 = sorted.filter(t => qCount(t.id) > 0).slice(0, 20)
+  const subjectExamTotal = subjectThemes.reduce((n, t) => n + qCount(t.id), 0)
 
   const sCount = subjectThemes.filter(t => t.importance === 'S').length
   const aCount = subjectThemes.filter(t => t.importance === 'A').length
@@ -186,27 +193,29 @@ export default async function SubjectDetailPage({
               )}
             </div>
 
-            {/* 年度別出題推移 */}
-            <h3 className="text-sm font-semibold text-gray-700 mb-3">年度別・収録テーマ出題数推移</h3>
+            {/* 年度別出題推移（themeId で国家試験1,080問と接続した実データ） */}
+            <h3 className="text-sm font-semibold text-gray-700 mb-3">年度別・この科目の出題数推移</h3>
             <div className="grid grid-cols-6 gap-2">
-              {allRounds.map(round => {
-                const hitCount = subjectThemes.filter(t => t.examRounds.includes(round)).length
-                const maxPossible = subjectThemes.length
-                return (
+              {(() => {
+                const perRound = allRounds.map(round =>
+                  subjectThemes.reduce((n, t) => n + (examStatOf(t.id).byRound[round] ?? 0), 0),
+                )
+                const maxN = Math.max(1, ...perRound)
+                return allRounds.map((round, i) => (
                   <div key={round} className="flex flex-col items-center gap-1">
                     <div className="w-full h-20 flex items-end justify-center">
                       <div
                         className="w-8 rounded-t-md bg-green-400 transition-all"
-                        style={{ height: maxPossible > 0 ? `${Math.max(8, (hitCount / maxPossible) * 80)}px` : '8px' }}
+                        style={{ height: `${Math.max(8, (perRound[i] / maxN) * 80)}px` }}
                       />
                     </div>
-                    <span className="text-xs font-bold text-green-700">{hitCount}</span>
+                    <span className="text-xs font-bold text-green-700">{perRound[i]}</span>
                     <span className="text-xs text-gray-500">第{round}回</span>
                   </div>
-                )
-              })}
+                ))
+              })()}
             </div>
-            <p className="mt-2 text-xs text-gray-400">各年度でこの科目から出題されたテーマ数（収録テーマ中）</p>
+            <p className="mt-2 text-xs text-gray-400">各年度でこの科目から出題された問題数（6年計 {subjectExamTotal} 問）</p>
           </section>
 
           {/* 学習ロードマップ */}
@@ -280,12 +289,13 @@ export default async function SubjectDetailPage({
           {top20.length > 0 && (
             <section id="ranking" className="bg-white rounded-2xl border border-gray-100 p-5 mb-4">
               <h2 className="font-bold text-gray-800 mb-4">
-                出題回数 TOP{Math.min(20, top20.length)}
-                <span className="text-xs text-gray-400 font-normal ml-2">第29〜34回 合算</span>
+                出題数 TOP{Math.min(20, top20.length)}
+                <span className="text-xs text-gray-400 font-normal ml-2">第29〜34回 合算（問数）</span>
               </h2>
               <div className="space-y-2">
                 {top20.map((t, i) => {
-                  const maxCount = top20[0].count || 1
+                  const maxCount = qCount(top20[0].id) || 1
+                  const c = qCount(t.id)
                   return (
                     <Link
                       key={t.id}
@@ -306,16 +316,16 @@ export default async function SubjectDetailPage({
                             {t.name}
                           </span>
                           <ImportanceBadge importance={t.importance} showLabel={false} />
-                          <span className="text-xs text-gray-400 ml-auto">直近第{t.latestRound}回</span>
+                          <span className="text-xs text-gray-400 ml-auto">直近第{examStatOf(t.id).latestRound || t.latestRound}回</span>
                         </div>
                         <div className="w-full bg-gray-100 rounded-full h-1.5">
                           <div
                             className="bg-green-400 h-1.5 rounded-full"
-                            style={{ width: `${(t.count / maxCount) * 100}%` }}
+                            style={{ width: `${(c / maxCount) * 100}%` }}
                           />
                         </div>
                       </div>
-                      <span className="text-sm font-bold text-green-700 flex-shrink-0">{t.count}回</span>
+                      <span className="text-sm font-bold text-green-700 flex-shrink-0">{c}問</span>
                     </Link>
                   )
                 })}

@@ -65,6 +65,7 @@ export function parseExamCSV(csvText: string): ExamQuestion[] {
       officialMedium: row['officialMedium'] || undefined,
       officialSmall: row['officialSmall'] || undefined,
       normalizedTheme: row['normalizedTheme'] || undefined,
+      themeId: row['themeId'] || undefined,
       subTheme: row['subTheme'] || undefined,
       importance: (row['importance'] as Importance) || undefined,
       studyPoint: row['studyPoint'] || undefined,
@@ -176,6 +177,38 @@ export function aggregateByTheme(questions: ExamQuestion[]): ThemeAggregate[] {
   }
 
   return Array.from(map.values()).sort((a, b) => b.count - a.count)
+}
+
+// --- 統一テーマ（themeId）別の出題集計 ---
+
+export type ThemeIdStat = {
+  themeId: string
+  count: number            // 設問数（6年通算）
+  examRounds: number[]     // 出題された回（昇順・重複なし）
+  byRound: Record<number, number>
+  latestRound: number
+  recent3Count: number     // 直近3回（第32〜34回）の設問数
+}
+
+/** 全設問を themeId でグルーピングして出題統計を返す */
+export function aggregateByThemeId(questions: ExamQuestion[]): Map<string, ThemeIdStat> {
+  const map = new Map<string, ThemeIdStat>()
+  for (const q of questions) {
+    const id = q.themeId
+    if (!id) continue
+    let s = map.get(id)
+    if (!s) {
+      s = { themeId: id, count: 0, examRounds: [], byRound: {}, latestRound: 0, recent3Count: 0 }
+      map.set(id, s)
+    }
+    s.count++
+    s.byRound[q.examRound] = (s.byRound[q.examRound] ?? 0) + 1
+    if (!s.examRounds.includes(q.examRound)) s.examRounds.push(q.examRound)
+    if (q.examRound > s.latestRound) s.latestRound = q.examRound
+    if (q.examRound >= 32) s.recent3Count++
+  }
+  for (const s of map.values()) s.examRounds.sort((a, b) => a - b)
+  return map
 }
 
 export function aggregateBySubject(questions: ExamQuestion[]): SubjectAggregate[] {
