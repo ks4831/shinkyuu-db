@@ -312,6 +312,11 @@ try {
   })
   info.examThemeIdMissing = examNoTheme.length
   info.examThemeIdConnected = rows.length - examNoTheme.length
+  // themeId 集計の総数は必ず 1,080（分析ランキングの合計が総問題数と一致すること）
+  const themeIdSum = rows.filter((q) => q.themeId && themeIdSet.has(q.themeId)).length
+  if (themeIdSum !== ROUNDS.length * QUESTIONS_PER_ROUND) {
+    E(`themeId 集計総数 ${themeIdSum} ≠ ${ROUNDS.length * QUESTIONS_PER_ROUND}（分析の合計が総問題数と不一致）`)
+  }
   if (examBadTheme.length) E(`exam question の themeId が themes[] に存在しない ${examBadTheme.length}: ${examBadTheme.slice(0, 8).map((q) => `${q.id}(${q.themeId})`).join(', ')}`)
   if (examThemeSubjMismatch.length) E(`exam question の themeId 科目とテーマ科目が不一致 ${examThemeSubjMismatch.length}: ${examThemeSubjMismatch.slice(0, 8).map((q) => `${q.id}(${q.subject}≠${themeById.get(q.themeId).subject})`).join(', ')}`)
   if (examNoTheme.length) W(`exam question に themeId 未設定 ${examNoTheme.length} 行（要確認）: ${examNoTheme.slice(0, 10).map((q) => q.id).join(', ')}`)
@@ -473,6 +478,30 @@ try {
   } catch (e) { W(`未出題経穴の集計に失敗: ${e.message}`) }
 } catch (e) {
   E(`data/quiz/acupoints の読み込みに失敗: ${e.stack || e.message}`)
+}
+
+/* ── Ver.7.2.3: ユーザー向け分析UIが旧 normalizedTheme を使っていないか ── */
+{
+  const UI_GLOBS = [
+    'src/app/analysis',
+    'src/app/page.tsx',
+    'src/components/analysis',
+  ]
+  const offenders = []
+  const scan = (p) => {
+    const st = fs.statSync(p)
+    if (st.isDirectory()) { for (const f of fs.readdirSync(p)) scan(path.join(p, f)); return }
+    if (!/\.(tsx?|jsx?)$/.test(p)) return
+    const src = fs.readFileSync(p, 'utf-8')
+    if (/\bnormalizedTheme\b/.test(src) || /\baggregateByTheme\b(?!Id)/.test(src) || /THEME_LABELS/.test(src)) {
+      offenders.push(path.relative(ROOT, p))
+    }
+  }
+  for (const g of UI_GLOBS) { const abs = path.join(ROOT, g); if (fs.existsSync(abs)) scan(abs) }
+  info.analysisLegacyUsage = offenders
+  if (offenders.length) {
+    E(`ユーザー向け分析UIが旧 normalizedTheme/aggregateByTheme/THEME_LABELS を使用 ${offenders.length}: ${offenders.join(', ')}`)
+  }
 }
 
 /* ══════════════ 出力 ══════════════ */

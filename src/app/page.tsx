@@ -1,17 +1,13 @@
 import type { Metadata } from 'next'
 import Link from 'next/link'
 import {
-  loadAllExamQuestions,
-  aggregateByTheme,
-  calcImportanceByCount,
   EXAM_ROUNDS,
   QUESTIONS_PER_ROUND,
 } from '@/lib/examQuestions'
+import { sixYearThemes } from '@/lib/analysisThemes'
 import { ALL_QUESTIONS } from '@/lib/quiz'
 import { ACUPOINTS } from '@/data/acupoints'
-import ImportanceBadge from '@/components/ImportanceBadge'
 import HomeProgressCard from '@/components/quiz/HomeProgressCard'
-import type { Importance } from '@/lib/types'
 
 export const metadata: Metadata = {
   title: '鍼灸国試対策を、今日も10問｜スマホで解く国家試験クイズ',
@@ -19,29 +15,9 @@ export const metadata: Metadata = {
     '過去6年・1,080問の出題分析にもとづくオリジナル問題を、1日10問スマホで。1問1画面・解説と図解つき、苦手は自動で復習リストへ。経穴学習にも対応。',
 }
 
-const THEME_LABELS: Record<string, string> = {
-  'meridians-acupoints': '経絡経穴',
-  'acupuncture-technique': '刺鍼・灸法',
-  'tcm-clinical': '弁証論治',
-  'tcm-fundamentals': '東洋医学基礎',
-  'neurology': '神経疾患',
-  'orthopedics': '整形外科疾患',
-  'general-pathology': '病理学総論',
-  'nervous-system': '神経系解剖',
-  'rehabilitation': 'リハビリ',
-  'cardiology': '循環器疾患',
-}
-
 export default function HomePage() {
-  const allQ = loadAllExamQuestions()
-  const recentAgg = aggregateByTheme(allQ)
-    .slice(0, 8)
-    .map((t) => ({
-      theme: t.normalizedTheme,
-      label: THEME_LABELS[t.normalizedTheme] ?? t.normalizedTheme,
-      count: t.count,
-      importance: calcImportanceByCount(t.count) as Importance,
-    }))
+  // 直近6年の頻出テーマ（統一テーマ themeId 基準）
+  const recentAgg = sixYearThemes().slice(0, 8)
   const recentMax = recentAgg[0]?.count ?? 1
 
   return (
@@ -131,21 +107,23 @@ export default function HomePage() {
           </div>
           <div className="divide-y divide-gray-50 rounded-2xl border border-gray-100 bg-white">
             {recentAgg.map((t, i) => (
-              <div key={t.theme} className="flex items-center gap-3 px-3 py-2.5">
+              <Link key={t.themeId} href={`/themes/${t.themeId}`} className="flex items-center gap-3 px-3 py-2.5 hover:bg-gray-50">
                 <span className="flex h-6 w-6 flex-shrink-0 items-center justify-center rounded-full bg-gray-100 text-[11px] font-bold text-gray-500">
                   {i + 1}
                 </span>
                 <div className="min-w-0 flex-1">
                   <div className="flex items-center gap-1.5">
-                    <span className="truncate text-sm text-gray-800">{t.label}</span>
-                    <ImportanceBadge importance={t.importance} showLabel={false} />
+                    <span className="truncate text-sm text-gray-800">{t.name}</span>
+                    <span className="flex-shrink-0 text-[11px] text-gray-400">{t.subjectShort}</span>
                   </div>
                   <div className="mt-1 h-1 w-full rounded-full bg-gray-100">
                     <div className="h-1 rounded-full bg-green-500" style={{ width: `${Math.round((t.count / recentMax) * 100)}%` }} />
                   </div>
                 </div>
-                <span className="w-12 flex-shrink-0 text-right text-sm font-bold text-green-700">{t.count}問</span>
-              </div>
+                <span className="w-16 flex-shrink-0 text-right text-sm font-bold text-green-700">
+                  {t.count}問<span className="block text-[10px] font-normal text-gray-400">{t.yearCount}/6年</span>
+                </span>
+              </Link>
             ))}
           </div>
         </div>

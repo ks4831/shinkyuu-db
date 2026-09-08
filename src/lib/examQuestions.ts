@@ -128,6 +128,12 @@ export type RoundStatus = {
 
 // --- 集計関数 ---
 
+/**
+ * @deprecated LEGACY: 旧 normalizedTheme（英語スラッグ52種）ベースの集計。
+ * Ver.7.2.3 以降、ユーザー向け分析は themeId 正本（`aggregateByThemeId` /
+ * `src/lib/analysisThemes.ts`）に統一。新規UIでは使用しない。
+ * normalizedTheme 列は原資料の分類として CSV に併存維持。
+ */
 export function aggregateByTheme(questions: ExamQuestion[]): ThemeAggregate[] {
   const map = new Map<string, ThemeAggregate>()
 

@@ -1,6 +1,122 @@
-# 鍼灸DB データ監査（Ver.7.2 → Ver.7.2.2）
+# 鍼灸DB データ監査（Ver.7.2 → Ver.7.2.3）
 
 最終更新: 2026-09-08 / 実行方法: `npm run audit:data`（`scripts/audit-data.mjs`）
+
+---
+
+## Ver.7.2.3 スプリント（2026-09-08）— 分析エンジンの Theme Master 完全統一
+
+Ver.7.2.2 で 1,080問→themeId→Theme Master まで接続したが、`/analysis/*` の
+年度別頻出分析だけが旧 `normalizedTheme`（52バケット）を使い続けていた。
+本スプリントで**サイト上の過去問分析をすべて themeId 正本に統一**した。
+
+### 正式なデータフロー
+
+```
+CSV raw data (src/data/raw/exam-*.csv)
+   │
+   ▼  parseExamCSV / loadAllExamQuestions
+ExamQuestion { subject(14科目), themeId(19列目), normalizedTheme(legacy) }
+   │
+   ├─ subject   ─────────────▶ 科目別集計（14科目・Ver.7.2.1で確定）
+   │
+   ▼  themeId
+Theme Master  themes[]（137テーマ）
+   │
+   ▼  src/lib/analysisThemes.ts（aggregateByThemeId を集約・唯一の集計ロジック）
+themeStats / AnalysisThemeRow { count, byRound, yearCount, recent3, freqTier, learningImportance }
+   │
+   ├──▶ /analysis/exam-29〜34（ExamAnalysis）        頻出ランキング・出題数別分類
+   ├──▶ /analysis/compare/recent-3〜6-years・33-vs-34（CompareAnalysis）  合算TOP20・増減トレンド
+   ├──▶ / （TOP）  直近6年の頻出テーマ8件
+   ├──▶ /subjects/[id]  出題数ランキング
+   ├──▶ /themes/[id]  出題統計・関連クイズ
+   └──▶ /quiz/theme/[id]  同 themeId のクイズ
+
+legacy（横に併存・UI集計には不使用）:
+  ExamQuestion.normalizedTheme（英語スラッグ52種）… 原資料の分類。
+  examQuestions.ts の aggregateByTheme / aggregateToThemes … @deprecated
+```
+
+### 実施内容
+
+1. **`src/lib/analysisThemes.ts` 新設**：`rankThemes(rounds[])` / `themesForRound` /
+   `sixYearThemes` / `subjectCountsForRounds` を提供。集計ロジックはここ1箇所のみ
+   （旧: 11ページに複製されていた `aggregateByTheme` + `THEME_LABELS` を全廃）。
+2. **`ExamAnalysis` / `CompareAnalysis` 共通コンポーネント新設**。11ページの本体を
+   これに置換（各ページは metadata ＋ 1行の呼び出しのみに）。旧ページの
+   ハードコード済みプロース（normalizedTheme キー・手書き問数）を全削除し、
+   themeId 実データからの動的生成に変更。
+3. **ランキング → themeId 基準**。テーマ名は `themes[].name`、リンクは `/themes/[themeId]`。
+   「◯問（実出題数）」と「◯/6年（出題年度数）」を明示的に区別して表示。
+4. **importance と frequency を分離**（下記）。
+5. **TOP（`/`）の「直近6年の頻出テーマ」も themeId 基準**に変更。
+6. **`audit:data` に検査追加**：
+   - ユーザー向け分析UI（`src/app/analysis`・`src/app/page.tsx`・`src/components/analysis`）が
+     `normalizedTheme` / `aggregateByTheme` / `THEME_LABELS` を含む → **ERROR**
+   - themeId 集計総数 ≠ 1,080 → **ERROR**
+7. `normalizedTheme` を CSV に残置（原資料分類）。`aggregateByTheme` / `aggregateToThemes`
+   に `@deprecated` を明記。
+
+### importance（学習優先度）と frequency（出題頻度）の分離
+
+| 軸 | 定義 | 値の出所 | UI表示 |
+|---|---|---|---|
+| **frequency（頻出度）** | 実際の国家試験出題数 | `ExamQuestion.themeId` 集計（正確） | ランキング順位・「◯問」・「出題数別分類 S/A/B/C（この回8問以上…）」 |
+| **learningImportance（学習優先度）** | 学習上どれだけ優先すべきか | `themes[].importance`（編集者設定・現状は出題年度数ベース） | テーマ詳細ページの「重要度 S/A/B/C」「第35回に向けた学習優先度」 |
+
+両者は**実データ上も乖離**している：
+- `oc-undoki-shinkei`（運動器・神経疾患の鍼灸治療）＝ learningImportance **B** だが 6年 **68問で頻出1位**
+- `kei-ketsu-shuchi`（経穴の主治）＝ learningImportance **S** だが過去問 **0問**（学習用テーマ）
+- learningImportance S の30テーマの出題数 min 0 / 中央 10 / max 52
+
+→ 「S だから頻出と表示」「頻出だから自動で S」という実装は **無い**（旧 exam ページの
+`calcImportanceByCount` を「重要度」と誤ラベルしていた箇所を「出題数別分類」に是正）。
+learningImportance の客観ロジック化は P4（次スプリント）。
+
+### 移行前後のランキング比較（6年合算 TOP10）
+
+| # | 旧 normalizedTheme（52バケット） | 新 themeId（137テーマ） |
+|--:|---|---|
+| 1 | acupuncture-technique 164問 | 運動器・神経疾患の鍼灸治療 68問（東洋医学臨床論） |
+| 2 | meridians-acupoints 122問 | 十二経脈 52問（経絡経穴概論） |
+| 3 | tcm-clinical 116問 | 各科疾患・症状別の鍼灸治療 52問（東洋医学臨床論） |
+| 4 | orthopedics 71問 | 主要症候の診かた（症候学）42問（臨床医学総論） |
+| 5 | neurology 67問 | 四診と弁証の枠組み 31問（東洋医学概論） |
+| 6 | rehabilitation 67問 | 経絡治療・配穴法則と経脈病証 29問（東洋医学臨床論） |
+| 7 | tcm-fundamentals 48問 | 灸の全身作用と作用機序 25問（きゅう理論） |
+| 8 | health-policy 28問 | 感染症 23問（臨床医学各論） |
+| 9 | general-pathology 26問 | 臓腑弁証 20問（東洋医学臨床論） |
+| 10 | infectious-disease 25問 | リハビリテーションチームと多職種連携・歩行分析 19問（リハ） |
+
+**総数はどちらも 1,080問で不変。** 旧は「刺鍼手技」「経絡経穴」「弁証論治」の3大バケットが
+上位を占めていたが、新はより細かい学習単位で分散。各行に所属科目を併記して安定した
+14科目に紐付けている。
+
+### 137テーマの出題数分布（6年）
+
+| 区分 | テーマ数 |
+|---|---:|
+| 0問（学習用・保持） | 6 |
+| 1問 | 3 |
+| 2〜5問 | 65 |
+| 6〜10問 | 37 |
+| 11問以上 | 26 |
+
+### 巨大テーマ（6年で15問以上・分割候補として報告のみ）
+
+| themeId | テーマ | 科目 | 6年問数 | 全体% | 科目内% |
+|---|---|---|---:|---:|---:|
+| oc-undoki-shinkei | 運動器・神経疾患の鍼灸治療 | 東洋医学臨床論 | 68 | 6.3% | 33% |
+| juni-kei-myaku | 十二経脈 | 経絡経穴概論 | 52 | 4.8% | 43% |
+| oc-kakka-chiryo | 各科疾患・症状別の鍼灸治療 | 東洋医学臨床論 | 52 | 4.8% | 25% |
+| cg-shokogaku | 主要症候の診かた（症候学） | 臨床医学総論 | 42 | 3.9% | 70% |
+| oo-shinsatsu-bensho | 四診と弁証の枠組み | 東洋医学概論 | 31 | 2.9% | 32% |
+| ky-zenshin-sayo | 灸の全身作用と作用機序 | きゅう理論 | 25 | 2.3% | 42% |
+
+`cg-shokogaku`（症候学）は臨床医学総論の70%を占め、`juni-kei-myaku`（十二経脈）は
+経絡経穴概論の43%。いずれも「出題基準の中項目1つ」に相当するため広く見えるが、
+分割は次スプリント（P11）で検討。今回は分割しない。
 
 ---
 
@@ -821,8 +937,10 @@ WARN:  1   （quiz.theme が themes 側に存在しない名称 55種 ← 16.の
 | ~~P2~~ | ~~A↔B↔C の統合（`themeId` 導入）~~ → **Ver.7.2.2 で解決済み**（冒頭セクション参照）。1,080問・110クイズとも themeId 接続率100% | ✅ |
 | ~~P3~~ | ~~経絡経穴概論のテーマ拡張~~ → Ver.7.2.2 で `me-sonota-tokketsu`（絡穴・八会穴・下合穴・四総穴・八脈交会穴・背部兪穴）・`me-kiketsu`・`me-kotsudo-shuketsu`・`me-shishin-anzen` を追加 | ✅ |
 | P4 | 重要度 S/A/B/C の客観的自動判定ロジック（themeId 接続完了により実装可能に） | 中 |
-| P10 | `/analysis/*` の頻出集計を `normalizedTheme`(52) → `themeId`(137) へ移行（`aggregateByThemeId` 実装済み） | 中 |
-| P11 | `oc-undoki-shinkei`(68問) の分割、近重複2テーマ(`junkan-kino`/`kyu-fukusayo`)の統合 | 低 |
+| ~~P10~~ | ~~`/analysis/*` の頻出集計を `normalizedTheme` → `themeId` へ移行~~ → **Ver.7.2.3 で解決済み**（冒頭セクション参照）。分析11ページ＋TOP を themeId 正本に統一 | ✅ |
+| P11 | 巨大テーマの分割（`oc-undoki-shinkei` 68問／`juni-kei-myaku` 52問／`cg-shokogaku` 42問 等）、近重複2テーマ(`junkan-kino`/`kyu-fukusayo`)の統合 | 低 |
+| P12 | `themes[].importance` の客観ロジック化（頻出度＝themeId実出題数と分離した「学習優先度」の再定義）。旧 P4 を Ver.7.2.3 の分離を前提に再掲 | 中 |
+| P13 | 管理用ページ（`/admin/data-entry-guide/*`）の CSV ヘッダーを19列（themeId 追加）に更新。第35回データ入力の前に必要 | 低 |
 | P5 | 2026年版出題基準に基づく新規テーマ追加（女性疾患・内部障害リハ・日本伝統医学 等）※公式PDF最終版の確認後 | 中 |
 | P6 | 全1,080件 studyPoint・全110クイズの専門家逐条監修 | 中 |
 | ~~P7~~ | ~~`29-117` の questionNumber 検証~~ → Ver.7.2.1 で経絡経穴概論へ是正済み | ✅ |
