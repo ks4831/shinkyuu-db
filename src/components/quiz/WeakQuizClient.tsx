@@ -5,6 +5,7 @@ import Link from 'next/link'
 import QuizRunner from './QuizRunner'
 import { pickByIds, type QuizQuestion } from '@/lib/quiz'
 import { getWeakIds, getReviewIds } from '@/lib/quizStorage'
+import { trackSessionOnce } from '@/lib/analytics'
 
 export default function WeakQuizClient({ count = 10 }: { count?: number }) {
   const [ready, setReady] = useState(false)
@@ -15,8 +16,13 @@ export default function WeakQuizClient({ count = 10 }: { count?: number }) {
     const weak = getWeakIds()
     const review = getReviewIds().filter((id) => !weak.includes(id))
     const ids = [...weak, ...review]
-    setQuestions(pickByIds(ids, count))
+    const picked = pickByIds(ids, count)
+    setQuestions(picked)
     setReady(true)
+    // 復習を開始した（出題対象あり）。タブのセッション中に1回だけ計上する。
+    if (picked.length > 0) {
+      trackSessionOnce('review_start', { queued: ids.length })
+    }
   }, [count])
 
   if (!ready) {
@@ -48,6 +54,12 @@ export default function WeakQuizClient({ count = 10 }: { count?: number }) {
       title="苦手復習"
       reviewHref="/quiz/weak"
       retryHref="/quiz/weak"
+      onFinished={(results) =>
+        trackSessionOnce('review_complete', {
+          score: results.filter(Boolean).length,
+          total: results.length,
+        })
+      }
     />
   )
 }

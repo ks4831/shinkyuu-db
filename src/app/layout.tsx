@@ -1,4 +1,5 @@
 import type { Metadata } from 'next'
+import { GoogleAnalytics } from '@next/third-parties/google'
 import './globals.css'
 import Header from '@/components/Header'
 import BottomNav from '@/components/BottomNav'
@@ -6,6 +7,11 @@ import ScrollToTop from '@/components/ScrollToTop'
 import Link from 'next/link'
 
 const SITE_URL = process.env.NEXT_PUBLIC_SITE_URL ?? 'https://shinkyuu-db.vercel.app'
+
+// GA4 は「本番ビルド」かつ「Measurement ID が設定済み」のときだけ読み込む。
+// 未設定でもサイトは通常どおり動作する。開発環境では読み込まない。
+const GA_ID = process.env.NEXT_PUBLIC_GA_ID
+const GA_ENABLED = process.env.NODE_ENV === 'production' && !!GA_ID
 
 export const metadata: Metadata = {
   title: {
@@ -98,6 +104,7 @@ export default function RootLayout({
                   <li><Link href="/about" className="text-gray-500 hover:text-green-600 transition-colors">About</Link></li>
                   <li><Link href="/sources" className="text-gray-500 hover:text-green-600 transition-colors">データソース</Link></li>
                   <li><Link href="/disclaimer" className="text-gray-500 hover:text-green-600 transition-colors">免責事項</Link></li>
+                  <li><Link href="/privacy" className="text-gray-500 hover:text-green-600 transition-colors">プライバシーポリシー</Link></li>
                 </ul>
               </div>
             </div>
@@ -108,6 +115,7 @@ export default function RootLayout({
           </div>
         </footer>
       </body>
+      {GA_ENABLED ? <GoogleAnalytics gaId={GA_ID!} /> : null}
     </html>
   )
 }

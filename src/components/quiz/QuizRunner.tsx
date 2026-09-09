@@ -94,6 +94,8 @@ export default function QuizRunner({
   const [inReview, setInReview] = useState(false)
   const [results, setResults] = useState<boolean[]>(initialResults ?? [])
   const [finished, setFinished] = useState(false)
+  // onFinished は「全問終了時に1度だけ」。二度押し等での二重呼び出しを防ぐ。
+  const finishFired = useRef(false)
 
   // 「次の問題」で問題が切り替わった直後だけ、問題カード先頭へスクロールする
   const questionTopRef = useRef<HTMLDivElement>(null)
@@ -158,6 +160,8 @@ export default function QuizRunner({
 
   function handleNext() {
     if (index + 1 >= total) {
+      if (finishFired.current) return
+      finishFired.current = true
       setFinished(true)
       onFinished?.([...results])
       return

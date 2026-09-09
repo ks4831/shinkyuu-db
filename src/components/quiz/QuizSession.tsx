@@ -1,10 +1,12 @@
 'use client'
 
+import { useEffect } from 'react'
 import QuizRunner from './QuizRunner'
 import {
   ALL_QUESTIONS,
   type QuizQuestion,
 } from '@/lib/quiz'
+import { trackSessionOnce } from '@/lib/analytics'
 
 type Mode = 'random' | 'frequent' | 'acupoints' | 'subject' | 'theme' | 'standard2026'
 
@@ -51,6 +53,12 @@ export default function QuizSession({
   // プールは決定的。実際の10問抽選と選択肢シャッフルは QuizRunner がマウント後に行う。
   const pool = poolFor(mode, subjectId, themeId)
   const pickFromStart = mode === 'frequent' // 頻出は重要度順の先頭寄りから選ぶ
+  const isStandard2026 = mode === 'standard2026'
+
+  // 新基準クイズ（第35回対応）の開始。タブのセッション中に1回だけ計上する。
+  useEffect(() => {
+    if (isStandard2026) trackSessionOnce('standard2026_quiz_start')
+  }, [isStandard2026])
 
   return (
     <QuizRunner
@@ -60,6 +68,15 @@ export default function QuizSession({
       title={title}
       retryHref={retryHref}
       reviewHref={reviewHref}
+      onFinished={
+        isStandard2026
+          ? (results) =>
+              trackSessionOnce('standard2026_quiz_complete', {
+                score: results.filter(Boolean).length,
+                total: results.length,
+              })
+          : undefined
+      }
     />
   )
 }

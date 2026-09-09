@@ -13,6 +13,7 @@ import {
   type DailyState,
 } from '@/lib/dailyQuiz'
 import { subjectLabel, type QuizQuestion } from '@/lib/quiz'
+import { trackDailyOnce } from '@/lib/analytics'
 
 export default function DailyQuizClient({ themeExamCount }: { themeExamCount: Record<string, number> }) {
   const [state, setState] = useState<DailyState | null>(null)
@@ -23,6 +24,10 @@ export default function DailyQuizClient({ themeExamCount }: { themeExamCount: Re
     const s = getOrCreateDailyState()
     setState(s)
     setPhase(s.completed ? 'done' : 'running')
+    // 未完了の「今日の10問」を開いた＝開始。端末×日付で1回だけ計上する。
+    if (!s.completed) {
+      trackDailyOnce('daily_start', { resumed: s.currentIndex > 0 })
+    }
   }, [themeExamCount])
 
   const questions = useMemo<QuizQuestion[]>(
@@ -55,6 +60,15 @@ export default function DailyQuizClient({ themeExamCount }: { themeExamCount: Re
         const finalized = finalizeDailyIfComplete()
         setState(finalized)
         setPhase('done')
+        // 10問すべて回答して完了した瞬間。端末×日付で1回だけ計上する。
+        if (finalized.completed) {
+          const correct = finalized.answers.filter((a) => a === true).length
+          trackDailyOnce('daily_complete', {
+            correct,
+            total: finalized.answers.length,
+            streak: displayStreak().current,
+          })
+        }
       }}
       finishSlot={() => null}
     />
