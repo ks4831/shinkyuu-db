@@ -68,14 +68,50 @@ export default function HomePage() {
         </div>
       </section>
 
-      {/* ── 4つのメニュー ─────────────────────── */}
+      {/* ── 2つの役割（過去問分析 と 学習クイズ の違い） ─── */}
       <section className="px-4 pt-6">
+        <div className="mx-auto max-w-md">
+          <h2 className="mb-2 text-sm font-bold text-gray-800">このサイトでできること</h2>
+          <div className="divide-y divide-gray-100 overflow-hidden rounded-2xl border border-gray-200 bg-white">
+            <Link href="/analysis/compare/recent-6-years" className="flex gap-3 p-4 hover:bg-gray-50">
+              <span className="text-xl" aria-hidden="true">📊</span>
+              <span className="min-w-0 flex-1">
+                <span className="flex items-baseline justify-between gap-2">
+                  <span className="text-sm font-bold text-gray-900">過去問分析</span>
+                  <span className="flex-shrink-0 text-[11px] text-gray-400">第29〜34回</span>
+                </span>
+                <span className="mt-0.5 block text-xs leading-relaxed text-gray-500">
+                  実際の過去問{(EXAM_ROUNDS.length * QUESTIONS_PER_ROUND).toLocaleString()}問を分析 → 何がよく出るかを見る
+                </span>
+              </span>
+              <span className="self-center text-gray-300" aria-hidden="true">›</span>
+            </Link>
+            <Link href="/quiz" className="flex gap-3 p-4 hover:bg-gray-50">
+              <span className="text-xl" aria-hidden="true">📝</span>
+              <span className="min-w-0 flex-1">
+                <span className="flex items-baseline justify-between gap-2">
+                  <span className="text-sm font-bold text-gray-900">学習クイズ</span>
+                  <span className="flex-shrink-0 text-[11px] text-gray-400">オリジナル問題</span>
+                </span>
+                <span className="mt-0.5 block text-xs leading-relaxed text-gray-500">
+                  学習用オリジナル問題{ALL_QUESTIONS.length}問 → 頻出テーマを問題で勉強する
+                </span>
+              </span>
+              <span className="self-center text-gray-300" aria-hidden="true">›</span>
+            </Link>
+          </div>
+          <p className="mt-2 text-[11px] leading-relaxed text-gray-400">
+            学習クイズは過去問そのものではなく、過去問の頻出傾向や第35回の新出題基準をもとに作成した練習問題です。
+          </p>
+        </div>
+      </section>
+
+      {/* ── ほかのメニュー ─────────────────────── */}
+      <section className="px-4 pt-5">
         <div className="mx-auto grid max-w-md grid-cols-2 gap-3">
           {[
-            { href: '/quiz', emoji: '📝', title: 'クイズ', sub: `全${ALL_QUESTIONS.length}問・10問ずつ`, cls: 'border-green-200' },
             { href: '/acupoints', emoji: '📍', title: '経穴', sub: `${ACUPOINTS.length}穴・特定穴中心`, cls: 'border-emerald-200' },
             { href: '/subjects', emoji: '📚', title: '科目', sub: '14科目の攻略', cls: 'border-blue-200' },
-            { href: '/analysis/compare/recent-6-years', emoji: '📊', title: '分析', sub: '6年 頻出ランキング', cls: 'border-gray-200' },
           ].map((m) => (
             <Link
               key={m.href}
@@ -136,9 +172,9 @@ export default function HomePage() {
           <div className="mt-4 rounded-2xl border border-gray-100 bg-gray-50 p-4 text-xs leading-relaxed text-gray-500">
             <p className="font-semibold text-gray-600">このサイトについて</p>
             <p className="mt-1">
-              クイズは公式過去問の問題文・選択肢をそのまま掲載していません。出題傾向にもとづく
-              オリジナル問題です。出題分析は公益財団法人東洋療法研修試験財団が公表した試験データ
-              （第29〜34回1,080問）をもとにした独自分析で、当サイトは非公式です。
+              学習クイズは公式過去問の問題文・選択肢をそのまま掲載していません。過去問の出題傾向や
+              第35回の新出題基準にもとづく学習用オリジナル問題です。過去問分析は公益財団法人東洋療法
+              研修試験財団が公表した試験データ（第29〜34回1,080問）をもとにした独自分析で、当サイトは非公式です。
               学習の記録はお使いの端末内にのみ保存されます。
             </p>
           </div>

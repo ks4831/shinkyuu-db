@@ -35,7 +35,7 @@ export default function WeakQuizClient({ count = 10 }: { count?: number }) {
         <p className="text-3xl">🌱</p>
         <p className="mt-3 font-bold text-gray-800">復習が必要な問題はまだありません</p>
         <p className="mt-1 text-sm text-gray-500">
-          クイズを解いて間違えると、自動でここに追加されます。<br />
+          学習クイズを解いて間違えると、自動でここに追加されます。<br />
           解説の「☆ 復習に追加」でも登録できます。
         </p>
         <Link

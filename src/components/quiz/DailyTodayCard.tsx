@@ -96,7 +96,7 @@ export default function DailyTodayCard({ compact = false }: { compact?: boolean 
             {view.answered > 0 ? '続きを解く' : '今日の10問を始める'}
           </Link>
           {view.answered === 0 && (
-            <p className="mt-2 text-center text-[11px] text-gray-400">国試頻出＋全14科目から毎日出題</p>
+            <p className="mt-2 text-center text-[11px] text-gray-400">頻出・苦手・第35回新基準から毎日10問（学習用オリジナル問題）</p>
           )}
         </>
       )}

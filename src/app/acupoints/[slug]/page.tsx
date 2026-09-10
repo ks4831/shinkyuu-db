@@ -174,7 +174,7 @@ export default async function AcupointDetailPage({
               </li>
             ))}
           </ul>
-          <p className="mt-2 text-xs text-gray-400">クイズは「経穴クイズ」からランダムに出題されます。</p>
+          <p className="mt-2 text-xs text-gray-400">これらは学習用オリジナル問題です。「経穴クイズ」からランダムに出ます。</p>
         </section>
       )}
 

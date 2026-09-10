@@ -13,7 +13,7 @@ export default function QuizSubjectsPage() {
   return (
     <main className="mx-auto max-w-md px-4 pb-24 pt-6">
       <nav className="mb-3 text-xs text-gray-400">
-        <Link href="/quiz" className="hover:text-green-600">クイズ</Link>
+        <Link href="/quiz" className="hover:text-green-600">学習クイズ</Link>
         <span className="mx-1">/</span>
         <span className="text-gray-600">科目別</span>
       </nav>

@@ -10,7 +10,7 @@ const groups = [
   {
     title: '学習する',
     links: [
-      { href: '/quiz', label: 'クイズ（10問ずつ）' },
+      { href: '/quiz', label: '学習クイズ（10問ずつ）', note: '過去問の傾向・第35回新基準をもとにしたオリジナル問題' },
       { href: '/quiz/weak', label: '苦手復習' },
       { href: '/acupoints', label: '経穴から学ぶ' },
       { href: '/subjects', label: '科目から探す' },

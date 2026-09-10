@@ -6,9 +6,9 @@ import ProgressStrip from '@/components/quiz/ProgressStrip'
 import DailyTodayCard from '@/components/quiz/DailyTodayCard'
 
 export const metadata: Metadata = {
-  title: '鍼灸国家試験 クイズ｜10問ずつスマホで対策',
+  title: '鍼灸国家試験 学習クイズ｜出題傾向にもとづくオリジナル問題を10問ずつ',
   description:
-    '鍼灸国家試験の出題傾向に基づくオリジナル問題を、1問1画面・10問ずつ解けます。ランダム・頻出・経穴・科目別・苦手復習から選べます。',
+    '過去問そのものではなく、鍼灸国家試験の出題傾向・重要テーマ・第35回の新出題基準をもとにした学習用オリジナル問題を、1問1画面・10問ずつ。ランダム・頻出・経穴・科目別・苦手復習から選べます。',
 }
 
 const modes = [
@@ -55,12 +55,12 @@ export default function QuizTopPage() {
       <nav className="mb-3 text-xs text-gray-400">
         <Link href="/" className="hover:text-green-600">ホーム</Link>
         <span className="mx-1">/</span>
-        <span className="text-gray-600">クイズ</span>
+        <span className="text-gray-600">学習クイズ</span>
       </nav>
 
-      <h1 className="text-2xl font-bold text-gray-900">今日は何をやる？</h1>
+      <h1 className="text-2xl font-bold text-gray-900">学習クイズ｜今日は何をやる？</h1>
       <p className="mt-1 text-sm text-gray-500">
-        全{ALL_QUESTIONS.length}問（出題傾向に基づくオリジナル問題）。1回10問・1問1画面。
+        学習用オリジナル問題 全{ALL_QUESTIONS.length}問。1回10問・1問1画面。
       </p>
 
       <div className="mt-4">
@@ -68,6 +68,13 @@ export default function QuizTopPage() {
       </div>
 
       <ProgressStrip className="mt-4" />
+
+      <div className="mt-4 rounded-xl border border-blue-100 bg-blue-50/60 p-3 text-xs leading-relaxed text-gray-600">
+        <p className="font-bold text-gray-700">このクイズについて</p>
+        <p className="mt-1">
+          過去問そのものではなく、過去問の頻出傾向や重要テーマ、第35回の新出題基準をもとに作成した学習用オリジナル問題です。
+        </p>
+      </div>
 
       <p className="mt-6 mb-2 text-xs font-semibold tracking-wider text-gray-400">ほかの解き方</p>
       <div className="space-y-3">
@@ -77,8 +84,7 @@ export default function QuizTopPage() {
       </div>
 
       <p className="mt-6 rounded-xl bg-gray-50 p-4 text-xs leading-relaxed text-gray-500">
-        このクイズは公式過去問の問題文・選択肢をそのまま掲載していません。
-        教科書レベルの一般的事実をもとに独自作成した学習用問題です。
+        公式過去問の問題文・選択肢はそのまま掲載していません。教科書レベルの一般的事実をもとに独自作成した学習用問題です。
         解答の記録はお使いの端末内（LocalStorage）にのみ保存されます。
       </p>
     </main>
