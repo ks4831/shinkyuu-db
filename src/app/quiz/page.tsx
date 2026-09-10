@@ -1,6 +1,5 @@
 import type { Metadata } from 'next'
 import Link from 'next/link'
-import { ALL_QUESTIONS } from '@/lib/quiz'
 import QuizStartCard from '@/components/quiz/QuizStartCard'
 import ProgressStrip from '@/components/quiz/ProgressStrip'
 import DailyTodayCard from '@/components/quiz/DailyTodayCard'
@@ -13,25 +12,32 @@ export const metadata: Metadata = {
 
 const modes = [
   {
+    href: '/quiz/frequent',
+    emoji: '🔥',
+    title: '頻出',
+    desc: '重要度の高いテーマから10問。',
+    accent: 'border-orange-200 hover:border-orange-400',
+  },
+  {
     href: '/quiz/weak',
     emoji: '🩹',
-    title: '苦手を復習',
-    desc: '間違えた問題・復習登録した問題だけ。',
+    title: '苦手復習',
+    desc: '間違えた・復習登録した問題だけ。',
     accent: 'border-red-200 hover:border-red-400',
   },
   {
     href: '/quiz/subjects',
     emoji: '📚',
     title: '科目別',
-    desc: '14科目から選んで、その科目だけ10問。',
+    desc: '14科目から選んで10問。',
     accent: 'border-blue-200 hover:border-blue-400',
   },
   {
-    href: '/quiz/frequent',
-    emoji: '🔥',
-    title: '頻出問題',
-    desc: '重要度S・Aの問題を優先して10問。',
-    accent: 'border-orange-200 hover:border-orange-400',
+    href: '/quiz/standard-2026',
+    emoji: '🆕',
+    title: '第35回 新基準',
+    desc: '2026年版で新設・拡充の領域から10問。',
+    accent: 'border-violet-200 hover:border-violet-400',
   },
   {
     href: '/quiz/random',
@@ -44,7 +50,7 @@ const modes = [
     href: '/quiz/acupoints',
     emoji: '📍',
     title: '経穴',
-    desc: '経絡経穴概論を中心に、経穴の問題だけ10問。',
+    desc: '経絡経穴概論を中心に10問。',
     accent: 'border-emerald-200 hover:border-emerald-400',
   },
 ]
@@ -58,33 +64,23 @@ export default function QuizTopPage() {
         <span className="text-gray-600">学習クイズ</span>
       </nav>
 
-      <h1 className="text-2xl font-bold text-gray-900">学習クイズ｜今日は何をやる？</h1>
-      <p className="mt-1 text-sm text-gray-500">
-        学習用オリジナル問題 全{ALL_QUESTIONS.length}問。1回10問・1問1画面。
-      </p>
+      <h1 className="text-2xl font-bold text-gray-900">学習クイズ</h1>
 
       <div className="mt-4">
         <DailyTodayCard />
       </div>
 
-      <ProgressStrip className="mt-4" />
+      <ProgressStrip className="mt-3" />
 
-      <div className="mt-4 rounded-xl border border-blue-100 bg-blue-50/60 p-3 text-xs leading-relaxed text-gray-600">
-        <p className="font-bold text-gray-700">このクイズについて</p>
-        <p className="mt-1">
-          過去問そのものではなく、過去問の頻出傾向や重要テーマ、第35回の新出題基準をもとに作成した学習用オリジナル問題です。
-        </p>
-      </div>
-
-      <p className="mt-6 mb-2 text-xs font-semibold tracking-wider text-gray-400">ほかの解き方</p>
+      <p className="mt-7 mb-2 text-xs font-semibold tracking-wider text-gray-400">ほかの解き方</p>
       <div className="space-y-3">
         {modes.map((m) => (
           <QuizStartCard key={m.href} {...m} />
         ))}
       </div>
 
-      <p className="mt-6 rounded-xl bg-gray-50 p-4 text-xs leading-relaxed text-gray-500">
-        公式過去問の問題文・選択肢はそのまま掲載していません。教科書レベルの一般的事実をもとに独自作成した学習用問題です。
+      <p className="mt-7 text-[11px] leading-relaxed text-gray-400">
+        学習クイズは、過去問の傾向などをもとに作成したオリジナル問題です（過去問そのものではありません）。
         解答の記録はお使いの端末内（LocalStorage）にのみ保存されます。
       </p>
     </main>

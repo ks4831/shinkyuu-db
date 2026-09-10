@@ -9,6 +9,7 @@ const ZERO: LearningStats = {
   accuracy: 0,
   todayCount: 0,
   todayGoal: 10,
+  weekCount: 0,
   streakDays: 0,
   reviewCount: 0,
   weakCount: 0,

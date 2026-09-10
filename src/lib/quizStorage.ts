@@ -97,6 +97,7 @@ export type LearningStats = {
   accuracy: number // 0-100
   todayCount: number
   todayGoal: number
+  weekCount: number // 直近7日間に解いた問題数
   streakDays: number
   reviewCount: number
   weakCount: number
@@ -127,6 +128,8 @@ export function getStats(): LearningStats {
   const correct = h.attempts.filter((a) => a.correct).length
   const tk = todayKey()
   const today = h.attempts.filter((a) => todayKey(new Date(a.at)) === tk).length
+  const weekSince = Date.now() - 7 * 86_400_000
+  const week = h.attempts.filter((a) => a.at >= weekSince).length
 
   const subjMap = new Map<string, { answered: number; correct: number }>()
   for (const a of h.attempts) {
@@ -142,6 +145,7 @@ export function getStats(): LearningStats {
     accuracy: total ? Math.round((correct / total) * 100) : 0,
     todayCount: today,
     todayGoal: QUIZ_DAILY_GOAL,
+    weekCount: week,
     streakDays: computeStreak(h.studyDays),
     reviewCount: review.length,
     weakCount: weak.length,
