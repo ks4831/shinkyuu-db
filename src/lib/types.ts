@@ -77,6 +77,9 @@ export type PastExamContent = {
   /** 当サイト独自の解説（公式資料の転載ではない） */
   explanation: string
   hasFigure: boolean
+  /** hasFigure=true の問題を演習可能にするための画像パス（任意・今回は未使用）。
+   *  未設定のまま hasFigure=true の問題は、演習対象から自動的に除外される（src/lib/pastExams.ts）。 */
+  figureImage?: string
   note?: string
   /** 出典表記（例：「第34回 はり師・きゅう師国家試験」） */
   source: string

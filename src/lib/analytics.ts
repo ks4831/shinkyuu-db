@@ -141,3 +141,23 @@ export function trackSessionOnce(event: string, params?: Params) {
   sessionMarkFired(key)
   track(event, params)
 }
+
+/**
+ * タブのセッション中、(event, dedupKey) の組み合わせごとに1回だけ送る。
+ * 過去問演習（第34回→第33回…）のように、同じイベント名でも対象（回など）が
+ * 異なれば別カウントにしたい場合に使う。送信される GA4 イベント名は event のみ
+ * （dedupKey は params に含めない限り GA4 側には現れない）。
+ * 同じ (event, dedupKey) を同タブで再度行った場合は、trackSessionOnce 同様に送らない。
+ */
+export function trackSessionOnceKeyed(event: string, dedupKey: string, params?: Params) {
+  if (!ENABLED) return
+  const key = `s:${event}:${dedupKey}`
+  if (firedThisLoad.has(key)) return
+  if (sessionHasFired(key)) {
+    firedThisLoad.add(key)
+    return
+  }
+  firedThisLoad.add(key)
+  sessionMarkFired(key)
+  track(event, params)
+}

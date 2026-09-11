@@ -5,7 +5,7 @@ import Link from 'next/link'
 import { themes } from '@/lib/data'
 import { subjectLabel } from '@/lib/quiz'
 import { recordPastExamAttempt } from '@/lib/pastExamStorage'
-import { trackSessionOnce } from '@/lib/analytics'
+import { trackSessionOnceKeyed } from '@/lib/analytics'
 
 const CIRCLED = ['①', '②', '③', '④']
 
@@ -45,7 +45,7 @@ export default function PastExamRunner({
   if (total === 0) {
     return (
       <div className="mx-auto max-w-md px-4 py-16 text-center">
-        <p className="text-gray-600">この回の過去問は準備中です。</p>
+        <p className="text-gray-600">第{round}回の過去問は準備中です。</p>
         <Link
           href="/past-exams"
           className="mt-4 inline-block rounded-full bg-green-600 px-5 py-2.5 text-sm font-bold text-white"
@@ -57,7 +57,7 @@ export default function PastExamRunner({
   }
 
   function handleStart() {
-    trackSessionOnce('pastexam_start', { exam_round: round, question_count: total })
+    trackSessionOnceKeyed('pastexam_start', String(round), { exam_round: round, question_count: total })
     setPhase('question')
   }
 
@@ -72,7 +72,7 @@ export default function PastExamRunner({
 
   function handleNext() {
     if (index + 1 >= total) {
-      trackSessionOnce('pastexam_complete', {
+      trackSessionOnceKeyed('pastexam_complete', String(round), {
         exam_round: round,
         correct: results.filter(Boolean).length,
         total: results.length,

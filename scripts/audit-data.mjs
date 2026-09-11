@@ -560,27 +560,37 @@ try {
     info.unaskedCount = unasked.length
   } catch (e) { W(`未出題経穴の集計に失敗: ${e.message}`) }
 
-  /* ── 過去問演習（/past-exams）の監査 ── */
+  /* ── 過去問演習（/past-exams）の監査：複数回に対応（存在するJSONだけを検査） ── */
   {
-    const PAST_EXAM_ROUNDS_WITH_DATA = [34]
+    const peDir = path.join(ROOT, 'src/data/pastExams')
+    const files = fs.existsSync(peDir)
+      ? fs.readdirSync(peDir).filter((f) => /^exam-\d+\.json$/.test(f))
+      : []
+    const pastExamMod = await importTS('src/lib/pastExams.ts')
+
     let pastExamTotal = 0
-    for (const round of PAST_EXAM_ROUNDS_WITH_DATA) {
-      const fp = path.join(ROOT, 'src/data/pastExams', `exam-${round}.json`)
-      if (!fs.existsSync(fp)) { E(`過去問JSON欠落: exam-${round}.json`); continue }
+    let pastExamPlayableTotal = 0
+    const pastExamByRound = {}
+
+    for (const file of files) {
+      const round = Number(file.match(/^exam-(\d+)\.json$/)[1])
+      if (!ROUNDS.includes(round)) W(`過去問JSON ${file} の回(第${round}回)が既知の範囲(第${ROUNDS[0]}〜${ROUNDS[ROUNDS.length - 1]}回)外`)
+
       let list
       try {
-        list = JSON.parse(fs.readFileSync(fp, 'utf-8'))
+        list = pastExamMod.loadPastExamContentRaw(round)
       } catch (e) {
-        E(`過去問JSON パース失敗 exam-${round}.json: ${e.message}`)
+        E(`過去問JSON 読み込み失敗 ${file}: ${e.message}`)
         continue
       }
-      if (!Array.isArray(list)) { E(`過去問JSON exam-${round}.json が配列でない`); continue }
+      if (!Array.isArray(list)) { E(`過去問JSON ${file} が配列でない`); continue }
       pastExamTotal += list.length
+      pastExamByRound[round] = list.length
 
       const idSeenPE = new Map()
       list.forEach((q) => idSeenPE.set(q.id, (idSeenPE.get(q.id) ?? 0) + 1))
       const dupPE = [...idSeenPE.entries()].filter(([, c]) => c > 1).map(([id]) => id)
-      if (dupPE.length) E(`過去問 id 重複 exam-${round}.json: ${dupPE.join(', ')}`)
+      if (dupPE.length) E(`過去問 id 重複 ${file}: ${dupPE.join(', ')}`)
 
       const csvRowsForRound = rows.filter((r) => r._round === round)
       const csvIdSet = new Set(csvRowsForRound.map((r) => r.id))
@@ -604,18 +614,27 @@ try {
         if (!q.sourceUrl || !String(q.sourceUrl).trim()) W(`過去問 ${q.id}: sourceUrl が空`)
         if (typeof q.hasFigure !== 'boolean') E(`過去問 ${q.id}: hasFigure が boolean でない`)
         if (!q.verifiedAt || !/^\d{4}-\d{2}-\d{2}$/.test(q.verifiedAt)) E(`過去問 ${q.id}: verifiedAt の形式が不正`)
-        if (Number(q.examRound) !== round) E(`過去問 ${q.id}: examRound ${q.examRound} ≠ ファイル ${round}`)
+        if (Number(q.examRound) !== round) E(`過去問 ${q.id}: examRound ${q.examRound} ≠ ファイル exam-${round}.json`)
 
-        // 既存分析データ（CSV / themeId）との結合可否
+        // 既存分析データ（CSV）との結合可否：id・questionNumber・themeId
         const csvRow = csvById.get(q.id)
-        if (csvRow && !csvRow.themeId) W(`過去問 ${q.id}: 結合先CSV行に themeId が未設定`)
-        if (csvRow && csvRow.themeId && !themeIdSet.has(csvRow.themeId)) {
-          E(`過去問 ${q.id}: 結合先 themeId ${csvRow.themeId} が themes[] に存在しない`)
+        if (csvRow) {
+          if (Number(csvRow.questionNumber) !== q.questionNumber) {
+            E(`過去問 ${q.id}: questionNumber ${q.questionNumber} ≠ CSV ${csvRow.questionNumber}`)
+          }
+          if (!csvRow.themeId) W(`過去問 ${q.id}: 結合先CSV行に themeId が未設定`)
+          else if (!themeIdSet.has(csvRow.themeId)) {
+            E(`過去問 ${q.id}: 結合先 themeId ${csvRow.themeId} が themes[] に存在しない`)
+          }
         }
       })
+
+      pastExamPlayableTotal += list.filter((q) => !q.hasFigure || q.figureImage).length
     }
     info.pastExamCount = pastExamTotal
-    info.pastExamRounds = PAST_EXAM_ROUNDS_WITH_DATA
+    info.pastExamPlayableCount = pastExamPlayableTotal
+    info.pastExamByRound = pastExamByRound
+    info.pastExamRounds = Object.keys(pastExamByRound).map(Number).sort((a, b) => b - a)
   }
 } catch (e) {
   E(`data/quiz/acupoints の読み込みに失敗: ${e.stack || e.message}`)
@@ -659,7 +678,7 @@ if (j) {
   console.log(`統一テーマ Master: ${info.themeCount} 件（過去問接続 ${info.themeConnected} / 学習用 ${info.themeStudyOnly?.length ?? 0} / orphan ${info.themeOrphan?.length ?? 0}）`)
   console.log(`themeId 接続: 過去問 ${info.examThemeIdConnected}/${info.csvTotal}（未設定 ${info.examThemeIdMissing}）  クイズ ${info.quizThemeIdConnected}/${info.quizCount}`)
   console.log(`2026年版基準(standard2026): テーマ ${info.standard2026ThemeCount ?? 0} 件（新設 ${info.standard2026NewThemes ?? 0} / 拡充・再編 ${info.standard2026ExpandedThemes ?? 0}）  新基準クイズ ${info.standard2026QuizCount ?? 0} 問`)
-  console.log(`過去問演習(/past-exams): ${info.pastExamCount ?? 0} 問（収録回: ${(info.pastExamRounds ?? []).map((r) => `第${r}回`).join('・') || 'なし'}）`)
+  console.log(`過去問演習(/past-exams): 収録 ${info.pastExamCount ?? 0} 問・演習可能 ${info.pastExamPlayableCount ?? 0} 問（${(info.pastExamRounds ?? []).map((r) => `第${r}回=${info.pastExamByRound[r]}`).join('  ') || '収録なし'}）`)
   console.log('\n--- 科目別 6年問題数（正規id基準） ---')
   for (const [id, name] of CANONICAL_SUBJECTS) {
     const b = info.bySubject[id]
