@@ -66,14 +66,24 @@ export default function HomePage() {
 
       {/* ── 過去問 ─────────────────────────────── */}
       <section className="px-4 pt-8">
-        <div className="mx-auto max-w-md">
+        <div className="mx-auto max-w-md space-y-2.5">
           <h2 className="mb-2.5 text-sm font-bold text-gray-700">過去問</h2>
+          <Link
+            href="/past-exams"
+            className="flex items-center justify-between gap-3 rounded-2xl border border-green-300 bg-white p-4 hover:bg-green-50"
+          >
+            <span>
+              <span className="block text-sm font-bold text-gray-900">実際の過去問を解く</span>
+              <span className="mt-0.5 block text-xs text-gray-500">第34回・10問収録</span>
+            </span>
+            <span className="flex-shrink-0 text-gray-300" aria-hidden="true">›</span>
+          </Link>
           <Link
             href="/analysis/compare/recent-6-years"
             className="flex items-center justify-between gap-3 rounded-2xl border border-gray-200 bg-white p-4 hover:border-green-300"
           >
             <span>
-              <span className="block text-sm font-bold text-gray-900">過去問の出題傾向を見る</span>
+              <span className="block text-sm font-bold text-gray-900">出題傾向を見る</span>
               <span className="mt-0.5 block text-xs text-gray-500">
                 第{EXAM_ROUNDS[0]}〜{EXAM_ROUNDS[EXAM_ROUNDS.length - 1]}回・{PAST_QUESTIONS}問を分析
               </span>

@@ -559,6 +559,64 @@ try {
     const unasked = acuLib.getUnaskedAcupoints ? acuLib.getUnaskedAcupoints() : []
     info.unaskedCount = unasked.length
   } catch (e) { W(`未出題経穴の集計に失敗: ${e.message}`) }
+
+  /* ── 過去問演習（/past-exams）の監査 ── */
+  {
+    const PAST_EXAM_ROUNDS_WITH_DATA = [34]
+    let pastExamTotal = 0
+    for (const round of PAST_EXAM_ROUNDS_WITH_DATA) {
+      const fp = path.join(ROOT, 'src/data/pastExams', `exam-${round}.json`)
+      if (!fs.existsSync(fp)) { E(`過去問JSON欠落: exam-${round}.json`); continue }
+      let list
+      try {
+        list = JSON.parse(fs.readFileSync(fp, 'utf-8'))
+      } catch (e) {
+        E(`過去問JSON パース失敗 exam-${round}.json: ${e.message}`)
+        continue
+      }
+      if (!Array.isArray(list)) { E(`過去問JSON exam-${round}.json が配列でない`); continue }
+      pastExamTotal += list.length
+
+      const idSeenPE = new Map()
+      list.forEach((q) => idSeenPE.set(q.id, (idSeenPE.get(q.id) ?? 0) + 1))
+      const dupPE = [...idSeenPE.entries()].filter(([, c]) => c > 1).map(([id]) => id)
+      if (dupPE.length) E(`過去問 id 重複 exam-${round}.json: ${dupPE.join(', ')}`)
+
+      const csvRowsForRound = rows.filter((r) => r._round === round)
+      const csvIdSet = new Set(csvRowsForRound.map((r) => r.id))
+      const csvById = new Map(csvRowsForRound.map((r) => [r.id, r]))
+
+      list.forEach((q) => {
+        if (!csvIdSet.has(q.id)) E(`過去問 ${q.id}: 既存exam-${round}.csv に id が存在しない`)
+        if (!q.questionText || !String(q.questionText).trim()) E(`過去問 ${q.id}: questionText が空`)
+        if (!Array.isArray(q.choices) || q.choices.length !== 4) {
+          E(`過去問 ${q.id}: choices が4つでない`)
+        } else {
+          if (q.choices.some((c) => !c || !String(c).trim())) E(`過去問 ${q.id}: choices に空の選択肢`)
+          if (new Set(q.choices).size !== q.choices.length) E(`過去問 ${q.id}: choices に重複`)
+        }
+        if (typeof q.answerIndex !== 'number' || q.answerIndex < 0 || q.answerIndex > 3) {
+          E(`過去問 ${q.id}: answerIndex 範囲外`)
+        }
+        if (!q.explanation || !String(q.explanation).trim()) E(`過去問 ${q.id}: explanation が空`)
+        if (!q.source || !String(q.source).trim()) E(`過去問 ${q.id}: source が空`)
+        if (!q.sourceOrg || !String(q.sourceOrg).trim()) E(`過去問 ${q.id}: sourceOrg が空`)
+        if (!q.sourceUrl || !String(q.sourceUrl).trim()) W(`過去問 ${q.id}: sourceUrl が空`)
+        if (typeof q.hasFigure !== 'boolean') E(`過去問 ${q.id}: hasFigure が boolean でない`)
+        if (!q.verifiedAt || !/^\d{4}-\d{2}-\d{2}$/.test(q.verifiedAt)) E(`過去問 ${q.id}: verifiedAt の形式が不正`)
+        if (Number(q.examRound) !== round) E(`過去問 ${q.id}: examRound ${q.examRound} ≠ ファイル ${round}`)
+
+        // 既存分析データ（CSV / themeId）との結合可否
+        const csvRow = csvById.get(q.id)
+        if (csvRow && !csvRow.themeId) W(`過去問 ${q.id}: 結合先CSV行に themeId が未設定`)
+        if (csvRow && csvRow.themeId && !themeIdSet.has(csvRow.themeId)) {
+          E(`過去問 ${q.id}: 結合先 themeId ${csvRow.themeId} が themes[] に存在しない`)
+        }
+      })
+    }
+    info.pastExamCount = pastExamTotal
+    info.pastExamRounds = PAST_EXAM_ROUNDS_WITH_DATA
+  }
 } catch (e) {
   E(`data/quiz/acupoints の読み込みに失敗: ${e.stack || e.message}`)
 }
@@ -601,6 +659,7 @@ if (j) {
   console.log(`統一テーマ Master: ${info.themeCount} 件（過去問接続 ${info.themeConnected} / 学習用 ${info.themeStudyOnly?.length ?? 0} / orphan ${info.themeOrphan?.length ?? 0}）`)
   console.log(`themeId 接続: 過去問 ${info.examThemeIdConnected}/${info.csvTotal}（未設定 ${info.examThemeIdMissing}）  クイズ ${info.quizThemeIdConnected}/${info.quizCount}`)
   console.log(`2026年版基準(standard2026): テーマ ${info.standard2026ThemeCount ?? 0} 件（新設 ${info.standard2026NewThemes ?? 0} / 拡充・再編 ${info.standard2026ExpandedThemes ?? 0}）  新基準クイズ ${info.standard2026QuizCount ?? 0} 問`)
+  console.log(`過去問演習(/past-exams): ${info.pastExamCount ?? 0} 問（収録回: ${(info.pastExamRounds ?? []).map((r) => `第${r}回`).join('・') || 'なし'}）`)
   console.log('\n--- 科目別 6年問題数（正規id基準） ---')
   for (const [id, name] of CANONICAL_SUBJECTS) {
     const b = info.bySubject[id]

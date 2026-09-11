@@ -57,12 +57,12 @@ export default function SourcesPage() {
         </div>
 
         <div>
-          <h2 className="font-bold text-gray-800 mb-4">データの利用方針</h2>
+          <h2 className="font-bold text-gray-800 mb-4">出題傾向分析（第29〜34回・1,080問）の利用方針</h2>
           <div className="space-y-3">
             {[
               {
                 title: '問題文は掲載しない',
-                desc: '国家試験の問題文・選択肢の全文は当サイトに掲載していません。テーマ分類・出題数・傾向の集計データのみを掲載しています。',
+                desc: '出題傾向の分析（/analysis）では、国家試験の問題文・選択肢の全文は掲載していません。テーマ分類・出題数・傾向の集計データのみを掲載しています。',
               },
               {
                 title: '分析データのみ掲載',
@@ -70,7 +70,7 @@ export default function SourcesPage() {
               },
               {
                 title: '正答は集計のみ利用',
-                desc: '正答番号は「何問出題されたか」の集計目的のみに使用しています。正解番号・解説の表示機能はありません。',
+                desc: '正答番号は「何問出題されたか」の集計目的のみに使用しています。',
               },
             ].map(item => (
               <div key={item.title} className="bg-white border border-gray-100 rounded-xl p-4">
@@ -78,6 +78,25 @@ export default function SourcesPage() {
                 <p className="text-gray-500">{item.desc}</p>
               </div>
             ))}
+          </div>
+        </div>
+
+        <div>
+          <h2 className="font-bold text-gray-800 mb-4">過去問演習（/past-exams・第34回パイロット10問）について</h2>
+          <div className="bg-white border border-gray-100 rounded-xl p-5 space-y-3">
+            <p>
+              過去問演習（/past-exams）では、上記の分析用データとは別に、
+              第34回はり師・きゅう師国家試験の問題文・選択肢・正答（10問のみ・パイロット）を
+              公益財団法人 東洋療法研修試験財団の公式公開資料から直接収録しています。
+            </p>
+            <p>
+              2026年9月11日、同財団へ電話で確認し、公式に公開されている国家試験過去問題を
+              当サイトの過去問演習として利用することについて問題ない旨の回答を得ています。
+              この確認は電話での回答であり、著作権フリー化や正式なライセンス取得を意味するものではありません。
+            </p>
+            <p className="text-xs text-gray-500">
+              各問題には出典（回・試験名・財団名）を明記しています。当サイトは同財団の公式サイトではありません。
+            </p>
           </div>
         </div>
 

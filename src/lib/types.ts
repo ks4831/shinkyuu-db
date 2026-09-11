@@ -62,6 +62,31 @@ export type Subject = {
   description: string
 }
 
+/** 過去問（実際の国家試験問題）1問ぶん。src/data/pastExams/exam-XX.json から読み込む。
+ *  subject/themeId/studyPoint 等の既存メタは持たず、id で ExamQuestion（既存CSV）と結合する。 */
+export type PastExamContent = {
+  id: string
+  examRound: number
+  questionNumber: number
+  /** 公式問題文（転記・言い換え禁止） */
+  questionText: string
+  /** 公式選択肢（1〜4）。表示順は公式のまま、シャッフルしない */
+  choices: string[]
+  /** 正答の選択肢インデックス（0-3） */
+  answerIndex: number
+  /** 当サイト独自の解説（公式資料の転載ではない） */
+  explanation: string
+  hasFigure: boolean
+  note?: string
+  /** 出典表記（例：「第34回 はり師・きゅう師国家試験」） */
+  source: string
+  sourceUrl: string
+  sourceOrg: string
+  sourceReliability: SourceReliability
+  /** 公式資料との照合日（YYYY-MM-DD） */
+  verifiedAt: string
+}
+
 // 設問単位の生データ（src/data/raw/exam-XX.csv から読み込む）
 export type ExamQuestion = {
   id: string

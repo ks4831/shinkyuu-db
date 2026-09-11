@@ -11,6 +11,8 @@ export default function sitemap(): MetadataRoute.Sitemap {
   const staticRoutes: MetadataRoute.Sitemap = [
     { url: SITE_URL,                                         lastModified: now, changeFrequency: 'weekly',  priority: 1.0 },
     { url: `${SITE_URL}/quiz`,                               lastModified: now, changeFrequency: 'weekly',  priority: 0.95 },
+    { url: `${SITE_URL}/past-exams`,                         lastModified: now, changeFrequency: 'weekly',  priority: 0.9 },
+    { url: `${SITE_URL}/past-exams/34`,                      lastModified: now, changeFrequency: 'weekly',  priority: 0.85 },
     { url: `${SITE_URL}/exam-35`,                            lastModified: now, changeFrequency: 'weekly',  priority: 0.95 },
     { url: `${SITE_URL}/quiz/daily`,                         lastModified: now, changeFrequency: 'daily',   priority: 0.9 },
     { url: `${SITE_URL}/quiz/standard-2026`,                 lastModified: now, changeFrequency: 'weekly',  priority: 0.8 },
