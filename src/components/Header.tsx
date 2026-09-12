@@ -14,13 +14,13 @@ export default function Header() {
             <path d="M25 19.5 Q26.5 16 25 12.5" stroke="#15803d" strokeWidth="1.2" strokeLinecap="round" />
           </svg>
           <span className="text-sm font-bold text-gray-800 group-hover:text-green-700 sm:text-base">
-            鍼灸国試 <span className="hidden sm:inline">学習クイズ＆分析</span>
+            鍼灸国試 <span className="hidden sm:inline">過去問・予想問題・分析</span>
           </span>
         </Link>
 
         {/* Desktop nav */}
         <nav className="hidden items-center gap-1 text-sm sm:flex">
-          <Link href="/quiz" className="rounded-lg px-3 py-1.5 text-gray-600 hover:bg-green-50 hover:text-green-700">学習クイズ</Link>
+          <Link href="/quiz" className="rounded-lg px-3 py-1.5 text-gray-600 hover:bg-green-50 hover:text-green-700">予想問題</Link>
           <Link href="/acupoints" className="rounded-lg px-3 py-1.5 text-gray-600 hover:bg-green-50 hover:text-green-700">経穴</Link>
           <Link href="/subjects" className="rounded-lg px-3 py-1.5 text-gray-600 hover:bg-green-50 hover:text-green-700">科目</Link>
           <Link href="/analysis/compare/recent-6-years" className="rounded-lg px-3 py-1.5 text-gray-600 hover:bg-green-50 hover:text-green-700">分析</Link>

@@ -2,15 +2,21 @@ import type { Metadata } from 'next'
 import Link from 'next/link'
 
 export const metadata: Metadata = {
-  title: 'メニュー｜鍼灸国家試験 学習・分析',
+  title: 'メニュー｜鍼灸国家試験 過去問・予想問題・分析',
   description: '出題分析・テーマ辞典・科目攻略・学習ツールなど、すべての機能への入り口。',
 }
 
 const groups = [
   {
-    title: '学習する',
+    title: '過去問',
     links: [
-      { href: '/quiz', label: '学習クイズ（10問ずつ）', note: '過去問の傾向・第35回新基準をもとにしたオリジナル問題' },
+      { href: '/past-exams', label: '実際の過去問を解く', note: '第34回・10問収録' },
+    ],
+  },
+  {
+    title: '予想問題',
+    links: [
+      { href: '/quiz', label: '予想問題（10問ずつ）', note: '過去問の頻出傾向・第35回新基準をもとにしたオリジナル問題' },
       { href: '/quiz/weak', label: '苦手復習' },
       { href: '/acupoints', label: '経穴から学ぶ' },
       { href: '/subjects', label: '科目から探す' },

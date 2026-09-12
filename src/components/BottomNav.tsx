@@ -14,7 +14,7 @@ const items = [
   },
   {
     href: '/quiz',
-    label: '学習クイズ',
+    label: '予想問題',
     match: (p: string) => p.startsWith('/quiz'),
     icon: (
       <>

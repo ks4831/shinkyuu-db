@@ -8,7 +8,7 @@ import { ALL_QUESTIONS, standard2026QuizCount } from '@/lib/quiz'
 export const metadata: Metadata = {
   title: 'About',
   description:
-    '鍼灸国家試験（はり師・きゅう師）の学習サイト。第29〜34回の実際の過去問1,080問の頻出分析と、その傾向にもとづく学習用オリジナル問題205問の演習ができます。',
+    '鍼灸国家試験（はり師・きゅう師）の対策サイト。第34回の実際の過去問演習、第29〜34回1,080問の出題分析、その傾向にもとづくオリジナル予想問題205問の3つで構成しています。',
 }
 
 const TOTAL_QUESTIONS = EXAM_ROUNDS.length * QUESTIONS_PER_ROUND
@@ -36,25 +36,38 @@ export default function AboutPage() {
         <div className="bg-green-50 border border-green-100 rounded-xl p-5">
           <p className="font-semibold text-green-800 mb-2">何のサイトですか？</p>
           <p>
-            鍼灸国家試験（はり師・きゅう師）の学習サイトです。
-            <strong>過去問の頻出傾向を分析</strong>し、その傾向にもとづく
-            <strong>学習用オリジナル問題を演習</strong>できます。当サイトは非公式です。
+            鍼灸国家試験（はり師・きゅう師）の対策サイトです。当サイトは非公式で、次の3つで構成されています。
           </p>
-          <p className="mt-2">
-            具体的には、第29〜34回の<strong>実際の過去問{TOTAL_QUESTIONS.toLocaleString()}問</strong>を
-            {themes.length}テーマに分類し、過去6年で何がよく出ているかを可視化します。
-            あわせて、その頻出傾向や第35回の新出題基準をもとにした
-            <strong>学習用オリジナル問題{QUIZ_TOTAL}問</strong>を、1日10問から解けます。
-          </p>
+          <ul className="mt-2 space-y-1">
+            <li>① <strong>過去問</strong> — 実際に国家試験で出題された問題（第34回・10問収録）</li>
+            <li>② <strong>予想問題</strong> — 過去問の頻出傾向・重要テーマ・第35回新出題基準をもとにしたオリジナル問題（{QUIZ_TOTAL}問）</li>
+            <li>③ <strong>出題分析</strong> — 第29〜34回・実際の過去問{TOTAL_QUESTIONS.toLocaleString()}問を{themes.length}テーマで分析</li>
+          </ul>
           <p className="mt-2 rounded-lg bg-white/70 px-3 py-2 text-xs text-gray-600">
-            「実際の過去問{TOTAL_QUESTIONS.toLocaleString()}問」は分析の対象で、そのまま出題はしません。
-            クイズで解くのは、傾向をもとに作成した<strong>学習用オリジナル問題{QUIZ_TOTAL}問</strong>です。
-            この2つは別のものです。
+            ①の過去問と②の予想問題は別のものです。予想問題は過去問そのものではなく、傾向をもとに作成したオリジナル問題です。
           </p>
         </div>
 
         <div>
-          <h2 className="font-bold text-gray-800 mb-3">📊 過去問を分析する</h2>
+          <h2 className="font-bold text-gray-800 mb-3">📖 過去問を解く</h2>
+          <ul className="space-y-2">
+            <li className="flex gap-3 bg-white border border-gray-100 rounded-lg px-4 py-3">
+              <span className="text-green-600 font-semibold flex-shrink-0">✓</span>
+              <span><strong>実際の過去問</strong> — 第34回はり師・きゅう師国家試験の問題文・選択肢・正答を、財団の公式資料から直接収録（現在10問）</span>
+            </li>
+            <li className="flex gap-3 bg-white border border-gray-100 rounded-lg px-4 py-3">
+              <span className="text-green-600 font-semibold flex-shrink-0">✓</span>
+              <span>
+                <strong>出典明記</strong> — 各問題に回・試験名・財団名を明記。詳細は
+                <Link href="/sources" className="text-green-600 hover:underline mx-1">データソースページ</Link>
+                をご覧ください。
+              </span>
+            </li>
+          </ul>
+        </div>
+
+        <div>
+          <h2 className="font-bold text-gray-800 mb-3">📊 出題分析を見る</h2>
           <ul className="space-y-2">
             {[
               ['頻出テーマ', `${themes.length}テーマに分類し、出題数をS〜Cの重要度付きでランキング`],
@@ -71,10 +84,10 @@ export default function AboutPage() {
         </div>
 
         <div>
-          <h2 className="font-bold text-gray-800 mb-3">📝 学習クイズで演習する</h2>
+          <h2 className="font-bold text-gray-800 mb-3">📝 予想問題で演習する</h2>
           <ul className="space-y-2">
             {[
-              ['学習用オリジナル問題', `${QUIZ_TOTAL}問。1問1画面で、解説・覚えるポイント・図解つき（過去問そのものではありません）`],
+              ['予想問題', `${QUIZ_TOTAL}問。1問1画面で、解説・覚えるポイント・図解つき（実際の過去問ではありません）`],
               ['今日の10問', '毎日ちがう10問。連続学習日数（streak）を記録'],
               ['苦手復習', '間違えた問題・復習登録した問題だけをまとめて演習'],
               ['解き方いろいろ', '科目別・頻出・経穴・第35回 新基準など、目的別に10問ずつ'],
@@ -93,7 +106,7 @@ export default function AboutPage() {
           <p>
             第35回（2027年2月）から2026年版出題基準が適用されます。
             「第29〜34回で実際によく出たテーマ」と「2026年版で新設・拡充されたテーマ」を
-            <strong>別々の指標</strong>として表示し、新基準対応の学習用オリジナル問題{QUIZ_S2026}問も用意しています。
+            <strong>別々の指標</strong>として表示し、新基準対応の予想問題{QUIZ_S2026}問も用意しています。
             詳しくは
             <Link href="/exam-35" className="text-green-600 hover:underline mx-1">第35回対策ページ</Link>
             をご覧ください。
@@ -123,7 +136,7 @@ export default function AboutPage() {
               ['対象試験', 'はり師・きゅう師国家試験（共通）'],
               ['分析対象', `${ROUND_RANGE}（計${EXAM_ROUNDS.length}回・${TOTAL_QUESTIONS.toLocaleString()}問）`],
               ['分類テーマ数', `${themes.length}テーマ`],
-              ['学習用オリジナル問題', `${QUIZ_TOTAL}問（うち第35回 新基準対応 ${QUIZ_S2026}問）`],
+              ['予想問題', `${QUIZ_TOTAL}問（うち第35回 新基準対応 ${QUIZ_S2026}問）`],
               ['出題基準', '2020年版（第35回からは2026年版）'],
               ['分類方法', '独自テーマキーによる分類（過去問の問題文・選択肢は非掲載）'],
             ].map(([label, value]) => (

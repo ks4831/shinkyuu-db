@@ -139,7 +139,7 @@ export default function QuizRunner({
       <div className="mx-auto max-w-md px-4 py-16 text-center">
         <p className="text-gray-600">出題できる問題がありませんでした。</p>
         <Link href="/quiz" className="mt-4 inline-block rounded-full bg-green-600 px-5 py-2.5 text-sm font-bold text-white">
-          学習クイズトップへ
+          予想問題トップへ
         </Link>
       </div>
     )

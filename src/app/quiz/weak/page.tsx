@@ -11,7 +11,7 @@ export default function WeakQuizPage() {
   return (
     <main className="pt-4">
       <nav className="mx-auto mb-2 max-w-md px-4 text-xs text-gray-400">
-        <Link href="/quiz" className="hover:text-green-600">学習クイズ</Link>
+        <Link href="/quiz" className="hover:text-green-600">予想問題</Link>
         <span className="mx-1">/</span>
         <span className="text-gray-600">苦手復習</span>
       </nav>

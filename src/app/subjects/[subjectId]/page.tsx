@@ -137,8 +137,8 @@ export default async function SubjectDetailPage({
           className="flex items-center justify-between gap-3 rounded-2xl border-2 border-green-300 bg-green-50 px-5 py-4 mb-5 transition-colors hover:border-green-400 hover:bg-green-100"
         >
           <span>
-            <span className="block text-sm font-bold text-green-800">この科目の学習クイズを解く</span>
-            <span className="block text-xs text-green-700 mt-0.5">{subject.name}の学習用オリジナル問題を1問1画面で・解説と図解つき（全{quizCount}問）</span>
+            <span className="block text-sm font-bold text-green-800">この科目の予想問題を解く</span>
+            <span className="block text-xs text-green-700 mt-0.5">{subject.name}の予想問題（オリジナル問題）を1問1画面で・解説と図解つき（全{quizCount}問）</span>
           </span>
           <span className="text-green-600 text-lg" aria-hidden>›</span>
         </Link>
@@ -386,7 +386,7 @@ export default async function SubjectDetailPage({
       <div className="mt-8 pt-6 border-t border-gray-100 flex flex-wrap gap-4">
         {quizCount >= 5 && (
           <Link href={`/quiz/subjects/${subjectId}`} className="text-sm text-green-600 hover:underline font-semibold">
-            この科目の学習クイズを解く →
+            この科目の予想問題を解く →
           </Link>
         )}
         <Link href="/subjects" className="text-sm text-green-600 hover:underline">

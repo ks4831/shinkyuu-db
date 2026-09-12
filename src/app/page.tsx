@@ -40,10 +40,27 @@ export default function HomePage() {
         </div>
       </section>
 
-      {/* ── ほかの勉強 ─────────────────────────── */}
+      {/* ── 過去問 ─────────────────────────────── */}
       <section className="px-4 pt-8">
         <div className="mx-auto max-w-md">
-          <h2 className="mb-2.5 text-sm font-bold text-gray-700">ほかの勉強</h2>
+          <h2 className="mb-2.5 text-sm font-bold text-gray-700">過去問</h2>
+          <Link
+            href="/past-exams"
+            className="flex items-center justify-between gap-3 rounded-2xl border border-green-300 bg-white p-4 hover:bg-green-50"
+          >
+            <span>
+              <span className="block text-sm font-bold text-gray-900">実際の過去問を解く</span>
+              <span className="mt-0.5 block text-xs text-gray-500">第34回・10問収録</span>
+            </span>
+            <span className="flex-shrink-0 text-gray-300" aria-hidden="true">›</span>
+          </Link>
+        </div>
+      </section>
+
+      {/* ── 予想問題 ───────────────────────────── */}
+      <section className="px-4 pt-8">
+        <div className="mx-auto max-w-md">
+          <h2 className="mb-2.5 text-sm font-bold text-gray-700">予想問題</h2>
           <div className="grid grid-cols-2 gap-2.5">
             {OTHER_MODES.map((m) => (
               <Link
@@ -59,25 +76,15 @@ export default function HomePage() {
             href="/quiz"
             className="mt-2.5 block rounded-xl bg-gray-50 px-3 py-2.5 text-center text-xs font-semibold text-gray-500 hover:bg-gray-100"
           >
-            すべての学習クイズ ›
+            すべての予想問題 ›
           </Link>
         </div>
       </section>
 
-      {/* ── 過去問 ─────────────────────────────── */}
+      {/* ── 出題分析 ───────────────────────────── */}
       <section className="px-4 pt-8">
-        <div className="mx-auto max-w-md space-y-2.5">
-          <h2 className="mb-2.5 text-sm font-bold text-gray-700">過去問</h2>
-          <Link
-            href="/past-exams"
-            className="flex items-center justify-between gap-3 rounded-2xl border border-green-300 bg-white p-4 hover:bg-green-50"
-          >
-            <span>
-              <span className="block text-sm font-bold text-gray-900">実際の過去問を解く</span>
-              <span className="mt-0.5 block text-xs text-gray-500">第34回・10問収録</span>
-            </span>
-            <span className="flex-shrink-0 text-gray-300" aria-hidden="true">›</span>
-          </Link>
+        <div className="mx-auto max-w-md">
+          <h2 className="mb-2.5 text-sm font-bold text-gray-700">出題分析</h2>
           <Link
             href="/analysis/compare/recent-6-years"
             className="flex items-center justify-between gap-3 rounded-2xl border border-gray-200 bg-white p-4 hover:border-green-300"
@@ -97,7 +104,7 @@ export default function HomePage() {
       <section className="px-4 pt-8">
         <div className="mx-auto max-w-md">
           <p className="text-[11px] leading-relaxed text-gray-400">
-            学習クイズは、過去問の傾向や第35回の新出題基準をもとにしたオリジナル問題です。学習記録は端末内にのみ保存されます。
+            予想問題は、過去問の頻出傾向などをもとにしたオリジナル問題です。学習記録は端末内にのみ保存されます。
             <Link href="/about" className="ml-1 text-green-600 hover:underline">くわしく</Link>
           </p>
         </div>

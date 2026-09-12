@@ -5,9 +5,9 @@ import ProgressStrip from '@/components/quiz/ProgressStrip'
 import DailyTodayCard from '@/components/quiz/DailyTodayCard'
 
 export const metadata: Metadata = {
-  title: '鍼灸国家試験 学習クイズ｜出題傾向にもとづくオリジナル問題を10問ずつ',
+  title: '鍼灸国家試験 予想問題｜出題傾向にもとづくオリジナル問題を10問ずつ',
   description:
-    '過去問そのものではなく、鍼灸国家試験の出題傾向・重要テーマ・第35回の新出題基準をもとにした学習用オリジナル問題を、1問1画面・10問ずつ。ランダム・頻出・経穴・科目別・苦手復習から選べます。',
+    '過去問そのものではなく、鍼灸国家試験の出題傾向・重要テーマ・第35回の新出題基準をもとにした予想問題（オリジナル問題）を、1問1画面・10問ずつ。ランダム・頻出・経穴・科目別・苦手復習から選べます。',
 }
 
 const modes = [
@@ -61,10 +61,13 @@ export default function QuizTopPage() {
       <nav className="mb-3 text-xs text-gray-400">
         <Link href="/" className="hover:text-green-600">ホーム</Link>
         <span className="mx-1">/</span>
-        <span className="text-gray-600">学習クイズ</span>
+        <span className="text-gray-600">予想問題</span>
       </nav>
 
-      <h1 className="text-2xl font-bold text-gray-900">学習クイズ</h1>
+      <h1 className="text-2xl font-bold text-gray-900">予想問題</h1>
+      <p className="mt-1 text-xs leading-relaxed text-gray-400">
+        頻出傾向・重要テーマ・第35回新基準をもとにしたオリジナル問題
+      </p>
 
       <div className="mt-4">
         <DailyTodayCard />
@@ -80,7 +83,7 @@ export default function QuizTopPage() {
       </div>
 
       <p className="mt-7 text-[11px] leading-relaxed text-gray-400">
-        学習クイズは、過去問の傾向などをもとに作成したオリジナル問題です（過去問そのものではありません）。
+        予想問題は、過去問の頻出傾向などをもとにしたオリジナル問題です（実際の過去問ではありません）。
         解答の記録はお使いの端末内（LocalStorage）にのみ保存されます。
       </p>
     </main>

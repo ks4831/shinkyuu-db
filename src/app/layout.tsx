@@ -15,11 +15,11 @@ const GA_ENABLED = process.env.NODE_ENV === 'production' && !!GA_ID
 
 export const metadata: Metadata = {
   title: {
-    default: '鍼灸国家試験の学習クイズ｜1日10問スマホで国試対策',
-    template: '%s | 鍼灸国試 学習クイズ＆分析',
+    default: '鍼灸国試｜過去問・予想問題・出題分析',
+    template: '%s | 鍼灸国試 過去問・予想問題・分析',
   },
   description:
-    '過去6年・1,080問の過去問分析にもとづく学習用オリジナル問題を、1日10問スマホで。解説・図解・苦手復習つき。経穴学習・出題傾向分析にも対応。',
+    '鍼灸国家試験（はり師・きゅう師）の対策サイト。第34回の実際の過去問演習、過去問の頻出傾向・第35回新出題基準にもとづくオリジナル予想問題、第29〜34回1,080問の出題分析ができます。',
   keywords: [
     '鍼灸国家試験',
     'はり師国家試験',
@@ -32,17 +32,17 @@ export const metadata: Metadata = {
     '鍼灸学生',
   ],
   openGraph: {
-    title: '鍼灸国家試験の学習クイズ｜1日10問スマホで国試対策',
-    description: '過去6年1,080問の過去問分析にもとづく学習用オリジナル問題を、1問1画面で。解説・図解・苦手復習つき。',
+    title: '鍼灸国試｜過去問・予想問題・出題分析',
+    description: '第34回の実際の過去問演習、頻出傾向・第35回新基準にもとづく予想問題、過去6年1,080問の出題分析。1問1画面・解説と図解つき。',
     url: SITE_URL,
-    siteName: '鍼灸国試 学習クイズ＆分析',
+    siteName: '鍼灸国試 過去問・予想問題・分析',
     locale: 'ja_JP',
     type: 'website',
   },
   twitter: {
     card: 'summary',
-    title: '鍼灸国家試験の学習クイズ｜1日10問スマホで国試対策',
-    description: '過去6年1,080問の過去問分析にもとづく学習用オリジナル問題。1問1画面・解説と図解つき。',
+    title: '鍼灸国試｜過去問・予想問題・出題分析',
+    description: '第34回の実際の過去問演習、頻出傾向・第35回新基準にもとづく予想問題、過去6年1,080問の出題分析。1問1画面・解説と図解つき。',
   },
   metadataBase: new URL(SITE_URL),
   ...(process.env.NEXT_PUBLIC_GSC_VERIFICATION
@@ -66,9 +66,10 @@ export default function RootLayout({
           <div className="max-w-4xl mx-auto px-4 py-8">
             <div className="grid grid-cols-2 sm:grid-cols-4 gap-6 mb-6 text-sm">
               <div>
-                <p className="font-semibold text-gray-700 mb-2">学習</p>
+                <p className="font-semibold text-gray-700 mb-2">過去問・予想問題</p>
                 <ul className="space-y-1.5">
-                  <li><Link href="/quiz" className="text-gray-500 hover:text-green-600 transition-colors">学習クイズ（10問ずつ）</Link></li>
+                  <li><Link href="/past-exams" className="text-gray-500 hover:text-green-600 transition-colors">実際の過去問を解く</Link></li>
+                  <li><Link href="/quiz" className="text-gray-500 hover:text-green-600 transition-colors">予想問題（10問ずつ）</Link></li>
                   <li><Link href="/quiz/weak" className="text-gray-500 hover:text-green-600 transition-colors">苦手復習</Link></li>
                   <li><Link href="/dashboard" className="text-gray-500 hover:text-green-600 transition-colors">学習記録</Link></li>
                   <li><Link href="/acupoints" className="text-gray-500 hover:text-green-600 transition-colors">経穴から学ぶ</Link></li>
@@ -109,8 +110,8 @@ export default function RootLayout({
               </div>
             </div>
             <div className="border-t border-gray-200 pt-4 text-xs text-gray-400 space-y-1">
-              <p>鍼灸国試 学習クイズ＆分析 — 学習クイズは公式過去問の問題文・選択肢を掲載していません（過去問の出題傾向・第35回新出題基準にもとづく学習用オリジナル問題）。</p>
-              <p>過去問分析は公益財団法人東洋療法研修試験財団が公表した試験データ（第29〜34回1,080問）をもとにした独自分析。当サイトは非公式です。</p>
+              <p>鍼灸国試 過去問・予想問題・分析 — 予想問題は公式過去問の問題文・選択肢を掲載していません（過去問の頻出傾向・第35回新出題基準にもとづくオリジナル問題）。実際の過去問は/past-examsで演習できます。</p>
+              <p>出題分析は公益財団法人東洋療法研修試験財団が公表した試験データ（第29〜34回1,080問）をもとにした独自分析。当サイトは非公式です。</p>
             </div>
           </div>
         </footer>
