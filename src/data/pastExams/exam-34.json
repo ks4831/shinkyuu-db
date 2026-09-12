@@ -1998,5 +1998,1005 @@
     "sourceOrg": "公益財団法人 東洋療法研修試験財団",
     "sourceReliability": "indexed_official",
     "verifiedAt": "2026-09-12"
+  },
+  {
+    "id": "34-101",
+    "examRound": 34,
+    "questionNumber": 101,
+    "questionText": "次の症例の病証でみられる舌所見はどれか。「28歳の男性。眉間の痛みを伴う頭痛。随伴症状は鼻出血、呑酸、げっぷ、不眠、便秘、食後すぐに空腹感が起こる。脈は滑数、腹は胃脘部の圧痛を認める。」",
+    "choices": [
+      "薄苔",
+      "白苔",
+      "黄苔",
+      "剥苔"
+    ],
+    "answerIndex": 2,
+    "explanation": "鼻出血・呑酸・食後すぐの空腹感・便秘・滑数脈は胃熱（胃火上炎）の症候であり、黄苔を呈しやすい。",
+    "hasFigure": false,
+    "source": "第34回 はり師・きゅう師国家試験",
+    "sourceUrl": "https://ahaki.or.jp/wordpress/wp-content/uploads/mondai_34_harikyu_pm.pdf",
+    "sourceOrg": "公益財団法人 東洋療法研修試験財団",
+    "sourceReliability": "indexed_official",
+    "verifiedAt": "2026-09-12"
+  },
+  {
+    "id": "34-102",
+    "examRound": 34,
+    "questionNumber": 102,
+    "questionText": "経脈病証で「手掌のほてりと痛み、咽喉が渇いて飲み物をほしがる、目が黄ばみ、胸肋部が痛む」のはどれか。",
+    "choices": [
+      "手の少陰心経病証",
+      "手の太陰肺経病証",
+      "手の少陽三焦経病証",
+      "手の陽明大腸経病証"
+    ],
+    "answerIndex": 0,
+    "explanation": "手掌のほてり（手心熱）・咽喉の渇き・目の黄ばみ・胸脇部痛は、手の少陰心経の経脈病証に一致する。",
+    "hasFigure": false,
+    "source": "第34回 はり師・きゅう師国家試験",
+    "sourceUrl": "https://ahaki.or.jp/wordpress/wp-content/uploads/mondai_34_harikyu_pm.pdf",
+    "sourceOrg": "公益財団法人 東洋療法研修試験財団",
+    "sourceReliability": "indexed_official",
+    "verifiedAt": "2026-09-12"
+  },
+  {
+    "id": "34-103",
+    "examRound": 34,
+    "questionNumber": 103,
+    "questionText": "奇経八脈病証で「背骨のこわばり、頭痛、心臓部痛、足の冷え、遺尿がある」のはどれか。",
+    "choices": [
+      "督脈病証",
+      "任脈病証",
+      "衝脈病証",
+      "帯脈病証"
+    ],
+    "answerIndex": 0,
+    "explanation": "脊柱のこわばり・頭痛・心臓部痛・足の冷え・遺尿は、脊柱を通る督脈の病証に一致する。",
+    "hasFigure": false,
+    "source": "第34回 はり師・きゅう師国家試験",
+    "sourceUrl": "https://ahaki.or.jp/wordpress/wp-content/uploads/mondai_34_harikyu_pm.pdf",
+    "sourceOrg": "公益財団法人 東洋療法研修試験財団",
+    "sourceReliability": "indexed_official",
+    "verifiedAt": "2026-09-12"
+  },
+  {
+    "id": "34-104",
+    "examRound": 34,
+    "questionNumber": 104,
+    "questionText": "四診法で発汗を診ることができないのはどれか。",
+    "choices": [
+      "神技",
+      "聖技",
+      "工技",
+      "巧技"
+    ],
+    "answerIndex": 1,
+    "explanation": "四診法は望・聞・問・切の順に神・聖・工・巧と呼ばれる。発汗は望診（視診）や切診（触診）で確認できるが、聞診（聴覚・嗅覚による診察＝聖技）では直接診ることができない。",
+    "hasFigure": false,
+    "source": "第34回 はり師・きゅう師国家試験",
+    "sourceUrl": "https://ahaki.or.jp/wordpress/wp-content/uploads/mondai_34_harikyu_pm.pdf",
+    "sourceOrg": "公益財団法人 東洋療法研修試験財団",
+    "sourceReliability": "indexed_official",
+    "verifiedAt": "2026-09-12"
+  },
+  {
+    "id": "34-105",
+    "examRound": 34,
+    "questionNumber": 105,
+    "questionText": "次の症例の経脈病証はどれか。「25歳の女性。先週から腰痛があり、うつむきや仰向けができない。季肋部の腫れや下腹部膨満感もある。咽喉の乾きや下痢がある。顔色はすすけて青黒い。」",
+    "choices": [
+      "足の少陰経病証",
+      "足の厥陰経病証",
+      "足の太陽経病証",
+      "足の少陽経病証"
+    ],
+    "answerIndex": 1,
+    "explanation": "腰痛で前後屈が困難、下腹部の膨満感、咽喉の乾き、顔色がすすけて青黒い（面塵脱色）は、足厥陰肝経の経脈病証（霊枢・経脈篇）に一致する。",
+    "hasFigure": false,
+    "source": "第34回 はり師・きゅう師国家試験",
+    "sourceUrl": "https://ahaki.or.jp/wordpress/wp-content/uploads/mondai_34_harikyu_pm.pdf",
+    "sourceOrg": "公益財団法人 東洋療法研修試験財団",
+    "sourceReliability": "indexed_official",
+    "verifiedAt": "2026-09-12"
+  },
+  {
+    "id": "34-106",
+    "examRound": 34,
+    "questionNumber": 106,
+    "questionText": "十二刺で、胸痛に対して胸部と背部の圧痛点に前後から1鍼ずつ刺すのはどれか。",
+    "choices": [
+      "偶刺",
+      "短刺",
+      "報刺",
+      "揚刺"
+    ],
+    "answerIndex": 0,
+    "explanation": "偶刺は胸背部の痛み（心痺）に対し、痛みの部位を挟んで前後から1鍼ずつ刺す十二刺の一つである。",
+    "hasFigure": false,
+    "source": "第34回 はり師・きゅう師国家試験",
+    "sourceUrl": "https://ahaki.or.jp/wordpress/wp-content/uploads/mondai_34_harikyu_pm.pdf",
+    "sourceOrg": "公益財団法人 東洋療法研修試験財団",
+    "sourceReliability": "indexed_official",
+    "verifiedAt": "2026-09-12"
+  },
+  {
+    "id": "34-107",
+    "examRound": 34,
+    "questionNumber": 107,
+    "questionText": "足から腹部に至り任脈、胆経、肝経と交わり舌に至る経脈はどれか。",
+    "choices": [
+      "陰蹻脈",
+      "陰維脈",
+      "足太陰脾経",
+      "足少陰腎経"
+    ],
+    "answerIndex": 2,
+    "explanation": "足太陰脾経は足から腹部を経て任脈・胆経・肝経と交会し、内行枝は舌根に連なり舌下に散じる。",
+    "hasFigure": false,
+    "source": "第34回 はり師・きゅう師国家試験",
+    "sourceUrl": "https://ahaki.or.jp/wordpress/wp-content/uploads/mondai_34_harikyu_pm.pdf",
+    "sourceOrg": "公益財団法人 東洋療法研修試験財団",
+    "sourceReliability": "indexed_official",
+    "verifiedAt": "2026-09-12"
+  },
+  {
+    "id": "34-108",
+    "examRound": 34,
+    "questionNumber": 108,
+    "questionText": "奇経八脈について最も適切なのはどれか。",
+    "choices": [
+      "循行には共通する規則性がある。",
+      "督脈と任脈は属絡関係である。",
+      "陽維脈と陰維脈は表裏関係にある。",
+      "正経十二経脈と交会している。"
+    ],
+    "answerIndex": 3,
+    "explanation": "奇経八脈は臓腑との属絡関係をもたず、正経十二経脈と交会することでその気血を調整する。",
+    "hasFigure": false,
+    "source": "第34回 はり師・きゅう師国家試験",
+    "sourceUrl": "https://ahaki.or.jp/wordpress/wp-content/uploads/mondai_34_harikyu_pm.pdf",
+    "sourceOrg": "公益財団法人 東洋療法研修試験財団",
+    "sourceReliability": "indexed_official",
+    "verifiedAt": "2026-09-12"
+  },
+  {
+    "id": "34-109",
+    "examRound": 34,
+    "questionNumber": 109,
+    "questionText": "募穴について最も適切なのはどれか。",
+    "choices": [
+      "背部兪穴と表裏関係にある。",
+      "臓腑の気が注ぐところである。",
+      "臓と腑では主に臓の治療に有効である。",
+      "臓腑と同名の経脈上にある。"
+    ],
+    "answerIndex": 0,
+    "explanation": "募穴は胸腹部にあり、背部兪穴と組み合わせて用いられる（前後配穴）など、背部兪穴と表裏の関係にあるとされる。",
+    "hasFigure": false,
+    "source": "第34回 はり師・きゅう師国家試験",
+    "sourceUrl": "https://ahaki.or.jp/wordpress/wp-content/uploads/mondai_34_harikyu_pm.pdf",
+    "sourceOrg": "公益財団法人 東洋療法研修試験財団",
+    "sourceReliability": "indexed_official",
+    "verifiedAt": "2026-09-12"
+  },
+  {
+    "id": "34-110",
+    "examRound": 34,
+    "questionNumber": 110,
+    "questionText": "天応穴の特徴はどれか。",
+    "choices": [
+      "十四経脈上にある。",
+      "主治が定まっている。",
+      "1901年以降に定められた。",
+      "病態と関連して出現する。"
+    ],
+    "answerIndex": 3,
+    "explanation": "天応穴（阿是穴）は経脈上の位置や主治が定まった経穴ではなく、圧痛など病態に関連してその都度出現する場所である。",
+    "hasFigure": false,
+    "source": "第34回 はり師・きゅう師国家試験",
+    "sourceUrl": "https://ahaki.or.jp/wordpress/wp-content/uploads/mondai_34_harikyu_pm.pdf",
+    "sourceOrg": "公益財団法人 東洋療法研修試験財団",
+    "sourceReliability": "indexed_official",
+    "verifiedAt": "2026-09-12"
+  },
+  {
+    "id": "34-111",
+    "examRound": 34,
+    "questionNumber": 111,
+    "questionText": "中指末節骨の指幅を1横指として取穴する経穴はどれか。",
+    "choices": [
+      "陽白",
+      "照海",
+      "水泉",
+      "頬車"
+    ],
+    "answerIndex": 3,
+    "explanation": "頬車は中指末節骨の指幅を1横指とする指寸法を用いて取穴する経穴である。",
+    "hasFigure": false,
+    "source": "第34回 はり師・きゅう師国家試験",
+    "sourceUrl": "https://ahaki.or.jp/wordpress/wp-content/uploads/mondai_34_harikyu_pm.pdf",
+    "sourceOrg": "公益財団法人 東洋療法研修試験財団",
+    "sourceReliability": "indexed_official",
+    "verifiedAt": "2026-09-12"
+  },
+  {
+    "id": "34-112",
+    "examRound": 34,
+    "questionNumber": 112,
+    "questionText": "陰経を総括する奇経の八脈交会穴はどれか。",
+    "choices": [
+      "内関",
+      "公孫",
+      "列欠",
+      "照海"
+    ],
+    "answerIndex": 2,
+    "explanation": "任脈は「陰脈の海」として陰経を総括するとされ、その八脈交会穴は列欠である。",
+    "hasFigure": false,
+    "source": "第34回 はり師・きゅう師国家試験",
+    "sourceUrl": "https://ahaki.or.jp/wordpress/wp-content/uploads/mondai_34_harikyu_pm.pdf",
+    "sourceOrg": "公益財団法人 東洋療法研修試験財団",
+    "sourceReliability": "indexed_official",
+    "verifiedAt": "2026-09-12"
+  },
+  {
+    "id": "34-113",
+    "examRound": 34,
+    "questionNumber": 113,
+    "questionText": "神庭穴と眉間の中点との長さはどれか。",
+    "choices": [
+      "5分",
+      "1寸5分",
+      "2寸5分",
+      "3寸5分"
+    ],
+    "answerIndex": 3,
+    "explanation": "前髪際正中から眉間（印堂）までは3寸とされ、神庭は前髪際の後方5分に位置するため、神庭から眉間までは3寸5分となる。",
+    "hasFigure": false,
+    "source": "第34回 はり師・きゅう師国家試験",
+    "sourceUrl": "https://ahaki.or.jp/wordpress/wp-content/uploads/mondai_34_harikyu_pm.pdf",
+    "sourceOrg": "公益財団法人 東洋療法研修試験財団",
+    "sourceReliability": "indexed_official",
+    "verifiedAt": "2026-09-12"
+  },
+  {
+    "id": "34-114",
+    "examRound": 34,
+    "questionNumber": 114,
+    "questionText": "経穴と体表指標の組合せで誤っているのはどれか。",
+    "choices": [
+      "身柱 ― 肩甲骨上角",
+      "至陽 ― 肩甲骨下角",
+      "命門 ― 第12肋骨先端",
+      "腰陽関 ― 腸骨稜最高点"
+    ],
+    "answerIndex": 0,
+    "explanation": "肩甲骨上角は第2胸椎棘突起の高さの指標であり、第3胸椎棘突起下にある身柱の指標としては誤りである。至陽（第7胸椎）と肩甲骨下角、命門（第2腰椎）と第12肋骨先端、腰陽関（第4腰椎）と腸骨稜最高点の組合せは正しい。",
+    "hasFigure": false,
+    "source": "第34回 はり師・きゅう師国家試験",
+    "sourceUrl": "https://ahaki.or.jp/wordpress/wp-content/uploads/mondai_34_harikyu_pm.pdf",
+    "sourceOrg": "公益財団法人 東洋療法研修試験財団",
+    "sourceReliability": "indexed_official",
+    "verifiedAt": "2026-09-12"
+  },
+  {
+    "id": "34-115",
+    "examRound": 34,
+    "questionNumber": 115,
+    "questionText": "鎖骨下縁と乳頭線との交点にあるのはどれか。",
+    "choices": [
+      "庫房",
+      "気戸",
+      "兪府",
+      "気舎"
+    ],
+    "answerIndex": 1,
+    "explanation": "気戸は鎖骨下縁と乳頭線（前正中線から4寸）との交点に位置する。",
+    "hasFigure": false,
+    "source": "第34回 はり師・きゅう師国家試験",
+    "sourceUrl": "https://ahaki.or.jp/wordpress/wp-content/uploads/mondai_34_harikyu_pm.pdf",
+    "sourceOrg": "公益財団法人 東洋療法研修試験財団",
+    "sourceReliability": "indexed_official",
+    "verifiedAt": "2026-09-12"
+  },
+  {
+    "id": "34-116",
+    "examRound": 34,
+    "questionNumber": 116,
+    "questionText": "伏在神経の分布領域にあるのはどれか。",
+    "choices": [
+      "陽陵泉",
+      "陰陵泉",
+      "陰市",
+      "陰包"
+    ],
+    "answerIndex": 1,
+    "explanation": "陰陵泉は下腿内側、伏在神経の分布領域に位置する。",
+    "hasFigure": false,
+    "source": "第34回 はり師・きゅう師国家試験",
+    "sourceUrl": "https://ahaki.or.jp/wordpress/wp-content/uploads/mondai_34_harikyu_pm.pdf",
+    "sourceOrg": "公益財団法人 東洋療法研修試験財団",
+    "sourceReliability": "indexed_official",
+    "verifiedAt": "2026-09-12"
+  },
+  {
+    "id": "34-117",
+    "examRound": 34,
+    "questionNumber": 117,
+    "questionText": "少海穴について最も適切なのはどれか。",
+    "choices": [
+      "尺骨神経溝上にある。",
+      "同経の兪穴までは12寸である。",
+      "五行穴では金穴に属する。",
+      "皮膚面に対しての直刺で、尺側手根屈筋に刺鍼できる。"
+    ],
+    "answerIndex": 1,
+    "explanation": "少海は手の少陰心経の合水穴で、同経の兪（土）穴である神門までは前腕の骨度で12寸である。",
+    "hasFigure": false,
+    "source": "第34回 はり師・きゅう師国家試験",
+    "sourceUrl": "https://ahaki.or.jp/wordpress/wp-content/uploads/mondai_34_harikyu_pm.pdf",
+    "sourceOrg": "公益財団法人 東洋療法研修試験財団",
+    "sourceReliability": "indexed_official",
+    "verifiedAt": "2026-09-12"
+  },
+  {
+    "id": "34-118",
+    "examRound": 34,
+    "questionNumber": 118,
+    "questionText": "上腕二頭筋の長頭と短頭の間にあるのはどれか。",
+    "choices": [
+      "天泉",
+      "天府",
+      "青霊",
+      "臂臑"
+    ],
+    "answerIndex": 0,
+    "explanation": "天泉は上腕二頭筋の長頭と短頭の間に位置する。",
+    "hasFigure": false,
+    "source": "第34回 はり師・きゅう師国家試験",
+    "sourceUrl": "https://ahaki.or.jp/wordpress/wp-content/uploads/mondai_34_harikyu_pm.pdf",
+    "sourceOrg": "公益財団法人 東洋療法研修試験財団",
+    "sourceReliability": "indexed_official",
+    "verifiedAt": "2026-09-12"
+  },
+  {
+    "id": "34-119",
+    "examRound": 34,
+    "questionNumber": 119,
+    "questionText": "顔面部、耳珠中央の前縁と下顎骨関節突起の間の陥凹部にあるのはどれか。",
+    "choices": [
+      "耳門",
+      "和髎",
+      "聴会",
+      "聴宮"
+    ],
+    "answerIndex": 3,
+    "explanation": "聴宮は耳珠中央前縁と下顎骨関節突起の間の陥凹部（開口時にくぼむ部位）に位置する。",
+    "hasFigure": false,
+    "source": "第34回 はり師・きゅう師国家試験",
+    "sourceUrl": "https://ahaki.or.jp/wordpress/wp-content/uploads/mondai_34_harikyu_pm.pdf",
+    "sourceOrg": "公益財団法人 東洋療法研修試験財団",
+    "sourceReliability": "indexed_official",
+    "verifiedAt": "2026-09-12"
+  },
+  {
+    "id": "34-120",
+    "examRound": 34,
+    "questionNumber": 120,
+    "questionText": "五兪穴で、のぼせと失禁に用いる経穴の部位はどれか。",
+    "choices": [
+      "内果尖とアキレス腱の間の陥凹部",
+      "膝後内側、半腱様筋腱の外縁、膝窩横紋上",
+      "アキレス腱の前縁、内果尖の上方2寸",
+      "足内側、舟状骨粗面の下方、赤白肉際"
+    ],
+    "answerIndex": 1,
+    "explanation": "陰谷は膝後内側、半腱様筋腱の外縁、膝窩横紋上に位置する腎経の合水穴で、のぼせや失禁に用いられる。",
+    "hasFigure": false,
+    "source": "第34回 はり師・きゅう師国家試験",
+    "sourceUrl": "https://ahaki.or.jp/wordpress/wp-content/uploads/mondai_34_harikyu_pm.pdf",
+    "sourceOrg": "公益財団法人 東洋療法研修試験財団",
+    "sourceReliability": "indexed_official",
+    "verifiedAt": "2026-09-12"
+  },
+  {
+    "id": "34-121",
+    "examRound": 34,
+    "questionNumber": 121,
+    "questionText": "原気が集まるとされ、体が重だるく関節が痛むときに用いる経穴の部位はどれか。",
+    "choices": [
+      "手背、第2中手指節関節橈側の近位陥凹部",
+      "足背、第2中足骨底部と中間楔状骨の間、足背動脈拍動部",
+      "手関節前内側、尺側手根屈筋腱の橈側縁、手関節掌側横紋上",
+      "足背、第4・第5中足骨底接合部の遠位、第5指の長指伸筋腱外側の陥凹部"
+    ],
+    "answerIndex": 2,
+    "explanation": "神門は心経の原穴で、原気が集まるとされる部位にあり、体重節痛（体が重だるく関節が痛む症候）に用いられる。",
+    "hasFigure": false,
+    "source": "第34回 はり師・きゅう師国家試験",
+    "sourceUrl": "https://ahaki.or.jp/wordpress/wp-content/uploads/mondai_34_harikyu_pm.pdf",
+    "sourceOrg": "公益財団法人 東洋療法研修試験財団",
+    "sourceReliability": "indexed_official",
+    "verifiedAt": "2026-09-12"
+  },
+  {
+    "id": "34-122",
+    "examRound": 34,
+    "questionNumber": 122,
+    "questionText": "郄穴の部位はどれか。",
+    "choices": [
+      "前腕後面、尺骨の橈側縁、手関節背側横紋の上方3寸",
+      "肘後内側、肘頭と上腕骨内側上顆の間の陥凹部",
+      "足内側、内果の前下方、舟状骨粗面と内果尖の中央陥凹部",
+      "足外側、第5中足骨粗面の遠位、赤白肉際"
+    ],
+    "answerIndex": 0,
+    "explanation": "会宗は手の少陽三焦経の郄穴で、前腕後面、手関節背側横紋の上方3寸、尺骨の橈側縁に位置する。",
+    "hasFigure": false,
+    "source": "第34回 はり師・きゅう師国家試験",
+    "sourceUrl": "https://ahaki.or.jp/wordpress/wp-content/uploads/mondai_34_harikyu_pm.pdf",
+    "sourceOrg": "公益財団法人 東洋療法研修試験財団",
+    "sourceReliability": "indexed_official",
+    "verifiedAt": "2026-09-12"
+  },
+  {
+    "id": "34-123",
+    "examRound": 34,
+    "questionNumber": 123,
+    "questionText": "絡穴の部位はどれか。",
+    "choices": [
+      "下腿外側、腓骨の前方、外果尖の上方4寸",
+      "下腿前面、犢鼻と解渓を結ぶ線上、犢鼻の下方8寸",
+      "下腿内側、脛骨内縁の後際、陰陵泉の下方3寸",
+      "下腿後外側、腓腹筋外側頭下縁とアキレス腱の間、崑崙の上方7寸"
+    ],
+    "answerIndex": 3,
+    "explanation": "飛陽は足の太陽膀胱経の絡穴で、下腿後外側、腓腹筋外側頭下縁とアキレス腱の間、崑崙の上方7寸に位置する。",
+    "hasFigure": false,
+    "source": "第34回 はり師・きゅう師国家試験",
+    "sourceUrl": "https://ahaki.or.jp/wordpress/wp-content/uploads/mondai_34_harikyu_pm.pdf",
+    "sourceOrg": "公益財団法人 東洋療法研修試験財団",
+    "sourceReliability": "indexed_official",
+    "verifiedAt": "2026-09-12"
+  },
+  {
+    "id": "34-124",
+    "examRound": 34,
+    "questionNumber": 124,
+    "questionText": "八会穴で募穴でもあるのはどれか。",
+    "choices": [
+      "気会",
+      "血会",
+      "骨会",
+      "脈会"
+    ],
+    "answerIndex": 0,
+    "explanation": "八会穴の気会は膻中であり、膻中は心包の募穴も兼ねる。血会（膈兪）・骨会（大杼）・脈会（太淵）はいずれも募穴ではない。",
+    "hasFigure": false,
+    "source": "第34回 はり師・きゅう師国家試験",
+    "sourceUrl": "https://ahaki.or.jp/wordpress/wp-content/uploads/mondai_34_harikyu_pm.pdf",
+    "sourceOrg": "公益財団法人 東洋療法研修試験財団",
+    "sourceReliability": "indexed_official",
+    "verifiedAt": "2026-09-12"
+  },
+  {
+    "id": "34-125",
+    "examRound": 34,
+    "questionNumber": 125,
+    "questionText": "八総穴に属する経穴の部位はどれか。",
+    "choices": [
+      "下腿前面、犢鼻と解渓を結ぶ線上、犢鼻の下方9寸",
+      "下腿外側、腓骨の前方、外果尖の上方3寸",
+      "足外側、外果尖の直下、外果下縁と踵骨の間の陥凹部",
+      "膝後面、膝窩横紋の中点"
+    ],
+    "answerIndex": 2,
+    "explanation": "申脈は足外側、外果尖の直下、外果下縁と踵骨の間の陥凹部に位置する。",
+    "hasFigure": false,
+    "source": "第34回 はり師・きゅう師国家試験",
+    "sourceUrl": "https://ahaki.or.jp/wordpress/wp-content/uploads/mondai_34_harikyu_pm.pdf",
+    "sourceOrg": "公益財団法人 東洋療法研修試験財団",
+    "sourceReliability": "indexed_official",
+    "verifiedAt": "2026-09-12"
+  },
+  {
+    "id": "34-126",
+    "examRound": 34,
+    "questionNumber": 126,
+    "questionText": "腧穴で鍼の深刺により延髄損傷の危険性が最も高いのはどれか。",
+    "choices": [
+      "脳戸",
+      "翳風",
+      "瘂門",
+      "夾脊"
+    ],
+    "answerIndex": 2,
+    "explanation": "瘂門は後頸部で大後頭孔に近く、深刺すると延髄損傷の危険性が最も高い経穴として知られる。",
+    "hasFigure": false,
+    "source": "第34回 はり師・きゅう師国家試験",
+    "sourceUrl": "https://ahaki.or.jp/wordpress/wp-content/uploads/mondai_34_harikyu_pm.pdf",
+    "sourceOrg": "公益財団法人 東洋療法研修試験財団",
+    "sourceReliability": "indexed_official",
+    "verifiedAt": "2026-09-12"
+  },
+  {
+    "id": "34-127",
+    "examRound": 34,
+    "questionNumber": 127,
+    "questionText": "次の徒手検査はどれか。「患者を背臥位にして、股関節・膝関節屈曲90度から膝関節のみをゆっくりと伸展させ、下肢後面に疼痛が誘発されるかを確認する。」",
+    "choices": [
+      "トーマステスト",
+      "ラセーグテスト",
+      "ボンネットテスト",
+      "ブラガードテスト"
+    ],
+    "answerIndex": 1,
+    "explanation": "股関節・膝関節を90度屈曲した肢位から膝関節を伸展し、下肢後面の疼痛誘発を確認する検査はラセーグテストである。",
+    "hasFigure": false,
+    "source": "第34回 はり師・きゅう師国家試験",
+    "sourceUrl": "https://ahaki.or.jp/wordpress/wp-content/uploads/mondai_34_harikyu_pm.pdf",
+    "sourceOrg": "公益財団法人 東洋療法研修試験財団",
+    "sourceReliability": "indexed_official",
+    "verifiedAt": "2026-09-12"
+  },
+  {
+    "id": "34-128",
+    "examRound": 34,
+    "questionNumber": 128,
+    "questionText": "次の症例で最も考えられる頭痛はどれか。「50歳の女性。月に15回以上頭痛を自覚。主に午後や夕方に頭の両側や後頸部に締め付けられる痛みがある。鎮痛薬は月に4、5回服用。」",
+    "choices": [
+      "群発頭痛",
+      "緊張型頭痛",
+      "薬物使用過多による頭痛",
+      "片頭痛"
+    ],
+    "answerIndex": 1,
+    "explanation": "頭部両側・後頸部の締め付けられるような痛みが月15回以上みられ、鎮痛薬の使用も少ないことから、慢性緊張型頭痛が最も考えられる。",
+    "hasFigure": false,
+    "source": "第34回 はり師・きゅう師国家試験",
+    "sourceUrl": "https://ahaki.or.jp/wordpress/wp-content/uploads/mondai_34_harikyu_pm.pdf",
+    "sourceOrg": "公益財団法人 東洋療法研修試験財団",
+    "sourceReliability": "indexed_official",
+    "verifiedAt": "2026-09-12"
+  },
+  {
+    "id": "34-129",
+    "examRound": 34,
+    "questionNumber": 129,
+    "questionText": "次の症例で最も適切な疾患はどれか。「75歳の女性。円背で胸腰椎移行部に圧痛を認める。15年前に胃癌の既往がある。脊椎エックス線像で陳旧性の圧迫骨折を認める。血液検査やMRI検査で異常はない。」",
+    "choices": [
+      "骨粗鬆症",
+      "骨軟化症",
+      "多発性骨髄腫",
+      "転移性骨腫瘍"
+    ],
+    "answerIndex": 0,
+    "explanation": "円背・陳旧性圧迫骨折を認める一方、血液検査やMRIで異常がないことから、悪性腫瘍や代謝性疾患は考えにくく、骨粗鬆症が最も適切である。",
+    "hasFigure": false,
+    "source": "第34回 はり師・きゅう師国家試験",
+    "sourceUrl": "https://ahaki.or.jp/wordpress/wp-content/uploads/mondai_34_harikyu_pm.pdf",
+    "sourceOrg": "公益財団法人 東洋療法研修試験財団",
+    "sourceReliability": "indexed_official",
+    "verifiedAt": "2026-09-12"
+  },
+  {
+    "id": "34-130",
+    "examRound": 34,
+    "questionNumber": 130,
+    "questionText": "次の症例で最も考えられる疾患はどれか。「76歳の女性。1年ほど前から特に誘因なく右手がしびれ、その後、左手にも出現。物をつかみにくく、歩行もぎこちなくなった。両側下肢の腱反射は亢進。」",
+    "choices": [
+      "胸郭出口症候群",
+      "頸椎症性脊髄症",
+      "頸椎症性神経根症",
+      "外傷性頸部症候群"
+    ],
+    "answerIndex": 1,
+    "explanation": "両側性・進行性の手のしびれと巧緻運動障害、歩行障害、下肢腱反射亢進は、頸椎症性脊髄症に典型的な所見である。",
+    "hasFigure": false,
+    "source": "第34回 はり師・きゅう師国家試験",
+    "sourceUrl": "https://ahaki.or.jp/wordpress/wp-content/uploads/mondai_34_harikyu_pm.pdf",
+    "sourceOrg": "公益財団法人 東洋療法研修試験財団",
+    "sourceReliability": "indexed_official",
+    "verifiedAt": "2026-09-12"
+  },
+  {
+    "id": "34-131",
+    "examRound": 34,
+    "questionNumber": 131,
+    "questionText": "筋緊張亢進により肩関節の内旋制限がみられる患者に対して、施術対象となる筋はどれか。",
+    "choices": [
+      "棘下筋",
+      "大円筋",
+      "肩甲下筋",
+      "上腕三頭筋"
+    ],
+    "answerIndex": 0,
+    "explanation": "肩関節の内旋制限は、外旋筋である棘下筋の緊張亢進によって生じることが多く、施術対象となる。",
+    "hasFigure": false,
+    "source": "第34回 はり師・きゅう師国家試験",
+    "sourceUrl": "https://ahaki.or.jp/wordpress/wp-content/uploads/mondai_34_harikyu_pm.pdf",
+    "sourceOrg": "公益財団法人 東洋療法研修試験財団",
+    "sourceReliability": "indexed_official",
+    "verifiedAt": "2026-09-12"
+  },
+  {
+    "id": "34-132",
+    "examRound": 34,
+    "questionNumber": 132,
+    "questionText": "腰椎椎間板ヘルニアで、母趾屈曲筋力の低下、アキレス腱反射減弱、下肢伸展挙上テスト陽性を示す場合、施術対象となる神経根として最も適切なのはどれか。",
+    "choices": [
+      "L3",
+      "L4",
+      "L5",
+      "S1"
+    ],
+    "answerIndex": 3,
+    "explanation": "母趾屈筋力低下とアキレス腱反射減弱はS1神経根障害に特徴的な所見である。",
+    "hasFigure": false,
+    "source": "第34回 はり師・きゅう師国家試験",
+    "sourceUrl": "https://ahaki.or.jp/wordpress/wp-content/uploads/mondai_34_harikyu_pm.pdf",
+    "sourceOrg": "公益財団法人 東洋療法研修試験財団",
+    "sourceReliability": "indexed_official",
+    "verifiedAt": "2026-09-12"
+  },
+  {
+    "id": "34-133",
+    "examRound": 34,
+    "questionNumber": 133,
+    "questionText": "次の症例で絞扼部位近傍への治療穴として適切なのはどれか。「17歳の女子。受験勉強で問題集に書き込みながら問題を数多く解いているうちに、手背を除く利き手の尺側にしびれを感じるようになった。フロマン徴候陽性。」",
+    "choices": [
+      "手五里",
+      "孔最",
+      "小海",
+      "神門"
+    ],
+    "answerIndex": 3,
+    "explanation": "手背を除く尺側のしびれとフロマン徴候陽性は、手背知覚が保たれることから肘部管ではなく手関節部（ギヨン管）での尺骨神経絞扼を示唆し、絞扼部位近傍の神門が治療穴として適切である。",
+    "hasFigure": false,
+    "source": "第34回 はり師・きゅう師国家試験",
+    "sourceUrl": "https://ahaki.or.jp/wordpress/wp-content/uploads/mondai_34_harikyu_pm.pdf",
+    "sourceOrg": "公益財団法人 東洋療法研修試験財団",
+    "sourceReliability": "indexed_official",
+    "verifiedAt": "2026-09-12"
+  },
+  {
+    "id": "34-134",
+    "examRound": 34,
+    "questionNumber": 134,
+    "questionText": "鼻尖部を分布領域とする神経の神経痛に対する局所治療穴として適切なのはどれか。",
+    "choices": [
+      "聴会",
+      "陽白",
+      "四白",
+      "大迎"
+    ],
+    "answerIndex": 1,
+    "explanation": "鼻尖部は三叉神経第1枝（眼神経）の分布領域であり、同枝の局所治療穴として陽白が適切である。",
+    "hasFigure": false,
+    "source": "第34回 はり師・きゅう師国家試験",
+    "sourceUrl": "https://ahaki.or.jp/wordpress/wp-content/uploads/mondai_34_harikyu_pm.pdf",
+    "sourceOrg": "公益財団法人 東洋療法研修試験財団",
+    "sourceReliability": "indexed_official",
+    "verifiedAt": "2026-09-12"
+  },
+  {
+    "id": "34-135",
+    "examRound": 34,
+    "questionNumber": 135,
+    "questionText": "フォンテインの分類により重症度を確認するのはどれか。",
+    "choices": [
+      "深部静脈血栓症",
+      "腰部脊柱管狭窄症",
+      "閉塞性動脈硬化症",
+      "腰椎椎間板ヘルニア"
+    ],
+    "answerIndex": 2,
+    "explanation": "フォンテイン分類は閉塞性動脈硬化症（末梢動脈疾患）の重症度をI〜IV度で分類するものである。",
+    "hasFigure": false,
+    "source": "第34回 はり師・きゅう師国家試験",
+    "sourceUrl": "https://ahaki.or.jp/wordpress/wp-content/uploads/mondai_34_harikyu_pm.pdf",
+    "sourceOrg": "公益財団法人 東洋療法研修試験財団",
+    "sourceReliability": "indexed_official",
+    "verifiedAt": "2026-09-12"
+  },
+  {
+    "id": "34-136",
+    "examRound": 34,
+    "questionNumber": 136,
+    "questionText": "アトピー性皮膚炎の生活指導について誤っているのはどれか。",
+    "choices": [
+      "室内を清掃してアレルゲンの除去に努める。",
+      "発汗時には汗をシャワーで流す。",
+      "入浴後は保湿剤を塗布する。",
+      "顔面の痒みは手掌で叩いて対処する。"
+    ],
+    "answerIndex": 3,
+    "explanation": "痒みがあっても皮膚を叩く・掻くことは皮膚バリアを損ない症状を悪化させるため、適切な対処ではない。",
+    "hasFigure": false,
+    "source": "第34回 はり師・きゅう師国家試験",
+    "sourceUrl": "https://ahaki.or.jp/wordpress/wp-content/uploads/mondai_34_harikyu_pm.pdf",
+    "sourceOrg": "公益財団法人 東洋療法研修試験財団",
+    "sourceReliability": "indexed_official",
+    "verifiedAt": "2026-09-12"
+  },
+  {
+    "id": "34-137",
+    "examRound": 34,
+    "questionNumber": 137,
+    "questionText": "次の症例で最も適切な疾患はどれか。「45歳の男性。長時間のパソコン作業が続き、眼が疲れる。右頸部から肩、前腕にかけて鈍痛としびれがある。筋力や知覚に異常はなく、頸部の運動制限も明確でない。スパーリングテスト、ルーステストは陰性。」",
+    "choices": [
+      "バレー・リュー症候群",
+      "VDT症候群（情報機器作業に伴う健康障害）",
+      "胸郭出口症候群",
+      "頸椎椎間板ヘルニア"
+    ],
+    "answerIndex": 1,
+    "explanation": "長時間のパソコン作業による眼精疲労と頸肩部から前腕の鈍痛・しびれで、神経学的異常や誘発テストがいずれも陰性であることから、VDT症候群が最も適切である。",
+    "hasFigure": false,
+    "source": "第34回 はり師・きゅう師国家試験",
+    "sourceUrl": "https://ahaki.or.jp/wordpress/wp-content/uploads/mondai_34_harikyu_pm.pdf",
+    "sourceOrg": "公益財団法人 東洋療法研修試験財団",
+    "sourceReliability": "indexed_official",
+    "verifiedAt": "2026-09-12"
+  },
+  {
+    "id": "34-138",
+    "examRound": 34,
+    "questionNumber": 138,
+    "questionText": "橈骨神経麻痺で、萎縮した筋に対する施術部位として最も適切なのはどれか。",
+    "choices": [
+      "母指球",
+      "小指球",
+      "前腕前側",
+      "前腕後側"
+    ],
+    "answerIndex": 3,
+    "explanation": "橈骨神経は前腕後側の伸筋群を支配するため、橈骨神経麻痺では前腕後側の筋が萎縮し施術対象となる。",
+    "hasFigure": false,
+    "source": "第34回 はり師・きゅう師国家試験",
+    "sourceUrl": "https://ahaki.or.jp/wordpress/wp-content/uploads/mondai_34_harikyu_pm.pdf",
+    "sourceOrg": "公益財団法人 東洋療法研修試験財団",
+    "sourceReliability": "indexed_official",
+    "verifiedAt": "2026-09-12"
+  },
+  {
+    "id": "34-139",
+    "examRound": 34,
+    "questionNumber": 139,
+    "questionText": "疾患と罹患筋に対する治療穴の組合せで適切なのはどれか。",
+    "choices": [
+      "鵞足炎 ― 足三里",
+      "アキレス腱炎 ― 太衝",
+      "オスグッド病 ― 伏兎",
+      "シンスプリント ― 陰陵泉"
+    ],
+    "answerIndex": 2,
+    "explanation": "オスグッド病は大腿四頭筋（膝蓋腱付着部）の牽引による障害であり、大腿四頭筋上にある伏兎が治療穴として適切である。",
+    "hasFigure": false,
+    "source": "第34回 はり師・きゅう師国家試験",
+    "sourceUrl": "https://ahaki.or.jp/wordpress/wp-content/uploads/mondai_34_harikyu_pm.pdf",
+    "sourceOrg": "公益財団法人 東洋療法研修試験財団",
+    "sourceReliability": "indexed_official",
+    "verifiedAt": "2026-09-12"
+  },
+  {
+    "id": "34-140",
+    "examRound": 34,
+    "questionNumber": 140,
+    "questionText": "次の症例で障害されている靱帯として最も適切なのはどれか。「32歳の男性。競輪選手。最近、レース中に右膝関節外側に痛みを感じるようになった。内反ストレステスト陰性、グラスピングテスト陽性。」",
+    "choices": [
+      "腸脛靭帯",
+      "膝蓋靭帯",
+      "膝後十字靭帯",
+      "膝外側側副靭帯"
+    ],
+    "answerIndex": 0,
+    "explanation": "自転車競技選手の膝関節外側痛でグラスピングテスト陽性は、腸脛靭帯炎（腸脛靭帯炎症候群）を示唆する所見である。",
+    "hasFigure": false,
+    "source": "第34回 はり師・きゅう師国家試験",
+    "sourceUrl": "https://ahaki.or.jp/wordpress/wp-content/uploads/mondai_34_harikyu_pm.pdf",
+    "sourceOrg": "公益財団法人 東洋療法研修試験財団",
+    "sourceReliability": "indexed_official",
+    "verifiedAt": "2026-09-12"
+  },
+  {
+    "id": "34-141",
+    "examRound": 34,
+    "questionNumber": 141,
+    "questionText": "脈が滑数を認める消穀善飢に対して、五行穴の特性を活かした治療穴に迎随の補瀉に基づき斜刺する場合、鍼尖の方向にある経穴として適切なのはどれか。",
+    "choices": [
+      "厲兌",
+      "陥谷",
+      "侠渓",
+      "行間"
+    ],
+    "answerIndex": 1,
+    "explanation": "消穀善飢・滑数脈は胃熱の症候であり、胃経の五行穴を用いた瀉法（迎法）では、鍼尖を陥谷の方向に向けて斜刺する。",
+    "hasFigure": false,
+    "source": "第34回 はり師・きゅう師国家試験",
+    "sourceUrl": "https://ahaki.or.jp/wordpress/wp-content/uploads/mondai_34_harikyu_pm.pdf",
+    "sourceOrg": "公益財団法人 東洋療法研修試験財団",
+    "sourceReliability": "indexed_official",
+    "verifiedAt": "2026-09-12"
+  },
+  {
+    "id": "34-142",
+    "examRound": 34,
+    "questionNumber": 142,
+    "questionText": "次の症例で難経六十九難に基づく治療を行う場合、上肢の取穴部位として最も適切なのはどれか。「40歳の女性。仕事で自信を喪失し食欲不振と軟便が続いている。倦怠感もある。ここ数日は眠りも浅く動悸を感じる。舌質は淡、舌苔は白、脈は細弱を認める。」",
+    "choices": [
+      "指先",
+      "手掌",
+      "手関節",
+      "肘関節"
+    ],
+    "answerIndex": 1,
+    "explanation": "本症例は脾虚の症候を呈しており、難経六十九難「虚すればその母を補う」の原則に基づき、脾の母である心（火）の五行穴を上肢の手掌部で取穴する。",
+    "hasFigure": false,
+    "source": "第34回 はり師・きゅう師国家試験",
+    "sourceUrl": "https://ahaki.or.jp/wordpress/wp-content/uploads/mondai_34_harikyu_pm.pdf",
+    "sourceOrg": "公益財団法人 東洋療法研修試験財団",
+    "sourceReliability": "indexed_official",
+    "verifiedAt": "2026-09-12"
+  },
+  {
+    "id": "34-143",
+    "examRound": 34,
+    "questionNumber": 143,
+    "questionText": "痛痺による肩の痛みに対し、十二刺を用いて治療する場合、最も適切なのはどれか。",
+    "choices": [
+      "斉刺",
+      "輸刺",
+      "賛刺",
+      "直鍼刺"
+    ],
+    "answerIndex": 0,
+    "explanation": "斉刺は限局した深部の寒痺・痛痺に対し、中央に1鍼、その両側に2鍼を加えて刺す十二刺の一つで、肩の痛痺に適する。",
+    "hasFigure": false,
+    "source": "第34回 はり師・きゅう師国家試験",
+    "sourceUrl": "https://ahaki.or.jp/wordpress/wp-content/uploads/mondai_34_harikyu_pm.pdf",
+    "sourceOrg": "公益財団法人 東洋療法研修試験財団",
+    "sourceReliability": "indexed_official",
+    "verifiedAt": "2026-09-12"
+  },
+  {
+    "id": "34-144",
+    "examRound": 34,
+    "questionNumber": 144,
+    "questionText": "風熱犯肺により生じる浮腫の特徴はどれか。",
+    "choices": [
+      "緩やかに発症する。",
+      "眼瞼部から発症する。",
+      "陰水に分類される。",
+      "圧痕の回復が早い。"
+    ],
+    "answerIndex": 1,
+    "explanation": "風熱犯肺による浮腫（風水）は陽水に分類され、眼瞼部から急速に発症するのが特徴である。",
+    "hasFigure": false,
+    "source": "第34回 はり師・きゅう師国家試験",
+    "sourceUrl": "https://ahaki.or.jp/wordpress/wp-content/uploads/mondai_34_harikyu_pm.pdf",
+    "sourceOrg": "公益財団法人 東洋療法研修試験財団",
+    "sourceReliability": "indexed_official",
+    "verifiedAt": "2026-09-12"
+  },
+  {
+    "id": "34-145",
+    "examRound": 34,
+    "questionNumber": 145,
+    "questionText": "次の経脈病証に対して原絡配穴法で治療する場合、治療穴の組合せで最も適切なのはどれか。「動悸と胸苦しさ、上肢痛があり、その後、耳鳴りと難聴も発症した。」",
+    "choices": [
+      "大陵 ― 外関",
+      "神門 ― 支正",
+      "大陵 ― 内関",
+      "神門 ― 通里"
+    ],
+    "answerIndex": 0,
+    "explanation": "動悸・胸苦しさは手厥陰心包経の症候であり、その原穴である大陵と、表裏関係にある手少陽三焦経（耳鳴り・難聴に関連）の絡穴である外関を組み合わせる原絡配穴法が適切である。",
+    "hasFigure": false,
+    "source": "第34回 はり師・きゅう師国家試験",
+    "sourceUrl": "https://ahaki.or.jp/wordpress/wp-content/uploads/mondai_34_harikyu_pm.pdf",
+    "sourceOrg": "公益財団法人 東洋療法研修試験財団",
+    "sourceReliability": "indexed_official",
+    "verifiedAt": "2026-09-12"
+  },
+  {
+    "id": "34-146",
+    "examRound": 34,
+    "questionNumber": 146,
+    "questionText": "次の症例の病証・病態で最も適切なのはどれか。「60歳の男性。3か月前に知人との信頼関係が壊れ、強いいらだちを自覚してから下腹部の脹り、便秘がみられ、最近は頭痛や目の充血とともに尿の出も悪く残尿感が強くなった。寝汗はない。舌質は紅、舌苔は黄、脈は弦数を認める。」",
+    "choices": [
+      "肝気鬱結",
+      "肝陽上亢",
+      "肝鬱化火",
+      "肝血虚"
+    ],
+    "answerIndex": 2,
+    "explanation": "情志の失調によるいらだちに続き、頭痛・目の充血・舌紅苔黄・弦数脈などの熱象が加わっていることから、肝気鬱結が肝鬱化火へ進展した病証と考えられる。",
+    "hasFigure": false,
+    "source": "第34回 はり師・きゅう師国家試験",
+    "sourceUrl": "https://ahaki.or.jp/wordpress/wp-content/uploads/mondai_34_harikyu_pm.pdf",
+    "sourceOrg": "公益財団法人 東洋療法研修試験財団",
+    "sourceReliability": "indexed_official",
+    "verifiedAt": "2026-09-12"
+  },
+  {
+    "id": "34-147",
+    "examRound": 34,
+    "questionNumber": 147,
+    "questionText": "次の症例の病証に対する治療穴として最も適切なのはどれか。「65歳の男性。数か月前から抜け毛が多くなってきた。最近は下肢と下腹部が冷え、朝方に下痢をすることが多い。舌質は淡、舌苔は白、脈は細弱を認める。」",
+    "choices": [
+      "陶道",
+      "神道",
+      "霊台",
+      "命門"
+    ],
+    "answerIndex": 3,
+    "explanation": "下肢・下腹部の冷え、五更瀉（朝方の下痢）、脱毛、細弱脈は腎陽虚の症候であり、命門は腎陽を温補する代表的な治療穴である。",
+    "hasFigure": false,
+    "source": "第34回 はり師・きゅう師国家試験",
+    "sourceUrl": "https://ahaki.or.jp/wordpress/wp-content/uploads/mondai_34_harikyu_pm.pdf",
+    "sourceOrg": "公益財団法人 東洋療法研修試験財団",
+    "sourceReliability": "indexed_official",
+    "verifiedAt": "2026-09-12"
+  },
+  {
+    "id": "34-148",
+    "examRound": 34,
+    "questionNumber": 148,
+    "questionText": "次の病証に対して八脈交会穴を用いて治療する場合、下肢の治療穴として最も適切なのはどれか。「腹部が脹り腰のすわりが悪く、寒熱往来に苦しむ。」",
+    "choices": [
+      "申脈",
+      "照海",
+      "公孫",
+      "足臨泣"
+    ],
+    "answerIndex": 3,
+    "explanation": "腹部の脹り・腰部の不安定感・寒熱往来は帯脈の病証に一致し、その八脈交会穴である足臨泣が下肢の治療穴として適切である。",
+    "hasFigure": false,
+    "source": "第34回 はり師・きゅう師国家試験",
+    "sourceUrl": "https://ahaki.or.jp/wordpress/wp-content/uploads/mondai_34_harikyu_pm.pdf",
+    "sourceOrg": "公益財団法人 東洋療法研修試験財団",
+    "sourceReliability": "indexed_official",
+    "verifiedAt": "2026-09-12"
+  },
+  {
+    "id": "34-149",
+    "examRound": 34,
+    "questionNumber": 149,
+    "questionText": "次の症例の病証で最も適切なのはどれか。「48歳の女性。最近、帯下の量が増えた。帯下は白色で無臭、粘稠でだらだらと続くことが多い。顔はやつれて血色は悪い。舌苔は白膩、脈は緩を認める。」",
+    "choices": [
+      "肝血虚",
+      "腎陽虚",
+      "脾虚湿盛",
+      "膀胱湿熱"
+    ],
+    "answerIndex": 2,
+    "explanation": "白色で無臭・粘稠な帯下の持続、顔色不良、白膩苔、緩脈は、脾の運化機能低下により水湿が停滞する脾虚湿盛の帯下病に一致する。",
+    "hasFigure": false,
+    "source": "第34回 はり師・きゅう師国家試験",
+    "sourceUrl": "https://ahaki.or.jp/wordpress/wp-content/uploads/mondai_34_harikyu_pm.pdf",
+    "sourceOrg": "公益財団法人 東洋療法研修試験財団",
+    "sourceReliability": "indexed_official",
+    "verifiedAt": "2026-09-12"
+  },
+  {
+    "id": "34-150",
+    "examRound": 34,
+    "questionNumber": 150,
+    "questionText": "小児疳の虫に対して小児斜差の灸とちりげの灸を行った。棘突起で取穴の指標とならないのはどれか。",
+    "choices": [
+      "第3胸椎",
+      "第5胸椎",
+      "第9胸椎",
+      "第11胸椎"
+    ],
+    "answerIndex": 1,
+    "explanation": "小児斜差の灸・ちりげの灸では第3胸椎（身柱）・第9胸椎・第11胸椎付近の棘突起を取穴の指標とし、第5胸椎はこれらの技法における指標には用いられない。",
+    "hasFigure": false,
+    "source": "第34回 はり師・きゅう師国家試験",
+    "sourceUrl": "https://ahaki.or.jp/wordpress/wp-content/uploads/mondai_34_harikyu_pm.pdf",
+    "sourceOrg": "公益財団法人 東洋療法研修試験財団",
+    "sourceReliability": "indexed_official",
+    "verifiedAt": "2026-09-12"
   }
 ]
