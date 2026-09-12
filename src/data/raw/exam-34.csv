@@ -105,7 +105,7 @@ id,examRound,year,questionNumber,session,subject,officialLarge,officialMedium,of
 34-104,34,2026,104,共通,oriental-overview,専門科目,東洋医学概論,四診法,tcm-diagnosis,四診法の分類（神・聖・工・巧）,,四診法の4分類（神技・聖技・工技・巧技）と各診察内容を整理する,,indexed_official,2020,180,,oo-shinsatsu-bensho
 34-105,34,2026,105,共通,oriental-overview,専門科目,東洋医学概論,経脈病証,meridians-acupoints,足の経脈病証（足の厥陰経）,,足の三陰経・三陽経の経脈病証を比較して整理する,,indexed_official,2020,180,,oo-keiraku-keimyaku
 34-106,34,2026,106,共通,oriental-overview,専門科目,東洋医学概論,刺鍼法,acupuncture-technique,十二刺（偶刺）,,十二刺（偶刺・輸刺・関刺・合谷刺等）の刺法特徴と適応を整理する,,indexed_official,2020,180,,oo-chiryo-gairon
-34-107,34,2026,107,共通,meridians-acupoints,専門科目,経絡経穴概論,経脈の循行,meridians-acupoints,足少陰腎経の循行と交会,,足少陰腎経の循行経路（足→腹部→任脈・胆経・肝経と交会→舌）を整理する,,indexed_official,2020,180,,juni-kei-myaku
+34-107,34,2026,107,共通,meridians-acupoints,専門科目,経絡経穴概論,経脈の循行,meridians-acupoints,足少陰腎経の循行と交会,,足太陰脾経の循行経路（足→腹部→任脈・胆経・肝経と交会→舌根・舌下）を整理する,,indexed_official,2020,180,,juni-kei-myaku
 34-108,34,2026,108,共通,meridians-acupoints,専門科目,経絡経穴概論,奇経八脈,meridians-acupoints,奇経八脈の特徴,,奇経八脈の特徴（属絡・表裏関係なし・十二正経と交会する）を整理する,,indexed_official,2020,180,,kiki-hachi-myaku
 34-109,34,2026,109,共通,meridians-acupoints,専門科目,経絡経穴概論,特定穴,meridians-acupoints,特定穴（募穴）の特徴,,募穴の特徴（臓腑の気が注ぐ・腹部位置・背部兪穴との対応・所属経脈）を整理する,,indexed_official,2020,180,,bo-ketsu
 34-110,34,2026,110,共通,meridians-acupoints,専門科目,経絡経穴概論,奇穴,meridians-acupoints,天応穴（阿是穴）の特徴,,天応穴（阿是穴）の特徴（病態と関連して出現）と経穴・奇穴との違いを整理する,,indexed_official,2020,180,,me-kiketsu
@@ -131,8 +131,8 @@ id,examRound,year,questionNumber,session,subject,officialLarge,officialMedium,of
 34-130,34,2026,130,共通,oriental-clinical,専門科目,東洋医学臨床論,脊椎疾患,orthopedics,頸椎症性脊髄症と神経根症の鑑別,,頸椎症性脊髄症（両側・腱反射亢進・歩行障害）と神経根症（一側・腱反射低下）の違いを整理する,,indexed_official,2020,180,,oc-undoki-shinkei
 34-131,34,2026,131,共通,oriental-clinical,専門科目,東洋医学臨床論,肩関節,rehabilitation,肩関節内旋制限の施術対象筋,,肩関節内旋制限→外旋筋（棘下筋・小円筋）の緊張が原因。施術対象筋と肩の内外旋筋の整理をする,,indexed_official,2020,180,,oc-undoki-shinkei
 34-132,34,2026,132,共通,oriental-clinical,専門科目,東洋医学臨床論,腰椎疾患,orthopedics,腰椎椎間板ヘルニアの神経根別症状,,L4・L5・S1各神経根の支配筋・感覚・腱反射（L4→膝蓋腱、S1→アキレス腱）を整理する,,indexed_official,2020,180,,oc-undoki-shinkei
-34-133,34,2026,133,共通,oriental-clinical,専門科目,東洋医学臨床論,末梢神経絞扼,acupuncture-technique,尺骨神経絞扼（肘部管症候群）への治療穴,,肘部管症候群の症状（手背除く尺側しびれ・フロマン徴候）と絞扼部近傍穴（小海）を整理する,,indexed_official,2020,180,,oc-undoki-shinkei
-34-134,34,2026,134,共通,oriental-clinical,専門科目,東洋医学臨床論,末梢神経痛,acupuncture-technique,三叉神経領域と局所治療穴,,三叉神経の三枝（眼神経・上顎神経・下顎神経）の分布領域と局所経穴（鼻尖→V2→四白）を整理する,,indexed_official,2020,180,,oc-kakka-chiryo
+34-133,34,2026,133,共通,oriental-clinical,専門科目,東洋医学臨床論,末梢神経絞扼,acupuncture-technique,尺骨神経絞扼（肘部管症候群）への治療穴,,手背のしびれの有無による肘部管症候群とギヨン管症候群（手関節部の尺骨神経絞扼）の鑑別と絞扼部近傍穴（神門）を整理する,,indexed_official,2020,180,,oc-undoki-shinkei
+34-134,34,2026,134,共通,oriental-clinical,専門科目,東洋医学臨床論,末梢神経痛,acupuncture-technique,三叉神経領域と局所治療穴,,三叉神経の三枝（眼神経・上顎神経・下顎神経）の分布領域と局所経穴（鼻尖→眼神経（第1枝）→陽白）を整理する,,indexed_official,2020,180,,oc-kakka-chiryo
 34-135,34,2026,135,共通,oriental-clinical,専門科目,東洋医学臨床論,血管疾患,cardiology,閉塞性動脈硬化症のフォンテイン分類,,フォンテイン分類（I〜IV度）の各段階症状（冷感・間欠性跛行・安静時痛・壊死）を整理する,,indexed_official,2020,180,,oc-undoki-shinkei
 34-136,34,2026,136,共通,oriental-clinical,専門科目,東洋医学臨床論,皮膚疾患,dermatology,アトピー性皮膚炎の生活指導（誤り問題）,,アトピー性皮膚炎のスキンケア指導（保湿・アレルゲン除去・発汗後シャワー）と禁止事項を整理する,,indexed_official,2020,180,,oc-undoki-shinkei
 34-137,34,2026,137,共通,oriental-clinical,専門科目,東洋医学臨床論,頸肩腕症候群,orthopedics,VDT症候群の特徴と鑑別（頸椎疾患との鑑別）,,VDT症候群（眼疲労・頸肩鈍痛・神経学的異常なし）と頸椎椎間板ヘルニア・胸郭出口症候群との鑑別を整理する,,indexed_official,2020,180,,oc-undoki-shinkei
@@ -140,7 +140,7 @@ id,examRound,year,questionNumber,session,subject,officialLarge,officialMedium,of
 34-139,34,2026,139,共通,oriental-clinical,専門科目,東洋医学臨床論,スポーツ障害,acupuncture-technique,スポーツ障害と罹患筋・治療穴の適切な組合せ,,鵞足炎・アキレス腱炎・オスグッド病・シンスプリントの罹患筋と対応治療穴を整理する,,indexed_official,2020,180,,oc-undoki-shinkei
 34-140,34,2026,140,共通,oriental-clinical,専門科目,東洋医学臨床論,膝関節疾患,orthopedics,腸脛靱帯炎（グラスピングテスト陽性）,,腸脛靱帯炎の特徴（膝外側痛・グラスピングテスト陽性・ランナー膝）と膝外側の靱帯鑑別を整理する,,indexed_official,2020,180,,oc-undoki-shinkei
 34-141,34,2026,141,共通,oriental-clinical,専門科目,東洋医学臨床論,五行穴補瀉,acupuncture-technique,五行穴の迎随補瀉（消穀善飢の実熱に瀉法）,,迎随補瀉の原則（迎＝瀉・随＝補）と消穀善飢（胃熱）に対する胃経五行穴の瀉火を整理する,,indexed_official,2020,180,,oc-keiraku-chiryo
-34-142,34,2026,142,共通,oriental-clinical,専門科目,東洋医学臨床論,難経六十九難,acupuncture-technique,難経六十九難（母穴虚補法）の取穴部位,,難経六十九難「虚者補其母」の法則と脾虚に対する母穴（火穴）の取穴部位（肘関節）を整理する,,indexed_official,2020,180,,oc-keiraku-chiryo
+34-142,34,2026,142,共通,oriental-clinical,専門科目,東洋医学臨床論,難経六十九難,acupuncture-technique,難経六十九難（母穴虚補法）の取穴部位,,難経六十九難「虚者補其母」の法則と脾虚に対する母（心・火）の五行穴の取穴部位（上肢・手掌部の少府）を整理する,,indexed_official,2020,180,,oc-keiraku-chiryo
 34-143,34,2026,143,共通,oriental-clinical,専門科目,東洋医学臨床論,十二刺,acupuncture-technique,痛痹への十二刺（寒痹に輸刺）,,十二刺（偶刺・輸刺・斉刺等）の適応と痛痹（寒痹）への輸刺の意義を整理する,,indexed_official,2020,180,,oc-keiraku-chiryo
 34-144,34,2026,144,共通,oriental-clinical,専門科目,東洋医学臨床論,浮腫の弁証,tcm-clinical,陽水と陰水の鑑別（風熱犯肺→陽水）,,陽水（急性・眼瞼から発症・風邪等外因）と陰水（緩徐・腰以下・脾腎虚等内因）の違いを整理する,,indexed_official,2020,180,,oc-kiketsu-bensho
 34-145,34,2026,145,共通,oriental-clinical,専門科目,東洋医学臨床論,原絡配穴法,acupuncture-technique,原絡配穴法（心包経主＋三焦経絡穴）,,原絡配穴法の原則（主経の原穴＋表裏経の絡穴）と動悸・胸苦し→大陵、耳鳴り→外関の組合せを整理する,,indexed_official,2020,180,,oc-keiraku-chiryo
@@ -154,14 +154,14 @@ id,examRound,year,questionNumber,session,subject,officialLarge,officialMedium,of
 34-153,34,2026,153,共通,oriental-clinical,専門科目,東洋医学臨床論,肝胃不和の弁証,tcm-clinical,肝胃不和の弁証（ストレス・月経前増悪・胃症状）,,肝気犯胃（肝胃不和）の症候（ストレス誘因・月経前増悪・胃もたれ・胸やけ）と類証鑑別を整理する,,indexed_official,2020,180,,oc-zofu-bensho
 34-154,34,2026,154,共通,oriental-clinical,専門科目,東洋医学臨床論,肝胃不和の治療穴,acupuncture-technique,肝胃不和の治療穴組合せ（太衝・陰陵泉等）,,肝胃不和に対する治療穴組合せの根拠（肝経疏肝穴＋胃経和胃穴）を整理する,,indexed_official,2020,180,,oc-zofu-bensho
 34-155,34,2026,155,共通,oriental-clinical,専門科目,東洋医学臨床論,頭痛,neurology,片頭痛の診断（前兆・拍動性・嘔気）,,片頭痛の三大特徴（閃輝暗点等の前兆・拍動性頭痛・嘔気嘔吐）と緊張型・群発頭痛との鑑別を整理する,,indexed_official,2020,180,,oc-kakka-chiryo
-34-156,34,2026,156,共通,oriental-clinical,専門科目,東洋医学臨床論,郄穴の循経取穴,acupuncture-technique,片頭痛への郄穴循経取穴（肝経郄穴＝中都）,,頭部側面（胆・肝経エリア）への循経取穴と郄穴の急性症適応（肝経郄穴＝中都）を整理する,,indexed_official,2020,180,,oc-keiraku-chiryo
+34-156,34,2026,156,共通,oriental-clinical,専門科目,東洋医学臨床論,郄穴の循経取穴,acupuncture-technique,片頭痛への郄穴循経取穴（肝経郄穴＝中都）,,頭部側面（少陽・胆経エリア）への循経取穴と郄穴の急性症適応（胆経郄穴＝外丘）を整理する,,indexed_official,2020,180,,oc-keiraku-chiryo
 34-157,34,2026,157,共通,oriental-clinical,専門科目,東洋医学臨床論,胆道疾患,gastroenterology,胆石症・胆嚢炎の症状と黄疸合併,,マーフィー徴候陽性・右肩放散痛・脂質異常症→胆石症の典型症状と胆道閉塞による黄疸発症を整理する,,indexed_official,2020,180,,oc-kakka-chiryo
 34-158,34,2026,158,共通,oriental-clinical,専門科目,東洋医学臨床論,胆嚢疾患の奇穴取穴,acupuncture-technique,胆嚢炎への奇穴（胆嚢穴）の取穴指標（腓骨頭）,,胆嚢穴の位置（腓骨頭下方の陽陵泉付近）と取穴指標・主治（胆道疾患・下肢麻痺）を整理する,,indexed_official,2020,180,,oc-kakka-chiryo
 34-159,34,2026,159,共通,oriental-clinical,専門科目,東洋医学臨床論,COPD,pulmonology,COPDの診断根拠（ブリンクマン指数・樽状胸郭・1秒率低下）,,COPD診断の根拠（ブリンクマン指数＝1日本数×年数・樽状胸郭・1秒率低下・肺野透過性亢進）を整理する,,indexed_official,2020,180,,oc-kakka-chiryo
 34-160,34,2026,160,共通,oriental-clinical,専門科目,東洋医学臨床論,鍼通電療法の機序,acupuncture-technique,鍼通電療法による呼吸困難改善と内因性オピオイド（βエンドルフィン）,,鍼通電療法の鎮痛機序（2Hz→βエンドルフィン放出・100Hz→エンケファリン放出）を整理する,,indexed_official,2020,180,,oc-kakka-chiryo
 34-161,34,2026,161,共通,acupuncture-theory,専門科目,はり理論,毫鍼の構造,acupuncture-technique,毫鍼各部の名称（鍼根＝鍼脚）,,毫鍼の部位名称（鍼尖・鍼体・鍼根・鍼柄）と別称（鍼脚＝鍼根）を整理する,,indexed_official,2020,180,はり師専用,ha-goshin-kozo
 34-162,34,2026,162,共通,acupuncture-theory,専門科目,はり理論,鍼の手技,acupuncture-technique,弾入動作による刺激手技（屋漏術）,,日本鍼灸特有の手技（管散術・随鍼術・内調術・屋漏術）の特徴と弾入動作（屋漏術）の適応を整理する,,indexed_official,2020,180,はり師専用,ha-shishinho
-34-163,34,2026,163,共通,acupuncture-theory,専門科目,はり理論,灸頭鍼の鍼選択,acupuncture-technique,灸頭鍼法に適した鍼の条件（鍼体長・接合方式）,,灸頭鍼法で使う鍼の条件（鍼体長30mm以上・ネジ式鍼柄・凹凸ある鍼柄表面）と不適切な鍼の特徴を整理する,,indexed_official,2020,180,はり師専用,ha-goshin-kozo
+34-163,34,2026,163,共通,acupuncture-theory,専門科目,はり理論,灸頭鍼の鍼選択,acupuncture-technique,灸頭鍼法に適した鍼の条件（鍼体長・接合方式）,,灸頭鍼法で使う鍼の条件（鍼体長30mm以上・カシメ式接合の鍼柄・凹凸ある鍼柄表面）と燃焼熱・重みに耐えられない鍼の特徴を整理する,,indexed_official,2020,180,はり師専用,ha-goshin-kozo
 34-164,34,2026,164,共通,acupuncture-theory,専門科目,はり理論,鍼刺激感受性,acupuncture-technique,鍼刺激感受性を決定する因子（患者側・術者側）,,鍼刺激への感受性を決定する要因（栄養状態・体質等の患者側因子 vs 運鍼速度・刺激時間等の術者側因子）を整理する,,indexed_official,2020,180,はり師専用,hari-shigeki-ryo
 34-165,34,2026,165,共通,acupuncture-theory,専門科目,はり理論,施術消毒薬の選択,acupuncture-technique,アルコールアレルギー患者への代替消毒薬（クロルヘキシジン）,,アルコール系消毒薬（エタノール・イソプロパノール）の禁忌とクロルヘキシジン・ポビドンヨードの適応を整理する,,indexed_official,2020,180,はり師専用,ha-kansen-taisaku
 34-166,34,2026,166,共通,acupuncture-theory,専門科目,はり理論,得気の受容器,acupuncture-technique,得気（ひびき）を発生させる受容器（ポリモーダル受容器）,,得気発生に関与する受容器（ポリモーダル受容器・IV群線維）と触覚受容器（マイスネル・パチニ小体）の区別を整理する,,indexed_official,2020,180,はり師専用,ha-tokki

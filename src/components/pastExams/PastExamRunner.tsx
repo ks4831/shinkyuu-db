@@ -167,7 +167,7 @@ export default function PastExamRunner({
         </span>
       )}
 
-      <h2 className="mt-3 text-lg font-bold leading-relaxed text-gray-900">{q.questionText}</h2>
+      <h2 className="mt-3 whitespace-pre-line text-lg font-bold leading-relaxed text-gray-900">{q.questionText}</h2>
 
       <div className="mt-4 space-y-2.5">
         {q.choices.map((choice, i) => {
