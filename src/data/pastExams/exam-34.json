@@ -2998,5 +2998,605 @@
     "sourceOrg": "公益財団法人 東洋療法研修試験財団",
     "sourceReliability": "indexed_official",
     "verifiedAt": "2026-09-12"
+  },
+  {
+    "id": "34-151",
+    "examRound": 34,
+    "questionNumber": 151,
+    "questionText": "次の症例について、問題151、152の問いに答えよ。「75歳の女性。主訴は右胸痛。4週間前に右胸部に水疱が現れた。投薬で水疱は消失したが、胸痛が残っている。夫の介護で抑うつ感があり、過食、倦怠感、足のだるさもある。舌は胖大、厚膩苔、脈は滑を認める。」\n\n主訴の誘因として最も考えられるのはどれか。",
+    "choices": [
+      "過労",
+      "低栄養",
+      "運動不足",
+      "アレルゲン曝露"
+    ],
+    "answerIndex": 0,
+    "explanation": "夫の介護による過労・倦怠感は免疫力低下を介して帯状疱疹の発症誘因になったと考えられる。",
+    "hasFigure": false,
+    "source": "第34回 はり師・きゅう師国家試験",
+    "sourceUrl": "https://ahaki.or.jp/wordpress/wp-content/uploads/mondai_34_harikyu_pm.pdf",
+    "sourceOrg": "公益財団法人 東洋療法研修試験財団",
+    "sourceReliability": "indexed_official",
+    "verifiedAt": "2026-09-12"
+  },
+  {
+    "id": "34-152",
+    "examRound": 34,
+    "questionNumber": 152,
+    "questionText": "次の症例について、問題151、152の問いに答えよ。「75歳の女性。主訴は右胸痛。4週間前に右胸部に水疱が現れた。投薬で水疱は消失したが、胸痛が残っている。夫の介護で抑うつ感があり、過食、倦怠感、足のだるさもある。舌は胖大、厚膩苔、脈は滑を認める。」\n\n治療方針として最も適切なのはどれか。",
+    "choices": [
+      "心陽を補う。",
+      "胃陰を養う。",
+      "痰湿を除く。",
+      "気血を巡らす。"
+    ],
+    "answerIndex": 2,
+    "explanation": "胖大舌・厚膩苔・滑脈は痰湿の症候であり、治療方針は痰湿を除くことが適切である。",
+    "hasFigure": false,
+    "source": "第34回 はり師・きゅう師国家試験",
+    "sourceUrl": "https://ahaki.or.jp/wordpress/wp-content/uploads/mondai_34_harikyu_pm.pdf",
+    "sourceOrg": "公益財団法人 東洋療法研修試験財団",
+    "sourceReliability": "indexed_official",
+    "verifiedAt": "2026-09-12"
+  },
+  {
+    "id": "34-153",
+    "examRound": 34,
+    "questionNumber": 153,
+    "questionText": "次の症例について、問題153、154の問いに答えよ。「37歳の女性。主訴は左顎関節痛。2か月前から職場のストレスとともに痛みを自覚し始め、月経前には痛みが増悪する。胃のもたれ感、胸やけ、嘔気を伴うこともある。」\n\n病証として最も適切なのはどれか。",
+    "choices": [
+      "胃熱",
+      "脾胃湿熱",
+      "肝胃不和",
+      "肝鬱気滞"
+    ],
+    "answerIndex": 2,
+    "explanation": "職場ストレスを誘因とし月経前に増悪する顎関節痛に、胃のもたれ・胸やけ・嘔気などの胃症状を伴うことから、肝気が胃を犯す肝胃不和が最も適切である。",
+    "hasFigure": false,
+    "source": "第34回 はり師・きゅう師国家試験",
+    "sourceUrl": "https://ahaki.or.jp/wordpress/wp-content/uploads/mondai_34_harikyu_pm.pdf",
+    "sourceOrg": "公益財団法人 東洋療法研修試験財団",
+    "sourceReliability": "indexed_official",
+    "verifiedAt": "2026-09-12"
+  },
+  {
+    "id": "34-154",
+    "examRound": 34,
+    "questionNumber": 154,
+    "questionText": "次の症例について、問題153、154の問いに答えよ。「37歳の女性。主訴は左顎関節痛。2か月前から職場のストレスとともに痛みを自覚し始め、月経前には痛みが増悪する。胃のもたれ感、胸やけ、嘔気を伴うこともある。」\n\n病証に対する治療穴の組合せで最も適切なのはどれか。",
+    "choices": [
+      "内庭 ― 足三里",
+      "陥谷 ― 豊隆",
+      "内庭 ― 行間",
+      "太衝 ― 陰陵泉"
+    ],
+    "answerIndex": 2,
+    "explanation": "肝胃不和には、胃経の滎穴である内庭で胃熱を清し、肝経の滎穴である行間で肝を疏泄する組合せが適切である。",
+    "hasFigure": false,
+    "source": "第34回 はり師・きゅう師国家試験",
+    "sourceUrl": "https://ahaki.or.jp/wordpress/wp-content/uploads/mondai_34_harikyu_pm.pdf",
+    "sourceOrg": "公益財団法人 東洋療法研修試験財団",
+    "sourceReliability": "indexed_official",
+    "verifiedAt": "2026-09-12"
+  },
+  {
+    "id": "34-155",
+    "examRound": 34,
+    "questionNumber": 155,
+    "questionText": "次の症例について、問題155、156の問いに答えよ。「38歳の女性。主訴は左側頭部痛。目の前がチカチカしてから1時間以内に痛みが起こり、拍動性で嘔気を伴う。発症すると痛みのため仕事を休んでしまう。」\n\n疾患として最も考えられるのはどれか。",
+    "choices": [
+      "低髄液圧症候群",
+      "緊張型頭痛",
+      "群発頭痛",
+      "片頭痛"
+    ],
+    "answerIndex": 3,
+    "explanation": "閃輝暗点などの前兆に続く拍動性の片側頭痛に嘔気を伴い、日常生活に支障をきたす経過は片頭痛に典型的である。",
+    "hasFigure": false,
+    "source": "第34回 はり師・きゅう師国家試験",
+    "sourceUrl": "https://ahaki.or.jp/wordpress/wp-content/uploads/mondai_34_harikyu_pm.pdf",
+    "sourceOrg": "公益財団法人 東洋療法研修試験財団",
+    "sourceReliability": "indexed_official",
+    "verifiedAt": "2026-09-12"
+  },
+  {
+    "id": "34-156",
+    "examRound": 34,
+    "questionNumber": 156,
+    "questionText": "次の症例について、問題155、156の問いに答えよ。「38歳の女性。主訴は左側頭部痛。目の前がチカチカしてから1時間以内に痛みが起こり、拍動性で嘔気を伴う。発症すると痛みのため仕事を休んでしまう。」\n\n郄穴を用いて循経取穴による治療を行う場合、最も適切なのはどれか。",
+    "choices": [
+      "孔最",
+      "外丘",
+      "金門",
+      "中都"
+    ],
+    "answerIndex": 1,
+    "explanation": "側頭部の頭痛は少陽経（胆経）領域の頭痛と考えられ、循経取穴として胆経の郄穴である外丘が適切である。",
+    "hasFigure": false,
+    "source": "第34回 はり師・きゅう師国家試験",
+    "sourceUrl": "https://ahaki.or.jp/wordpress/wp-content/uploads/mondai_34_harikyu_pm.pdf",
+    "sourceOrg": "公益財団法人 東洋療法研修試験財団",
+    "sourceReliability": "indexed_official",
+    "verifiedAt": "2026-09-12"
+  },
+  {
+    "id": "34-157",
+    "examRound": 34,
+    "questionNumber": 157,
+    "questionText": "次の症例について、問題157、158の問いに答えよ。「45歳の女性。心窩部右側の強い痛みと悪心があり近医を受診。血中コレステロール、中性脂肪はともに高値でBMIは27。右肩への放散痛があり、マーフィー徴候は陽性。背部叩打痛と便通異常はない。」\n\n合併する症状で最も考えられるのはどれか。",
+    "choices": [
+      "眼球結膜の黄染",
+      "肋間部の発疹",
+      "グル音の亢進",
+      "血尿"
+    ],
+    "answerIndex": 0,
+    "explanation": "マーフィー徴候陽性・右肩放散痛・脂質異常症は胆石症・胆嚢炎を示唆し、胆道閉塞を合併すると黄疸（眼球結膜の黄染）をきたす。",
+    "hasFigure": false,
+    "source": "第34回 はり師・きゅう師国家試験",
+    "sourceUrl": "https://ahaki.or.jp/wordpress/wp-content/uploads/mondai_34_harikyu_pm.pdf",
+    "sourceOrg": "公益財団法人 東洋療法研修試験財団",
+    "sourceReliability": "indexed_official",
+    "verifiedAt": "2026-09-12"
+  },
+  {
+    "id": "34-158",
+    "examRound": 34,
+    "questionNumber": 158,
+    "questionText": "次の症例について、問題157、158の問いに答えよ。「45歳の女性。心窩部右側の強い痛みと悪心があり近医を受診。血中コレステロール、中性脂肪はともに高値でBMIは27。右肩への放散痛があり、マーフィー徴候は陽性。背部叩打痛と便通異常はない。」\n\n主訴を主治する奇穴を取穴する場合の指標として最も適切なのはどれか。",
+    "choices": [
+      "腰三角",
+      "膝蓋骨底",
+      "膝蓋靭帯",
+      "腓骨頭"
+    ],
+    "answerIndex": 3,
+    "explanation": "胆嚢疾患に用いる奇穴・胆嚢穴は陽陵泉下方に取り、腓骨頭がその取穴指標となる。",
+    "hasFigure": false,
+    "source": "第34回 はり師・きゅう師国家試験",
+    "sourceUrl": "https://ahaki.or.jp/wordpress/wp-content/uploads/mondai_34_harikyu_pm.pdf",
+    "sourceOrg": "公益財団法人 東洋療法研修試験財団",
+    "sourceReliability": "indexed_official",
+    "verifiedAt": "2026-09-12"
+  },
+  {
+    "id": "34-159",
+    "examRound": 34,
+    "questionNumber": 159,
+    "questionText": "次の症例について、問題159、160の問いに答えよ。「67歳の男性。主訴は動作時の呼吸困難。痩せて樽状胸郭を呈している。呼吸機能検査で1秒率の低下、胸部エックス線検査で肺野の透過性亢進を認めた。ブリンクマン指数は940。」\n\n疾患として最も考えられるのはどれか。",
+    "choices": [
+      "気管支拡張症",
+      "COPD",
+      "肺結核",
+      "間質性肺炎"
+    ],
+    "answerIndex": 1,
+    "explanation": "高いブリンクマン指数（喫煙歴）、樽状胸郭、1秒率の低下、肺野の透過性亢進はCOPDに典型的な所見である。",
+    "hasFigure": false,
+    "source": "第34回 はり師・きゅう師国家試験",
+    "sourceUrl": "https://ahaki.or.jp/wordpress/wp-content/uploads/mondai_34_harikyu_pm.pdf",
+    "sourceOrg": "公益財団法人 東洋療法研修試験財団",
+    "sourceReliability": "indexed_official",
+    "verifiedAt": "2026-09-12"
+  },
+  {
+    "id": "34-160",
+    "examRound": 34,
+    "questionNumber": 160,
+    "questionText": "次の症例について、問題159、160の問いに答えよ。「67歳の男性。主訴は動作時の呼吸困難。痩せて樽状胸郭を呈している。呼吸機能検査で1秒率の低下、胸部エックス線検査で肺野の透過性亢進を認めた。ブリンクマン指数は940。」\n\n定喘穴に対する2Hzの持続的な鍼通電療法により呼吸困難が改善した。中枢を介した呼吸困難の改善に最も関与すると考えられるのはどれか。",
+    "choices": [
+      "メラトニン",
+      "ナロキソン",
+      "ノシセプチン",
+      "βエンドルフィン"
+    ],
+    "answerIndex": 3,
+    "explanation": "低頻度（2Hz）の鍼通電刺激は下垂体からのβエンドルフィン放出を促し、中枢性の鎮痛・症状改善に関与するとされる。",
+    "hasFigure": false,
+    "source": "第34回 はり師・きゅう師国家試験",
+    "sourceUrl": "https://ahaki.or.jp/wordpress/wp-content/uploads/mondai_34_harikyu_pm.pdf",
+    "sourceOrg": "公益財団法人 東洋療法研修試験財団",
+    "sourceReliability": "indexed_official",
+    "verifiedAt": "2026-09-12"
+  },
+  {
+    "id": "34-161",
+    "examRound": 34,
+    "questionNumber": 161,
+    "questionText": "毫鍼の部位で鍼脚とも呼ばれるのはどれか。",
+    "choices": [
+      "鍼尖",
+      "鍼体",
+      "鍼根",
+      "鍼柄"
+    ],
+    "answerIndex": 2,
+    "explanation": "鍼根は鍼体と鍼柄の境界部分であり、鍼脚とも呼ばれる。",
+    "hasFigure": false,
+    "source": "第34回 はり師・きゅう師国家試験",
+    "sourceUrl": "https://ahaki.or.jp/wordpress/wp-content/uploads/mondai_34_harikyu_pm.pdf",
+    "sourceOrg": "公益財団法人 東洋療法研修試験財団",
+    "sourceReliability": "indexed_official",
+    "verifiedAt": "2026-09-12"
+  },
+  {
+    "id": "34-162",
+    "examRound": 34,
+    "questionNumber": 162,
+    "questionText": "弾入動作を用いて刺激を与える手技はどれか。",
+    "choices": [
+      "管散術",
+      "随鍼術",
+      "内調術",
+      "屋漏術"
+    ],
+    "answerIndex": 0,
+    "explanation": "管散術は鍼管を弾く弾入動作によって刺激を与える、日本鍼灸特有の手技である。",
+    "hasFigure": false,
+    "source": "第34回 はり師・きゅう師国家試験",
+    "sourceUrl": "https://ahaki.or.jp/wordpress/wp-content/uploads/mondai_34_harikyu_pm.pdf",
+    "sourceOrg": "公益財団法人 東洋療法研修試験財団",
+    "sourceReliability": "indexed_official",
+    "verifiedAt": "2026-09-12"
+  },
+  {
+    "id": "34-163",
+    "examRound": 34,
+    "questionNumber": 163,
+    "questionText": "灸頭鍼法に使用する鍼で最も適切なのはどれか。",
+    "choices": [
+      "鍼体長30 mm",
+      "鍼体径0.16 mm",
+      "凹凸のない鍼柄表面",
+      "カシメ式接合された鍼柄"
+    ],
+    "answerIndex": 3,
+    "explanation": "灸頭鍼では燃焼する艾の熱と重みに耐える必要があり、鍼柄がカシメ式に接合された鍼が適切である。",
+    "hasFigure": false,
+    "source": "第34回 はり師・きゅう師国家試験",
+    "sourceUrl": "https://ahaki.or.jp/wordpress/wp-content/uploads/mondai_34_harikyu_pm.pdf",
+    "sourceOrg": "公益財団法人 東洋療法研修試験財団",
+    "sourceReliability": "indexed_official",
+    "verifiedAt": "2026-09-12"
+  },
+  {
+    "id": "34-164",
+    "examRound": 34,
+    "questionNumber": 164,
+    "questionText": "鍼刺激に対する感受性を決定する要因はどれか。",
+    "choices": [
+      "栄養状態",
+      "使用鍼",
+      "運鍼速度",
+      "刺激時間"
+    ],
+    "answerIndex": 0,
+    "explanation": "鍼刺激に対する感受性は患者側の要因（栄養状態など）によって左右される。使用鍼・運鍼速度・刺激時間は術者側が設定する刺激条件である。",
+    "hasFigure": false,
+    "source": "第34回 はり師・きゅう師国家試験",
+    "sourceUrl": "https://ahaki.or.jp/wordpress/wp-content/uploads/mondai_34_harikyu_pm.pdf",
+    "sourceOrg": "公益財団法人 東洋療法研修試験財団",
+    "sourceReliability": "indexed_official",
+    "verifiedAt": "2026-09-12"
+  },
+  {
+    "id": "34-165",
+    "examRound": 34,
+    "questionNumber": 165,
+    "questionText": "アレルギーによりアルコール系消毒薬が使用できない患者に対して、施術部位の消毒に適しているのはどれか。",
+    "choices": [
+      "イソプロパノール",
+      "クロルヘキシジングルコン酸塩",
+      "次亜塩素酸ナトリウム",
+      "ホルムアルデヒド"
+    ],
+    "answerIndex": 1,
+    "explanation": "イソプロパノールはアルコール系消毒薬であるため使用できず、非アルコール系のクロルヘキシジングルコン酸塩が適切である。",
+    "hasFigure": false,
+    "source": "第34回 はり師・きゅう師国家試験",
+    "sourceUrl": "https://ahaki.or.jp/wordpress/wp-content/uploads/mondai_34_harikyu_pm.pdf",
+    "sourceOrg": "公益財団法人 東洋療法研修試験財団",
+    "sourceReliability": "indexed_official",
+    "verifiedAt": "2026-09-12"
+  },
+  {
+    "id": "34-166",
+    "examRound": 34,
+    "questionNumber": 166,
+    "questionText": "刺鍼刺激を受容し、ひびき感覚を発生させるのはどれか。",
+    "choices": [
+      "メルケル盤",
+      "パチニ小体",
+      "ポリモーダル受容器",
+      "高閾値機械受容器"
+    ],
+    "answerIndex": 2,
+    "explanation": "刺鍼による「ひびき」感覚はポリモーダル受容器の興奮を介して発生する。メルケル盤・パチニ小体は触覚・振動覚の受容器である。",
+    "hasFigure": false,
+    "source": "第34回 はり師・きゅう師国家試験",
+    "sourceUrl": "https://ahaki.or.jp/wordpress/wp-content/uploads/mondai_34_harikyu_pm.pdf",
+    "sourceOrg": "公益財団法人 東洋療法研修試験財団",
+    "sourceReliability": "indexed_official",
+    "verifiedAt": "2026-09-12"
+  },
+  {
+    "id": "34-167",
+    "examRound": 34,
+    "questionNumber": 167,
+    "questionText": "刺鍼による反応で最も早期に起こるのはどれか。",
+    "choices": [
+      "Ⅳ群線維の興奮",
+      "疼痛閾値の上昇",
+      "自律神経の興奮",
+      "刺鍼局所の血管拡張"
+    ],
+    "answerIndex": 0,
+    "explanation": "刺鍼刺激はまずⅣ群求心性線維の興奮として受容され、これを起点として血管拡張・疼痛閾値上昇・自律神経反応が続く。",
+    "hasFigure": false,
+    "source": "第34回 はり師・きゅう師国家試験",
+    "sourceUrl": "https://ahaki.or.jp/wordpress/wp-content/uploads/mondai_34_harikyu_pm.pdf",
+    "sourceOrg": "公益財団法人 東洋療法研修試験財団",
+    "sourceReliability": "indexed_official",
+    "verifiedAt": "2026-09-12"
+  },
+  {
+    "id": "34-168",
+    "examRound": 34,
+    "questionNumber": 168,
+    "questionText": "下腿前面への刺鍼による迷走神経反射で胃運動が亢進した。関与する九刺はどれか。",
+    "choices": [
+      "絡刺",
+      "巨刺",
+      "大瀉刺",
+      "遠道刺"
+    ],
+    "answerIndex": 3,
+    "explanation": "遠道刺は疾患部位から離れた経穴（本症例では下腿）に刺鍼し、内臓機能に反射性の変化を及ぼす九刺の一つである。",
+    "hasFigure": false,
+    "source": "第34回 はり師・きゅう師国家試験",
+    "sourceUrl": "https://ahaki.or.jp/wordpress/wp-content/uploads/mondai_34_harikyu_pm.pdf",
+    "sourceOrg": "公益財団法人 東洋療法研修試験財団",
+    "sourceReliability": "indexed_official",
+    "verifiedAt": "2026-09-12"
+  },
+  {
+    "id": "34-169",
+    "examRound": 34,
+    "questionNumber": 169,
+    "questionText": "ストレス誘発性鎮痛において、下垂体前葉から放出されるのはどれか。",
+    "choices": [
+      "オキシトシン",
+      "アドレナリン",
+      "コルチゾール",
+      "βエンドルフィン"
+    ],
+    "answerIndex": 3,
+    "explanation": "ストレス誘発性鎮痛では、下垂体前葉からβエンドルフィンが放出され鎮痛に関与する。",
+    "hasFigure": false,
+    "source": "第34回 はり師・きゅう師国家試験",
+    "sourceUrl": "https://ahaki.or.jp/wordpress/wp-content/uploads/mondai_34_harikyu_pm.pdf",
+    "sourceOrg": "公益財団法人 東洋療法研修試験財団",
+    "sourceReliability": "indexed_official",
+    "verifiedAt": "2026-09-12"
+  },
+  {
+    "id": "34-170",
+    "examRound": 34,
+    "questionNumber": 170,
+    "questionText": "下行性抑制系の賦活に最も関与するのはどれか。",
+    "choices": [
+      "後索路",
+      "脊髄小脳路",
+      "脊髄網様体路",
+      "前脊髄視床路"
+    ],
+    "answerIndex": 2,
+    "explanation": "脊髄網様体路を介した信号が脳幹網様体・中脳水道周囲灰白質などへ伝えられ、下行性疼痛抑制系の賦活に関与する。",
+    "hasFigure": false,
+    "source": "第34回 はり師・きゅう師国家試験",
+    "sourceUrl": "https://ahaki.or.jp/wordpress/wp-content/uploads/mondai_34_harikyu_pm.pdf",
+    "sourceOrg": "公益財団法人 東洋療法研修試験財団",
+    "sourceReliability": "indexed_official",
+    "verifiedAt": "2026-09-12"
+  },
+  {
+    "id": "34-171",
+    "examRound": 34,
+    "questionNumber": 171,
+    "questionText": "艾の製造工程において、けんどんの用途はどれか。",
+    "choices": [
+      "夾雑物をふるい落とす。",
+      "艾葉から毛茸を剥離する。",
+      "乾燥したヨモギを粉砕する。",
+      "毛茸表面付着物を除去する。"
+    ],
+    "answerIndex": 0,
+    "explanation": "けんどんは艾の製造工程で用いる篩の一種で、夾雑物をふるい落とす工程に用いる。",
+    "hasFigure": false,
+    "source": "第34回 はり師・きゅう師国家試験",
+    "sourceUrl": "https://ahaki.or.jp/wordpress/wp-content/uploads/mondai_34_harikyu_pm.pdf",
+    "sourceOrg": "公益財団法人 東洋療法研修試験財団",
+    "sourceReliability": "indexed_official",
+    "verifiedAt": "2026-09-12"
+  },
+  {
+    "id": "34-172",
+    "examRound": 34,
+    "questionNumber": 172,
+    "questionText": "灸術で最も精製度が高い艾を用いるのはどれか。",
+    "choices": [
+      "温灸",
+      "押灸",
+      "隔物灸",
+      "糸状灸"
+    ],
+    "answerIndex": 3,
+    "explanation": "糸状灸は艾を糸状に細くひねるため、最も精製度の高い艾を用いる。",
+    "hasFigure": false,
+    "source": "第34回 はり師・きゅう師国家試験",
+    "sourceUrl": "https://ahaki.or.jp/wordpress/wp-content/uploads/mondai_34_harikyu_pm.pdf",
+    "sourceOrg": "公益財団法人 東洋療法研修試験財団",
+    "sourceReliability": "indexed_official",
+    "verifiedAt": "2026-09-12"
+  },
+  {
+    "id": "34-173",
+    "examRound": 34,
+    "questionNumber": 173,
+    "questionText": "焦灼灸について最も適切なのはどれか。",
+    "choices": [
+      "隔物灸の一種である。",
+      "艾炷を燃焼の途中で取り去る。",
+      "ウオノメの上に施灸する。",
+      "温熱効果と薬理効果の両方が期待できる。"
+    ],
+    "answerIndex": 2,
+    "explanation": "焦灼灸は艾炷を燃焼しきるまで置く直接灸で、ウオノメ（鶏眼）や疣贅に対して行われる。",
+    "hasFigure": false,
+    "source": "第34回 はり師・きゅう師国家試験",
+    "sourceUrl": "https://ahaki.or.jp/wordpress/wp-content/uploads/mondai_34_harikyu_pm.pdf",
+    "sourceOrg": "公益財団法人 東洋療法研修試験財団",
+    "sourceReliability": "indexed_official",
+    "verifiedAt": "2026-09-12"
+  },
+  {
+    "id": "34-174",
+    "examRound": 34,
+    "questionNumber": 174,
+    "questionText": "知覚過敏者に対する施灸の配慮で正しいのはどれか。",
+    "choices": [
+      "艾炷を大きくする。",
+      "壮数を多くする。",
+      "ひねりを硬くする。",
+      "艾条灸を使用する。"
+    ],
+    "answerIndex": 3,
+    "explanation": "知覚過敏者には刺激量の少ない艾条灸を用いるなど、刺激を弱める配慮が適切である。",
+    "hasFigure": false,
+    "source": "第34回 はり師・きゅう師国家試験",
+    "sourceUrl": "https://ahaki.or.jp/wordpress/wp-content/uploads/mondai_34_harikyu_pm.pdf",
+    "sourceOrg": "公益財団法人 東洋療法研修試験財団",
+    "sourceReliability": "indexed_official",
+    "verifiedAt": "2026-09-12"
+  },
+  {
+    "id": "34-175",
+    "examRound": 34,
+    "questionNumber": 175,
+    "questionText": "関連痛に最も関与するのはどれか。",
+    "choices": [
+      "脊髄後角広作動域ニューロン",
+      "マイスネル小体",
+      "Ⅱ群求心性線維",
+      "前脊髄視床路"
+    ],
+    "answerIndex": 0,
+    "explanation": "関連痛は内臓・体性からの求心性入力が脊髄後角の広作動域ニューロンに収束することで生じるとされる（収束投射説）。",
+    "hasFigure": false,
+    "source": "第34回 はり師・きゅう師国家試験",
+    "sourceUrl": "https://ahaki.or.jp/wordpress/wp-content/uploads/mondai_34_harikyu_pm.pdf",
+    "sourceOrg": "公益財団法人 東洋療法研修試験財団",
+    "sourceReliability": "indexed_official",
+    "verifiedAt": "2026-09-12"
+  },
+  {
+    "id": "34-176",
+    "examRound": 34,
+    "questionNumber": 176,
+    "questionText": "透熱灸後のフレア現象で最も早期に起こるのはどれか。",
+    "choices": [
+      "逆行性伝導",
+      "順行性伝導",
+      "侵害受容器の興奮",
+      "神経ペプチドの遊離"
+    ],
+    "answerIndex": 2,
+    "explanation": "透熱灸後のフレア現象は、まず侵害受容器の興奮が生じ、それを起点として逆行性伝導・神経ペプチドの遊離・血管拡張へと連鎖する。",
+    "hasFigure": false,
+    "source": "第34回 はり師・きゅう師国家試験",
+    "sourceUrl": "https://ahaki.or.jp/wordpress/wp-content/uploads/mondai_34_harikyu_pm.pdf",
+    "sourceOrg": "公益財団法人 東洋療法研修試験財団",
+    "sourceReliability": "indexed_official",
+    "verifiedAt": "2026-09-12"
+  },
+  {
+    "id": "34-177",
+    "examRound": 34,
+    "questionNumber": 177,
+    "questionText": "透熱灸で生じた施灸局所の膨隆に最も関与するのはどれか。",
+    "choices": [
+      "ノルアドレナリン",
+      "CGRP",
+      "エンケファリン",
+      "エンドセリン"
+    ],
+    "answerIndex": 1,
+    "explanation": "CGRP（カルシトニン遺伝子関連ペプチド）は血管拡張・血漿滲出作用をもち、施灸局所の膨隆（浮腫）に関与する。",
+    "hasFigure": false,
+    "source": "第34回 はり師・きゅう師国家試験",
+    "sourceUrl": "https://ahaki.or.jp/wordpress/wp-content/uploads/mondai_34_harikyu_pm.pdf",
+    "sourceOrg": "公益財団法人 東洋療法研修試験財団",
+    "sourceReliability": "indexed_official",
+    "verifiedAt": "2026-09-12"
+  },
+  {
+    "id": "34-178",
+    "examRound": 34,
+    "questionNumber": 178,
+    "questionText": "侵害性熱刺激によって生じる発汗に最も関与するのはどれか。",
+    "choices": [
+      "脊髄前角",
+      "楔状束核",
+      "内側毛帯",
+      "延髄網様体"
+    ],
+    "answerIndex": 3,
+    "explanation": "侵害性熱刺激による発汗は、延髄網様体を介した交感神経性の発汗反射によって生じる。",
+    "hasFigure": false,
+    "source": "第34回 はり師・きゅう師国家試験",
+    "sourceUrl": "https://ahaki.or.jp/wordpress/wp-content/uploads/mondai_34_harikyu_pm.pdf",
+    "sourceOrg": "公益財団法人 東洋療法研修試験財団",
+    "sourceReliability": "indexed_official",
+    "verifiedAt": "2026-09-12"
+  },
+  {
+    "id": "34-179",
+    "examRound": 34,
+    "questionNumber": 179,
+    "questionText": "施灸により血圧上昇をきたす反射の遠心路を構成するのはどれか。",
+    "choices": [
+      "Aα線維",
+      "Aγ線維",
+      "Aδ線維",
+      "B線維"
+    ],
+    "answerIndex": 3,
+    "explanation": "施灸による血圧上昇反射の遠心路は交感神経節前線維（B線維）によって構成される。",
+    "hasFigure": false,
+    "source": "第34回 はり師・きゅう師国家試験",
+    "sourceUrl": "https://ahaki.or.jp/wordpress/wp-content/uploads/mondai_34_harikyu_pm.pdf",
+    "sourceOrg": "公益財団法人 東洋療法研修試験財団",
+    "sourceReliability": "indexed_official",
+    "verifiedAt": "2026-09-12"
+  },
+  {
+    "id": "34-180",
+    "examRound": 34,
+    "questionNumber": 180,
+    "questionText": "施灸局所の皮膚血流を増加させる内皮細胞由来の物質はどれか。",
+    "choices": [
+      "NO",
+      "VIP（血管作動性腸ペプチド）",
+      "サブスタンスP",
+      "ブラジキニン"
+    ],
+    "answerIndex": 0,
+    "explanation": "NO（一酸化窒素）は血管内皮細胞由来の血管拡張物質であり、施灸局所の皮膚血流増加に関与する。",
+    "hasFigure": false,
+    "source": "第34回 はり師・きゅう師国家試験",
+    "sourceUrl": "https://ahaki.or.jp/wordpress/wp-content/uploads/mondai_34_harikyu_pm.pdf",
+    "sourceOrg": "公益財団法人 東洋療法研修試験財団",
+    "sourceReliability": "indexed_official",
+    "verifiedAt": "2026-09-12"
   }
 ]
