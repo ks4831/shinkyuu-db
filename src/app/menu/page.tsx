@@ -1,16 +1,19 @@
 import type { Metadata } from 'next'
 import Link from 'next/link'
+import { pastExamCoverage } from '@/lib/pastExams'
 
 export const metadata: Metadata = {
   title: 'メニュー｜鍼灸国家試験 過去問・予想問題・分析',
   description: '出題分析・テーマ辞典・科目攻略・学習ツールなど、すべての機能への入り口。',
 }
 
+const EXAM_34_COLLECTED = pastExamCoverage().find((c) => c.round === 34)?.collected ?? 0
+
 const groups = [
   {
     title: '過去問',
     links: [
-      { href: '/past-exams', label: '実際の過去問を解く', note: '第34回・10問収録' },
+      { href: '/past-exams', label: '実際の過去問を解く', note: `第34回・${EXAM_34_COLLECTED}問収録` },
     ],
   },
   {

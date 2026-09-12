@@ -1,6 +1,7 @@
 import type { Metadata } from 'next'
 import Link from 'next/link'
 import { EXAM_ROUNDS, QUESTIONS_PER_ROUND } from '@/lib/examQuestions'
+import { pastExamCoverage } from '@/lib/pastExams'
 import HomeProgressCard from '@/components/quiz/HomeProgressCard'
 import DailyTodayCard from '@/components/quiz/DailyTodayCard'
 import Exam35Line from '@/components/Exam35Line'
@@ -19,6 +20,7 @@ const OTHER_MODES = [
 ]
 
 const PAST_QUESTIONS = (EXAM_ROUNDS.length * QUESTIONS_PER_ROUND).toLocaleString()
+const EXAM_34_COLLECTED = pastExamCoverage().find((c) => c.round === 34)?.collected ?? 0
 
 export default function HomePage() {
   return (
@@ -50,7 +52,7 @@ export default function HomePage() {
           >
             <span>
               <span className="block text-sm font-bold text-gray-900">実際の過去問を解く</span>
-              <span className="mt-0.5 block text-xs text-gray-500">第34回・10問収録</span>
+              <span className="mt-0.5 block text-xs text-gray-500">第34回・{EXAM_34_COLLECTED}問収録</span>
             </span>
             <span className="flex-shrink-0 text-gray-300" aria-hidden="true">›</span>
           </Link>

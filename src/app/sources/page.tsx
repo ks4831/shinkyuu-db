@@ -2,6 +2,7 @@ import type { Metadata } from 'next'
 import Link from 'next/link'
 import { EXAM_ROUNDS, QUESTIONS_PER_ROUND } from '@/lib/examQuestions'
 import { roundToYear } from '@/lib/utils'
+import { pastExamCoverage } from '@/lib/pastExams'
 
 export const metadata: Metadata = {
   title: 'データソース',
@@ -11,6 +12,7 @@ export const metadata: Metadata = {
 
 const ROUND_RANGE = `第${EXAM_ROUNDS[0]}回（${roundToYear(EXAM_ROUNDS[0])}年）〜第${EXAM_ROUNDS[EXAM_ROUNDS.length - 1]}回（${roundToYear(EXAM_ROUNDS[EXAM_ROUNDS.length - 1])}年）`
 const TOTAL_QUESTIONS = (EXAM_ROUNDS.length * QUESTIONS_PER_ROUND).toLocaleString()
+const EXAM_34_COLLECTED = pastExamCoverage().find((c) => c.round === 34)?.collected ?? 0
 
 export default function SourcesPage() {
   return (
@@ -82,11 +84,11 @@ export default function SourcesPage() {
         </div>
 
         <div>
-          <h2 className="font-bold text-gray-800 mb-4">過去問演習（/past-exams・第34回パイロット10問）について</h2>
+          <h2 className="font-bold text-gray-800 mb-4">過去問演習（/past-exams・第34回{EXAM_34_COLLECTED}問）について</h2>
           <div className="bg-white border border-gray-100 rounded-xl p-5 space-y-3">
             <p>
               過去問演習（/past-exams）では、上記の分析用データとは別に、
-              第34回はり師・きゅう師国家試験の問題文・選択肢・正答（10問のみ・パイロット）を
+              第34回はり師・きゅう師国家試験の問題文・選択肢・正答（現在{EXAM_34_COLLECTED}問）を
               公益財団法人 東洋療法研修試験財団の公式公開資料から直接収録しています。
             </p>
             <p>
