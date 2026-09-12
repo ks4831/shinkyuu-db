@@ -1,0 +1,1002 @@
+[
+  {
+    "id": "33-001",
+    "examRound": 33,
+    "questionNumber": 1,
+    "questionText": "医学研究の倫理に関する宣言はどれか。",
+    "choices": [
+      "ジュネーブ宣言",
+      "ヘルシンキ宣言",
+      "リスボン宣言",
+      "アルマ・アタ宣言"
+    ],
+    "answerIndex": 1,
+    "explanation": "医学研究の倫理に関する国際宣言はヘルシンキ宣言。ジュネーブ宣言は医師の誓い、リスボン宣言は患者の権利、アルマ・アタ宣言はプライマリヘルスケアに関する宣言。",
+    "hasFigure": false,
+    "source": "第33回 はり師・きゅう師国家試験",
+    "sourceUrl": "https://ahaki.or.jp/wordpress/wp-content/uploads/mondai_33_harikyu_am.pdf",
+    "sourceOrg": "公益財団法人 東洋療法研修試験財団",
+    "sourceReliability": "indexed_official",
+    "verifiedAt": "2026-09-12"
+  },
+  {
+    "id": "33-002",
+    "examRound": 33,
+    "questionNumber": 2,
+    "questionText": "我が国の国民医療費に含まれるのはどれか。",
+    "choices": [
+      "予防接種の費用",
+      "健康診断の費用",
+      "帝王切開の費用",
+      "入院時室料差額の費用"
+    ],
+    "answerIndex": 2,
+    "explanation": "国民医療費には保険診療の対象となる医療行為の費用が含まれる。帝王切開は医療行為として保険適用となるため含まれるが、予防接種・健康診断・差額ベッド代は保険外のため含まれない。",
+    "hasFigure": false,
+    "source": "第33回 はり師・きゅう師国家試験",
+    "sourceUrl": "https://ahaki.or.jp/wordpress/wp-content/uploads/mondai_33_harikyu_am.pdf",
+    "sourceOrg": "公益財団法人 東洋療法研修試験財団",
+    "sourceReliability": "indexed_official",
+    "verifiedAt": "2026-09-12"
+  },
+  {
+    "id": "33-003",
+    "examRound": 33,
+    "questionNumber": 3,
+    "questionText": "公費医療の対象とならないのはどれか。",
+    "choices": [
+      "生活保護法による医療扶助",
+      "母子保健法による養育医療",
+      "労働者災害補償保険法による療養",
+      "精神保健福祉法による措置入院"
+    ],
+    "answerIndex": 2,
+    "explanation": "労働者災害補償保険法による療養は労働保険（労災保険）による給付であり、公費（税財源）による医療である公費医療には該当しない。他の3つはいずれも公費医療の代表例。",
+    "hasFigure": false,
+    "source": "第33回 はり師・きゅう師国家試験",
+    "sourceUrl": "https://ahaki.or.jp/wordpress/wp-content/uploads/mondai_33_harikyu_am.pdf",
+    "sourceOrg": "公益財団法人 東洋療法研修試験財団",
+    "sourceReliability": "indexed_official",
+    "verifiedAt": "2026-09-12"
+  },
+  {
+    "id": "33-004",
+    "examRound": 33,
+    "questionNumber": 4,
+    "questionText": "パターナリズムに基づいている行為はどれか。",
+    "choices": [
+      "治療方針は医療者が決める。",
+      "個人情報の保護に取り組む。",
+      "患者の自己決定権を尊重する。",
+      "患者が治療内容の説明を受ける。"
+    ],
+    "answerIndex": 0,
+    "explanation": "パターナリズムとは、医療者が患者本人に代わって医療者の判断で治療方針等を決定する父権的な態度を指す。自己決定権の尊重やインフォームドコンセントとは対立する概念。",
+    "hasFigure": false,
+    "source": "第33回 はり師・きゅう師国家試験",
+    "sourceUrl": "https://ahaki.or.jp/wordpress/wp-content/uploads/mondai_33_harikyu_am.pdf",
+    "sourceOrg": "公益財団法人 東洋療法研修試験財団",
+    "sourceReliability": "indexed_official",
+    "verifiedAt": "2026-09-12"
+  },
+  {
+    "id": "33-005",
+    "examRound": 33,
+    "questionNumber": 5,
+    "questionText": "疾病予防に関するハイリスクアプローチでないのはどれか。",
+    "choices": [
+      "喫煙者に禁煙指導の実施",
+      "市民を対象としたウォーキング大会の実施",
+      "糖尿病予備群に運動指導の実施",
+      "塩分摂取量が多い者に食事指導の実施"
+    ],
+    "answerIndex": 1,
+    "explanation": "ハイリスクアプローチは、リスクの高い個人を選び出して個別に介入する方法。市民全体を対象としたウォーキング大会は集団全体に働きかけるポピュレーションアプローチにあたる。",
+    "hasFigure": false,
+    "source": "第33回 はり師・きゅう師国家試験",
+    "sourceUrl": "https://ahaki.or.jp/wordpress/wp-content/uploads/mondai_33_harikyu_am.pdf",
+    "sourceOrg": "公益財団法人 東洋療法研修試験財団",
+    "sourceReliability": "indexed_official",
+    "verifiedAt": "2026-09-12"
+  },
+  {
+    "id": "33-006",
+    "examRound": 33,
+    "questionNumber": 6,
+    "questionText": "我が国の2021年度の学校管理下における死亡で最も多いのはどれか。",
+    "choices": [
+      "突然死",
+      "溺死以外の窒息死",
+      "全身打撲",
+      "頭部外傷"
+    ],
+    "answerIndex": 0,
+    "explanation": "学校管理下における死亡の統計では、心臓系疾患等による突然死が最も多くを占める。",
+    "hasFigure": false,
+    "source": "第33回 はり師・きゅう師国家試験",
+    "sourceUrl": "https://ahaki.or.jp/wordpress/wp-content/uploads/mondai_33_harikyu_am.pdf",
+    "sourceOrg": "公益財団法人 東洋療法研修試験財団",
+    "sourceReliability": "indexed_official",
+    "verifiedAt": "2026-09-12"
+  },
+  {
+    "id": "33-007",
+    "examRound": 33,
+    "questionNumber": 7,
+    "questionText": "現在の新型コロナウイルス感染症（COVID-19）の感染症法上の位置付けはどれか。",
+    "choices": [
+      "5類感染症",
+      "新型インフルエンザ等感染症",
+      "指定感染症",
+      "新感染症"
+    ],
+    "answerIndex": 0,
+    "explanation": "COVID-19は2023年5月8日より感染症法上の位置付けが5類感染症に変更された。それ以前は新型インフルエンザ等感染症に分類されていた。",
+    "hasFigure": false,
+    "source": "第33回 はり師・きゅう師国家試験",
+    "sourceUrl": "https://ahaki.or.jp/wordpress/wp-content/uploads/mondai_33_harikyu_am.pdf",
+    "sourceOrg": "公益財団法人 東洋療法研修試験財団",
+    "sourceReliability": "indexed_official",
+    "verifiedAt": "2026-09-12"
+  },
+  {
+    "id": "33-008",
+    "examRound": 33,
+    "questionNumber": 8,
+    "questionText": "産業衛生管理のうち作業管理はどれか。",
+    "choices": [
+      "作業場の換気",
+      "作業環境測定の実施",
+      "定期健康診断の実施",
+      "呼吸用保護具の使用"
+    ],
+    "answerIndex": 3,
+    "explanation": "産業衛生の3管理のうち、作業管理は労働者の作業方法や保護具の使用方法などを管理するもの。作業場の換気・作業環境測定は作業環境管理、健康診断は健康管理にあたる。",
+    "hasFigure": false,
+    "source": "第33回 はり師・きゅう師国家試験",
+    "sourceUrl": "https://ahaki.or.jp/wordpress/wp-content/uploads/mondai_33_harikyu_am.pdf",
+    "sourceOrg": "公益財団法人 東洋療法研修試験財団",
+    "sourceReliability": "indexed_official",
+    "verifiedAt": "2026-09-12"
+  },
+  {
+    "id": "33-009",
+    "examRound": 33,
+    "questionNumber": 9,
+    "questionText": "分母が出生数である疫学指標はどれか。",
+    "choices": [
+      "死産率",
+      "乳児死亡率",
+      "周産期死亡率",
+      "妊産婦死亡率"
+    ],
+    "answerIndex": 1,
+    "explanation": "乳児死亡率は生後1年未満の死亡数を出生数で除して算出する。死産率・周産期死亡率は出産数（出生数＋死産数）、妊産婦死亡率は出産数を分母とする。",
+    "hasFigure": false,
+    "source": "第33回 はり師・きゅう師国家試験",
+    "sourceUrl": "https://ahaki.or.jp/wordpress/wp-content/uploads/mondai_33_harikyu_am.pdf",
+    "sourceOrg": "公益財団法人 東洋療法研修試験財団",
+    "sourceReliability": "indexed_official",
+    "verifiedAt": "2026-09-12"
+  },
+  {
+    "id": "33-010",
+    "examRound": 33,
+    "questionNumber": 10,
+    "questionText": "洗浄剤を配合した消毒液をよく泡立てて流水で流す手指消毒方法はどれか。",
+    "choices": [
+      "スワブ法",
+      "ベースン法",
+      "スクラブ法",
+      "ラビング法"
+    ],
+    "answerIndex": 2,
+    "explanation": "スクラブ法は洗浄剤を含む消毒液をよく泡立て、ブラシ等で洗った後に流水で洗い流す手指消毒法。ラビング法は速乾性擦式消毒薬を擦り込む方法で流水は使わない。",
+    "hasFigure": false,
+    "source": "第33回 はり師・きゅう師国家試験",
+    "sourceUrl": "https://ahaki.or.jp/wordpress/wp-content/uploads/mondai_33_harikyu_am.pdf",
+    "sourceOrg": "公益財団法人 東洋療法研修試験財団",
+    "sourceReliability": "indexed_official",
+    "verifiedAt": "2026-09-12"
+  },
+  {
+    "id": "33-011",
+    "examRound": 33,
+    "questionNumber": 11,
+    "questionText": "あはき法で、免許の取消処分を受けたときに5日以内に行わなければならないのはどれか。",
+    "choices": [
+      "免許証再交付の申請",
+      "免許証の返納",
+      "名簿登録の消除申請",
+      "施術所休止の届出"
+    ],
+    "answerIndex": 1,
+    "explanation": "あはき法では、免許の取消処分を受けた場合、5日以内に免許証を都道府県知事（厚生労働大臣）に返納しなければならない。",
+    "hasFigure": false,
+    "source": "第33回 はり師・きゅう師国家試験",
+    "sourceUrl": "https://ahaki.or.jp/wordpress/wp-content/uploads/mondai_33_harikyu_am.pdf",
+    "sourceOrg": "公益財団法人 東洋療法研修試験財団",
+    "sourceReliability": "indexed_official",
+    "verifiedAt": "2026-09-12"
+  },
+  {
+    "id": "33-012",
+    "examRound": 33,
+    "questionNumber": 12,
+    "questionText": "あはき法で、施術所の構造設備の基準として誤っているのはどれか。",
+    "choices": [
+      "6.6平方メートル以上の専用の施術室を有する。",
+      "3.3平方メートル以上の待合室を有する。",
+      "施術器具や手指などの消毒設備を有する。",
+      "施術室は室面積の9分の1以上に相当する部分を外気に開放し得る。"
+    ],
+    "answerIndex": 3,
+    "explanation": "施術室の外気に開放し得る部分の基準は室面積の7分の1以上であり、9分の1という数値は誤り。他の基準（施術室6.6㎡以上・待合室3.3㎡以上・消毒設備）は正しい。",
+    "hasFigure": false,
+    "source": "第33回 はり師・きゅう師国家試験",
+    "sourceUrl": "https://ahaki.or.jp/wordpress/wp-content/uploads/mondai_33_harikyu_am.pdf",
+    "sourceOrg": "公益財団法人 東洋療法研修試験財団",
+    "sourceReliability": "indexed_official",
+    "verifiedAt": "2026-09-12"
+  },
+  {
+    "id": "33-013",
+    "examRound": 33,
+    "questionNumber": 13,
+    "questionText": "あはき法で、都道府県知事は施術者に対し、衛生上害を生ずるおそれがあると認めるときは、その業務に関して必要な指示ができる。この指示に関して都道府県知事に意見を述べることができるのはどれか。",
+    "choices": [
+      "医師の団体",
+      "厚生労働大臣",
+      "はり師、きゅう師の団体",
+      "保健所長"
+    ],
+    "answerIndex": 0,
+    "explanation": "あはき法上、都道府県知事が施術者に対して衛生上必要な指示を行うにあたっては、あらかじめ医師の団体の意見を聴かなければならないとされている。",
+    "hasFigure": false,
+    "source": "第33回 はり師・きゅう師国家試験",
+    "sourceUrl": "https://ahaki.or.jp/wordpress/wp-content/uploads/mondai_33_harikyu_am.pdf",
+    "sourceOrg": "公益財団法人 東洋療法研修試験財団",
+    "sourceReliability": "indexed_official",
+    "verifiedAt": "2026-09-12"
+  },
+  {
+    "id": "33-014",
+    "examRound": 33,
+    "questionNumber": 14,
+    "questionText": "法律と定義されている事項の組合せで正しいのはどれか。",
+    "choices": [
+      "医療法 ── 要介護認定区分",
+      "地域保健法 ── 助産所",
+      "医薬品医療機器等法 ── 管理医療機器",
+      "生活保護法 ── 国民健康保険"
+    ],
+    "answerIndex": 2,
+    "explanation": "管理医療機器は医薬品医療機器等法（薬機法）で定義される区分。助産所は医療法、要介護認定区分は介護保険法、国民健康保険は国民健康保険法でそれぞれ定義される。",
+    "hasFigure": false,
+    "source": "第33回 はり師・きゅう師国家試験",
+    "sourceUrl": "https://ahaki.or.jp/wordpress/wp-content/uploads/mondai_33_harikyu_am.pdf",
+    "sourceOrg": "公益財団法人 東洋療法研修試験財団",
+    "sourceReliability": "indexed_official",
+    "verifiedAt": "2026-09-12"
+  },
+  {
+    "id": "33-015",
+    "examRound": 33,
+    "questionNumber": 15,
+    "questionText": "筋細胞について正しいのはどれか。",
+    "choices": [
+      "平滑筋細胞は介在板で連結する。",
+      "心筋細胞は大動脈壁に広く分布する。",
+      "心筋細胞は細胞間にギャップ結合をもつ。",
+      "筋小胞体には高濃度のナトリウムイオンが含まれる。"
+    ],
+    "answerIndex": 2,
+    "explanation": "心筋細胞は介在板でつながり、その中にギャップ結合を持つことで興奮を隣接細胞へ速やかに伝える。介在板を持つのは心筋であり平滑筋ではない。筋小胞体はCa²⁺を高濃度に貯蔵する。",
+    "hasFigure": false,
+    "source": "第33回 はり師・きゅう師国家試験",
+    "sourceUrl": "https://ahaki.or.jp/wordpress/wp-content/uploads/mondai_33_harikyu_am.pdf",
+    "sourceOrg": "公益財団法人 東洋療法研修試験財団",
+    "sourceReliability": "indexed_official",
+    "verifiedAt": "2026-09-12"
+  },
+  {
+    "id": "33-016",
+    "examRound": 33,
+    "questionNumber": 16,
+    "questionText": "下肢の骨について正しいのはどれか。",
+    "choices": [
+      "粗線は大腿骨体の前面にある。",
+      "内側顆は脛骨の遠位端内側にある。",
+      "脛腓関節は脛骨と腓骨の遠位端にある。",
+      "小転子は大腿骨頸基部の内側下方にある。"
+    ],
+    "answerIndex": 3,
+    "explanation": "小転子は大腿骨頸の基部内側下方に位置する隆起。粗線は大腿骨体の後面、内側顆は大腿骨の遠位端にある構造で脛骨ではない。脛腓関節は近位（脛骨・腓骨の近位端）にもある。",
+    "hasFigure": false,
+    "source": "第33回 はり師・きゅう師国家試験",
+    "sourceUrl": "https://ahaki.or.jp/wordpress/wp-content/uploads/mondai_33_harikyu_am.pdf",
+    "sourceOrg": "公益財団法人 東洋療法研修試験財団",
+    "sourceReliability": "indexed_official",
+    "verifiedAt": "2026-09-12"
+  },
+  {
+    "id": "33-017",
+    "examRound": 33,
+    "questionNumber": 17,
+    "questionText": "頭蓋冠について正しいのはどれか。",
+    "choices": [
+      "新生児の前頭骨は左右に分かれている。",
+      "新生児の前頭骨と頭頂骨の間に小泉門がある。",
+      "成人の左右の頭頂骨の間に冠状縫合がある。",
+      "成人の前頭骨と頭頂骨の間にラムダ縫合がある。"
+    ],
+    "answerIndex": 0,
+    "explanation": "新生児の前頭骨は正中に前頭縫合が残り左右に分かれている。前頭骨と頭頂骨の間にあるのは大泉門で、冠状縫合の交点にあたる。左右頭頂骨の間は矢状縫合、後頭骨と頭頂骨の間がラムダ縫合。",
+    "hasFigure": false,
+    "source": "第33回 はり師・きゅう師国家試験",
+    "sourceUrl": "https://ahaki.or.jp/wordpress/wp-content/uploads/mondai_33_harikyu_am.pdf",
+    "sourceOrg": "公益財団法人 東洋療法研修試験財団",
+    "sourceReliability": "indexed_official",
+    "verifiedAt": "2026-09-12"
+  },
+  {
+    "id": "33-018",
+    "examRound": 33,
+    "questionNumber": 18,
+    "questionText": "卵巣について正しいのはどれか。",
+    "choices": [
+      "卵巣内で受精が行われる。",
+      "卵巣動脈は内腸骨動脈の枝である。",
+      "固有卵巣索を卵巣動静脈が走行する。",
+      "卵巣は卵巣提索によって骨盤側壁に固定される。"
+    ],
+    "answerIndex": 3,
+    "explanation": "卵巣は卵巣提索（骨盤漏斗靱帯）によって骨盤側壁に固定される。受精は卵管膨大部で行われ、卵巣動脈は腹大動脈から直接分岐する（内腸骨動脈の枝ではない）。",
+    "hasFigure": false,
+    "source": "第33回 はり師・きゅう師国家試験",
+    "sourceUrl": "https://ahaki.or.jp/wordpress/wp-content/uploads/mondai_33_harikyu_am.pdf",
+    "sourceOrg": "公益財団法人 東洋療法研修試験財団",
+    "sourceReliability": "indexed_official",
+    "verifiedAt": "2026-09-12"
+  },
+  {
+    "id": "33-019",
+    "examRound": 33,
+    "questionNumber": 19,
+    "questionText": "頸部の筋について正しいのはどれか。",
+    "choices": [
+      "前斜角筋は鎖骨に停止する。",
+      "広頸筋は頸神経で支配される。",
+      "前斜角筋と中斜角筋の間を腕神経叢が通る。",
+      "後頭下筋群は第1頸神経の前枝で支配される。"
+    ],
+    "answerIndex": 2,
+    "explanation": "前斜角筋と中斜角筋の間（斜角筋隙）を腕神経叢と鎖骨下動脈が通過する。前斜角筋は第1肋骨に停止し、広頸筋は顔面神経支配、後頭下筋群は後枝（後頭下神経）支配である。",
+    "hasFigure": false,
+    "source": "第33回 はり師・きゅう師国家試験",
+    "sourceUrl": "https://ahaki.or.jp/wordpress/wp-content/uploads/mondai_33_harikyu_am.pdf",
+    "sourceOrg": "公益財団法人 東洋療法研修試験財団",
+    "sourceReliability": "indexed_official",
+    "verifiedAt": "2026-09-12"
+  },
+  {
+    "id": "33-020",
+    "examRound": 33,
+    "questionNumber": 20,
+    "questionText": "心臓について正しいのはどれか。",
+    "choices": [
+      "前縦隔に位置する。",
+      "右房室弁を僧帽弁と呼ぶ。",
+      "肺動脈弁は大動脈弁の前方にある。",
+      "洞房結節は下大静脈の開口部付近にある。"
+    ],
+    "answerIndex": 2,
+    "explanation": "肺動脈弁は大動脈弁よりも前方かつ左方に位置する。心臓は中縦隔に位置し、僧帽弁は左房室弁の別名であり、洞房結節は上大静脈開口部付近にある。",
+    "hasFigure": false,
+    "source": "第33回 はり師・きゅう師国家試験",
+    "sourceUrl": "https://ahaki.or.jp/wordpress/wp-content/uploads/mondai_33_harikyu_am.pdf",
+    "sourceOrg": "公益財団法人 東洋療法研修試験財団",
+    "sourceReliability": "indexed_official",
+    "verifiedAt": "2026-09-12"
+  },
+  {
+    "id": "33-021",
+    "examRound": 33,
+    "questionNumber": 21,
+    "questionText": "甲状腺について正しいのはどれか。",
+    "choices": [
+      "前面に上皮小体がある。",
+      "組織内に多数の濾胞がある。",
+      "喉頭と気管の移行部全周を囲む。",
+      "上甲状腺動脈は鎖骨下動脈の枝である。"
+    ],
+    "answerIndex": 1,
+    "explanation": "甲状腺は組織学的に多数の濾胞から構成され、コロイド（サイログロブリン）を貯蔵する。上皮小体（副甲状腺）は甲状腺の後面にあり、上甲状腺動脈は外頸動脈の枝である。",
+    "hasFigure": false,
+    "source": "第33回 はり師・きゅう師国家試験",
+    "sourceUrl": "https://ahaki.or.jp/wordpress/wp-content/uploads/mondai_33_harikyu_am.pdf",
+    "sourceOrg": "公益財団法人 東洋療法研修試験財団",
+    "sourceReliability": "indexed_official",
+    "verifiedAt": "2026-09-12"
+  },
+  {
+    "id": "33-022",
+    "examRound": 33,
+    "questionNumber": 22,
+    "questionText": "交連線維はどれか。",
+    "choices": [
+      "視交叉",
+      "大脳脚",
+      "内包",
+      "脳梁"
+    ],
+    "answerIndex": 3,
+    "explanation": "交連線維は左右の大脳半球を連絡する線維で、脳梁が代表例（他に前交連・後交連）。内包・大脳脚は投射線維に分類される。",
+    "hasFigure": false,
+    "source": "第33回 はり師・きゅう師国家試験",
+    "sourceUrl": "https://ahaki.or.jp/wordpress/wp-content/uploads/mondai_33_harikyu_am.pdf",
+    "sourceOrg": "公益財団法人 東洋療法研修試験財団",
+    "sourceReliability": "indexed_official",
+    "verifiedAt": "2026-09-12"
+  },
+  {
+    "id": "33-023",
+    "examRound": 33,
+    "questionNumber": 23,
+    "questionText": "交感神経について正しいのはどれか。",
+    "choices": [
+      "瞳孔括約筋を支配する。",
+      "節前線維は白交通枝を通る。",
+      "節後線維はアドレナリンを分泌する。",
+      "節前ニューロンの細胞体は脊髄前角に位置する。"
+    ],
+    "answerIndex": 1,
+    "explanation": "交感神経の節前線維は白交通枝を通って交感神経幹に至る。瞳孔括約筋は副交感神経支配、節後線維はノルアドレナリンを分泌し、節前ニューロンの細胞体は脊髄の側角にある。",
+    "hasFigure": false,
+    "source": "第33回 はり師・きゅう師国家試験",
+    "sourceUrl": "https://ahaki.or.jp/wordpress/wp-content/uploads/mondai_33_harikyu_am.pdf",
+    "sourceOrg": "公益財団法人 東洋療法研修試験財団",
+    "sourceReliability": "indexed_official",
+    "verifiedAt": "2026-09-12"
+  },
+  {
+    "id": "33-024",
+    "examRound": 33,
+    "questionNumber": 24,
+    "questionText": "血漿について正しいのはどれか。",
+    "choices": [
+      "鮮紅色の液体である。",
+      "血漿蛋白の大部分は骨髄で合成される。",
+      "アルブミンは浸透圧の維持に働く。",
+      "フィブリノゲンは栄養状態の指標となる。"
+    ],
+    "answerIndex": 2,
+    "explanation": "アルブミンは血漿蛋白の中で最も多く、膠質浸透圧の維持に重要な役割を果たす。血漿蛋白の多くは肝臓で合成され、フィブリノゲンは凝固因子であり栄養指標ではない。",
+    "hasFigure": false,
+    "source": "第33回 はり師・きゅう師国家試験",
+    "sourceUrl": "https://ahaki.or.jp/wordpress/wp-content/uploads/mondai_33_harikyu_am.pdf",
+    "sourceOrg": "公益財団法人 東洋療法研修試験財団",
+    "sourceReliability": "indexed_official",
+    "verifiedAt": "2026-09-12"
+  },
+  {
+    "id": "33-025",
+    "examRound": 33,
+    "questionNumber": 25,
+    "questionText": "肺循環について正しいのはどれか。",
+    "choices": [
+      "門脈によって体循環とつながる。",
+      "肺静脈は右心房に血液を運ぶ。",
+      "肺動脈は静脈血を運ぶ。",
+      "肺動脈の血圧は大動脈の血圧より高い。"
+    ],
+    "answerIndex": 2,
+    "explanation": "肺動脈は右心室から肺へ向かう血管で、酸素の少ない静脈血を運ぶ。肺静脈は動脈血を左心房へ運び、肺循環の血圧は体循環より低い。",
+    "hasFigure": false,
+    "source": "第33回 はり師・きゅう師国家試験",
+    "sourceUrl": "https://ahaki.or.jp/wordpress/wp-content/uploads/mondai_33_harikyu_am.pdf",
+    "sourceOrg": "公益財団法人 東洋療法研修試験財団",
+    "sourceReliability": "indexed_official",
+    "verifiedAt": "2026-09-12"
+  },
+  {
+    "id": "33-026",
+    "examRound": 33,
+    "questionNumber": 26,
+    "questionText": "動脈血における酸素飽和度の正常値はどれか。",
+    "choices": [
+      "約67％",
+      "約77％",
+      "約87％",
+      "約97％"
+    ],
+    "answerIndex": 3,
+    "explanation": "動脈血酸素飽和度（SpO2）の正常値はおよそ97〜98％。静脈血の酸素飽和度はこれより低くおよそ75％程度。",
+    "hasFigure": false,
+    "source": "第33回 はり師・きゅう師国家試験",
+    "sourceUrl": "https://ahaki.or.jp/wordpress/wp-content/uploads/mondai_33_harikyu_am.pdf",
+    "sourceOrg": "公益財団法人 東洋療法研修試験財団",
+    "sourceReliability": "indexed_official",
+    "verifiedAt": "2026-09-12"
+  },
+  {
+    "id": "33-027",
+    "examRound": 33,
+    "questionNumber": 27,
+    "questionText": "大腸について正しいのはどれか。",
+    "choices": [
+      "多数の細菌が常在する。",
+      "消化管内水分の約80％が吸収される。",
+      "大蠕動は1時間に数回起こる。",
+      "蛋白質分解酵素を分泌する。"
+    ],
+    "answerIndex": 0,
+    "explanation": "大腸には多数の腸内細菌が常在し、発酵や一部のビタミン合成に関わる。水分吸収の大部分は小腸で行われ、大腸自体は消化酵素を分泌しない。大蠕動は1日に数回程度である。",
+    "hasFigure": false,
+    "source": "第33回 はり師・きゅう師国家試験",
+    "sourceUrl": "https://ahaki.or.jp/wordpress/wp-content/uploads/mondai_33_harikyu_am.pdf",
+    "sourceOrg": "公益財団法人 東洋療法研修試験財団",
+    "sourceReliability": "indexed_official",
+    "verifiedAt": "2026-09-12"
+  },
+  {
+    "id": "33-028",
+    "examRound": 33,
+    "questionNumber": 28,
+    "questionText": "ホメオスタシスについて正しいのはどれか。",
+    "choices": [
+      "1日の尿量は成人で約400mLである。",
+      "血液のpHは約7.4である。",
+      "細胞外液の浸透圧は3％食塩水に等しい。",
+      "細胞内液は体液の約15％を占める。"
+    ],
+    "answerIndex": 1,
+    "explanation": "血液のpHはおよそ7.4（弱アルカリ性）に維持される。成人の1日尿量は約1〜1.5L、細胞外液の浸透圧はほぼ生理食塩水（約0.9％）に等しく、細胞内液は体液の約2/3を占める。",
+    "hasFigure": false,
+    "source": "第33回 はり師・きゅう師国家試験",
+    "sourceUrl": "https://ahaki.or.jp/wordpress/wp-content/uploads/mondai_33_harikyu_am.pdf",
+    "sourceOrg": "公益財団法人 東洋療法研修試験財団",
+    "sourceReliability": "indexed_official",
+    "verifiedAt": "2026-09-12"
+  },
+  {
+    "id": "33-029",
+    "examRound": 33,
+    "questionNumber": 29,
+    "questionText": "インスリンについて正しいのはどれか。",
+    "choices": [
+      "肝臓で産生される。",
+      "グリコーゲンの分解を促進する。",
+      "血糖値が上昇すると分泌が抑制される。",
+      "細胞内へのグルコースの取り込みを促進する。"
+    ],
+    "answerIndex": 3,
+    "explanation": "インスリンは膵臓のランゲルハンス島β細胞で産生され、細胞内へのグルコース取り込みとグリコーゲン合成を促進する。血糖値が上昇すると分泌は増加する。",
+    "hasFigure": false,
+    "source": "第33回 はり師・きゅう師国家試験",
+    "sourceUrl": "https://ahaki.or.jp/wordpress/wp-content/uploads/mondai_33_harikyu_am.pdf",
+    "sourceOrg": "公益財団法人 東洋療法研修試験財団",
+    "sourceReliability": "indexed_official",
+    "verifiedAt": "2026-09-12"
+  },
+  {
+    "id": "33-030",
+    "examRound": 33,
+    "questionNumber": 30,
+    "questionText": "寿命が最も長い細胞はどれか。",
+    "choices": [
+      "神経細胞",
+      "赤血球",
+      "血小板",
+      "上皮細胞"
+    ],
+    "answerIndex": 0,
+    "explanation": "神経細胞は基本的に分裂・再生しないため、個体の生涯にわたって存在し続け、他の細胞に比べて寿命が最も長い。赤血球は約120日、血小板は約10日程度で入れ替わる。",
+    "hasFigure": false,
+    "source": "第33回 はり師・きゅう師国家試験",
+    "sourceUrl": "https://ahaki.or.jp/wordpress/wp-content/uploads/mondai_33_harikyu_am.pdf",
+    "sourceOrg": "公益財団法人 東洋療法研修試験財団",
+    "sourceReliability": "indexed_official",
+    "verifiedAt": "2026-09-12"
+  },
+  {
+    "id": "33-031",
+    "examRound": 33,
+    "questionNumber": 31,
+    "questionText": "大脳皮質の機能局在について正しいのはどれか。",
+    "choices": [
+      "運動野は側頭葉上部にある。",
+      "聴覚野は中心前回にある。",
+      "視覚野は前頭葉下部にある。",
+      "体性感覚野は中心後回にある。"
+    ],
+    "answerIndex": 3,
+    "explanation": "体性感覚野は中心後回にある。運動野は中心前回、聴覚野は側頭葉上部、視覚野は後頭葉にそれぞれ存在する。",
+    "hasFigure": false,
+    "source": "第33回 はり師・きゅう師国家試験",
+    "sourceUrl": "https://ahaki.or.jp/wordpress/wp-content/uploads/mondai_33_harikyu_am.pdf",
+    "sourceOrg": "公益財団法人 東洋療法研修試験財団",
+    "sourceReliability": "indexed_official",
+    "verifiedAt": "2026-09-12"
+  },
+  {
+    "id": "33-032",
+    "examRound": 33,
+    "questionNumber": 32,
+    "questionText": "アキレス腱反射の反射弓について正しいのはどれか。",
+    "choices": [
+      "受容器は腱器官である。",
+      "求心性線維はIa群線維である。",
+      "遠心性線維はγ運動ニューロンである。",
+      "効果器は錘内筋である。"
+    ],
+    "answerIndex": 1,
+    "explanation": "アキレス腱反射（伸張反射）の受容器は筋紡錘であり、その求心性線維はIa群線維である。遠心性線維はα運動ニューロンで、効果器は錘外筋である。",
+    "hasFigure": false,
+    "source": "第33回 はり師・きゅう師国家試験",
+    "sourceUrl": "https://ahaki.or.jp/wordpress/wp-content/uploads/mondai_33_harikyu_am.pdf",
+    "sourceOrg": "公益財団法人 東洋療法研修試験財団",
+    "sourceReliability": "indexed_official",
+    "verifiedAt": "2026-09-12"
+  },
+  {
+    "id": "33-033",
+    "examRound": 33,
+    "questionNumber": 33,
+    "questionText": "疾病の経過において不定愁訴が現れる時期はどれか。",
+    "choices": [
+      "潜伏期",
+      "前駆期",
+      "侵襲期",
+      "極期"
+    ],
+    "answerIndex": 1,
+    "explanation": "前駆期は疾病特有の症状が現れる前に、倦怠感や微熱などの不定愁訴がみられる時期である。潜伏期は無症状、侵襲期・極期では疾患に特徴的な症状が明確に現れる。",
+    "hasFigure": false,
+    "source": "第33回 はり師・きゅう師国家試験",
+    "sourceUrl": "https://ahaki.or.jp/wordpress/wp-content/uploads/mondai_33_harikyu_am.pdf",
+    "sourceOrg": "公益財団法人 東洋療法研修試験財団",
+    "sourceReliability": "indexed_official",
+    "verifiedAt": "2026-09-12"
+  },
+  {
+    "id": "33-034",
+    "examRound": 33,
+    "questionNumber": 34,
+    "questionText": "疾患・症候と代謝異常の組合せで最も適切なのはどれか。",
+    "choices": [
+      "黄疸 ── 糖代謝異常",
+      "痛風 ── 生体色素異常",
+      "黄色腫 ── 脂質代謝異常",
+      "ヘモジデローシス ── 核酸代謝異常"
+    ],
+    "answerIndex": 2,
+    "explanation": "黄色腫は脂質（コレステロール等）の代謝異常により生じる。黄疸はビリルビン（生体色素）代謝異常、痛風は核酸（プリン体）代謝異常、ヘモジデローシスは鉄代謝異常による。",
+    "hasFigure": false,
+    "source": "第33回 はり師・きゅう師国家試験",
+    "sourceUrl": "https://ahaki.or.jp/wordpress/wp-content/uploads/mondai_33_harikyu_am.pdf",
+    "sourceOrg": "公益財団法人 東洋療法研修試験財団",
+    "sourceReliability": "indexed_official",
+    "verifiedAt": "2026-09-12"
+  },
+  {
+    "id": "33-035",
+    "examRound": 33,
+    "questionNumber": 35,
+    "questionText": "播種性血管内凝固症候群（DIC）について誤っているのはどれか。",
+    "choices": [
+      "血小板数は増加する。",
+      "出血症状がみられる。",
+      "敗血症は原因疾患になる。",
+      "細小血管に血栓が生じる。"
+    ],
+    "answerIndex": 0,
+    "explanation": "DICでは全身の細小血管に微小血栓が多発し、その過程で血小板や凝固因子が大量に消費されるため血小板数は減少する。敗血症は代表的な原因疾患の一つ。",
+    "hasFigure": false,
+    "source": "第33回 はり師・きゅう師国家試験",
+    "sourceUrl": "https://ahaki.or.jp/wordpress/wp-content/uploads/mondai_33_harikyu_am.pdf",
+    "sourceOrg": "公益財団法人 東洋療法研修試験財団",
+    "sourceReliability": "indexed_official",
+    "verifiedAt": "2026-09-12"
+  },
+  {
+    "id": "33-036",
+    "examRound": 33,
+    "questionNumber": 36,
+    "questionText": "浮腫の原因となるのはどれか。",
+    "choices": [
+      "血漿膠質浸透圧の上昇",
+      "リンパ還流量の低下",
+      "毛細血管内圧の低下",
+      "毛細血管透過性の低下"
+    ],
+    "answerIndex": 1,
+    "explanation": "リンパ還流量の低下は組織間液の回収を妨げ浮腫の原因となる。血漿膠質浸透圧の低下・毛細血管内圧の上昇・毛細血管透過性の亢進が浮腫を助長する方向であり、設問の各選択肢は逆方向の変化である。",
+    "hasFigure": false,
+    "source": "第33回 はり師・きゅう師国家試験",
+    "sourceUrl": "https://ahaki.or.jp/wordpress/wp-content/uploads/mondai_33_harikyu_am.pdf",
+    "sourceOrg": "公益財団法人 東洋療法研修試験財団",
+    "sourceReliability": "indexed_official",
+    "verifiedAt": "2026-09-12"
+  },
+  {
+    "id": "33-037",
+    "examRound": 33,
+    "questionNumber": 37,
+    "questionText": "HIV感染によって最も傷害を受ける細胞はどれか。",
+    "choices": [
+      "B細胞",
+      "NK細胞",
+      "CD4陽性T細胞",
+      "細胞傷害性T細胞"
+    ],
+    "answerIndex": 2,
+    "explanation": "HIVはCD4陽性ヘルパーT細胞に感染し、これを選択的に破壊することで細胞性免疫を中心とした免疫機能を著しく低下させる。",
+    "hasFigure": false,
+    "source": "第33回 はり師・きゅう師国家試験",
+    "sourceUrl": "https://ahaki.or.jp/wordpress/wp-content/uploads/mondai_33_harikyu_am.pdf",
+    "sourceOrg": "公益財団法人 東洋療法研修試験財団",
+    "sourceReliability": "indexed_official",
+    "verifiedAt": "2026-09-12"
+  },
+  {
+    "id": "33-038",
+    "examRound": 33,
+    "questionNumber": 38,
+    "questionText": "HPV感染について最も適切なのはどれか。",
+    "choices": [
+      "子宮内膜癌との関連が深い。",
+      "ワクチンは癌の発生を予防できない。",
+      "男性には感染しない。",
+      "多くの場合、感染しても排除される。"
+    ],
+    "answerIndex": 3,
+    "explanation": "HPVは性交渉により男女ともに感染し得るが、感染しても多くは自然の免疫機構により排除される。持続感染が子宮頸癌の主な原因となり、ワクチンは癌の予防に有効とされる。",
+    "hasFigure": false,
+    "source": "第33回 はり師・きゅう師国家試験",
+    "sourceUrl": "https://ahaki.or.jp/wordpress/wp-content/uploads/mondai_33_harikyu_am.pdf",
+    "sourceOrg": "公益財団法人 東洋療法研修試験財団",
+    "sourceReliability": "indexed_official",
+    "verifiedAt": "2026-09-12"
+  },
+  {
+    "id": "33-039",
+    "examRound": 33,
+    "questionNumber": 39,
+    "questionText": "睡眠障害について正しいのはどれか。",
+    "choices": [
+      "入眠障害とは途中で何度も目が覚めることである。",
+      "過眠症では夜間の睡眠時間が長くなる。",
+      "肥満は睡眠時無呼吸症候群の原因になる。",
+      "むずむず脚症候群（レストレスレッグス症候群）は早朝覚醒が特徴的である。"
+    ],
+    "answerIndex": 2,
+    "explanation": "肥満は上気道の狭小化を通じて睡眠時無呼吸症候群の危険因子となる。入眠障害は寝つきが悪いこと（途中覚醒は中途覚醒）を指し、むずむず脚症候群は入眠時の異常感覚が特徴である。",
+    "hasFigure": false,
+    "source": "第33回 はり師・きゅう師国家試験",
+    "sourceUrl": "https://ahaki.or.jp/wordpress/wp-content/uploads/mondai_33_harikyu_am.pdf",
+    "sourceOrg": "公益財団法人 東洋療法研修試験財団",
+    "sourceReliability": "indexed_official",
+    "verifiedAt": "2026-09-12"
+  },
+  {
+    "id": "33-040",
+    "examRound": 33,
+    "questionNumber": 40,
+    "questionText": "構成失行について正しいのはどれか。",
+    "choices": [
+      "言語の復唱ができない。",
+      "上着の袖に腕を通せない。",
+      "触れた物の形がわからない。",
+      "積み木で形を模倣することができない。"
+    ],
+    "answerIndex": 3,
+    "explanation": "構成失行は図形の模写や積み木による構成ができなくなる状態を指す。言語の復唱ができないのは失語、上着が着られないのは着衣失行、触れた物の形がわからないのは触覚性失認にあたる。",
+    "hasFigure": false,
+    "source": "第33回 はり師・きゅう師国家試験",
+    "sourceUrl": "https://ahaki.or.jp/wordpress/wp-content/uploads/mondai_33_harikyu_am.pdf",
+    "sourceOrg": "公益財団法人 東洋療法研修試験財団",
+    "sourceReliability": "indexed_official",
+    "verifiedAt": "2026-09-12"
+  },
+  {
+    "id": "33-041",
+    "examRound": 33,
+    "questionNumber": 41,
+    "questionText": "身体計測について正しいのはどれか。",
+    "choices": [
+      "上腕周径は肘関節屈曲位で測る。",
+      "前腕周径は最大膨隆部で測る。",
+      "大腿周径は膝関節屈曲位で測る。",
+      "下腿周径は腓骨頭の高さで測る。"
+    ],
+    "answerIndex": 1,
+    "explanation": "前腕周径は前腕の最大膨隆部で測定する。上腕・大腿周径は伸展位で、下腿周径は最大膨隆部（腓骨頭の高さではない）で計測するのが一般的である。",
+    "hasFigure": false,
+    "source": "第33回 はり師・きゅう師国家試験",
+    "sourceUrl": "https://ahaki.or.jp/wordpress/wp-content/uploads/mondai_33_harikyu_am.pdf",
+    "sourceOrg": "公益財団法人 東洋療法研修試験財団",
+    "sourceReliability": "indexed_official",
+    "verifiedAt": "2026-09-12"
+  },
+  {
+    "id": "33-042",
+    "examRound": 33,
+    "questionNumber": 42,
+    "questionText": "脈拍について正しいのはどれか。",
+    "choices": [
+      "貧血では徐脈になる。",
+      "脳圧亢進では徐脈になる。",
+      "パーキンソン病では頻脈になる。",
+      "甲状腺機能低下症では頻脈になる。"
+    ],
+    "answerIndex": 1,
+    "explanation": "頭蓋内圧亢進時には血圧上昇とともに徐脈を来す（クッシング現象）。貧血や甲状腺機能亢進では頻脈になりやすく、甲状腺機能低下症では徐脈になる。",
+    "hasFigure": false,
+    "source": "第33回 はり師・きゅう師国家試験",
+    "sourceUrl": "https://ahaki.or.jp/wordpress/wp-content/uploads/mondai_33_harikyu_am.pdf",
+    "sourceOrg": "公益財団法人 東洋療法研修試験財団",
+    "sourceReliability": "indexed_official",
+    "verifiedAt": "2026-09-12"
+  },
+  {
+    "id": "33-043",
+    "examRound": 33,
+    "questionNumber": 43,
+    "questionText": "易感染性をきたす疾患として最も適切なのはどれか。",
+    "choices": [
+      "鉄欠乏性貧血",
+      "特発性血小板減少性紫斑病",
+      "急性骨髄性白血病",
+      "巨赤芽球性貧血"
+    ],
+    "answerIndex": 2,
+    "explanation": "急性骨髄性白血病では正常な白血球（好中球）の産生が障害され、易感染性を来しやすい。他の選択肢は主に貧血や出血傾向を特徴とする疾患である。",
+    "hasFigure": false,
+    "source": "第33回 はり師・きゅう師国家試験",
+    "sourceUrl": "https://ahaki.or.jp/wordpress/wp-content/uploads/mondai_33_harikyu_am.pdf",
+    "sourceOrg": "公益財団法人 東洋療法研修試験財団",
+    "sourceReliability": "indexed_official",
+    "verifiedAt": "2026-09-12"
+  },
+  {
+    "id": "33-044",
+    "examRound": 33,
+    "questionNumber": 44,
+    "questionText": "便秘の原因で最も適切なのはどれか。",
+    "choices": [
+      "オピオイド内服",
+      "胃切除",
+      "ノロウイルス感染",
+      "乳糖不耐症"
+    ],
+    "answerIndex": 0,
+    "explanation": "オピオイドは腸管の蠕動運動を抑制する作用があり、代表的な薬剤性便秘の原因となる。ノロウイルス感染・乳糖不耐症・胃切除後はいずれも下痢を来しやすい病態である。",
+    "hasFigure": false,
+    "source": "第33回 はり師・きゅう師国家試験",
+    "sourceUrl": "https://ahaki.or.jp/wordpress/wp-content/uploads/mondai_33_harikyu_am.pdf",
+    "sourceOrg": "公益財団法人 東洋療法研修試験財団",
+    "sourceReliability": "indexed_official",
+    "verifiedAt": "2026-09-12"
+  },
+  {
+    "id": "33-045",
+    "examRound": 33,
+    "questionNumber": 45,
+    "questionText": "チアノーゼの原因とならないのはどれか。",
+    "choices": [
+      "貧血",
+      "左心不全",
+      "ファロー四徴症",
+      "COPD"
+    ],
+    "answerIndex": 0,
+    "explanation": "チアノーゼは血液中の還元ヘモグロビンが一定量以上になることで生じるが、貧血ではヘモグロビン総量自体が少ないため還元ヘモグロビンの絶対量が増えにくく、チアノーゼは出現しにくい。",
+    "hasFigure": false,
+    "source": "第33回 はり師・きゅう師国家試験",
+    "sourceUrl": "https://ahaki.or.jp/wordpress/wp-content/uploads/mondai_33_harikyu_am.pdf",
+    "sourceOrg": "公益財団法人 東洋療法研修試験財団",
+    "sourceReliability": "indexed_official",
+    "verifiedAt": "2026-09-12"
+  },
+  {
+    "id": "33-046",
+    "examRound": 33,
+    "questionNumber": 46,
+    "questionText": "声音振盪が増強するのはどれか。",
+    "choices": [
+      "気胸",
+      "肺炎",
+      "肺気腫",
+      "胸水貯留"
+    ],
+    "answerIndex": 1,
+    "explanation": "声音振盪は肺組織が実質化（浸潤等）した場合に増強する。肺炎はその代表例。気胸・胸水貯留・肺気腫では、含気や貯留液により振動が伝わりにくくなり減弱する。",
+    "hasFigure": false,
+    "source": "第33回 はり師・きゅう師国家試験",
+    "sourceUrl": "https://ahaki.or.jp/wordpress/wp-content/uploads/mondai_33_harikyu_am.pdf",
+    "sourceOrg": "公益財団法人 東洋療法研修試験財団",
+    "sourceReliability": "indexed_official",
+    "verifiedAt": "2026-09-12"
+  },
+  {
+    "id": "33-047",
+    "examRound": 33,
+    "questionNumber": 47,
+    "questionText": "脳神経で、障害されると僧帽筋の筋力低下を示すのはどれか。",
+    "choices": [
+      "三叉神経",
+      "顔面神経",
+      "迷走神経",
+      "副神経"
+    ],
+    "answerIndex": 3,
+    "explanation": "副神経（第XI脳神経）は胸鎖乳突筋と僧帽筋を支配しており、障害されると僧帽筋の筋力低下を来す。",
+    "hasFigure": false,
+    "source": "第33回 はり師・きゅう師国家試験",
+    "sourceUrl": "https://ahaki.or.jp/wordpress/wp-content/uploads/mondai_33_harikyu_am.pdf",
+    "sourceOrg": "公益財団法人 東洋療法研修試験財団",
+    "sourceReliability": "indexed_official",
+    "verifiedAt": "2026-09-12"
+  },
+  {
+    "id": "33-048",
+    "examRound": 33,
+    "questionNumber": 48,
+    "questionText": "ターミナルケアについて最も適切なのはどれか。",
+    "choices": [
+      "原疾患の根治を目標とする。",
+      "苦痛緩和を最大限検討する。",
+      "生活の質より延命を優先する。",
+      "治療方針の決定は医師と患者の家族で行う。"
+    ],
+    "answerIndex": 1,
+    "explanation": "ターミナルケアは根治や延命よりも、患者の苦痛緩和とQOL（生活の質）の維持を最優先の目標とする。治療方針の決定には患者本人の意思を中心に据える。",
+    "hasFigure": false,
+    "source": "第33回 はり師・きゅう師国家試験",
+    "sourceUrl": "https://ahaki.or.jp/wordpress/wp-content/uploads/mondai_33_harikyu_am.pdf",
+    "sourceOrg": "公益財団法人 東洋療法研修試験財団",
+    "sourceReliability": "indexed_official",
+    "verifiedAt": "2026-09-12"
+  },
+  {
+    "id": "33-049",
+    "examRound": 33,
+    "questionNumber": 49,
+    "questionText": "食中毒の原因となる細菌と食品の組合せで正しいのはどれか。",
+    "choices": [
+      "サルモネラ属 ── 魚介類",
+      "腸炎ビブリオ ── レバー",
+      "カンピロバクター ── 鶏肉",
+      "腸管出血性大腸菌 ── 鶏卵"
+    ],
+    "answerIndex": 2,
+    "explanation": "カンピロバクターは加熱不十分な鶏肉が主な感染源となる。腸炎ビブリオは魚介類、サルモネラ属は鶏卵や食肉、腸管出血性大腸菌は牛肉（ユッケ等）が代表的な原因食品である。",
+    "hasFigure": false,
+    "source": "第33回 はり師・きゅう師国家試験",
+    "sourceUrl": "https://ahaki.or.jp/wordpress/wp-content/uploads/mondai_33_harikyu_am.pdf",
+    "sourceOrg": "公益財団法人 東洋療法研修試験財団",
+    "sourceReliability": "indexed_official",
+    "verifiedAt": "2026-09-12"
+  },
+  {
+    "id": "33-050",
+    "examRound": 33,
+    "questionNumber": 50,
+    "questionText": "緑内障について正しいのはどれか。",
+    "choices": [
+      "初期の変化は硝子体に起こる。",
+      "初期から中心視野が障害される。",
+      "視神経は障害されない。",
+      "中高年の失明の原因として最も多い。"
+    ],
+    "answerIndex": 3,
+    "explanation": "緑内障はわが国における中途失明原因の上位を占める疾患である。本態は眼圧上昇等による視神経障害であり、視野障害は周辺部から進行し、末期になって中心視野が障害される。",
+    "hasFigure": false,
+    "source": "第33回 はり師・きゅう師国家試験",
+    "sourceUrl": "https://ahaki.or.jp/wordpress/wp-content/uploads/mondai_33_harikyu_am.pdf",
+    "sourceOrg": "公益財団法人 東洋療法研修試験財団",
+    "sourceReliability": "indexed_official",
+    "verifiedAt": "2026-09-12"
+  }
+]
