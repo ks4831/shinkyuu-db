@@ -1,0 +1,1002 @@
+[
+  {
+    "id": "32-001",
+    "examRound": 32,
+    "questionNumber": 1,
+    "questionText": "医療法において、地域の医療従事者の研修実施が規定されているのはどれか。",
+    "choices": [
+      "介護老人保健施設",
+      "地域医療支援病院",
+      "特定機能病院",
+      "臨床研究中核病院"
+    ],
+    "answerIndex": 1,
+    "explanation": "医療法において、地域の医療従事者に対する研修の実施は地域医療支援病院の主要な機能の一つとして規定されている。介護老人保健施設・特定機能病院・臨床研究中核病院はいずれも別の機能を主目的とする施設である。",
+    "hasFigure": false,
+    "source": "第32回 はり師・きゅう師国家試験",
+    "sourceUrl": "https://ahaki.or.jp/wordpress/wp-content/uploads/mondai_32_harikyu_am.pdf",
+    "sourceOrg": "公益財団法人 東洋療法研修試験財団",
+    "sourceReliability": "indexed_official",
+    "verifiedAt": "2026-09-14"
+  },
+  {
+    "id": "32-002",
+    "examRound": 32,
+    "questionNumber": 2,
+    "questionText": "難病に対する公費負担医療に期待される役割として最も適切なのはどれか。",
+    "choices": [
+      "国家賠償",
+      "公衆衛生",
+      "社会福祉",
+      "研究推進"
+    ],
+    "answerIndex": 3,
+    "explanation": "難病の患者に対する医療等に関する法律に基づく医療費助成は、患者の医療費負担軽減とともに、難病に関する研究の推進を目的の一つとしている。",
+    "hasFigure": false,
+    "source": "第32回 はり師・きゅう師国家試験",
+    "sourceUrl": "https://ahaki.or.jp/wordpress/wp-content/uploads/mondai_32_harikyu_am.pdf",
+    "sourceOrg": "公益財団法人 東洋療法研修試験財団",
+    "sourceReliability": "indexed_official",
+    "verifiedAt": "2026-09-14"
+  },
+  {
+    "id": "32-003",
+    "examRound": 32,
+    "questionNumber": 3,
+    "questionText": "チーム医療を推進するのに望ましくないのはどれか。",
+    "choices": [
+      "職種による専門性",
+      "職種間の情報共有",
+      "職種間の上下関係",
+      "職種による業務分担"
+    ],
+    "answerIndex": 2,
+    "explanation": "チーム医療は、各職種がそれぞれの専門性を発揮し情報を共有しながら対等に連携することが基本であり、職種間に固定的な上下関係を持ち込むことは望ましくない。",
+    "hasFigure": false,
+    "source": "第32回 はり師・きゅう師国家試験",
+    "sourceUrl": "https://ahaki.or.jp/wordpress/wp-content/uploads/mondai_32_harikyu_am.pdf",
+    "sourceOrg": "公益財団法人 東洋療法研修試験財団",
+    "sourceReliability": "indexed_official",
+    "verifiedAt": "2026-09-14"
+  },
+  {
+    "id": "32-004",
+    "examRound": 32,
+    "questionNumber": 4,
+    "questionText": "ケアプランを作成できる職種はどれか。",
+    "choices": [
+      "社会福祉士",
+      "ホームヘルパー",
+      "介護支援専門員",
+      "医療ソーシャルワーカー"
+    ],
+    "answerIndex": 2,
+    "explanation": "介護保険制度において、居宅サービス計画（ケアプラン）の作成を担うのは介護支援専門員（ケアマネジャー）である。",
+    "hasFigure": false,
+    "source": "第32回 はり師・きゅう師国家試験",
+    "sourceUrl": "https://ahaki.or.jp/wordpress/wp-content/uploads/mondai_32_harikyu_am.pdf",
+    "sourceOrg": "公益財団法人 東洋療法研修試験財団",
+    "sourceReliability": "indexed_official",
+    "verifiedAt": "2026-09-14"
+  },
+  {
+    "id": "32-005",
+    "examRound": 32,
+    "questionNumber": 5,
+    "questionText": "海産魚介類の生食により激しい胃痛を起こすのはどれか。",
+    "choices": [
+      "クリプトスポリジウム",
+      "黄色ブドウ球菌",
+      "サルモネラ属",
+      "アニサキス"
+    ],
+    "answerIndex": 3,
+    "explanation": "アニサキスは海産魚介類（サバ・イカなど）の生食により感染し、幼虫が胃壁に侵入することで激しい上腹部痛（アニサキス症）を起こす。",
+    "hasFigure": false,
+    "source": "第32回 はり師・きゅう師国家試験",
+    "sourceUrl": "https://ahaki.or.jp/wordpress/wp-content/uploads/mondai_32_harikyu_am.pdf",
+    "sourceOrg": "公益財団法人 東洋療法研修試験財団",
+    "sourceReliability": "indexed_official",
+    "verifiedAt": "2026-09-14"
+  },
+  {
+    "id": "32-006",
+    "examRound": 32,
+    "questionNumber": 6,
+    "questionText": "日常生活を送るために最低限必要な動作を示すのはどれか。",
+    "choices": [
+      "QOL",
+      "ADL",
+      "PHC",
+      "BMI"
+    ],
+    "answerIndex": 1,
+    "explanation": "ADL（日常生活動作）は、食事・排泄・移動などの日常生活を送るために最低限必要な基本的動作を指す指標である。",
+    "hasFigure": false,
+    "source": "第32回 はり師・きゅう師国家試験",
+    "sourceUrl": "https://ahaki.or.jp/wordpress/wp-content/uploads/mondai_32_harikyu_am.pdf",
+    "sourceOrg": "公益財団法人 東洋療法研修試験財団",
+    "sourceReliability": "indexed_official",
+    "verifiedAt": "2026-09-14"
+  },
+  {
+    "id": "32-007",
+    "examRound": 32,
+    "questionNumber": 7,
+    "questionText": "施術者の手指消毒に適切なのはどれか。",
+    "choices": [
+      "紫外線",
+      "オキシドール",
+      "70％エタノール",
+      "エチレンオキサイドガス"
+    ],
+    "answerIndex": 2,
+    "explanation": "手指消毒には70％エタノールなどのアルコール消毒薬が広く用いられる。紫外線・オキシドール・エチレンオキサイドガスは手指消毒法として適切ではない。",
+    "hasFigure": false,
+    "source": "第32回 はり師・きゅう師国家試験",
+    "sourceUrl": "https://ahaki.or.jp/wordpress/wp-content/uploads/mondai_32_harikyu_am.pdf",
+    "sourceOrg": "公益財団法人 東洋療法研修試験財団",
+    "sourceReliability": "indexed_official",
+    "verifiedAt": "2026-09-14"
+  },
+  {
+    "id": "32-008",
+    "examRound": 32,
+    "questionNumber": 8,
+    "questionText": "男性において、生活習慣病のリスクを高める1日あたりの純アルコール摂取量はどれか。",
+    "choices": [
+      "10グラム以上",
+      "20グラム以上",
+      "30グラム以上",
+      "40グラム以上"
+    ],
+    "answerIndex": 3,
+    "explanation": "厚生労働省の基準では、生活習慣病のリスクを高める飲酒量は男性で1日あたり純アルコール40g以上とされる（女性は20g以上）。",
+    "hasFigure": false,
+    "source": "第32回 はり師・きゅう師国家試験",
+    "sourceUrl": "https://ahaki.or.jp/wordpress/wp-content/uploads/mondai_32_harikyu_am.pdf",
+    "sourceOrg": "公益財団法人 東洋療法研修試験財団",
+    "sourceReliability": "indexed_official",
+    "verifiedAt": "2026-09-14"
+  },
+  {
+    "id": "32-009",
+    "examRound": 32,
+    "questionNumber": 9,
+    "questionText": "ある要因への曝露群と非曝露群の罹患率の差を評価する疫学指標はどれか。",
+    "choices": [
+      "寄与危険度",
+      "オッズ比",
+      "有病率",
+      "相対危険度"
+    ],
+    "answerIndex": 0,
+    "explanation": "曝露群と非曝露群の罹患率の「差」を示す指標は寄与危険度（属性危険度）である。相対危険度・オッズ比は罹患率の「比」を示す指標であり区別される。",
+    "hasFigure": false,
+    "source": "第32回 はり師・きゅう師国家試験",
+    "sourceUrl": "https://ahaki.or.jp/wordpress/wp-content/uploads/mondai_32_harikyu_am.pdf",
+    "sourceOrg": "公益財団法人 東洋療法研修試験財団",
+    "sourceReliability": "indexed_official",
+    "verifiedAt": "2026-09-14"
+  },
+  {
+    "id": "32-010",
+    "examRound": 32,
+    "questionNumber": 10,
+    "questionText": "持続可能な開発目標（SDGs）の17のゴールに含まれるのはどれか。",
+    "choices": [
+      "再生医療の促進",
+      "ジェンダー平等",
+      "救急医療の充実",
+      "少子高齢化対策"
+    ],
+    "answerIndex": 1,
+    "explanation": "SDGs（持続可能な開発目標）の17のゴールにはジェンダー平等（目標5）が含まれる。",
+    "hasFigure": false,
+    "source": "第32回 はり師・きゅう師国家試験",
+    "sourceUrl": "https://ahaki.or.jp/wordpress/wp-content/uploads/mondai_32_harikyu_am.pdf",
+    "sourceOrg": "公益財団法人 東洋療法研修試験財団",
+    "sourceReliability": "indexed_official",
+    "verifiedAt": "2026-09-14"
+  },
+  {
+    "id": "32-011",
+    "examRound": 32,
+    "questionNumber": 11,
+    "questionText": "あはき法に規定される施術所の構造設備について誤っているのはどれか。",
+    "choices": [
+      "施術室は、室面積の8分の1に相当する部分を外気に開放しうる。",
+      "施術室の隣室に器具、手指等の消毒の設備を設ける。",
+      "8.8平方メートルの専用の施術室を有する。",
+      "6.6平方メートルの待合室を有する。"
+    ],
+    "answerIndex": 0,
+    "explanation": "あはき法関係省令が定める施術室の換気基準は「室の面積の7分の1以上に相当する部分を外気に開放し得ること」であり、「8分の1」という数値はこの基準を満たさず誤り。",
+    "hasFigure": false,
+    "source": "第32回 はり師・きゅう師国家試験",
+    "sourceUrl": "https://ahaki.or.jp/wordpress/wp-content/uploads/mondai_32_harikyu_am.pdf",
+    "sourceOrg": "公益財団法人 東洋療法研修試験財団",
+    "sourceReliability": "indexed_official",
+    "verifiedAt": "2026-09-14"
+  },
+  {
+    "id": "32-012",
+    "examRound": 32,
+    "questionNumber": 12,
+    "questionText": "あはき法で、施術所について広告できるのはどれか。",
+    "choices": [
+      "美容鍼",
+      "中国鍼",
+      "小児鍼",
+      "電気鍼"
+    ],
+    "answerIndex": 2,
+    "explanation": "あはき法上、施術所の広告は法令で定められた事項に限られるポジティブリスト方式が採られており、小児鍼はその中で広告可能な施術名として認められている。",
+    "hasFigure": false,
+    "source": "第32回 はり師・きゅう師国家試験",
+    "sourceUrl": "https://ahaki.or.jp/wordpress/wp-content/uploads/mondai_32_harikyu_am.pdf",
+    "sourceOrg": "公益財団法人 東洋療法研修試験財団",
+    "sourceReliability": "indexed_official",
+    "verifiedAt": "2026-09-14"
+  },
+  {
+    "id": "32-013",
+    "examRound": 32,
+    "questionNumber": 13,
+    "questionText": "あはき法に規定される申請・届出と、その期限の組合せで正しいのはどれか。",
+    "choices": [
+      "国家試験合格時の免許申請 ── 30日以内",
+      "氏名変更時の免許証再交付申請 ── 10日以内",
+      "届出区域外での業務開始時の届出 ── 10日以内",
+      "免許取消時の免許証返納 ── 5日以内"
+    ],
+    "answerIndex": 3,
+    "explanation": "あはき法関係省令では、免許の取消処分を受けた者は5日以内に免許証を返納しなければならないと定められている。",
+    "hasFigure": false,
+    "source": "第32回 はり師・きゅう師国家試験",
+    "sourceUrl": "https://ahaki.or.jp/wordpress/wp-content/uploads/mondai_32_harikyu_am.pdf",
+    "sourceOrg": "公益財団法人 東洋療法研修試験財団",
+    "sourceReliability": "indexed_official",
+    "verifiedAt": "2026-09-14"
+  },
+  {
+    "id": "32-014",
+    "examRound": 32,
+    "questionNumber": 14,
+    "questionText": "施術所の名称を付ける際に留意しなければならない法律はどれか。",
+    "choices": [
+      "医療法",
+      "医師法",
+      "地域保健法",
+      "健康増進法"
+    ],
+    "answerIndex": 0,
+    "explanation": "医療法第3条は、病院又は診療所と紛らわしい名称を用いることを禁じており、施術所の名称を付ける際はこの規定に留意する必要がある。",
+    "hasFigure": false,
+    "source": "第32回 はり師・きゅう師国家試験",
+    "sourceUrl": "https://ahaki.or.jp/wordpress/wp-content/uploads/mondai_32_harikyu_am.pdf",
+    "sourceOrg": "公益財団法人 東洋療法研修試験財団",
+    "sourceReliability": "indexed_official",
+    "verifiedAt": "2026-09-14"
+  },
+  {
+    "id": "32-015",
+    "examRound": 32,
+    "questionNumber": 15,
+    "questionText": "脊髄の背側面に最も近いのはどれか。",
+    "choices": [
+      "黄色靱帯",
+      "棘間靱帯",
+      "棘上靱帯",
+      "後縦靱帯"
+    ],
+    "answerIndex": 0,
+    "explanation": "黄色靱帯は椎弓間を連結し、脊柱管内で脊髄硬膜の背側面に最も近い位置にある。棘間靱帯・棘上靱帯は棘突起間・棘突起先端を連結し、後縦靱帯は椎体の後面（腹側）に位置する。",
+    "hasFigure": false,
+    "source": "第32回 はり師・きゅう師国家試験",
+    "sourceUrl": "https://ahaki.or.jp/wordpress/wp-content/uploads/mondai_32_harikyu_am.pdf",
+    "sourceOrg": "公益財団法人 東洋療法研修試験財団",
+    "sourceReliability": "indexed_official",
+    "verifiedAt": "2026-09-14"
+  },
+  {
+    "id": "32-016",
+    "examRound": 32,
+    "questionNumber": 16,
+    "questionText": "骨盤の分界線の構成に関与するのはどれか。",
+    "choices": [
+      "岬角",
+      "坐骨棘",
+      "坐骨結節",
+      "上前腸骨棘"
+    ],
+    "answerIndex": 0,
+    "explanation": "骨盤の分界線（骨盤上口）は仙骨岬角・弓状線・恥骨櫛・恥骨結合上縁を結ぶ線で構成される。坐骨棘・坐骨結節・上前腸骨棘は分界線の構成には含まれない。",
+    "hasFigure": false,
+    "source": "第32回 はり師・きゅう師国家試験",
+    "sourceUrl": "https://ahaki.or.jp/wordpress/wp-content/uploads/mondai_32_harikyu_am.pdf",
+    "sourceOrg": "公益財団法人 東洋療法研修試験財団",
+    "sourceReliability": "indexed_official",
+    "verifiedAt": "2026-09-14"
+  },
+  {
+    "id": "32-017",
+    "examRound": 32,
+    "questionNumber": 17,
+    "questionText": "前腕の屈筋群について正しいのはどれか。",
+    "choices": [
+      "円回内筋を橈骨神経が貫く。",
+      "橈側手根屈筋は上腕骨内側上顆から起こる。",
+      "長掌筋は手根管を通る。",
+      "尺側手根屈筋は正中神経支配である。"
+    ],
+    "answerIndex": 1,
+    "explanation": "橈側手根屈筋は上腕骨内側上顆（共通屈筋起始部）から起こる。円回内筋を貫くのは正中神経、長掌筋の腱は手根管の外を通り、尺側手根屈筋は尺骨神経支配である。",
+    "hasFigure": false,
+    "source": "第32回 はり師・きゅう師国家試験",
+    "sourceUrl": "https://ahaki.or.jp/wordpress/wp-content/uploads/mondai_32_harikyu_am.pdf",
+    "sourceOrg": "公益財団法人 東洋療法研修試験財団",
+    "sourceReliability": "indexed_official",
+    "verifiedAt": "2026-09-14"
+  },
+  {
+    "id": "32-018",
+    "examRound": 32,
+    "questionNumber": 18,
+    "questionText": "心臓について正しいのはどれか。",
+    "choices": [
+      "右冠状動脈は心臓の前面に分布する。",
+      "心尖は第4肋間の高さに位置する。",
+      "動脈弁は腱索で乳頭筋とつながる。",
+      "冠状静脈洞は右心房に注ぐ。"
+    ],
+    "answerIndex": 3,
+    "explanation": "冠状静脈洞は心臓の静脈血を集め右心房に注ぐ。動脈弁（半月弁）に腱索・乳頭筋の付着はなく、腱索と乳頭筋がつながるのは房室弁である。",
+    "hasFigure": false,
+    "source": "第32回 はり師・きゅう師国家試験",
+    "sourceUrl": "https://ahaki.or.jp/wordpress/wp-content/uploads/mondai_32_harikyu_am.pdf",
+    "sourceOrg": "公益財団法人 東洋療法研修試験財団",
+    "sourceReliability": "indexed_official",
+    "verifiedAt": "2026-09-14"
+  },
+  {
+    "id": "32-019",
+    "examRound": 32,
+    "questionNumber": 19,
+    "questionText": "口腔内の構造について正しいのはどれか。",
+    "choices": [
+      "軟口蓋は平滑筋からなる。",
+      "内舌筋は舌咽神経に支配される。",
+      "舌扁桃は口蓋垂の両側に位置する。",
+      "耳下腺管は口腔前庭の頬粘膜に開口する。"
+    ],
+    "answerIndex": 3,
+    "explanation": "耳下腺管（ステノン管）は口腔前庭の頬粘膜、上顎第二大臼歯に相対する部位に開口する。軟口蓋は横紋筋からなり、内舌筋は舌下神経支配、舌扁桃は舌根に位置する。",
+    "hasFigure": false,
+    "source": "第32回 はり師・きゅう師国家試験",
+    "sourceUrl": "https://ahaki.or.jp/wordpress/wp-content/uploads/mondai_32_harikyu_am.pdf",
+    "sourceOrg": "公益財団法人 東洋療法研修試験財団",
+    "sourceReliability": "indexed_official",
+    "verifiedAt": "2026-09-14"
+  },
+  {
+    "id": "32-020",
+    "examRound": 32,
+    "questionNumber": 20,
+    "questionText": "上行結腸にあるのはどれか。",
+    "choices": [
+      "腸間膜",
+      "腸絨毛",
+      "腹膜垂",
+      "パイエル板"
+    ],
+    "answerIndex": 2,
+    "explanation": "腹膜垂は結腸に特徴的にみられる漿膜下脂肪組織の突起である。腸絨毛・パイエル板は小腸の構造であり、上行結腸は通常後腹膜に固定され腸間膜を持たない。",
+    "hasFigure": false,
+    "source": "第32回 はり師・きゅう師国家試験",
+    "sourceUrl": "https://ahaki.or.jp/wordpress/wp-content/uploads/mondai_32_harikyu_am.pdf",
+    "sourceOrg": "公益財団法人 東洋療法研修試験財団",
+    "sourceReliability": "indexed_official",
+    "verifiedAt": "2026-09-14"
+  },
+  {
+    "id": "32-021",
+    "examRound": 32,
+    "questionNumber": 21,
+    "questionText": "髄膜について正しいのはどれか。",
+    "choices": [
+      "硬膜静脈洞は外頸静脈に注ぐ。",
+      "小脳テントは大脳と小脳の境に位置する。",
+      "脳実質に最も近い髄膜はクモ膜である。",
+      "中脳水道は直接クモ膜下腔へ通じる。"
+    ],
+    "answerIndex": 1,
+    "explanation": "小脳テントは硬膜が形成するひだで、大脳と小脳の境に位置する。硬膜静脈洞は主に内頸静脈に注ぎ、脳実質に最も近い髄膜は軟膜、中脳水道は第三脳室と第四脳室を連絡する。",
+    "hasFigure": false,
+    "source": "第32回 はり師・きゅう師国家試験",
+    "sourceUrl": "https://ahaki.or.jp/wordpress/wp-content/uploads/mondai_32_harikyu_am.pdf",
+    "sourceOrg": "公益財団法人 東洋療法研修試験財団",
+    "sourceReliability": "indexed_official",
+    "verifiedAt": "2026-09-14"
+  },
+  {
+    "id": "32-022",
+    "examRound": 32,
+    "questionNumber": 22,
+    "questionText": "腕神経叢の後神経束から分枝するのはどれか。",
+    "choices": [
+      "肩甲上神経",
+      "肩甲背神経",
+      "胸背神経",
+      "長胸神経"
+    ],
+    "answerIndex": 2,
+    "explanation": "胸背神経は腕神経叢の後神経束から分枝し広背筋を支配する。肩甲上神経・肩甲背神経は鎖骨上部（神経根・神経幹レベル）の枝、長胸神経は神経根から直接分枝する。",
+    "hasFigure": false,
+    "source": "第32回 はり師・きゅう師国家試験",
+    "sourceUrl": "https://ahaki.or.jp/wordpress/wp-content/uploads/mondai_32_harikyu_am.pdf",
+    "sourceOrg": "公益財団法人 東洋療法研修試験財団",
+    "sourceReliability": "indexed_official",
+    "verifiedAt": "2026-09-14"
+  },
+  {
+    "id": "32-023",
+    "examRound": 32,
+    "questionNumber": 23,
+    "questionText": "味覚について正しいのはどれか。",
+    "choices": [
+      "糸状乳頭には味蕾がある。",
+      "舌の後1/3の味覚は舌下神経が伝える。",
+      "舌の前2/3の味覚は舌咽神経が伝える。",
+      "孤束核で中継される。"
+    ],
+    "answerIndex": 3,
+    "explanation": "味覚の一次中枢は延髄の孤束核である。味蕾は主に茸状乳頭・有郭乳頭・葉状乳頭にあり糸状乳頭にはない。舌前2/3の味覚は顔面神経（鼓索神経）、後1/3は舌咽神経が伝える。",
+    "hasFigure": false,
+    "source": "第32回 はり師・きゅう師国家試験",
+    "sourceUrl": "https://ahaki.or.jp/wordpress/wp-content/uploads/mondai_32_harikyu_am.pdf",
+    "sourceOrg": "公益財団法人 東洋療法研修試験財団",
+    "sourceReliability": "indexed_official",
+    "verifiedAt": "2026-09-14"
+  },
+  {
+    "id": "32-024",
+    "examRound": 32,
+    "questionNumber": 24,
+    "questionText": "核酸について正しいのはどれか。",
+    "choices": [
+      "DNAにはアミノ酸が含まれる。",
+      "DNAは3種類の塩基で構成される。",
+      "RNAは蛋白質合成に必要である。",
+      "RNAは凝集して染色体を形成する。"
+    ],
+    "answerIndex": 2,
+    "explanation": "RNAはmRNA・tRNA・rRNAなどとして蛋白質合成（転写・翻訳）に必要である。DNAはアデニン・グアニン・シトシン・チミンの4種類の塩基からなり、アミノ酸は含まない。染色体を形成するのはDNAである。",
+    "hasFigure": false,
+    "source": "第32回 はり師・きゅう師国家試験",
+    "sourceUrl": "https://ahaki.or.jp/wordpress/wp-content/uploads/mondai_32_harikyu_am.pdf",
+    "sourceOrg": "公益財団法人 東洋療法研修試験財団",
+    "sourceReliability": "indexed_official",
+    "verifiedAt": "2026-09-14"
+  },
+  {
+    "id": "32-025",
+    "examRound": 32,
+    "questionNumber": 25,
+    "questionText": "赤血球について正しいのはどれか。",
+    "choices": [
+      "腎臓で産生される。",
+      "多核細胞である。",
+      "蒸留水に入れると溶血を起こす。",
+      "寿命は約7日である。"
+    ],
+    "answerIndex": 2,
+    "explanation": "赤血球は低張液（蒸留水など）に入れると水が流入して膨化し溶血を起こす。赤血球は骨髄で産生される無核細胞で、寿命は約120日である。",
+    "hasFigure": false,
+    "source": "第32回 はり師・きゅう師国家試験",
+    "sourceUrl": "https://ahaki.or.jp/wordpress/wp-content/uploads/mondai_32_harikyu_am.pdf",
+    "sourceOrg": "公益財団法人 東洋療法研修試験財団",
+    "sourceReliability": "indexed_official",
+    "verifiedAt": "2026-09-14"
+  },
+  {
+    "id": "32-026",
+    "examRound": 32,
+    "questionNumber": 26,
+    "questionText": "呼吸運動を促進するのはどれか。",
+    "choices": [
+      "体液の浸透圧上昇",
+      "体液のpH低下",
+      "動脈血酸素分圧の上昇",
+      "動脈血二酸化炭素分圧の低下"
+    ],
+    "answerIndex": 1,
+    "explanation": "体液のpH低下（アシドーシス）や動脈血二酸化炭素分圧の上昇は呼吸中枢を刺激し呼吸運動を促進する。動脈血酸素分圧の上昇や二酸化炭素分圧の低下は呼吸運動を抑制する方向に働く。",
+    "hasFigure": false,
+    "source": "第32回 はり師・きゅう師国家試験",
+    "sourceUrl": "https://ahaki.or.jp/wordpress/wp-content/uploads/mondai_32_harikyu_am.pdf",
+    "sourceOrg": "公益財団法人 東洋療法研修試験財団",
+    "sourceReliability": "indexed_official",
+    "verifiedAt": "2026-09-14"
+  },
+  {
+    "id": "32-027",
+    "examRound": 32,
+    "questionNumber": 27,
+    "questionText": "放熱を促すのはどれか。",
+    "choices": [
+      "立毛筋の収縮",
+      "甲状腺ホルモンの分泌",
+      "皮膚血管の拡張",
+      "骨格筋の収縮"
+    ],
+    "answerIndex": 2,
+    "explanation": "皮膚血管の拡張は皮膚血流量を増加させ、体表からの放熱を促す。立毛筋の収縮・甲状腺ホルモンの分泌・骨格筋の収縮はいずれも熱産生・保温に働く。",
+    "hasFigure": false,
+    "source": "第32回 はり師・きゅう師国家試験",
+    "sourceUrl": "https://ahaki.or.jp/wordpress/wp-content/uploads/mondai_32_harikyu_am.pdf",
+    "sourceOrg": "公益財団法人 東洋療法研修試験財団",
+    "sourceReliability": "indexed_official",
+    "verifiedAt": "2026-09-14"
+  },
+  {
+    "id": "32-028",
+    "examRound": 32,
+    "questionNumber": 28,
+    "questionText": "プロラクチンについて正しいのはどれか。",
+    "choices": [
+      "乳汁産生を促す。",
+      "排卵を促す。",
+      "ステロイドホルモンである。",
+      "下垂体後葉から分泌される。"
+    ],
+    "answerIndex": 0,
+    "explanation": "プロラクチンは下垂体前葉から分泌されるペプチドホルモンで、乳腺に作用し乳汁産生を促す。排卵を促すのは主に黄体形成ホルモン（LH）である。",
+    "hasFigure": false,
+    "source": "第32回 はり師・きゅう師国家試験",
+    "sourceUrl": "https://ahaki.or.jp/wordpress/wp-content/uploads/mondai_32_harikyu_am.pdf",
+    "sourceOrg": "公益財団法人 東洋療法研修試験財団",
+    "sourceReliability": "indexed_official",
+    "verifiedAt": "2026-09-14"
+  },
+  {
+    "id": "32-029",
+    "examRound": 32,
+    "questionNumber": 29,
+    "questionText": "副交感神経活動に対する応答で正しいのはどれか。",
+    "choices": [
+      "発汗の促進",
+      "気管支筋の弛緩",
+      "心収縮力の増加",
+      "直腸平滑筋の収縮"
+    ],
+    "answerIndex": 3,
+    "explanation": "副交感神経（骨盤内臓神経）の興奮は直腸平滑筋を収縮させ排便を促す。発汗促進・気管支筋弛緩・心収縮力増加はいずれも交感神経系の作用である。",
+    "hasFigure": false,
+    "source": "第32回 はり師・きゅう師国家試験",
+    "sourceUrl": "https://ahaki.or.jp/wordpress/wp-content/uploads/mondai_32_harikyu_am.pdf",
+    "sourceOrg": "公益財団法人 東洋療法研修試験財団",
+    "sourceReliability": "indexed_official",
+    "verifiedAt": "2026-09-14"
+  },
+  {
+    "id": "32-030",
+    "examRound": 32,
+    "questionNumber": 30,
+    "questionText": "骨格筋の収縮について正しいのはどれか。",
+    "choices": [
+      "筋細胞の活動電位は筋収縮と同時に起こる。",
+      "収縮のエネルギーはADPの分解による。",
+      "筋小胞体からのカルシウムイオン放出により起こる。",
+      "日常の運動は単収縮によって行われる。"
+    ],
+    "answerIndex": 2,
+    "explanation": "骨格筋の興奮収縮連関では、活動電位に続いて筋小胞体からカルシウムイオンが放出されることで収縮が引き起こされる。収縮のエネルギー源はATPの分解であり、日常の運動は加重・強縮によって行われる。",
+    "hasFigure": false,
+    "source": "第32回 はり師・きゅう師国家試験",
+    "sourceUrl": "https://ahaki.or.jp/wordpress/wp-content/uploads/mondai_32_harikyu_am.pdf",
+    "sourceOrg": "公益財団法人 東洋療法研修試験財団",
+    "sourceReliability": "indexed_official",
+    "verifiedAt": "2026-09-14"
+  },
+  {
+    "id": "32-031",
+    "examRound": 32,
+    "questionNumber": 31,
+    "questionText": "脊髄に反射中枢が存在するのはどれか。",
+    "choices": [
+      "屈曲反射",
+      "嚥下反射",
+      "立ち直り反射",
+      "緊張性頸反射"
+    ],
+    "answerIndex": 0,
+    "explanation": "屈曲反射（逃避反射）は脊髄を反射中枢とする脊髄反射である。嚥下反射は延髄、立ち直り反射・緊張性頸反射は脳幹（延髄・中脳）を中枢とする。",
+    "hasFigure": false,
+    "source": "第32回 はり師・きゅう師国家試験",
+    "sourceUrl": "https://ahaki.or.jp/wordpress/wp-content/uploads/mondai_32_harikyu_am.pdf",
+    "sourceOrg": "公益財団法人 東洋療法研修試験財団",
+    "sourceReliability": "indexed_official",
+    "verifiedAt": "2026-09-14"
+  },
+  {
+    "id": "32-032",
+    "examRound": 32,
+    "questionNumber": 32,
+    "questionText": "視床の外側膝状体で中継される感覚はどれか。",
+    "choices": [
+      "嗅覚",
+      "視覚",
+      "味覚",
+      "聴覚"
+    ],
+    "answerIndex": 1,
+    "explanation": "視床の外側膝状体は網膜からの視覚情報を中継し大脳皮質視覚野へ送る。聴覚は内側膝状体で中継され、嗅覚は視床を経由せず、味覚は視床内側部などで中継される。",
+    "hasFigure": false,
+    "source": "第32回 はり師・きゅう師国家試験",
+    "sourceUrl": "https://ahaki.or.jp/wordpress/wp-content/uploads/mondai_32_harikyu_am.pdf",
+    "sourceOrg": "公益財団法人 東洋療法研修試験財団",
+    "sourceReliability": "indexed_official",
+    "verifiedAt": "2026-09-14"
+  },
+  {
+    "id": "32-033",
+    "examRound": 32,
+    "questionNumber": 33,
+    "questionText": "細胞老化で誤っているのはどれか。",
+    "choices": [
+      "DNA修復機能の低下",
+      "分裂能力の亢進",
+      "蛋白質合成の低下",
+      "異常蛋白質の蓄積"
+    ],
+    "answerIndex": 1,
+    "explanation": "細胞老化では分裂能力は亢進ではなく低下する（細胞分裂の停止・複製老化）。DNA修復機能の低下・蛋白質合成の低下・異常蛋白質の蓄積は、いずれも細胞老化にみられる変化である。",
+    "hasFigure": false,
+    "source": "第32回 はり師・きゅう師国家試験",
+    "sourceUrl": "https://ahaki.or.jp/wordpress/wp-content/uploads/mondai_32_harikyu_am.pdf",
+    "sourceOrg": "公益財団法人 東洋療法研修試験財団",
+    "sourceReliability": "indexed_official",
+    "verifiedAt": "2026-09-14"
+  },
+  {
+    "id": "32-034",
+    "examRound": 32,
+    "questionNumber": 34,
+    "questionText": "女性に多い疾患はどれか。",
+    "choices": [
+      "痛風",
+      "橋本病",
+      "COPD",
+      "十二指腸潰瘍"
+    ],
+    "answerIndex": 1,
+    "explanation": "橋本病（慢性甲状腺炎）は自己免疫疾患であり女性に多く発症する。痛風・COPD・十二指腸潰瘍はいずれも男性に多いとされる疾患である。",
+    "hasFigure": false,
+    "source": "第32回 はり師・きゅう師国家試験",
+    "sourceUrl": "https://ahaki.or.jp/wordpress/wp-content/uploads/mondai_32_harikyu_am.pdf",
+    "sourceOrg": "公益財団法人 東洋療法研修試験財団",
+    "sourceReliability": "indexed_official",
+    "verifiedAt": "2026-09-14"
+  },
+  {
+    "id": "32-035",
+    "examRound": 32,
+    "questionNumber": 35,
+    "questionText": "疾患と沈着物の組合せで正しいのはどれか。",
+    "choices": [
+      "痛風 ── シュウ酸",
+      "黄疸 ── ヘモジデリン",
+      "関節リウマチ ── アミロイド",
+      "粥状動脈硬化症 ── グリコーゲン"
+    ],
+    "answerIndex": 2,
+    "explanation": "関節リウマチなどの慢性炎症性疾患は二次性（反応性）アミロイドーシスを合併することがある。痛風の沈着物は尿酸（尿酸ナトリウム）、黄疸はビリルビン、粥状動脈硬化症はコレステロール（脂質）である。",
+    "hasFigure": false,
+    "source": "第32回 はり師・きゅう師国家試験",
+    "sourceUrl": "https://ahaki.or.jp/wordpress/wp-content/uploads/mondai_32_harikyu_am.pdf",
+    "sourceOrg": "公益財団法人 東洋療法研修試験財団",
+    "sourceReliability": "indexed_official",
+    "verifiedAt": "2026-09-14"
+  },
+  {
+    "id": "32-036",
+    "examRound": 32,
+    "questionNumber": 36,
+    "questionText": "線維素性炎はどれか。",
+    "choices": [
+      "劇症肝炎",
+      "ハンセン病",
+      "急性虫垂炎",
+      "大葉性肺炎"
+    ],
+    "answerIndex": 3,
+    "explanation": "大葉性肺炎は肺胞腔内にフィブリン（線維素）に富む滲出物が広範囲に生じる線維素性炎を呈する代表例である。",
+    "hasFigure": false,
+    "source": "第32回 はり師・きゅう師国家試験",
+    "sourceUrl": "https://ahaki.or.jp/wordpress/wp-content/uploads/mondai_32_harikyu_am.pdf",
+    "sourceOrg": "公益財団法人 東洋療法研修試験財団",
+    "sourceReliability": "indexed_official",
+    "verifiedAt": "2026-09-14"
+  },
+  {
+    "id": "32-037",
+    "examRound": 32,
+    "questionNumber": 37,
+    "questionText": "Th1細胞が最も関与するアレルギーはどれか。",
+    "choices": [
+      "Ⅰ型",
+      "Ⅱ型",
+      "Ⅲ型",
+      "Ⅳ型"
+    ],
+    "answerIndex": 3,
+    "explanation": "Ⅳ型アレルギー（遅延型過敏反応）はTh1細胞が主体となって引き起こされる細胞性免疫反応である。Ⅰ〜Ⅲ型は主に抗体（液性免疫）が関与する。",
+    "hasFigure": false,
+    "source": "第32回 はり師・きゅう師国家試験",
+    "sourceUrl": "https://ahaki.or.jp/wordpress/wp-content/uploads/mondai_32_harikyu_am.pdf",
+    "sourceOrg": "公益財団法人 東洋療法研修試験財団",
+    "sourceReliability": "indexed_official",
+    "verifiedAt": "2026-09-14"
+  },
+  {
+    "id": "32-038",
+    "examRound": 32,
+    "questionNumber": 38,
+    "questionText": "腫瘍と発がんに関連する微生物の組合せで誤っているのはどれか。",
+    "choices": [
+      "子宮頸癌 ── HPV",
+      "肝細胞癌 ── サイトメガロウイルス",
+      "バーキットリンパ腫 ── EBウイルス",
+      "胃癌 ── ヘリコバクター・ピロリ"
+    ],
+    "answerIndex": 1,
+    "explanation": "肝細胞癌の主な原因ウイルスはB型・C型肝炎ウイルスであり、サイトメガロウイルスとの組合せは誤り。子宮頸癌とHPV、バーキットリンパ腫とEBウイルス、胃癌とヘリコバクター・ピロリの組合せは正しい。",
+    "hasFigure": false,
+    "source": "第32回 はり師・きゅう師国家試験",
+    "sourceUrl": "https://ahaki.or.jp/wordpress/wp-content/uploads/mondai_32_harikyu_am.pdf",
+    "sourceOrg": "公益財団法人 東洋療法研修試験財団",
+    "sourceReliability": "indexed_official",
+    "verifiedAt": "2026-09-14"
+  },
+  {
+    "id": "32-039",
+    "examRound": 32,
+    "questionNumber": 39,
+    "questionText": "成人に対する一次救命処置において、1分間あたりの胸骨圧迫の回数で適切なのはどれか。",
+    "choices": [
+      "40〜60回",
+      "70〜90回",
+      "100〜120回",
+      "130〜150回"
+    ],
+    "answerIndex": 2,
+    "explanation": "成人の一次救命処置における胸骨圧迫は、1分間あたり100〜120回のテンポで行うことが推奨されている。",
+    "hasFigure": false,
+    "source": "第32回 はり師・きゅう師国家試験",
+    "sourceUrl": "https://ahaki.or.jp/wordpress/wp-content/uploads/mondai_32_harikyu_am.pdf",
+    "sourceOrg": "公益財団法人 東洋療法研修試験財団",
+    "sourceReliability": "indexed_official",
+    "verifiedAt": "2026-09-14"
+  },
+  {
+    "id": "32-040",
+    "examRound": 32,
+    "questionNumber": 40,
+    "questionText": "2型糖尿病患者の食事療法において、1日あたりの適正なエネルギー摂取量の算出に必要なのはどれか。",
+    "choices": [
+      "体温",
+      "腹囲",
+      "目標体重",
+      "体表面積"
+    ],
+    "answerIndex": 2,
+    "explanation": "2型糖尿病の食事療法における1日摂取エネルギー量は、目標体重に身体活動量に応じたエネルギー係数を乗じて算出する。",
+    "hasFigure": false,
+    "source": "第32回 はり師・きゅう師国家試験",
+    "sourceUrl": "https://ahaki.or.jp/wordpress/wp-content/uploads/mondai_32_harikyu_am.pdf",
+    "sourceOrg": "公益財団法人 東洋療法研修試験財団",
+    "sourceReliability": "indexed_official",
+    "verifiedAt": "2026-09-14"
+  },
+  {
+    "id": "32-041",
+    "examRound": 32,
+    "questionNumber": 41,
+    "questionText": "大動脈弁の音がよく聴取されるのはどれか。",
+    "choices": [
+      "第2肋間胸骨右縁",
+      "第2肋間胸骨左縁",
+      "第3肋間胸骨左縁",
+      "第4肋間胸骨左縁"
+    ],
+    "answerIndex": 0,
+    "explanation": "大動脈弁領域の聴診部位は第2肋間胸骨右縁である。第2肋間胸骨左縁は肺動脈弁領域、第4肋間胸骨左縁付近は三尖弁領域にあたる。",
+    "hasFigure": false,
+    "source": "第32回 はり師・きゅう師国家試験",
+    "sourceUrl": "https://ahaki.or.jp/wordpress/wp-content/uploads/mondai_32_harikyu_am.pdf",
+    "sourceOrg": "公益財団法人 東洋療法研修試験財団",
+    "sourceReliability": "indexed_official",
+    "verifiedAt": "2026-09-14"
+  },
+  {
+    "id": "32-042",
+    "examRound": 32,
+    "questionNumber": 42,
+    "questionText": "呼吸音が減弱するのはどれか。",
+    "choices": [
+      "無気肺",
+      "気管支炎",
+      "肺線維症",
+      "気管支肺炎"
+    ],
+    "answerIndex": 0,
+    "explanation": "無気肺では肺胞への含気が失われるため、患側の呼吸音は減弱ないし消失する。",
+    "hasFigure": false,
+    "source": "第32回 はり師・きゅう師国家試験",
+    "sourceUrl": "https://ahaki.or.jp/wordpress/wp-content/uploads/mondai_32_harikyu_am.pdf",
+    "sourceOrg": "公益財団法人 東洋療法研修試験財団",
+    "sourceReliability": "indexed_official",
+    "verifiedAt": "2026-09-14"
+  },
+  {
+    "id": "32-043",
+    "examRound": 32,
+    "questionNumber": 43,
+    "questionText": "放射線被曝を伴わない検査はどれか。",
+    "choices": [
+      "PET検査",
+      "CT検査",
+      "MRI検査",
+      "シンチグラフィ検査"
+    ],
+    "answerIndex": 2,
+    "explanation": "MRI検査は磁場と電磁波（ラジオ波）を利用する検査であり、放射線被曝を伴わない。PET検査・CT検査・シンチグラフィ検査はいずれも放射性同位元素の使用やX線照射により被曝を伴う。",
+    "hasFigure": false,
+    "source": "第32回 はり師・きゅう師国家試験",
+    "sourceUrl": "https://ahaki.or.jp/wordpress/wp-content/uploads/mondai_32_harikyu_am.pdf",
+    "sourceOrg": "公益財団法人 東洋療法研修試験財団",
+    "sourceReliability": "indexed_official",
+    "verifiedAt": "2026-09-14"
+  },
+  {
+    "id": "32-044",
+    "examRound": 32,
+    "questionNumber": 44,
+    "questionText": "縦隔腫瘍でみられるのはどれか。",
+    "choices": [
+      "眼振",
+      "ベル現象",
+      "眼球突出",
+      "ホルネル症候群"
+    ],
+    "answerIndex": 3,
+    "explanation": "縦隔腫瘍が胸郭内の交感神経幹を圧迫すると、縮瞳・眼瞼下垂・眼球陥凹を特徴とするホルネル症候群を呈することがある。",
+    "hasFigure": false,
+    "source": "第32回 はり師・きゅう師国家試験",
+    "sourceUrl": "https://ahaki.or.jp/wordpress/wp-content/uploads/mondai_32_harikyu_am.pdf",
+    "sourceOrg": "公益財団法人 東洋療法研修試験財団",
+    "sourceReliability": "indexed_official",
+    "verifiedAt": "2026-09-14"
+  },
+  {
+    "id": "32-045",
+    "examRound": 32,
+    "questionNumber": 45,
+    "questionText": "意識障害で、周囲に対する認識の減退や不安・興奮状態がみられるのはどれか。",
+    "choices": [
+      "傾眠",
+      "昏迷",
+      "せん妄",
+      "無欲状態"
+    ],
+    "answerIndex": 2,
+    "explanation": "せん妄は、意識混濁に加えて周囲に対する認識の減退、不安・興奮、幻覚などを伴う急性の意識障害である。",
+    "hasFigure": false,
+    "source": "第32回 はり師・きゅう師国家試験",
+    "sourceUrl": "https://ahaki.or.jp/wordpress/wp-content/uploads/mondai_32_harikyu_am.pdf",
+    "sourceOrg": "公益財団法人 東洋療法研修試験財団",
+    "sourceReliability": "indexed_official",
+    "verifiedAt": "2026-09-14"
+  },
+  {
+    "id": "32-046",
+    "examRound": 32,
+    "questionNumber": 46,
+    "questionText": "成人で1日の尿量が100mL以下の状態を示すのはどれか。",
+    "choices": [
+      "尿閉",
+      "稀尿",
+      "乏尿",
+      "無尿"
+    ],
+    "answerIndex": 3,
+    "explanation": "無尿は1日尿量が100mL以下（またはほぼ0）の状態を指す。乏尿は1日尿量400mL以下、尿閉は尿が膀胱内に貯留し排出できない状態である。",
+    "hasFigure": false,
+    "source": "第32回 はり師・きゅう師国家試験",
+    "sourceUrl": "https://ahaki.or.jp/wordpress/wp-content/uploads/mondai_32_harikyu_am.pdf",
+    "sourceOrg": "公益財団法人 東洋療法研修試験財団",
+    "sourceReliability": "indexed_official",
+    "verifiedAt": "2026-09-14"
+  },
+  {
+    "id": "32-047",
+    "examRound": 32,
+    "questionNumber": 47,
+    "questionText": "股関節の屈曲拘縮を確認する徒手検査法はどれか。",
+    "choices": [
+      "トーマステスト",
+      "ボンネットテスト",
+      "パトリックテスト",
+      "マクマレーテスト"
+    ],
+    "answerIndex": 0,
+    "explanation": "トーマステストは股関節の屈曲拘縮の有無を確認する徒手検査法である。ボンネットテスト・パトリックテストは股関節疾患に関連する別の徴候の検査、マクマレーテストは膝半月板損傷の検査である。",
+    "hasFigure": false,
+    "source": "第32回 はり師・きゅう師国家試験",
+    "sourceUrl": "https://ahaki.or.jp/wordpress/wp-content/uploads/mondai_32_harikyu_am.pdf",
+    "sourceOrg": "公益財団法人 東洋療法研修試験財団",
+    "sourceReliability": "indexed_official",
+    "verifiedAt": "2026-09-14"
+  },
+  {
+    "id": "32-048",
+    "examRound": 32,
+    "questionNumber": 48,
+    "questionText": "疾患と症状の組合せで正しいのはどれか。",
+    "choices": [
+      "溶血性貧血 ── ばち指",
+      "鉄欠乏性貧血 ── スプーン状爪",
+      "巨赤芽球性貧血 ── 黄疸",
+      "再生不良性貧血 ── ハンター舌炎"
+    ],
+    "answerIndex": 1,
+    "explanation": "鉄欠乏性貧血ではスプーン状爪（匙状爪）がみられることがある。ハンター舌炎は巨赤芽球性貧血（ビタミンB12欠乏）に特徴的な所見であり、選択肢の組合せとしては誤りとなる。",
+    "hasFigure": false,
+    "source": "第32回 はり師・きゅう師国家試験",
+    "sourceUrl": "https://ahaki.or.jp/wordpress/wp-content/uploads/mondai_32_harikyu_am.pdf",
+    "sourceOrg": "公益財団法人 東洋療法研修試験財団",
+    "sourceReliability": "indexed_official",
+    "verifiedAt": "2026-09-14"
+  },
+  {
+    "id": "32-049",
+    "examRound": 32,
+    "questionNumber": 49,
+    "questionText": "介護保険施設でノロウイルス感染症が発生した。感染を拡大させないための対応として適切なのはどれか。",
+    "choices": [
+      "感染者の居室は次亜塩素酸ナトリウムで清拭する。",
+      "感染者の吐物は乾燥してから処理する。",
+      "感染者が使用したリネンは60℃の加熱処理を行う。",
+      "感染者が使用した食器はアルコールで消毒する。"
+    ],
+    "answerIndex": 0,
+    "explanation": "ノロウイルスはアルコール消毒の効果が乏しく、環境の消毒には次亜塩素酸ナトリウムが有効である。吐物は乾燥させず速やかに処理し、ノロウイルスの不活化には85℃以上の加熱が推奨される。",
+    "hasFigure": false,
+    "source": "第32回 はり師・きゅう師国家試験",
+    "sourceUrl": "https://ahaki.or.jp/wordpress/wp-content/uploads/mondai_32_harikyu_am.pdf",
+    "sourceOrg": "公益財団法人 東洋療法研修試験財団",
+    "sourceReliability": "indexed_official",
+    "verifiedAt": "2026-09-14"
+  },
+  {
+    "id": "32-050",
+    "examRound": 32,
+    "questionNumber": 50,
+    "questionText": "アルツハイマー病で正しいのはどれか。",
+    "choices": [
+      "ラクナ梗塞の多発により発症する。",
+      "アミロイドβ蛋白質が蓄積する。",
+      "初期には記銘力障害はみられない。",
+      "MRI検査では前頭葉の萎縮が特徴的である。"
+    ],
+    "answerIndex": 1,
+    "explanation": "アルツハイマー病では脳内にアミロイドβ蛋白質が蓄積し老人斑を形成する。初期から記銘力障害（近時記憶障害）がみられ、MRIでは主に側頭葉内側部（海馬）の萎縮が特徴的である。ラクナ梗塞の多発は脳血管性認知症の原因である。",
+    "hasFigure": false,
+    "source": "第32回 はり師・きゅう師国家試験",
+    "sourceUrl": "https://ahaki.or.jp/wordpress/wp-content/uploads/mondai_32_harikyu_am.pdf",
+    "sourceOrg": "公益財団法人 東洋療法研修試験財団",
+    "sourceReliability": "indexed_official",
+    "verifiedAt": "2026-09-14"
+  }
+]
