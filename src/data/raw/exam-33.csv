@@ -106,7 +106,7 @@ id,examRound,year,questionNumber,session,subject,officialLarge,officialMedium,of
 33-105,33,2025,105,共通,oriental-overview,専門科目,東洋医学概論,弁証論治,tcm-clinical,六部定位脈診（右関上沈の部=脾の虚）と難経六十九難の補法取穴,,右関上（沈）＝脾の虚証。難経六十九難「虚者補其母」：脾(土)の母は心(火)→心/心包経の火穴を補う（経渠は肺経金穴）,,indexed_official,2020,180,,oo-shinsatsu-bensho
 33-106,33,2025,106,共通,oriental-overview,専門科目,東洋医学概論,補瀉法,acupuncture-technique,鍼施術の補法（抜鍼後に直ちに鍼孔を閉じる）,,補法：呼気時刺入・吸気時抜鍼・抜鍼後すぐ鍼孔を閉じる。瀉法：吸気時刺入・呼気時抜鍼・鍼孔を開放・押手で揺らす,,indexed_official,2020,180,,oo-chiryo-gairon
 33-107,33,2025,107,共通,meridians-acupoints,専門科目,経絡経穴概論,経絡系統,meridians-acupoints,経絡系統の構成（正経十二経脈と奇経八脈以外に経別・絡脈・経筋・皮部を含む）,,経絡系統＝経脈（正経12＋奇経8＋経別12）＋絡脈（別絡15＋浮絡＋孫絡）＋経筋12＋皮部12。「経絡＝正経＋奇経のみ」は誤り,,indexed_official,2020,180,,kei-myaku-ryuchu
-33-108,33,2025,108,共通,meridians-acupoints,専門科目,経絡経穴概論,特定穴（郄穴）,meridians-acupoints,郄穴でない経穴の識別（陽谷は郄穴でない）,,郄穴16穴：陽谷は小腸経の経穴（郄穴は養老）。腸骨→陽維脈の郄穴。交信→陰蹻脈の郄穴。築賓→陰維脈の郄穴,,indexed_official,2020,180,,geki-ketsu
+33-108,33,2025,108,共通,meridians-acupoints,専門科目,経絡経穴概論,特定穴（郄穴）,meridians-acupoints,郄穴でない経穴の識別（陽谷は郄穴でない）,,郄穴16穴：陽谷は小腸経の経穴（郄穴は養老）。跗陽→陽蹻脈の郄穴。交信→陰蹻脈の郄穴。築賓→陰維脈の郄穴,,indexed_official,2020,180,,geki-ketsu
 33-109,33,2025,109,共通,meridians-acupoints,専門科目,経絡経穴概論,骨度法,meridians-acupoints,下肢の骨度法で最も長い部位（膝窩〜外果尖=16寸）,,下肢骨度法：殿溝〜膝窩14寸・膝蓋骨尖〜内果尖15寸・膝窩〜外果尖16寸（最長）・脛骨内側顆下縁〜内果尖13寸,,indexed_official,2020,180,,me-kotsudo-shuketsu
 33-110,33,2025,110,共通,meridians-acupoints,専門科目,経絡経穴概論,特定穴（募穴）,meridians-acupoints,腹部募穴の臓腑同定（臍と恥骨結合の中点の下方5分=小腸の募穴=関元）,,臍中〜恥骨結合上縁は5寸。中点(2.5寸)の下方5分＝臍下3寸＝関元（小腸の募穴）。膀胱の募穴は中極（臍下4寸）であり本問とは異なる,,indexed_official,2020,180,,bo-ketsu
 33-111,33,2025,111,共通,meridians-acupoints,専門科目,経絡経穴概論,顔面部経穴,meridians-acupoints,顔面部経穴の部位（禾髎：人中溝中点と同じ高さ・鼻孔外縁下方）,,禾髎（LI19）：人中溝中点と同じ高さ・鼻孔外縁の下方が正しい。巨髎（ST3）は鼻翼外縁と同高。和髎は耳前部。顴髎は頬骨弓下,,indexed_official,2020,180,,juni-kei-myaku
