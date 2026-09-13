@@ -2998,5 +2998,607 @@
     "sourceOrg": "公益財団法人 東洋療法研修試験財団",
     "sourceReliability": "indexed_official",
     "verifiedAt": "2026-09-13"
+  },
+  {
+    "id": "33-151",
+    "examRound": 33,
+    "questionNumber": 151,
+    "questionText": "次の症例について、問題151、152の問いに答えよ。「46歳の女性。夫の死をきっかけにうつ病を発症。悲観的思考となり、気力が極度に減退。食欲もなく、動悸・不眠・健忘を伴う。舌質は淡、脈は細弱を認める。」\n\n病証として最も適切なのはどれか。",
+    "choices": [
+      "肝腎陰虚",
+      "肝気鬱結",
+      "心脾両虚",
+      "脾気下陥"
+    ],
+    "answerIndex": 2,
+    "explanation": "夫の死を契機とした発症、気力減退、食欲不振、動悸・不眠・健忘、舌質淡・脈細弱は、心血虚と脾気虚が併存する心脾両虚の典型像である。肝腎陰虚は潮熱・盗汗などの陰虚症状、肝気鬱結は易怒・脇脹満が主症であり、本症例の脈証とは合わない。",
+    "hasFigure": false,
+    "source": "第33回 はり師・きゅう師国家試験",
+    "sourceUrl": "https://ahaki.or.jp/wordpress/wp-content/uploads/mondai_33_harikyu_pm.pdf",
+    "sourceOrg": "公益財団法人 東洋療法研修試験財団",
+    "sourceReliability": "indexed_official",
+    "verifiedAt": "2026-09-13"
+  },
+  {
+    "id": "33-152",
+    "examRound": 33,
+    "questionNumber": 152,
+    "questionText": "次の症例について、問題151、152の問いに答えよ。「46歳の女性。夫の死をきっかけにうつ病を発症。悲観的思考となり、気力が極度に減退。食欲もなく、動悸・不眠・健忘を伴う。舌質は淡、脈は細弱を認める。」\n\n治療の結果、食欲が出てきて、気力の減退も改善してきた。この時期に最も注意すべき症状はどれか。",
+    "choices": [
+      "幻聴",
+      "観念奔逸",
+      "強迫行為",
+      "自殺念慮"
+    ],
+    "answerIndex": 3,
+    "explanation": "うつ病の回復期に意欲や行動力が先行して回復すると、それまで実行力を伴わなかった希死念慮が行動化しやすくなり、自殺念慮・自殺企図への注意が最も重要となる。幻聴・観念奔逸は統合失調症や躁病でみられる症状であり、本症例の経過とは異なる。",
+    "hasFigure": false,
+    "source": "第33回 はり師・きゅう師国家試験",
+    "sourceUrl": "https://ahaki.or.jp/wordpress/wp-content/uploads/mondai_33_harikyu_pm.pdf",
+    "sourceOrg": "公益財団法人 東洋療法研修試験財団",
+    "sourceReliability": "indexed_official",
+    "verifiedAt": "2026-09-13"
+  },
+  {
+    "id": "33-153",
+    "examRound": 33,
+    "questionNumber": 153,
+    "questionText": "次の症例について、問題153、154の問いに答えよ。「65歳の女性。右手関節部の骨折による変形が原因で、示指と中指の指先がしびれて、母指の動きが障害されるようになった。」\n\n最も認められる徴候はどれか。",
+    "choices": [
+      "祈祷師の手",
+      "ティアドロップサイン",
+      "パーフェクトOの不整",
+      "フロマン徴候"
+    ],
+    "answerIndex": 2,
+    "explanation": "橈骨遠位端骨折の変形治癒により正中神経が絞扼されると、母指対立筋・短母指屈筋の筋力低下が生じ、母指と示指で輪を作るパーフェクトOがしずく形に崩れる（パーフェクトOの不整）。祈祷師の手とフロマン徴候はいずれも尺骨神経麻痺でみられる徴候である。",
+    "hasFigure": false,
+    "source": "第33回 はり師・きゅう師国家試験",
+    "sourceUrl": "https://ahaki.or.jp/wordpress/wp-content/uploads/mondai_33_harikyu_pm.pdf",
+    "sourceOrg": "公益財団法人 東洋療法研修試験財団",
+    "sourceReliability": "indexed_official",
+    "verifiedAt": "2026-09-13"
+  },
+  {
+    "id": "33-154",
+    "examRound": 33,
+    "questionNumber": 154,
+    "questionText": "次の症例について、問題153、154の問いに答えよ。「65歳の女性。右手関節部の骨折による変形が原因で、示指と中指の指先がしびれて、母指の動きが障害されるようになった。」\n\n骨折した骨として最も適切なのはどれか。",
+    "choices": [
+      "舟状骨",
+      "橈骨",
+      "尺骨",
+      "有鉤骨"
+    ],
+    "answerIndex": 1,
+    "explanation": "手関節部の変形を伴う骨折で正中神経領域（示指・中指）のしびれと母指運動障害を来す代表的な骨折は、橈骨遠位端骨折（コーレス骨折）である。",
+    "hasFigure": false,
+    "source": "第33回 はり師・きゅう師国家試験",
+    "sourceUrl": "https://ahaki.or.jp/wordpress/wp-content/uploads/mondai_33_harikyu_pm.pdf",
+    "sourceOrg": "公益財団法人 東洋療法研修試験財団",
+    "sourceReliability": "indexed_official",
+    "verifiedAt": "2026-09-13"
+  },
+  {
+    "id": "33-155",
+    "examRound": 33,
+    "questionNumber": 155,
+    "questionText": "次の症例について、問題155、156の問いに答えよ。「35歳の男性。インスタント麺ばかり食べている。全身がだるく、最近は下肢にしびれがみられる。膝蓋腱反射は減弱し、近医でビタミン不足と言われた。」\n\n不足しているビタミンはどれか。",
+    "choices": [
+      "ビタミンA",
+      "ビタミンB1",
+      "ビタミンB12",
+      "ビタミンD"
+    ],
+    "answerIndex": 1,
+    "explanation": "インスタント食品など精製炭水化物に偏った食事によるビタミンB1（チアミン）欠乏は脚気を来し、下肢のしびれ・全身倦怠感・膝蓋腱反射減弱などの末梢神経障害を呈する。",
+    "hasFigure": false,
+    "source": "第33回 はり師・きゅう師国家試験",
+    "sourceUrl": "https://ahaki.or.jp/wordpress/wp-content/uploads/mondai_33_harikyu_pm.pdf",
+    "sourceOrg": "公益財団法人 東洋療法研修試験財団",
+    "sourceReliability": "indexed_official",
+    "verifiedAt": "2026-09-13"
+  },
+  {
+    "id": "33-156",
+    "examRound": 33,
+    "questionNumber": 156,
+    "questionText": "次の症例について、問題155、156の問いに答えよ。「35歳の男性。インスタント麺ばかり食べている。全身がだるく、最近は下肢にしびれがみられる。膝蓋腱反射は減弱し、近医でビタミン不足と言われた。」\n\n症状改善に効果があるとされる、8つの腧穴の組合せに含まれるのはどれか。",
+    "choices": [
+      "膝陽関",
+      "内膝眼",
+      "陽陵泉",
+      "上巨虚"
+    ],
+    "answerIndex": 3,
+    "explanation": "脚気の下肢症状に対する灸治療の古典的な8穴の組合せ（脚気八処）には、胃経の下合穴である上巨虚が含まれる。膝陽関・内膝眼・陽陵泉はこの組合せには含まれない。",
+    "hasFigure": false,
+    "source": "第33回 はり師・きゅう師国家試験",
+    "sourceUrl": "https://ahaki.or.jp/wordpress/wp-content/uploads/mondai_33_harikyu_pm.pdf",
+    "sourceOrg": "公益財団法人 東洋療法研修試験財団",
+    "sourceReliability": "indexed_official",
+    "verifiedAt": "2026-09-13"
+  },
+  {
+    "id": "33-157",
+    "examRound": 33,
+    "questionNumber": 157,
+    "questionText": "次の症例について、問題157、158の問いに答えよ。「28歳の男性。職場でハラスメントを受けている。腹痛と下痢がひどく、出勤途中に数回トイレに行く。血便はなく、休日は症状が出ない。舌質は淡紅、舌苔は少、脈は弦を認める。」\n\n疾患として最も適切なのはどれか。",
+    "choices": [
+      "胃食道逆流症",
+      "潰瘍性大腸炎",
+      "過敏性腸症候群",
+      "機能性ディスペプシア"
+    ],
+    "answerIndex": 2,
+    "explanation": "職場のストレスを誘因とし、腹痛と下痢を繰り返すが血便がなく、休日など緊張が解ける場面では症状が消失する経過は過敏性腸症候群に典型的である。潰瘍性大腸炎は血便を伴う点で異なる。",
+    "hasFigure": false,
+    "source": "第33回 はり師・きゅう師国家試験",
+    "sourceUrl": "https://ahaki.or.jp/wordpress/wp-content/uploads/mondai_33_harikyu_pm.pdf",
+    "sourceOrg": "公益財団法人 東洋療法研修試験財団",
+    "sourceReliability": "indexed_official",
+    "verifiedAt": "2026-09-13"
+  },
+  {
+    "id": "33-158",
+    "examRound": 33,
+    "questionNumber": 158,
+    "questionText": "次の症例について、問題157、158の問いに答えよ。「28歳の男性。職場でハラスメントを受けている。腹痛と下痢がひどく、出勤途中に数回トイレに行く。血便はなく、休日は症状が出ない。舌質は淡紅、舌苔は少、脈は弦を認める。」\n\n治療方針として最も適切なのはどれか。",
+    "choices": [
+      "肝と心の火を降ろす。",
+      "肝と脾の調和を図る。",
+      "肺と腎の陰液を補う。",
+      "心と腎の交わりを図る。"
+    ],
+    "answerIndex": 1,
+    "explanation": "ストレスによる肝気鬱結が脾の運化を妨げて生じる肝脾不和証と考えられ、治療方針は疏肝健脾（肝と脾の調和を図る）が適切である。",
+    "hasFigure": false,
+    "source": "第33回 はり師・きゅう師国家試験",
+    "sourceUrl": "https://ahaki.or.jp/wordpress/wp-content/uploads/mondai_33_harikyu_pm.pdf",
+    "sourceOrg": "公益財団法人 東洋療法研修試験財団",
+    "sourceReliability": "indexed_official",
+    "verifiedAt": "2026-09-13"
+  },
+  {
+    "id": "33-159",
+    "examRound": 33,
+    "questionNumber": 159,
+    "questionText": "次の症例について、問題159、160の問いに答えよ。「52歳の女性。右側の表情筋麻痺で来院。同側の額のしわ寄せは不能で、涙液減少、聴覚過敏、味覚障害、唾液分泌障害を伴う。」\n\n四総穴の主治を踏まえて治療する場合、最も適切な経穴はどれか。",
+    "choices": [
+      "合谷",
+      "列欠",
+      "委中",
+      "足三里"
+    ],
+    "answerIndex": 0,
+    "explanation": "四総穴の主治「面口合谷に収まる」により、顔面部の症状（表情筋麻痺）には合谷が適する。列欠は頭項部、委中は腰背部、足三里は肚腹部の症状を主治とする。",
+    "hasFigure": false,
+    "source": "第33回 はり師・きゅう師国家試験",
+    "sourceUrl": "https://ahaki.or.jp/wordpress/wp-content/uploads/mondai_33_harikyu_pm.pdf",
+    "sourceOrg": "公益財団法人 東洋療法研修試験財団",
+    "sourceReliability": "indexed_official",
+    "verifiedAt": "2026-09-13"
+  },
+  {
+    "id": "33-160",
+    "examRound": 33,
+    "questionNumber": 160,
+    "questionText": "次の症例について、問題159、160の問いに答えよ。「52歳の女性。右側の表情筋麻痺で来院。同側の額のしわ寄せは不能で、涙液減少、聴覚過敏、味覚障害、唾液分泌障害を伴う。」\n\n後遺障害として出現の可能性が最も高いのはどれか。",
+    "choices": [
+      "ワニの涙",
+      "眼球陥凹",
+      "眼瞼下垂",
+      "共同偏視"
+    ],
+    "answerIndex": 0,
+    "explanation": "末梢性顔面神経麻痺の回復過程で神経線維の誤支配（迷入再生）が起こると、食事の際に涙腺への副交感神経線維が刺激されて流涙するワニの涙症候群を来すことがある。",
+    "hasFigure": false,
+    "source": "第33回 はり師・きゅう師国家試験",
+    "sourceUrl": "https://ahaki.or.jp/wordpress/wp-content/uploads/mondai_33_harikyu_pm.pdf",
+    "sourceOrg": "公益財団法人 東洋療法研修試験財団",
+    "sourceReliability": "indexed_official",
+    "verifiedAt": "2026-09-13"
+  },
+  {
+    "id": "33-161",
+    "examRound": 33,
+    "questionNumber": 161,
+    "questionText": "古代九鍼で皮膚を切開するのはどれか。",
+    "choices": [
+      "円鍼",
+      "員利鍼",
+      "鈹鍼",
+      "鍉鍼"
+    ],
+    "answerIndex": 2,
+    "explanation": "古代九鍼のうち鈹鍼は剣状の刃をもち、膿瘍の切開・排膿など皮膚の切開に用いられた。円鍼・員利鍼・鍉鍼はいずれも鈍頭で摩擦・按圧に用いる鍼である。",
+    "hasFigure": false,
+    "source": "第33回 はり師・きゅう師国家試験",
+    "sourceUrl": "https://ahaki.or.jp/wordpress/wp-content/uploads/mondai_33_harikyu_pm.pdf",
+    "sourceOrg": "公益財団法人 東洋療法研修試験財団",
+    "sourceReliability": "indexed_official",
+    "verifiedAt": "2026-09-13",
+    "note": "はり理論試験問題（問題161〜170）。公式表紙により、はり師国家試験を受験する者が解答する区分（きゅう師のみを受験する者はこの区分を除く）。"
+  },
+  {
+    "id": "33-162",
+    "examRound": 33,
+    "questionNumber": 162,
+    "questionText": "基本17手技で鍼の刺入深度が最も深くなるのはどれか。",
+    "choices": [
+      "屋漏術",
+      "管散術",
+      "細指術",
+      "鍼尖転移法"
+    ],
+    "answerIndex": 0,
+    "explanation": "屋漏術は段階的に深さを変えながら鍼を刺入していく基本手技であり、基本17手技の中で刺入深度が最も深くなる。",
+    "hasFigure": false,
+    "source": "第33回 はり師・きゅう師国家試験",
+    "sourceUrl": "https://ahaki.or.jp/wordpress/wp-content/uploads/mondai_33_harikyu_pm.pdf",
+    "sourceOrg": "公益財団法人 東洋療法研修試験財団",
+    "sourceReliability": "indexed_official",
+    "verifiedAt": "2026-09-13"
+  },
+  {
+    "id": "33-163",
+    "examRound": 33,
+    "questionNumber": 163,
+    "questionText": "特殊鍼法で横刺するのはどれか。",
+    "choices": [
+      "灸頭鍼",
+      "小児鍼",
+      "皮内鍼",
+      "円皮鍼"
+    ],
+    "answerIndex": 2,
+    "explanation": "皮内鍼は皮膚とほぼ平行に横刺し、鍼体を皮内に留置する特殊鍼法である。灸頭鍼・小児鍼・円皮鍼は横刺を主体としない。",
+    "hasFigure": false,
+    "source": "第33回 はり師・きゅう師国家試験",
+    "sourceUrl": "https://ahaki.or.jp/wordpress/wp-content/uploads/mondai_33_harikyu_pm.pdf",
+    "sourceOrg": "公益財団法人 東洋療法研修試験財団",
+    "sourceReliability": "indexed_official",
+    "verifiedAt": "2026-09-13"
+  },
+  {
+    "id": "33-164",
+    "examRound": 33,
+    "questionNumber": 164,
+    "questionText": "鍼療法の禁忌はどれか。",
+    "choices": [
+      "つわり",
+      "肉体作業後の筋疲労",
+      "脳血管障害後の回復期",
+      "手術を必要とする状態"
+    ],
+    "answerIndex": 3,
+    "explanation": "手術適応となる急性腹症や重度外傷など外科的処置を要する病態は鍼療法の禁忌である。つわり、肉体疲労、脳血管障害後の回復期はいずれも鍼施術の対象となりうる。",
+    "hasFigure": false,
+    "source": "第33回 はり師・きゅう師国家試験",
+    "sourceUrl": "https://ahaki.or.jp/wordpress/wp-content/uploads/mondai_33_harikyu_pm.pdf",
+    "sourceOrg": "公益財団法人 東洋療法研修試験財団",
+    "sourceReliability": "indexed_official",
+    "verifiedAt": "2026-09-13"
+  },
+  {
+    "id": "33-165",
+    "examRound": 33,
+    "questionNumber": 165,
+    "questionText": "刺鍼によって心タンポナーデの危険性がある経穴はどれか。",
+    "choices": [
+      "中府",
+      "膻中",
+      "巨闕",
+      "期門"
+    ],
+    "answerIndex": 1,
+    "explanation": "膻中は前胸部正中で心臓に近接しており、深刺により心嚢を損傷し心タンポナーデを来す危険がある経穴として知られる。",
+    "hasFigure": false,
+    "source": "第33回 はり師・きゅう師国家試験",
+    "sourceUrl": "https://ahaki.or.jp/wordpress/wp-content/uploads/mondai_33_harikyu_pm.pdf",
+    "sourceOrg": "公益財団法人 東洋療法研修試験財団",
+    "sourceReliability": "indexed_official",
+    "verifiedAt": "2026-09-13"
+  },
+  {
+    "id": "33-166",
+    "examRound": 33,
+    "questionNumber": 166,
+    "questionText": "鍼施術後に生じる有害事象で、失神の原因として最も考えられるのはどれか。",
+    "choices": [
+      "遺感覚",
+      "気胸",
+      "低血糖",
+      "脳貧血"
+    ],
+    "answerIndex": 3,
+    "explanation": "刺鍼を誘因とする血管迷走神経反射により脳血流が一過性に低下する脳貧血（脳虚血）は、鍼施術後の失神の主要な原因である。気胸・低血糖は失神以外の症状を主とし、遺感覚は感覚異常であって失神とは直接関連しない。",
+    "hasFigure": false,
+    "source": "第33回 はり師・きゅう師国家試験",
+    "sourceUrl": "https://ahaki.or.jp/wordpress/wp-content/uploads/mondai_33_harikyu_pm.pdf",
+    "sourceOrg": "公益財団法人 東洋療法研修試験財団",
+    "sourceReliability": "indexed_official",
+    "verifiedAt": "2026-09-13"
+  },
+  {
+    "id": "33-167",
+    "examRound": 33,
+    "questionNumber": 167,
+    "questionText": "副腎髄質の受容体で、刺鍼により交感神経節前線維から遊離されるアセチルコリンが結合するのはどれか。",
+    "choices": [
+      "α受容体",
+      "β受容体",
+      "ニコチン受容体",
+      "ムスカリン受容体"
+    ],
+    "answerIndex": 2,
+    "explanation": "副腎髄質のクロム親和性細胞は交感神経節前線維（コリン作動性）の支配を受けており、遊離されたアセチルコリンはニコチン受容体に結合してカテコールアミン分泌を促す。",
+    "hasFigure": false,
+    "source": "第33回 はり師・きゅう師国家試験",
+    "sourceUrl": "https://ahaki.or.jp/wordpress/wp-content/uploads/mondai_33_harikyu_pm.pdf",
+    "sourceOrg": "公益財団法人 東洋療法研修試験財団",
+    "sourceReliability": "indexed_official",
+    "verifiedAt": "2026-09-13"
+  },
+  {
+    "id": "33-168",
+    "examRound": 33,
+    "questionNumber": 168,
+    "questionText": "青斑核からのニューロンが放出する物質で、脊髄後角において侵害受容情報を阻害するのはどれか。",
+    "choices": [
+      "グルタミン酸",
+      "ノルアドレナリン",
+      "エンケファリン",
+      "βエンドルフィン"
+    ],
+    "answerIndex": 1,
+    "explanation": "青斑核から脊髄後角へ投射するノルアドレナリン作動性ニューロンは、下行性疼痛抑制系の一部として侵害受容情報の伝達を抑制する。",
+    "hasFigure": false,
+    "source": "第33回 はり師・きゅう師国家試験",
+    "sourceUrl": "https://ahaki.or.jp/wordpress/wp-content/uploads/mondai_33_harikyu_pm.pdf",
+    "sourceOrg": "公益財団法人 東洋療法研修試験財団",
+    "sourceReliability": "indexed_official",
+    "verifiedAt": "2026-09-13"
+  },
+  {
+    "id": "33-169",
+    "examRound": 33,
+    "questionNumber": 169,
+    "questionText": "下行性抑制系について最も適切なのはどれか。",
+    "choices": [
+      "侵害受容ニューロンの興奮により賦活する。",
+      "中脳水道周囲灰白質のGABA作動性ニューロンの興奮により賦活する。",
+      "脊髄前側索を下行する。",
+      "ヒスタミンが関与する。"
+    ],
+    "answerIndex": 0,
+    "explanation": "下行性疼痛抑制系は、末梢からの侵害受容ニューロンの興奮そのものが引き金となり賦活される（痛みの情報が中脳水道周囲灰白質などを経て自らを抑制する系を作動させる）。",
+    "hasFigure": false,
+    "source": "第33回 はり師・きゅう師国家試験",
+    "sourceUrl": "https://ahaki.or.jp/wordpress/wp-content/uploads/mondai_33_harikyu_pm.pdf",
+    "sourceOrg": "公益財団法人 東洋療法研修試験財団",
+    "sourceReliability": "indexed_official",
+    "verifiedAt": "2026-09-13"
+  },
+  {
+    "id": "33-170",
+    "examRound": 33,
+    "questionNumber": 170,
+    "questionText": "刺鍼により痛みの悪循環を最も改善させるのはどれか。",
+    "choices": [
+      "α運動ニューロンの興奮",
+      "NOによる血管拡張",
+      "プロスタグランジンの産生促進",
+      "交感神経の興奮"
+    ],
+    "answerIndex": 1,
+    "explanation": "刺鍼刺激による一酸化窒素（NO）を介した血管拡張は局所循環を改善し、発痛物質の蓄積を軽減することで痛みの悪循環を改善させる。",
+    "hasFigure": false,
+    "source": "第33回 はり師・きゅう師国家試験",
+    "sourceUrl": "https://ahaki.or.jp/wordpress/wp-content/uploads/mondai_33_harikyu_pm.pdf",
+    "sourceOrg": "公益財団法人 東洋療法研修試験財団",
+    "sourceReliability": "indexed_official",
+    "verifiedAt": "2026-09-13"
+  },
+  {
+    "id": "33-171",
+    "examRound": 33,
+    "questionNumber": 171,
+    "questionText": "透熱灸に用いる艾について正しいのはどれか。",
+    "choices": [
+      "夾雑物が多い。",
+      "灰分が多い。",
+      "精油成分が多い。",
+      "黒褐色である。"
+    ],
+    "answerIndex": 2,
+    "explanation": "良質な艾は夾雑物や灰分が少なく精油成分に富み、色調も淡い。夾雑物・灰分が多いことや黒褐色であることは低品質な艾の特徴である。",
+    "hasFigure": false,
+    "source": "第33回 はり師・きゅう師国家試験",
+    "sourceUrl": "https://ahaki.or.jp/wordpress/wp-content/uploads/mondai_33_harikyu_pm.pdf",
+    "sourceOrg": "公益財団法人 東洋療法研修試験財団",
+    "sourceReliability": "indexed_official",
+    "verifiedAt": "2026-09-13",
+    "note": "きゅう理論試験問題（問題171〜180）。公式表紙により、きゅう師国家試験を受験する者が解答する区分（はり師のみを受験する者はこの区分を除く）。"
+  },
+  {
+    "id": "33-172",
+    "examRound": 33,
+    "questionNumber": 172,
+    "questionText": "艾を使用しないのはどれか。",
+    "choices": [
+      "ビワの葉灸",
+      "ショウガ灸",
+      "押灸",
+      "紅灸"
+    ],
+    "answerIndex": 3,
+    "explanation": "紅灸は艾を燃焼させず加熱した器具などを用いる灸法であり、艾を使用しない。ビワの葉灸・ショウガ灸・押灸はいずれも艾を燃焼させて行う。",
+    "hasFigure": false,
+    "source": "第33回 はり師・きゅう師国家試験",
+    "sourceUrl": "https://ahaki.or.jp/wordpress/wp-content/uploads/mondai_33_harikyu_pm.pdf",
+    "sourceOrg": "公益財団法人 東洋療法研修試験財団",
+    "sourceReliability": "indexed_official",
+    "verifiedAt": "2026-09-13"
+  },
+  {
+    "id": "33-173",
+    "examRound": 33,
+    "questionNumber": 173,
+    "questionText": "透熱灸を行う上で最も注意が必要なのはどれか。",
+    "choices": [
+      "低血圧症",
+      "骨粗鬆症",
+      "糖尿病",
+      "月経困難症"
+    ],
+    "answerIndex": 2,
+    "explanation": "糖尿病患者は末梢神経障害による知覚低下や創傷治癒遅延、易感染性を伴うことが多く、透熱灸による熱傷・潰瘍化のリスクが高いため特に注意を要する。",
+    "hasFigure": false,
+    "source": "第33回 はり師・きゅう師国家試験",
+    "sourceUrl": "https://ahaki.or.jp/wordpress/wp-content/uploads/mondai_33_harikyu_pm.pdf",
+    "sourceOrg": "公益財団法人 東洋療法研修試験財団",
+    "sourceReliability": "indexed_official",
+    "verifiedAt": "2026-09-13"
+  },
+  {
+    "id": "33-174",
+    "examRound": 33,
+    "questionNumber": 174,
+    "questionText": "透熱灸を最も避けるべき経穴はどれか。",
+    "choices": [
+      "陽白",
+      "陽谷",
+      "陽池",
+      "陽交"
+    ],
+    "answerIndex": 0,
+    "explanation": "陽白は前頭部の皮膚が薄く骨に近接する部位にあり、瘢痕を残す透熱灸は美容上・機能上の観点から避けるべきとされる。",
+    "hasFigure": false,
+    "source": "第33回 はり師・きゅう師国家試験",
+    "sourceUrl": "https://ahaki.or.jp/wordpress/wp-content/uploads/mondai_33_harikyu_pm.pdf",
+    "sourceOrg": "公益財団法人 東洋療法研修試験財団",
+    "sourceReliability": "indexed_official",
+    "verifiedAt": "2026-09-13"
+  },
+  {
+    "id": "33-175",
+    "examRound": 33,
+    "questionNumber": 175,
+    "questionText": "有痕灸施術部の消毒で最も適切なのはどれか。",
+    "choices": [
+      "清拭圧は強めで行う。",
+      "施灸前後に行う。",
+      "施灸部を往復するように拭く。",
+      "次亜塩素酸ナトリウムを用いる。"
+    ],
+    "answerIndex": 1,
+    "explanation": "有痕灸施術部の消毒は施灸前後に行うのが基本である。清拭は強すぎない圧で施灸部を一方向に拭くのが望ましく、次亜塩素酸ナトリウムは皮膚消毒には用いない。",
+    "hasFigure": false,
+    "source": "第33回 はり師・きゅう師国家試験",
+    "sourceUrl": "https://ahaki.or.jp/wordpress/wp-content/uploads/mondai_33_harikyu_pm.pdf",
+    "sourceOrg": "公益財団法人 東洋療法研修試験財団",
+    "sourceReliability": "indexed_official",
+    "verifiedAt": "2026-09-13"
+  },
+  {
+    "id": "33-176",
+    "examRound": 33,
+    "questionNumber": 176,
+    "questionText": "熱刺激情報の伝導路はどれか。",
+    "choices": [
+      "外側皮質脊髄路",
+      "外側脊髄視床路",
+      "腹側脊髄視床路",
+      "外側網様体脊髄路"
+    ],
+    "answerIndex": 1,
+    "explanation": "温度覚・痛覚の情報は外側脊髄視床路を上行して伝導される。外側皮質脊髄路は運動性の下行路であり、感覚伝導路ではない。",
+    "hasFigure": false,
+    "source": "第33回 はり師・きゅう師国家試験",
+    "sourceUrl": "https://ahaki.or.jp/wordpress/wp-content/uploads/mondai_33_harikyu_pm.pdf",
+    "sourceOrg": "公益財団法人 東洋療法研修試験財団",
+    "sourceReliability": "indexed_official",
+    "verifiedAt": "2026-09-13"
+  },
+  {
+    "id": "33-177",
+    "examRound": 33,
+    "questionNumber": 177,
+    "questionText": "施灸局所に起こる軸索反射について適切なのはどれか。",
+    "choices": [
+      "血漿が漏出する。",
+      "ノルアドレナリンが関与する。",
+      "Aβ線維の興奮によって生じる。",
+      "特異的侵害受容ニューロンが関与する。"
+    ],
+    "answerIndex": 0,
+    "explanation": "軸索反射ではC線維の逆行性興奮によりサブスタンスPなどが末梢終末から遊離され、血管透過性の亢進により血漿成分が漏出する神経原性炎症を来す。",
+    "hasFigure": false,
+    "source": "第33回 はり師・きゅう師国家試験",
+    "sourceUrl": "https://ahaki.or.jp/wordpress/wp-content/uploads/mondai_33_harikyu_pm.pdf",
+    "sourceOrg": "公益財団法人 東洋療法研修試験財団",
+    "sourceReliability": "indexed_official",
+    "verifiedAt": "2026-09-13"
+  },
+  {
+    "id": "33-178",
+    "examRound": 33,
+    "questionNumber": 178,
+    "questionText": "透熱灸による炎症反応で、アナフィラトキシンとして作用するのはどれか。",
+    "choices": [
+      "IgE",
+      "補体",
+      "コルチゾール",
+      "ヒスタミン"
+    ],
+    "answerIndex": 1,
+    "explanation": "補体系の活性化により生じるC3a・C5aはアナフィラトキシンとして肥満細胞からのヒスタミン遊離などを促し、炎症反応に関与する。",
+    "hasFigure": false,
+    "source": "第33回 はり師・きゅう師国家試験",
+    "sourceUrl": "https://ahaki.or.jp/wordpress/wp-content/uploads/mondai_33_harikyu_pm.pdf",
+    "sourceOrg": "公益財団法人 東洋療法研修試験財団",
+    "sourceReliability": "indexed_official",
+    "verifiedAt": "2026-09-13"
+  },
+  {
+    "id": "33-179",
+    "examRound": 33,
+    "questionNumber": 179,
+    "questionText": "透熱灸による反応で最も早期に起こるのはどれか。",
+    "choices": [
+      "ポリモーダル受容器の興奮",
+      "白血球の浸潤",
+      "温熱感覚の認知",
+      "施灸局所の血管拡張"
+    ],
+    "answerIndex": 0,
+    "explanation": "透熱灸による組織損傷では、まずポリモーダル受容器が興奮して温熱・侵害刺激を受容し、その後に血管拡張や白血球浸潤といった炎症反応が続く。",
+    "hasFigure": false,
+    "source": "第33回 はり師・きゅう師国家試験",
+    "sourceUrl": "https://ahaki.or.jp/wordpress/wp-content/uploads/mondai_33_harikyu_pm.pdf",
+    "sourceOrg": "公益財団法人 東洋療法研修試験財団",
+    "sourceReliability": "indexed_official",
+    "verifiedAt": "2026-09-13"
+  },
+  {
+    "id": "33-180",
+    "examRound": 33,
+    "questionNumber": 180,
+    "questionText": "透熱灸により組織損傷部から放出される物質で、末梢性の痛覚過敏に関与するのはどれか。",
+    "choices": [
+      "NO",
+      "アドレナリン",
+      "アセチルコリン",
+      "セロトニン"
+    ],
+    "answerIndex": 3,
+    "explanation": "組織損傷部位では血小板などから遊離されるセロトニンが発痛増強物質として働き、末梢性の痛覚過敏に関与する。",
+    "hasFigure": false,
+    "source": "第33回 はり師・きゅう師国家試験",
+    "sourceUrl": "https://ahaki.or.jp/wordpress/wp-content/uploads/mondai_33_harikyu_pm.pdf",
+    "sourceOrg": "公益財団法人 東洋療法研修試験財団",
+    "sourceReliability": "indexed_official",
+    "verifiedAt": "2026-09-13"
   }
 ]
