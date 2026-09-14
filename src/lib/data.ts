@@ -1511,7 +1511,7 @@ export const themes: Theme[] = [
     normalizedTheme: 'あはき法：施術所',
     aliases: ['6.6㎡', '待合室3.3㎡', '外気開放'],
     relatedThemes: ['rg-menkyo', 'rg-kokoku'],
-    studyPoint: '施術所開設は所在地の都道府県知事に開設後10日以内に届出（専ら出張のみは住所地の知事に届出）。構造設備基準：施術室6.6㎡以上・待合室3.3㎡以上・施術室の外気開放部分は床面積の1/8以上・採光／照明／換気を十分に・消毒設備。',
+    studyPoint: '施術所開設は所在地の都道府県知事に開設後10日以内に届出（専ら出張のみは住所地の知事に届出）。構造設備基準：施術室6.6㎡以上・待合室3.3㎡以上・施術室の外気開放部分は床面積の1/7以上・採光／照明／換気を十分に・消毒設備。',
     blueprintVersion: '2020',
     questionCountMode: '180',
     sourceReliability: 'indexed_official',
