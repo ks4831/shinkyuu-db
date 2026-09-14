@@ -91,14 +91,14 @@ id,examRound,year,questionNumber,session,subject,officialLarge,officialMedium,of
 32-090,32,2024,90,共通,clinical-specific,専門基礎科目,臨床医学各論,気胸（症例）,pulmonology,緊張性気胸の対応,,気胸で血圧低下・息切れ増悪＝緊張性気胸。緊急胸腔ドレナージが必要。経過観察・鎮痛・輸液では対応不可,,indexed_official,2020,180,,cs-kokyuki
 32-091,32,2024,91,共通,oriental-overview,専門科目,東洋医学概論,未病の概念,tcm-fundamentals,未病と健康・疾病の連続性,,健康と疾病は連続している（未病の概念）。人体と自然の相応は天人相応。心身一体は整体観,,indexed_official,2020,180,,zo-sho
 32-092,32,2024,92,共通,oriental-overview,専門科目,東洋医学概論,神の機能,tcm-fundamentals,狭義の神の働き,,狭義の神の働き：思惟活動・精神活動・外界刺激への情動反応の維持。生命活動の主宰は広義の神,,indexed_official,2020,180,,ki-ketsu-shin-eki
-32-093,32,2024,93,共通,oriental-overview,専門科目,東洋医学概論,八綱弁証・虚実,tcm-diagnosis,本虚標実証の分類,,本虚標実証：根本は虚（正気虚）で標（症状）は実。肝鬱気滞・肝陽上亢・心肝火旺は実証。肝火犯肺は実の伝変,,indexed_official,2020,180,,oo-shinsatsu-bensho
+32-093,32,2024,93,共通,oriental-overview,専門科目,東洋医学概論,八綱弁証・虚実,tcm-diagnosis,本虚標実証の分類,,本虚標実証は根本（本）が虚証、表れる症状（標）が実証の状態。肝陽上亢は腎陰虚などの陰虚が肝陽を制御しきれず亢進する代表的な本虚標実証。肝鬱気滞・肝火犯肺・心肝火旺は本虚を伴わない実証,,indexed_official,2020,180,,oo-shinsatsu-bensho
 32-094,32,2024,94,共通,oriental-overview,専門科目,東洋医学概論,奇恒の腑と奇経,tcm-fundamentals,奇恒の腑の機能と奇経の関係,,衝脈・任脈・督脈すべてと密接な奇恒の腑＝女子胞（月経を主る）。骨・脈・胆は別の奇恒の腑,,indexed_official,2020,180,,zo-sho
 32-095,32,2024,95,共通,oriental-overview,専門科目,東洋医学概論,経絡系統,tcm-fundamentals,経別・奇経・絡脈の概要,,経別は正経の別行。奇経は表裏関係をもたない。浮絡は皮膚表面の細絡。絡脈が集まったものは孫絡でなく全体系,,indexed_official,2020,180,,oo-keiraku-keimyaku
 32-096,32,2024,96,共通,oriental-overview,専門科目,東洋医学概論,望診の代替部位,tcm-diagnosis,望診で顔色判断困難時の代替部位,,顔の望診が困難な場合の代替：前腕前面部（顔色に近い皮膚色）。腹部・背部・下腿後面は使わない,,indexed_official,2020,180,,oo-shinsatsu-bensho
 32-097,32,2024,97,共通,oriental-overview,専門科目,東洋医学概論,経筋の特性,tcm-fundamentals,陰器に集まる経筋,,陰器（生殖器）に集まる経筋は足の三陰経筋。手の三陰・三陽経筋と足の三陽経筋は陰器に集まらない,,indexed_official,2020,180,,oo-keiraku-keimyaku
 32-098,32,2024,98,共通,oriental-overview,専門科目,東洋医学概論,六淫と症状,tcm-fundamentals,長夏の病邪による症状,,長夏の主気は湿邪。湿邪の症状：下肢の浮腫・身重・下痢。けいれんは風邪。大量発汗・激しい口渇は暑邪,,indexed_official,2020,180,,roku-in
 32-099,32,2024,99,共通,oriental-overview,専門科目,東洋医学概論,三毒説,tcm-fundamentals,三毒説と病因論,,三毒説：外毒（外邪）・内毒（内傷）・不内外毒（外傷など）。疫癘は外邪に含まれる。心労は内傷。打撲は不内外因,,indexed_official,2020,180,,shichi-jo
-32-100,32,2024,100,共通,oriental-overview,専門科目,東洋医学概論,五行色体・相剋,tcm-fundamentals,五行色体の相剋関係,,五行相剋：木剋土・火剋金・土剋水・金剋木・水剋火。石（水行）と色（火行の華）は相剋関係にある,,indexed_official,2020,180,,go-gyo-ron
+32-100,32,2024,100,共通,oriental-overview,専門科目,東洋医学概論,五行色体・相剋,tcm-fundamentals,五行色体の相剋関係,,五行相剋は木剋土・土剋水・水剋火・火剋金・金剋木。選択肢①「噫」は心（火）の五病、「羽」は腎（水）の五音で水剋火の相剋関係となり正答。「収」（肺・金の五能）と「肌肉」（脾・土の五体）は土生金、「麦」（肝・木の五穀）と「羊」（心・火の五畜）は木生火でいずれも相生関係,,indexed_official,2020,180,,go-gyo-ron
 32-101,32,2024,101,共通,oriental-overview,専門科目,東洋医学概論,経脈病証（症例）,tcm-diagnosis,手の太陽小腸経の病証,,肩上部から上肢後面の痛み・耳後ろ・目尻の痛み・汗をかきやすい＝手の太陽小腸経の病証,,indexed_official,2020,180,,oo-shinsatsu-bensho
 32-102,32,2024,102,共通,oriental-overview,専門科目,東洋医学概論,三陰三陽病証,tcm-diagnosis,少陰病の特徴,,全身冷え・悪寒・下痢・嗜眠・身体衰弱＝少陰病（心腎の陽気虚衰）。太陰病は消化器主体。厥陰病は厥逆,,indexed_official,2020,180,,oo-shinsatsu-bensho
 32-103,32,2024,103,共通,oriental-overview,専門科目,東洋医学概論,便秘の弁証,tcm-clinical,気秘の病態,,肝気鬱結（ストレス・仕事辞め・夜型生活）→気の疏泄障害→腸の気機不通→気秘。噯気・腹満が伴う,,indexed_official,2020,180,,oo-shinsatsu-bensho
