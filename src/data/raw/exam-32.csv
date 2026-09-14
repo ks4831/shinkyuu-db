@@ -9,9 +9,9 @@ id,examRound,year,questionNumber,session,subject,officialLarge,officialMedium,of
 32-008,32,2024,8,共通,hygiene,専門基礎科目,衛生学・公衆衛生学,飲酒・生活習慣病,health-policy,飲酒リスク量,,男性の生活習慣病リスクを高める純アルコール量は40g/日以上（女性は20g/日以上）,,indexed_official,2020,180,,seikatsu-shukan-byo
 32-009,32,2024,9,共通,hygiene,専門基礎科目,衛生学・公衆衛生学,疫学指標,epidemiology,寄与危険度,,寄与危険度＝曝露群の罹患率−非曝露群の罹患率（差）。相対危険度は比。オッズ比はケースコントロール研究,,indexed_official,2020,180,,hy-ekigaku
 32-010,32,2024,10,共通,hygiene,専門基礎科目,衛生学・公衆衛生学,国際保健・SDGs,health-policy,SDGs17のゴール,,SDGsにはジェンダー平等・貧困撲滅・気候変動対策等が含まれる。再生医療促進・救急充実は含まれない,,indexed_official,2020,180,,hy-chiiki-kokusai
-32-011,32,2024,11,共通,regulations,専門基礎科目,関係法規,施術所の構造設備基準,hari-kyu-law,外気開放・面積基準,,施術室外気開放は面積の1/8以上（9分の1は誤り）。施術室6.6㎡以上・待合室3.3㎡以上,,indexed_official,2020,180,,rg-seijutsujo
+32-011,32,2024,11,共通,regulations,専門基礎科目,関係法規,施術所の構造設備基準,hari-kyu-law,外気開放・面積基準,,施術室外気開放の基準は室面積の7分の1以上（選択肢①の「8分の1」は基準と異なり誤り＝正答）。施術室6.6㎡以上・待合室3.3㎡以上の基準も満たす,,indexed_official,2020,180,,rg-seijutsujo
 32-012,32,2024,12,共通,regulations,専門基礎科目,関係法規,施術所の広告規制,hari-kyu-law,広告できる施術方法,,広告できる施術方法：小児鍼・指圧等の法定記載事項。美容鍼・中国鍼・電気鍼の名称での広告は不可,,indexed_official,2020,180,,rg-kokoku
-32-013,32,2024,13,共通,regulations,専門基礎科目,関係法規,申請・届出の期限,hari-kyu-law,免許証返納期限,,免許取消・業務停止時の免許証返納は5日以内。氏名変更再交付申請は30日以内。業務開始届出は10日以内,,indexed_official,2020,180,,rg-menkyo
+32-013,32,2024,13,共通,regulations,専門基礎科目,関係法規,申請・届出の期限,hari-kyu-law,免許証返納期限,,免許取消・業務停止時の免許証返納は5日以内（正答④）。氏名変更は名簿訂正の申請に該当し期限30日以内（免許証の書換え交付・再交付に期限規定はなく、選択肢②の「再交付・10日以内」は誤り）。出張のみの業務開始届は10日以内,,indexed_official,2020,180,,rg-menkyo
 32-014,32,2024,14,共通,regulations,専門基礎科目,関係法規,施術所の法的規制,hari-kyu-law,施術所の名称と医療法,,施術所に「病院」「クリニック」等の名称を使用すると医療法違反。医療法が施術所の名称規制に適用される,,indexed_official,2020,180,,rg-seijutsujo
 32-015,32,2024,15,共通,anatomy,専門基礎科目,解剖学,脊柱の靭帯,musculoskeletal-system,脊髄と靭帯の位置関係,,脊髄背側に最も近いのは黄色靱帯。後縦靱帯は椎体後面（脊髄前方）。棘上・棘間靱帯は後方だが黄色靱帯より遠い,,indexed_official,2020,180,,an-undoki
 32-016,32,2024,16,共通,anatomy,専門基礎科目,解剖学,骨盤の解剖,musculoskeletal-system,骨盤分界線の構成,,骨盤分界線＝岬角・弓状線・恥骨稜・恥骨結合上縁。坐骨棘・坐骨結節・上前腸骨棘は分界線を構成しない,,indexed_official,2020,180,,an-undoki
