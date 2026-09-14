@@ -2998,5 +2998,605 @@
     "sourceOrg": "公益財団法人 東洋療法研修試験財団",
     "sourceReliability": "indexed_official",
     "verifiedAt": "2026-09-14"
+  },
+  {
+    "id": "32-151",
+    "examRound": 32,
+    "questionNumber": 151,
+    "questionText": "次の文で示す症例について、問題151、問題152の問いに答えよ。「50歳の男性。主訴は食欲不振。急な腹痛や嘔気があり、病院で胃の出血性びらんを指摘され、飲酒を控えるように言われた。口が苦く、舌質は紅、舌苔は厚膩、脈は滑数を認める。」\n\n腹痛が最も認められる部位はどれか。",
+    "choices": [
+      "心窩部",
+      "臍部",
+      "側腹部",
+      "下腹部"
+    ],
+    "answerIndex": 0,
+    "explanation": "口苦・舌紅・苔厚膩・脈滑数はいずれも湿熱証の所見であり、湿熱は中焦（胃）に停滞しやすいため、腹痛は心窩部（みぞおち）に最も現れやすい。",
+    "hasFigure": false,
+    "source": "第32回 はり師・きゅう師国家試験",
+    "sourceUrl": "https://ahaki.or.jp/wordpress/wp-content/uploads/mondai_32_harikyu_pm.pdf",
+    "sourceOrg": "公益財団法人 東洋療法研修試験財団",
+    "sourceReliability": "indexed_official",
+    "verifiedAt": "2026-09-14"
+  },
+  {
+    "id": "32-152",
+    "examRound": 32,
+    "questionNumber": 152,
+    "questionText": "次の文で示す症例について、問題151、問題152の問いに答えよ。「50歳の男性。主訴は食欲不振。急な腹痛や嘔気があり、病院で胃の出血性びらんを指摘され、飲酒を控えるように言われた。口が苦く、舌質は紅、舌苔は厚膩、脈は滑数を認める。」\n\n治療方針として最も適切なのはどれか。",
+    "choices": [
+      "肝気を通す。",
+      "湿熱を除く。",
+      "脾気を補う。",
+      "胃陰を補う。"
+    ],
+    "answerIndex": 1,
+    "explanation": "胃の出血性びらん・口苦・舌紅苔厚膩・脈滑数はいずれも湿熱証を示す所見であり、治療方針は清利湿熱（湿熱を除く）が最も適切である。肝気を通す・脾気を補う・胃陰を補うは、実熱証である湿熱証には適合しない。",
+    "hasFigure": false,
+    "source": "第32回 はり師・きゅう師国家試験",
+    "sourceUrl": "https://ahaki.or.jp/wordpress/wp-content/uploads/mondai_32_harikyu_pm.pdf",
+    "sourceOrg": "公益財団法人 東洋療法研修試験財団",
+    "sourceReliability": "indexed_official",
+    "verifiedAt": "2026-09-14"
+  },
+  {
+    "id": "32-153",
+    "examRound": 32,
+    "questionNumber": 153,
+    "questionText": "次の文で示す症例について、問題153、問題154の問いに答えよ。「45歳の女性。職業は美容師。主訴は右上肢全体の持続的なだるさ。腱反射は正常。ライトテストは陽性。ジャクソンテスト、アドソンテストはともに陰性。」\n\n病態について最も適切なのはどれか。",
+    "choices": [
+      "血流障害はない。",
+      "握力低下はない。",
+      "髪をカットする姿勢で症状誘発。",
+      "空を見上げると症状誘発。"
+    ],
+    "answerIndex": 2,
+    "explanation": "ライトテスト陽性は上肢を挙上・外旋させた際の血管神経束（腋窩動脈・腕神経叢）の圧迫を示す所見であり、髪をカットする際の上肢挙上姿勢で症状が誘発される胸郭出口症候群（過外転症候群）を示唆する。ジャクソンテスト・アドソンテスト陰性は頸部由来の関与が乏しいことを示す。",
+    "hasFigure": false,
+    "source": "第32回 はり師・きゅう師国家試験",
+    "sourceUrl": "https://ahaki.or.jp/wordpress/wp-content/uploads/mondai_32_harikyu_pm.pdf",
+    "sourceOrg": "公益財団法人 東洋療法研修試験財団",
+    "sourceReliability": "indexed_official",
+    "verifiedAt": "2026-09-14"
+  },
+  {
+    "id": "32-154",
+    "examRound": 32,
+    "questionNumber": 154,
+    "questionText": "次の文で示す症例について、問題153、問題154の問いに答えよ。「45歳の女性。職業は美容師。主訴は右上肢全体の持続的なだるさ。腱反射は正常。ライトテストは陽性。ジャクソンテスト、アドソンテストはともに陰性。」\n\n罹患筋への局所治療を行う場合、適切な経穴はどれか。",
+    "choices": [
+      "中府",
+      "肩外兪",
+      "巨骨",
+      "扶突"
+    ],
+    "answerIndex": 0,
+    "explanation": "ライトテスト陽性（過外転症候群）は主に小胸筋による血管神経束の圧迫であり、小胸筋は大胸筋の深層を鎖骨下から烏口突起へ走る。局所治療穴には大胸筋・小胸筋の間に位置する中府（肺経）が適切である。",
+    "hasFigure": false,
+    "source": "第32回 はり師・きゅう師国家試験",
+    "sourceUrl": "https://ahaki.or.jp/wordpress/wp-content/uploads/mondai_32_harikyu_pm.pdf",
+    "sourceOrg": "公益財団法人 東洋療法研修試験財団",
+    "sourceReliability": "indexed_official",
+    "verifiedAt": "2026-09-14"
+  },
+  {
+    "id": "32-155",
+    "examRound": 32,
+    "questionNumber": 155,
+    "questionText": "次の文で示す症例について、問題155、問題156の問いに答えよ。「34歳の女性。不妊症で来院。月経量は少なく、経遅がある。少し動いただけで短気が生じ、四肢厥冷もある。最近は腰膝酸軟を伴う。舌は淡で胖大、脈は沈遅を認める。」\n\n本病証に最も随伴しやすいのはどれか。",
+    "choices": [
+      "五更泄瀉",
+      "消穀善飢",
+      "項背強",
+      "目渋"
+    ],
+    "answerIndex": 0,
+    "explanation": "月経量少・経遅・四肢厥冷・腰膝酸軟・舌淡胖大・脈沈遅はいずれも腎陽虚証の所見である。腎陽虚では命門の火が衰えて脾陽も温められず、夜明け前に下痢をする五更泄瀉を随伴しやすい。",
+    "hasFigure": false,
+    "source": "第32回 はり師・きゅう師国家試験",
+    "sourceUrl": "https://ahaki.or.jp/wordpress/wp-content/uploads/mondai_32_harikyu_pm.pdf",
+    "sourceOrg": "公益財団法人 東洋療法研修試験財団",
+    "sourceReliability": "indexed_official",
+    "verifiedAt": "2026-09-14"
+  },
+  {
+    "id": "32-156",
+    "examRound": 32,
+    "questionNumber": 156,
+    "questionText": "次の文で示す症例について、問題155、問題156の問いに答えよ。「34歳の女性。不妊症で来院。月経量は少なく、経遅がある。少し動いただけで短気が生じ、四肢厥冷もある。最近は腰膝酸軟を伴う。舌は淡で胖大、脈は沈遅を認める。」\n\n本病証の治療穴として最も適切な背部兪穴の高さはどれか。",
+    "choices": [
+      "第3胸椎棘突起下縁",
+      "第9胸椎棘突起下縁",
+      "第12胸椎棘突起下縁",
+      "第2腰椎棘突起下縁"
+    ],
+    "answerIndex": 3,
+    "explanation": "本症例は腎陽虚証であり、腎の背部兪穴である腎兪を用いる。腎兪は第2腰椎棘突起下縁、命門と同じ高さの外方1.5寸に位置する。",
+    "hasFigure": false,
+    "source": "第32回 はり師・きゅう師国家試験",
+    "sourceUrl": "https://ahaki.or.jp/wordpress/wp-content/uploads/mondai_32_harikyu_pm.pdf",
+    "sourceOrg": "公益財団法人 東洋療法研修試験財団",
+    "sourceReliability": "indexed_official",
+    "verifiedAt": "2026-09-14"
+  },
+  {
+    "id": "32-157",
+    "examRound": 32,
+    "questionNumber": 157,
+    "questionText": "次の文で示す症例について、問題157、問題158の問いに答えよ。「52歳の男性。3週間前に風邪を引き、現在も咳と軽度な息切れが残っている。近医で喘息と言われ気管支拡張剤を処方された。」\n\n気管支拡張剤が作用する受容体はどれか。",
+    "choices": [
+      "ニコチン受容体",
+      "ムスカリン受容体",
+      "α受容体",
+      "β受容体"
+    ],
+    "answerIndexes": [1, 3],
+    "explanation": "気管支拡張剤には、気管支平滑筋のβ受容体（β2受容体）を刺激して弛緩させるβ2刺激薬と、ムスカリン受容体を遮断して気管支収縮を抑える抗コリン薬の2系統がある。そのため公式解答ではムスカリン受容体・β受容体のいずれを選んでも正答として扱われる。",
+    "hasFigure": false,
+    "source": "第32回 はり師・きゅう師国家試験",
+    "sourceUrl": "https://ahaki.or.jp/wordpress/wp-content/uploads/mondai_32_harikyu_pm.pdf",
+    "sourceOrg": "公益財団法人 東洋療法研修試験財団",
+    "sourceReliability": "indexed_official",
+    "verifiedAt": "2026-09-14"
+  },
+  {
+    "id": "32-158",
+    "examRound": 32,
+    "questionNumber": 158,
+    "questionText": "次の文で示す症例について、問題157、問題158の問いに答えよ。「52歳の男性。3週間前に風邪を引き、現在も咳と軽度な息切れが残っている。近医で喘息と言われ気管支拡張剤を処方された。」\n\n本症例に対して奇穴を取穴する際、仮点を求めるために委中を用いるのはどれか。",
+    "choices": [
+      "四華",
+      "患門",
+      "定喘",
+      "夾脊"
+    ],
+    "answerIndex": 1,
+    "explanation": "患門の取穴では、患者自身の足底の長さ（足先から委中に至る長さ）で紐を測り、その長さを用いて背部正中線上に仮点を定めたのち、左右の穴位置を決定する。四華は結喉と口角間の距離を用いる別の取穴法で求める奇穴であり、委中は用いない。",
+    "hasFigure": false,
+    "source": "第32回 はり師・きゅう師国家試験",
+    "sourceUrl": "https://ahaki.or.jp/wordpress/wp-content/uploads/mondai_32_harikyu_pm.pdf",
+    "sourceOrg": "公益財団法人 東洋療法研修試験財団",
+    "sourceReliability": "indexed_official",
+    "verifiedAt": "2026-09-14"
+  },
+  {
+    "id": "32-159",
+    "examRound": 32,
+    "questionNumber": 159,
+    "questionText": "次の文で示す症例について、問題159、問題160の問いに答えよ。「69歳の男性。主訴は両側の耳鳴り。3か月前から高音域の聴力低下を自覚。相手の言葉が聞き取りにくい。めまい、耳閉塞感、耳漏はない。」\n\n難聴の程度を評価する検査はどれか。",
+    "choices": [
+      "リンネ検査",
+      "オージオメトリー",
+      "グリセロール検査",
+      "カロリックテスト"
+    ],
+    "answerIndex": 1,
+    "explanation": "難聴の程度（聴力レベル）を定量的に評価するのはオージオメトリー（純音聴力検査）である。リンネ検査は伝音性・感音性の鑑別、グリセロール検査はメニエール病の診断、カロリックテストは前庭機能検査に用いる。",
+    "hasFigure": false,
+    "source": "第32回 はり師・きゅう師国家試験",
+    "sourceUrl": "https://ahaki.or.jp/wordpress/wp-content/uploads/mondai_32_harikyu_pm.pdf",
+    "sourceOrg": "公益財団法人 東洋療法研修試験財団",
+    "sourceReliability": "indexed_official",
+    "verifiedAt": "2026-09-14"
+  },
+  {
+    "id": "32-160",
+    "examRound": 32,
+    "questionNumber": 160,
+    "questionText": "次の文で示す症例について、問題159、問題160の問いに答えよ。「69歳の男性。主訴は両側の耳鳴り。3か月前から高音域の聴力低下を自覚。相手の言葉が聞き取りにくい。めまい、耳閉塞感、耳漏はない。」\n\n原因疾患として最も適切なのはどれか。",
+    "choices": [
+      "加齢性難聴",
+      "慢性中耳炎",
+      "突発性難聴",
+      "耳管狭窄症"
+    ],
+    "answerIndex": 0,
+    "explanation": "高齢者に生じた両側性・緩徐進行性の高音域感音難聴で、めまいや耳漏を伴わない所見は加齢性難聴（老人性難聴）に典型的である。突発性難聴は通常一側性・急性発症であり、本例には合致しない。",
+    "hasFigure": false,
+    "source": "第32回 はり師・きゅう師国家試験",
+    "sourceUrl": "https://ahaki.or.jp/wordpress/wp-content/uploads/mondai_32_harikyu_pm.pdf",
+    "sourceOrg": "公益財団法人 東洋療法研修試験財団",
+    "sourceReliability": "indexed_official",
+    "verifiedAt": "2026-09-14"
+  },
+  {
+    "id": "32-161",
+    "examRound": 32,
+    "questionNumber": 161,
+    "questionText": "滅菌済単回使用毫鍼の医療機器クラス分類はどれか。",
+    "choices": [
+      "クラスⅠ（一般医療機器）",
+      "クラスⅡ（管理医療機器）",
+      "クラスⅢ（高度管理医療機器）",
+      "クラスⅣ（高度管理医療機器）"
+    ],
+    "answerIndex": 1,
+    "explanation": "滅菌済み単回使用（ディスポーザブル）の毫鍼は、医薬品医療機器等法上クラスⅡ（管理医療機器）に分類される。クラスⅢ・Ⅳ（高度管理医療機器）は生命へのリスクがより高い医療機器（ペースメーカー等）が該当する区分であり、毫鍼はこれに含まれない。",
+    "hasFigure": false,
+    "source": "第32回 はり師・きゅう師国家試験",
+    "sourceUrl": "https://ahaki.or.jp/wordpress/wp-content/uploads/mondai_32_harikyu_pm.pdf",
+    "sourceOrg": "公益財団法人 東洋療法研修試験財団",
+    "sourceReliability": "indexed_official",
+    "verifiedAt": "2026-09-14"
+  },
+  {
+    "id": "32-162",
+    "examRound": 32,
+    "questionNumber": 162,
+    "questionText": "押手について最も適切なのはどれか。",
+    "choices": [
+      "刺鍼部位の皮膚や筋肉を和らげる。",
+      "左右圧に相当するのは固定圧である。",
+      "患者の急な体動を察知し、動揺を防ぐ。",
+      "刺鍼抵抗を察知する。"
+    ],
+    "answerIndex": 2,
+    "explanation": "押手は刺鍼部位を軽く圧迫・固定することで、患者の急な体動を察知し鍼の事故（曲がり・折鍼・深刺しすぎ等）を防ぐ安全確保の役割を担う。皮膚や筋肉を和らげるのではなく、むしろ皮膚を緊張させて刺鍼しやすくする。刺鍼抵抗の察知は主に刺手側の役割である。",
+    "hasFigure": false,
+    "source": "第32回 はり師・きゅう師国家試験",
+    "sourceUrl": "https://ahaki.or.jp/wordpress/wp-content/uploads/mondai_32_harikyu_pm.pdf",
+    "sourceOrg": "公益財団法人 東洋療法研修試験財団",
+    "sourceReliability": "indexed_official",
+    "verifiedAt": "2026-09-14"
+  },
+  {
+    "id": "32-163",
+    "examRound": 32,
+    "questionNumber": 163,
+    "questionText": "小児鍼で、接触鍼と摩擦鍼の両方の特徴をもつのはどれか。",
+    "choices": [
+      "集毛鍼",
+      "振子鍼",
+      "いちょう鍼",
+      "ローラー鍼"
+    ],
+    "answerIndex": 2,
+    "explanation": "いちょう鍼は銀杏の葉に似た形状で、角の部分を軽く当てる接触鍼としての刺激と、曲線部分で皮膚をこする摩擦鍼としての刺激の両方を行える小児鍼である。集毛鍼は接触鍼、ローラー鍼は摩擦鍼に分類される。",
+    "hasFigure": false,
+    "source": "第32回 はり師・きゅう師国家試験",
+    "sourceUrl": "https://ahaki.or.jp/wordpress/wp-content/uploads/mondai_32_harikyu_pm.pdf",
+    "sourceOrg": "公益財団法人 東洋療法研修試験財団",
+    "sourceReliability": "indexed_official",
+    "verifiedAt": "2026-09-14"
+  },
+  {
+    "id": "32-164",
+    "examRound": 32,
+    "questionNumber": 164,
+    "questionText": "鍼療法の禁忌はどれか。",
+    "choices": [
+      "化学療法に伴う吐き気",
+      "悪性腫瘍に伴う痛み",
+      "つわり",
+      "クスマウル呼吸を伴う意識障害"
+    ],
+    "answerIndex": 3,
+    "explanation": "クスマウル呼吸を伴う意識障害は、糖尿病性ケトアシドーシスなど生命に関わる重篤な病態を示す徴候であり、直ちに救急対応すべき絶対的禁忌である。化学療法に伴う吐き気・悪性腫瘍に伴う痛み・つわりはいずれも鍼療法の適応となりうる症状である。",
+    "hasFigure": false,
+    "source": "第32回 はり師・きゅう師国家試験",
+    "sourceUrl": "https://ahaki.or.jp/wordpress/wp-content/uploads/mondai_32_harikyu_pm.pdf",
+    "sourceOrg": "公益財団法人 東洋療法研修試験財団",
+    "sourceReliability": "indexed_official",
+    "verifiedAt": "2026-09-14"
+  },
+  {
+    "id": "32-165",
+    "examRound": 32,
+    "questionNumber": 165,
+    "questionText": "深刺により椎骨動脈を損傷するリスクが最も高い経穴はどれか。",
+    "choices": [
+      "瘂門",
+      "風池",
+      "完骨",
+      "翳風"
+    ],
+    "answerIndex": 1,
+    "explanation": "風池は椎骨動脈の走行に近接しており、深刺・誤った刺鍼方向により椎骨動脈損傷のリスクが最も高い経穴として知られる。瘂門・完骨・翳風も後頸部の要注意穴だが、椎骨動脈損傷リスクの点では風池が最も高い。",
+    "hasFigure": false,
+    "source": "第32回 はり師・きゅう師国家試験",
+    "sourceUrl": "https://ahaki.or.jp/wordpress/wp-content/uploads/mondai_32_harikyu_pm.pdf",
+    "sourceOrg": "公益財団法人 東洋療法研修試験財団",
+    "sourceReliability": "indexed_official",
+    "verifiedAt": "2026-09-14"
+  },
+  {
+    "id": "32-166",
+    "examRound": 32,
+    "questionNumber": 166,
+    "questionText": "鍼施術を行う場合、感染症対策として適切でないのはどれか。",
+    "choices": [
+      "手洗い後の手指の乾燥にはペーパータオルを使用する。",
+      "鍼皿は滅菌済みディスポーザブルのものを使用する。",
+      "施術野の消毒には70％イソプロピルアルコールを使用する。",
+      "抜鍼時に使用した消毒綿花は一般廃棄物として処理する。"
+    ],
+    "answerIndex": 3,
+    "explanation": "抜鍼時に使用した消毒綿花は血液が付着している可能性があるため、感染性廃棄物（医療廃棄物）として適切に処理する必要があり、一般廃棄物として処理するのは不適切である。他の選択肢はいずれも適切な感染症対策である。",
+    "hasFigure": false,
+    "source": "第32回 はり師・きゅう師国家試験",
+    "sourceUrl": "https://ahaki.or.jp/wordpress/wp-content/uploads/mondai_32_harikyu_pm.pdf",
+    "sourceOrg": "公益財団法人 東洋療法研修試験財団",
+    "sourceReliability": "indexed_official",
+    "verifiedAt": "2026-09-14"
+  },
+  {
+    "id": "32-167",
+    "examRound": 32,
+    "questionNumber": 167,
+    "questionText": "切皮時に一次痛が生じた。関与する侵害受容器はどれか。",
+    "choices": [
+      "高閾値機械受容器",
+      "ポリモーダル受容器",
+      "メルケル盤",
+      "毛包受容器"
+    ],
+    "answerIndex": 0,
+    "explanation": "切皮時に感じる鋭く局在の明確な一次痛は、伝導速度の速いAδ線維に接続する高閾値機械受容器の興奮による。ポリモーダル受容器はC線維に接続し、鈍く持続的な二次痛に関与する。メルケル盤・毛包受容器は触覚受容器であり痛覚受容器ではない。",
+    "hasFigure": false,
+    "source": "第32回 はり師・きゅう師国家試験",
+    "sourceUrl": "https://ahaki.or.jp/wordpress/wp-content/uploads/mondai_32_harikyu_pm.pdf",
+    "sourceOrg": "公益財団法人 東洋療法研修試験財団",
+    "sourceReliability": "indexed_official",
+    "verifiedAt": "2026-09-14"
+  },
+  {
+    "id": "32-168",
+    "examRound": 32,
+    "questionNumber": 168,
+    "questionText": "痛覚の伝導に関与するのはどれか。",
+    "choices": [
+      "脊髄灰白質中間質",
+      "脊髄前側索",
+      "脊髄後側索",
+      "脊髄後索"
+    ],
+    "answerIndex": 1,
+    "explanation": "痛覚（Aδ・C線維）は脊髄後角に入り、反対側に交叉した後、脊髄前側索（外側脊髄視床路）を上行する。脊髄後索は識別性触覚・固有感覚の伝導路である。",
+    "hasFigure": false,
+    "source": "第32回 はり師・きゅう師国家試験",
+    "sourceUrl": "https://ahaki.or.jp/wordpress/wp-content/uploads/mondai_32_harikyu_pm.pdf",
+    "sourceOrg": "公益財団法人 東洋療法研修試験財団",
+    "sourceReliability": "indexed_official",
+    "verifiedAt": "2026-09-14"
+  },
+  {
+    "id": "32-169",
+    "examRound": 32,
+    "questionNumber": 169,
+    "questionText": "鍼刺激による発汗に関与し、エクリン腺に分布する受容体で最も適切なのはどれか。",
+    "choices": [
+      "α受容体",
+      "β受容体",
+      "ニコチン受容体",
+      "ムスカリン受容体"
+    ],
+    "answerIndex": 3,
+    "explanation": "エクリン汗腺は交感神経支配であるが、その節後線維終末はアセチルコリンを伝達物質とするコリン作動性であり、汗腺のムスカリン受容体を介して発汗を促す。α・β受容体はノルアドレナリン作動性のシナプスに関与する。",
+    "hasFigure": false,
+    "source": "第32回 はり師・きゅう師国家試験",
+    "sourceUrl": "https://ahaki.or.jp/wordpress/wp-content/uploads/mondai_32_harikyu_pm.pdf",
+    "sourceOrg": "公益財団法人 東洋療法研修試験財団",
+    "sourceReliability": "indexed_official",
+    "verifiedAt": "2026-09-14"
+  },
+  {
+    "id": "32-170",
+    "examRound": 32,
+    "questionNumber": 170,
+    "questionText": "鍼刺激による皮膚の血流増加に関係するのはどれか。",
+    "choices": [
+      "NO",
+      "セロトニン",
+      "アンジオテンシン",
+      "ノルアドレナリン"
+    ],
+    "answerIndex": 0,
+    "explanation": "鍼刺激による軸索反射やCGRP遊離に伴い、血管内皮からNO（一酸化窒素）が産生・放出されて血管平滑筋を弛緩させ、皮膚血流を増加させる。ノルアドレナリン・アンジオテンシンは血管収縮に働く。",
+    "hasFigure": false,
+    "source": "第32回 はり師・きゅう師国家試験",
+    "sourceUrl": "https://ahaki.or.jp/wordpress/wp-content/uploads/mondai_32_harikyu_pm.pdf",
+    "sourceOrg": "公益財団法人 東洋療法研修試験財団",
+    "sourceReliability": "indexed_official",
+    "verifiedAt": "2026-09-14"
+  },
+  {
+    "id": "32-171",
+    "examRound": 32,
+    "questionNumber": 171,
+    "questionText": "透熱灸に用いる艾の品質で最も適切なのはどれか。",
+    "choices": [
+      "湿気を帯びている。",
+      "夾雑物が多い。",
+      "淡黄白色である。",
+      "灰分が多い。"
+    ],
+    "answerIndex": 2,
+    "explanation": "良質な艾は夾雑物・灰分が少なく乾燥しており、色は淡黄白色を呈する。湿気を帯びる・夾雑物や灰分が多いことはいずれも燃焼のムラや爆ぜ・煙の増加につながる低品質の艾の特徴である。",
+    "hasFigure": false,
+    "source": "第32回 はり師・きゅう師国家試験",
+    "sourceUrl": "https://ahaki.or.jp/wordpress/wp-content/uploads/mondai_32_harikyu_pm.pdf",
+    "sourceOrg": "公益財団法人 東洋療法研修試験財団",
+    "sourceReliability": "indexed_official",
+    "verifiedAt": "2026-09-14"
+  },
+  {
+    "id": "32-172",
+    "examRound": 32,
+    "questionNumber": 172,
+    "questionText": "焦灼灸について正しいのはどれか。",
+    "choices": [
+      "一局所に多壮施灸する。",
+      "患者が気持ち良いところで消火する。",
+      "免疫機能低下者に適した灸法である。",
+      "輻射熱による温熱刺激を与えることを目的とする。"
+    ],
+    "answerIndex": 0,
+    "explanation": "焦灼灸は疣贅（いぼ）などの組織を焼灼・除去する目的で、同一部位に艾炷を多壮繰り返し施灸する有痕灸である。患者が心地よいところで消火するのは知熱灸、輻射熱を目的とするのは温灸類の特徴であり、いずれも焦灼灸とは異なる。組織損傷を伴うため免疫機能低下者には適さない。",
+    "hasFigure": false,
+    "source": "第32回 はり師・きゅう師国家試験",
+    "sourceUrl": "https://ahaki.or.jp/wordpress/wp-content/uploads/mondai_32_harikyu_pm.pdf",
+    "sourceOrg": "公益財団法人 東洋療法研修試験財団",
+    "sourceReliability": "indexed_official",
+    "verifiedAt": "2026-09-14"
+  },
+  {
+    "id": "32-173",
+    "examRound": 32,
+    "questionNumber": 173,
+    "questionText": "輻射熱を用いるのはどれか。",
+    "choices": [
+      "押灸",
+      "箱灸",
+      "塩灸",
+      "紅灸"
+    ],
+    "answerIndex": 1,
+    "explanation": "箱灸は艾を箱の中で燃焼させ、皮膚から離れた状態でその熱を輻射熱として伝える温灸法である。押灸・塩灸は艾や物質を皮膚に接触・近接させて熱を伝える伝導熱主体の灸法である。",
+    "hasFigure": false,
+    "source": "第32回 はり師・きゅう師国家試験",
+    "sourceUrl": "https://ahaki.or.jp/wordpress/wp-content/uploads/mondai_32_harikyu_pm.pdf",
+    "sourceOrg": "公益財団法人 東洋療法研修試験財団",
+    "sourceReliability": "indexed_official",
+    "verifiedAt": "2026-09-14"
+  },
+  {
+    "id": "32-174",
+    "examRound": 32,
+    "questionNumber": 174,
+    "questionText": "小児に対して最も適した灸法はどれか。",
+    "choices": [
+      "透熱灸",
+      "焦灼灸",
+      "打膿灸",
+      "艾条灸"
+    ],
+    "answerIndex": 3,
+    "explanation": "艾条灸（棒灸）は皮膚から一定の距離を保って温熱刺激を与える無痕灸であり、皮膚が薄く敏感な小児にも安全に用いやすい。透熱灸・焦灼灸・打膿灸はいずれも皮膚に直接施灸し瘢痕を残す有痕灸であり、小児には不向きである。",
+    "hasFigure": false,
+    "source": "第32回 はり師・きゅう師国家試験",
+    "sourceUrl": "https://ahaki.or.jp/wordpress/wp-content/uploads/mondai_32_harikyu_pm.pdf",
+    "sourceOrg": "公益財団法人 東洋療法研修試験財団",
+    "sourceReliability": "indexed_official",
+    "verifiedAt": "2026-09-14"
+  },
+  {
+    "id": "32-175",
+    "examRound": 32,
+    "questionNumber": 175,
+    "questionText": "温熱刺激情報を二次ニューロンへ伝達するのはどれか。",
+    "choices": [
+      "グルタミン酸",
+      "ノルアドレナリン",
+      "アセチルコリン",
+      "ドパミン"
+    ],
+    "answerIndex": 0,
+    "explanation": "温度感覚を伝える一次求心ニューロンは、脊髄後角で興奮性アミノ酸であるグルタミン酸を伝達物質として二次ニューロンへ情報を伝達する。",
+    "hasFigure": false,
+    "source": "第32回 はり師・きゅう師国家試験",
+    "sourceUrl": "https://ahaki.or.jp/wordpress/wp-content/uploads/mondai_32_harikyu_pm.pdf",
+    "sourceOrg": "公益財団法人 東洋療法研修試験財団",
+    "sourceReliability": "indexed_official",
+    "verifiedAt": "2026-09-14"
+  },
+  {
+    "id": "32-176",
+    "examRound": 32,
+    "questionNumber": 176,
+    "questionText": "透熱灸刺激の伝導に関係するのはどれか。",
+    "choices": [
+      "脊髄前角",
+      "薄束",
+      "脳幹網様体",
+      "内側毛帯"
+    ],
+    "answerIndex": 2,
+    "explanation": "透熱灸のような侵害性温熱刺激は脊髄後角から交叉して前側索を上行し、脳幹網様体を経由して視床・大脳皮質へ伝わる（脊髄網様体路）。薄束・内側毛帯は識別性触覚・固有感覚の伝導路であり、脊髄前角は運動性の構造である。",
+    "hasFigure": false,
+    "source": "第32回 はり師・きゅう師国家試験",
+    "sourceUrl": "https://ahaki.or.jp/wordpress/wp-content/uploads/mondai_32_harikyu_pm.pdf",
+    "sourceOrg": "公益財団法人 東洋療法研修試験財団",
+    "sourceReliability": "indexed_official",
+    "verifiedAt": "2026-09-14"
+  },
+  {
+    "id": "32-177",
+    "examRound": 32,
+    "questionNumber": 177,
+    "questionText": "施灸による交感神経活動の亢進反応はどれか。",
+    "choices": [
+      "血圧上昇",
+      "皮膚血管拡張",
+      "瞳孔括約筋収縮",
+      "気管支平滑筋収縮"
+    ],
+    "answerIndex": 0,
+    "explanation": "交感神経活動の亢進は心拍数増加・末梢血管収縮を介して血圧上昇をもたらす。皮膚血管拡張・瞳孔括約筋収縮・気管支平滑筋収縮はいずれも副交感神経の作用であり、交感神経亢進の反応ではない。",
+    "hasFigure": false,
+    "source": "第32回 はり師・きゅう師国家試験",
+    "sourceUrl": "https://ahaki.or.jp/wordpress/wp-content/uploads/mondai_32_harikyu_pm.pdf",
+    "sourceOrg": "公益財団法人 東洋療法研修試験財団",
+    "sourceReliability": "indexed_official",
+    "verifiedAt": "2026-09-14"
+  },
+  {
+    "id": "32-178",
+    "examRound": 32,
+    "questionNumber": 178,
+    "questionText": "施灸により胃運動亢進をきたす反射の遠心路を構成するのはどれか。",
+    "choices": [
+      "Aα線維とAγ線維",
+      "Aβ線維とB線維",
+      "Aδ線維とC線維",
+      "B線維とC線維"
+    ],
+    "answerIndex": 3,
+    "explanation": "施灸による体性-内臓反射で胃運動を亢進させる遠心路は、自律神経の節前線維であるB線維と、無髄の節後線維（副交感神経・迷走神経）であるC線維から構成される。Aα・Aβ・Aγ・Aδ線維は体性神経の線維であり、自律神経の遠心路には含まれない。",
+    "hasFigure": false,
+    "source": "第32回 はり師・きゅう師国家試験",
+    "sourceUrl": "https://ahaki.or.jp/wordpress/wp-content/uploads/mondai_32_harikyu_pm.pdf",
+    "sourceOrg": "公益財団法人 東洋療法研修試験財団",
+    "sourceReliability": "indexed_official",
+    "verifiedAt": "2026-09-14"
+  },
+  {
+    "id": "32-179",
+    "examRound": 32,
+    "questionNumber": 179,
+    "questionText": "透熱灸による急性炎症反応で最も遅く出現するのはどれか。",
+    "choices": [
+      "ブラジキニンの放出",
+      "セロトニンの放出",
+      "補体の滲出",
+      "膠原線維の産生"
+    ],
+    "answerIndex": 3,
+    "explanation": "透熱灸による組織損傷後の急性炎症反応は、ブラジキニン・セロトニンなどの化学伝達物質の放出、補体の滲出という順で進行し、その後の修復過程で線維芽細胞による膠原線維（コラーゲン）の産生が最も遅く出現する。",
+    "hasFigure": false,
+    "source": "第32回 はり師・きゅう師国家試験",
+    "sourceUrl": "https://ahaki.or.jp/wordpress/wp-content/uploads/mondai_32_harikyu_pm.pdf",
+    "sourceOrg": "公益財団法人 東洋療法研修試験財団",
+    "sourceReliability": "indexed_official",
+    "verifiedAt": "2026-09-14"
+  },
+  {
+    "id": "32-180",
+    "examRound": 32,
+    "questionNumber": 180,
+    "questionText": "温熱ストレスにより抗炎症性に働くのはどれか。",
+    "choices": [
+      "コルチゾール",
+      "プロスタグランジン",
+      "インターロイキン6（IL-6）",
+      "ヒスタミン"
+    ],
+    "answerIndex": 0,
+    "explanation": "温熱ストレスは視床下部-下垂体-副腎皮質系を賦活してコルチゾール（糖質コルチコイド）の分泌を促し、コルチゾールは抗炎症作用を発揮する。プロスタグランジン・IL-6・ヒスタミンはいずれも炎症を促進的に働く因子である。",
+    "hasFigure": false,
+    "source": "第32回 はり師・きゅう師国家試験",
+    "sourceUrl": "https://ahaki.or.jp/wordpress/wp-content/uploads/mondai_32_harikyu_pm.pdf",
+    "sourceOrg": "公益財団法人 東洋療法研修試験財団",
+    "sourceReliability": "indexed_official",
+    "verifiedAt": "2026-09-14"
   }
 ]
