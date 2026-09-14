@@ -605,8 +605,24 @@ try {
           if (q.choices.some((c) => !c || !String(c).trim())) E(`過去問 ${q.id}: choices に空の選択肢`)
           if (new Set(q.choices).size !== q.choices.length) E(`過去問 ${q.id}: choices に重複`)
         }
-        if (typeof q.answerIndex !== 'number' || q.answerIndex < 0 || q.answerIndex > 3) {
-          E(`過去問 ${q.id}: answerIndex 範囲外`)
+        {
+          const hasIdx = typeof q.answerIndex === 'number'
+          const hasIdxs = Array.isArray(q.answerIndexes)
+          if (hasIdx && hasIdxs) {
+            E(`過去問 ${q.id}: answerIndex と answerIndexes が両方設定されている`)
+          } else if (hasIdx) {
+            if (q.answerIndex < 0 || q.answerIndex > 3) E(`過去問 ${q.id}: answerIndex 範囲外`)
+          } else if (hasIdxs) {
+            if (q.answerIndexes.length === 0) {
+              E(`過去問 ${q.id}: answerIndexes が空配列`)
+            } else if (q.answerIndexes.some((n) => typeof n !== 'number' || n < 0 || n > 3)) {
+              E(`過去問 ${q.id}: answerIndexes に範囲外の値`)
+            } else if (new Set(q.answerIndexes).size !== q.answerIndexes.length) {
+              E(`過去問 ${q.id}: answerIndexes に重複`)
+            }
+          } else {
+            E(`過去問 ${q.id}: answerIndex / answerIndexes のいずれも未設定`)
+          }
         }
         if (!q.explanation || !String(q.explanation).trim()) E(`過去問 ${q.id}: explanation が空`)
         if (!q.source || !String(q.source).trim()) E(`過去問 ${q.id}: source が空`)

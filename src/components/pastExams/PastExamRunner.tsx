@@ -6,6 +6,7 @@ import { themes } from '@/lib/data'
 import { subjectLabel } from '@/lib/quiz'
 import { recordPastExamAttempt } from '@/lib/pastExamStorage'
 import { trackSessionOnceKeyed } from '@/lib/analytics'
+import { getAcceptedAnswerIndexes, isPastExamAnswerCorrect, formatAcceptedAnswers } from '@/lib/pastExamAnswers'
 
 const CIRCLED = ['①', '②', '③', '④']
 
@@ -14,7 +15,9 @@ export type PastExamQuestionView = {
   questionNumber: number
   questionText: string
   choices: string[]
-  answerIndex: number
+  /** 通常はこちらのみ。両方の意味は src/lib/pastExamAnswers.ts 参照 */
+  answerIndex?: number
+  answerIndexes?: number[]
   explanation: string
   subject?: string
   themeId?: string
@@ -64,7 +67,7 @@ export default function PastExamRunner({
   function handleAnswer() {
     const q = questions[index]
     if (selected === null || answered) return
-    const isCorrect = selected === q.answerIndex
+    const isCorrect = isPastExamAnswerCorrect(q, selected)
     setAnswered(true)
     setResults((r) => [...r, isCorrect])
     recordPastExamAttempt({ questionId: q.id, examRound: round, correct: isCorrect })
@@ -143,7 +146,8 @@ export default function PastExamRunner({
 
   /* ── 出題画面（1問1画面） ──────────────────── */
   const q = questions[index]
-  const correct = answered && selected === q.answerIndex
+  const acceptedIndexes = getAcceptedAnswerIndexes(q)
+  const correct = answered && selected !== null && isPastExamAnswerCorrect(q, selected)
   const tName = themeName(q.themeId)
 
   return (
@@ -172,7 +176,7 @@ export default function PastExamRunner({
       <div className="mt-4 space-y-2.5">
         {q.choices.map((choice, i) => {
           const isSel = selected === i
-          const isAns = q.answerIndex === i
+          const isAns = acceptedIndexes.includes(i)
           let cls =
             'w-full text-left rounded-xl border-2 px-4 py-3.5 text-[15px] leading-relaxed transition-colors flex gap-3 items-start '
           if (!answered) {
@@ -221,7 +225,7 @@ export default function PastExamRunner({
             <p className={`text-lg font-black ${correct ? 'text-green-700' : 'text-red-600'}`}>
               {correct ? '正解' : '不正解'}
             </p>
-            <p className="mt-2 text-sm font-bold text-gray-700">正答：{CIRCLED[q.answerIndex]}</p>
+            <p className="mt-2 text-sm font-bold text-gray-700">正答：{formatAcceptedAnswers(q)}</p>
             <p className="mt-2 text-sm leading-relaxed text-gray-700">{q.explanation}</p>
             {tName && <p className="mt-3 text-xs font-semibold text-gray-500">{tName}</p>}
             <div className="mt-3 border-t border-gray-200 pt-3 text-[11px] leading-relaxed text-gray-400">

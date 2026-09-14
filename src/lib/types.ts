@@ -72,8 +72,12 @@ export type PastExamContent = {
   questionText: string
   /** 公式選択肢（1〜4）。表示順は公式のまま、シャッフルしない */
   choices: string[]
-  /** 正答の選択肢インデックス（0-3） */
-  answerIndex: number
+  /** 正答の選択肢インデックス（0-3）。通常はこちらのみを使う */
+  answerIndex?: number
+  /** 公式に複数の正答が認められている問題用（例：第32回問157＝公式正答「2,4」）。
+   *  設定時はanswerIndexesが優先される。answerIndexとの同時設定・両方未設定はaudit:dataでERROR。
+   *  採点・表示は src/lib/pastExamAnswers.ts のヘルパーを必ず経由する（UI直参照禁止）。 */
+  answerIndexes?: number[]
   /** 当サイト独自の解説（公式資料の転載ではない） */
   explanation: string
   hasFigure: boolean
