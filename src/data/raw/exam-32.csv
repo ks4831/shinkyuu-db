@@ -107,12 +107,12 @@ id,examRound,year,questionNumber,session,subject,officialLarge,officialMedium,of
 32-106,32,2024,106,共通,oriental-overview,専門科目,東洋医学概論,治法八法・消法,tcm-clinical,停滞した病理産物を散らす治法,,消法：停滞した病理産物（食積・血瘀・痰飲）を消散させる。汗法は解表。清法は清熱。吐法は催吐,,indexed_official,2020,180,,oo-chiryo-gairon
 32-107,32,2024,107,共通,meridians-acupoints,専門科目,経絡経穴概論,経脈循行・横隔膜,meridians-acupoints,横隔膜を貫かない経脈,,足の太陽膀胱経は横隔膜を貫かない（正しい）。肺経・脾経・三焦経は横隔膜を貫く,,indexed_official,2020,180,,kei-myaku-ryuchu
 32-108,32,2024,108,共通,meridians-acupoints,専門科目,経絡経穴概論,奇経の別絡,meridians-acupoints,小腸経の脈気を受けて内眼角起こる別絡,,陽蹻脈は足の太陽膀胱経の別脈で、内眼角（睛明）で足太陽経・陰蹻脈と合流する（正解）。衝脈・督脈・陽維脈は内眼角には起こらない,,indexed_official,2020,180,,kiki-hachi-myaku
-32-109,32,2024,109,共通,meridians-acupoints,専門科目,経絡経穴概論,五兪穴の部位・属性,meridians-acupoints,五兪穴の正確な知識,,手の太陽経（小腸経）の兪木穴（後谿）は原穴と一致しない（原穴は腕骨）。五兪穴と原穴の一致は陽経の兪穴,,indexed_official,2020,180,,go-yu-ketsu
+32-109,32,2024,109,共通,meridians-acupoints,専門科目,経絡経穴概論,五兪穴の部位・属性,meridians-acupoints,五兪穴の正確な知識,,手の太陽経（小腸経）の兪木穴（後谿）は原穴と一致しない（原穴は腕骨）。五兪穴と原穴が一致するのは陰経の兪穴（以輸為原）であり、陽経は兪穴とは別に原穴を持つ,,indexed_official,2020,180,,go-yu-ketsu
 32-110,32,2024,110,共通,meridians-acupoints,専門科目,経絡経穴概論,下合穴,meridians-acupoints,足の三陽経に当てはまる要穴,,下合穴はすべて足の三陽経の経穴（胃・胆・膀胱・大腸・小腸・三焦の下合穴は下肢に在る）,,indexed_official,2020,180,,me-sonota-tokketsu
 32-111,32,2024,111,共通,meridians-acupoints,専門科目,経絡経穴概論,経穴部位の取穴,meridians-acupoints,膝蓋骨尖と内果尖の線上1/3の経穴,,膝蓋骨尖〜内果尖（骨度15寸）を3等分すると各5寸。内果尖から5寸（3分の1）＝肝経の絡穴である蠡溝（正解）。中都は肝経の郄穴で内果尖上7寸に位置し、この設問の答えではない,,indexed_official,2020,180,,juni-kei-myaku
 32-112,32,2024,112,共通,meridians-acupoints,専門科目,経絡経穴概論,頸部経穴の部位,meridians-acupoints,天牖の経穴部位,,天牖は下顎角と同じ高さ、胸鎖乳突筋後方の陥凹部にある（正解）。天鼎は輪状軟骨と同じ高さだが胸鎖乳突筋の後縁にあり前縁ではない。天衝・天容もそれぞれ部位の記載が誤り,,indexed_official,2020,180,,juni-kei-myaku
 32-113,32,2024,113,共通,meridians-acupoints,専門科目,経絡経穴概論,陰都と同高さの任脈経穴,meridians-acupoints,陰都と同高さの任脈の特徴,,陰都（腎経）は臍上4寸に位置し、同じ高さの任脈経穴は中脘（臍上4寸）。中脘は八会穴の腑会にあたる（正解）。任脈の絡穴は鳩尾であり、中脘の高さは3寸ではなく4寸,,indexed_official,2020,180,,kiki-hachi-myaku
-32-114,32,2024,114,共通,meridians-acupoints,専門科目,経絡経穴概論,膻中の特徴,meridians-acupoints,膻中の取穴・要穴,,膻中は八会穴の気会。心の募穴は巨闕。胸骨角（Louis角）を基準に取穴。外方6寸は天谿（天渓でない）,,indexed_official,2020,180,,me-shishin-anzen
+32-114,32,2024,114,共通,meridians-acupoints,専門科目,経絡経穴概論,膻中の特徴,meridians-acupoints,膻中の取穴・要穴,,膻中は八会穴の気会。心の募穴は巨闕。胸骨角（Louis角）を基準に取穴。外方6寸は天渓である（正解。天谿とも表記される異体字）,,indexed_official,2020,180,,me-shishin-anzen
 32-115,32,2024,115,共通,meridians-acupoints,専門科目,経絡経穴概論,腰部経穴の部位,meridians-acupoints,第12肋骨先端〜後正中線交点の経穴,,左右第12肋骨先端を結ぶ線と後正中線の交点・棘突起下陥凹部＝命門（第2腰椎棘突起下）,,indexed_official,2020,180,,juni-kei-myaku
 32-116,32,2024,116,共通,meridians-acupoints,専門科目,経絡経穴概論,要穴の位置関係,meridians-acupoints,絡穴が郄穴より末梢にある経脈,,足の太陰脾経：絡穴（公孫：第1中足骨底前下方）は郄穴（地機：膝下3寸）より末梢に位置する,,indexed_official,2020,180,,juni-kei-myaku
 32-117,32,2024,117,共通,meridians-acupoints,専門科目,経絡経穴概論,膝窩の経穴,meridians-acupoints,膝窩横紋上・半腱様筋腱外縁の経穴,,膝窩横紋上・半腱様筋腱外縁＝陰谷（腎経の合水穴）。委陽は膀胱経。曲泉は肝経（内側）,,indexed_official,2020,180,,juni-kei-myaku
