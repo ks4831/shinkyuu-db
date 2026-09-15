@@ -32,9 +32,34 @@ export type PastExamQuestionView = {
   sourceOrg: string
 }
 
+type SessionCheck = {
+  /** 進行中（未完走）で、Q1からの連続一致が取れた場合のみ設定 */
+  resumable: PastExamSession | null
+  /** 完走済みで、現在の設問セットと完全一致する場合のみ設定 */
+  completedSession: PastExamSession | null
+}
+
+const EMPTY_SESSION_CHECK: SessionCheck = { resumable: null, completedSession: null }
+
 function themeName(themeId?: string): string {
   if (!themeId) return ''
   return themes.find((t) => t.id === themeId)?.name ?? ''
+}
+
+/** 問題番号の小さい順に並んだチップ一覧（間違えた問題の一覧表示に共通利用） */
+function WrongQuestionChips({ questions }: { questions: PastExamQuestionView[] }) {
+  return (
+    <div className="mt-2 flex flex-wrap gap-1.5">
+      {questions.map((q) => (
+        <span
+          key={q.id}
+          className="rounded-full bg-red-50 px-2.5 py-1 text-xs font-semibold text-red-600"
+        >
+          問{q.questionNumber}
+        </span>
+      ))}
+    </div>
+  )
 }
 
 export default function PastExamRunner({
@@ -49,21 +74,39 @@ export default function PastExamRunner({
   const [selected, setSelected] = useState<number | null>(null)
   const [answered, setAnswered] = useState(false)
   const [results, setResults] = useState<boolean[]>([])
-  const [resumable, setResumable] = useState<PastExamSession | null>(null)
+  const [sessionCheck, setSessionCheck] = useState<SessionCheck>(EMPTY_SESSION_CHECK)
+  /** 苦手復習モード中か。true の間は questions ではなく reviewQuestions を出題する */
+  const [isReview, setIsReview] = useState(false)
+  const [reviewQuestions, setReviewQuestions] = useState<PastExamQuestionView[]>([])
 
   const total = questions.length
+  const activeQuestions = isReview ? reviewQuestions : questions
+  const activeTotal = activeQuestions.length
 
-  /* 続きから再開できるセッションがあるか確認する。SSR/初回描画では常にnullのまま
+  /* 保存済みセッションを確認する。SSR/初回描画では常にnullのまま
      （サーバーとクライアントの初回出力を一致させ、hydration mismatchを避ける）。
-     マウント後にのみLocalStorageを読み、保存済みの回答列が現在の設問順の
-     先頭からの連続一致（Q1,Q2,…の途中）になっている場合だけ再開対象とする。
-     ズレていたり壊れていたりする場合は安全に無視し、通常の開始画面を出す。 */
+     マウント後にのみLocalStorageを読み、
+     - 完走済み（completed:true）かつ現在の設問セットと全問一致する → completedSession
+       （「前回の結果を見る」「間違えた問題を復習」の元データとして使う）
+     - 未完走で、保存済みの回答列が現在の設問順の先頭からの連続一致になっている
+       → resumable（「続きから解く」）
+     のどちらでもない場合は安全に無視し、通常の開始画面を出す。
+     setState呼び出しは1箇所（compute()の戻り値をまとめて反映）にとどめ、
+     react-hooks/set-state-in-effect の警告を増やさないようにしている。 */
   useEffect(() => {
-    const s = getPastExamSession(round)
-    if (!s || s.completed || s.answers.length === 0 || s.answers.length >= total) return
-    const sorted = [...s.answers].sort((a, b) => a.questionNumber - b.questionNumber)
-    const isContiguousPrefix = sorted.every((a, i) => questions[i]?.id === a.questionId)
-    if (isContiguousPrefix) setResumable({ ...s, answers: sorted })
+    function compute(): SessionCheck {
+      const s = getPastExamSession(round)
+      if (!s) return EMPTY_SESSION_CHECK
+      const sorted = [...s.answers].sort((a, b) => a.questionNumber - b.questionNumber)
+      if (s.completed) {
+        const validFull = sorted.length === total && sorted.every((a, i) => questions[i]?.id === a.questionId)
+        return validFull ? { resumable: null, completedSession: { ...s, answers: sorted } } : EMPTY_SESSION_CHECK
+      }
+      if (sorted.length === 0 || sorted.length >= total) return EMPTY_SESSION_CHECK
+      const isContiguousPrefix = sorted.every((a, i) => questions[i]?.id === a.questionId)
+      return isContiguousPrefix ? { resumable: { ...s, answers: sorted }, completedSession: null } : EMPTY_SESSION_CHECK
+    }
+    setSessionCheck(compute())
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [round])
 
@@ -82,14 +125,21 @@ export default function PastExamRunner({
   }
 
   function handleStart() {
+    resetPastExamSession(round)
+    setSessionCheck(EMPTY_SESSION_CHECK)
+    setIsReview(false)
+    setReviewQuestions([])
     trackSessionOnceKeyed('pastexam_start', String(round), { exam_round: round, question_count: total })
     setPhase('question')
   }
 
   /** 「続きから解く」：保存済みの回答済み分をresultsへ復元し、次の未回答問題から再開する */
   function handleResume() {
+    const { resumable } = sessionCheck
     if (!resumable) return
     trackSessionOnceKeyed('pastexam_start', String(round), { exam_round: round, question_count: total })
+    setIsReview(false)
+    setReviewQuestions([])
     setResults(resumable.answers.map((a) => a.correct))
     setIndex(resumable.answers.length)
     setSelected(null)
@@ -100,7 +150,9 @@ export default function PastExamRunner({
   /** 「最初から解く」：この年度の保存セッションのみ削除しQ1から開始（回答履歴historyは削除しない） */
   function handleRestart() {
     resetPastExamSession(round)
-    setResumable(null)
+    setSessionCheck(EMPTY_SESSION_CHECK)
+    setIsReview(false)
+    setReviewQuestions([])
     setIndex(0)
     setSelected(null)
     setAnswered(false)
@@ -109,24 +161,59 @@ export default function PastExamRunner({
     setPhase('question')
   }
 
+  /** 「前回の結果を見る」：保存済みの完走セッションをそのまま結果画面に表示する */
+  function handleViewLastResult() {
+    if (!sessionCheck.completedSession) return
+    setIsReview(false)
+    setPhase('result')
+  }
+
+  /** 「間違えた○問を復習」：渡された問題だけを元の問題番号順に出題するモードへ入る */
+  function handleStartReview(wrongQuestions: PastExamQuestionView[]) {
+    if (wrongQuestions.length === 0) return
+    setReviewQuestions(wrongQuestions)
+    setIsReview(true)
+    setIndex(0)
+    setSelected(null)
+    setAnswered(false)
+    setResults([])
+    setPhase('question')
+  }
+
+  /** 復習結果画面から「第○回の結果へ」：完走セッションの結果画面に戻る（復習結果はどこにも保存しない） */
+  function handleBackToResult() {
+    setIsReview(false)
+    setPhase('result')
+  }
+
   function handleAnswer() {
-    const q = questions[index]
+    const q = activeQuestions[index]
     if (selected === null || answered) return
     const isCorrect = isPastExamAnswerCorrect(q, selected)
     setAnswered(true)
     setResults((r) => [...r, isCorrect])
+    // 実際に回答した事実は、通常演習・苦手復習のどちらでも履歴に残す
     recordPastExamAttempt({ questionId: q.id, examRound: round, correct: isCorrect })
-    savePastExamProgress(round, { questionId: q.id, questionNumber: q.questionNumber, correct: isCorrect })
+    // ただし苦手復習中は、元の180問セッションのanswersを上書きしない
+    if (!isReview) {
+      savePastExamProgress(round, { questionId: q.id, questionNumber: q.questionNumber, correct: isCorrect })
+    }
   }
 
   function handleNext() {
-    if (index + 1 >= total) {
+    if (index + 1 >= activeTotal) {
+      if (isReview) {
+        // 苦手復習の完走はセッションに保存しない（元の完走結果とは独立）
+        setPhase('result')
+        return
+      }
       trackSessionOnceKeyed('pastexam_complete', String(round), {
         exam_round: round,
         correct: results.filter(Boolean).length,
         total: results.length,
       })
       markPastExamSessionCompleted(round)
+      setSessionCheck({ resumable: null, completedSession: getPastExamSession(round) })
       setPhase('result')
       return
     }
@@ -135,9 +222,12 @@ export default function PastExamRunner({
     setAnswered(false)
   }
 
+  /** 「もう一度180問解く」：この年度のセッションを削除し、新しい180問セッションとしてQ1からやり直す */
   function handleRetry() {
     resetPastExamSession(round)
-    setResumable(null)
+    setSessionCheck(EMPTY_SESSION_CHECK)
+    setIsReview(false)
+    setReviewQuestions([])
     setIndex(0)
     setSelected(null)
     setAnswered(false)
@@ -146,6 +236,8 @@ export default function PastExamRunner({
   }
 
   if (phase === 'start') {
+    const { resumable, completedSession } = sessionCheck
+
     if (resumable) {
       const answeredCount = resumable.answers.length
       return (
@@ -172,6 +264,34 @@ export default function PastExamRunner({
         </div>
       )
     }
+
+    if (completedSession) {
+      const lastScore = completedSession.answers.filter((a) => a.correct).length
+      return (
+        <div className="mx-auto max-w-md px-4 py-10 text-center">
+          <h1 className="text-xl font-bold text-gray-900">第{round}回 過去問</h1>
+          <p className="mt-2 text-sm text-gray-500">収録 {total}問</p>
+          <p className="mt-3 text-sm font-semibold text-gray-600">
+            前回 {lastScore} / {total}問正解
+          </p>
+          <button
+            type="button"
+            onClick={handleStart}
+            className="mt-6 w-full rounded-xl bg-green-600 px-5 py-4 text-base font-bold text-white hover:bg-green-700"
+          >
+            過去問を解く
+          </button>
+          <button
+            type="button"
+            onClick={handleViewLastResult}
+            className="mt-3 w-full rounded-xl border border-gray-200 bg-white px-5 py-3.5 text-sm font-bold text-gray-600 hover:border-green-300"
+          >
+            前回の結果を見る
+          </button>
+        </div>
+      )
+    }
+
     return (
       <div className="mx-auto max-w-md px-4 py-10 text-center">
         <h1 className="text-xl font-bold text-gray-900">第{round}回 過去問</h1>
@@ -188,8 +308,72 @@ export default function PastExamRunner({
   }
 
   if (phase === 'result') {
-    const score = results.filter(Boolean).length
+    if (isReview) {
+      const score = results.filter(Boolean).length
+      const reviewTotal = activeTotal
+      const pct = reviewTotal ? Math.round((score / reviewTotal) * 100) : 0
+      const stillWrong = activeQuestions
+        .filter((_, i) => !results[i])
+        .sort((a, b) => a.questionNumber - b.questionNumber)
+      return (
+        <div className="mx-auto max-w-md px-4 py-8">
+          <div className="rounded-2xl border border-gray-100 bg-white p-6 text-center shadow-sm">
+            <h1 className="text-base font-bold text-gray-900">苦手復習 完了</h1>
+            <p className="mt-3 text-4xl font-black text-gray-900">
+              {score}
+              <span className="text-xl text-gray-400"> / {reviewTotal}問 正解</span>
+            </p>
+            <p className="mt-1 text-sm text-gray-500">正答率 {pct}%</p>
+
+            {stillWrong.length > 0 && (
+              <div className="mt-5 text-left">
+                <p className="text-sm font-bold text-gray-700">まだ間違えた問題　{stillWrong.length}問</p>
+                <WrongQuestionChips questions={stillWrong} />
+              </div>
+            )}
+
+            <div className="mt-6 space-y-2.5">
+              {stillWrong.length > 0 && (
+                <button
+                  type="button"
+                  onClick={() => handleStartReview(stillWrong)}
+                  className="block w-full rounded-xl bg-green-600 px-5 py-3.5 text-sm font-bold text-white hover:bg-green-700"
+                >
+                  間違えた{stillWrong.length}問をもう一度復習
+                </button>
+              )}
+              <button
+                type="button"
+                onClick={handleBackToResult}
+                className="block w-full rounded-xl border border-gray-200 bg-white px-5 py-3.5 text-sm font-bold text-gray-700 hover:border-green-300"
+              >
+                第{round}回の結果へ
+              </button>
+              <Link
+                href="/past-exams"
+                className="block rounded-xl border border-gray-200 bg-white px-5 py-3.5 text-sm font-bold text-gray-700 hover:border-green-300"
+              >
+                過去問一覧へ
+              </Link>
+            </div>
+          </div>
+        </div>
+      )
+    }
+
+    const { completedSession } = sessionCheck
+    const score = completedSession
+      ? completedSession.answers.filter((a) => a.correct).length
+      : results.filter(Boolean).length
     const pct = Math.round((score / total) * 100)
+    const wrongQuestions = completedSession
+      ? completedSession.answers
+          .filter((a) => !a.correct)
+          .map((a) => questions.find((q) => q.id === a.questionId))
+          .filter((q): q is PastExamQuestionView => Boolean(q))
+          .sort((a, b) => a.questionNumber - b.questionNumber)
+      : []
+
     return (
       <div className="mx-auto max-w-md px-4 py-8">
         <div className="rounded-2xl border border-gray-100 bg-white p-6 text-center shadow-sm">
@@ -199,13 +383,32 @@ export default function PastExamRunner({
             <span className="text-xl text-gray-400"> / {total}問 正解</span>
           </p>
           <p className="mt-1 text-sm text-gray-500">正答率 {pct}%</p>
+
+          {wrongQuestions.length === 0 ? (
+            <p className="mt-5 text-sm font-bold text-green-700">全問正解</p>
+          ) : (
+            <div className="mt-5 text-left">
+              <p className="text-sm font-bold text-gray-700">間違えた問題　{wrongQuestions.length}問</p>
+              <WrongQuestionChips questions={wrongQuestions} />
+            </div>
+          )}
+
           <div className="mt-6 space-y-2.5">
+            {wrongQuestions.length > 0 && (
+              <button
+                type="button"
+                onClick={() => handleStartReview(wrongQuestions)}
+                className="block w-full rounded-xl bg-green-600 px-5 py-3.5 text-sm font-bold text-white hover:bg-green-700"
+              >
+                間違えた{wrongQuestions.length}問を復習
+              </button>
+            )}
             <button
               type="button"
               onClick={handleRetry}
-              className="block w-full rounded-xl bg-green-600 px-5 py-3.5 text-sm font-bold text-white hover:bg-green-700"
+              className="block w-full rounded-xl border border-gray-200 bg-white px-5 py-3.5 text-sm font-bold text-gray-700 hover:border-green-300"
             >
-              もう一度解く
+              もう一度180問解く
             </button>
             <Link
               href="/past-exams"
@@ -219,8 +422,8 @@ export default function PastExamRunner({
     )
   }
 
-  /* ── 出題画面（1問1画面） ──────────────────── */
-  const q = questions[index]
+  /* ── 出題画面（1問1画面。通常演習・苦手復習の両方でこのブロックを共用する） ── */
+  const q = activeQuestions[index]
   const acceptedIndexes = getAcceptedAnswerIndexes(q)
   const correct = answered && selected !== null && isPastExamAnswerCorrect(q, selected)
   const tName = themeName(q.themeId)
@@ -229,13 +432,15 @@ export default function PastExamRunner({
     <div className="mx-auto max-w-md px-4 pb-28 pt-4">
       <div className="mb-4">
         <div className="flex items-center justify-between text-xs text-gray-500">
-          <span className="font-semibold text-gray-700">第{round}回　問{q.questionNumber}</span>
-          <span>{index + 1} / {total}問</span>
+          <span className="font-semibold text-gray-700">
+            {isReview ? '苦手復習' : `第${round}回`}　問{q.questionNumber}
+          </span>
+          <span>{index + 1} / {activeTotal}問</span>
         </div>
         <div className="mt-1.5 h-1.5 w-full rounded-full bg-gray-100">
           <div
             className="h-1.5 rounded-full bg-green-500 transition-all"
-            style={{ width: `${((index + (answered ? 1 : 0)) / total) * 100}%` }}
+            style={{ width: `${((index + (answered ? 1 : 0)) / activeTotal) * 100}%` }}
           />
         </div>
       </div>
@@ -315,7 +520,7 @@ export default function PastExamRunner({
             onClick={handleNext}
             className="mt-4 w-full rounded-xl bg-gray-900 px-5 py-4 text-base font-bold text-white hover:bg-gray-800"
           >
-            {index + 1 >= total ? '結果を見る' : '次の問題 →'}
+            {index + 1 >= activeTotal ? '結果を見る' : '次の問題 →'}
           </button>
         </div>
       )}
