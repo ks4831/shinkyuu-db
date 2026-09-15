@@ -2998,5 +2998,605 @@
     "sourceOrg": "公益財団法人 東洋療法研修試験財団",
     "sourceReliability": "indexed_official",
     "verifiedAt": "2026-09-15"
+  },
+  {
+    "id": "31-151",
+    "examRound": 31,
+    "questionNumber": 151,
+    "questionText": "次の文で示す症例について、問題151、問題152の問いに答えよ。「47歳の女性。頭痛が続き、いらだちがある。耳鳴りもあり受診した。口苦があり、睡眠が浅い。昨年に閉経。舌は紅、脈は弦数、腹は胸脇苦満を認める。」\n\n内分泌検査で血中濃度が基準値より高いのはどれか。",
+    "choices": [
+      "バソプレシン",
+      "ゴナドトロピン",
+      "エストラジオール",
+      "プロスタグランジン"
+    ],
+    "answerIndex": 1,
+    "explanation": "閉経後は卵巣機能低下によりエストロゲン分泌が低下し、視床下部・下垂体へのネガティブフィードバックが減弱するため、下垂体からのゴナドトロピン（FSH・LH）分泌が代償性に上昇する。バソプレシン・エストラジオール・プロスタグランジンは本症例の閉経後の内分泌変化を直接説明しない。",
+    "hasFigure": false,
+    "source": "第31回 はり師・きゅう師国家試験",
+    "sourceUrl": "https://ahaki.or.jp/wordpress/wp-content/uploads/mondai_31_harikyu_pm.pdf",
+    "sourceOrg": "公益財団法人 東洋療法研修試験財団",
+    "sourceReliability": "indexed_official",
+    "verifiedAt": "2026-09-15"
+  },
+  {
+    "id": "31-152",
+    "examRound": 31,
+    "questionNumber": 152,
+    "questionText": "次の文で示す症例について、問題151、問題152の問いに答えよ。「47歳の女性。頭痛が続き、いらだちがある。耳鳴りもあり受診した。口苦があり、睡眠が浅い。昨年に閉経。舌は紅、脈は弦数、腹は胸脇苦満を認める。」\n\n病証として最も適切なのはどれか。",
+    "choices": [
+      "腎気虚",
+      "心脾両虚",
+      "心腎不交",
+      "肝火亢進"
+    ],
+    "answerIndex": 3,
+    "explanation": "頭痛・いらだち・耳鳴り・口苦・睡眠が浅い・舌紅・脈弦数・胸脇苦満はいずれも肝火上炎（肝火亢進）に特徴的な症候であり、本症例に最も適切な病証である。腎気虚・心脾両虚・心腎不交はそれぞれ異なる症候パターンを呈する。",
+    "hasFigure": false,
+    "source": "第31回 はり師・きゅう師国家試験",
+    "sourceUrl": "https://ahaki.or.jp/wordpress/wp-content/uploads/mondai_31_harikyu_pm.pdf",
+    "sourceOrg": "公益財団法人 東洋療法研修試験財団",
+    "sourceReliability": "indexed_official",
+    "verifiedAt": "2026-09-15"
+  },
+  {
+    "id": "31-153",
+    "examRound": 31,
+    "questionNumber": 153,
+    "questionText": "次の文で示す症例について、問題153、問題154の問いに答えよ。「40歳の男性。右腰下肢が痛み、右足部外側にしびれがある。アキレス腱反射減弱、下肢伸展挙上テスト陽性。」\n\n施術対象となる神経根として最も適切なのはどれか。",
+    "choices": [
+      "L3",
+      "L4",
+      "L5",
+      "S1"
+    ],
+    "answerIndex": 3,
+    "explanation": "足部外側のしびれとアキレス腱反射（S1支配）の減弱、下肢伸展挙上テスト陽性は、S1神経根症状（腰椎椎間板ヘルニア等）に特徴的な所見である。L3・L4・L5神経根では、それぞれ異なる皮膚分節・反射異常を呈する。",
+    "hasFigure": false,
+    "source": "第31回 はり師・きゅう師国家試験",
+    "sourceUrl": "https://ahaki.or.jp/wordpress/wp-content/uploads/mondai_31_harikyu_pm.pdf",
+    "sourceOrg": "公益財団法人 東洋療法研修試験財団",
+    "sourceReliability": "indexed_official",
+    "verifiedAt": "2026-09-15"
+  },
+  {
+    "id": "31-154",
+    "examRound": 31,
+    "questionNumber": 154,
+    "questionText": "次の文で示す症例について、問題153、問題154の問いに答えよ。「40歳の男性。右腰下肢が痛み、右足部外側にしびれがある。アキレス腱反射減弱、下肢伸展挙上テスト陽性。」\n\n筋力が最も低下する筋はどれか。",
+    "choices": [
+      "中殿筋",
+      "前脛骨筋",
+      "大腿四頭筋",
+      "長母指屈筋"
+    ],
+    "answerIndex": 3,
+    "explanation": "S1神経根症状では、S1支配の長母指屈筋（下腿三頭筋とともにS1由来）の筋力低下が特徴的である。中殿筋・前脛骨筋（主にL5支配）、大腿四頭筋（主にL3・L4支配）は、それぞれ異なる神経根の障害で筋力低下がみられる。",
+    "hasFigure": false,
+    "source": "第31回 はり師・きゅう師国家試験",
+    "sourceUrl": "https://ahaki.or.jp/wordpress/wp-content/uploads/mondai_31_harikyu_pm.pdf",
+    "sourceOrg": "公益財団法人 東洋療法研修試験財団",
+    "sourceReliability": "indexed_official",
+    "verifiedAt": "2026-09-15"
+  },
+  {
+    "id": "31-155",
+    "examRound": 31,
+    "questionNumber": 155,
+    "questionText": "次の文で示す症例について、問題155、問題156の問いに答えよ。「47歳の女性。主訴は左顔面の麻痺。2週間前に腹痛、下腿前面の痛みとともに発症。現在は下腿内側の重だるさ、軟便を伴う。」\n\n原絡表裏配穴法で主証に対応する経穴の部位にあるのはどれか。",
+    "choices": [
+      "足背動脈",
+      "後脛骨動脈",
+      "母指外転筋腱",
+      "前脛骨筋腱"
+    ],
+    "answerIndex": 0,
+    "explanation": "顔面は陽明経が主る（陽明主面）とされ、本症例の主証は足陽明胃経ととらえられる。原絡配穴法では主証の経（胃経）の原穴を用いるため、胃経原穴の衝陽（足背動脈拍動部）が対応する。後脛骨動脈・母指外転筋腱・前脛骨筋腱は、それぞれ脾経・胃経の他の特定穴の目安となる部位である。",
+    "hasFigure": false,
+    "source": "第31回 はり師・きゅう師国家試験",
+    "sourceUrl": "https://ahaki.or.jp/wordpress/wp-content/uploads/mondai_31_harikyu_pm.pdf",
+    "sourceOrg": "公益財団法人 東洋療法研修試験財団",
+    "sourceReliability": "indexed_official",
+    "verifiedAt": "2026-09-15"
+  },
+  {
+    "id": "31-156",
+    "examRound": 31,
+    "questionNumber": 156,
+    "questionText": "次の文で示す症例について、問題155、問題156の問いに答えよ。「47歳の女性。主訴は左顔面の麻痺。2週間前に腹痛、下腿前面の痛みとともに発症。現在は下腿内側の重だるさ、軟便を伴う。」\n\n発症から4か月後、口輪筋を収縮させると左の眼輪筋も収縮する病的共同運動が出現した。両筋に対して30mmのステンレス鍼で鍼通電療法を行う場合、最も適切なのはどれか。",
+    "choices": [
+      "20号鍼を用いる。",
+      "鍼体はすべて刺入する。",
+      "周波数は1Hzとする。",
+      "両筋が同期的リズムで収縮するように通電する。"
+    ],
+    "answerIndex": 0,
+    "explanation": "顔面の表情筋は薄く繊細なため、鍼通電では細い号数の鍼を選択し、必要最小限の刺激にとどめることが望ましい。鍼体をすべて刺入すると深部組織を損傷する危険がある。病的共同運動がみられる症例で両筋を同期的リズムで収縮させる通電を行うと、異常な同時収縮パターンをかえって助長するおそれがあるため避けるべきである。",
+    "hasFigure": false,
+    "source": "第31回 はり師・きゅう師国家試験",
+    "sourceUrl": "https://ahaki.or.jp/wordpress/wp-content/uploads/mondai_31_harikyu_pm.pdf",
+    "sourceOrg": "公益財団法人 東洋療法研修試験財団",
+    "sourceReliability": "indexed_official",
+    "verifiedAt": "2026-09-15"
+  },
+  {
+    "id": "31-157",
+    "examRound": 31,
+    "questionNumber": 157,
+    "questionText": "次の文で示す症例について、問題157、問題158の問いに答えよ。「18歳の女性。新体操の選手で毎日の激しい練習と無理なダイエットをしていたら月経が止まった。近医で、利用できるエネルギー不足が原因の運動性無月経と言われた。」\n\n同じ原因で起こる合併症として最も考えられるのはどれか。",
+    "choices": [
+      "子宮筋腫",
+      "骨粗鬆症",
+      "円形脱毛症",
+      "過敏性腸症候群"
+    ],
+    "answerIndex": 1,
+    "explanation": "利用可能エネルギー不足による運動性無月経は、エストロゲン低下を伴い、月経異常・骨密度低下とともに『女性アスリートの三主徴（Female Athlete Triad）』の一つである骨粗鬆症を合併しやすい。子宮筋腫・円形脱毛症・過敏性腸症候群は、本症例の病態と直接関連しない。",
+    "hasFigure": false,
+    "source": "第31回 はり師・きゅう師国家試験",
+    "sourceUrl": "https://ahaki.or.jp/wordpress/wp-content/uploads/mondai_31_harikyu_pm.pdf",
+    "sourceOrg": "公益財団法人 東洋療法研修試験財団",
+    "sourceReliability": "indexed_official",
+    "verifiedAt": "2026-09-15"
+  },
+  {
+    "id": "31-158",
+    "examRound": 31,
+    "questionNumber": 158,
+    "questionText": "次の文で示す症例について、問題157、問題158の問いに答えよ。「18歳の女性。新体操の選手で毎日の激しい練習と無理なダイエットをしていたら月経が止まった。近医で、利用できるエネルギー不足が原因の運動性無月経と言われた。」\n\n無月経に対し、胞宮から起こる経脈に治療する場合、最も適切な奇経はどれか。",
+    "choices": [
+      "衝脈",
+      "帯脈",
+      "陰維脈",
+      "陰蹻脈"
+    ],
+    "answerIndex": 0,
+    "explanation": "衝脈は任脈とともに胞中（胞宮）に起こるとされ（『霊枢』）、十二経脈の血を蓄える『血海』として月経と密接に関わる奇経である。帯脈は腰部を横走して他経を束ねる働き、陰維脈・陰蹻脈はそれぞれ異なる機能を持ち、胞宮に起こる経脈ではない。",
+    "hasFigure": false,
+    "source": "第31回 はり師・きゅう師国家試験",
+    "sourceUrl": "https://ahaki.or.jp/wordpress/wp-content/uploads/mondai_31_harikyu_pm.pdf",
+    "sourceOrg": "公益財団法人 東洋療法研修試験財団",
+    "sourceReliability": "indexed_official",
+    "verifiedAt": "2026-09-15"
+  },
+  {
+    "id": "31-159",
+    "examRound": 31,
+    "questionNumber": 159,
+    "questionText": "次の文で示す症例について、問題159、問題160の問いに答えよ。「40歳の女性。仕事でパソコン作業が多く、午後から締め付けられるような両側性の頭痛を発症する。頭痛は非拍動性で悪心・嘔吐はない。飲酒で増悪しない。」\n\n考えられる疾患はどれか。",
+    "choices": [
+      "片頭痛",
+      "群発頭痛",
+      "緊張型頭痛",
+      "三叉神経・自律神経性頭痛"
+    ],
+    "answerIndex": 2,
+    "explanation": "両側性・非拍動性で締め付けられるような頭痛で、悪心・嘔吐を伴わず飲酒で増悪しない点は緊張型頭痛に典型的な特徴である。片頭痛は拍動性で悪心・嘔吐を伴いやすく、群発頭痛・三叉神経自律神経性頭痛は片側性で自律神経症状や飲酒による誘発を伴うことが多い。",
+    "hasFigure": false,
+    "source": "第31回 はり師・きゅう師国家試験",
+    "sourceUrl": "https://ahaki.or.jp/wordpress/wp-content/uploads/mondai_31_harikyu_pm.pdf",
+    "sourceOrg": "公益財団法人 東洋療法研修試験財団",
+    "sourceReliability": "indexed_official",
+    "verifiedAt": "2026-09-15"
+  },
+  {
+    "id": "31-160",
+    "examRound": 31,
+    "questionNumber": 160,
+    "questionText": "次の文で示す症例について、問題159、問題160の問いに答えよ。「40歳の女性。仕事でパソコン作業が多く、午後から締め付けられるような両側性の頭痛を発症する。頭痛は非拍動性で悪心・嘔吐はない。飲酒で増悪しない。」\n\n生活指導で最も適切なのはどれか。",
+    "choices": [
+      "入浴はシャワーのみで済ませる。",
+      "枕の高さは今よりも高くする。",
+      "後頭部をホットタオルで温める。",
+      "パソコン作業では同一姿勢を維持する。"
+    ],
+    "answerIndex": 2,
+    "explanation": "緊張型頭痛は筋緊張の緩和が有効であり、後頭部・頸部を温めることで血行を促し症状の緩和が期待できる。シャワーのみで湯船に浸からないことや、枕を高くして頸部の緊張を強めること、長時間同一姿勢を続けることはいずれも症状を悪化させうるため適切でない。",
+    "hasFigure": false,
+    "source": "第31回 はり師・きゅう師国家試験",
+    "sourceUrl": "https://ahaki.or.jp/wordpress/wp-content/uploads/mondai_31_harikyu_pm.pdf",
+    "sourceOrg": "公益財団法人 東洋療法研修試験財団",
+    "sourceReliability": "indexed_official",
+    "verifiedAt": "2026-09-15"
+  },
+  {
+    "id": "31-161",
+    "examRound": 31,
+    "questionNumber": 161,
+    "questionText": "2寸5番鍼を使用し、皮膚面に対し直刺で鍼体長の半分まで刺入したときの深度はどれか。",
+    "choices": [
+      "20 mm",
+      "25 mm",
+      "30 mm",
+      "35 mm"
+    ],
+    "answerIndex": 2,
+    "explanation": "2寸の毫鍼は鍼体長が約60mmであるため、その半分まで直刺で刺入した場合の深度は30mmとなる。",
+    "hasFigure": false,
+    "source": "第31回 はり師・きゅう師国家試験",
+    "sourceUrl": "https://ahaki.or.jp/wordpress/wp-content/uploads/mondai_31_harikyu_pm.pdf",
+    "sourceOrg": "公益財団法人 東洋療法研修試験財団",
+    "sourceReliability": "indexed_official",
+    "verifiedAt": "2026-09-15"
+  },
+  {
+    "id": "31-162",
+    "examRound": 31,
+    "questionNumber": 162,
+    "questionText": "松葉形の鍼尖形状について正しいのはどれか。",
+    "choices": [
+      "スリオロシ形と柳葉形の中間",
+      "ノゲ形と卵形の中間",
+      "卵形とスリオロシ形の中間",
+      "柳葉形とノゲ形の中間"
+    ],
+    "answerIndex": 1,
+    "explanation": "鍼尖形状の分類において、松葉形は最も鈍な卵形と最も鋭いノゲ形の中間に位置する形状とされる。",
+    "hasFigure": false,
+    "source": "第31回 はり師・きゅう師国家試験",
+    "sourceUrl": "https://ahaki.or.jp/wordpress/wp-content/uploads/mondai_31_harikyu_pm.pdf",
+    "sourceOrg": "公益財団法人 東洋療法研修試験財団",
+    "sourceReliability": "indexed_official",
+    "verifiedAt": "2026-09-15"
+  },
+  {
+    "id": "31-163",
+    "examRound": 31,
+    "questionNumber": 163,
+    "questionText": "機械刺激と温熱刺激を同時に与える特殊鍼法はどれか。",
+    "choices": [
+      "小児鍼法",
+      "灸頭鍼法",
+      "皮内鍼法",
+      "鍼通電療法"
+    ],
+    "answerIndex": 1,
+    "explanation": "灸頭鍼法は鍼柄に艾を付けて燃焼させる特殊鍼法であり、鍼による機械的刺激と艾の燃焼による温熱刺激を同時に与えることができる。小児鍼法は接触・摩擦を主とした非侵入的手技、皮内鍼法は皮内への浅い刺入、鍼通電療法は電気刺激を主とする方法である。",
+    "hasFigure": false,
+    "source": "第31回 はり師・きゅう師国家試験",
+    "sourceUrl": "https://ahaki.or.jp/wordpress/wp-content/uploads/mondai_31_harikyu_pm.pdf",
+    "sourceOrg": "公益財団法人 東洋療法研修試験財団",
+    "sourceReliability": "indexed_official",
+    "verifiedAt": "2026-09-15"
+  },
+  {
+    "id": "31-164",
+    "examRound": 31,
+    "questionNumber": 164,
+    "questionText": "クリーン・ニードル・テクニックの説明として最も適切なのはどれか。",
+    "choices": [
+      "手指を逆性石けんで入念に洗浄する。",
+      "刺鍼局所をアルコール綿で清拭消毒する。",
+      "鍼体に直接触れずに一連の刺鍼操作を行う。",
+      "使用後のアルコール綿を感染性廃棄物として取り扱う。"
+    ],
+    "answerIndex": 2,
+    "explanation": "クリーン・ニードル・テクニック（CNT）は、鍼体に直接触れずに刺鍼操作を行うことで鍼の無菌性を保つ技術であり、単回使用鍼と組み合わせて感染対策の基本となる。手指洗浄・局所消毒・廃棄物処理はいずれも感染対策の一部ではあるが、CNTそのものの定義ではない。",
+    "hasFigure": false,
+    "source": "第31回 はり師・きゅう師国家試験",
+    "sourceUrl": "https://ahaki.or.jp/wordpress/wp-content/uploads/mondai_31_harikyu_pm.pdf",
+    "sourceOrg": "公益財団法人 東洋療法研修試験財団",
+    "sourceReliability": "indexed_official",
+    "verifiedAt": "2026-09-15"
+  },
+  {
+    "id": "31-165",
+    "examRound": 31,
+    "questionNumber": 165,
+    "questionText": "主にC線維終末にある皮膚の受容器はどれか。",
+    "choices": [
+      "パチニ小体",
+      "マイスナー小体",
+      "高閾値機械受容器",
+      "ポリモーダル受容器"
+    ],
+    "answerIndex": 3,
+    "explanation": "ポリモーダル受容器は機械的・熱的・化学的刺激のいずれにも反応する侵害受容器であり、伝導速度の遅い無髄のC線維終末に存在する。パチニ小体・マイスナー小体は有髄の太い線維に接続する機械受容器、高閾値機械受容器は主にAδ線維に接続する。",
+    "hasFigure": false,
+    "source": "第31回 はり師・きゅう師国家試験",
+    "sourceUrl": "https://ahaki.or.jp/wordpress/wp-content/uploads/mondai_31_harikyu_pm.pdf",
+    "sourceOrg": "公益財団法人 東洋療法研修試験財団",
+    "sourceReliability": "indexed_official",
+    "verifiedAt": "2026-09-15"
+  },
+  {
+    "id": "31-166",
+    "examRound": 31,
+    "questionNumber": 166,
+    "questionText": "痛みの識別に関与する中枢内伝導路はどれか。",
+    "choices": [
+      "後索路",
+      "新脊髄視床路",
+      "前脊髄視床路",
+      "脊髄網様体路"
+    ],
+    "answerIndex": 1,
+    "explanation": "新脊髄視床路は視床の特殊核（後外側腹側核）を経て大脳皮質体性感覚野に投射し、痛みの部位や性質を識別する機能を担う。後索路は識別性触覚・深部感覚、前脊髄視床路・脊髄網様体路は主に痛みの情動的・覚醒的側面に関与する。",
+    "hasFigure": false,
+    "source": "第31回 はり師・きゅう師国家試験",
+    "sourceUrl": "https://ahaki.or.jp/wordpress/wp-content/uploads/mondai_31_harikyu_pm.pdf",
+    "sourceOrg": "公益財団法人 東洋療法研修試験財団",
+    "sourceReliability": "indexed_official",
+    "verifiedAt": "2026-09-15"
+  },
+  {
+    "id": "31-167",
+    "examRound": 31,
+    "questionNumber": 167,
+    "questionText": "四肢や体幹からの痛覚情報を伝える三次ニューロンが局在するのはどれか。",
+    "choices": [
+      "赤核",
+      "尾状核",
+      "レンズ核",
+      "視床後外側腹側核"
+    ],
+    "answerIndex": 3,
+    "explanation": "脊髄視床路による痛覚伝導路では、視床後外側腹側核（VPL）が三次ニューロンの細胞体が局在する中継核であり、大脳皮質体性感覚野へ投射する。赤核・尾状核・レンズ核は主に運動系に関与する核である。",
+    "hasFigure": false,
+    "source": "第31回 はり師・きゅう師国家試験",
+    "sourceUrl": "https://ahaki.or.jp/wordpress/wp-content/uploads/mondai_31_harikyu_pm.pdf",
+    "sourceOrg": "公益財団法人 東洋療法研修試験財団",
+    "sourceReliability": "indexed_official",
+    "verifiedAt": "2026-09-15"
+  },
+  {
+    "id": "31-168",
+    "examRound": 31,
+    "questionNumber": 168,
+    "questionText": "刺鍼により起こる軸索反射について正しいのはどれか。",
+    "choices": [
+      "血漿が漏出する。",
+      "内因性オピオイドが関与する。",
+      "単シナプス反射によって生じる。",
+      "広作動域ニューロンが関与する。"
+    ],
+    "answerIndex": 0,
+    "explanation": "軸索反射は、刺激を受けたC線維の興奮が逆行性に周辺の分枝へ伝わり、サブスタンスPやCGRPなどの神経ペプチドが遊離されて血管拡張・血漿漏出（発赤・フレア形成）を引き起こす末梢性の反応である。内因性オピオイド・単シナプス反射・広作動域ニューロンは、いずれも中枢性の鎮痛機序や脊髄反射に関わる概念であり、軸索反射とは異なる。",
+    "hasFigure": false,
+    "source": "第31回 はり師・きゅう師国家試験",
+    "sourceUrl": "https://ahaki.or.jp/wordpress/wp-content/uploads/mondai_31_harikyu_pm.pdf",
+    "sourceOrg": "公益財団法人 東洋療法研修試験財団",
+    "sourceReliability": "indexed_official",
+    "verifiedAt": "2026-09-15"
+  },
+  {
+    "id": "31-169",
+    "examRound": 31,
+    "questionNumber": 169,
+    "questionText": "広汎性侵害抑制調節の特徴について正しいのはどれか。",
+    "choices": [
+      "Ⅱ群線維の興奮で作動する。",
+      "効果発現に時間がかかる。",
+      "全身性に効果が出現する。",
+      "下行性ニューロンが脊髄前角細胞を抑制する。"
+    ],
+    "answerIndex": 2,
+    "explanation": "広汎性侵害抑制調節（DNIC）は、身体の一部への侵害刺激が脊髄後角の広作動域ニューロンを全身性に抑制する現象であり、比較的速やかに発現する。Aδ線維・C線維などの侵害受容線維の興奮によって作動し、抑制の対象は脊髄後角の感覚ニューロンであって脊髄前角の運動ニューロンではない。",
+    "hasFigure": false,
+    "source": "第31回 はり師・きゅう師国家試験",
+    "sourceUrl": "https://ahaki.or.jp/wordpress/wp-content/uploads/mondai_31_harikyu_pm.pdf",
+    "sourceOrg": "公益財団法人 東洋療法研修試験財団",
+    "sourceReliability": "indexed_official",
+    "verifiedAt": "2026-09-15"
+  },
+  {
+    "id": "31-170",
+    "examRound": 31,
+    "questionNumber": 170,
+    "questionText": "ストレス刺激による交感神経活動亢進反応はどれか。",
+    "choices": [
+      "深部体温上昇",
+      "気管支収縮",
+      "心拍数減少",
+      "血糖値低下"
+    ],
+    "answerIndex": 0,
+    "explanation": "交感神経活動の亢進は代謝・熱産生を促進するため深部体温は上昇する。一方、交感神経の亢進は気管支拡張・心拍数増加・血糖値上昇（グリコーゲン分解促進）を引き起こすため、気管支収縮・心拍数減少・血糖値低下はいずれも交感神経活動亢進の反応として誤りである。",
+    "hasFigure": false,
+    "source": "第31回 はり師・きゅう師国家試験",
+    "sourceUrl": "https://ahaki.or.jp/wordpress/wp-content/uploads/mondai_31_harikyu_pm.pdf",
+    "sourceOrg": "公益財団法人 東洋療法研修試験財団",
+    "sourceReliability": "indexed_official",
+    "verifiedAt": "2026-09-15"
+  },
+  {
+    "id": "31-171",
+    "examRound": 31,
+    "questionNumber": 171,
+    "questionText": "艾の製造工程で艾葉から毛茸を剥離するのに用いるのはどれか。",
+    "choices": [
+      "裁断機",
+      "石臼",
+      "けんどん",
+      "唐箕"
+    ],
+    "answerIndex": 1,
+    "explanation": "艾の製造では、乾燥させた艾葉を石臼で搗くことで葉肉組織を粉砕し、毛茸（もぐさの繊維分）を葉肉から剥離させる。唐箕（とうみ）はその後の工程で、剥離済みの毛茸と葉肉くずを風力で選別する送風装置であり、剥離そのものには用いない。裁断機・けんどんは艾の製造工程における毛茸の剥離には用いない。",
+    "hasFigure": false,
+    "source": "第31回 はり師・きゅう師国家試験",
+    "sourceUrl": "https://ahaki.or.jp/wordpress/wp-content/uploads/mondai_31_harikyu_pm.pdf",
+    "sourceOrg": "公益財団法人 東洋療法研修試験財団",
+    "sourceReliability": "indexed_official",
+    "verifiedAt": "2026-09-15"
+  },
+  {
+    "id": "31-172",
+    "examRound": 31,
+    "questionNumber": 172,
+    "questionText": "施灸に用いる線香について誤っているのはどれか。",
+    "choices": [
+      "原料にはタブ粉を用いる。",
+      "生産量が最も多いのは兵庫県である。",
+      "湿気を含むと折れにくい。",
+      "途中で消えないものが望ましい。"
+    ],
+    "answerIndex": 2,
+    "explanation": "線香は湿気を含むと粘りが失われ、かえって折れやすく品質が低下する。原料にタブ（クスノキ科タブノキ）の樹皮粉末を粘結剤として用いること、兵庫県（淡路島）が線香の生産量日本一であること、施灸中に途中で消えないことが望ましいことは、いずれも正しい記述である。",
+    "hasFigure": false,
+    "source": "第31回 はり師・きゅう師国家試験",
+    "sourceUrl": "https://ahaki.or.jp/wordpress/wp-content/uploads/mondai_31_harikyu_pm.pdf",
+    "sourceOrg": "公益財団法人 東洋療法研修試験財団",
+    "sourceReliability": "indexed_official",
+    "verifiedAt": "2026-09-15"
+  },
+  {
+    "id": "31-173",
+    "examRound": 31,
+    "questionNumber": 173,
+    "questionText": "知熱灸について誤っているのはどれか。",
+    "choices": [
+      "無痕灸の一つである。",
+      "患者が熱さを感じたら取り除く。",
+      "虚弱者にも適応となる。",
+      "施灸部にⅡ度熱傷が生じる。"
+    ],
+    "answerIndex": 3,
+    "explanation": "知熱灸は、患者が熱さを感じた時点で艾炷を取り除く無痕灸の一種であり、刺激量を調整しやすいため虚弱者にも適応できる。皮膚を焼灼しきる前に除去するため、施灸部にⅡ度熱傷が生じることは通常なく、この記述が誤りである。",
+    "hasFigure": false,
+    "source": "第31回 はり師・きゅう師国家試験",
+    "sourceUrl": "https://ahaki.or.jp/wordpress/wp-content/uploads/mondai_31_harikyu_pm.pdf",
+    "sourceOrg": "公益財団法人 東洋療法研修試験財団",
+    "sourceReliability": "indexed_official",
+    "verifiedAt": "2026-09-15"
+  },
+  {
+    "id": "31-174",
+    "examRound": 31,
+    "questionNumber": 174,
+    "questionText": "灸あたりの予防として最も適切なのはどれか。",
+    "choices": [
+      "艾炷のひねりを硬くする。",
+      "艾炷の底面を広くする。",
+      "刺激量の少ない灸法を選択する。",
+      "施灸後の皮膚消毒を念入りに行う。"
+    ],
+    "answerIndex": 2,
+    "explanation": "灸あたり（過度な施灸刺激による全身倦怠感等の反応）を予防するには、刺激量の少ない灸法を選択し、過剰な刺激を避けることが最も適切である。艾炷のひねりを硬くする、底面を広くすることはいずれも刺激量を増大させる方向であり、皮膚消毒は感染予防には有効だが灸あたりの予防には直接関与しない。",
+    "hasFigure": false,
+    "source": "第31回 はり師・きゅう師国家試験",
+    "sourceUrl": "https://ahaki.or.jp/wordpress/wp-content/uploads/mondai_31_harikyu_pm.pdf",
+    "sourceOrg": "公益財団法人 東洋療法研修試験財団",
+    "sourceReliability": "indexed_official",
+    "verifiedAt": "2026-09-15"
+  },
+  {
+    "id": "31-175",
+    "examRound": 31,
+    "questionNumber": 175,
+    "questionText": "痛みを伴う熱刺激を伝導するのはどれか。",
+    "choices": [
+      "Aα線維",
+      "Aβ線維",
+      "Aγ線維",
+      "Aδ線維"
+    ],
+    "answerIndex": 3,
+    "explanation": "Aδ線維は有髄で伝導速度が比較的速く、機械的侵害刺激や痛みを伴う熱刺激（一次痛・鋭い痛み）を伝導する。Aα線維は骨格筋の運動・固有感覚、Aβ線維は触圧覚、Aγ線維は筋紡錘の運動系を担う。",
+    "hasFigure": false,
+    "source": "第31回 はり師・きゅう師国家試験",
+    "sourceUrl": "https://ahaki.or.jp/wordpress/wp-content/uploads/mondai_31_harikyu_pm.pdf",
+    "sourceOrg": "公益財団法人 東洋療法研修試験財団",
+    "sourceReliability": "indexed_official",
+    "verifiedAt": "2026-09-15"
+  },
+  {
+    "id": "31-176",
+    "examRound": 31,
+    "questionNumber": 176,
+    "questionText": "灸による温熱刺激の受容・伝導について正しいのはどれか。",
+    "choices": [
+      "カプサイシン受容体（TRPV1受容体）が応答する。",
+      "Ⅱ群線維によって伝導される。",
+      "温度感覚は順応が起こりにくい。",
+      "熱痛情報は脊髄後索を上行する。"
+    ],
+    "answerIndex": 0,
+    "explanation": "TRPV1受容体（カプサイシン受容体）は43℃以上の熱刺激で活性化する温度受容チャネルであり、灸による温熱刺激の受容に関与する。熱痛情報は主にAδ線維・C線維によって伝導され（Ⅱ群線維ではない）、温度感覚は順応が起こりやすく、熱痛情報は脊髄後索ではなく脊髄視床路を上行する。",
+    "hasFigure": false,
+    "source": "第31回 はり師・きゅう師国家試験",
+    "sourceUrl": "https://ahaki.or.jp/wordpress/wp-content/uploads/mondai_31_harikyu_pm.pdf",
+    "sourceOrg": "公益財団法人 東洋療法研修試験財団",
+    "sourceReliability": "indexed_official",
+    "verifiedAt": "2026-09-15"
+  },
+  {
+    "id": "31-177",
+    "examRound": 31,
+    "questionNumber": 177,
+    "questionText": "血管に対し収縮性に作用する物質はどれか。",
+    "choices": [
+      "NO",
+      "CGRP",
+      "アデノシン",
+      "ノルアドレナリン"
+    ],
+    "answerIndex": 3,
+    "explanation": "ノルアドレナリンは血管平滑筋のα受容体に作用して血管収縮を引き起こす。NO（一酸化窒素）・CGRP・アデノシンはいずれも血管拡張性に作用する物質である。",
+    "hasFigure": false,
+    "source": "第31回 はり師・きゅう師国家試験",
+    "sourceUrl": "https://ahaki.or.jp/wordpress/wp-content/uploads/mondai_31_harikyu_pm.pdf",
+    "sourceOrg": "公益財団法人 東洋療法研修試験財団",
+    "sourceReliability": "indexed_official",
+    "verifiedAt": "2026-09-15"
+  },
+  {
+    "id": "31-178",
+    "examRound": 31,
+    "questionNumber": 178,
+    "questionText": "施灸刺激の早期より肥満細胞から放出されるのはどれか。",
+    "choices": [
+      "IgE",
+      "補体",
+      "ヒスタミン",
+      "アドレナリン"
+    ],
+    "answerIndex": 2,
+    "explanation": "肥満細胞は熱刺激等による脱顆粒の早期からヒスタミンを放出し、血管拡張や発赤などの局所炎症反応を引き起こす。IgEは肥満細胞表面の受容体に結合する抗体であって放出される物質ではなく、補体・アドレナリンは肥満細胞の脱顆粒産物ではない。",
+    "hasFigure": false,
+    "source": "第31回 はり師・きゅう師国家試験",
+    "sourceUrl": "https://ahaki.or.jp/wordpress/wp-content/uploads/mondai_31_harikyu_pm.pdf",
+    "sourceOrg": "公益財団法人 東洋療法研修試験財団",
+    "sourceReliability": "indexed_official",
+    "verifiedAt": "2026-09-15"
+  },
+  {
+    "id": "31-179",
+    "examRound": 31,
+    "questionNumber": 179,
+    "questionText": "灸療法の治療的作用において、細網内皮系の機能亢進に関与するのはどれか。",
+    "choices": [
+      "調整作用",
+      "鎮痛作用",
+      "転調作用",
+      "防衛作用"
+    ],
+    "answerIndex": 3,
+    "explanation": "灸の防衛作用（生体防御機能の亢進）は、白血球の貪食能や細網内皮系の機能を高めることで生体防御力を向上させる作用とされる。調整作用は自律神経・内臓機能の調整、鎮痛作用は痛みの緩和、転調作用は体質改善的な作用を指す。",
+    "hasFigure": false,
+    "source": "第31回 はり師・きゅう師国家試験",
+    "sourceUrl": "https://ahaki.or.jp/wordpress/wp-content/uploads/mondai_31_harikyu_pm.pdf",
+    "sourceOrg": "公益財団法人 東洋療法研修試験財団",
+    "sourceReliability": "indexed_official",
+    "verifiedAt": "2026-09-15"
+  },
+  {
+    "id": "31-180",
+    "examRound": 31,
+    "questionNumber": 180,
+    "questionText": "灸施術による局所炎症反応に最も関与するのはどれか。",
+    "choices": [
+      "ルフィニ終末興奮",
+      "Ⅰb線維興奮",
+      "インターロイキン6産生",
+      "カプサイシン産生"
+    ],
+    "answerIndex": 2,
+    "explanation": "灸による組織への熱侵害刺激は局所でインターロイキン6（IL-6）などの炎症性サイトカイン産生を誘導し、局所炎症反応に関与する。ルフィニ終末は低閾値機械受容器、Ⅰb線維はゴルジ腱器官からの感覚線維であり、いずれも炎症反応とは直接関係しない。カプサイシンは生体内で産生される物質ではなく、局所炎症反応の内因性メディエーターではない。",
+    "hasFigure": false,
+    "source": "第31回 はり師・きゅう師国家試験",
+    "sourceUrl": "https://ahaki.or.jp/wordpress/wp-content/uploads/mondai_31_harikyu_pm.pdf",
+    "sourceOrg": "公益財団法人 東洋療法研修試験財団",
+    "sourceReliability": "indexed_official",
+    "verifiedAt": "2026-09-15"
   }
 ]
