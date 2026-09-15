@@ -71,14 +71,15 @@ export default async function ThemeDetailPage({
     .map(id => getTheme(id))
     .filter(Boolean)
 
-  // 国家試験1,080問との themeId 接続から実データ算出
+  // 国家試験1,080問との themeId 接続から実データ算出。
+  // 出題実績の正本は exam-*.csv を themeId で集計した実データのみ（theme.count/examRounds/latestRound
+  // という Theme Master の手動値へはフォールバックしない。実績0件は0件のまま表示する）。
   const examStats = getThemeExamStats(theme.id)
   const quizCount = getThemeQuizCount(theme.id)
   const hasExamData = examStats.count > 0
-  // 表示に使う出題回リスト（実データ優先、無ければ data.ts の examRounds）
-  const roundsHit = hasExamData ? examStats.examRounds : theme.examRounds
+  const roundsHit = examStats.examRounds
   const appearedRounds = roundsHit.length
-  const latestRound = hasExamData ? examStats.latestRound : theme.latestRound
+  const latestRound = examStats.latestRound
   const maxPerRound = Math.max(1, ...allRounds.map(r => examStats.byRound[r] ?? 0))
 
   const priority = IMP_PRIORITY[theme.importance]
@@ -164,9 +165,9 @@ export default async function ThemeDetailPage({
       {/* Stats（国家試験1,080問との themeId 接続から算出） */}
       <div className="grid grid-cols-3 gap-3 mb-5">
         <div className="bg-white rounded-xl border border-gray-100 p-4 text-center">
-          <p className="text-xs text-gray-400 mb-1">{hasExamData ? '出題数（6年計）' : '出題回数'}</p>
-          <p className="text-2xl font-bold text-green-700">{hasExamData ? examStats.count : theme.count}</p>
-          <p className="text-xs text-gray-400">{hasExamData ? `${appearedRounds}回で出題` : '/ 6回'}</p>
+          <p className="text-xs text-gray-400 mb-1">{hasExamData ? '出題数（6年計）' : '出題実績'}</p>
+          <p className="text-2xl font-bold text-green-700">{examStats.count}</p>
+          <p className="text-xs text-gray-400">{hasExamData ? `${appearedRounds}回で出題` : '第29〜34回では出題なし'}</p>
         </div>
         <div className="bg-white rounded-xl border border-gray-100 p-4 text-center">
           <p className="text-xs text-gray-400 mb-1">直近出題</p>
@@ -248,8 +249,8 @@ export default async function ThemeDetailPage({
         <div className="grid grid-cols-6 gap-2">
           {allRounds.map(round => {
             const n = examStats.byRound[round] ?? 0
-            const hit = hasExamData ? n > 0 : theme.examRounds.includes(round)
-            const h = hasExamData ? (n > 0 ? Math.max(12, Math.round((n / maxPerRound) * 64)) : 3) : (hit ? 64 : 3)
+            const hit = n > 0
+            const h = hit ? Math.max(12, Math.round((n / maxPerRound) * 64)) : 3
             return (
               <div key={round} className="flex flex-col items-center gap-1">
                 <div className="w-full h-16 flex items-end justify-center">
@@ -259,7 +260,7 @@ export default async function ThemeDetailPage({
                   />
                 </div>
                 <span className={`text-xs font-semibold ${hit ? 'text-green-700' : 'text-gray-300'}`}>
-                  {hasExamData ? (n > 0 ? n : '—') : (hit ? '✓' : '—')}
+                  {hit ? n : '—'}
                 </span>
                 <span className="text-xs text-gray-500">第{round}回</span>
                 <span className="text-xs text-gray-400">{ROUND_YEAR[round]}</span>
@@ -296,7 +297,7 @@ export default async function ThemeDetailPage({
             ✓ 直近2年（第33・34回）でも出題されており、継続学習が推奨されます。
           </p>
         )}
-        {!isRecent && theme.count >= 4 && (
+        {!isRecent && appearedRounds >= 4 && (
           <p className="mt-2 text-xs font-semibold opacity-80">
             ⚠ 最近は出題が途絶えていますが、高頻度テーマのため復活に注意。
           </p>

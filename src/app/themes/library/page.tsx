@@ -1,6 +1,7 @@
 import type { Metadata } from 'next'
 import Link from 'next/link'
 import { themes, subjects } from '@/lib/data'
+import { getThemeExamStats } from '@/lib/themeStats'
 import ImportanceBadge from '@/components/ImportanceBadge'
 import { importanceLabel } from '@/lib/utils'
 import type { Importance } from '@/lib/types'
@@ -98,6 +99,8 @@ export default function LibraryPage() {
             <div className="grid gap-3 sm:grid-cols-2">
               {list.map(theme => {
                 const subject = subjects.find(s => s.id === theme.subject)
+                // 出題実績の正本：exam-*.csv を themeId で集計した実データ（手動値は使用しない）
+                const stats = getThemeExamStats(theme.id)
                 return (
                   <Link
                     key={theme.id}
@@ -116,8 +119,8 @@ export default function LibraryPage() {
                           {subject.shortName}
                         </span>
                       )}
-                      <span>出題{theme.count}回</span>
-                      <span>直近第{theme.latestRound}回</span>
+                      <span>出題{stats.examRounds.length}回</span>
+                      <span>{stats.latestRound ? `直近第${stats.latestRound}回` : '出題実績なし'}</span>
                     </div>
                     <p className="text-xs text-gray-500 leading-relaxed line-clamp-2">
                       {theme.studyPoint}
@@ -127,7 +130,7 @@ export default function LibraryPage() {
                         <span
                           key={r}
                           className={`text-xs px-1.5 py-0.5 rounded ${
-                            theme.examRounds.includes(r)
+                            stats.examRounds.includes(r)
                               ? 'bg-green-100 text-green-700 font-semibold'
                               : 'bg-gray-50 text-gray-300'
                           }`}
