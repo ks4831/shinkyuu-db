@@ -20,7 +20,11 @@ const OTHER_MODES = [
 ]
 
 const PAST_QUESTIONS = (EXAM_ROUNDS.length * QUESTIONS_PER_ROUND).toLocaleString()
-const EXAM_34_COLLECTED = pastExamCoverage().find((c) => c.round === 34)?.collected ?? 0
+const pastExamAvailable = pastExamCoverage().filter((c) => c.available)
+const PAST_EXAM_TOTAL = pastExamAvailable.reduce((sum, c) => sum + c.collected, 0)
+const PAST_EXAM_ROUND_RANGE = pastExamAvailable.length
+  ? `第${Math.min(...pastExamAvailable.map((c) => c.round))}〜${Math.max(...pastExamAvailable.map((c) => c.round))}回`
+  : ''
 
 export default function HomePage() {
   return (
@@ -52,7 +56,7 @@ export default function HomePage() {
           >
             <span>
               <span className="block text-sm font-bold text-gray-900">実際の過去問を解く</span>
-              <span className="mt-0.5 block text-xs text-gray-500">第34回・{EXAM_34_COLLECTED}問収録</span>
+              <span className="mt-0.5 block text-xs text-gray-500">{PAST_EXAM_ROUND_RANGE}・{PAST_EXAM_TOTAL}問収録</span>
             </span>
             <span className="flex-shrink-0 text-gray-300" aria-hidden="true">›</span>
           </Link>

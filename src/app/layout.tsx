@@ -5,8 +5,15 @@ import Header from '@/components/Header'
 import BottomNav from '@/components/BottomNav'
 import ScrollToTop from '@/components/ScrollToTop'
 import Link from 'next/link'
+import { pastExamCoverage } from '@/lib/pastExams'
 
 const SITE_URL = process.env.NEXT_PUBLIC_SITE_URL ?? 'https://shinkyuu-db.vercel.app'
+
+const pastExamAvailable = pastExamCoverage().filter((c) => c.available)
+const PAST_EXAM_TOTAL = pastExamAvailable.reduce((sum, c) => sum + c.collected, 0)
+const PAST_EXAM_ROUND_RANGE = pastExamAvailable.length
+  ? `第${Math.min(...pastExamAvailable.map((c) => c.round))}〜${Math.max(...pastExamAvailable.map((c) => c.round))}回`
+  : ''
 
 // GA4 は「本番ビルド」かつ「Measurement ID が設定済み」のときだけ読み込む。
 // 未設定でもサイトは通常どおり動作する。開発環境では読み込まない。
@@ -19,7 +26,7 @@ export const metadata: Metadata = {
     template: '%s | 鍼灸国試 過去問・予想問題・分析',
   },
   description:
-    '鍼灸国家試験（はり師・きゅう師）の対策サイト。第34回の実際の過去問演習、過去問の頻出傾向・第35回新出題基準にもとづくオリジナル予想問題、第29〜34回1,080問の出題分析ができます。',
+    `鍼灸国家試験（はり師・きゅう師）の対策サイト。${PAST_EXAM_ROUND_RANGE}の実際の過去問演習（${PAST_EXAM_TOTAL}問）、過去問の頻出傾向・第35回新出題基準にもとづくオリジナル予想問題、第29〜34回1,080問の出題分析ができます。`,
   keywords: [
     '鍼灸国家試験',
     'はり師国家試験',
@@ -33,7 +40,7 @@ export const metadata: Metadata = {
   ],
   openGraph: {
     title: '鍼灸国試｜過去問・予想問題・出題分析',
-    description: '第34回の実際の過去問演習、頻出傾向・第35回新基準にもとづく予想問題、過去6年1,080問の出題分析。1問1画面・解説と図解つき。',
+    description: `${PAST_EXAM_ROUND_RANGE}の実際の過去問演習（${PAST_EXAM_TOTAL}問）、頻出傾向・第35回新基準にもとづく予想問題、過去6年1,080問の出題分析。1問1画面・解説と図解つき。`,
     url: SITE_URL,
     siteName: '鍼灸国試 過去問・予想問題・分析',
     locale: 'ja_JP',
@@ -42,7 +49,7 @@ export const metadata: Metadata = {
   twitter: {
     card: 'summary',
     title: '鍼灸国試｜過去問・予想問題・出題分析',
-    description: '第34回の実際の過去問演習、頻出傾向・第35回新基準にもとづく予想問題、過去6年1,080問の出題分析。1問1画面・解説と図解つき。',
+    description: `${PAST_EXAM_ROUND_RANGE}の実際の過去問演習（${PAST_EXAM_TOTAL}問）、頻出傾向・第35回新基準にもとづく予想問題、過去6年1,080問の出題分析。1問1画面・解説と図解つき。`,
   },
   metadataBase: new URL(SITE_URL),
   ...(process.env.NEXT_PUBLIC_GSC_VERIFICATION

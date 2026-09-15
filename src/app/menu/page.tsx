@@ -7,13 +7,17 @@ export const metadata: Metadata = {
   description: '出題分析・テーマ辞典・科目攻略・学習ツールなど、すべての機能への入り口。',
 }
 
-const EXAM_34_COLLECTED = pastExamCoverage().find((c) => c.round === 34)?.collected ?? 0
+const pastExamAvailable = pastExamCoverage().filter((c) => c.available)
+const PAST_EXAM_TOTAL = pastExamAvailable.reduce((sum, c) => sum + c.collected, 0)
+const PAST_EXAM_ROUND_RANGE = pastExamAvailable.length
+  ? `第${Math.min(...pastExamAvailable.map((c) => c.round))}〜${Math.max(...pastExamAvailable.map((c) => c.round))}回`
+  : ''
 
 const groups = [
   {
     title: '過去問',
     links: [
-      { href: '/past-exams', label: '実際の過去問を解く', note: `第34回・${EXAM_34_COLLECTED}問収録` },
+      { href: '/past-exams', label: '実際の過去問を解く', note: `${PAST_EXAM_ROUND_RANGE}・${PAST_EXAM_TOTAL}問収録` },
     ],
   },
   {

@@ -6,17 +6,21 @@ import { themes } from '@/lib/data'
 import { ALL_QUESTIONS, standard2026QuizCount } from '@/lib/quiz'
 import { pastExamCoverage } from '@/lib/pastExams'
 
-export const metadata: Metadata = {
-  title: 'About',
-  description:
-    '鍼灸国家試験（はり師・きゅう師）の対策サイト。第34回の実際の過去問演習、第29〜34回1,080問の出題分析、その傾向にもとづくオリジナル予想問題205問の3つで構成しています。',
-}
-
 const TOTAL_QUESTIONS = EXAM_ROUNDS.length * QUESTIONS_PER_ROUND
 const ROUND_RANGE = `第${EXAM_ROUNDS[0]}回（${roundToYear(EXAM_ROUNDS[0])}年）〜第${EXAM_ROUNDS[EXAM_ROUNDS.length - 1]}回（${roundToYear(EXAM_ROUNDS[EXAM_ROUNDS.length - 1])}年）`
 const QUIZ_TOTAL = ALL_QUESTIONS.length
 const QUIZ_S2026 = standard2026QuizCount()
-const EXAM_34_COLLECTED = pastExamCoverage().find((c) => c.round === 34)?.collected ?? 0
+const pastExamAvailable = pastExamCoverage().filter((c) => c.available)
+const PAST_EXAM_TOTAL = pastExamAvailable.reduce((sum, c) => sum + c.collected, 0)
+const PAST_EXAM_ROUND_RANGE = pastExamAvailable.length
+  ? `第${Math.min(...pastExamAvailable.map((c) => c.round))}〜${Math.max(...pastExamAvailable.map((c) => c.round))}回`
+  : ''
+
+export const metadata: Metadata = {
+  title: 'About',
+  description:
+    `鍼灸国家試験（はり師・きゅう師）の対策サイト。${PAST_EXAM_ROUND_RANGE}の実際の過去問演習（${PAST_EXAM_TOTAL}問）、第29〜34回1,080問の出題分析、その傾向にもとづくオリジナル予想問題205問の3つで構成しています。`,
+}
 
 export default function AboutPage() {
   return (
@@ -41,7 +45,7 @@ export default function AboutPage() {
             鍼灸国家試験（はり師・きゅう師）の対策サイトです。当サイトは非公式で、次の3つで構成されています。
           </p>
           <ul className="mt-2 space-y-1">
-            <li>① <strong>過去問</strong> — 実際に国家試験で出題された問題（第34回・{EXAM_34_COLLECTED}問収録）</li>
+            <li>① <strong>過去問</strong> — 実際に国家試験で出題された問題（{PAST_EXAM_ROUND_RANGE}・{PAST_EXAM_TOTAL}問収録）</li>
             <li>② <strong>予想問題</strong> — 過去問の頻出傾向・重要テーマ・第35回新出題基準をもとにしたオリジナル問題（{QUIZ_TOTAL}問）</li>
             <li>③ <strong>出題分析</strong> — 第29〜34回・実際の過去問{TOTAL_QUESTIONS.toLocaleString()}問を{themes.length}テーマで分析</li>
           </ul>
@@ -55,7 +59,7 @@ export default function AboutPage() {
           <ul className="space-y-2">
             <li className="flex gap-3 bg-white border border-gray-100 rounded-lg px-4 py-3">
               <span className="text-green-600 font-semibold flex-shrink-0">✓</span>
-              <span><strong>実際の過去問</strong> — 第34回はり師・きゅう師国家試験の問題文・選択肢・正答を、財団の公式資料から直接収録（現在{EXAM_34_COLLECTED}問）</span>
+              <span><strong>実際の過去問</strong> — {PAST_EXAM_ROUND_RANGE}のはり師・きゅう師国家試験の問題文・選択肢・正答を、財団の公式資料から直接収録（現在{PAST_EXAM_TOTAL}問）</span>
             </li>
             <li className="flex gap-3 bg-white border border-gray-100 rounded-lg px-4 py-3">
               <span className="text-green-600 font-semibold flex-shrink-0">✓</span>
