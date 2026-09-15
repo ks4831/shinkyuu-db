@@ -1,10 +1,17 @@
 'use client'
 
-import { useState } from 'react'
+import { useEffect, useState } from 'react'
 import Link from 'next/link'
 import { themes } from '@/lib/data'
 import { subjectLabel } from '@/lib/quiz'
 import { recordPastExamAttempt } from '@/lib/pastExamStorage'
+import {
+  getPastExamSession,
+  savePastExamProgress,
+  markPastExamSessionCompleted,
+  resetPastExamSession,
+  type PastExamSession,
+} from '@/lib/pastExamSession'
 import { trackSessionOnceKeyed } from '@/lib/analytics'
 import { getAcceptedAnswerIndexes, isPastExamAnswerCorrect, formatAcceptedAnswers } from '@/lib/pastExamAnswers'
 
@@ -42,8 +49,23 @@ export default function PastExamRunner({
   const [selected, setSelected] = useState<number | null>(null)
   const [answered, setAnswered] = useState(false)
   const [results, setResults] = useState<boolean[]>([])
+  const [resumable, setResumable] = useState<PastExamSession | null>(null)
 
   const total = questions.length
+
+  /* 続きから再開できるセッションがあるか確認する。SSR/初回描画では常にnullのまま
+     （サーバーとクライアントの初回出力を一致させ、hydration mismatchを避ける）。
+     マウント後にのみLocalStorageを読み、保存済みの回答列が現在の設問順の
+     先頭からの連続一致（Q1,Q2,…の途中）になっている場合だけ再開対象とする。
+     ズレていたり壊れていたりする場合は安全に無視し、通常の開始画面を出す。 */
+  useEffect(() => {
+    const s = getPastExamSession(round)
+    if (!s || s.completed || s.answers.length === 0 || s.answers.length >= total) return
+    const sorted = [...s.answers].sort((a, b) => a.questionNumber - b.questionNumber)
+    const isContiguousPrefix = sorted.every((a, i) => questions[i]?.id === a.questionId)
+    if (isContiguousPrefix) setResumable({ ...s, answers: sorted })
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, [round])
 
   if (total === 0) {
     return (
@@ -64,6 +86,29 @@ export default function PastExamRunner({
     setPhase('question')
   }
 
+  /** 「続きから解く」：保存済みの回答済み分をresultsへ復元し、次の未回答問題から再開する */
+  function handleResume() {
+    if (!resumable) return
+    trackSessionOnceKeyed('pastexam_start', String(round), { exam_round: round, question_count: total })
+    setResults(resumable.answers.map((a) => a.correct))
+    setIndex(resumable.answers.length)
+    setSelected(null)
+    setAnswered(false)
+    setPhase('question')
+  }
+
+  /** 「最初から解く」：この年度の保存セッションのみ削除しQ1から開始（回答履歴historyは削除しない） */
+  function handleRestart() {
+    resetPastExamSession(round)
+    setResumable(null)
+    setIndex(0)
+    setSelected(null)
+    setAnswered(false)
+    setResults([])
+    trackSessionOnceKeyed('pastexam_start', String(round), { exam_round: round, question_count: total })
+    setPhase('question')
+  }
+
   function handleAnswer() {
     const q = questions[index]
     if (selected === null || answered) return
@@ -71,6 +116,7 @@ export default function PastExamRunner({
     setAnswered(true)
     setResults((r) => [...r, isCorrect])
     recordPastExamAttempt({ questionId: q.id, examRound: round, correct: isCorrect })
+    savePastExamProgress(round, { questionId: q.id, questionNumber: q.questionNumber, correct: isCorrect })
   }
 
   function handleNext() {
@@ -80,6 +126,7 @@ export default function PastExamRunner({
         correct: results.filter(Boolean).length,
         total: results.length,
       })
+      markPastExamSessionCompleted(round)
       setPhase('result')
       return
     }
@@ -89,6 +136,8 @@ export default function PastExamRunner({
   }
 
   function handleRetry() {
+    resetPastExamSession(round)
+    setResumable(null)
     setIndex(0)
     setSelected(null)
     setAnswered(false)
@@ -97,6 +146,32 @@ export default function PastExamRunner({
   }
 
   if (phase === 'start') {
+    if (resumable) {
+      const answeredCount = resumable.answers.length
+      return (
+        <div className="mx-auto max-w-md px-4 py-10 text-center">
+          <h1 className="text-xl font-bold text-gray-900">第{round}回 過去問</h1>
+          <p className="mt-2 text-sm text-gray-500">収録 {total}問</p>
+          <p className="mt-3 text-sm font-semibold text-green-700">
+            {answeredCount}問回答済み・残り{total - answeredCount}問
+          </p>
+          <button
+            type="button"
+            onClick={handleResume}
+            className="mt-6 w-full rounded-xl bg-green-600 px-5 py-4 text-base font-bold text-white hover:bg-green-700"
+          >
+            続きから解く
+          </button>
+          <button
+            type="button"
+            onClick={handleRestart}
+            className="mt-3 w-full rounded-xl border border-gray-200 bg-white px-5 py-3.5 text-sm font-bold text-gray-600 hover:border-green-300"
+          >
+            最初から解く
+          </button>
+        </div>
+      )
+    }
     return (
       <div className="mx-auto max-w-md px-4 py-10 text-center">
         <h1 className="text-xl font-bold text-gray-900">第{round}回 過去問</h1>
