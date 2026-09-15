@@ -20,6 +20,7 @@ export default function Header() {
 
         {/* Desktop nav */}
         <nav className="hidden items-center gap-1 text-sm sm:flex">
+          <Link href="/past-exams" className="rounded-lg px-3 py-1.5 text-gray-600 hover:bg-green-50 hover:text-green-700">過去問</Link>
           <Link href="/quiz" className="rounded-lg px-3 py-1.5 text-gray-600 hover:bg-green-50 hover:text-green-700">予想問題</Link>
           <Link href="/acupoints" className="rounded-lg px-3 py-1.5 text-gray-600 hover:bg-green-50 hover:text-green-700">経穴</Link>
           <Link href="/subjects" className="rounded-lg px-3 py-1.5 text-gray-600 hover:bg-green-50 hover:text-green-700">科目</Link>

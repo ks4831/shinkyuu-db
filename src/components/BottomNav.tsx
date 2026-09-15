@@ -13,6 +13,18 @@ const items = [
     ),
   },
   {
+    href: '/past-exams',
+    label: '過去問',
+    match: (p: string) => p.startsWith('/past-exams'),
+    icon: (
+      <>
+        <path d="M7 3h7l4 4v13a1 1 0 0 1-1 1H7a1 1 0 0 1-1-1V4a1 1 0 0 1 1-1Z" />
+        <path d="M14 3v4h4" />
+        <path d="M9 14l2.2 2.2L16 12" />
+      </>
+    ),
+  },
+  {
     href: '/quiz',
     label: '予想問題',
     match: (p: string) => p.startsWith('/quiz'),
