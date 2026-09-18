@@ -507,7 +507,17 @@ export default function PastExamRunner({
             </p>
             <p className="mt-2 text-sm font-bold text-gray-700">正答：{formatAcceptedAnswers(q)}</p>
             <p className="mt-2 text-sm leading-relaxed text-gray-700">{q.explanation}</p>
-            {tName && <p className="mt-3 text-xs font-semibold text-gray-500">{tName}</p>}
+            {q.themeId && tName && (
+              <Link
+                href={`/themes/${q.themeId}`}
+                className="mt-3 flex flex-wrap items-center justify-between gap-x-2 gap-y-1 rounded-lg border border-gray-200 bg-white px-3 py-2 text-xs hover:border-green-300"
+              >
+                <span className="text-gray-500">
+                  テーマ　<span className="font-semibold text-gray-700">{tName}</span>
+                </span>
+                <span className="font-semibold text-green-700">このテーマを詳しく見る →</span>
+              </Link>
+            )}
             <div className="mt-3 border-t border-gray-200 pt-3 text-[11px] leading-relaxed text-gray-400">
               出典：<br />
               {q.source}<br />
