@@ -27,7 +27,7 @@ export type SubjectGuide = {
 export const subjectGuides: SubjectGuide[] = [
   {
     subjectId: 'meridians-acupoints',
-    overview: '経絡経穴概論は鍼灸国家試験の中で最も出題比率が高い科目の一つ。十二経脈の流注・表裏関係と、原穴・郄穴・募穴・五兪穴など特定穴の規則が核心。経穴の主治は6年連続出題で絶対に捨てられない。',
+    overview: '経絡経穴概論は、十二経脈の流注・表裏関係や、原穴・郄穴・募穴・五兪穴など特定穴の規則を整理して理解することが重要な科目です。経脈の流れと特定穴を関連づけて学習しましょう。',
     studyHours: '60〜80時間',
     roadmap: [
       { themeId: 'juni-kei-myaku', name: '十二経脈', note: '流注の順序は最初に完全暗記' },
@@ -58,7 +58,7 @@ export const subjectGuides: SubjectGuide[] = [
       },
     ],
     nextExamPredictions: [
-      { name: '経穴の主治（百会・足三里・三陰交・合谷）', reason: '6年連続出題、特定穴の主治パターンが深掘りされる傾向', likelihood: 'high' },
+      { name: '経穴の主治（百会・足三里・三陰交・合谷）', reason: '特定穴の主治パターンが深掘りされる傾向', likelihood: 'high' },
       { name: '五兪穴の応用（症状別選穴）', reason: '近年は陰陽の配当だけでなく難経の症状別適応が増加傾向', likelihood: 'high' },
       { name: '奇経八脈の走行・機能', reason: '第32回で未出で直近2回連続出題、パターンが継続する可能性が高い', likelihood: 'high' },
       { name: '募穴と背兪穴の組み合わせ（俞募配穴）', reason: '直近では俞穴との対比問題が増えている', likelihood: 'medium' },
@@ -66,7 +66,7 @@ export const subjectGuides: SubjectGuide[] = [
   },
   {
     subjectId: 'oriental-overview',
-    overview: '東洋医学概論は陰陽論・五行論・気血津液・蔵象など基礎理論を学ぶ科目。五行論と蔵象は毎年複数問出題される。弁証論治や経絡経穴の理解の土台になるため、最初に取り組むべき科目。',
+    overview: '東洋医学概論は陰陽論・五行論・気血津液・蔵象など基礎理論を学ぶ科目。五行論と蔵象は出題数の多い中核テーマ。弁証論治や経絡経穴の理解の土台になるため、最初に取り組むべき科目。',
     studyHours: '40〜60時間',
     roadmap: [
       { themeId: 'in-yo-ron', name: '陰陽論', note: '対立・互根・消長・転化の4関係から始める' },
@@ -96,7 +96,7 @@ export const subjectGuides: SubjectGuide[] = [
       },
     ],
     nextExamPredictions: [
-      { name: '五行論（相生・相克・対応表）', reason: '6年連続出題で最も安定した出題テーマ', likelihood: 'high' },
+      { name: '五行論（相生・相克・対応表）', reason: '相生・相克の対応表は繰り返し狙われやすい安定したテーマ', likelihood: 'high' },
       { name: '蔵象（五臓の機能と表裏関係）', reason: '腎の蔵精・主水・納気など機能問題が近年増加', likelihood: 'high' },
       { name: '七情と五臓への影響', reason: '第34回で出題、第33回でも出題の継続傾向', likelihood: 'medium' },
       { name: '六淫の性質と侵す部位', reason: '未出年度が増えると復活する可能性がある', likelihood: 'medium' },
@@ -104,7 +104,7 @@ export const subjectGuides: SubjectGuide[] = [
   },
   {
     subjectId: 'hygiene',
-    overview: '衛生学・公衆衛生学は健康政策・感染症・生活習慣病の3本柱。健康日本21と生活習慣病は6年連続出題。数値（腹囲・診断基準・届出期限）の正確な暗記が得点を左右する。',
+    overview: '衛生学・公衆衛生学は健康政策・感染症・生活習慣病の3本柱。健康日本21と生活習慣病の制度・数値（腹囲・診断基準・届出期限）を正確に暗記することが得点を左右する。',
     studyHours: '30〜40時間',
     roadmap: [
       { themeId: 'seikatsu-shukan-byo', name: '生活習慣病', note: 'メタボ診断基準の数値から始める' },
@@ -126,14 +126,14 @@ export const subjectGuides: SubjectGuide[] = [
       },
     ],
     nextExamPredictions: [
-      { name: '健康日本21（第三次の内容）', reason: '6年連続出題、第三次の新目標が深掘りされる可能性', likelihood: 'high' },
-      { name: '生活習慣病（メタボ診断基準の数値）', reason: '6年連続出題、数値問題は継続して出題される', likelihood: 'high' },
+      { name: '健康日本21（第三次の内容）', reason: '第三次の新目標が深掘りされる可能性', likelihood: 'high' },
+      { name: '生活習慣病（メタボ診断基準の数値）', reason: '数値問題は今後も継続して出題される見込み', likelihood: 'high' },
       { name: '感染症法の最新改正内容', reason: 'COVID-19の5類移行後の法的位置づけが問われやすい', likelihood: 'medium' },
     ],
   },
   {
     subjectId: 'anatomy',
-    overview: '解剖学は筋の起始停止が6年連続出題の最重要テーマ。脳神経12対の機能分類と関節の構造も頻出。経穴の位置と解剖学的知識を連動して学ぶと相乗効果がある。',
+    overview: '解剖学は筋の起始停止が最重要テーマ。脳神経12対の機能分類と関節の構造もあわせて整理しておきたい。経穴の位置と解剖学的知識を連動して学ぶと相乗効果がある。',
     studyHours: '50〜70時間',
     roadmap: [
       { themeId: 'kansetsu-kozo', name: '関節の構造', note: '関節の種類（蝶番・球・車軸等）から始める' },
@@ -155,14 +155,14 @@ export const subjectGuides: SubjectGuide[] = [
       },
     ],
     nextExamPredictions: [
-      { name: '筋の起始停止（上肢・下肢の主要筋）', reason: '6年連続出題、起始と停止の詳細が深掘りされる', likelihood: 'high' },
+      { name: '筋の起始停止（上肢・下肢の主要筋）', reason: '起始と停止の詳細が今後も深掘りされる見込み', likelihood: 'high' },
       { name: '脳神経の機能分類と副交感神経', reason: '第33回で未出だったため復活の可能性', likelihood: 'high' },
       { name: '関節の種類と靭帯', reason: '直近では膝関節・肩関節の詳細が問われやすい', likelihood: 'medium' },
     ],
   },
   {
     subjectId: 'physiology',
-    overview: '生理学は自律神経の臓器作用が最頻出。交感神経と副交感神経を対比表で完全に覚えることが合格への最短ルート。循環機能の刺激伝導系も狙われやすい。',
+    overview: '生理学は自律神経の臓器作用が中心テーマ。交感神経と副交感神経を対比表で完全に覚えることが合格への最短ルート。循環機能の刺激伝導系もあわせて確認しておこう。',
     studyHours: '25〜35時間',
     roadmap: [
       { themeId: 'jiritsu-shinkei', name: '自律神経', note: '交感・副交感の臓器作用を対比表で覚える' },
@@ -179,7 +179,7 @@ export const subjectGuides: SubjectGuide[] = [
       },
     ],
     nextExamPredictions: [
-      { name: '自律神経（各臓器への作用比較）', reason: '5年連続出題、臓器ごとの詳細な作用が問われ続ける', likelihood: 'high' },
+      { name: '自律神経（各臓器への作用比較）', reason: '臓器ごとの詳細な作用が今後も問われ続ける見込み', likelihood: 'high' },
       { name: '循環機能（刺激伝導系）', reason: 'アドレナリン受容体の詳細が近年増加傾向', likelihood: 'medium' },
     ],
   },
@@ -201,13 +201,13 @@ export const subjectGuides: SubjectGuide[] = [
       },
     ],
     nextExamPredictions: [
-      { name: '施術所の届出・管理規定', reason: '6年連続出題、開設届出の詳細規定が問われる', likelihood: 'high' },
+      { name: '施術所の届出・管理規定', reason: '開設届出の詳細規定が今後も問われる見込み', likelihood: 'high' },
       { name: '広告できる事項（限定列挙）', reason: 'SNS広告などの新しい形式との関係が問われやすい', likelihood: 'medium' },
     ],
   },
   {
     subjectId: 'acupuncture-theory',
-    overview: 'はり理論はリスク管理と刺激量の2本柱。気胸・折鍼・感染などの副作用と対応は臨床問題の頻出テーマ。刺激量の構成要素（太さ・深度・時間）と補瀉の原則も重要。',
+    overview: 'はり理論はリスク管理と刺激量の2本柱。気胸・折鍼・感染などの副作用と対応は臨床問題の中心テーマ。刺激量の構成要素（太さ・深度・時間）と補瀉の原則も重要。',
     studyHours: '20〜25時間',
     roadmap: [
       { themeId: 'hari-risk-kanri', name: '鍼のリスク管理', note: '気胸・折鍼・感染の原因・予防・対応を整理' },
@@ -224,13 +224,13 @@ export const subjectGuides: SubjectGuide[] = [
       },
     ],
     nextExamPredictions: [
-      { name: '鍼のリスク管理（副作用と対応）', reason: '5年連続出題、気胸・感染の詳細が深掘りされる', likelihood: 'high' },
+      { name: '鍼のリスク管理（副作用と対応）', reason: '気胸・感染の詳細が今後も深掘りされる見込み', likelihood: 'high' },
       { name: '補瀉法の種類と原則', reason: '刺激量より深い補瀉の概念が近年問われやすい', likelihood: 'medium' },
     ],
   },
   {
     subjectId: 'moxibustion-theory',
-    overview: 'きゅう理論は施灸法の種類・禁灸部位・熱傷の処置が中心。はり理論と並行して学ぶと効率的。無瘢痕灸・有瘢痕灸の特徴と施灸量の調節も頻出。',
+    overview: 'きゅう理論は施灸法の種類・禁灸部位・熱傷の処置が中心。はり理論と並行して学ぶと効率的。無瘢痕灸・有瘢痕灸の特徴と施灸量の調節もあわせて整理しておこう。',
     studyHours: '10〜15時間',
     roadmap: [
       { themeId: 'kyu-fukusayo', name: '灸の副作用', note: '熱傷の深度（Ⅰ〜Ⅲ度）と処置・禁灸部位を整理' },
@@ -248,7 +248,7 @@ export const subjectGuides: SubjectGuide[] = [
   },
   {
     subjectId: 'oriental-clinical',
-    overview: '東洋医学臨床論は弁証論治（八綱弁証）が核心。虚実・表裏・寒熱の鑑別は毎年出題。経絡病証は十二経脈の知識と連動する。臨床問題の土台となる重要科目。',
+    overview: '東洋医学臨床論は弁証論治（八綱弁証）が核心。虚実・表裏・寒熱の鑑別は繰り返し問われる重要テーマ。経絡病証は十二経脈の知識と連動する。臨床問題の土台となる重要科目。',
     studyHours: '30〜40時間',
     roadmap: [
       { themeId: 'ben-sho-ron-chi', name: '弁証論治', note: '八綱弁証の各証の症候から始める' },
@@ -265,7 +265,7 @@ export const subjectGuides: SubjectGuide[] = [
       },
     ],
     nextExamPredictions: [
-      { name: '弁証論治（八綱弁証の鑑別）', reason: '6年連続出題、治則（汗法・下法・清法等）への展開も増加', likelihood: 'high' },
+      { name: '弁証論治（八綱弁証の鑑別）', reason: '治則（汗法・下法・清法等）への展開も増えている', likelihood: 'high' },
       { name: '経絡病証（是動病・所生病）', reason: '第34回で未出だったため第35回で出題の可能性が高い', likelihood: 'high' },
     ],
   },
@@ -297,12 +297,12 @@ export const subjectGuides: SubjectGuide[] = [
     nextExamPredictions: [
       { name: '免疫学（アレルギー分類と自己免疫）', reason: '近年SLEなど自己免疫疾患の詳細が問われやすい', likelihood: 'medium' },
       { name: 'バイタルサインとフィジカルアセスメント', reason: '心音聴診部位・声音振盪など診察手技が継続して出題', likelihood: 'medium' },
-      { name: '臨床検査・腫瘍マーカー', reason: '臓器別マーカーの対応と被曝の有無は毎年形を変えて出題', likelihood: 'medium' },
+      { name: '臨床検査・腫瘍マーカー', reason: '臓器別マーカーの対応と被曝の有無は形を変えて繰り返し出題される', likelihood: 'medium' },
     ],
   },
   {
     subjectId: 'medical-overview',
-    overview: '医療概論は医療保障制度・医の倫理・チーム医療の3本柱。第29〜34回で毎年、医療保険／国民医療費と医師患者関係が問われている。数値や制度名の正確な暗記よりも、制度の趣旨と関係の型（IC・パターナリズム）を理解することが得点につながる。',
+    overview: '医療概論は医療保障制度・医の倫理・チーム医療の3本柱。医療保険／国民医療費と医師患者関係は繰り返し問われる中心テーマ。数値や制度名の正確な暗記よりも、制度の趣旨と関係の型（IC・パターナリズム）を理解することが得点につながる。',
     studyHours: '15〜20時間',
     roadmap: [
       { themeId: 'mo-iryo-hoken-seido', name: '医療保険制度と国民医療費', note: '被用者保険と国保の対象者、国民医療費に含まれない費用から始める' },
@@ -331,15 +331,15 @@ export const subjectGuides: SubjectGuide[] = [
       },
     ],
     nextExamPredictions: [
-      { name: '医療保険制度・国民医療費', reason: '6年連続出題で最も安定したテーマ。数値と含まれる／含まれない費用の判別が問われる', likelihood: 'high' },
-      { name: 'インフォームド・コンセントと医師患者関係', reason: '4回出題。パターナリズム・セカンドオピニオン・患者役割との対比が続く見込み', likelihood: 'high' },
+      { name: '医療保険制度・国民医療費', reason: '数値と含まれる／含まれない費用の判別が繰り返し問われる安定したテーマ', likelihood: 'high' },
+      { name: 'インフォームド・コンセントと医師患者関係', reason: 'パターナリズム・セカンドオピニオン・患者役割との対比が今後も続く見込み', likelihood: 'high' },
       { name: '介護保険制度', reason: '保険者・被保険者・ケアマネジメントの基本は繰り返し出題', likelihood: 'medium' },
       { name: '医の倫理（国際宣言）', reason: '第33・34回で連続出題、宣言名と内容の対応が狙われる', likelihood: 'medium' },
     ],
   },
   {
     subjectId: 'pathology',
-    overview: '病理学概論は疾患の成り立ちを学ぶ総論科目。循環障害（梗塞・塞栓・浮腫）は6年でほぼ毎回、炎症・腫瘍がそれに次ぐ。個々の疾患名よりも「型で分類して覚える」ことが得点の鍵で、臨床医学各論の土台にもなる。',
+    overview: '病理学概論は疾患の成り立ちを学ぶ総論科目。循環障害（梗塞・塞栓・浮腫）が中心テーマで、炎症・腫瘍がそれに次ぐ。個々の疾患名よりも「型で分類して覚える」ことが得点の鍵で、臨床医学各論の土台にもなる。',
     studyHours: '20〜25時間',
     roadmap: [
       { themeId: 'pa-junkan-shogai', name: '循環障害', note: '貧血性梗塞と出血性梗塞、塞栓の種類、浮腫の4機序から始める' },
@@ -370,9 +370,9 @@ export const subjectGuides: SubjectGuide[] = [
       },
     ],
     nextExamPredictions: [
-      { name: '循環障害（梗塞・塞栓・浮腫・DIC）', reason: '6年でほぼ毎回出題される最重要テーマ。浮腫の4機序と塞栓の種類が繰り返される', likelihood: 'high' },
+      { name: '循環障害（梗塞・塞栓・浮腫・DIC）', reason: '最重要テーマの一つ。浮腫の4機序と塞栓の種類が今後も繰り返される見込み', likelihood: 'high' },
       { name: '炎症の組織学的分類', reason: '線維素性炎・化膿性炎・肉芽腫性炎の代表疾患の対応が定番', likelihood: 'high' },
-      { name: '腫瘍（前癌病変・TNM・発癌ウイルス）', reason: '4回出題。前癌病変とがんの対応、ウイルスとがんの対応が狙われる', likelihood: 'high' },
+      { name: '腫瘍（前癌病変・TNM・発癌ウイルス）', reason: '前癌病変とがんの対応、ウイルスとがんの対応が今後も狙われる見込み', likelihood: 'high' },
       { name: '壊死・変性の型', reason: '第34回で出題、好発臓器との対応が問われやすい', likelihood: 'medium' },
     ],
   },
@@ -401,7 +401,7 @@ export const subjectGuides: SubjectGuide[] = [
       },
       {
         title: '末梢神経麻痺の手の変形',
-        desc: '下垂手＝橈骨神経麻痺、猿手（母指対立不能）＝正中神経麻痺、鷲手＝尺骨神経麻痺。混同しやすい頻出ポイント。',
+        desc: '下垂手＝橈骨神経麻痺、猿手（母指対立不能）＝正中神経麻痺、鷲手＝尺骨神経麻痺。混同しやすいポイントなので整理しておこう。',
       },
       {
         title: '認知症の初発症状で鑑別',
@@ -417,16 +417,16 @@ export const subjectGuides: SubjectGuide[] = [
       },
     ],
     nextExamPredictions: [
-      { name: '神経筋疾患・末梢神経障害', reason: '6年連続出題。ALS・ギラン・バレー・絞扼性神経障害の症例問題が続く', likelihood: 'high' },
-      { name: '変形性関節症・関節リウマチ', reason: '6年連続出題。X線所見と特徴的変形の対応が繰り返される', likelihood: 'high' },
+      { name: '神経筋疾患・末梢神経障害', reason: 'ALS・ギラン・バレー・絞扼性神経障害の症例問題が今後も続く見込み', likelihood: 'high' },
+      { name: '変形性関節症・関節リウマチ', reason: 'X線所見と特徴的変形の対応が今後も繰り返される見込み', likelihood: 'high' },
       { name: '脊椎疾患・神経根障害と徒手検査', reason: '症例形式で神経学的所見から高位診断させる問題が定番', likelihood: 'high' },
-      { name: '血液疾患（貧血の分類）', reason: '6年連続出題。赤血球指数から貧血を分類する問題が続く見込み', likelihood: 'high' },
+      { name: '血液疾患（貧血の分類）', reason: '赤血球指数から貧血を分類する問題が今後も続く見込み', likelihood: 'high' },
       { name: '認知症の鑑別', reason: '初発症状・画像所見からの4型鑑別が繰り返し出題', likelihood: 'medium' },
     ],
   },
   {
     subjectId: 'rehabilitation',
-    overview: 'リハビリテーション医学は障害の概念（ICF）と主要疾患のリハが柱。脳卒中・脊髄損傷・脳性麻痺と、廃用症候群・フレイル・多職種連携が頻出。数値の暗記より「評価スケールの意味」と「損傷高位ごとの残存機能」を押さえることが得点につながる。',
+    overview: 'リハビリテーション医学は障害の概念（ICF）と主要疾患のリハが柱。脳卒中・脊髄損傷・脳性麻痺と、廃用症候群・フレイル・多職種連携が中心テーマ。数値の暗記より「評価スケールの意味」と「損傷高位ごとの残存機能」を押さえることが得点につながる。',
     studyHours: '25〜35時間',
     roadmap: [
       { themeId: 'rh-soron', name: 'リハビリテーション総論（ICF・評価法）', note: 'ICFの構成、FIM、MMTの段階から始める' },
@@ -457,9 +457,9 @@ export const subjectGuides: SubjectGuide[] = [
       },
     ],
     nextExamPredictions: [
-      { name: '脊髄損傷のリハビリテーション', reason: '6年連続出題。損傷高位別の残存機能と自律神経過反射が繰り返される', likelihood: 'high' },
-      { name: 'リハビリテーション総論（ICF・評価法）', reason: 'ICFの構成要素、FIM・MMTの評価の意味が毎年形を変えて出題', likelihood: 'high' },
-      { name: '脳性麻痺の病型分類', reason: '5回出題。痙直型が最多である点と、はさみ脚歩行が狙われる', likelihood: 'medium' },
+      { name: '脊髄損傷のリハビリテーション', reason: '損傷高位別の残存機能と自律神経過反射が今後も繰り返される見込み', likelihood: 'high' },
+      { name: 'リハビリテーション総論（ICF・評価法）', reason: 'ICFの構成要素、FIM・MMTの評価の意味が形を変えて繰り返し出題される', likelihood: 'high' },
+      { name: '脳性麻痺の病型分類', reason: '痙直型が最多である点と、はさみ脚歩行が今後も狙われる見込み', likelihood: 'medium' },
       { name: 'フレイル・サルコペニア', reason: '第33・34回で連続出題、J-CHS基準の5項目が問われる', likelihood: 'medium' },
     ],
   },

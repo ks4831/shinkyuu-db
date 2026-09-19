@@ -393,6 +393,68 @@ try {
   info.standard2026NewThemes = newThemeCnt
   info.standard2026ExpandedThemes = expandedThemeCnt
 
+  /* ── Ver.9.34: studyPoint / subjectGuide への固定出題実績断定の監査 ──
+     studyPoint・subjectGuide は学習内容・学習方法の説明であり、出題実績の断定を書く場所ではない
+     （出題実績の正本は exam-*.csv + getThemeExamStats()）。分析期間が進むたびに陳腐化する
+     固定の頻度断定文言（「6年連続出題」「毎年出題」「4回出題」等）を検出する。 */
+  const FROZEN_STAT_PATTERNS = [
+    /[0-9０-９]+年.{0,3}連続.{0,3}出題/,
+    /[0-9０-９]+年.{0,3}全回.{0,3}出題/,
+    /毎年.{0,10}出題/,
+    /毎回.{0,10}出題/,
+    /[0-9０-９]+回出題/,
+    /[0-9０-９]+問.{0,4}出題/,
+    /出題頻度|出題率/,
+  ]
+  function findFrozenStat(text) {
+    if (!text) return null
+    for (const re of FROZEN_STAT_PATTERNS) if (re.test(text)) return re.source
+    return null
+  }
+  const frozenStatHits = []
+  for (const t of themes) {
+    const hit = findFrozenStat(t.studyPoint)
+    if (hit) frozenStatHits.push(`theme ${t.id}.studyPoint に固定出題実績表現（/${hit}/）`)
+  }
+  try {
+    const guideMod = await importTS('src/lib/subjectGuides.ts')
+    const guides = guideMod.subjectGuides ?? []
+    for (const g of guides) {
+      const checkField = (label, text) => {
+        const hit = findFrozenStat(text)
+        if (hit) frozenStatHits.push(`subjectGuides[${g.subjectId}].${label} に固定出題実績表現（/${hit}/）`)
+      }
+      checkField('overview', g.overview)
+      for (const step of g.roadmap ?? []) checkField(`roadmap["${step.themeId ?? step.name}"].note`, step.note)
+      for (const c of g.commonConfusions ?? []) checkField(`commonConfusions["${c.title}"].desc`, c.desc)
+      for (const p of g.nextExamPredictions ?? []) checkField(`nextExamPredictions["${p.name}"].reason`, p.reason)
+    }
+  } catch (e) {
+    W(`subjectGuides.ts の固定出題実績監査をスキップ（import失敗）: ${e.message}`)
+  }
+  try {
+    const learningMod = await importTS('src/lib/learning.ts')
+    const guides = learningMod.learningGuides ?? []
+    for (const g of guides) {
+      const checkField = (label, text) => {
+        const hit = findFrozenStat(text)
+        if (hit) frozenStatHits.push(`learningGuides[${g.themeId}].${label} に固定出題実績表現（/${hit}/）`)
+      }
+      checkField('whyImportant', g.whyImportant)
+      checkField('reviewTiming', g.reviewTiming)
+      ;(g.quickSummary ?? []).forEach((v, i) => checkField(`quickSummary[${i}]`, v))
+      ;(g.examFocus ?? []).forEach((v, i) => checkField(`examFocus[${i}]`, v))
+      ;(g.commonMistakes ?? []).forEach((v, i) => checkField(`commonMistakes[${i}]`, v))
+      ;(g.memoryTips ?? []).forEach((v, i) => checkField(`memoryTips[${i}]`, v))
+      ;(g.keyPoints ?? []).forEach((v, i) => checkField(`keyPoints[${i}]`, v))
+      ;(g.examTargets ?? []).forEach((v, i) => checkField(`examTargets[${i}]`, v))
+    }
+  } catch (e) {
+    W(`learning.ts の固定出題実績監査をスキップ（import失敗）: ${e.message}`)
+  }
+  info.frozenStatHits = frozenStatHits.length
+  frozenStatHits.forEach((m) => E(m))
+
   // ── quiz ──
   const quizMod = await importTS('src/lib/quiz.ts')
   const Q = quizMod.ALL_QUESTIONS
