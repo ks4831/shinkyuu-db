@@ -1,16 +1,12 @@
 import Link from 'next/link'
 import { themes, subjects } from '@/lib/data'
-import { getThemeExamStats } from '@/lib/themeStats'
-import ThemesSearch, { type ThemeExamStatsLite } from '@/components/ThemesSearch'
+import { themeExamStatsRecord } from '@/lib/themeStats'
+import ThemesSearch from '@/components/ThemesSearch'
 
 export default function ThemesPage() {
   // 出題実績の正本：src/data/raw/exam-*.csv を themeId で集計した実データ
   // （Theme Master の theme.count/examRounds/latestRound は手動値のため、ここでは使用しない）
-  const examStats: Record<string, ThemeExamStatsLite> = {}
-  for (const t of themes) {
-    const s = getThemeExamStats(t.id)
-    examStats[t.id] = { examRounds: s.examRounds, latestRound: s.latestRound }
-  }
+  const examStats = themeExamStatsRecord(themes.map(t => t.id))
 
   return (
     <main className="max-w-5xl mx-auto px-4 py-8">

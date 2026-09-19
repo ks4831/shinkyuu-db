@@ -51,11 +51,13 @@ const ROUND_YEAR: Record<number, number> = {
   29: 2021, 30: 2022, 31: 2023, 32: 2024, 33: 2025, 34: 2026,
 }
 
+// advice は学習優先度（importance）の説明であり、実出題頻度の断定はしない
+// （「○回出題」「頻出」等の実績は下の出題データ・統計セクションで別途確認できる）
 const IMP_PRIORITY: Record<string, { label: string; color: string; advice: string }> = {
-  S: { label: '最優先', color: 'text-red-700 bg-red-50 border-red-200', advice: '第29〜34回で高頻度に出題されてきた最重要テーマです。優先して確実に押さえましょう。' },
-  A: { label: '優先',   color: 'text-orange-700 bg-orange-50 border-orange-200', advice: '出題頻度が高く、学習コストパフォーマンスが高いテーマです。' },
-  B: { label: '標準',   color: 'text-blue-700 bg-blue-50 border-blue-200', advice: '余裕があれば優先して学習しましょう。複合問題での出題もあります。' },
-  C: { label: '参考',   color: 'text-gray-600 bg-gray-50 border-gray-200', advice: '出題頻度は低めですが、関連テーマとまとめて学ぶと効率的です。' },
+  S: { label: '最優先', color: 'text-red-700 bg-red-50 border-red-200', advice: '当サイトで学習優先度が最も高いと判定したテーマです。優先して確実に押さえましょう。' },
+  A: { label: '優先',   color: 'text-orange-700 bg-orange-50 border-orange-200', advice: '学習優先度が高いテーマです。基本事項を確実に押さえておきましょう。' },
+  B: { label: '標準',   color: 'text-blue-700 bg-blue-50 border-blue-200', advice: '学習優先度は標準的です。余裕があれば関連テーマとあわせて学習しましょう。' },
+  C: { label: '参考',   color: 'text-gray-600 bg-gray-50 border-gray-200', advice: '学習優先度は高くありませんが、関連テーマとまとめて学ぶと効率的です。' },
 }
 
 export default async function ThemeDetailPage({

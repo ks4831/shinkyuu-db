@@ -4,7 +4,7 @@ import { notFound } from 'next/navigation'
 import { subjects, getSubject, getThemesBySubject } from '@/lib/data'
 import { getSubjectGuide } from '@/lib/subjectGuides'
 import { ALL_QUESTIONS } from '@/lib/quiz'
-import { getThemeExamStats } from '@/lib/themeStats'
+import { getThemeExamStats, themeExamStatsRecord } from '@/lib/themeStats'
 import ImportanceBadge from '@/components/ImportanceBadge'
 import SubjectSearch from '@/components/SubjectSearch'
 
@@ -65,7 +65,10 @@ export default async function SubjectDetailPage({
   const examStatOf = (id: string) => getThemeExamStats(id)
   const qCount = (id: string) => getThemeExamStats(id).count
   const sorted = [...subjectThemes].sort(
-    (a, b) => qCount(b.id) - qCount(a.id) || b.count - a.count || (a.importance > b.importance ? 1 : -1),
+    (a, b) =>
+      qCount(b.id) - qCount(a.id) ||
+      examStatOf(b.id).examRounds.length - examStatOf(a.id).examRounds.length ||
+      (a.importance > b.importance ? 1 : -1),
   )
   const top20 = sorted.filter(t => qCount(t.id) > 0).slice(0, 20)
   const subjectExamTotal = subjectThemes.reduce((n, t) => n + qCount(t.id), 0)
@@ -280,8 +283,10 @@ export default async function SubjectDetailPage({
                     </span>
                     <span className="flex-1 font-semibold text-sm text-gray-800">{t.name}</span>
                     <ImportanceBadge importance={t.importance} showLabel={false} />
-                    <span className="text-xs text-gray-400">{t.count}回出題</span>
-                    <span className="text-xs text-gray-300">第{t.latestRound}回</span>
+                    <span className="text-xs text-gray-400">{examStatOf(t.id).examRounds.length}回出題</span>
+                    <span className="text-xs text-gray-300">
+                      {examStatOf(t.id).latestRound ? `第${examStatOf(t.id).latestRound}回` : '出題実績なし'}
+                    </span>
                   </Link>
                 ))}
               </div>
@@ -319,7 +324,7 @@ export default async function SubjectDetailPage({
                             {t.name}
                           </span>
                           <ImportanceBadge importance={t.importance} showLabel={false} />
-                          <span className="text-xs text-gray-400 ml-auto">直近第{examStatOf(t.id).latestRound || t.latestRound}回</span>
+                          <span className="text-xs text-gray-400 ml-auto">直近第{examStatOf(t.id).latestRound}回</span>
                         </div>
                         <div className="w-full bg-gray-100 rounded-full h-1.5">
                           <div
@@ -378,7 +383,7 @@ export default async function SubjectDetailPage({
           )}
 
           {/* テーマ一覧（科目内検索付き） */}
-          <SubjectSearch themes={sorted} subjectName={subject.name} />
+          <SubjectSearch themes={sorted} subjectName={subject.name} examStats={themeExamStatsRecord(sorted.map(t => t.id))} />
         </>
       )}
 

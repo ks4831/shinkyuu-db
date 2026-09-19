@@ -4,8 +4,10 @@ import { useState, useEffect, useCallback } from 'react'
 import Link from 'next/link'
 import { themes } from '@/lib/data'
 import ImportanceBadge from '@/components/ImportanceBadge'
+import type { ThemeExamStatsLite } from '@/lib/themeStats'
 
 const CHECKED_KEY = 'shinkyuu_checked'
+const EMPTY_STATS: ThemeExamStatsLite = { examRounds: [], latestRound: 0 }
 
 function getChecked(): Set<string> {
   if (typeof window === 'undefined') return new Set()
@@ -25,7 +27,15 @@ const sThemes = themes.filter(t => t.importance === 'S')
 const aThemes = themes.filter(t => t.importance === 'A')
 const saThemes = [...sThemes, ...aThemes]
 
-export default function Checklist() {
+type Props = {
+  examStats: Record<string, ThemeExamStatsLite>
+}
+
+export default function Checklist({ examStats }: Props) {
+  const statsOf = useCallback(
+    (themeId: string): ThemeExamStatsLite => examStats[themeId] ?? EMPTY_STATS,
+    [examStats]
+  )
   const [checked, setChecked] = useState(new Set<string>())
 
   useEffect(() => {
@@ -122,7 +132,10 @@ export default function Checklist() {
                   </Link>
                   <ImportanceBadge importance={t.importance} showLabel={false} />
                 </div>
-                <p className="text-xs text-gray-400 mt-0.5">出題{t.count}回 / 直近第{t.latestRound}回</p>
+                <p className="text-xs text-gray-400 mt-0.5">
+                  出題{statsOf(t.id).examRounds.length}回
+                  {statsOf(t.id).latestRound ? ` / 直近第${statsOf(t.id).latestRound}回` : ' / 出題実績なし'}
+                </p>
               </div>
               {checked.has(t.id) && (
                 <span className="text-green-600 font-bold text-sm flex-shrink-0">覚えた！</span>
@@ -164,7 +177,10 @@ export default function Checklist() {
                   </Link>
                   <ImportanceBadge importance={t.importance} showLabel={false} />
                 </div>
-                <p className="text-xs text-gray-400 mt-0.5">出題{t.count}回 / 直近第{t.latestRound}回</p>
+                <p className="text-xs text-gray-400 mt-0.5">
+                  出題{statsOf(t.id).examRounds.length}回
+                  {statsOf(t.id).latestRound ? ` / 直近第${statsOf(t.id).latestRound}回` : ' / 出題実績なし'}
+                </p>
               </div>
               {checked.has(t.id) && (
                 <span className="text-orange-600 font-bold text-sm flex-shrink-0">覚えた！</span>

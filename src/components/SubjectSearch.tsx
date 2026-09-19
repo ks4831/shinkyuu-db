@@ -1,10 +1,11 @@
 'use client'
 
-import { useState, useMemo } from 'react'
+import { useState, useMemo, useCallback } from 'react'
 import Link from 'next/link'
 import ImportanceBadge from '@/components/ImportanceBadge'
 import type { Theme } from '@/lib/types'
 import type { Importance } from '@/lib/types'
+import type { ThemeExamStatsLite } from '@/lib/themeStats'
 
 const allRounds = [29, 30, 31, 32, 33, 34]
 
@@ -16,14 +17,24 @@ const IMP_FILTER_LABELS: { value: Importance | ''; label: string }[] = [
   { value: 'C', label: 'C 参考' },
 ]
 
+const EMPTY_STATS: ThemeExamStatsLite = { examRounds: [], latestRound: 0 }
+
 type Props = {
   themes: Theme[]
   subjectName: string
+  /** 出題実績（正本：src/data/raw/exam-*.csv を themeId で集計した実データ）。
+   *  Theme Master の theme.count/examRounds（手動値）はユーザー向け表示に使用しない。 */
+  examStats: Record<string, ThemeExamStatsLite>
 }
 
-export default function SubjectSearch({ themes, subjectName }: Props) {
+export default function SubjectSearch({ themes, subjectName, examStats }: Props) {
   const [query, setQuery] = useState('')
   const [filterImp, setFilterImp] = useState<Importance | ''>('')
+
+  const statsOf = useCallback(
+    (themeId: string): ThemeExamStatsLite => examStats[themeId] ?? EMPTY_STATS,
+    [examStats]
+  )
 
   const filtered = useMemo(() => {
     return themes.filter(t => {
@@ -112,13 +123,13 @@ export default function SubjectSearch({ themes, subjectName }: Props) {
                   </p>
                 </div>
                 <div className="flex-shrink-0 text-right">
-                  <p className="text-lg font-bold text-green-700">{theme.count}回</p>
+                  <p className="text-lg font-bold text-green-700">{statsOf(theme.id).examRounds.length}回</p>
                   <p className="text-xs text-gray-400">出題</p>
                 </div>
               </div>
               <div className="mt-3 flex gap-1.5 flex-wrap">
                 {allRounds.map(round => {
-                  const hit = theme.examRounds.includes(round)
+                  const hit = statsOf(theme.id).examRounds.includes(round)
                   return (
                     <span
                       key={round}

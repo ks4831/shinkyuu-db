@@ -5,16 +5,10 @@ import Link from 'next/link'
 import ImportanceBadge from '@/components/ImportanceBadge'
 import { kanaIncludes, expandSearchQuery } from '@/lib/kana'
 import type { Theme, Subject, Importance } from '@/lib/types'
+import type { ThemeExamStatsLite } from '@/lib/themeStats'
 
 const importanceOrder: Record<Importance, number> = { S: 0, A: 1, B: 2, C: 3 }
 const allRounds = [29, 30, 31, 32, 33, 34]
-
-/** テーマの出題実績（正本：src/data/raw/exam-*.csv を themeId で集計した実データ）。
- *  Theme Master の theme.count/examRounds/latestRound（手動値）はユーザー向け表示に使用しない。 */
-export type ThemeExamStatsLite = {
-  examRounds: number[]
-  latestRound: number
-}
 
 type Props = {
   themes: Theme[]

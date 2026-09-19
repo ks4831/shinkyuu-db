@@ -52,4 +52,25 @@ export function studyOnlyThemeIds(): string[] {
   return themes.filter(t => getThemeExamStats(t.id).count === 0).map(t => t.id)
 }
 
+/** テーマの出題実績（正本：src/data/raw/exam-*.csv を themeId で集計した実データ）。
+ *  Theme Master の theme.count/examRounds/latestRound（手動値）はユーザー向け表示に使用しない。
+ *  Client Component へ props で渡す用の最小形（count・byRound・recent3Count は含めない）。 */
+export type ThemeExamStatsLite = {
+  examRounds: number[]
+  latestRound: number
+}
+
+/**
+ * themeId一覧に対応する実出題統計をまとめて構築する（Server Component → Client Component への
+ * props受け渡し用）。CSVの独自集計は行わず、getThemeExamStats() をそのまま利用するだけ。
+ */
+export function themeExamStatsRecord(themeIds: string[]): Record<string, ThemeExamStatsLite> {
+  const record: Record<string, ThemeExamStatsLite> = {}
+  for (const id of themeIds) {
+    const s = getThemeExamStats(id)
+    record[id] = { examRounds: s.examRounds, latestRound: s.latestRound }
+  }
+  return record
+}
+
 export { examStats as _examStats, quizByTheme as _quizByTheme }

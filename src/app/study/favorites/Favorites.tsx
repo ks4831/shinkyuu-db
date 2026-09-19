@@ -5,8 +5,10 @@ import Link from 'next/link'
 import { getTheme } from '@/lib/data'
 import ImportanceBadge from '@/components/ImportanceBadge'
 import { importanceLabel } from '@/lib/utils'
+import type { ThemeExamStatsLite } from '@/lib/themeStats'
 
 const FAVORITES_KEY = 'shinkyuu_favorites'
+const EMPTY_STATS: ThemeExamStatsLite = { examRounds: [], latestRound: 0 }
 
 function getSet(key: string): Set<string> {
   if (typeof window === 'undefined') return new Set()
@@ -22,7 +24,15 @@ function saveSet(key: string, set: Set<string>) {
   localStorage.setItem(key, JSON.stringify([...set]))
 }
 
-export default function Favorites() {
+type Props = {
+  examStats: Record<string, ThemeExamStatsLite>
+}
+
+export default function Favorites({ examStats }: Props) {
+  const statsOf = useCallback(
+    (themeId: string): ThemeExamStatsLite => examStats[themeId] ?? EMPTY_STATS,
+    [examStats]
+  )
   const [ids, setIds] = useState<string[]>([])
 
   useEffect(() => {
@@ -83,7 +93,8 @@ export default function Favorites() {
                     <ImportanceBadge importance={t.importance} showLabel={false} />
                   </div>
                   <p className="text-xs text-gray-400">
-                    {importanceLabel(t.importance)} / 出題{t.count}回 / 直近第{t.latestRound}回
+                    {importanceLabel(t.importance)} / 出題{statsOf(t.id).examRounds.length}回
+                    {statsOf(t.id).latestRound ? ` / 直近第${statsOf(t.id).latestRound}回` : ' / 出題実績なし'}
                   </p>
                 </div>
                 <div className="flex items-center gap-2 flex-shrink-0">

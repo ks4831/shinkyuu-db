@@ -5,8 +5,10 @@ import Link from 'next/link'
 import { getTheme } from '@/lib/data'
 import { getLearningGuide } from '@/lib/learning'
 import ImportanceBadge from '@/components/ImportanceBadge'
+import type { ThemeExamStatsLite } from '@/lib/themeStats'
 
 const WEAKNESS_KEY = 'shinkyuu_weakness'
+const EMPTY_STATS: ThemeExamStatsLite = { examRounds: [], latestRound: 0 }
 
 function getSet(key: string): Set<string> {
   if (typeof window === 'undefined') return new Set()
@@ -22,7 +24,15 @@ function saveSet(key: string, set: Set<string>) {
   localStorage.setItem(key, JSON.stringify([...set]))
 }
 
-export default function Weakness() {
+type Props = {
+  examStats: Record<string, ThemeExamStatsLite>
+}
+
+export default function Weakness({ examStats }: Props) {
+  const statsOf = useCallback(
+    (themeId: string): ThemeExamStatsLite => examStats[themeId] ?? EMPTY_STATS,
+    [examStats]
+  )
   const [ids, setIds] = useState<string[]>([])
 
   useEffect(() => {
@@ -86,7 +96,10 @@ export default function Weakness() {
                         </Link>
                         <ImportanceBadge importance={t.importance} showLabel={false} />
                       </div>
-                      <p className="text-xs text-gray-400">出題{t.count}回 / 直近第{t.latestRound}回</p>
+                      <p className="text-xs text-gray-400">
+                        出題{statsOf(t.id).examRounds.length}回
+                        {statsOf(t.id).latestRound ? ` / 直近第${statsOf(t.id).latestRound}回` : ' / 出題実績なし'}
+                      </p>
                     </div>
                     <div className="flex items-center gap-2 flex-shrink-0">
                       <Link
