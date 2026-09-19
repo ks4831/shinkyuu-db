@@ -107,10 +107,21 @@ export function loadPastExamQuestions(round: number): PastExamQuestion[] {
     .sort((a, b) => a.questionNumber - b.questionNumber)
 }
 
-/** テーマ別過去問演習（Ver.9.30・基盤のみ／公開routeはまだ無い）の対象になる回。
- *  演習可能な過去問JSONが揃っている第31〜34回のみを対象とし、分析専用の第29・30回は含めない。
- *  新しい回のJSONを追加した際はここに追記する（意図的にハードコードしている）。 */
+/** テーマ別過去問演習の対象になる回。演習可能な過去問JSONが揃っている第31〜34回のみを
+ *  対象とし、分析専用の第29・30回は含めない。新しい回のJSONを追加した際はここに追記する
+ *  （意図的にハードコードしている）。 */
 const THEME_PRACTICE_ROUNDS = [31, 32, 33, 34]
+
+/** 第31〜34回の全問題（720問）。Ver.9.31で /themes/[themeId] と /past-exams/theme/[themeId]
+ *  の双方から142テーマ分繰り返し参照されるため、モジュール内で一度だけ読み込んでキャッシュする
+ *  （読み取り専用データなので、ビルド中に値が変わることはない）。 */
+let cachedThemePracticeQuestions: PastExamQuestion[] | null = null
+function loadThemePracticeQuestions(): PastExamQuestion[] {
+  if (!cachedThemePracticeQuestions) {
+    cachedThemePracticeQuestions = THEME_PRACTICE_ROUNDS.flatMap((round) => loadPastExamQuestions(round))
+  }
+  return cachedThemePracticeQuestions
+}
 
 /**
  * 指定テーマ（themeId）の過去問を、第31〜34回の中から横断的に抽出する。
@@ -121,7 +132,19 @@ const THEME_PRACTICE_ROUNDS = [31, 32, 33, 34]
  * 戻り値は 年度昇順 → 同年度内は問題番号昇順。
  */
 export function loadPastExamQuestionsByTheme(themeId: string): PastExamQuestion[] {
-  return THEME_PRACTICE_ROUNDS.flatMap((round) => loadPastExamQuestions(round))
+  return loadThemePracticeQuestions()
     .filter((q) => q.themeId === themeId)
     .sort((a, b) => a.examRound - b.examRound || a.questionNumber - b.questionNumber)
+}
+
+/**
+ * 第31〜34回に演習可能な過去問が1問以上あるthemeIdの一覧（重複なし）。
+ * /past-exams/theme/[themeId] の generateStaticParams 用。
+ */
+export function themeIdsWithPastExamPractice(): string[] {
+  const ids = new Set<string>()
+  for (const q of loadThemePracticeQuestions()) {
+    if (q.themeId) ids.add(q.themeId)
+  }
+  return [...ids]
 }

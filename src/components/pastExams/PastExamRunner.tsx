@@ -43,7 +43,7 @@ export type PastExamQuestionView = {
  */
 export type PastExamRunnerProps =
   | { mode?: 'round'; round: number; questions: PastExamQuestionView[] }
-  | { mode: 'theme'; questions: PastExamQuestionView[] }
+  | { mode: 'theme'; themeId: string; themeName: string; questions: PastExamQuestionView[] }
 
 type SessionCheck = {
   /** 進行中（未完走）で、Q1からの連続一致が取れた場合のみ設定 */
@@ -81,6 +81,12 @@ export default function PastExamRunner(props: PastExamRunnerProps) {
    *  行ってよいか」の唯一の判定基準になる（isThemeModeという別変数は持たず、round自体で判定する）。 */
   const round = props.mode === 'theme' ? null : props.round
   const roundLabel = round !== null ? `第${round}回` : '過去問'
+  const themeInfo = props.mode === 'theme' ? { id: props.themeId, name: props.themeName } : null
+  /** 完走後「もう一度解く」等から戻る先。round modeは従来通り過去問一覧、theme modeはテーマ詳細。 */
+  const backLink = round !== null
+    ? { href: '/past-exams', label: '過去問一覧へ' }
+    : { href: `/themes/${themeInfo?.id ?? ''}`, label: 'テーマ詳細へ戻る' }
+  const resultBackLabel = round !== null ? `${roundLabel}の結果へ` : 'テーマ別過去問の結果へ'
 
   const [phase, setPhase] = useState<'start' | 'question' | 'result'>('start')
   const [index, setIndex] = useState(0)
@@ -132,10 +138,10 @@ export default function PastExamRunner(props: PastExamRunnerProps) {
           {round !== null ? `第${round}回の過去問は準備中です。` : 'この演習の過去問は準備中です。'}
         </p>
         <Link
-          href="/past-exams"
+          href={backLink.href}
           className="mt-4 inline-block rounded-full bg-green-600 px-5 py-2.5 text-sm font-bold text-white"
         >
-          過去問一覧へ
+          {backLink.label}
         </Link>
       </div>
     )
@@ -324,14 +330,21 @@ export default function PastExamRunner(props: PastExamRunnerProps) {
 
     return (
       <div className="mx-auto max-w-md px-4 py-10 text-center">
-        <h1 className="text-xl font-bold text-gray-900">{roundLabel} 過去問</h1>
-        <p className="mt-2 text-sm text-gray-500">収録 {total}問</p>
+        {themeInfo ? (
+          <>
+            <p className="text-sm font-semibold text-green-700">{themeInfo.name}</p>
+            <h1 className="mt-1 text-xl font-bold text-gray-900">テーマ別過去問</h1>
+          </>
+        ) : (
+          <h1 className="text-xl font-bold text-gray-900">{roundLabel} 過去問</h1>
+        )}
+        <p className="mt-2 text-sm text-gray-500">{themeInfo ? `全${total}問` : `収録 ${total}問`}</p>
         <button
           type="button"
           onClick={handleStart}
           className="mt-6 w-full rounded-xl bg-green-600 px-5 py-4 text-base font-bold text-white hover:bg-green-700"
         >
-          過去問を解く
+          {themeInfo ? '演習を始める' : '過去問を解く'}
         </button>
       </div>
     )
@@ -377,13 +390,13 @@ export default function PastExamRunner(props: PastExamRunnerProps) {
                 onClick={handleBackToResult}
                 className="block w-full rounded-xl border border-gray-200 bg-white px-5 py-3.5 text-sm font-bold text-gray-700 hover:border-green-300"
               >
-                {roundLabel}の結果へ
+                {resultBackLabel}
               </button>
               <Link
-                href="/past-exams"
+                href={backLink.href}
                 className="block rounded-xl border border-gray-200 bg-white px-5 py-3.5 text-sm font-bold text-gray-700 hover:border-green-300"
               >
-                過去問一覧へ
+                {backLink.label}
               </Link>
             </div>
           </div>
@@ -408,7 +421,14 @@ export default function PastExamRunner(props: PastExamRunnerProps) {
     return (
       <div className="mx-auto max-w-md px-4 py-8">
         <div className="rounded-2xl border border-gray-100 bg-white p-6 text-center shadow-sm">
-          <h1 className="text-base font-bold text-gray-900">{roundLabel} 過去問</h1>
+          {themeInfo ? (
+            <>
+              <p className="text-xs font-semibold text-green-700">{themeInfo.name}</p>
+              <h1 className="mt-0.5 text-base font-bold text-gray-900">テーマ別過去問</h1>
+            </>
+          ) : (
+            <h1 className="text-base font-bold text-gray-900">{roundLabel} 過去問</h1>
+          )}
           <p className="mt-3 text-4xl font-black text-gray-900">
             {score}
             <span className="text-xl text-gray-400"> / {total}問 正解</span>
@@ -442,10 +462,10 @@ export default function PastExamRunner(props: PastExamRunnerProps) {
               もう一度{total}問解く
             </button>
             <Link
-              href="/past-exams"
+              href={backLink.href}
               className="block rounded-xl border border-gray-200 bg-white px-5 py-3.5 text-sm font-bold text-gray-700 hover:border-green-300"
             >
-              過去問一覧へ
+              {backLink.label}
             </Link>
           </div>
         </div>
@@ -462,6 +482,7 @@ export default function PastExamRunner(props: PastExamRunnerProps) {
   return (
     <div className="mx-auto max-w-md px-4 pb-28 pt-4">
       <div className="mb-4">
+        {themeInfo && <p className="mb-1 text-xs font-semibold text-green-700">{themeInfo.name}</p>}
         <div className="flex items-center justify-between text-xs text-gray-500">
           <span className="font-semibold text-gray-700">
             {isReview ? '苦手復習' : `第${q.examRound}回`}　問{q.questionNumber}

@@ -4,6 +4,7 @@ import { notFound } from 'next/navigation'
 import { themes, getTheme, getSubject, getThemesBySubject } from '@/lib/data'
 import { getLearningGuide } from '@/lib/learning'
 import { getThemeExamStats, getThemeQuizCount } from '@/lib/themeStats'
+import { loadPastExamQuestionsByTheme } from '@/lib/pastExams'
 import ImportanceBadge from '@/components/ImportanceBadge'
 import Standard2026Badge from '@/components/Standard2026Badge'
 import StudyActions from '@/components/StudyActions'
@@ -76,6 +77,8 @@ export default async function ThemeDetailPage({
   // という Theme Master の手動値へはフォールバックしない。実績0件は0件のまま表示する）。
   const examStats = getThemeExamStats(theme.id)
   const quizCount = getThemeQuizCount(theme.id)
+  // 演習可能な過去問数（第31〜34回）。出題分析（examStats、第29〜34回）とは正本・対象年度が異なるため混同しない。
+  const pastExamCount = loadPastExamQuestionsByTheme(theme.id).length
   const hasExamData = examStats.count > 0
   const roundsHit = examStats.examRounds
   const appearedRounds = roundsHit.length
@@ -181,19 +184,46 @@ export default async function ThemeDetailPage({
         </div>
       </div>
 
-      {/* このテーマの問題を解く */}
-      {quizCount > 0 && (
-        <Link
-          href={`/quiz/theme/${theme.id}`}
-          className="block bg-gradient-to-r from-green-600 to-green-700 text-white rounded-2xl p-5 mb-4 shadow-md hover:from-green-700 hover:to-green-800 transition-colors"
-        >
-          <span className="font-bold flex items-center gap-2">
-            📝 このテーマの問題を解く
-          </span>
-          <span className="block text-sm text-green-50 mt-0.5">
-            「{theme.name}」の演習問題 {quizCount}問（1問1画面・解説つき）
-          </span>
-        </Link>
+      {/* 演習：過去問（第31〜34回の実際の国家試験問題）と予想問題（当サイト独自）を分けて提示する。
+          両方とも「このテーマの問題を解く」と呼ぶと混同するため、CTA文言・見出しを明確に分離する。 */}
+      {(pastExamCount > 0 || quizCount > 0) && (
+        <section className="bg-white rounded-2xl border border-gray-100 p-5 mb-4">
+          <h2 className="font-bold text-gray-800 mb-3">✏️ 演習</h2>
+          <div className="grid gap-3 sm:grid-cols-2">
+            <div className="rounded-xl border border-gray-100 p-4">
+              <p className="text-xs text-gray-400">過去問（第31〜34回）</p>
+              {pastExamCount > 0 ? (
+                <>
+                  <p className="mt-0.5 text-sm text-gray-700">収録 {pastExamCount}問</p>
+                  <Link
+                    href={`/past-exams/theme/${theme.id}`}
+                    className="mt-2 block rounded-xl bg-green-600 px-4 py-2.5 text-center text-sm font-bold text-white hover:bg-green-700 transition-colors"
+                  >
+                    このテーマの過去問を解く
+                  </Link>
+                </>
+              ) : (
+                <p className="mt-0.5 text-sm text-gray-400">第31〜34回の収録問題なし</p>
+              )}
+            </div>
+            <div className="rounded-xl border border-gray-100 p-4">
+              <p className="text-xs text-gray-400">予想問題</p>
+              {quizCount > 0 ? (
+                <>
+                  <p className="mt-0.5 text-sm text-gray-700">{quizCount}問（1問1画面・解説つき）</p>
+                  <Link
+                    href={`/quiz/theme/${theme.id}`}
+                    className="mt-2 block rounded-xl border border-green-600 px-4 py-2.5 text-center text-sm font-bold text-green-700 hover:bg-green-50 transition-colors"
+                  >
+                    このテーマの予想問題を解く
+                  </Link>
+                </>
+              ) : (
+                <p className="mt-0.5 text-sm text-gray-400">予想問題なし</p>
+              )}
+            </div>
+          </div>
+        </section>
       )}
 
       {/* 第35回 新基準（2026年版出題基準による変更があるテーマのみ） */}
@@ -228,7 +258,7 @@ export default async function ThemeDetailPage({
                 href={`/quiz/theme/${theme.id}`}
                 className="inline-flex items-center gap-1 rounded-full border border-violet-300 bg-white px-3 py-1.5 text-xs font-bold text-violet-700 hover:bg-violet-100"
               >
-                このテーマの問題を解く（{quizCount}問）
+                このテーマの予想問題を解く（{quizCount}問）
               </Link>
             )}
           </div>
@@ -539,9 +569,14 @@ export default async function ThemeDetailPage({
 
       {/* フッターナビ */}
       <div className="flex gap-4 flex-wrap items-center pt-2 border-t border-gray-100">
+        {pastExamCount > 0 && (
+          <Link href={`/past-exams/theme/${theme.id}`} className="text-sm text-green-600 hover:underline font-semibold">
+            このテーマの過去問を解く →
+          </Link>
+        )}
         {quizCount > 0 && (
           <Link href={`/quiz/theme/${theme.id}`} className="text-sm text-green-600 hover:underline font-semibold">
-            このテーマの問題を解く →
+            このテーマの予想問題を解く →
           </Link>
         )}
         {subject && (
