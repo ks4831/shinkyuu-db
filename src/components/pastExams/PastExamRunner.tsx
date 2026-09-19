@@ -19,6 +19,9 @@ const CIRCLED = ['①', '②', '③', '④']
 
 export type PastExamQuestionView = {
   id: string
+  /** この問題が実際に出題された回。テーマ横断演習では round prop と一致しないことがあるため、
+   *  年度表示・履歴記録は必ずこちら（設問自身の値）を使う（round prop は使わない）。 */
+  examRound: number
   questionNumber: number
   questionText: string
   choices: string[]
@@ -31,6 +34,16 @@ export type PastExamQuestionView = {
   source: string
   sourceOrg: string
 }
+
+/**
+ * mode省略時（またはmode:'round'）＝従来通りの単一年度演習。round必須。
+ * mode:'theme'＝テーマ横断演習（Ver.9.30で基盤のみ追加。公開routeはまだ無い）。
+ * theme modeではroundという概念自体が存在しないため、年度sessionへの参照を
+ * 型レベルで持てないようにしている（誤ってroundに偽値を渡す設計を防ぐ）。
+ */
+export type PastExamRunnerProps =
+  | { mode?: 'round'; round: number; questions: PastExamQuestionView[] }
+  | { mode: 'theme'; questions: PastExamQuestionView[] }
 
 type SessionCheck = {
   /** 進行中（未完走）で、Q1からの連続一致が取れた場合のみ設定 */
@@ -62,13 +75,13 @@ function WrongQuestionChips({ questions }: { questions: PastExamQuestionView[] }
   )
 }
 
-export default function PastExamRunner({
-  round,
-  questions,
-}: {
-  round: number
-  questions: PastExamQuestionView[]
-}) {
+export default function PastExamRunner(props: PastExamRunnerProps) {
+  const { questions } = props
+  /** null＝theme mode（年度sessionを持たない）。以降 round!==null が「年度session操作を
+   *  行ってよいか」の唯一の判定基準になる（isThemeModeという別変数は持たず、round自体で判定する）。 */
+  const round = props.mode === 'theme' ? null : props.round
+  const roundLabel = round !== null ? `第${round}回` : '過去問'
+
   const [phase, setPhase] = useState<'start' | 'question' | 'result'>('start')
   const [index, setIndex] = useState(0)
   const [selected, setSelected] = useState<number | null>(null)
@@ -95,6 +108,8 @@ export default function PastExamRunner({
      react-hooks/set-state-in-effect の警告を増やさないようにしている。 */
   useEffect(() => {
     function compute(): SessionCheck {
+      // theme modeでは年度sessionという概念自体が無いため、読み込みを一切行わない
+      if (round === null) return EMPTY_SESSION_CHECK
       const s = getPastExamSession(round)
       if (!s) return EMPTY_SESSION_CHECK
       const sorted = [...s.answers].sort((a, b) => a.questionNumber - b.questionNumber)
@@ -113,7 +128,9 @@ export default function PastExamRunner({
   if (total === 0) {
     return (
       <div className="mx-auto max-w-md px-4 py-16 text-center">
-        <p className="text-gray-600">第{round}回の過去問は準備中です。</p>
+        <p className="text-gray-600">
+          {round !== null ? `第${round}回の過去問は準備中です。` : 'この演習の過去問は準備中です。'}
+        </p>
         <Link
           href="/past-exams"
           className="mt-4 inline-block rounded-full bg-green-600 px-5 py-2.5 text-sm font-bold text-white"
@@ -125,11 +142,13 @@ export default function PastExamRunner({
   }
 
   function handleStart() {
-    resetPastExamSession(round)
+    if (round !== null) {
+      resetPastExamSession(round)
+      trackSessionOnceKeyed('pastexam_start', String(round), { exam_round: round, question_count: total })
+    }
     setSessionCheck(EMPTY_SESSION_CHECK)
     setIsReview(false)
     setReviewQuestions([])
-    trackSessionOnceKeyed('pastexam_start', String(round), { exam_round: round, question_count: total })
     setPhase('question')
   }
 
@@ -137,7 +156,9 @@ export default function PastExamRunner({
   function handleResume() {
     const { resumable } = sessionCheck
     if (!resumable) return
-    trackSessionOnceKeyed('pastexam_start', String(round), { exam_round: round, question_count: total })
+    if (round !== null) {
+      trackSessionOnceKeyed('pastexam_start', String(round), { exam_round: round, question_count: total })
+    }
     setIsReview(false)
     setReviewQuestions([])
     setResults(resumable.answers.map((a) => a.correct))
@@ -149,7 +170,10 @@ export default function PastExamRunner({
 
   /** 「最初から解く」：この年度の保存セッションのみ削除しQ1から開始（回答履歴historyは削除しない） */
   function handleRestart() {
-    resetPastExamSession(round)
+    if (round !== null) {
+      resetPastExamSession(round)
+      trackSessionOnceKeyed('pastexam_start', String(round), { exam_round: round, question_count: total })
+    }
     setSessionCheck(EMPTY_SESSION_CHECK)
     setIsReview(false)
     setReviewQuestions([])
@@ -157,7 +181,6 @@ export default function PastExamRunner({
     setSelected(null)
     setAnswered(false)
     setResults([])
-    trackSessionOnceKeyed('pastexam_start', String(round), { exam_round: round, question_count: total })
     setPhase('question')
   }
 
@@ -192,10 +215,13 @@ export default function PastExamRunner({
     const isCorrect = isPastExamAnswerCorrect(q, selected)
     setAnswered(true)
     setResults((r) => [...r, isCorrect])
-    // 実際に回答した事実は、通常演習・苦手復習のどちらでも履歴に残す
-    recordPastExamAttempt({ questionId: q.id, examRound: round, correct: isCorrect })
-    // ただし苦手復習中は、元の180問セッションのanswersを上書きしない
-    if (!isReview) {
+    // 実際に回答した事実は、通常演習・苦手復習・テーマ演習のいずれでも履歴に残す。
+    // examRoundは必ず設問自身の値を使う（round propではない。テーマ横断演習では
+    // round propが存在しない／一致しないことがあるため）。
+    recordPastExamAttempt({ questionId: q.id, examRound: q.examRound, correct: isCorrect })
+    // 年度sessionへの保存は「通常演習（苦手復習でない）かつ round mode」の時のみ。
+    // theme modeではround自体が存在しないため、年度sessionには一切触れない。
+    if (!isReview && round !== null) {
       savePastExamProgress(round, { questionId: q.id, questionNumber: q.questionNumber, correct: isCorrect })
     }
   }
@@ -207,13 +233,17 @@ export default function PastExamRunner({
         setPhase('result')
         return
       }
-      trackSessionOnceKeyed('pastexam_complete', String(round), {
-        exam_round: round,
-        correct: results.filter(Boolean).length,
-        total: results.length,
-      })
-      markPastExamSessionCompleted(round)
-      setSessionCheck({ resumable: null, completedSession: getPastExamSession(round) })
+      // 年度session・analyticsの完走記録は round mode のみ。theme modeでは
+      // 第31〜34回のどのsessionもcompletedにしてはいけないため、ここには触れない。
+      if (round !== null) {
+        trackSessionOnceKeyed('pastexam_complete', String(round), {
+          exam_round: round,
+          correct: results.filter(Boolean).length,
+          total: results.length,
+        })
+        markPastExamSessionCompleted(round)
+        setSessionCheck({ resumable: null, completedSession: getPastExamSession(round) })
+      }
       setPhase('result')
       return
     }
@@ -222,9 +252,9 @@ export default function PastExamRunner({
     setAnswered(false)
   }
 
-  /** 「もう一度180問解く」：この年度のセッションを削除し、新しい180問セッションとしてQ1からやり直す */
+  /** 「もう一度{total}問解く」：この年度のセッションを削除し、新しいセッションとしてQ1からやり直す */
   function handleRetry() {
-    resetPastExamSession(round)
+    if (round !== null) resetPastExamSession(round)
     setSessionCheck(EMPTY_SESSION_CHECK)
     setIsReview(false)
     setReviewQuestions([])
@@ -242,7 +272,7 @@ export default function PastExamRunner({
       const answeredCount = resumable.answers.length
       return (
         <div className="mx-auto max-w-md px-4 py-10 text-center">
-          <h1 className="text-xl font-bold text-gray-900">第{round}回 過去問</h1>
+          <h1 className="text-xl font-bold text-gray-900">{roundLabel} 過去問</h1>
           <p className="mt-2 text-sm text-gray-500">収録 {total}問</p>
           <p className="mt-3 text-sm font-semibold text-green-700">
             {answeredCount}問回答済み・残り{total - answeredCount}問
@@ -269,7 +299,7 @@ export default function PastExamRunner({
       const lastScore = completedSession.answers.filter((a) => a.correct).length
       return (
         <div className="mx-auto max-w-md px-4 py-10 text-center">
-          <h1 className="text-xl font-bold text-gray-900">第{round}回 過去問</h1>
+          <h1 className="text-xl font-bold text-gray-900">{roundLabel} 過去問</h1>
           <p className="mt-2 text-sm text-gray-500">収録 {total}問</p>
           <p className="mt-3 text-sm font-semibold text-gray-600">
             前回 {lastScore} / {total}問正解
@@ -294,7 +324,7 @@ export default function PastExamRunner({
 
     return (
       <div className="mx-auto max-w-md px-4 py-10 text-center">
-        <h1 className="text-xl font-bold text-gray-900">第{round}回 過去問</h1>
+        <h1 className="text-xl font-bold text-gray-900">{roundLabel} 過去問</h1>
         <p className="mt-2 text-sm text-gray-500">収録 {total}問</p>
         <button
           type="button"
@@ -347,7 +377,7 @@ export default function PastExamRunner({
                 onClick={handleBackToResult}
                 className="block w-full rounded-xl border border-gray-200 bg-white px-5 py-3.5 text-sm font-bold text-gray-700 hover:border-green-300"
               >
-                第{round}回の結果へ
+                {roundLabel}の結果へ
               </button>
               <Link
                 href="/past-exams"
@@ -372,12 +402,13 @@ export default function PastExamRunner({
           .map((a) => questions.find((q) => q.id === a.questionId))
           .filter((q): q is PastExamQuestionView => Boolean(q))
           .sort((a, b) => a.questionNumber - b.questionNumber)
-      : []
+      // theme modeなど、completedSession（年度session）を持たない場合はローカルstateから算出する
+      : questions.filter((_, i) => !results[i]).sort((a, b) => a.questionNumber - b.questionNumber)
 
     return (
       <div className="mx-auto max-w-md px-4 py-8">
         <div className="rounded-2xl border border-gray-100 bg-white p-6 text-center shadow-sm">
-          <h1 className="text-base font-bold text-gray-900">第{round}回 過去問</h1>
+          <h1 className="text-base font-bold text-gray-900">{roundLabel} 過去問</h1>
           <p className="mt-3 text-4xl font-black text-gray-900">
             {score}
             <span className="text-xl text-gray-400"> / {total}問 正解</span>
@@ -408,7 +439,7 @@ export default function PastExamRunner({
               onClick={handleRetry}
               className="block w-full rounded-xl border border-gray-200 bg-white px-5 py-3.5 text-sm font-bold text-gray-700 hover:border-green-300"
             >
-              もう一度180問解く
+              もう一度{total}問解く
             </button>
             <Link
               href="/past-exams"
@@ -433,7 +464,7 @@ export default function PastExamRunner({
       <div className="mb-4">
         <div className="flex items-center justify-between text-xs text-gray-500">
           <span className="font-semibold text-gray-700">
-            {isReview ? '苦手復習' : `第${round}回`}　問{q.questionNumber}
+            {isReview ? '苦手復習' : `第${q.examRound}回`}　問{q.questionNumber}
           </span>
           <span>{index + 1} / {activeTotal}問</span>
         </div>

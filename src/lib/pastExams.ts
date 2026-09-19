@@ -106,3 +106,22 @@ export function loadPastExamQuestions(round: number): PastExamQuestion[] {
     })
     .sort((a, b) => a.questionNumber - b.questionNumber)
 }
+
+/** テーマ別過去問演習（Ver.9.30・基盤のみ／公開routeはまだ無い）の対象になる回。
+ *  演習可能な過去問JSONが揃っている第31〜34回のみを対象とし、分析専用の第29・30回は含めない。
+ *  新しい回のJSONを追加した際はここに追記する（意図的にハードコードしている）。 */
+const THEME_PRACTICE_ROUNDS = [31, 32, 33, 34]
+
+/**
+ * 指定テーマ（themeId）の過去問を、第31〜34回の中から横断的に抽出する。
+ * 既存の loadPastExamQuestions(round) を年度ごとに呼び出して結合するだけで、
+ * 新たなfs読み込み・独自パースは行わない（読み取り専用。データ・sessionは一切変更しない）。
+ * 該当テーマの過去問が無い場合や、存在しないthemeIdを渡した場合は空配列を返す
+ * （Theme Master上の存在確認はこの関数の責務としない。呼び出し側で行う）。
+ * 戻り値は 年度昇順 → 同年度内は問題番号昇順。
+ */
+export function loadPastExamQuestionsByTheme(themeId: string): PastExamQuestion[] {
+  return THEME_PRACTICE_ROUNDS.flatMap((round) => loadPastExamQuestions(round))
+    .filter((q) => q.themeId === themeId)
+    .sort((a, b) => a.examRound - b.examRound || a.questionNumber - b.questionNumber)
+}
