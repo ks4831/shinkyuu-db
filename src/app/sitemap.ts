@@ -2,6 +2,7 @@ import type { MetadataRoute } from 'next'
 import { subjects, themes } from '@/lib/data'
 import { ACUPOINTS } from '@/data/acupoints'
 import { subjectQuestionCounts } from '@/lib/quiz'
+import { pastExamPracticeRounds } from '@/lib/pastExams'
 
 const SITE_URL = process.env.NEXT_PUBLIC_SITE_URL ?? 'https://shinkyuu-db.vercel.app'
 
@@ -12,7 +13,6 @@ export default function sitemap(): MetadataRoute.Sitemap {
     { url: SITE_URL,                                         lastModified: now, changeFrequency: 'weekly',  priority: 1.0 },
     { url: `${SITE_URL}/quiz`,                               lastModified: now, changeFrequency: 'weekly',  priority: 0.95 },
     { url: `${SITE_URL}/past-exams`,                         lastModified: now, changeFrequency: 'weekly',  priority: 0.9 },
-    { url: `${SITE_URL}/past-exams/34`,                      lastModified: now, changeFrequency: 'weekly',  priority: 0.85 },
     { url: `${SITE_URL}/exam-35`,                            lastModified: now, changeFrequency: 'weekly',  priority: 0.95 },
     { url: `${SITE_URL}/quiz/daily`,                         lastModified: now, changeFrequency: 'daily',   priority: 0.9 },
     { url: `${SITE_URL}/quiz/standard-2026`,                 lastModified: now, changeFrequency: 'weekly',  priority: 0.8 },
@@ -72,6 +72,14 @@ export default function sitemap(): MetadataRoute.Sitemap {
     priority: 0.6,
   }))
 
+  // 年度別過去問：演習可能なJSONが収録されている回のみ（未収録の回はURLを出さない）
+  const pastExamRoundRoutes: MetadataRoute.Sitemap = pastExamPracticeRounds().map(round => ({
+    url: `${SITE_URL}/past-exams/${round}`,
+    lastModified: now,
+    changeFrequency: 'weekly' as const,
+    priority: 0.85,
+  }))
+
   const pastExamSubjectRoutes: MetadataRoute.Sitemap = subjects.map(s => ({
     url: `${SITE_URL}/past-exams/subject/${s.id}`,
     lastModified: now,
@@ -81,6 +89,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
 
   return [
     ...staticRoutes,
+    ...pastExamRoundRoutes,
     ...pastExamSubjectRoutes,
     ...subjectRoutes,
     ...themeRoutes,

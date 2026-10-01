@@ -71,13 +71,17 @@ function themeName(themeId?: string): string {
   return themes.find((t) => t.id === themeId)?.name ?? ''
 }
 
-/** 年度横断演習の開始画面に出す「第31〜34回」等。設問自身の examRound から算出する */
+/** 年度横断演習の開始画面に出す出題回の表記。設問自身の examRound から算出する。
+ *  連続していれば「第30〜34回」、途中の回が抜けていれば「第30・33・34回」と実在する回だけを示す
+ *  （問題の無い回まで含むように見せない）。 */
 function crossRangeLabel(questions: PastExamQuestionView[]): string {
-  const rounds = questions.map((q) => q.examRound)
+  const rounds = [...new Set(questions.map((q) => q.examRound))].sort((a, b) => a - b)
   if (rounds.length === 0) return ''
-  const min = Math.min(...rounds)
-  const max = Math.max(...rounds)
-  return min === max ? `第${min}回` : `第${min}〜${max}回`
+  const min = rounds[0]
+  const max = rounds[rounds.length - 1]
+  if (rounds.length === 1) return `第${min}回`
+  if (rounds.length >= 3 && max - min + 1 === rounds.length) return `第${min}〜${max}回`
+  return `第${rounds.join('・')}回`
 }
 
 /** 年度昇順 → 問題番号昇順（単一年度演習では問題番号順と同じ） */
@@ -304,7 +308,7 @@ export default function PastExamRunner(props: PastExamRunnerProps) {
         return
       }
       // 年度session・analyticsの完走記録は round mode のみ。theme/subject modeでは
-      // 第31〜34回のどのsessionもcompletedにしてはいけないため、ここには触れない。
+      // どの回の年度sessionもcompletedにしてはいけないため、ここには触れない。
       if (round !== null) {
         trackSessionOnceKeyed('pastexam_complete', String(round), {
           exam_round: round,

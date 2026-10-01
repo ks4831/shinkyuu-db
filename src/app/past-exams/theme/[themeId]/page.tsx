@@ -2,7 +2,7 @@ import type { Metadata } from 'next'
 import { notFound } from 'next/navigation'
 import Link from 'next/link'
 import { getTheme } from '@/lib/data'
-import { loadPastExamQuestionsByTheme, themeIdsWithPastExamPractice } from '@/lib/pastExams'
+import { loadPastExamQuestionsByTheme, pastExamPracticeRangeLabel, themeIdsWithPastExamPractice } from '@/lib/pastExams'
 import PastExamRunner from '@/components/pastExams/PastExamRunner'
 
 export function generateStaticParams() {
@@ -19,7 +19,7 @@ export async function generateMetadata({
   if (!theme) return {}
   return {
     title: `${theme.name}の過去問｜鍼灸国家試験 頻出分析DB`,
-    description: `${theme.name}に関連する第31〜34回の鍼灸国家試験過去問をまとめて演習できます。`,
+    description: `${theme.name}に関連する${pastExamPracticeRangeLabel()}の鍼灸国家試験過去問をまとめて演習できます。`,
   }
 }
 
@@ -48,13 +48,13 @@ export default async function PastExamThemePage({
       </div>
 
       {questions.length === 0 ? (
-        // 実在するテーマだが第31〜34回に演習可能な過去問がまだ無いケース（404にはしない）。
-        // 第29・30回のみ出題実績があるテーマでも「出題されたことがない」とは言わない。
+        // 実在するテーマだが収録済みの回に演習可能な過去問がまだ無いケース（404にはしない）。
+        // 未収録の回にのみ出題実績があるテーマでも「出題されたことがない」とは言わない。
         <div className="mx-auto max-w-md px-4 py-16 text-center">
           <p className="text-gray-600">
             「{theme.name}」の収録済み過去問はまだありません。
             <br />
-            現在、過去問演習は第31〜34回を収録しています。
+            現在、過去問演習は{pastExamPracticeRangeLabel()}を収録しています。
           </p>
           <Link
             href={`/themes/${themeId}`}

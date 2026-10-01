@@ -108,7 +108,7 @@ export function loadPastExamQuestions(round: number): PastExamQuestion[] {
 }
 
 /** 科目別・テーマ別（年度横断）演習の対象になる回（昇順）。演習可能な過去問JSONが実際に
- *  存在する回だけを pastExamCoverage() から導出する（現在は第31〜34回。分析専用の第29・30回は
+ *  存在する回だけを pastExamCoverage() から導出する（現在は第30〜34回。分析専用の第29回は
  *  JSONが無いため自動的に含まれない）。新しい回のJSONを追加すれば、ここも科目別・テーマ別も
  *  コード変更なしで追従する。 */
 export function pastExamPracticeRounds(): number[] {
@@ -127,7 +127,7 @@ export function pastExamPracticeRangeLabel(): string {
   return min === max ? `第${min}回` : `第${min}〜${max}回`
 }
 
-/** 年度横断演習の対象となる全問題（現在720問）。/themes/[themeId]・/past-exams/theme/[themeId]・
+/** 年度横断演習の対象となる全問題（現在900問）。/themes/[themeId]・/past-exams/theme/[themeId]・
  *  /past-exams/subject/[subjectId]・/past-exams 一覧の集計から繰り返し参照されるため、
  *  モジュール内で一度だけ読み込んでキャッシュする（読み取り専用データなので、ビルド中に値が変わることはない）。 */
 let cachedPracticeQuestions: PastExamQuestion[] | null = null
@@ -169,7 +169,7 @@ export function loadPastExamQuestionsBySubject(subjectId: string): PastExamQuest
     .sort(byRoundThenNumber)
 }
 
-/** 年度横断演習の対象問題の総数（現在720問） */
+/** 年度横断演習の対象問題の総数（現在900問） */
 export function pastExamPracticeTotal(): number {
   return loadPracticeQuestions().length
 }

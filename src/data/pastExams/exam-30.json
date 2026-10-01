@@ -1,0 +1,3609 @@
+[
+  {
+    "id": "30-001",
+    "examRound": 30,
+    "questionNumber": 1,
+    "questionText": "介護保険制度の保険者はどれか。",
+    "choices": [
+      "国",
+      "都道府県",
+      "市町村",
+      "介護施設"
+    ],
+    "answerIndex": 2,
+    "explanation": "介護保険の保険者（運営主体）は市町村および特別区である。国・都道府県は財政負担や制度運営の支援を行う立場で、介護施設はサービス提供者である。",
+    "hasFigure": false,
+    "source": "第30回 はり師・きゅう師国家試験",
+    "sourceUrl": "https://ahaki.or.jp/wordpress/wp-content/uploads/mondai_30_harikyu_am.pdf",
+    "sourceOrg": "公益財団法人 東洋療法研修試験財団",
+    "sourceReliability": "indexed_official",
+    "verifiedAt": "2026-10-01"
+  },
+  {
+    "id": "30-002",
+    "examRound": 30,
+    "questionNumber": 2,
+    "questionText": "我が国の国民医療費に含まれるのはどれか。",
+    "choices": [
+      "正常分娩の費用",
+      "訪問看護の療養費用",
+      "入院時室料差額の費用",
+      "予防接種の費用"
+    ],
+    "answerIndex": 1,
+    "explanation": "国民医療費は傷病の治療に要した費用を推計したもので、訪問看護の療養費は含まれる。正常な妊娠・分娩の費用、差額ベッド（入院時室料差額）などの保険外負担、予防接種などの予防に関する費用は含まれない。",
+    "hasFigure": false,
+    "source": "第30回 はり師・きゅう師国家試験",
+    "sourceUrl": "https://ahaki.or.jp/wordpress/wp-content/uploads/mondai_30_harikyu_am.pdf",
+    "sourceOrg": "公益財団法人 東洋療法研修試験財団",
+    "sourceReliability": "indexed_official",
+    "verifiedAt": "2026-10-01"
+  },
+  {
+    "id": "30-003",
+    "examRound": 30,
+    "questionNumber": 3,
+    "questionText": "被用者保険でないのはどれか。",
+    "choices": [
+      "船員保険",
+      "共済組合",
+      "協会けんぽ",
+      "国民健康保険"
+    ],
+    "answerIndex": 3,
+    "explanation": "被用者保険は雇用されて働く人とその家族を対象とする医療保険で、協会けんぽ・組合健保（健康保険）、船員保険、共済組合がある。国民健康保険は自営業者などを対象とする地域保険であり、被用者保険ではない。",
+    "hasFigure": false,
+    "source": "第30回 はり師・きゅう師国家試験",
+    "sourceUrl": "https://ahaki.or.jp/wordpress/wp-content/uploads/mondai_30_harikyu_am.pdf",
+    "sourceOrg": "公益財団法人 東洋療法研修試験財団",
+    "sourceReliability": "indexed_official",
+    "verifiedAt": "2026-10-01"
+  },
+  {
+    "id": "30-004",
+    "examRound": 30,
+    "questionNumber": 4,
+    "questionText": "患者が「よろしくお願いします」と言い、医療従事者が「お任せください」と言う会話から考えられる両者の関係はどれか。",
+    "choices": [
+      "パターナリズム",
+      "セカンドオピニオン",
+      "インフォームド・アセント",
+      "インフォームド・コンセント"
+    ],
+    "answerIndex": 0,
+    "explanation": "患者が判断を医療者に委ね、医療者が「お任せください」と引き受ける関係は、医療者が患者のためを思って一方的に決定する父権主義（パターナリズム）にあたる。インフォームド・コンセントは十分な説明に基づく患者の同意、インフォームド・アセントは小児などの了承を指す。",
+    "hasFigure": false,
+    "source": "第30回 はり師・きゅう師国家試験",
+    "sourceUrl": "https://ahaki.or.jp/wordpress/wp-content/uploads/mondai_30_harikyu_am.pdf",
+    "sourceOrg": "公益財団法人 東洋療法研修試験財団",
+    "sourceReliability": "indexed_official",
+    "verifiedAt": "2026-10-01"
+  },
+  {
+    "id": "30-005",
+    "examRound": 30,
+    "questionNumber": 5,
+    "questionText": "疾病予防について、ハイリスクアプローチはどれか。",
+    "choices": [
+      "受動喫煙を減らすための法整備",
+      "食習慣改善のための広報活動",
+      "市民対象のウォーキング大会の実施",
+      "喫煙者に対する禁煙指導の実施"
+    ],
+    "answerIndex": 3,
+    "explanation": "ハイリスクアプローチは、疾病のリスクが高い人を対象に絞って働きかける方法で、喫煙者への禁煙指導が該当する。法整備・広報活動・市民対象の催しは集団全体に働きかけるポピュレーションアプローチである。",
+    "hasFigure": false,
+    "source": "第30回 はり師・きゅう師国家試験",
+    "sourceUrl": "https://ahaki.or.jp/wordpress/wp-content/uploads/mondai_30_harikyu_am.pdf",
+    "sourceOrg": "公益財団法人 東洋療法研修試験財団",
+    "sourceReliability": "indexed_official",
+    "verifiedAt": "2026-10-01"
+  },
+  {
+    "id": "30-006",
+    "examRound": 30,
+    "questionNumber": 6,
+    "questionText": "2019年度学校保健統計調査において中学生・高校生で被患率が最も高いのはどれか。",
+    "choices": [
+      "むし歯",
+      "裸眼視力1.0未満",
+      "鼻・副鼻腔疾患",
+      "ぜん息"
+    ],
+    "answerIndex": 1,
+    "explanation": "2019年度の学校保健統計調査では、中学生・高校生の被患率が最も高いのは裸眼視力1.0未満で、むし歯がこれに次ぐ。年度によって数値は変わるため、設問の調査年度に基づいて扱う。",
+    "hasFigure": false,
+    "source": "第30回 はり師・きゅう師国家試験",
+    "sourceUrl": "https://ahaki.or.jp/wordpress/wp-content/uploads/mondai_30_harikyu_am.pdf",
+    "sourceOrg": "公益財団法人 東洋療法研修試験財団",
+    "sourceReliability": "indexed_official",
+    "verifiedAt": "2026-10-01"
+  },
+  {
+    "id": "30-007",
+    "examRound": 30,
+    "questionNumber": 7,
+    "questionText": "疫学指標について、横断調査により明らかになるのはどれか。",
+    "choices": [
+      "有病率",
+      "罹患率",
+      "死亡率",
+      "致命率"
+    ],
+    "answerIndex": 0,
+    "explanation": "横断調査はある一時点での集団の状態を調べる方法で、その時点で疾病を有する者の割合である有病率がわかる。罹患率は一定期間内の新規発生を追跡する必要があり、コホート研究などで求める。",
+    "hasFigure": false,
+    "source": "第30回 はり師・きゅう師国家試験",
+    "sourceUrl": "https://ahaki.or.jp/wordpress/wp-content/uploads/mondai_30_harikyu_am.pdf",
+    "sourceOrg": "公益財団法人 東洋療法研修試験財団",
+    "sourceReliability": "indexed_official",
+    "verifiedAt": "2026-10-01"
+  },
+  {
+    "id": "30-008",
+    "examRound": 30,
+    "questionNumber": 8,
+    "questionText": "保健所について誤っているのはどれか。",
+    "choices": [
+      "地域保健法で規定される。",
+      "保健所長は医師である必要がある。",
+      "栄養の改善および食品衛生に関する業務を行う。",
+      "地域保健に係る統計に関する業務を行う。"
+    ],
+    "answerIndex": 1,
+    "explanation": "保健所長は原則として医師とされるが、医師の確保が著しく困難な場合などには一定の要件を満たす医師以外の職員を充てることができる例外規定があり、「必ず医師である必要がある」とはいえない。保健所は地域保健法に規定され、栄養改善・食品衛生や地域保健に係る統計などの業務を行う。",
+    "hasFigure": false,
+    "source": "第30回 はり師・きゅう師国家試験",
+    "sourceUrl": "https://ahaki.or.jp/wordpress/wp-content/uploads/mondai_30_harikyu_am.pdf",
+    "sourceOrg": "公益財団法人 東洋療法研修試験財団",
+    "sourceReliability": "indexed_official",
+    "verifiedAt": "2026-10-01"
+  },
+  {
+    "id": "30-009",
+    "examRound": 30,
+    "questionNumber": 9,
+    "questionText": "運動により減少することが期待されるのはどれか。",
+    "choices": [
+      "心拍出量",
+      "最大酸素摂取量",
+      "末梢血管抵抗",
+      "インスリン感受性"
+    ],
+    "answerIndex": 2,
+    "explanation": "継続的な有酸素運動により末梢血管抵抗が低下し、血圧の低下が期待される。最大酸素摂取量・インスリン感受性は運動で向上（増加）し、心拍出量も運動能力の向上に伴い増大する。",
+    "hasFigure": false,
+    "source": "第30回 はり師・きゅう師国家試験",
+    "sourceUrl": "https://ahaki.or.jp/wordpress/wp-content/uploads/mondai_30_harikyu_am.pdf",
+    "sourceOrg": "公益財団法人 東洋療法研修試験財団",
+    "sourceReliability": "indexed_official",
+    "verifiedAt": "2026-10-01"
+  },
+  {
+    "id": "30-010",
+    "examRound": 30,
+    "questionNumber": 10,
+    "questionText": "産業衛生管理のうち作業管理はどれか。",
+    "choices": [
+      "作業場の換気",
+      "防塵マスクの使用",
+      "定期健康診断の実施",
+      "作業環境測定の実施"
+    ],
+    "answerIndex": 1,
+    "explanation": "労働衛生の3管理のうち、作業管理は作業方法・作業時間・保護具の使用などを管理するもので、防塵マスクの使用が該当する。換気や作業環境測定は作業環境管理、定期健康診断は健康管理にあたる。",
+    "hasFigure": false,
+    "source": "第30回 はり師・きゅう師国家試験",
+    "sourceUrl": "https://ahaki.or.jp/wordpress/wp-content/uploads/mondai_30_harikyu_am.pdf",
+    "sourceOrg": "公益財団法人 東洋療法研修試験財団",
+    "sourceReliability": "indexed_official",
+    "verifiedAt": "2026-10-01"
+  },
+  {
+    "id": "30-011",
+    "examRound": 30,
+    "questionNumber": 11,
+    "questionText": "あはき法で、都道府県知事が施術者に対し、衛生上害を生ずるおそれがあると認める業務に関して必要な指示をするとき、その指示に関して意見を述べることができるのはどれか。",
+    "choices": [
+      "地方厚生局長",
+      "市町村長",
+      "保健所長",
+      "医師の団体"
+    ],
+    "answerIndex": 3,
+    "explanation": "あはき法では、都道府県知事が衛生上害を生ずるおそれがあると認めて施術者に必要な指示をする場合、医師の団体はその指示に関して意見を述べることができると規定されている。",
+    "hasFigure": false,
+    "source": "第30回 はり師・きゅう師国家試験",
+    "sourceUrl": "https://ahaki.or.jp/wordpress/wp-content/uploads/mondai_30_harikyu_am.pdf",
+    "sourceOrg": "公益財団法人 東洋療法研修試験財団",
+    "sourceReliability": "indexed_official",
+    "verifiedAt": "2026-10-01"
+  },
+  {
+    "id": "30-012",
+    "examRound": 30,
+    "questionNumber": 12,
+    "questionText": "あはき法における施術所の届出事項で、変更が必要でないのはどれか。",
+    "choices": [
+      "出張による施術を開始した。",
+      "業務に従事する施術者が変わった。",
+      "施術室を広くした。",
+      "開設者が変わった。"
+    ],
+    "answerIndex": 0,
+    "explanation": "施術所の届出事項（開設者、業務に従事する施術者、構造設備など）に変更が生じた場合は変更の届出が必要である。出張による施術の開始は施術所の届出事項の変更にはあたらない（出張のみで業務を行う場合の届出は別の規定）。",
+    "hasFigure": false,
+    "source": "第30回 はり師・きゅう師国家試験",
+    "sourceUrl": "https://ahaki.or.jp/wordpress/wp-content/uploads/mondai_30_harikyu_am.pdf",
+    "sourceOrg": "公益財団法人 東洋療法研修試験財団",
+    "sourceReliability": "indexed_official",
+    "verifiedAt": "2026-10-01"
+  },
+  {
+    "id": "30-013",
+    "examRound": 30,
+    "questionNumber": 13,
+    "questionText": "あはき法で、施術所について広告できるのはどれか。",
+    "choices": [
+      "パルス鍼",
+      "やいと",
+      "認定鍼灸師",
+      "労災保険の適用"
+    ],
+    "answerIndex": 1,
+    "explanation": "あはき法の広告制限のもとで、施術の方法として「やいと」は広告が認められている（きゅうの施術方法を示す表現）。パルス鍼・認定鍼灸師・労災保険の適用は広告できる事項に含まれない（出題当時の規定に基づく）。",
+    "hasFigure": false,
+    "source": "第30回 はり師・きゅう師国家試験",
+    "sourceUrl": "https://ahaki.or.jp/wordpress/wp-content/uploads/mondai_30_harikyu_am.pdf",
+    "sourceOrg": "公益財団法人 東洋療法研修試験財団",
+    "sourceReliability": "indexed_official",
+    "verifiedAt": "2026-10-01"
+  },
+  {
+    "id": "30-014",
+    "examRound": 30,
+    "questionNumber": 14,
+    "questionText": "あはき法で定められている罰則で量刑が最も重いのはどれか。",
+    "choices": [
+      "はり師が消毒をせずに施術した。",
+      "施術所の開設を届け出なかった。",
+      "施術者が都道府県知事の指示に違反した。",
+      "施術者が秘密保持義務に違反した。"
+    ],
+    "answerIndex": 3,
+    "explanation": "選択肢の中では、秘密保持義務違反（50万円以下の罰金）が最も重い。消毒義務違反・施術所開設の届出義務違反・知事の指示違反はいずれも30万円以下の罰金である（出題当時の規定に基づく）。",
+    "hasFigure": false,
+    "source": "第30回 はり師・きゅう師国家試験",
+    "sourceUrl": "https://ahaki.or.jp/wordpress/wp-content/uploads/mondai_30_harikyu_am.pdf",
+    "sourceOrg": "公益財団法人 東洋療法研修試験財団",
+    "sourceReliability": "indexed_official",
+    "verifiedAt": "2026-10-01"
+  },
+  {
+    "id": "30-015",
+    "examRound": 30,
+    "questionNumber": 15,
+    "questionText": "頸椎について正しいのはどれか。",
+    "choices": [
+      "横突孔がある。",
+      "後弯している。",
+      "第6頸椎は隆椎である。",
+      "軸椎は後頭骨との関節面をもつ。"
+    ],
+    "answerIndex": 0,
+    "explanation": "頸椎の横突起には横突孔があり、椎骨動脈が通る。頸椎は前弯しており、隆椎は棘突起が長い第7頸椎である。後頭骨と関節をつくる（環椎後頭関節）のは第1頸椎の環椎で、軸椎ではない。",
+    "hasFigure": false,
+    "source": "第30回 はり師・きゅう師国家試験",
+    "sourceUrl": "https://ahaki.or.jp/wordpress/wp-content/uploads/mondai_30_harikyu_am.pdf",
+    "sourceOrg": "公益財団法人 東洋療法研修試験財団",
+    "sourceReliability": "indexed_official",
+    "verifiedAt": "2026-10-01"
+  },
+  {
+    "id": "30-016",
+    "examRound": 30,
+    "questionNumber": 16,
+    "questionText": "横隔膜について正しいのはどれか。",
+    "choices": [
+      "呼気筋である。",
+      "頸神経に支配される。",
+      "起始部は腱中心である。",
+      "迷走神経は大動脈裂孔を通る。"
+    ],
+    "answerIndex": 1,
+    "explanation": "横隔膜は頸神経叢の枝である横隔神経（主にC3〜C5）に支配される。主要な吸気筋であり、腰椎部・肋骨部・胸骨部から起こって腱中心に停止する。迷走神経は食道とともに食道裂孔を通る。",
+    "hasFigure": false,
+    "source": "第30回 はり師・きゅう師国家試験",
+    "sourceUrl": "https://ahaki.or.jp/wordpress/wp-content/uploads/mondai_30_harikyu_am.pdf",
+    "sourceOrg": "公益財団法人 東洋療法研修試験財団",
+    "sourceReliability": "indexed_official",
+    "verifiedAt": "2026-10-01"
+  },
+  {
+    "id": "30-017",
+    "examRound": 30,
+    "questionNumber": 17,
+    "questionText": "上肢の筋と作用の組合せで正しいのはどれか。",
+    "choices": [
+      "大円筋 ── 肩関節の外転",
+      "長掌筋 ── 橈骨手根関節の伸展",
+      "浅指屈筋 ── 遠位指節間関節の屈曲",
+      "腕橈骨筋 ── 肘関節の屈曲"
+    ],
+    "answerIndex": 3,
+    "explanation": "腕橈骨筋は肘関節の屈曲に働く。大円筋は肩関節の内転・内旋・伸展、長掌筋は手関節の屈曲に働く。浅指屈筋は中節骨に停止して近位指節間関節を屈曲し、遠位指節間関節の屈曲は深指屈筋の作用である。",
+    "hasFigure": false,
+    "source": "第30回 はり師・きゅう師国家試験",
+    "sourceUrl": "https://ahaki.or.jp/wordpress/wp-content/uploads/mondai_30_harikyu_am.pdf",
+    "sourceOrg": "公益財団法人 東洋療法研修試験財団",
+    "sourceReliability": "indexed_official",
+    "verifiedAt": "2026-10-01"
+  },
+  {
+    "id": "30-018",
+    "examRound": 30,
+    "questionNumber": 18,
+    "questionText": "外頸動脈の枝はどれか。",
+    "choices": [
+      "眼動脈",
+      "椎骨動脈",
+      "顎動脈",
+      "下甲状腺動脈"
+    ],
+    "answerIndex": 2,
+    "explanation": "顎動脈は外頸動脈の終枝の一つ（もう一つは浅側頭動脈）である。眼動脈は内頸動脈の枝、椎骨動脈は鎖骨下動脈の枝、下甲状腺動脈は鎖骨下動脈の甲状頸動脈の枝である。",
+    "hasFigure": false,
+    "source": "第30回 はり師・きゅう師国家試験",
+    "sourceUrl": "https://ahaki.or.jp/wordpress/wp-content/uploads/mondai_30_harikyu_am.pdf",
+    "sourceOrg": "公益財団法人 東洋療法研修試験財団",
+    "sourceReliability": "indexed_official",
+    "verifiedAt": "2026-10-01"
+  },
+  {
+    "id": "30-019",
+    "examRound": 30,
+    "questionNumber": 19,
+    "questionText": "静脈について正しいのはどれか。",
+    "choices": [
+      "奇静脈は腕頭静脈に注ぐ。",
+      "大伏在静脈は大腿静脈に注ぐ。",
+      "尺側皮静脈は鎖骨胸筋三角を通る。",
+      "肝静脈は肝門を通る。"
+    ],
+    "answerIndex": 1,
+    "explanation": "大伏在静脈は下肢内側を上行し、伏在裂孔で大腿静脈に注ぐ。奇静脈は上大静脈に注ぎ、鎖骨胸筋三角を通るのは橈側皮静脈である。肝静脈は肝臓後面から直接下大静脈に注ぎ、肝門は通らない（肝門を通るのは門脈・固有肝動脈・肝管）。",
+    "hasFigure": false,
+    "source": "第30回 はり師・きゅう師国家試験",
+    "sourceUrl": "https://ahaki.or.jp/wordpress/wp-content/uploads/mondai_30_harikyu_am.pdf",
+    "sourceOrg": "公益財団法人 東洋療法研修試験財団",
+    "sourceReliability": "indexed_official",
+    "verifiedAt": "2026-10-01"
+  },
+  {
+    "id": "30-020",
+    "examRound": 30,
+    "questionNumber": 20,
+    "questionText": "食道について正しいのはどれか。",
+    "choices": [
+      "縦隔を通る。",
+      "第3頸椎の高さで始まる。",
+      "食道下部の筋層は横紋筋である。",
+      "粘膜上皮は多列線毛上皮からなる。"
+    ],
+    "answerIndex": 0,
+    "explanation": "食道は咽頭に続いて縦隔（後縦隔）を下行し、横隔膜の食道裂孔を通って胃に至る。始まりはおよそ第6頸椎の高さで、筋層は上部が横紋筋・下部が平滑筋、粘膜上皮は重層扁平上皮である。",
+    "hasFigure": false,
+    "source": "第30回 はり師・きゅう師国家試験",
+    "sourceUrl": "https://ahaki.or.jp/wordpress/wp-content/uploads/mondai_30_harikyu_am.pdf",
+    "sourceOrg": "公益財団法人 東洋療法研修試験財団",
+    "sourceReliability": "indexed_official",
+    "verifiedAt": "2026-10-01"
+  },
+  {
+    "id": "30-021",
+    "examRound": 30,
+    "questionNumber": 21,
+    "questionText": "膵臓について正しいのはどれか。",
+    "choices": [
+      "膵頭部は脾臓に接する。",
+      "腹膜で全体が覆われる。",
+      "膵管は十二指腸に開口する。",
+      "ランゲルハンス島は膵頭部に多い。"
+    ],
+    "answerIndex": 2,
+    "explanation": "膵管（主膵管）は総胆管と合流して大十二指腸乳頭に開口する。膵頭部は十二指腸に囲まれ、脾臓に接するのは膵尾部である。膵臓は後腹膜器官で前面のみ腹膜に覆われ、ランゲルハンス島は膵尾部に多い。",
+    "hasFigure": false,
+    "source": "第30回 はり師・きゅう師国家試験",
+    "sourceUrl": "https://ahaki.or.jp/wordpress/wp-content/uploads/mondai_30_harikyu_am.pdf",
+    "sourceOrg": "公益財団法人 東洋療法研修試験財団",
+    "sourceReliability": "indexed_official",
+    "verifiedAt": "2026-10-01"
+  },
+  {
+    "id": "30-022",
+    "examRound": 30,
+    "questionNumber": 22,
+    "questionText": "痛覚の伝導路に含まれるのはどれか。",
+    "choices": [
+      "下丘",
+      "胸髄核",
+      "後索核",
+      "脊髄後角"
+    ],
+    "answerIndex": 3,
+    "explanation": "痛覚の一次ニューロンは脊髄後角でニューロンを替え、交叉して外側脊髄視床路を上行し視床を経て大脳皮質に至る。下丘は聴覚路、胸髄核は脊髄小脳路、後索核（薄束核・楔状束核）は深部感覚・識別性触圧覚の伝導路に含まれる。",
+    "hasFigure": false,
+    "source": "第30回 はり師・きゅう師国家試験",
+    "sourceUrl": "https://ahaki.or.jp/wordpress/wp-content/uploads/mondai_30_harikyu_am.pdf",
+    "sourceOrg": "公益財団法人 東洋療法研修試験財団",
+    "sourceReliability": "indexed_official",
+    "verifiedAt": "2026-10-01"
+  },
+  {
+    "id": "30-023",
+    "examRound": 30,
+    "questionNumber": 23,
+    "questionText": "皮膚について正しいのはどれか。",
+    "choices": [
+      "毛幹の下端を毛球という。",
+      "乳腺は皮膚腺の一種である。",
+      "表皮は多列円柱上皮である。",
+      "メラノサイトは真皮にある。"
+    ],
+    "answerIndex": 1,
+    "explanation": "乳腺は汗腺（アポクリン腺）が変化して生じた皮膚腺の一種である。毛の皮膚内の部分は毛根といい、その下端の膨らんだ部分が毛球である。表皮は重層扁平上皮であり、メラノサイトは真皮ではなく表皮の基底層に存在する。",
+    "hasFigure": false,
+    "source": "第30回 はり師・きゅう師国家試験",
+    "sourceUrl": "https://ahaki.or.jp/wordpress/wp-content/uploads/mondai_30_harikyu_am.pdf",
+    "sourceOrg": "公益財団法人 東洋療法研修試験財団",
+    "sourceReliability": "indexed_official",
+    "verifiedAt": "2026-10-01"
+  },
+  {
+    "id": "30-024",
+    "examRound": 30,
+    "questionNumber": 24,
+    "questionText": "DNAについて誤っているのはどれか。",
+    "choices": [
+      "遺伝情報をもつ。",
+      "塩基は3種類である。",
+      "二重らせん構造である。",
+      "染色体に含まれる。"
+    ],
+    "answerIndex": 1,
+    "explanation": "DNAの塩基はアデニン（A）・グアニン（G）・シトシン（C）・チミン（T）の4種類であり、3種類は誤り。DNAは遺伝情報を担い、二重らせん構造をとり、ヒストンとともに染色体を構成する。",
+    "hasFigure": false,
+    "source": "第30回 はり師・きゅう師国家試験",
+    "sourceUrl": "https://ahaki.or.jp/wordpress/wp-content/uploads/mondai_30_harikyu_am.pdf",
+    "sourceOrg": "公益財団法人 東洋療法研修試験財団",
+    "sourceReliability": "indexed_official",
+    "verifiedAt": "2026-10-01"
+  },
+  {
+    "id": "30-025",
+    "examRound": 30,
+    "questionNumber": 25,
+    "questionText": "血管について正しいのはどれか。",
+    "choices": [
+      "動脈は静脈より血管抵抗が小さい。",
+      "動脈は静脈より多くの血液を貯留する。",
+      "静脈弁は血液の逆流を防ぐ。",
+      "歩行時には静脈還流量が低下する。"
+    ],
+    "answerIndex": 2,
+    "explanation": "四肢の静脈には静脈弁があり、血液の逆流を防いで心臓方向への流れを保つ。全血液量の多くを貯留するのは静脈（容量血管）で、血管抵抗は細動脈で大きい。歩行時は筋ポンプ作用により静脈還流量が増加する。",
+    "hasFigure": false,
+    "source": "第30回 はり師・きゅう師国家試験",
+    "sourceUrl": "https://ahaki.or.jp/wordpress/wp-content/uploads/mondai_30_harikyu_am.pdf",
+    "sourceOrg": "公益財団法人 東洋療法研修試験財団",
+    "sourceReliability": "indexed_official",
+    "verifiedAt": "2026-10-01"
+  },
+  {
+    "id": "30-026",
+    "examRound": 30,
+    "questionNumber": 26,
+    "questionText": "消化液と消化酵素の組合せで正しいのはどれか。",
+    "choices": [
+      "唾液 ── アミラーゼ",
+      "胃液 ── リパーゼ",
+      "膵液 ── マルターゼ",
+      "腸液 ── ペプシン"
+    ],
+    "answerIndex": 0,
+    "explanation": "唾液にはデンプンを分解するアミラーゼ（プチアリン）が含まれる。胃液の主な消化酵素はペプシン、膵液はアミラーゼ・リパーゼ・トリプシンなど、マルターゼは小腸粘膜の酵素である。ペプシンは胃液に含まれる。",
+    "hasFigure": false,
+    "source": "第30回 はり師・きゅう師国家試験",
+    "sourceUrl": "https://ahaki.or.jp/wordpress/wp-content/uploads/mondai_30_harikyu_am.pdf",
+    "sourceOrg": "公益財団法人 東洋療法研修試験財団",
+    "sourceReliability": "indexed_official",
+    "verifiedAt": "2026-10-01"
+  },
+  {
+    "id": "30-027",
+    "examRound": 30,
+    "questionNumber": 27,
+    "questionText": "体温について正しいのはどれか。",
+    "choices": [
+      "体温調節中枢は延髄にある。",
+      "細菌感染では産熱は抑制される。",
+      "セットポイントの下降により発熱が起こる。",
+      "核心温度の変化は温度感受性ニューロンにより感受される。"
+    ],
+    "answerIndex": 3,
+    "explanation": "視床下部の温度感受性ニューロン（温ニューロン・冷ニューロン）が脳を灌流する血液温度、すなわち核心温度の変化を感受する。体温調節中枢は視床下部にあり、細菌感染では発熱物質によりセットポイントが上昇して産熱が促進され発熱が起こる。",
+    "hasFigure": false,
+    "source": "第30回 はり師・きゅう師国家試験",
+    "sourceUrl": "https://ahaki.or.jp/wordpress/wp-content/uploads/mondai_30_harikyu_am.pdf",
+    "sourceOrg": "公益財団法人 東洋療法研修試験財団",
+    "sourceReliability": "indexed_official",
+    "verifiedAt": "2026-10-01"
+  },
+  {
+    "id": "30-028",
+    "examRound": 30,
+    "questionNumber": 28,
+    "questionText": "糖質コルチコイドの作用で正しいのはどれか。",
+    "choices": [
+      "血糖値を低下させる。",
+      "血圧を低下させる。",
+      "胃酸分泌を抑制する。",
+      "炎症反応を抑制する。"
+    ],
+    "answerIndex": 3,
+    "explanation": "糖質コルチコイド（コルチゾール）は抗炎症作用・免疫抑制作用をもつ。糖新生を促進して血糖値を上昇させ、血管のカテコールアミン感受性を高めて血圧を維持・上昇させる方向に働き、胃酸分泌は促進する。",
+    "hasFigure": false,
+    "source": "第30回 はり師・きゅう師国家試験",
+    "sourceUrl": "https://ahaki.or.jp/wordpress/wp-content/uploads/mondai_30_harikyu_am.pdf",
+    "sourceOrg": "公益財団法人 東洋療法研修試験財団",
+    "sourceReliability": "indexed_official",
+    "verifiedAt": "2026-10-01"
+  },
+  {
+    "id": "30-029",
+    "examRound": 30,
+    "questionNumber": 29,
+    "questionText": "加齢に伴い増加するのはどれか。",
+    "choices": [
+      "副腎皮質ホルモン分泌",
+      "肺活量",
+      "神経伝導速度",
+      "重心動揺"
+    ],
+    "answerIndex": 3,
+    "explanation": "加齢に伴い平衡機能が低下するため、重心動揺は増加する。肺活量・神経伝導速度は加齢により低下し、副腎皮質ホルモン（副腎アンドロゲンなど）の分泌も増加はしない。",
+    "hasFigure": false,
+    "source": "第30回 はり師・きゅう師国家試験",
+    "sourceUrl": "https://ahaki.or.jp/wordpress/wp-content/uploads/mondai_30_harikyu_am.pdf",
+    "sourceOrg": "公益財団法人 東洋療法研修試験財団",
+    "sourceReliability": "indexed_official",
+    "verifiedAt": "2026-10-01"
+  },
+  {
+    "id": "30-030",
+    "examRound": 30,
+    "questionNumber": 30,
+    "questionText": "脳波について正しいのはどれか。",
+    "choices": [
+      "α波は安静覚醒閉眼時に現れる。",
+      "β波はα波より周波数が低い。",
+      "δ波は運動時に多く現れる。",
+      "深睡眠時には脳波は平坦となる。"
+    ],
+    "answerIndex": 0,
+    "explanation": "α波（8〜13Hz）は安静・覚醒・閉眼時に後頭部優位に現れる。β波はα波より周波数が高く、δ波は深睡眠時に現れる徐波である。深睡眠でも脳波は平坦にはならない（平坦脳波は脳機能停止を示す）。",
+    "hasFigure": false,
+    "source": "第30回 はり師・きゅう師国家試験",
+    "sourceUrl": "https://ahaki.or.jp/wordpress/wp-content/uploads/mondai_30_harikyu_am.pdf",
+    "sourceOrg": "公益財団法人 東洋療法研修試験財団",
+    "sourceReliability": "indexed_official",
+    "verifiedAt": "2026-10-01"
+  },
+  {
+    "id": "30-031",
+    "examRound": 30,
+    "questionNumber": 31,
+    "questionText": "筋収縮の過程においてエネルギーを必要とするのはどれか。",
+    "choices": [
+      "筋細胞による活動電位発生",
+      "筋細胞内でのカルシウムイオン放出",
+      "ミオシン頭部とアクチンの結合",
+      "ミオシン頭部の運動"
+    ],
+    "answerIndex": 3,
+    "explanation": "ミオシン頭部はATPを加水分解して得たエネルギーで首振り運動を行い、アクチンフィラメントを滑走させる。活動電位の発生や筋小胞体からのカルシウムイオン放出、ミオシン頭部とアクチンの結合自体は直接ATPのエネルギーを必要としない（カルシウムの取り込みにはATPを要する）。",
+    "hasFigure": false,
+    "source": "第30回 はり師・きゅう師国家試験",
+    "sourceUrl": "https://ahaki.or.jp/wordpress/wp-content/uploads/mondai_30_harikyu_am.pdf",
+    "sourceOrg": "公益財団法人 東洋療法研修試験財団",
+    "sourceReliability": "indexed_official",
+    "verifiedAt": "2026-10-01"
+  },
+  {
+    "id": "30-032",
+    "examRound": 30,
+    "questionNumber": 32,
+    "questionText": "近くの物体を見るときに起こるのはどれか。",
+    "choices": [
+      "毛様体筋の弛緩",
+      "瞳孔散大",
+      "水晶体の厚みの増大",
+      "共同偏視"
+    ],
+    "answerIndex": 2,
+    "explanation": "近くを見るときは近見反応（調節・縮瞳・輻輳）が起こり、毛様体筋が収縮してチン小帯が緩み、水晶体の厚みが増して屈折力が増す。瞳孔は縮小し、両眼は内側に寄る（輻輳）。共同偏視は両眼が同方向へ偏る病的所見である。",
+    "hasFigure": false,
+    "source": "第30回 はり師・きゅう師国家試験",
+    "sourceUrl": "https://ahaki.or.jp/wordpress/wp-content/uploads/mondai_30_harikyu_am.pdf",
+    "sourceOrg": "公益財団法人 東洋療法研修試験財団",
+    "sourceReliability": "indexed_official",
+    "verifiedAt": "2026-10-01"
+  },
+  {
+    "id": "30-033",
+    "examRound": 30,
+    "questionNumber": 33,
+    "questionText": "遺伝性疾患はどれか。",
+    "choices": [
+      "ダウン症候群",
+      "ターナー症候群",
+      "マルファン症候群",
+      "クラインフェルター症候群"
+    ],
+    "answerIndex": 2,
+    "explanation": "マルファン症候群はフィブリリン遺伝子の変異による常染色体顕性（優性）遺伝の遺伝性疾患である。ダウン症候群（21トリソミー）・ターナー症候群（45,X）・クラインフェルター症候群（47,XXY）は主に配偶子形成時の染色体数の異常によって生じる染色体異常症である。",
+    "hasFigure": false,
+    "source": "第30回 はり師・きゅう師国家試験",
+    "sourceUrl": "https://ahaki.or.jp/wordpress/wp-content/uploads/mondai_30_harikyu_am.pdf",
+    "sourceOrg": "公益財団法人 東洋療法研修試験財団",
+    "sourceReliability": "indexed_official",
+    "verifiedAt": "2026-10-01"
+  },
+  {
+    "id": "30-034",
+    "examRound": 30,
+    "questionNumber": 34,
+    "questionText": "DNAウイルスはどれか。",
+    "choices": [
+      "ノロウイルス",
+      "麻疹ウイルス",
+      "コロナウイルス",
+      "水痘・帯状疱疹ウイルス"
+    ],
+    "answerIndex": 3,
+    "explanation": "水痘・帯状疱疹ウイルスはヘルペスウイルス科に属するDNAウイルスである。ノロウイルス・麻疹ウイルス・コロナウイルスはいずれもRNAウイルスである。",
+    "hasFigure": false,
+    "source": "第30回 はり師・きゅう師国家試験",
+    "sourceUrl": "https://ahaki.or.jp/wordpress/wp-content/uploads/mondai_30_harikyu_am.pdf",
+    "sourceOrg": "公益財団法人 東洋療法研修試験財団",
+    "sourceReliability": "indexed_official",
+    "verifiedAt": "2026-10-01"
+  },
+  {
+    "id": "30-035",
+    "examRound": 30,
+    "questionNumber": 35,
+    "questionText": "左冠動脈閉塞による急性心筋梗塞で死亡した。肺にみられる変化として適切でないのはどれか。",
+    "choices": [
+      "出血",
+      "塞栓",
+      "水腫",
+      "うっ血"
+    ],
+    "answerIndex": 1,
+    "explanation": "左冠動脈閉塞による心筋梗塞では左心不全となり、肺静脈系に血液が停滞して肺うっ血・肺水腫が生じ、うっ血に伴う出血もみられる。塞栓は血栓などが血流で運ばれて血管を閉塞するもので、左心系の血栓は大循環側（脳・腎など）に塞栓を生じるため、肺の変化としては適切でない。",
+    "hasFigure": false,
+    "source": "第30回 はり師・きゅう師国家試験",
+    "sourceUrl": "https://ahaki.or.jp/wordpress/wp-content/uploads/mondai_30_harikyu_am.pdf",
+    "sourceOrg": "公益財団法人 東洋療法研修試験財団",
+    "sourceReliability": "indexed_official",
+    "verifiedAt": "2026-10-01"
+  },
+  {
+    "id": "30-036",
+    "examRound": 30,
+    "questionNumber": 36,
+    "questionText": "フィブリノゲンの滲出が特徴的なのはどれか。",
+    "choices": [
+      "壊疽性炎",
+      "化膿性炎",
+      "漿液性炎",
+      "線維素性炎"
+    ],
+    "answerIndex": 3,
+    "explanation": "線維素性炎は滲出したフィブリノゲンが析出してフィブリン（線維素）となるのが特徴で、ジフテリアの偽膜などがその例である。化膿性炎は好中球、漿液性炎は漿液（血清成分）の滲出が主体で、壊疽性炎は腐敗菌の感染を伴う炎症である。",
+    "hasFigure": false,
+    "source": "第30回 はり師・きゅう師国家試験",
+    "sourceUrl": "https://ahaki.or.jp/wordpress/wp-content/uploads/mondai_30_harikyu_am.pdf",
+    "sourceOrg": "公益財団法人 東洋療法研修試験財団",
+    "sourceReliability": "indexed_official",
+    "verifiedAt": "2026-10-01"
+  },
+  {
+    "id": "30-037",
+    "examRound": 30,
+    "questionNumber": 37,
+    "questionText": "抗原提示細胞はどれか。",
+    "choices": [
+      "NK細胞",
+      "好酸球",
+      "Tリンパ球",
+      "マクロファージ"
+    ],
+    "answerIndex": 3,
+    "explanation": "マクロファージは貪食した抗原を処理してMHC分子とともに提示する抗原提示細胞である（樹状細胞・B細胞も抗原提示能をもつ）。Tリンパ球は提示を受ける側で、NK細胞・好酸球は抗原提示細胞ではない。",
+    "hasFigure": false,
+    "source": "第30回 はり師・きゅう師国家試験",
+    "sourceUrl": "https://ahaki.or.jp/wordpress/wp-content/uploads/mondai_30_harikyu_am.pdf",
+    "sourceOrg": "公益財団法人 東洋療法研修試験財団",
+    "sourceReliability": "indexed_official",
+    "verifiedAt": "2026-10-01"
+  },
+  {
+    "id": "30-038",
+    "examRound": 30,
+    "questionNumber": 38,
+    "questionText": "癌と前癌病変の組合せで正しいのはどれか。",
+    "choices": [
+      "乳癌 ── 乳腺症",
+      "口腔癌 ── 白板症",
+      "子宮体癌 ── 子宮筋腫",
+      "前立腺癌 ── 前立腺肥大"
+    ],
+    "answerIndex": 1,
+    "explanation": "口腔の白板症は癌化することがある前癌病変として知られる。乳腺症・子宮筋腫・前立腺肥大症は良性の病変で、それぞれ乳癌・子宮体癌・前立腺癌の前癌病変とはされない。",
+    "hasFigure": false,
+    "source": "第30回 はり師・きゅう師国家試験",
+    "sourceUrl": "https://ahaki.or.jp/wordpress/wp-content/uploads/mondai_30_harikyu_am.pdf",
+    "sourceOrg": "公益財団法人 東洋療法研修試験財団",
+    "sourceReliability": "indexed_official",
+    "verifiedAt": "2026-10-01"
+  },
+  {
+    "id": "30-039",
+    "examRound": 30,
+    "questionNumber": 39,
+    "questionText": "脳性麻痺で、はさみ脚歩行を呈するのはどれか。",
+    "choices": [
+      "痙直型",
+      "失調型",
+      "非緊張型",
+      "アテトーゼ型"
+    ],
+    "answerIndex": 0,
+    "explanation": "痙直型脳性麻痺では下肢内転筋の痙縮により両下肢が交差する、はさみ脚歩行を呈する。失調型は運動失調、アテトーゼ型は不随意運動を主体とし、非緊張型は筋緊張低下を示す。",
+    "hasFigure": false,
+    "source": "第30回 はり師・きゅう師国家試験",
+    "sourceUrl": "https://ahaki.or.jp/wordpress/wp-content/uploads/mondai_30_harikyu_am.pdf",
+    "sourceOrg": "公益財団法人 東洋療法研修試験財団",
+    "sourceReliability": "indexed_official",
+    "verifiedAt": "2026-10-01"
+  },
+  {
+    "id": "30-040",
+    "examRound": 30,
+    "questionNumber": 40,
+    "questionText": "対光反射の遠心路はどれか。",
+    "choices": [
+      "動眼神経",
+      "三叉神経",
+      "外転神経",
+      "顔面神経"
+    ],
+    "answerIndex": 0,
+    "explanation": "対光反射は、求心路が視神経、遠心路が動眼神経（副交感神経線維）で、瞳孔括約筋を収縮させて縮瞳を起こす。三叉神経は角膜反射の求心路、顔面神経は角膜反射の遠心路である。",
+    "hasFigure": false,
+    "source": "第30回 はり師・きゅう師国家試験",
+    "sourceUrl": "https://ahaki.or.jp/wordpress/wp-content/uploads/mondai_30_harikyu_am.pdf",
+    "sourceOrg": "公益財団法人 東洋療法研修試験財団",
+    "sourceReliability": "indexed_official",
+    "verifiedAt": "2026-10-01"
+  },
+  {
+    "id": "30-041",
+    "examRound": 30,
+    "questionNumber": 41,
+    "questionText": "鷲手をきたす罹患神経はどれか。",
+    "choices": [
+      "筋皮神経",
+      "正中神経",
+      "橈骨神経",
+      "尺骨神経"
+    ],
+    "answerIndex": 3,
+    "explanation": "尺骨神経麻痺では骨間筋や第4・5虫様筋が麻痺し、環指・小指を中心に鷲手（かぎ爪変形）を呈する。正中神経麻痺は猿手、橈骨神経麻痺は下垂手を呈する。",
+    "hasFigure": false,
+    "source": "第30回 はり師・きゅう師国家試験",
+    "sourceUrl": "https://ahaki.or.jp/wordpress/wp-content/uploads/mondai_30_harikyu_am.pdf",
+    "sourceOrg": "公益財団法人 東洋療法研修試験財団",
+    "sourceReliability": "indexed_official",
+    "verifiedAt": "2026-10-01"
+  },
+  {
+    "id": "30-042",
+    "examRound": 30,
+    "questionNumber": 42,
+    "questionText": "血中脂質で基準値を下回ると動脈硬化のリスクが高くなるのはどれか。",
+    "choices": [
+      "中性脂肪",
+      "総コレステロール",
+      "LDLコレステロール",
+      "HDLコレステロール"
+    ],
+    "answerIndex": 3,
+    "explanation": "HDLコレステロールは末梢組織のコレステロールを肝臓へ運ぶ善玉コレステロールで、基準値（40mg/dL）を下回る低HDLコレステロール血症は動脈硬化の危険因子となる。中性脂肪・LDLコレステロールは高値が危険因子である。",
+    "hasFigure": false,
+    "source": "第30回 はり師・きゅう師国家試験",
+    "sourceUrl": "https://ahaki.or.jp/wordpress/wp-content/uploads/mondai_30_harikyu_am.pdf",
+    "sourceOrg": "公益財団法人 東洋療法研修試験財団",
+    "sourceReliability": "indexed_official",
+    "verifiedAt": "2026-10-01"
+  },
+  {
+    "id": "30-043",
+    "examRound": 30,
+    "questionNumber": 43,
+    "questionText": "リンパ節腫脹の原因で誤っているのはどれか。",
+    "choices": [
+      "感染症",
+      "白血病",
+      "鼠径ヘルニア",
+      "悪性腫瘍の転移"
+    ],
+    "answerIndex": 2,
+    "explanation": "鼠径ヘルニアは腹腔内容が鼠径管などから脱出するもので、鼠径部の膨隆を生じるがリンパ節腫脹の原因ではない。感染症・白血病・悪性腫瘍の転移はリンパ節腫脹の原因となる。",
+    "hasFigure": false,
+    "source": "第30回 はり師・きゅう師国家試験",
+    "sourceUrl": "https://ahaki.or.jp/wordpress/wp-content/uploads/mondai_30_harikyu_am.pdf",
+    "sourceOrg": "公益財団法人 東洋療法研修試験財団",
+    "sourceReliability": "indexed_official",
+    "verifiedAt": "2026-10-01"
+  },
+  {
+    "id": "30-044",
+    "examRound": 30,
+    "questionNumber": 44,
+    "questionText": "呼吸器症状について正しいのはどれか。",
+    "choices": [
+      "気胸は胸痛の原因となる。",
+      "喘息による咳は昼間に多い。",
+      "痰を伴わない咳を湿性咳嗽という。",
+      "動脈血酸素飽和度が正常であれば呼吸困難は呈さない。"
+    ],
+    "answerIndex": 0,
+    "explanation": "気胸では胸膜腔に空気が入り、突然の胸痛と呼吸困難を生じる。喘息の咳や発作は夜間から早朝に多く、痰を伴わない咳は乾性咳嗽である。呼吸困難は主観的な症状であり、動脈血酸素飽和度が正常でも生じることがある。",
+    "hasFigure": false,
+    "source": "第30回 はり師・きゅう師国家試験",
+    "sourceUrl": "https://ahaki.or.jp/wordpress/wp-content/uploads/mondai_30_harikyu_am.pdf",
+    "sourceOrg": "公益財団法人 東洋療法研修試験財団",
+    "sourceReliability": "indexed_official",
+    "verifiedAt": "2026-10-01"
+  },
+  {
+    "id": "30-045",
+    "examRound": 30,
+    "questionNumber": 45,
+    "questionText": "一次救命処置で正しいのはどれか。",
+    "choices": [
+      "救急薬品を使用する。",
+      "胸骨圧迫を行う。",
+      "人工呼吸器をつける。",
+      "静脈ルートを確保する。"
+    ],
+    "answerIndex": 1,
+    "explanation": "一次救命処置（BLS）は特別な器具や薬品を用いずに行う救命処置で、胸骨圧迫・人工呼吸・AEDの使用が含まれる。救急薬品の使用、人工呼吸器の装着、静脈ルートの確保は医療従事者による二次救命処置にあたる。",
+    "hasFigure": false,
+    "source": "第30回 はり師・きゅう師国家試験",
+    "sourceUrl": "https://ahaki.or.jp/wordpress/wp-content/uploads/mondai_30_harikyu_am.pdf",
+    "sourceOrg": "公益財団法人 東洋療法研修試験財団",
+    "sourceReliability": "indexed_official",
+    "verifiedAt": "2026-10-01"
+  },
+  {
+    "id": "30-046",
+    "examRound": 30,
+    "questionNumber": 46,
+    "questionText": "意識障害で最も重いのはどれか。",
+    "choices": [
+      "昏迷",
+      "傾眠",
+      "昏睡",
+      "嗜眠"
+    ],
+    "answerIndex": 2,
+    "explanation": "意識障害は一般に軽い順に傾眠・嗜眠・昏迷・半昏睡・昏睡と分類され、外部からのいかなる刺激にも反応しない昏睡が最も重い。",
+    "hasFigure": false,
+    "source": "第30回 はり師・きゅう師国家試験",
+    "sourceUrl": "https://ahaki.or.jp/wordpress/wp-content/uploads/mondai_30_harikyu_am.pdf",
+    "sourceOrg": "公益財団法人 東洋療法研修試験財団",
+    "sourceReliability": "indexed_official",
+    "verifiedAt": "2026-10-01"
+  },
+  {
+    "id": "30-047",
+    "examRound": 30,
+    "questionNumber": 47,
+    "questionText": "やせをきたしやすい疾患はどれか。",
+    "choices": [
+      "早期胃癌",
+      "脂質異常症",
+      "甲状腺機能低下症",
+      "神経性食欲不振症"
+    ],
+    "answerIndex": 3,
+    "explanation": "神経性食欲不振症（神経性やせ症）は、肥満への恐怖などから極端な摂食制限を行い著しいやせをきたす。早期胃癌は無症状のことが多く、脂質異常症は体重減少の原因とならず、甲状腺機能低下症はむしろ体重増加傾向となる。",
+    "hasFigure": false,
+    "source": "第30回 はり師・きゅう師国家試験",
+    "sourceUrl": "https://ahaki.or.jp/wordpress/wp-content/uploads/mondai_30_harikyu_am.pdf",
+    "sourceOrg": "公益財団法人 東洋療法研修試験財団",
+    "sourceReliability": "indexed_official",
+    "verifiedAt": "2026-10-01"
+  },
+  {
+    "id": "30-048",
+    "examRound": 30,
+    "questionNumber": 48,
+    "questionText": "めまいをきたす疾患はどれか。",
+    "choices": [
+      "メニエール病",
+      "パーキンソン病",
+      "クッシング病",
+      "ウィルソン病"
+    ],
+    "answerIndex": 0,
+    "explanation": "メニエール病は内リンパ水腫により、回転性めまい発作に耳鳴・難聴・耳閉塞感を伴う内耳疾患である。パーキンソン病・クッシング病・ウィルソン病はめまいを主症状とする疾患ではない。",
+    "hasFigure": false,
+    "source": "第30回 はり師・きゅう師国家試験",
+    "sourceUrl": "https://ahaki.or.jp/wordpress/wp-content/uploads/mondai_30_harikyu_am.pdf",
+    "sourceOrg": "公益財団法人 東洋療法研修試験財団",
+    "sourceReliability": "indexed_official",
+    "verifiedAt": "2026-10-01"
+  },
+  {
+    "id": "30-049",
+    "examRound": 30,
+    "questionNumber": 49,
+    "questionText": "変形性関節症の単純エックス線所見で正しいのはどれか。",
+    "choices": [
+      "骨壊死像",
+      "骨棘の形成",
+      "関節裂隙の拡大",
+      "軟骨下骨の萎縮像"
+    ],
+    "answerIndex": 1,
+    "explanation": "変形性関節症の単純エックス線では、骨棘形成、関節裂隙の狭小化、軟骨下骨の硬化、骨嚢胞がみられる。関節裂隙は拡大ではなく狭小化し、軟骨下骨は萎縮ではなく硬化像を示す。",
+    "hasFigure": false,
+    "source": "第30回 はり師・きゅう師国家試験",
+    "sourceUrl": "https://ahaki.or.jp/wordpress/wp-content/uploads/mondai_30_harikyu_am.pdf",
+    "sourceOrg": "公益財団法人 東洋療法研修試験財団",
+    "sourceReliability": "indexed_official",
+    "verifiedAt": "2026-10-01"
+  },
+  {
+    "id": "30-050",
+    "examRound": 30,
+    "questionNumber": 50,
+    "questionText": "くる病の治療で適切でないのはどれか。",
+    "choices": [
+      "ビタミンDの投与",
+      "運動",
+      "日光浴",
+      "副腎皮質ホルモンの投与"
+    ],
+    "answerIndex": 3,
+    "explanation": "くる病は小児期のビタミンD不足などによる骨の石灰化障害で、ビタミンDの投与・日光浴・適度な運動が治療・予防となる。副腎皮質ホルモンはカルシウム吸収を抑制し骨量を減少させるため適切でない。",
+    "hasFigure": false,
+    "source": "第30回 はり師・きゅう師国家試験",
+    "sourceUrl": "https://ahaki.or.jp/wordpress/wp-content/uploads/mondai_30_harikyu_am.pdf",
+    "sourceOrg": "公益財団法人 東洋療法研修試験財団",
+    "sourceReliability": "indexed_official",
+    "verifiedAt": "2026-10-01"
+  },
+  {
+    "id": "30-051",
+    "examRound": 30,
+    "questionNumber": 51,
+    "questionText": "骨化性筋炎の原因はどれか。",
+    "choices": [
+      "脊髄損傷",
+      "エストロゲン製剤の服用",
+      "意識障害を伴う脳障害",
+      "筋挫傷後の無理な可動域訓練"
+    ],
+    "answerIndex": 3,
+    "explanation": "骨化性筋炎（外傷性骨化性筋炎）は、筋挫傷などの外傷後に無理なマッサージや強引な可動域訓練を行うことで筋内に異所性骨化が生じるものである。脊髄損傷や脳障害後にも異所性骨化は生じるが、骨化性筋炎の原因として代表的なのは筋挫傷後の無理な可動域訓練である。",
+    "hasFigure": false,
+    "source": "第30回 はり師・きゅう師国家試験",
+    "sourceUrl": "https://ahaki.or.jp/wordpress/wp-content/uploads/mondai_30_harikyu_am.pdf",
+    "sourceOrg": "公益財団法人 東洋療法研修試験財団",
+    "sourceReliability": "indexed_official",
+    "verifiedAt": "2026-10-01"
+  },
+  {
+    "id": "30-052",
+    "examRound": 30,
+    "questionNumber": 52,
+    "questionText": "外傷とその原因の組合せで正しいのはどれか。",
+    "choices": [
+      "手舟状骨骨折 ── 手関節掌屈",
+      "股関節脱臼 ── 車内のダッシュボードへの膝の衝突",
+      "上腕骨顆上骨折 ── 上肢の急激な牽引",
+      "第5中足骨基部裂離骨折 ── 足部外がえし"
+    ],
+    "answerIndex": 1,
+    "explanation": "交通事故で膝をダッシュボードに打ちつけると大腿骨長軸方向に力が加わり、股関節後方脱臼（ダッシュボード損傷）が生じる。手舟状骨骨折は手関節背屈位で手をついて、上腕骨顆上骨折は肘伸展位で手をついて転倒して生じ、第5中足骨基部裂離骨折は足部の内がえしで生じる。",
+    "hasFigure": false,
+    "source": "第30回 はり師・きゅう師国家試験",
+    "sourceUrl": "https://ahaki.or.jp/wordpress/wp-content/uploads/mondai_30_harikyu_am.pdf",
+    "sourceOrg": "公益財団法人 東洋療法研修試験財団",
+    "sourceReliability": "indexed_official",
+    "verifiedAt": "2026-10-01"
+  },
+  {
+    "id": "30-053",
+    "examRound": 30,
+    "questionNumber": 53,
+    "questionText": "筋萎縮性側索硬化症によくみられるのはどれか。",
+    "choices": [
+      "感覚障害",
+      "眼球運動障害",
+      "膀胱直腸障害",
+      "筋線維束性れん縮"
+    ],
+    "answerIndex": 3,
+    "explanation": "筋萎縮性側索硬化症（ALS）は上位・下位運動ニューロンが選択的に障害される疾患で、下位運動ニューロン障害により筋線維束性れん縮（線維束攣縮）がみられる。感覚障害・眼球運動障害・膀胱直腸障害・褥瘡は出現しにくい（陰性徴候）。",
+    "hasFigure": false,
+    "source": "第30回 はり師・きゅう師国家試験",
+    "sourceUrl": "https://ahaki.or.jp/wordpress/wp-content/uploads/mondai_30_harikyu_am.pdf",
+    "sourceOrg": "公益財団法人 東洋療法研修試験財団",
+    "sourceReliability": "indexed_official",
+    "verifiedAt": "2026-10-01"
+  },
+  {
+    "id": "30-054",
+    "examRound": 30,
+    "questionNumber": 54,
+    "questionText": "パーキンソン病で振戦が最も起こりやすいのはどれか。",
+    "choices": [
+      "字を書くとき",
+      "じっとしているとき",
+      "何か物を取ろうとするとき",
+      "からだの前で手を保持するとき"
+    ],
+    "answerIndex": 1,
+    "explanation": "パーキンソン病の振戦は安静時振戦で、じっとしているときに目立ち、動作時には軽減する。物を取ろうとするときに強まる企図振戦は小脳障害、姿勢を保持するときに出る姿勢時振戦は本態性振戦でみられる。",
+    "hasFigure": false,
+    "source": "第30回 はり師・きゅう師国家試験",
+    "sourceUrl": "https://ahaki.or.jp/wordpress/wp-content/uploads/mondai_30_harikyu_am.pdf",
+    "sourceOrg": "公益財団法人 東洋療法研修試験財団",
+    "sourceReliability": "indexed_official",
+    "verifiedAt": "2026-10-01"
+  },
+  {
+    "id": "30-055",
+    "examRound": 30,
+    "questionNumber": 55,
+    "questionText": "高血圧性脳出血が最も好発する部位はどれか。",
+    "choices": [
+      "被殻",
+      "視床",
+      "橋",
+      "前頭葉"
+    ],
+    "answerIndex": 0,
+    "explanation": "高血圧性脳出血は被殻出血が最も多く、次いで視床出血が多い。橋出血や小脳出血、皮質下出血はそれらより少ない。",
+    "hasFigure": false,
+    "source": "第30回 はり師・きゅう師国家試験",
+    "sourceUrl": "https://ahaki.or.jp/wordpress/wp-content/uploads/mondai_30_harikyu_am.pdf",
+    "sourceOrg": "公益財団法人 東洋療法研修試験財団",
+    "sourceReliability": "indexed_official",
+    "verifiedAt": "2026-10-01"
+  },
+  {
+    "id": "30-056",
+    "examRound": 30,
+    "questionNumber": 56,
+    "questionText": "汎血球減少症をきたすのはどれか。",
+    "choices": [
+      "鉄欠乏性貧血",
+      "腎性貧血",
+      "溶血性貧血",
+      "再生不良性貧血"
+    ],
+    "answerIndex": 3,
+    "explanation": "再生不良性貧血は骨髄の造血幹細胞の障害により、赤血球・白血球・血小板がすべて減少する汎血球減少症をきたす。鉄欠乏性貧血・腎性貧血・溶血性貧血は主に赤血球系の減少である。",
+    "hasFigure": false,
+    "source": "第30回 はり師・きゅう師国家試験",
+    "sourceUrl": "https://ahaki.or.jp/wordpress/wp-content/uploads/mondai_30_harikyu_am.pdf",
+    "sourceOrg": "公益財団法人 東洋療法研修試験財団",
+    "sourceReliability": "indexed_official",
+    "verifiedAt": "2026-10-01"
+  },
+  {
+    "id": "30-057",
+    "examRound": 30,
+    "questionNumber": 57,
+    "questionText": "急性骨髄性白血病について正しいのはどれか。",
+    "choices": [
+      "末梢血で白血球裂孔がみられる。",
+      "中枢神経障害がみられる。",
+      "小児に多い。",
+      "血液凝固系は保たれる。"
+    ],
+    "answerIndexes": [
+      0,
+      1,
+      2,
+      3
+    ],
+    "explanation": "急性骨髄性白血病では、幼若な芽球と成熟好中球が存在し中間段階の細胞が欠如する白血球裂孔がみられる。公式正答表では本問は①〜④のいずれを選んでも正答として扱われている（採点上の特別扱い）。なお、小児の急性白血病はリンパ性が多い。",
+    "hasFigure": false,
+    "source": "第30回 はり師・きゅう師国家試験",
+    "sourceUrl": "https://ahaki.or.jp/wordpress/wp-content/uploads/mondai_30_harikyu_am.pdf",
+    "sourceOrg": "公益財団法人 東洋療法研修試験財団",
+    "sourceReliability": "indexed_official",
+    "verifiedAt": "2026-10-01"
+  },
+  {
+    "id": "30-058",
+    "examRound": 30,
+    "questionNumber": 58,
+    "questionText": "子宮筋腫について正しいのはどれか。",
+    "choices": [
+      "CA125が上昇する。",
+      "ヒトパピローマウイルス（HPV）感染が関係する。",
+      "不正性器出血をきたしにくい。",
+      "エストロゲン依存性疾患である。"
+    ],
+    "answerIndex": 3,
+    "explanation": "子宮筋腫は子宮平滑筋の良性腫瘍で、エストロゲン依存性に増大し閉経後は縮小する。過多月経や不正性器出血、貧血の原因となる。CA125は卵巣癌や子宮内膜症の腫瘍マーカー、HPV感染は子宮頸癌に関係する。",
+    "hasFigure": false,
+    "source": "第30回 はり師・きゅう師国家試験",
+    "sourceUrl": "https://ahaki.or.jp/wordpress/wp-content/uploads/mondai_30_harikyu_am.pdf",
+    "sourceOrg": "公益財団法人 東洋療法研修試験財団",
+    "sourceReliability": "indexed_official",
+    "verifiedAt": "2026-10-01"
+  },
+  {
+    "id": "30-059",
+    "examRound": 30,
+    "questionNumber": 59,
+    "questionText": "非結核性抗酸菌症について正しいのはどれか。",
+    "choices": [
+      "男性に多い。",
+      "人から人へ感染する。",
+      "難治性である。",
+      "肺切除の対象とはならない。"
+    ],
+    "answerIndex": 2,
+    "explanation": "非結核性抗酸菌症（主に肺MAC症）は有効な治療薬が限られ、長期の多剤併用療法でも再発しやすい難治性の感染症である。中高年の女性に多く、環境中の菌を吸入して感染し人から人へは感染しない。病変が限局する場合は肺切除の対象となることがある。",
+    "hasFigure": false,
+    "source": "第30回 はり師・きゅう師国家試験",
+    "sourceUrl": "https://ahaki.or.jp/wordpress/wp-content/uploads/mondai_30_harikyu_am.pdf",
+    "sourceOrg": "公益財団法人 東洋療法研修試験財団",
+    "sourceReliability": "indexed_official",
+    "verifiedAt": "2026-10-01"
+  },
+  {
+    "id": "30-060",
+    "examRound": 30,
+    "questionNumber": 60,
+    "questionText": "腎前性腎不全の病因はどれか。",
+    "choices": [
+      "出血性ショック",
+      "前立腺癌",
+      "後腹膜腫瘍",
+      "急性腎炎症候群"
+    ],
+    "answerIndex": 0,
+    "explanation": "腎前性腎不全は腎血流量の低下によるもので、出血性ショックや脱水、心不全などが原因となる。前立腺癌・後腹膜腫瘍による尿路の閉塞は腎後性、急性腎炎症候群は腎実質の障害による腎性腎不全の原因である。",
+    "hasFigure": false,
+    "source": "第30回 はり師・きゅう師国家試験",
+    "sourceUrl": "https://ahaki.or.jp/wordpress/wp-content/uploads/mondai_30_harikyu_am.pdf",
+    "sourceOrg": "公益財団法人 東洋療法研修試験財団",
+    "sourceReliability": "indexed_official",
+    "verifiedAt": "2026-10-01"
+  },
+  {
+    "id": "30-061",
+    "examRound": 30,
+    "questionNumber": 61,
+    "questionText": "不整脈で予後が最も良いのはどれか。",
+    "choices": [
+      "心室細動",
+      "心房細動",
+      "上室性期外収縮",
+      "Ⅲ度房室ブロック"
+    ],
+    "answerIndex": 2,
+    "explanation": "上室性期外収縮は健常者にもみられ、基礎疾患がなければ多くは治療を要さず予後良好である。心室細動は致死的不整脈、Ⅲ度（完全）房室ブロックは失神やペースメーカー適応となる重篤な不整脈で、心房細動は脳塞栓症のリスクがある。",
+    "hasFigure": false,
+    "source": "第30回 はり師・きゅう師国家試験",
+    "sourceUrl": "https://ahaki.or.jp/wordpress/wp-content/uploads/mondai_30_harikyu_am.pdf",
+    "sourceOrg": "公益財団法人 東洋療法研修試験財団",
+    "sourceReliability": "indexed_official",
+    "verifiedAt": "2026-10-01"
+  },
+  {
+    "id": "30-062",
+    "examRound": 30,
+    "questionNumber": 62,
+    "questionText": "我が国における後天性失明の原因で最も多いのはどれか。",
+    "choices": [
+      "加齢黄斑変性症",
+      "白内障",
+      "網膜剥離",
+      "緑内障"
+    ],
+    "answerIndex": 3,
+    "explanation": "我が国の中途失明（視覚障害）の原因の第1位は緑内障で、網膜色素変性症・糖尿病網膜症・加齢黄斑変性症などが続く。白内障は手術で視力回復が見込めるため失明原因としては少ない。",
+    "hasFigure": false,
+    "source": "第30回 はり師・きゅう師国家試験",
+    "sourceUrl": "https://ahaki.or.jp/wordpress/wp-content/uploads/mondai_30_harikyu_am.pdf",
+    "sourceOrg": "公益財団法人 東洋療法研修試験財団",
+    "sourceReliability": "indexed_official",
+    "verifiedAt": "2026-10-01"
+  },
+  {
+    "id": "30-063",
+    "examRound": 30,
+    "questionNumber": 63,
+    "questionText": "Ⅳ型アレルギーはどれか。",
+    "choices": [
+      "アナフィラキシーショック",
+      "アレルギー性結膜炎",
+      "アレルギー性接触性皮膚炎",
+      "アレルギー性鼻炎"
+    ],
+    "answerIndex": 2,
+    "explanation": "Ⅳ型アレルギーは感作T細胞による遅延型反応で、アレルギー性接触性皮膚炎やツベルクリン反応が代表例である。アナフィラキシーショック・アレルギー性結膜炎・アレルギー性鼻炎はIgEが関与するⅠ型（即時型）アレルギーである。",
+    "hasFigure": false,
+    "source": "第30回 はり師・きゅう師国家試験",
+    "sourceUrl": "https://ahaki.or.jp/wordpress/wp-content/uploads/mondai_30_harikyu_am.pdf",
+    "sourceOrg": "公益財団法人 東洋療法研修試験財団",
+    "sourceReliability": "indexed_official",
+    "verifiedAt": "2026-10-01"
+  },
+  {
+    "id": "30-064",
+    "examRound": 30,
+    "questionNumber": 64,
+    "questionText": "発達障害で不注意、多動性、衝動性の3つの特徴がみられるのはどれか。",
+    "choices": [
+      "ADHD",
+      "PTSD",
+      "発達性協調運動障害",
+      "自閉スペクトラム症"
+    ],
+    "answerIndex": 0,
+    "explanation": "ADHD（注意欠如・多動症）は不注意・多動性・衝動性を中核症状とする発達障害である。PTSDは心的外傷後ストレス障害、発達性協調運動障害は協調運動の不器用さ、自閉スペクトラム症は社会的コミュニケーションの障害と限定された反復的な行動を特徴とする。",
+    "hasFigure": false,
+    "source": "第30回 はり師・きゅう師国家試験",
+    "sourceUrl": "https://ahaki.or.jp/wordpress/wp-content/uploads/mondai_30_harikyu_am.pdf",
+    "sourceOrg": "公益財団法人 東洋療法研修試験財団",
+    "sourceReliability": "indexed_official",
+    "verifiedAt": "2026-10-01"
+  },
+  {
+    "id": "30-065",
+    "examRound": 30,
+    "questionNumber": 65,
+    "questionText": "感染症と媒介生物の組合せで正しいのはどれか。",
+    "choices": [
+      "発疹チフス ── ダニ",
+      "トキソプラズマ症 ── シラミ",
+      "デング熱 ── 蚊",
+      "日本脳炎 ── ネズミ"
+    ],
+    "answerIndex": 2,
+    "explanation": "デング熱はネッタイシマカやヒトスジシマカなどの蚊が媒介する。発疹チフスはシラミ、日本脳炎は蚊（コガタアカイエカ）が媒介し、トキソプラズマ症はネコの糞便や加熱不十分な肉などから感染する。",
+    "hasFigure": false,
+    "source": "第30回 はり師・きゅう師国家試験",
+    "sourceUrl": "https://ahaki.or.jp/wordpress/wp-content/uploads/mondai_30_harikyu_am.pdf",
+    "sourceOrg": "公益財団法人 東洋療法研修試験財団",
+    "sourceReliability": "indexed_official",
+    "verifiedAt": "2026-10-01"
+  },
+  {
+    "id": "30-066",
+    "examRound": 30,
+    "questionNumber": 66,
+    "questionText": "急性膵炎で最も多いのはどれか。",
+    "choices": [
+      "アルコール性膵炎",
+      "自己免疫性膵炎",
+      "胆石性膵炎",
+      "薬剤性膵炎"
+    ],
+    "answerIndex": 0,
+    "explanation": "我が国の急性膵炎の成因はアルコール性が最も多く、次いで胆石性が多い。自己免疫性膵炎や薬剤性膵炎はそれらより少ない。",
+    "hasFigure": false,
+    "source": "第30回 はり師・きゅう師国家試験",
+    "sourceUrl": "https://ahaki.or.jp/wordpress/wp-content/uploads/mondai_30_harikyu_am.pdf",
+    "sourceOrg": "公益財団法人 東洋療法研修試験財団",
+    "sourceReliability": "indexed_official",
+    "verifiedAt": "2026-10-01"
+  },
+  {
+    "id": "30-067",
+    "examRound": 30,
+    "questionNumber": 67,
+    "questionText": "予防接種が有効な感染症はどれか。",
+    "choices": [
+      "百日咳",
+      "腸チフス",
+      "C型肝炎",
+      "猩紅熱"
+    ],
+    "answerIndex": 0,
+    "explanation": "百日咳は定期予防接種（ジフテリア・百日咳・破傷風・ポリオなどの混合ワクチン）の対象であり、予防接種が有効である。C型肝炎・猩紅熱には実用化されたワクチンがなく、腸チフスは我が国の定期予防接種の対象ではない。",
+    "hasFigure": false,
+    "source": "第30回 はり師・きゅう師国家試験",
+    "sourceUrl": "https://ahaki.or.jp/wordpress/wp-content/uploads/mondai_30_harikyu_am.pdf",
+    "sourceOrg": "公益財団法人 東洋療法研修試験財団",
+    "sourceReliability": "indexed_official",
+    "verifiedAt": "2026-10-01"
+  },
+  {
+    "id": "30-068",
+    "examRound": 30,
+    "questionNumber": 68,
+    "questionText": "アデノウイルス感染症はどれか。",
+    "choices": [
+      "流行性耳下腺炎",
+      "流行性角結膜炎",
+      "伝染性単核球症",
+      "手足口病"
+    ],
+    "answerIndex": 1,
+    "explanation": "流行性角結膜炎（はやり目）はアデノウイルスによる感染症である。流行性耳下腺炎はムンプスウイルス、伝染性単核球症はEBウイルス、手足口病はコクサッキーウイルスやエンテロウイルスによる。",
+    "hasFigure": false,
+    "source": "第30回 はり師・きゅう師国家試験",
+    "sourceUrl": "https://ahaki.or.jp/wordpress/wp-content/uploads/mondai_30_harikyu_am.pdf",
+    "sourceOrg": "公益財団法人 東洋療法研修試験財団",
+    "sourceReliability": "indexed_official",
+    "verifiedAt": "2026-10-01"
+  },
+  {
+    "id": "30-069",
+    "examRound": 30,
+    "questionNumber": 69,
+    "questionText": "大腸癌について正しいのはどれか。",
+    "choices": [
+      "近年減少傾向である。",
+      "便潜血検査は死亡率減少に寄与する。",
+      "大部分が扁平上皮癌である。",
+      "血清CEAが早期診断に役立つ。"
+    ],
+    "answerIndex": 1,
+    "explanation": "便潜血検査による大腸癌検診は大腸癌の死亡率を減少させる効果が確認されている。大腸癌は増加傾向にあり、組織型の大部分は腺癌である。CEAは進行癌の経過観察や再発の指標に用いられ、早期診断には有用でない。",
+    "hasFigure": false,
+    "source": "第30回 はり師・きゅう師国家試験",
+    "sourceUrl": "https://ahaki.or.jp/wordpress/wp-content/uploads/mondai_30_harikyu_am.pdf",
+    "sourceOrg": "公益財団法人 東洋療法研修試験財団",
+    "sourceReliability": "indexed_official",
+    "verifiedAt": "2026-10-01"
+  },
+  {
+    "id": "30-070",
+    "examRound": 30,
+    "questionNumber": 70,
+    "questionText": "ウイルス性肝炎と感染経路の組合せで正しいのはどれか。",
+    "choices": [
+      "A型 ── 性行為",
+      "B型 ── 獣肉摂取",
+      "C型 ── 血液への曝露",
+      "E型 ── 生鮮魚介類の摂取"
+    ],
+    "answerIndex": 2,
+    "explanation": "C型肝炎は輸血・針刺し事故・注射器の共用など血液への曝露で感染する。A型肝炎は生鮮魚介類（生牡蠣など）などを介した経口感染、B型肝炎は血液・性行為・母子感染、E型肝炎は豚・猪・鹿などの獣肉の生食などによる経口感染が主である。",
+    "hasFigure": false,
+    "source": "第30回 はり師・きゅう師国家試験",
+    "sourceUrl": "https://ahaki.or.jp/wordpress/wp-content/uploads/mondai_30_harikyu_am.pdf",
+    "sourceOrg": "公益財団法人 東洋療法研修試験財団",
+    "sourceReliability": "indexed_official",
+    "verifiedAt": "2026-10-01"
+  },
+  {
+    "id": "30-071",
+    "examRound": 30,
+    "questionNumber": 71,
+    "questionText": "社会的リハビリテーションに該当するのはどれか。",
+    "choices": [
+      "職業訓練",
+      "特別支援教育",
+      "二次的合併症の予防",
+      "施設入所支援"
+    ],
+    "answerIndex": 3,
+    "explanation": "社会的リハビリテーションは障害者が社会生活を送るための能力を高め、生活環境を整える援助で、施設入所支援などの福祉サービスがこれに含まれる。職業訓練は職業的リハビリテーション、特別支援教育は教育的リハビリテーション、二次的合併症の予防は医学的リハビリテーションにあたる。",
+    "hasFigure": false,
+    "source": "第30回 はり師・きゅう師国家試験",
+    "sourceUrl": "https://ahaki.or.jp/wordpress/wp-content/uploads/mondai_30_harikyu_am.pdf",
+    "sourceOrg": "公益財団法人 東洋療法研修試験財団",
+    "sourceReliability": "indexed_official",
+    "verifiedAt": "2026-10-01"
+  },
+  {
+    "id": "30-072",
+    "examRound": 30,
+    "questionNumber": 72,
+    "questionText": "リハビリテーション医療チームのうち、退院後在宅での施設利用を調整する職種はどれか。",
+    "choices": [
+      "看護師",
+      "作業療法士",
+      "義肢装具士",
+      "医療ソーシャルワーカー"
+    ],
+    "answerIndex": 3,
+    "explanation": "医療ソーシャルワーカー（MSW）は、患者や家族の社会的・経済的問題の相談に応じ、退院後の施設利用や福祉サービスの調整を行う。看護師・作業療法士・義肢装具士はそれぞれ看護、作業療法、義肢装具の製作・適合を担う。",
+    "hasFigure": false,
+    "source": "第30回 はり師・きゅう師国家試験",
+    "sourceUrl": "https://ahaki.or.jp/wordpress/wp-content/uploads/mondai_30_harikyu_am.pdf",
+    "sourceOrg": "公益財団法人 東洋療法研修試験財団",
+    "sourceReliability": "indexed_official",
+    "verifiedAt": "2026-10-01"
+  },
+  {
+    "id": "30-073",
+    "examRound": 30,
+    "questionNumber": 73,
+    "questionText": "疾患と異常歩行の組合せで正しいのはどれか。",
+    "choices": [
+      "腰部脊柱管狭窄症 ── 間欠跛行",
+      "脊髄小脳変性症 ── 分回し歩行",
+      "パーキンソン病 ── 酩酊歩行",
+      "脳卒中片麻痺 ── 小刻み歩行"
+    ],
+    "answerIndex": 0,
+    "explanation": "腰部脊柱管狭窄症では歩行により下肢のしびれ・痛みが出現し、休息（前屈位）で軽快する神経性間欠跛行がみられる。分回し歩行は脳卒中片麻痺、酩酊歩行（失調性歩行）は脊髄小脳変性症、小刻み歩行はパーキンソン病でみられる。",
+    "hasFigure": false,
+    "source": "第30回 はり師・きゅう師国家試験",
+    "sourceUrl": "https://ahaki.or.jp/wordpress/wp-content/uploads/mondai_30_harikyu_am.pdf",
+    "sourceOrg": "公益財団法人 東洋療法研修試験財団",
+    "sourceReliability": "indexed_official",
+    "verifiedAt": "2026-10-01"
+  },
+  {
+    "id": "30-074",
+    "examRound": 30,
+    "questionNumber": 74,
+    "questionText": "手関節背屈装具の適応となるのはどれか。",
+    "choices": [
+      "正中神経麻痺",
+      "橈骨神経麻痺",
+      "筋皮神経麻痺",
+      "尺骨神経麻痺"
+    ],
+    "answerIndex": 1,
+    "explanation": "橈骨神経麻痺では手関節・手指の伸展筋が麻痺して下垂手となるため、手関節を背屈位に保持する装具（カックアップスプリントなど）の適応となる。正中神経麻痺には対立装具、尺骨神経麻痺にはナックルベンダーなどが用いられる。",
+    "hasFigure": false,
+    "source": "第30回 はり師・きゅう師国家試験",
+    "sourceUrl": "https://ahaki.or.jp/wordpress/wp-content/uploads/mondai_30_harikyu_am.pdf",
+    "sourceOrg": "公益財団法人 東洋療法研修試験財団",
+    "sourceReliability": "indexed_official",
+    "verifiedAt": "2026-10-01"
+  },
+  {
+    "id": "30-075",
+    "examRound": 30,
+    "questionNumber": 75,
+    "questionText": "スプーンを持ってスープを口に運ぶ際、前腕と手関節の運動方向の組合せで最も適切なのはどれか。",
+    "choices": [
+      "前腕回外 ── 手関節屈曲",
+      "前腕回外 ── 手関節伸展",
+      "前腕回内 ── 手関節屈曲",
+      "前腕回内 ── 手関節伸展"
+    ],
+    "answerIndex": 0,
+    "explanation": "スプーンですくったスープをこぼさずに口へ運ぶには、肘を屈曲しながら前腕を回外し、手関節を屈曲（掌屈）させてスプーンを水平に保つ動作が必要となる。公式正答は①（前腕回外・手関節屈曲）である。",
+    "hasFigure": false,
+    "source": "第30回 はり師・きゅう師国家試験",
+    "sourceUrl": "https://ahaki.or.jp/wordpress/wp-content/uploads/mondai_30_harikyu_am.pdf",
+    "sourceOrg": "公益財団法人 東洋療法研修試験財団",
+    "sourceReliability": "indexed_official",
+    "verifiedAt": "2026-10-01"
+  },
+  {
+    "id": "30-076",
+    "examRound": 30,
+    "questionNumber": 76,
+    "questionText": "脳卒中片麻痺患者の生活期に最も多く使用されている装具はどれか。",
+    "choices": [
+      "長下肢装具",
+      "短下肢装具",
+      "膝関節装具",
+      "体幹装具"
+    ],
+    "answerIndex": 1,
+    "explanation": "脳卒中片麻痺では足関節の背屈障害（下垂足・内反尖足）に対して短下肢装具が生活期に最も多く用いられる。長下肢装具は主に急性期・回復期の立位・歩行訓練で用いられる。",
+    "hasFigure": false,
+    "source": "第30回 はり師・きゅう師国家試験",
+    "sourceUrl": "https://ahaki.or.jp/wordpress/wp-content/uploads/mondai_30_harikyu_am.pdf",
+    "sourceOrg": "公益財団法人 東洋療法研修試験財団",
+    "sourceReliability": "indexed_official",
+    "verifiedAt": "2026-10-01"
+  },
+  {
+    "id": "30-077",
+    "examRound": 30,
+    "questionNumber": 77,
+    "questionText": "脊髄損傷患者に生じる自律神経過反射について正しいのはどれか。",
+    "choices": [
+      "腰髄損傷患者にみられる。",
+      "頻脈を生じる。",
+      "便秘が原因となる。",
+      "血圧上昇にはまず降圧薬を投与する。"
+    ],
+    "answerIndex": 2,
+    "explanation": "自律神経過反射は第6胸髄より高位の脊髄損傷で、膀胱充満や便秘（直腸の充満）などの刺激をきっかけに発作性の血圧上昇が起こるもので、反射性の徐脈・頭痛・発汗などを伴う。対応はまず座位にして原因（導尿・排便など）を除去することである。",
+    "hasFigure": false,
+    "source": "第30回 はり師・きゅう師国家試験",
+    "sourceUrl": "https://ahaki.or.jp/wordpress/wp-content/uploads/mondai_30_harikyu_am.pdf",
+    "sourceOrg": "公益財団法人 東洋療法研修試験財団",
+    "sourceReliability": "indexed_official",
+    "verifiedAt": "2026-10-01"
+  },
+  {
+    "id": "30-078",
+    "examRound": 30,
+    "questionNumber": 78,
+    "questionText": "下腿義足のうち膝蓋靱帯で体重を支持し、懸垂をカフベルトで行うのはどれか。",
+    "choices": [
+      "在来式",
+      "KBM式",
+      "PTB式",
+      "ライナー式"
+    ],
+    "answerIndex": 2,
+    "explanation": "PTB式下腿義足は膝蓋腱（膝蓋靱帯）部で体重を支持し、カフベルトで懸垂する。KBM式は大腿骨顆部を包み込むことで懸垂し、在来式は大腿コルセットと膝継手を用い、ライナー式はシリコーンライナーなどで懸垂する。",
+    "hasFigure": false,
+    "source": "第30回 はり師・きゅう師国家試験",
+    "sourceUrl": "https://ahaki.or.jp/wordpress/wp-content/uploads/mondai_30_harikyu_am.pdf",
+    "sourceOrg": "公益財団法人 東洋療法研修試験財団",
+    "sourceReliability": "indexed_official",
+    "verifiedAt": "2026-10-01"
+  },
+  {
+    "id": "30-079",
+    "examRound": 30,
+    "questionNumber": 79,
+    "questionText": "脳性麻痺について正しいのはどれか。",
+    "choices": [
+      "脳の病変は進行性である。",
+      "成長に応じた療育が重要である。",
+      "病型ではアテトーゼ型が最も多い。",
+      "出生時の一過性の運動障害も含まれる。"
+    ],
+    "answerIndex": 1,
+    "explanation": "脳性麻痺は受胎から新生児期までに生じた脳の非進行性病変による永続的な運動・姿勢の異常で、成長・発達に応じた療育が重要である。病型は痙直型が最も多く、一過性の運動障害や将来正常化するものは含まれない。",
+    "hasFigure": false,
+    "source": "第30回 はり師・きゅう師国家試験",
+    "sourceUrl": "https://ahaki.or.jp/wordpress/wp-content/uploads/mondai_30_harikyu_am.pdf",
+    "sourceOrg": "公益財団法人 東洋療法研修試験財団",
+    "sourceReliability": "indexed_official",
+    "verifiedAt": "2026-10-01"
+  },
+  {
+    "id": "30-080",
+    "examRound": 30,
+    "questionNumber": 80,
+    "questionText": "ヒュー・ジョーンズの分類で「息切れのために外出ができない」のはどれか。",
+    "choices": [
+      "Ⅰ度",
+      "Ⅱ度",
+      "Ⅳ度",
+      "Ⅴ度"
+    ],
+    "answerIndex": 3,
+    "explanation": "ヒュー・ジョーンズ分類は呼吸困難の程度を5段階で示し、Ⅴ度は会話や着替えでも息切れがし、息切れのために外出ができない状態である。Ⅰ度は同年齢の健常者と同様に動ける、Ⅱ度は坂や階段で健常者並みに歩けない、Ⅳ度は休みながらでなければ50m以上歩けない状態である。",
+    "hasFigure": false,
+    "source": "第30回 はり師・きゅう師国家試験",
+    "sourceUrl": "https://ahaki.or.jp/wordpress/wp-content/uploads/mondai_30_harikyu_am.pdf",
+    "sourceOrg": "公益財団法人 東洋療法研修試験財団",
+    "sourceReliability": "indexed_official",
+    "verifiedAt": "2026-10-01"
+  },
+  {
+    "id": "30-081",
+    "examRound": 30,
+    "questionNumber": 81,
+    "questionText": "変形性膝関節症に対するリハビリテーションで最も適切なのはどれか。",
+    "choices": [
+      "下肢等尺性筋力訓練",
+      "階段昇降訓練",
+      "自助具の使用",
+      "寒冷療法"
+    ],
+    "answerIndex": 0,
+    "explanation": "変形性膝関節症では関節に負担をかけずに大腿四頭筋などを強化できる等尺性筋力訓練が基本となる。階段昇降は膝関節への負担が大きく、慢性期の疼痛には寒冷療法より温熱療法が用いられることが多い。",
+    "hasFigure": false,
+    "source": "第30回 はり師・きゅう師国家試験",
+    "sourceUrl": "https://ahaki.or.jp/wordpress/wp-content/uploads/mondai_30_harikyu_am.pdf",
+    "sourceOrg": "公益財団法人 東洋療法研修試験財団",
+    "sourceReliability": "indexed_official",
+    "verifiedAt": "2026-10-01"
+  },
+  {
+    "id": "30-082",
+    "examRound": 30,
+    "questionNumber": 82,
+    "questionText": "パーキンソン病の症状で正しいのはどれか。",
+    "choices": [
+      "下垂足",
+      "前傾前屈姿勢",
+      "大殿筋歩行",
+      "ミオクロニー発作"
+    ],
+    "answerIndex": 1,
+    "explanation": "パーキンソン病では前傾前屈姿勢がみられ、安静時振戦・筋固縮・無動・姿勢反射障害を主症状とする。下垂足は腓骨神経麻痺など、大殿筋歩行は大殿筋の筋力低下、ミオクロニー発作はてんかんでみられる。",
+    "hasFigure": false,
+    "source": "第30回 はり師・きゅう師国家試験",
+    "sourceUrl": "https://ahaki.or.jp/wordpress/wp-content/uploads/mondai_30_harikyu_am.pdf",
+    "sourceOrg": "公益財団法人 東洋療法研修試験財団",
+    "sourceReliability": "indexed_official",
+    "verifiedAt": "2026-10-01"
+  },
+  {
+    "id": "30-083",
+    "examRound": 30,
+    "questionNumber": 83,
+    "questionText": "次の文で示す症例について、問題83、問題84の問いに答えよ。「65歳の男性。左片麻痺と意識障害を生じた。頭部CT検査にて右被殻出血と診断され、保存的治療を受けた。リハビリテーションの評価において視覚の見落としが著明であった。」\n\n本患者の高次脳機能障害はどれか。",
+    "choices": [
+      "失行",
+      "注意障害",
+      "記憶障害",
+      "遂行機能障害"
+    ],
+    "answerIndex": 1,
+    "explanation": "右半球（右被殻出血）の損傷で視覚の見落としが著明であることから、左半側空間無視が考えられる。半側空間無視は損傷半球と反対側の空間への注意が向かない障害であり、選択肢の中では注意障害に該当する。",
+    "hasFigure": false,
+    "source": "第30回 はり師・きゅう師国家試験",
+    "sourceUrl": "https://ahaki.or.jp/wordpress/wp-content/uploads/mondai_30_harikyu_am.pdf",
+    "sourceOrg": "公益財団法人 東洋療法研修試験財団",
+    "sourceReliability": "indexed_official",
+    "verifiedAt": "2026-10-01"
+  },
+  {
+    "id": "30-084",
+    "examRound": 30,
+    "questionNumber": 84,
+    "questionText": "次の文で示す症例について、問題83、問題84の問いに答えよ。「65歳の男性。左片麻痺と意識障害を生じた。頭部CT検査にて右被殻出血と診断され、保存的治療を受けた。リハビリテーションの評価において視覚の見落としが著明であった。」\n\n適切な対応はどれか。",
+    "choices": [
+      "メモをとるように勧める。",
+      "周囲の人が動作を促す。",
+      "段差に気を付けるように指導する。",
+      "同時に複数の課題をさせない。"
+    ],
+    "answerIndex": 2,
+    "explanation": "左半側空間無視では左側の段差や障害物を見落として転倒・衝突しやすいため、段差に気を付けるよう指導し、左側へ注意を向けさせることが適切である。メモの活用は記憶障害、動作の促しは発動性の低下、複数課題の回避は注意の配分障害などへの対応である。",
+    "hasFigure": false,
+    "source": "第30回 はり師・きゅう師国家試験",
+    "sourceUrl": "https://ahaki.or.jp/wordpress/wp-content/uploads/mondai_30_harikyu_am.pdf",
+    "sourceOrg": "公益財団法人 東洋療法研修試験財団",
+    "sourceReliability": "indexed_official",
+    "verifiedAt": "2026-10-01"
+  },
+  {
+    "id": "30-085",
+    "examRound": 30,
+    "questionNumber": 85,
+    "questionText": "次の文で示す症例について、問題85、問題86の問いに答えよ。「70歳の男性。車を停車中に左上肢を伸ばし後部座席の物を取ったところ、肩峰部に激痛を感じた。肩関節部を他動的に外転させても、自力で外転位を保持できない。」\n\n診察所見で適切なのはどれか。",
+    "choices": [
+      "ドロップアームテスト陽性",
+      "ペインフルアークサイン陽性",
+      "肩関節内旋筋力低下",
+      "肩関節内転筋力低下"
+    ],
+    "answerIndex": 0,
+    "explanation": "高齢者が上肢を伸ばした動作で肩峰部に激痛を生じ、他動的に外転させても外転位を保持できないことから、腱板（棘上筋腱）断裂が疑われる。他動的に外転させた上肢を保持できず落下するドロップアームテスト陽性が適切な所見である。",
+    "hasFigure": false,
+    "source": "第30回 はり師・きゅう師国家試験",
+    "sourceUrl": "https://ahaki.or.jp/wordpress/wp-content/uploads/mondai_30_harikyu_am.pdf",
+    "sourceOrg": "公益財団法人 東洋療法研修試験財団",
+    "sourceReliability": "indexed_official",
+    "verifiedAt": "2026-10-01"
+  },
+  {
+    "id": "30-086",
+    "examRound": 30,
+    "questionNumber": 86,
+    "questionText": "次の文で示す症例について、問題85、問題86の問いに答えよ。「70歳の男性。車を停車中に左上肢を伸ばし後部座席の物を取ったところ、肩峰部に激痛を感じた。肩関節部を他動的に外転させても、自力で外転位を保持できない。」\n\n診断確定のための検査で最も適切なのはどれか。",
+    "choices": [
+      "エックス線検査",
+      "CT検査",
+      "MRI検査",
+      "筋電図検査"
+    ],
+    "answerIndex": 2,
+    "explanation": "腱板断裂は軟部組織の損傷であり、腱板の断裂部位や大きさを描出できるMRI検査が診断確定に最も適している（超音波検査も有用）。エックス線検査やCT検査は骨病変の評価に、筋電図検査は神経・筋疾患の評価に用いる。",
+    "hasFigure": false,
+    "source": "第30回 はり師・きゅう師国家試験",
+    "sourceUrl": "https://ahaki.or.jp/wordpress/wp-content/uploads/mondai_30_harikyu_am.pdf",
+    "sourceOrg": "公益財団法人 東洋療法研修試験財団",
+    "sourceReliability": "indexed_official",
+    "verifiedAt": "2026-10-01"
+  },
+  {
+    "id": "30-087",
+    "examRound": 30,
+    "questionNumber": 87,
+    "questionText": "次の文で示す症例について、問題87、問題88の問いに答えよ。「55歳の女性。2か月前から背部の鈍痛が続いていたが放置していた。発熱はないが、食欲不振、体重減少、倦怠感がある。」\n\n最も疑われる疾患はどれか。",
+    "choices": [
+      "子宮筋腫",
+      "尿路結石",
+      "腎盂腎炎",
+      "膵臓癌"
+    ],
+    "answerIndex": 3,
+    "explanation": "持続する背部の鈍痛に、発熱を伴わない食欲不振・体重減少・倦怠感がみられることから膵臓癌が最も疑われる。尿路結石は激しい疝痛発作、腎盂腎炎は発熱と腰背部痛を伴い、子宮筋腫は過多月経などが主症状である。",
+    "hasFigure": false,
+    "source": "第30回 はり師・きゅう師国家試験",
+    "sourceUrl": "https://ahaki.or.jp/wordpress/wp-content/uploads/mondai_30_harikyu_am.pdf",
+    "sourceOrg": "公益財団法人 東洋療法研修試験財団",
+    "sourceReliability": "indexed_official",
+    "verifiedAt": "2026-10-01"
+  },
+  {
+    "id": "30-088",
+    "examRound": 30,
+    "questionNumber": 88,
+    "questionText": "次の文で示す症例について、問題87、問題88の問いに答えよ。「55歳の女性。2か月前から背部の鈍痛が続いていたが放置していた。発熱はないが、食欲不振、体重減少、倦怠感がある。」\n\n行うべき検査で最も適切なのはどれか。",
+    "choices": [
+      "腹部超音波検査",
+      "尿沈渣",
+      "血液像（白血球分画）",
+      "腹部エックス線検査"
+    ],
+    "answerIndex": 0,
+    "explanation": "膵臓癌が疑われる場合、まず非侵襲的に膵臓の腫瘤や膵管拡張を確認できる腹部超音波検査を行う（さらにCTなどで精査する）。尿沈渣は尿路疾患、白血球分画は感染症や血液疾患の評価に用いられ、腹部エックス線検査は膵腫瘍の描出に適さない。",
+    "hasFigure": false,
+    "source": "第30回 はり師・きゅう師国家試験",
+    "sourceUrl": "https://ahaki.or.jp/wordpress/wp-content/uploads/mondai_30_harikyu_am.pdf",
+    "sourceOrg": "公益財団法人 東洋療法研修試験財団",
+    "sourceReliability": "indexed_official",
+    "verifiedAt": "2026-10-01"
+  },
+  {
+    "id": "30-089",
+    "examRound": 30,
+    "questionNumber": 89,
+    "questionText": "次の文で示す症例について、問題89、問題90の問いに答えよ。「55歳の男性。強度近視。夕方デスクワーク中、右眼で黒く動く小さな糸くず状のものが見えた。」\n\n該当する症状はどれか。",
+    "choices": [
+      "霧視",
+      "複視",
+      "飛蚊症",
+      "光視症"
+    ],
+    "answerIndex": 2,
+    "explanation": "視野に黒い糸くずや虫のようなものが動いて見える症状は飛蚊症である。霧視は霧がかかったようにかすんで見える、複視は物が二重に見える、光視症は実際にない光が見える症状である。",
+    "hasFigure": false,
+    "source": "第30回 はり師・きゅう師国家試験",
+    "sourceUrl": "https://ahaki.or.jp/wordpress/wp-content/uploads/mondai_30_harikyu_am.pdf",
+    "sourceOrg": "公益財団法人 東洋療法研修試験財団",
+    "sourceReliability": "indexed_official",
+    "verifiedAt": "2026-10-01"
+  },
+  {
+    "id": "30-090",
+    "examRound": 30,
+    "questionNumber": 90,
+    "questionText": "次の文で示す症例について、問題89、問題90の問いに答えよ。「55歳の男性。強度近視。夕方デスクワーク中、右眼で黒く動く小さな糸くず状のものが見えた。」\n\n次第に症状は悪化し、右眼で下から上へ視野欠損も生じてきた。考えられる疾患はどれか。",
+    "choices": [
+      "緑内障",
+      "白内障",
+      "網膜剥離",
+      "網膜色素変性症"
+    ],
+    "answerIndex": 2,
+    "explanation": "強度近視は網膜剥離の危険因子であり、飛蚊症に続いて進行性の視野欠損が生じていることから網膜剥離が考えられる。緑内障は視神経障害による視野狭窄、白内障は水晶体混濁による霧視、網膜色素変性症は夜盲と求心性視野狭窄を特徴とする。",
+    "hasFigure": false,
+    "source": "第30回 はり師・きゅう師国家試験",
+    "sourceUrl": "https://ahaki.or.jp/wordpress/wp-content/uploads/mondai_30_harikyu_am.pdf",
+    "sourceOrg": "公益財団法人 東洋療法研修試験財団",
+    "sourceReliability": "indexed_official",
+    "verifiedAt": "2026-10-01"
+  },
+  {
+    "id": "30-091",
+    "examRound": 30,
+    "questionNumber": 91,
+    "questionText": "陰陽の関係で「寒い日には活動して冷えすぎないようにする」のはどれか。",
+    "choices": [
+      "陰陽互根",
+      "陰陽消長",
+      "陰陽制約",
+      "陰陽転化"
+    ],
+    "answerIndex": 2,
+    "explanation": "寒（陰）が盛んなときに活動（陽）によってそれを抑え、冷えすぎないようにするのは、陰と陽が互いに抑制し合う陰陽制約（陰陽対立）の関係である。陰陽互根は相互依存、陰陽消長は量的な増減、陰陽転化は極まって反対の性質に転じる関係を指す。",
+    "hasFigure": false,
+    "source": "第30回 はり師・きゅう師国家試験",
+    "sourceUrl": "https://ahaki.or.jp/wordpress/wp-content/uploads/mondai_30_harikyu_pm.pdf",
+    "sourceOrg": "公益財団法人 東洋療法研修試験財団",
+    "sourceReliability": "indexed_official",
+    "verifiedAt": "2026-10-01"
+  },
+  {
+    "id": "30-092",
+    "examRound": 30,
+    "questionNumber": 92,
+    "questionText": "血瘀の症状はどれか。",
+    "choices": [
+      "筋けいれん",
+      "顔面蒼白",
+      "視力減退",
+      "色素沈着"
+    ],
+    "answerIndex": 3,
+    "explanation": "血瘀では血行が滞るため、刺すような固定痛、腫塊、皮膚や顔面の色素沈着・暗紫色、舌の瘀斑などがみられる。筋けいれん・顔面蒼白・視力減退は、血が不足して筋や目を滋養できない血虚の症状である。",
+    "hasFigure": false,
+    "source": "第30回 はり師・きゅう師国家試験",
+    "sourceUrl": "https://ahaki.or.jp/wordpress/wp-content/uploads/mondai_30_harikyu_pm.pdf",
+    "sourceOrg": "公益財団法人 東洋療法研修試験財団",
+    "sourceReliability": "indexed_official",
+    "verifiedAt": "2026-10-01"
+  },
+  {
+    "id": "30-093",
+    "examRound": 30,
+    "questionNumber": 93,
+    "questionText": "気血を化生する臓が剋する臓について正しいのはどれか。",
+    "choices": [
+      "血を主る。",
+      "魂を蔵する。",
+      "発汗を調節する。",
+      "耳に開竅する。"
+    ],
+    "answerIndex": 3,
+    "explanation": "気血を化生するのは脾（後天の本）で、五行の相剋関係で脾（土）が剋するのは腎（水）である。腎は耳（および二陰）に開竅する。血を主るのは心、魂を蔵するのは肝、発汗の調節は肺（衛気・腠理）などの働きである。",
+    "hasFigure": false,
+    "source": "第30回 はり師・きゅう師国家試験",
+    "sourceUrl": "https://ahaki.or.jp/wordpress/wp-content/uploads/mondai_30_harikyu_pm.pdf",
+    "sourceOrg": "公益財団法人 東洋療法研修試験財団",
+    "sourceReliability": "indexed_official",
+    "verifiedAt": "2026-10-01"
+  },
+  {
+    "id": "30-094",
+    "examRound": 30,
+    "questionNumber": 94,
+    "questionText": "全身の陽気を主る臓腑と表裏関係にある臓腑の生理作用はどれか。",
+    "choices": [
+      "受盛",
+      "治節",
+      "降濁",
+      "納気"
+    ],
+    "answerIndex": 0,
+    "explanation": "公式正答は①受盛である。受盛（受盛と化物）は小腸の生理作用で、小腸と表裏関係にあるのは陽中の陽とされる心である。治節は肺、降濁は胃、納気は腎の生理作用である。",
+    "hasFigure": false,
+    "source": "第30回 はり師・きゅう師国家試験",
+    "sourceUrl": "https://ahaki.or.jp/wordpress/wp-content/uploads/mondai_30_harikyu_pm.pdf",
+    "sourceOrg": "公益財団法人 東洋療法研修試験財団",
+    "sourceReliability": "indexed_official",
+    "verifiedAt": "2026-10-01"
+  },
+  {
+    "id": "30-095",
+    "examRound": 30,
+    "questionNumber": 95,
+    "questionText": "外邪とその特徴の組合せで正しいのはどれか。",
+    "choices": [
+      "風邪 ── 動血",
+      "暑邪 ── 昇散",
+      "湿邪 ── 凝滞",
+      "寒邪 ── 重濁"
+    ],
+    "answerIndex": 1,
+    "explanation": "暑邪は炎熱・昇散の性質をもち、汗を出させて津液や気を消耗させる。動血（血を妄行させる）は火（熱）邪、凝滞・収引は寒邪、重濁・粘滞は湿邪の特徴で、風邪は軽揚開泄・善行数変を特徴とする。",
+    "hasFigure": false,
+    "source": "第30回 はり師・きゅう師国家試験",
+    "sourceUrl": "https://ahaki.or.jp/wordpress/wp-content/uploads/mondai_30_harikyu_pm.pdf",
+    "sourceOrg": "公益財団法人 東洋療法研修試験財団",
+    "sourceReliability": "indexed_official",
+    "verifiedAt": "2026-10-01"
+  },
+  {
+    "id": "30-096",
+    "examRound": 30,
+    "questionNumber": 96,
+    "questionText": "気機を上昇させる特性をもつ五志に損傷されやすい臓の症状はどれか。",
+    "choices": [
+      "目のかすみ",
+      "不整脈",
+      "皮膚の乾燥",
+      "歯のぐらつき"
+    ],
+    "answerIndex": 0,
+    "explanation": "「怒れば気上る」とされ、気機を上昇させる五志は怒で、怒に損傷されやすいのは肝である。肝は目に開竅し血を蔵するため、肝の失調では目のかすみなどの目の症状がみられる。不整脈は心、皮膚の乾燥は肺、歯のぐらつきは腎の症状である。",
+    "hasFigure": false,
+    "source": "第30回 はり師・きゅう師国家試験",
+    "sourceUrl": "https://ahaki.or.jp/wordpress/wp-content/uploads/mondai_30_harikyu_pm.pdf",
+    "sourceOrg": "公益財団法人 東洋療法研修試験財団",
+    "sourceReliability": "indexed_official",
+    "verifiedAt": "2026-10-01"
+  },
+  {
+    "id": "30-097",
+    "examRound": 30,
+    "questionNumber": 97,
+    "questionText": "陽経の気血を調節するのはどれか。",
+    "choices": [
+      "督脈",
+      "任脈",
+      "衝脈",
+      "帯脈"
+    ],
+    "answerIndex": 0,
+    "explanation": "督脈は背部正中を上行して諸陽経と交会し「陽脈の海」と呼ばれ、陽経の気血を調節する。任脈は「陰脈の海」として陰経の気血を、衝脈は「十二経脈の海（血海）」として全身の気血を調節し、帯脈は縦に走る諸経脈を束ねる。",
+    "hasFigure": false,
+    "source": "第30回 はり師・きゅう師国家試験",
+    "sourceUrl": "https://ahaki.or.jp/wordpress/wp-content/uploads/mondai_30_harikyu_pm.pdf",
+    "sourceOrg": "公益財団法人 東洋療法研修試験財団",
+    "sourceReliability": "indexed_official",
+    "verifiedAt": "2026-10-01"
+  },
+  {
+    "id": "30-098",
+    "examRound": 30,
+    "questionNumber": 98,
+    "questionText": "次の文で示す患者の病因で最も適切なのはどれか。「28歳の女性。年末年始に接客が多忙だった。その後、徐々に気力がなくなり、疲れやすく、接客がつらい。」",
+    "choices": [
+      "思",
+      "寒邪",
+      "労倦",
+      "飲食不節"
+    ],
+    "answerIndex": 2,
+    "explanation": "多忙な仕事による過労の後に気力の低下や易疲労がみられることから、労倦（過労）による気の消耗が病因と考えられる。思は思い悩み、寒邪は外感、飲食不節は不規則・不適切な飲食による病因である。",
+    "hasFigure": false,
+    "source": "第30回 はり師・きゅう師国家試験",
+    "sourceUrl": "https://ahaki.or.jp/wordpress/wp-content/uploads/mondai_30_harikyu_pm.pdf",
+    "sourceOrg": "公益財団法人 東洋療法研修試験財団",
+    "sourceReliability": "indexed_official",
+    "verifiedAt": "2026-10-01"
+  },
+  {
+    "id": "30-099",
+    "examRound": 30,
+    "questionNumber": 99,
+    "questionText": "次の文で示す患者の病証の病理で正しいのはどれか。「82歳の男性。半年前に誤嚥性肺炎で1か月間入院した。退院後から腰の痛み、耳鳴り、手足のほてりが出現し寝汗をかくようになった。」",
+    "choices": [
+      "疏泄の失調",
+      "運化の失調",
+      "肝火の上炎",
+      "腎陰の不足"
+    ],
+    "answerIndex": 3,
+    "explanation": "高齢で病後に腰痛・耳鳴り（腎の症状）とともに手足のほてり・寝汗（陰虚内熱の症状）がみられることから、腎陰虚（腎陰の不足）と考えられる。疏泄の失調は肝、運化の失調は脾の病理で、肝火上炎では顔面紅潮・目の充血・易怒などがみられる。",
+    "hasFigure": false,
+    "source": "第30回 はり師・きゅう師国家試験",
+    "sourceUrl": "https://ahaki.or.jp/wordpress/wp-content/uploads/mondai_30_harikyu_pm.pdf",
+    "sourceOrg": "公益財団法人 東洋療法研修試験財団",
+    "sourceReliability": "indexed_official",
+    "verifiedAt": "2026-10-01"
+  },
+  {
+    "id": "30-100",
+    "examRound": 30,
+    "questionNumber": 100,
+    "questionText": "経脈病証で「前頸部が腫れ、口がゆがみ口すぼめができず、うつ傾向にある」のはどれか。",
+    "choices": [
+      "手の太陰経病証",
+      "手の少陰経病証",
+      "足の陽明経病証",
+      "足の少陽経病証"
+    ],
+    "answerIndex": 2,
+    "explanation": "足の陽明胃経は顔面（口唇の周囲）を巡り、前頸部（人迎付近）を下行する。その経脈病証には頸部の腫れ、口のゆがみ（口喎）などのほか、精神症状として抑うつや狂躁などが含まれる。",
+    "hasFigure": false,
+    "source": "第30回 はり師・きゅう師国家試験",
+    "sourceUrl": "https://ahaki.or.jp/wordpress/wp-content/uploads/mondai_30_harikyu_pm.pdf",
+    "sourceOrg": "公益財団法人 東洋療法研修試験財団",
+    "sourceReliability": "indexed_official",
+    "verifiedAt": "2026-10-01"
+  },
+  {
+    "id": "30-101",
+    "examRound": 30,
+    "questionNumber": 101,
+    "questionText": "経脈病証で難聴が起こるのはどれか。",
+    "choices": [
+      "足の少陰経",
+      "手の太陽経",
+      "足の厥陰経",
+      "手の陽明経"
+    ],
+    "answerIndex": 1,
+    "explanation": "手の太陽小腸経は頬部から耳中に入るため、その経脈病証として難聴（耳聾）や目の黄染、頬の腫れなどがみられる。足の厥陰肝経・手の陽明大腸経・足の少陰腎経の経脈病証には、この設問の意味での難聴は挙げられない。",
+    "hasFigure": false,
+    "source": "第30回 はり師・きゅう師国家試験",
+    "sourceUrl": "https://ahaki.or.jp/wordpress/wp-content/uploads/mondai_30_harikyu_pm.pdf",
+    "sourceOrg": "公益財団法人 東洋療法研修試験財団",
+    "sourceReliability": "indexed_official",
+    "verifiedAt": "2026-10-01"
+  },
+  {
+    "id": "30-102",
+    "examRound": 30,
+    "questionNumber": 102,
+    "questionText": "次の文で示す患者の病証で最もみられる脈状はどれか。「43歳の男性。主訴は便秘。1週間前に風邪を引き、その後、口渇が強くなり発汗も多くなった。午後3時から5時くらいまで体温が高くなる。」",
+    "choices": [
+      "濡脈",
+      "弦脈",
+      "洪脈",
+      "緩脈"
+    ],
+    "answerIndex": 2,
+    "explanation": "外感の後に強い口渇・多汗・便秘がみられ、午後（日晡時）に発熱が強まる（日晡潮熱）ことから、陽明病（陽明経証・腑証）の実熱証と考えられ、熱が盛んで大きく力強い洪脈がみられる。濡脈は湿、弦脈は肝胆の病や痛み、緩脈は湿や脾虚でみられる。",
+    "hasFigure": false,
+    "source": "第30回 はり師・きゅう師国家試験",
+    "sourceUrl": "https://ahaki.or.jp/wordpress/wp-content/uploads/mondai_30_harikyu_pm.pdf",
+    "sourceOrg": "公益財団法人 東洋療法研修試験財団",
+    "sourceReliability": "indexed_official",
+    "verifiedAt": "2026-10-01"
+  },
+  {
+    "id": "30-103",
+    "examRound": 30,
+    "questionNumber": 103,
+    "questionText": "次の文で示す病証の治療原則で最も適切なのはどれか。「慢性の眩暈と頭痛、目の充血、のぼせ、腰がだるく力が入らない。脈は弦細数を認める。」",
+    "choices": [
+      "瀉実",
+      "急則治標",
+      "補虚瀉実",
+      "因地制宜"
+    ],
+    "answerIndex": 2,
+    "explanation": "眩暈・頭痛・目の充血・のぼせ（肝陽の上亢＝実）と、腰のだるさ・脈の細数（肝腎陰虚＝虚）が併存する肝陽上亢証で、本虚標実の病態であるため、虚を補い実を瀉す補虚瀉実が適切である。",
+    "hasFigure": false,
+    "source": "第30回 はり師・きゅう師国家試験",
+    "sourceUrl": "https://ahaki.or.jp/wordpress/wp-content/uploads/mondai_30_harikyu_pm.pdf",
+    "sourceOrg": "公益財団法人 東洋療法研修試験財団",
+    "sourceReliability": "indexed_official",
+    "verifiedAt": "2026-10-01"
+  },
+  {
+    "id": "30-104",
+    "examRound": 30,
+    "questionNumber": 104,
+    "questionText": "次の文で示す患者の病証で最も適切なのはどれか。「46歳の男性。主訴は肩こり。1年以上テレワークで外出機会が減少し、ストレスを感じている。胸肋部痛と喉のつかえ感を伴う。」",
+    "choices": [
+      "陰虚",
+      "気滞",
+      "湿熱",
+      "血虚"
+    ],
+    "answerIndex": 1,
+    "explanation": "ストレスにより肝の疏泄が失調し、胸肋部痛や喉のつかえ感（梅核気）を伴うことから、気の巡りが滞る気滞（肝気鬱結）と考えられる。",
+    "hasFigure": false,
+    "source": "第30回 はり師・きゅう師国家試験",
+    "sourceUrl": "https://ahaki.or.jp/wordpress/wp-content/uploads/mondai_30_harikyu_pm.pdf",
+    "sourceOrg": "公益財団法人 東洋療法研修試験財団",
+    "sourceReliability": "indexed_official",
+    "verifiedAt": "2026-10-01"
+  },
+  {
+    "id": "30-105",
+    "examRound": 30,
+    "questionNumber": 105,
+    "questionText": "奇経八脈で血海と呼ばれるのはどれか。",
+    "choices": [
+      "任脈",
+      "衝脈",
+      "陰維脈",
+      "陰蹻脈"
+    ],
+    "answerIndex": 1,
+    "explanation": "衝脈は十二経脈の気血が集まるところで「十二経脈の海」「血海」と呼ばれ、月経とも深く関わる。任脈は「陰脈の海」、督脈は「陽脈の海」と呼ばれる。",
+    "hasFigure": false,
+    "source": "第30回 はり師・きゅう師国家試験",
+    "sourceUrl": "https://ahaki.or.jp/wordpress/wp-content/uploads/mondai_30_harikyu_pm.pdf",
+    "sourceOrg": "公益財団法人 東洋療法研修試験財団",
+    "sourceReliability": "indexed_official",
+    "verifiedAt": "2026-10-01"
+  },
+  {
+    "id": "30-106",
+    "examRound": 30,
+    "questionNumber": 106,
+    "questionText": "十二刺の偶刺に基づいた治療穴の組合せで正しいのはどれか。",
+    "choices": [
+      "太淵 ── 列欠",
+      "太淵 ── 肺兪",
+      "中府 ── 列欠",
+      "中府 ── 肺兪"
+    ],
+    "answerIndex": 3,
+    "explanation": "偶刺は痛む部位の前（胸腹部）と後（背部）を挟むように刺す方法で、臓腑の募穴と背部兪穴を組み合わせて用いることが多い。肺の募穴である中府と、背部兪穴である肺兪の組合せが該当する。",
+    "hasFigure": false,
+    "source": "第30回 はり師・きゅう師国家試験",
+    "sourceUrl": "https://ahaki.or.jp/wordpress/wp-content/uploads/mondai_30_harikyu_pm.pdf",
+    "sourceOrg": "公益財団法人 東洋療法研修試験財団",
+    "sourceReliability": "indexed_official",
+    "verifiedAt": "2026-10-01"
+  },
+  {
+    "id": "30-107",
+    "examRound": 30,
+    "questionNumber": 107,
+    "questionText": "経脈の流注で生殖器をめぐるのはどれか。",
+    "choices": [
+      "足の陽明経",
+      "足の太陰経",
+      "足の少陰経",
+      "足の厥陰経"
+    ],
+    "answerIndex": 3,
+    "explanation": "足の厥陰肝経は下肢内側を上行して陰毛の中に入り、陰器（生殖器）をめぐって下腹部に至る。このため肝経の病証には疝気や陰器の症状が含まれる。",
+    "hasFigure": false,
+    "source": "第30回 はり師・きゅう師国家試験",
+    "sourceUrl": "https://ahaki.or.jp/wordpress/wp-content/uploads/mondai_30_harikyu_pm.pdf",
+    "sourceOrg": "公益財団法人 東洋療法研修試験財団",
+    "sourceReliability": "indexed_official",
+    "verifiedAt": "2026-10-01"
+  },
+  {
+    "id": "30-108",
+    "examRound": 30,
+    "questionNumber": 108,
+    "questionText": "八会穴で募穴でもある経穴が所属する経脈はどれか。",
+    "choices": [
+      "足の太陰経",
+      "足の厥陰経",
+      "足の太陽経",
+      "足の少陽経"
+    ],
+    "answerIndex": 1,
+    "explanation": "八会穴で募穴を兼ねるのは、章門（臓会・脾の募穴）、中脘（腑会・胃の募穴）、膻中（気会・心包の募穴）である。中脘・膻中は任脈に属し、選択肢の経脈に属するのは足の厥陰肝経の章門である。",
+    "hasFigure": false,
+    "source": "第30回 はり師・きゅう師国家試験",
+    "sourceUrl": "https://ahaki.or.jp/wordpress/wp-content/uploads/mondai_30_harikyu_pm.pdf",
+    "sourceOrg": "公益財団法人 東洋療法研修試験財団",
+    "sourceReliability": "indexed_official",
+    "verifiedAt": "2026-10-01"
+  },
+  {
+    "id": "30-109",
+    "examRound": 30,
+    "questionNumber": 109,
+    "questionText": "骨度で胸骨体下端から臍中央と同じ寸法はどれか。",
+    "choices": [
+      "内果尖から肝経の絡穴",
+      "外果尖から胃経の絡穴",
+      "手関節掌側横紋から肺経の郄穴",
+      "手関節背側横紋から大腸経の郄穴"
+    ],
+    "answerIndex": 1,
+    "explanation": "胸骨体下端から臍中央までは8寸である。胃経の絡穴である豊隆は外果尖の上方8寸にある。肝経の絡穴の蠡溝は内果尖の上方5寸、肺経の郄穴の孔最は手関節掌側横紋の上方7寸、大腸経の郄穴の温溜は手関節背側横紋の上方5寸である。",
+    "hasFigure": false,
+    "source": "第30回 はり師・きゅう師国家試験",
+    "sourceUrl": "https://ahaki.or.jp/wordpress/wp-content/uploads/mondai_30_harikyu_pm.pdf",
+    "sourceOrg": "公益財団法人 東洋療法研修試験財団",
+    "sourceReliability": "indexed_official",
+    "verifiedAt": "2026-10-01"
+  },
+  {
+    "id": "30-110",
+    "examRound": 30,
+    "questionNumber": 110,
+    "questionText": "デルマトームのTh7からTh10領域に位置する募穴の臓腑はどれか。",
+    "choices": [
+      "胃",
+      "小腸",
+      "心包",
+      "三焦"
+    ],
+    "answerIndex": 0,
+    "explanation": "胃の募穴である中脘は臍中央の上方4寸にあり、およそTh7〜Th10のデルマトーム領域に位置する。小腸の募穴の関元と三焦の募穴の石門は下腹部（より下位の領域）にあり、心包の募穴の膻中は前胸部（Th4付近）にある。",
+    "hasFigure": false,
+    "source": "第30回 はり師・きゅう師国家試験",
+    "sourceUrl": "https://ahaki.or.jp/wordpress/wp-content/uploads/mondai_30_harikyu_pm.pdf",
+    "sourceOrg": "公益財団法人 東洋療法研修試験財団",
+    "sourceReliability": "indexed_official",
+    "verifiedAt": "2026-10-01"
+  },
+  {
+    "id": "30-111",
+    "examRound": 30,
+    "questionNumber": 111,
+    "questionText": "胸骨角を基準に取るのはどれか。",
+    "choices": [
+      "幽門",
+      "鳩尾",
+      "玉堂",
+      "気舎"
+    ],
+    "answerIndex": 2,
+    "explanation": "公式正答は③玉堂である。胸部前正中線上の任脈の経穴（華蓋・紫宮・玉堂・膻中など）は、胸骨角（第2肋骨の付着部）を目安に肋骨・肋間を数えて取る。幽門・鳩尾は臍や胸骨体下端（胸骨剣結合部）を基準とし、気舎は鎖骨・胸鎖乳突筋を指標とする。",
+    "hasFigure": false,
+    "source": "第30回 はり師・きゅう師国家試験",
+    "sourceUrl": "https://ahaki.or.jp/wordpress/wp-content/uploads/mondai_30_harikyu_pm.pdf",
+    "sourceOrg": "公益財団法人 東洋療法研修試験財団",
+    "sourceReliability": "indexed_official",
+    "verifiedAt": "2026-10-01"
+  },
+  {
+    "id": "30-112",
+    "examRound": 30,
+    "questionNumber": 112,
+    "questionText": "督脈の経穴で、外方3寸に膀胱経の経穴がないのはどれか。",
+    "choices": [
+      "陶道",
+      "霊台",
+      "懸枢",
+      "腰兪"
+    ],
+    "answerIndex": 0,
+    "explanation": "公式正答は①陶道である。陶道は第1胸椎棘突起下に位置し、その外方1.5寸には大杼があるが、外方3寸に膀胱経の経穴はない（附分は第2胸椎の高さ）。霊台（第6胸椎）の外方3寸には譩譆、懸枢（第1腰椎）の外方3寸には肓門が位置する。",
+    "hasFigure": false,
+    "source": "第30回 はり師・きゅう師国家試験",
+    "sourceUrl": "https://ahaki.or.jp/wordpress/wp-content/uploads/mondai_30_harikyu_pm.pdf",
+    "sourceOrg": "公益財団法人 東洋療法研修試験財団",
+    "sourceReliability": "indexed_official",
+    "verifiedAt": "2026-10-01"
+  },
+  {
+    "id": "30-113",
+    "examRound": 30,
+    "questionNumber": 113,
+    "questionText": "深刺の際に最も注意すべき腧穴はどれか。",
+    "choices": [
+      "八風",
+      "秉風",
+      "風市",
+      "風池"
+    ],
+    "answerIndex": 3,
+    "explanation": "風池は後頸部にあり、深部に延髄や椎骨動脈が位置するため、深刺や刺入方向に特に注意が必要である。刺入の際は鼻尖方向に向け、深く刺さないようにする。",
+    "hasFigure": false,
+    "source": "第30回 はり師・きゅう師国家試験",
+    "sourceUrl": "https://ahaki.or.jp/wordpress/wp-content/uploads/mondai_30_harikyu_pm.pdf",
+    "sourceOrg": "公益財団法人 東洋療法研修試験財団",
+    "sourceReliability": "indexed_official",
+    "verifiedAt": "2026-10-01"
+  },
+  {
+    "id": "30-114",
+    "examRound": 30,
+    "questionNumber": 114,
+    "questionText": "経穴の部位で正しいのはどれか。",
+    "choices": [
+      "伏兎は、大腿前外側、大腿直筋腱の外側で膝蓋骨底の上方3寸にある。",
+      "承扶は、大腿部後面、大腿二頭筋と半腱様筋の間、殿溝の下方6寸にある。",
+      "風市は、大腿部外側、腸脛靱帯の後方で、膝窩横紋の上方7寸にある。",
+      "陰包は、大腿部内側、薄筋と縫工筋の間、膝蓋骨底の上方4寸にある。"
+    ],
+    "answerIndex": 3,
+    "explanation": "公式正答は④で、陰包は大腿部内側、薄筋と縫工筋の間、膝蓋骨底の上方4寸にある。伏兎は膝蓋骨底の上方6寸（上方3寸ではない）、承扶は殿溝の中点にあり、殿溝の下方6寸に取るのは殷門である。",
+    "hasFigure": false,
+    "source": "第30回 はり師・きゅう師国家試験",
+    "sourceUrl": "https://ahaki.or.jp/wordpress/wp-content/uploads/mondai_30_harikyu_pm.pdf",
+    "sourceOrg": "公益財団法人 東洋療法研修試験財団",
+    "sourceReliability": "indexed_official",
+    "verifiedAt": "2026-10-01"
+  },
+  {
+    "id": "30-115",
+    "examRound": 30,
+    "questionNumber": 115,
+    "questionText": "長母指外転筋腱と短母指伸筋腱の間にある経穴について正しいのはどれか。",
+    "choices": [
+      "主に急性症状の治療で用いる。",
+      "督脈との交会穴である。",
+      "脈気が溜るところにあたる。",
+      "頭項の病に用いる。"
+    ],
+    "answerIndex": 3,
+    "explanation": "長母指外転筋腱と短母指伸筋腱の間にあるのは肺経の列欠である。列欠は四総穴の一つで「頭項は列欠に尋ねる」とされ、頭項の病に用いる。また肺経の絡穴であり、任脈に通じる八脈交会穴でもある。急性症状に用いるのは郄穴、脈気が溜るところは五兪穴の滎穴である。",
+    "hasFigure": false,
+    "source": "第30回 はり師・きゅう師国家試験",
+    "sourceUrl": "https://ahaki.or.jp/wordpress/wp-content/uploads/mondai_30_harikyu_pm.pdf",
+    "sourceOrg": "公益財団法人 東洋療法研修試験財団",
+    "sourceReliability": "indexed_official",
+    "verifiedAt": "2026-10-01"
+  },
+  {
+    "id": "30-116",
+    "examRound": 30,
+    "questionNumber": 116,
+    "questionText": "正中神経の分布領域にある経穴はどれか。",
+    "choices": [
+      "商陽",
+      "関衝",
+      "少衝",
+      "少沢"
+    ],
+    "answerIndex": 0,
+    "explanation": "商陽は示指橈側の爪甲根部にあり、示指の指先部は正中神経（固有掌側指神経）の分布領域である。関衝（環指尺側）・少衝（小指橈側）・少沢（小指尺側）は主に尺骨神経の分布領域にある。",
+    "hasFigure": false,
+    "source": "第30回 はり師・きゅう師国家試験",
+    "sourceUrl": "https://ahaki.or.jp/wordpress/wp-content/uploads/mondai_30_harikyu_pm.pdf",
+    "sourceOrg": "公益財団法人 東洋療法研修試験財団",
+    "sourceReliability": "indexed_official",
+    "verifiedAt": "2026-10-01"
+  },
+  {
+    "id": "30-117",
+    "examRound": 30,
+    "questionNumber": 117,
+    "questionText": "第4・第5中手骨の間にあるのはどれか。",
+    "choices": [
+      "労宮",
+      "少府",
+      "腕骨",
+      "落枕"
+    ],
+    "answerIndex": 1,
+    "explanation": "心経の少府は手掌で第4・第5中手骨の間、拳を握ったとき小指の先端があたるところにある。労宮は第2・第3中手骨の間、腕骨は第5中手骨底と三角骨の間の陥凹部、落枕（奇穴）は手背の第2・第3中手骨間にある。",
+    "hasFigure": false,
+    "source": "第30回 はり師・きゅう師国家試験",
+    "sourceUrl": "https://ahaki.or.jp/wordpress/wp-content/uploads/mondai_30_harikyu_pm.pdf",
+    "sourceOrg": "公益財団法人 東洋療法研修試験財団",
+    "sourceReliability": "indexed_official",
+    "verifiedAt": "2026-10-01"
+  },
+  {
+    "id": "30-118",
+    "examRound": 30,
+    "questionNumber": 118,
+    "questionText": "経穴と取り方の指標の組合せで正しいのはどれか。",
+    "choices": [
+      "顴髎 ── 外眼角を通る垂線上",
+      "地倉 ── 瞳孔を通る垂線上",
+      "四白 ── 耳垂下縁を通る水平線",
+      "下関 ── 頬骨弓中央の上際"
+    ],
+    "answerIndex": 0,
+    "explanation": "顴髎は外眼角の直下で頬骨下縁の陥凹部にあり、外眼角を通る垂線上に取る。地倉は口角の外方、四白は瞳孔線上で眼窩下孔部、下関は頬骨弓の下縁中央と下顎切痕の間の陥凹部にある。",
+    "hasFigure": false,
+    "source": "第30回 はり師・きゅう師国家試験",
+    "sourceUrl": "https://ahaki.or.jp/wordpress/wp-content/uploads/mondai_30_harikyu_pm.pdf",
+    "sourceOrg": "公益財団法人 東洋療法研修試験財団",
+    "sourceReliability": "indexed_official",
+    "verifiedAt": "2026-10-01"
+  },
+  {
+    "id": "30-119",
+    "examRound": 30,
+    "questionNumber": 119,
+    "questionText": "所属経脈が表裏関係にあるのはどれか。",
+    "choices": [
+      "頭竅陰と足竅陰",
+      "手五里と足五里",
+      "腰陽関と膝陽関",
+      "腹通谷と足通谷"
+    ],
+    "answerIndex": 3,
+    "explanation": "腹通谷は足の少陰腎経、足通谷は足の太陽膀胱経に属し、腎経と膀胱経は表裏関係にある。頭竅陰と足竅陰はともに胆経、手五里は大腸経で足五里は肝経、腰陽関は督脈で膝陽関は胆経に属する。",
+    "hasFigure": false,
+    "source": "第30回 はり師・きゅう師国家試験",
+    "sourceUrl": "https://ahaki.or.jp/wordpress/wp-content/uploads/mondai_30_harikyu_pm.pdf",
+    "sourceOrg": "公益財団法人 東洋療法研修試験財団",
+    "sourceReliability": "indexed_official",
+    "verifiedAt": "2026-10-01"
+  },
+  {
+    "id": "30-120",
+    "examRound": 30,
+    "questionNumber": 120,
+    "questionText": "腓骨の後方に取る経穴はどれか。",
+    "choices": [
+      "陽維脈の郄穴",
+      "胆経の郄穴",
+      "胆経の絡穴",
+      "八会穴の髄会"
+    ],
+    "answerIndex": 0,
+    "explanation": "陽維脈の郄穴である陽交は、下腿外側で腓骨の後方、外果尖の上方7寸に取る。胆経の郄穴の外丘は腓骨の前方、胆経の絡穴の光明と髄会の懸鍾（絶骨）も腓骨の前方に取る。",
+    "hasFigure": false,
+    "source": "第30回 はり師・きゅう師国家試験",
+    "sourceUrl": "https://ahaki.or.jp/wordpress/wp-content/uploads/mondai_30_harikyu_pm.pdf",
+    "sourceOrg": "公益財団法人 東洋療法研修試験財団",
+    "sourceReliability": "indexed_official",
+    "verifiedAt": "2026-10-01"
+  },
+  {
+    "id": "30-121",
+    "examRound": 30,
+    "questionNumber": 121,
+    "questionText": "五兪穴で咳嗽と発熱に用いるのはどれか。",
+    "choices": [
+      "陰谷",
+      "復溜",
+      "太渓",
+      "然谷"
+    ],
+    "answerIndex": 1,
+    "explanation": "『難経』六十八難では「経は喘咳寒熱を主る」とされ、五兪穴の経穴は咳嗽や発熱（悪寒発熱）に用いる。腎経の経穴は復溜である。陰谷は合穴、太渓は兪穴（原穴）、然谷は滎穴である。",
+    "hasFigure": false,
+    "source": "第30回 はり師・きゅう師国家試験",
+    "sourceUrl": "https://ahaki.or.jp/wordpress/wp-content/uploads/mondai_30_harikyu_pm.pdf",
+    "sourceOrg": "公益財団法人 東洋療法研修試験財団",
+    "sourceReliability": "indexed_official",
+    "verifiedAt": "2026-10-01"
+  },
+  {
+    "id": "30-122",
+    "examRound": 30,
+    "questionNumber": 122,
+    "questionText": "六つ灸で用いる経穴と同じ高さにあるのはどれか。",
+    "choices": [
+      "至陽",
+      "接脊",
+      "中枢",
+      "陽綱"
+    ],
+    "answerIndex": 0,
+    "explanation": "六つ灸は左右の膈兪・肝兪・脾兪（第7・第9・第11胸椎棘突起下の外方1.5寸）に施灸する方法である。督脈の至陽は第7胸椎棘突起下にあり、膈兪と同じ高さである。中枢は第10胸椎、陽綱は第10胸椎の外方3寸、接脊（奇穴）は第12胸椎の高さにある。",
+    "hasFigure": false,
+    "source": "第30回 はり師・きゅう師国家試験",
+    "sourceUrl": "https://ahaki.or.jp/wordpress/wp-content/uploads/mondai_30_harikyu_pm.pdf",
+    "sourceOrg": "公益財団法人 東洋療法研修試験財団",
+    "sourceReliability": "indexed_official",
+    "verifiedAt": "2026-10-01"
+  },
+  {
+    "id": "30-123",
+    "examRound": 30,
+    "questionNumber": 123,
+    "questionText": "大腸の下合穴が所属する経脈の経火穴はどれか。",
+    "choices": [
+      "陥谷",
+      "陽渓",
+      "解渓",
+      "崑崙"
+    ],
+    "answerIndex": 2,
+    "explanation": "大腸の下合穴は足の陽明胃経の上巨虚である。胃経の五兪穴のうち経穴（陽経では五行の火に配当）は解渓である。陥谷は胃経の兪穴、陽渓は大腸経の経穴、崑崙は膀胱経の経穴である。",
+    "hasFigure": false,
+    "source": "第30回 はり師・きゅう師国家試験",
+    "sourceUrl": "https://ahaki.or.jp/wordpress/wp-content/uploads/mondai_30_harikyu_pm.pdf",
+    "sourceOrg": "公益財団法人 東洋療法研修試験財団",
+    "sourceReliability": "indexed_official",
+    "verifiedAt": "2026-10-01"
+  },
+  {
+    "id": "30-124",
+    "examRound": 30,
+    "questionNumber": 124,
+    "questionText": "腓骨頭直下と脛骨粗面下端の中間に取る経穴が所属するのはどれか。",
+    "choices": [
+      "八総穴",
+      "八会穴",
+      "中風七穴",
+      "五要穴"
+    ],
+    "answerIndex": 2,
+    "explanation": "腓骨頭直下と脛骨粗面下端の中間に取る経穴は足三里である（我が国で慣用される取穴法）。足三里は百会・曲鬢・肩井・風市・絶骨・曲池とともに中風七穴に含まれ、四総穴でもある。",
+    "hasFigure": false,
+    "source": "第30回 はり師・きゅう師国家試験",
+    "sourceUrl": "https://ahaki.or.jp/wordpress/wp-content/uploads/mondai_30_harikyu_pm.pdf",
+    "sourceOrg": "公益財団法人 東洋療法研修試験財団",
+    "sourceReliability": "indexed_official",
+    "verifiedAt": "2026-10-01"
+  },
+  {
+    "id": "30-125",
+    "examRound": 30,
+    "questionNumber": 125,
+    "questionText": "生体において皮膚温の変化を示すのはどれか。",
+    "choices": [
+      "丘疹点",
+      "ヘッド帯",
+      "ボアス点",
+      "エアポケット現象"
+    ],
+    "answerIndex": 3,
+    "explanation": "公式正答は④エアポケット現象で、皮膚表面において周囲より皮膚温が低下している部位を示す現象として扱われる。丘疹点は皮膚の丘疹状の変化、ヘッド帯は内臓疾患に伴う皮膚の知覚過敏帯、ボアス点は胃潰瘍などでみられる背部の圧痛点である。",
+    "hasFigure": false,
+    "source": "第30回 はり師・きゅう師国家試験",
+    "sourceUrl": "https://ahaki.or.jp/wordpress/wp-content/uploads/mondai_30_harikyu_pm.pdf",
+    "sourceOrg": "公益財団法人 東洋療法研修試験財団",
+    "sourceReliability": "indexed_official",
+    "verifiedAt": "2026-10-01"
+  },
+  {
+    "id": "30-126",
+    "examRound": 30,
+    "questionNumber": 126,
+    "questionText": "透熱灸を避けるべき経穴はどれか。",
+    "choices": [
+      "百会",
+      "巨髎",
+      "天柱",
+      "角孫"
+    ],
+    "answerIndex": 1,
+    "explanation": "顔面部は瘢痕が目立ち美容上の問題となるため、透熱灸（直接灸）は避けるべきである。巨髎は顔面部（瞳孔線上で鼻翼下縁の高さ）にある。百会・天柱・角孫は頭部・後頸部で毛髪に隠れる部位である。",
+    "hasFigure": false,
+    "source": "第30回 はり師・きゅう師国家試験",
+    "sourceUrl": "https://ahaki.or.jp/wordpress/wp-content/uploads/mondai_30_harikyu_pm.pdf",
+    "sourceOrg": "公益財団法人 東洋療法研修試験財団",
+    "sourceReliability": "indexed_official",
+    "verifiedAt": "2026-10-01"
+  },
+  {
+    "id": "30-127",
+    "examRound": 30,
+    "questionNumber": 127,
+    "questionText": "緊張型頭痛に対する局所治療について罹患筋と治療穴の組合せで正しいのはどれか。",
+    "choices": [
+      "側頭筋 ── 風池",
+      "僧帽筋 ── 翳風",
+      "後頭筋 ── 玉枕",
+      "頭半棘筋 ── 脳空"
+    ],
+    "answerIndex": 2,
+    "explanation": "玉枕は外後頭隆起上縁の外方にあり、後頭筋（後頭前頭筋の後頭腹）上に位置する。風池は胸鎖乳突筋と僧帽筋の間、翳風は耳垂後方、脳空は外後頭隆起上縁の外方で後頭筋上にあり、組合せとしては後頭筋と玉枕が正しい。",
+    "hasFigure": false,
+    "source": "第30回 はり師・きゅう師国家試験",
+    "sourceUrl": "https://ahaki.or.jp/wordpress/wp-content/uploads/mondai_30_harikyu_pm.pdf",
+    "sourceOrg": "公益財団法人 東洋療法研修試験財団",
+    "sourceReliability": "indexed_official",
+    "verifiedAt": "2026-10-01"
+  },
+  {
+    "id": "30-128",
+    "examRound": 30,
+    "questionNumber": 128,
+    "questionText": "マン・ウェルニッケ肢位にある片麻痺患者に対して、上肢の痙性の改善を目的に相反性Ⅰa抑制を応用した低周波鍼通電療法を行う場合、適切な治療穴の組合せはどれか。",
+    "choices": [
+      "消濼 ── 外関",
+      "曲沢 ── 内関",
+      "承筋 ── 承山",
+      "豊隆 ── 足三里"
+    ],
+    "answerIndex": 0,
+    "explanation": "マン・ウェルニッケ肢位では上肢は屈筋群の痙性が高まる。相反性Ⅰa抑制を利用するには拮抗筋である伸筋群を刺激して屈筋群を抑制するため、上腕三頭筋上の消濼と前腕伸筋群上の外関の組合せが適切である。曲沢・内関は屈筋側、承筋・承山や豊隆・足三里は下肢の経穴である。",
+    "hasFigure": false,
+    "source": "第30回 はり師・きゅう師国家試験",
+    "sourceUrl": "https://ahaki.or.jp/wordpress/wp-content/uploads/mondai_30_harikyu_pm.pdf",
+    "sourceOrg": "公益財団法人 東洋療法研修試験財団",
+    "sourceReliability": "indexed_official",
+    "verifiedAt": "2026-10-01"
+  },
+  {
+    "id": "30-129",
+    "examRound": 30,
+    "questionNumber": 129,
+    "questionText": "次の文で示す症例の障害神経根の部位で最も適切なのはどれか。「55歳の男性。頸部の神経根症状により左肩関節外転筋力低下、左上腕二頭筋反射減弱、左上腕外側の知覚鈍麻がみられる。」",
+    "choices": [
+      "C3－C4間",
+      "C4－C5間",
+      "C6－C7間",
+      "C7－Th1間"
+    ],
+    "answerIndex": 1,
+    "explanation": "肩関節外転（三角筋）の筋力低下、上腕二頭筋反射の減弱、上腕外側の知覚鈍麻はC5神経根障害の所見である。C5神経根はC4－C5椎間から出るため、障害部位はC4－C5間と考えられる。",
+    "hasFigure": false,
+    "source": "第30回 はり師・きゅう師国家試験",
+    "sourceUrl": "https://ahaki.or.jp/wordpress/wp-content/uploads/mondai_30_harikyu_pm.pdf",
+    "sourceOrg": "公益財団法人 東洋療法研修試験財団",
+    "sourceReliability": "indexed_official",
+    "verifiedAt": "2026-10-01"
+  },
+  {
+    "id": "30-130",
+    "examRound": 30,
+    "questionNumber": 130,
+    "questionText": "次の文で示す症例に対する局所治療穴として最も適切なのはどれか。「38歳の女性。家事や子どもの世話が忙しく、最近になって手関節に痛みを感じるようになった。アイヒホッフテスト陽性。」",
+    "choices": [
+      "内関",
+      "合谷",
+      "列欠",
+      "陽池"
+    ],
+    "answerIndex": 2,
+    "explanation": "アイヒホッフテスト陽性で手関節橈側の痛みがあることから、長母指外転筋腱と短母指伸筋腱の腱鞘炎であるドケルバン病と考えられる。この腱の部位にある列欠が局所治療穴として最も適切である。",
+    "hasFigure": false,
+    "source": "第30回 はり師・きゅう師国家試験",
+    "sourceUrl": "https://ahaki.or.jp/wordpress/wp-content/uploads/mondai_30_harikyu_pm.pdf",
+    "sourceOrg": "公益財団法人 東洋療法研修試験財団",
+    "sourceReliability": "indexed_official",
+    "verifiedAt": "2026-10-01"
+  },
+  {
+    "id": "30-131",
+    "examRound": 30,
+    "questionNumber": 131,
+    "questionText": "顎関節症患者に対して下顎骨の前方移動の作用がある筋を刺激する場合、最も適切なのはどれか。",
+    "choices": [
+      "下関",
+      "牽正",
+      "大迎",
+      "太陽"
+    ],
+    "answerIndex": 0,
+    "explanation": "下顎骨を前方に移動させるのは主に外側翼突筋で、下関は頬骨弓下縁中央と下顎切痕の間の陥凹部にあり、深部に外側翼突筋が位置する。牽正・大迎は咬筋付近、太陽は側頭部にある。",
+    "hasFigure": false,
+    "source": "第30回 はり師・きゅう師国家試験",
+    "sourceUrl": "https://ahaki.or.jp/wordpress/wp-content/uploads/mondai_30_harikyu_pm.pdf",
+    "sourceOrg": "公益財団法人 東洋療法研修試験財団",
+    "sourceReliability": "indexed_official",
+    "verifiedAt": "2026-10-01"
+  },
+  {
+    "id": "30-132",
+    "examRound": 30,
+    "questionNumber": 132,
+    "questionText": "次の文で示す症例で罹患神経に対する治療穴として最も適切なのはどれか。「35歳の女性。妊娠に伴い母指から中指にかけてしびれが出現し、母指と示指で輪を作ろうとすると楕円型になる。」",
+    "choices": [
+      "小海",
+      "手五里",
+      "天井",
+      "内関"
+    ],
+    "answerIndex": 3,
+    "explanation": "妊娠に伴い母指から中指のしびれが生じ、母指と示指できれいな丸が作れない（母指対立障害）ことから、正中神経が圧迫される手根管症候群と考えられる。正中神経の走行上にある内関が最も適切である。小海は尺骨神経、手五里は橈骨神経の走行上にあり、天井は上腕三頭筋腱部にある。",
+    "hasFigure": false,
+    "source": "第30回 はり師・きゅう師国家試験",
+    "sourceUrl": "https://ahaki.or.jp/wordpress/wp-content/uploads/mondai_30_harikyu_pm.pdf",
+    "sourceOrg": "公益財団法人 東洋療法研修試験財団",
+    "sourceReliability": "indexed_official",
+    "verifiedAt": "2026-10-01"
+  },
+  {
+    "id": "30-133",
+    "examRound": 30,
+    "questionNumber": 133,
+    "questionText": "末梢性顔面神経麻痺で過誤再生による後遺症はどれか。",
+    "choices": [
+      "兎眼",
+      "ワニの涙",
+      "味覚脱失",
+      "聴覚過敏"
+    ],
+    "answerIndex": 1,
+    "explanation": "顔面神経の再生時に唾液腺へ向かうべき線維が涙腺に誤って再生すると、食事の際に涙が出るワニの涙（鰐の涙）が生じる。兎眼・味覚脱失・聴覚過敏は顔面神経麻痺そのものによる症状である。",
+    "hasFigure": false,
+    "source": "第30回 はり師・きゅう師国家試験",
+    "sourceUrl": "https://ahaki.or.jp/wordpress/wp-content/uploads/mondai_30_harikyu_pm.pdf",
+    "sourceOrg": "公益財団法人 東洋療法研修試験財団",
+    "sourceReliability": "indexed_official",
+    "verifiedAt": "2026-10-01"
+  },
+  {
+    "id": "30-134",
+    "examRound": 30,
+    "questionNumber": 134,
+    "questionText": "頭部の神経痛と局所治療穴の組合せで正しいのはどれか。",
+    "choices": [
+      "三叉神経痛（第1枝） ── 太陽",
+      "大後頭神経痛 ── 完骨",
+      "小後頭神経痛 ── 天柱",
+      "大耳介神経痛 ── 瘈脈"
+    ],
+    "answerIndex": 3,
+    "explanation": "瘈脈は耳介の後方、乳様突起の中央部にあり、大耳介神経の分布域にあたるため大耳介神経痛の局所治療穴となる。三叉神経第1枝には陽白・攅竹など、大後頭神経には天柱・玉枕など、小後頭神経には完骨・風池などが用いられる。",
+    "hasFigure": false,
+    "source": "第30回 はり師・きゅう師国家試験",
+    "sourceUrl": "https://ahaki.or.jp/wordpress/wp-content/uploads/mondai_30_harikyu_pm.pdf",
+    "sourceOrg": "公益財団法人 東洋療法研修試験財団",
+    "sourceReliability": "indexed_official",
+    "verifiedAt": "2026-10-01"
+  },
+  {
+    "id": "30-135",
+    "examRound": 30,
+    "questionNumber": 135,
+    "questionText": "サルコペニアの症状はどれか。",
+    "choices": [
+      "知人の名前が思い出せなくなってきた。",
+      "油っこいものを食べることが減ってきた。",
+      "歩くスピードが遅くなってきた。",
+      "夜間のトイレの回数が多くなってきた。"
+    ],
+    "answerIndex": 2,
+    "explanation": "サルコペニアは加齢などに伴う骨格筋量の減少と筋力または身体機能の低下を特徴とし、歩行速度の低下はその代表的な症状・評価指標である。記憶障害・食嗜好の変化・夜間頻尿はサルコペニアの症状ではない。",
+    "hasFigure": false,
+    "source": "第30回 はり師・きゅう師国家試験",
+    "sourceUrl": "https://ahaki.or.jp/wordpress/wp-content/uploads/mondai_30_harikyu_pm.pdf",
+    "sourceOrg": "公益財団法人 東洋療法研修試験財団",
+    "sourceReliability": "indexed_official",
+    "verifiedAt": "2026-10-01"
+  },
+  {
+    "id": "30-136",
+    "examRound": 30,
+    "questionNumber": 136,
+    "questionText": "次の文で示す症例で、鍼灸治療の効果を評価するのに最も適切なのはどれか。「65歳の女性。1年前から生活に充実感がなく、気持ちが沈む。倦怠感、食欲不振を伴う。幻覚や記憶障害はない。」",
+    "choices": [
+      "改訂長谷川式簡易知能評価スケール",
+      "タイムドアップアンドゴーテスト",
+      "バーセル・インデックス",
+      "ハミルトン評価尺度"
+    ],
+    "answerIndex": 3,
+    "explanation": "抑うつ気分・充実感の欠如・倦怠感・食欲不振がみられ、幻覚や記憶障害がないことからうつ状態と考えられ、うつ病の重症度評価に用いるハミルトン評価尺度が適切である。改訂長谷川式は認知機能、TUGテストは移動能力・転倒リスク、バーセル・インデックスはADLの評価に用いる。",
+    "hasFigure": false,
+    "source": "第30回 はり師・きゅう師国家試験",
+    "sourceUrl": "https://ahaki.or.jp/wordpress/wp-content/uploads/mondai_30_harikyu_pm.pdf",
+    "sourceOrg": "公益財団法人 東洋療法研修試験財団",
+    "sourceReliability": "indexed_official",
+    "verifiedAt": "2026-10-01"
+  },
+  {
+    "id": "30-137",
+    "examRound": 30,
+    "questionNumber": 137,
+    "questionText": "次の文で示す症例の治療対象となる筋で最も適切なのはどれか。「40歳の女性。運動不足解消のためテニスを始めたところ、バックハンドストロークの際に肘の痛みを自覚するようになった。」",
+    "choices": [
+      "短橈側手根伸筋",
+      "尺側手根屈筋",
+      "腕橈骨筋",
+      "円回内筋"
+    ],
+    "answerIndex": 0,
+    "explanation": "バックハンドストロークで肘外側に痛みが出るのは外側型テニス肘（上腕骨外側上顆炎）で、主に上腕骨外側上顆に起始する短橈側手根伸筋の付着部炎である。尺側手根屈筋・円回内筋は内側上顆に起始し、内側型テニス肘（ゴルフ肘）に関与する。",
+    "hasFigure": false,
+    "source": "第30回 はり師・きゅう師国家試験",
+    "sourceUrl": "https://ahaki.or.jp/wordpress/wp-content/uploads/mondai_30_harikyu_pm.pdf",
+    "sourceOrg": "公益財団法人 東洋療法研修試験財団",
+    "sourceReliability": "indexed_official",
+    "verifiedAt": "2026-10-01"
+  },
+  {
+    "id": "30-138",
+    "examRound": 30,
+    "questionNumber": 138,
+    "questionText": "スポーツ障害と罹患筋に対する治療穴の組合せで最も適切なのはどれか。",
+    "choices": [
+      "上腕二頭筋長頭腱炎 ── 肩髎",
+      "肩インピンジメント症候群 ── 肩外兪",
+      "ジャンパー膝 ── 鶴頂",
+      "シンスプリント ── 闌尾"
+    ],
+    "answerIndex": 2,
+    "explanation": "ジャンパー膝は膝蓋腱（膝蓋靱帯）や大腿四頭筋腱の付着部の障害で、膝蓋骨上縁の上方に取る鶴頂は大腿四頭筋腱部の局所治療穴として用いられる。肩髎は三角筋後部付近、肩外兪は肩甲骨上角付近、闌尾は下腿前外側の前脛骨筋付近にあり、上腕二頭筋長頭腱炎・肩インピンジメント症候群・シンスプリント（脛骨内側縁の痛み）の罹患筋に対する治療穴の組合せとしては適切でない。",
+    "hasFigure": false,
+    "source": "第30回 はり師・きゅう師国家試験",
+    "sourceUrl": "https://ahaki.or.jp/wordpress/wp-content/uploads/mondai_30_harikyu_pm.pdf",
+    "sourceOrg": "公益財団法人 東洋療法研修試験財団",
+    "sourceReliability": "indexed_official",
+    "verifiedAt": "2026-10-01"
+  },
+  {
+    "id": "30-139",
+    "examRound": 30,
+    "questionNumber": 139,
+    "questionText": "次の文で示す病態により生じたスポーツ外傷・障害に対する検査法はどれか。「膝関節の屈伸動作時に、ある組織が大腿骨外側上顆で繰り返し摩擦を生じる一種の使い過ぎ症候群である。」",
+    "choices": [
+      "エリーテスト",
+      "グラスピングテスト",
+      "マクマレーテスト",
+      "膝内反ストレステスト"
+    ],
+    "answerIndex": 1,
+    "explanation": "膝の屈伸で腸脛靱帯が大腿骨外側上顆と繰り返し摩擦して生じるのは腸脛靱帯炎（ランナー膝）で、外側上顆部で腸脛靱帯を圧迫しながら膝を屈伸させるグラスピングテストで疼痛が誘発される。エリーテストは大腿直筋の短縮、マクマレーテストは半月板損傷、膝内反ストレステストは外側側副靱帯損傷の検査である。",
+    "hasFigure": false,
+    "source": "第30回 はり師・きゅう師国家試験",
+    "sourceUrl": "https://ahaki.or.jp/wordpress/wp-content/uploads/mondai_30_harikyu_pm.pdf",
+    "sourceOrg": "公益財団法人 東洋療法研修試験財団",
+    "sourceReliability": "indexed_official",
+    "verifiedAt": "2026-10-01"
+  },
+  {
+    "id": "30-140",
+    "examRound": 30,
+    "questionNumber": 140,
+    "questionText": "次の文で示す症例に対する罹患筋への局所治療穴として適切なのはどれか。「17歳の男子。陸上部で長距離走をしている。ランニングを開始すると下腿前方に痛みと腫れが出るが、数十分の安静で症状が消失する。近医で前方コンパートメント症候群と言われた。」",
+    "choices": [
+      "小腸の下合穴",
+      "膀胱の下合穴",
+      "三焦の下合穴",
+      "胆の下合穴"
+    ],
+    "answerIndex": 0,
+    "explanation": "前方コンパートメントには前脛骨筋などが含まれる。小腸の下合穴である下巨虚は下腿前面、前脛骨筋上（犢鼻の下方9寸）にあり、局所治療穴として適切である。膀胱の下合穴の委中・三焦の下合穴の委陽は膝窩部、胆の下合穴の陽陵泉は腓骨頭前下方にある。",
+    "hasFigure": false,
+    "source": "第30回 はり師・きゅう師国家試験",
+    "sourceUrl": "https://ahaki.or.jp/wordpress/wp-content/uploads/mondai_30_harikyu_pm.pdf",
+    "sourceOrg": "公益財団法人 東洋療法研修試験財団",
+    "sourceReliability": "indexed_official",
+    "verifiedAt": "2026-10-01"
+  },
+  {
+    "id": "30-141",
+    "examRound": 30,
+    "questionNumber": 141,
+    "questionText": "次の文で示す刺法はどれか。「寒気の浅いとき、皮膚をつまんで引っ張りこれを刺す。」",
+    "choices": [
+      "直鍼刺",
+      "斉刺",
+      "傍鍼刺",
+      "揚刺"
+    ],
+    "answerIndex": 0,
+    "explanation": "十二刺の直鍼刺は、寒気が浅いときに皮膚をつまみ上げて引っ張り、その皮下に刺す方法である。斉刺は中央に1本と両傍に2本、揚刺は中央に1本と四方に4本を刺し、傍鍼刺は正中に1本と傍らに1本を刺す方法である。",
+    "hasFigure": false,
+    "source": "第30回 はり師・きゅう師国家試験",
+    "sourceUrl": "https://ahaki.or.jp/wordpress/wp-content/uploads/mondai_30_harikyu_pm.pdf",
+    "sourceOrg": "公益財団法人 東洋療法研修試験財団",
+    "sourceReliability": "indexed_official",
+    "verifiedAt": "2026-10-01"
+  },
+  {
+    "id": "30-142",
+    "examRound": 30,
+    "questionNumber": 142,
+    "questionText": "次の文で示す病証に対する治療方針として最も適切なのはどれか。「43歳の女性。主訴は膝の痛み。1週間雨天が続き、症状が増悪している。昨日てんぷらを食べてから軟便である。舌は膩苔、脈は滑を認める。」",
+    "choices": [
+      "逆気を降ろす。",
+      "血をめぐらせる。",
+      "気血を補う。",
+      "痰湿を除く。"
+    ],
+    "answerIndex": 3,
+    "explanation": "雨天（湿邪）で増悪する関節痛、油っこい食事後の軟便、膩苔・滑脈は、いずれも痰湿の停滞を示す所見である。したがって痰湿を除く（化痰・祛湿）ことが治療方針として最も適切である。",
+    "hasFigure": false,
+    "source": "第30回 はり師・きゅう師国家試験",
+    "sourceUrl": "https://ahaki.or.jp/wordpress/wp-content/uploads/mondai_30_harikyu_pm.pdf",
+    "sourceOrg": "公益財団法人 東洋療法研修試験財団",
+    "sourceReliability": "indexed_official",
+    "verifiedAt": "2026-10-01"
+  },
+  {
+    "id": "30-143",
+    "examRound": 30,
+    "questionNumber": 143,
+    "questionText": "次の文で示す病証として適切なのはどれか。「32歳の女性。主訴は眼精疲労。最近、月経血の量が少なく色も薄くなった。緊張すると手がふるえ、夜中にこむら返りが起こりやすい。舌は淡白、脈は濇を認める。」",
+    "choices": [
+      "心血虚",
+      "腎精不足",
+      "脾不統血",
+      "肝血虚"
+    ],
+    "answerIndex": 3,
+    "explanation": "肝は血を蔵し目に開竅し筋を主るため、肝血が不足すると眼精疲労、月経血の量の減少・色の薄さ、手のふるえ、こむら返り（筋の拘急）がみられる。淡白舌・濇脈も血虚を示し、肝血虚と考えられる。",
+    "hasFigure": false,
+    "source": "第30回 はり師・きゅう師国家試験",
+    "sourceUrl": "https://ahaki.or.jp/wordpress/wp-content/uploads/mondai_30_harikyu_pm.pdf",
+    "sourceOrg": "公益財団法人 東洋療法研修試験財団",
+    "sourceReliability": "indexed_official",
+    "verifiedAt": "2026-10-01"
+  },
+  {
+    "id": "30-144",
+    "examRound": 30,
+    "questionNumber": 144,
+    "questionText": "次の文で示す病証で随伴症状として最もみられるのはどれか。「27歳の男性。主訴は便秘。暑がりでよく汗をかき、便は硬く乾燥している。腹部膨満、口臭、顔面紅潮を伴う。舌は紅、黄燥苔、脈は実を認める。」",
+    "choices": [
+      "脱肛",
+      "煩躁",
+      "口淡",
+      "小便清長"
+    ],
+    "answerIndex": 1,
+    "explanation": "暑がり・多汗・乾燥した硬い便・腹部膨満・口臭・顔面紅潮・紅舌・黄燥苔・実脈は、胃腸の実熱（熱秘）を示す。熱が心神を擾乱するため煩躁がみられやすい。脱肛は気虚、口淡・小便清長は寒証や虚証でみられる。",
+    "hasFigure": false,
+    "source": "第30回 はり師・きゅう師国家試験",
+    "sourceUrl": "https://ahaki.or.jp/wordpress/wp-content/uploads/mondai_30_harikyu_pm.pdf",
+    "sourceOrg": "公益財団法人 東洋療法研修試験財団",
+    "sourceReliability": "indexed_official",
+    "verifiedAt": "2026-10-01"
+  },
+  {
+    "id": "30-145",
+    "examRound": 30,
+    "questionNumber": 145,
+    "questionText": "次の文で示す経脈病証で障害されている経脈の同名経を施術する場合、最も適切な治療穴はどれか。「72歳の男性。3日前から急に腰が痛くなり、身体を反らすことができなくなった。陰嚢の脹痛、胸満、遺尿もみられる。」",
+    "choices": [
+      "霊道",
+      "陽谷",
+      "支溝",
+      "間使"
+    ],
+    "answerIndex": 3,
+    "explanation": "腰痛で前後に屈伸できない、陰嚢の腫れ・痛み、胸満、遺尿は足の厥陰肝経の経脈病証である。その同名経は手の厥陰心包経であり、選択肢のうち心包経に属するのは間使である。霊道は心経、陽谷は小腸経、支溝は三焦経に属する。",
+    "hasFigure": false,
+    "source": "第30回 はり師・きゅう師国家試験",
+    "sourceUrl": "https://ahaki.or.jp/wordpress/wp-content/uploads/mondai_30_harikyu_pm.pdf",
+    "sourceOrg": "公益財団法人 東洋療法研修試験財団",
+    "sourceReliability": "indexed_official",
+    "verifiedAt": "2026-10-01"
+  },
+  {
+    "id": "30-146",
+    "examRound": 30,
+    "questionNumber": 146,
+    "questionText": "次の文で示す病証に対する治療方針で最も適切なのはどれか。「22歳の女性。主訴は月経痛。経血量は少なく、血塊が混じることがある。小腹部の冷痛と拒按がみられ、足が冷える。舌根に白厚苔、脈は沈遅を認める。」",
+    "choices": [
+      "肝鬱を抑える。",
+      "寒邪を除く。",
+      "脾の統血を促す。",
+      "肝腎の精血を補う。"
+    ],
+    "answerIndex": 1,
+    "explanation": "小腹部の冷痛と拒按（実証）、足の冷え、経血量の減少と血塊、白厚苔、沈遅脈は、寒邪が胞宮に凝滞した寒凝（実寒）による月経痛を示す。したがって寒邪を除き温めて経脈を通じさせることが治療方針となる。",
+    "hasFigure": false,
+    "source": "第30回 はり師・きゅう師国家試験",
+    "sourceUrl": "https://ahaki.or.jp/wordpress/wp-content/uploads/mondai_30_harikyu_pm.pdf",
+    "sourceOrg": "公益財団法人 東洋療法研修試験財団",
+    "sourceReliability": "indexed_official",
+    "verifiedAt": "2026-10-01"
+  },
+  {
+    "id": "30-147",
+    "examRound": 30,
+    "questionNumber": 147,
+    "questionText": "次の文で示す病証に対する治療穴で最も適切なのはどれか。「33歳の男性。主訴は上腹部の不快感。連日、飲食の不摂生が続き、悪心、嘔吐がみられる。腹部膨満、噯気、口臭を伴う。舌は厚苔、脈は滑実を認める。」",
+    "choices": [
+      "膻中",
+      "梁門",
+      "帯脈",
+      "肓兪"
+    ],
+    "answerIndex": 1,
+    "explanation": "飲食の不摂生後の上腹部不快感・悪心嘔吐・腹部膨満・噯気・口臭・厚苔・滑実脈は、食物が胃に停滞した食滞（食積）の病証である。上腹部にあり胃の不調に用いる胃経の梁門（臍中央の上方4寸、前正中線の外方2寸）が最も適切である。",
+    "hasFigure": false,
+    "source": "第30回 はり師・きゅう師国家試験",
+    "sourceUrl": "https://ahaki.or.jp/wordpress/wp-content/uploads/mondai_30_harikyu_pm.pdf",
+    "sourceOrg": "公益財団法人 東洋療法研修試験財団",
+    "sourceReliability": "indexed_official",
+    "verifiedAt": "2026-10-01"
+  },
+  {
+    "id": "30-148",
+    "examRound": 30,
+    "questionNumber": 148,
+    "questionText": "次の文で示す病証で最も適切なのはどれか。「58歳の女性。昨夜から陰部掻痒感を自覚。最近イライラすることが多く、飲酒量が増えた。舌辺に黄厚膩苔、脈は左関上の浮数滑を認める。」",
+    "choices": [
+      "胃陰虚",
+      "胃熱",
+      "肝経湿熱",
+      "肝陽上亢"
+    ],
+    "answerIndex": 2,
+    "explanation": "肝経は陰器をめぐるため、陰部掻痒感に加えてイライラ（肝の失調）、飲酒による湿熱の内生、舌辺（肝胆の部位）の黄厚膩苔、左関上（肝の部位）の数滑脈がみられることから、肝経湿熱と考えられる。",
+    "hasFigure": false,
+    "source": "第30回 はり師・きゅう師国家試験",
+    "sourceUrl": "https://ahaki.or.jp/wordpress/wp-content/uploads/mondai_30_harikyu_pm.pdf",
+    "sourceOrg": "公益財団法人 東洋療法研修試験財団",
+    "sourceReliability": "indexed_official",
+    "verifiedAt": "2026-10-01"
+  },
+  {
+    "id": "30-149",
+    "examRound": 30,
+    "questionNumber": 149,
+    "questionText": "次の文で示す病証に対する治療穴で最も適切なのはどれか。「46歳の女性。昨晩急なめまい発作があった。最近怒りっぽくなり、胸脇部の張り感がある。脈は弦を認める。」",
+    "choices": [
+      "地機",
+      "中都",
+      "水泉",
+      "金門"
+    ],
+    "answerIndex": 1,
+    "explanation": "怒りっぽさ、胸脇部の張り、弦脈は肝の失調を示し、急な発作であることから、急性症状に用いる郄穴のうち肝経の郄穴である中都が最も適切である。地機は脾経、水泉は腎経、金門は膀胱経の郄穴である。",
+    "hasFigure": false,
+    "source": "第30回 はり師・きゅう師国家試験",
+    "sourceUrl": "https://ahaki.or.jp/wordpress/wp-content/uploads/mondai_30_harikyu_pm.pdf",
+    "sourceOrg": "公益財団法人 東洋療法研修試験財団",
+    "sourceReliability": "indexed_official",
+    "verifiedAt": "2026-10-01"
+  },
+  {
+    "id": "30-150",
+    "examRound": 30,
+    "questionNumber": 150,
+    "questionText": "次の文で示す病証に対する経脈を考慮した治療穴として適切なのはどれか。「65歳の男性。2日前に新型コロナワクチン接種を受けたところ、肩を外転すると強い痛みを自覚する。悪寒、発熱、頭痛はない。肩の屈曲、伸展痛もない。」",
+    "choices": [
+      "魚際",
+      "天泉",
+      "液門",
+      "前谷"
+    ],
+    "answerIndex": 2,
+    "explanation": "発熱などの全身症状がなく、肩の外転時のみに痛みが出ることから、肩の外側（三角筋中部）を通る手の少陽三焦経の経脈を考慮して選穴する。三焦経の液門が適切である。魚際は肺経、天泉は心包経、前谷は小腸経の経穴で、肩外側を通る経脈ではない。",
+    "hasFigure": false,
+    "source": "第30回 はり師・きゅう師国家試験",
+    "sourceUrl": "https://ahaki.or.jp/wordpress/wp-content/uploads/mondai_30_harikyu_pm.pdf",
+    "sourceOrg": "公益財団法人 東洋療法研修試験財団",
+    "sourceReliability": "indexed_official",
+    "verifiedAt": "2026-10-01"
+  },
+  {
+    "id": "30-151",
+    "examRound": 30,
+    "questionNumber": 151,
+    "questionText": "次の文で示す症例について、問題151、問題152の問いに答えよ。「25歳の男性。3か月前から膨満感を伴う上腹部痛、嘔気が続く。症状はストレスで増悪、噯気で軽快する。下痢はない。舌は薄黄苔、脈は弦を認める。」\n\n病証として最も適切なのはどれか。",
+    "choices": [
+      "肝胃不和",
+      "肝脾不和",
+      "脾腎陽虚",
+      "脾胃湿熱"
+    ],
+    "answerIndex": 0,
+    "explanation": "ストレスで増悪し噯気で軽快する上腹部の脹痛、嘔気、弦脈は、肝気が胃に横逆して胃の和降が失われた肝胃不和を示す。下痢がないことから、腹痛・下痢を主とする肝脾不和とは区別される。",
+    "hasFigure": false,
+    "source": "第30回 はり師・きゅう師国家試験",
+    "sourceUrl": "https://ahaki.or.jp/wordpress/wp-content/uploads/mondai_30_harikyu_pm.pdf",
+    "sourceOrg": "公益財団法人 東洋療法研修試験財団",
+    "sourceReliability": "indexed_official",
+    "verifiedAt": "2026-10-01"
+  },
+  {
+    "id": "30-152",
+    "examRound": 30,
+    "questionNumber": 152,
+    "questionText": "次の文で示す症例について、問題151、問題152の問いに答えよ。「25歳の男性。3か月前から膨満感を伴う上腹部痛、嘔気が続く。症状はストレスで増悪、噯気で軽快する。下痢はない。舌は薄黄苔、脈は弦を認める。」\n\n上腹部痛の性質として最も適切なのはどれか。",
+    "choices": [
+      "酸痛",
+      "脹痛",
+      "重痛",
+      "隠痛"
+    ],
+    "answerIndex": 1,
+    "explanation": "肝胃不和などの気滞による痛みは、張って膨れるような脹痛で、噯気や放屁で軽快し情志により増悪するのが特徴である。酸痛はだるい痛み、重痛は湿による重い痛み、隠痛は虚証にみられる鈍く持続する痛みである。",
+    "hasFigure": false,
+    "source": "第30回 はり師・きゅう師国家試験",
+    "sourceUrl": "https://ahaki.or.jp/wordpress/wp-content/uploads/mondai_30_harikyu_pm.pdf",
+    "sourceOrg": "公益財団法人 東洋療法研修試験財団",
+    "sourceReliability": "indexed_official",
+    "verifiedAt": "2026-10-01"
+  },
+  {
+    "id": "30-153",
+    "examRound": 30,
+    "questionNumber": 153,
+    "questionText": "次の文で示す症例について、問題153、問題154の問いに答えよ。「26歳の女性。なで肩で痩せている。主訴は右上肢全体の持続的なだるさ。腱反射は正常、スパーリングテスト、エデンテスト、ライトテストは陰性、アドソンテストは陽性。」\n\n進行した際の症状として最も適切なのはどれか。",
+    "choices": [
+      "レイノー現象",
+      "筋トーヌス亢進",
+      "筋線維束性れん縮",
+      "手指巧緻運動障害"
+    ],
+    "answerIndex": 0,
+    "explanation": "なで肩の痩せた女性で上肢のだるさがあり、アドソンテストのみ陽性であることから、前・中斜角筋の間での圧迫による斜角筋症候群（胸郭出口症候群）が考えられる。鎖骨下動脈の圧迫が進むと手指の冷感・蒼白などのレイノー現象がみられることがある。",
+    "hasFigure": false,
+    "source": "第30回 はり師・きゅう師国家試験",
+    "sourceUrl": "https://ahaki.or.jp/wordpress/wp-content/uploads/mondai_30_harikyu_pm.pdf",
+    "sourceOrg": "公益財団法人 東洋療法研修試験財団",
+    "sourceReliability": "indexed_official",
+    "verifiedAt": "2026-10-01"
+  },
+  {
+    "id": "30-154",
+    "examRound": 30,
+    "questionNumber": 154,
+    "questionText": "次の文で示す症例について、問題153、問題154の問いに答えよ。「26歳の女性。なで肩で痩せている。主訴は右上肢全体の持続的なだるさ。腱反射は正常、スパーリングテスト、エデンテスト、ライトテストは陰性、アドソンテストは陽性。」\n\n罹患筋への局所治療穴として適切なのはどれか。",
+    "choices": [
+      "屋翳",
+      "気戸",
+      "胸郷",
+      "天鼎"
+    ],
+    "answerIndex": 3,
+    "explanation": "アドソンテスト陽性の斜角筋症候群では前・中斜角筋が罹患筋となる。天鼎は側頸部で胸鎖乳突筋の後縁付近、斜角筋の上に位置するため局所治療穴として適切である。屋翳・気戸・胸郷は前胸部の経穴である。",
+    "hasFigure": false,
+    "source": "第30回 はり師・きゅう師国家試験",
+    "sourceUrl": "https://ahaki.or.jp/wordpress/wp-content/uploads/mondai_30_harikyu_pm.pdf",
+    "sourceOrg": "公益財団法人 東洋療法研修試験財団",
+    "sourceReliability": "indexed_official",
+    "verifiedAt": "2026-10-01"
+  },
+  {
+    "id": "30-155",
+    "examRound": 30,
+    "questionNumber": 155,
+    "questionText": "次の文で示す症例について、問題155、問題156の問いに答えよ。「32歳の女性。主訴は月経時の下腹部および腰の痛み。主訴の部位と手足の冷えを伴い、温めると改善する。月経血は暗紫色で血塊が混じる。婦人科では機能性月経困難症と診断された。」\n\n最もみられる脈状はどれか。",
+    "choices": [
+      "浮緊",
+      "滑数",
+      "遅濇",
+      "細無力"
+    ],
+    "answerIndex": 2,
+    "explanation": "冷えを伴い温めると改善する痛み（寒証）と、暗紫色で血塊の混じる月経血（血瘀）から寒凝血瘀と考えられ、寒を示す遅脈と血瘀を示す濇脈が組み合わさった遅濇脈が最もみられる。浮緊は表寒、滑数は痰熱・湿熱、細無力は気血両虚でみられる。",
+    "hasFigure": false,
+    "source": "第30回 はり師・きゅう師国家試験",
+    "sourceUrl": "https://ahaki.or.jp/wordpress/wp-content/uploads/mondai_30_harikyu_pm.pdf",
+    "sourceOrg": "公益財団法人 東洋療法研修試験財団",
+    "sourceReliability": "indexed_official",
+    "verifiedAt": "2026-10-01"
+  },
+  {
+    "id": "30-156",
+    "examRound": 30,
+    "questionNumber": 156,
+    "questionText": "次の文で示す症例について、問題155、問題156の問いに答えよ。「32歳の女性。主訴は月経時の下腹部および腰の痛み。主訴の部位と手足の冷えを伴い、温めると改善する。月経血は暗紫色で血塊が混じる。婦人科では機能性月経困難症と診断された。」\n\nデルマトームを考慮した治療を行う場合、最も適切な経穴はどれか。",
+    "choices": [
+      "膈兪",
+      "腎兪",
+      "足三里",
+      "三陰交"
+    ],
+    "answerIndex": 1,
+    "explanation": "子宮の内臓痛は主に下位胸髄〜上位腰髄（Th10〜L1付近）の領域に関連痛として現れ、下腹部・腰部の痛みとして感じられる。腎兪は第2腰椎棘突起下の外方1.5寸で、この腰部のデルマトーム領域に位置するため最も適切である。膈兪は第7胸椎の高さ、足三里・三陰交は下腿の経穴である。",
+    "hasFigure": false,
+    "source": "第30回 はり師・きゅう師国家試験",
+    "sourceUrl": "https://ahaki.or.jp/wordpress/wp-content/uploads/mondai_30_harikyu_pm.pdf",
+    "sourceOrg": "公益財団法人 東洋療法研修試験財団",
+    "sourceReliability": "indexed_official",
+    "verifiedAt": "2026-10-01"
+  },
+  {
+    "id": "30-157",
+    "examRound": 30,
+    "questionNumber": 157,
+    "questionText": "次の文で示す症例について、問題157、問題158の問いに答えよ。「62歳の女性。主訴は腰痛。立位で腰椎の前弯が強く、骨盤が前傾している。膝関節のアライメントの異常はみられなかった。」\n\n伸長し弱化している筋として最も適切なのはどれか。",
+    "choices": [
+      "大殿筋",
+      "大腰筋",
+      "大腿直筋",
+      "大腿筋膜張筋"
+    ],
+    "answerIndex": 0,
+    "explanation": "骨盤前傾・腰椎前弯の増強では、股関節屈筋群（大腰筋・大腿直筋・大腿筋膜張筋）と腰背部の筋が短縮し、骨盤を後傾させる股関節伸筋の大殿筋や腹筋群が伸長され弱化している。",
+    "hasFigure": false,
+    "source": "第30回 はり師・きゅう師国家試験",
+    "sourceUrl": "https://ahaki.or.jp/wordpress/wp-content/uploads/mondai_30_harikyu_pm.pdf",
+    "sourceOrg": "公益財団法人 東洋療法研修試験財団",
+    "sourceReliability": "indexed_official",
+    "verifiedAt": "2026-10-01"
+  },
+  {
+    "id": "30-158",
+    "examRound": 30,
+    "questionNumber": 158,
+    "questionText": "次の文で示す症例について、問題157、問題158の問いに答えよ。「62歳の女性。主訴は腰痛。立位で腰椎の前弯が強く、骨盤が前傾している。膝関節のアライメントの異常はみられなかった。」\n\n伸長し弱化している筋への局所治療穴として最も適切なのはどれか。",
+    "choices": [
+      "居髎",
+      "衝門",
+      "髀関",
+      "胞肓"
+    ],
+    "answerIndex": 3,
+    "explanation": "伸長し弱化している大殿筋への局所治療穴としては、殿部で第2後仙骨孔の高さ、正中仙骨稜の外方3寸にある胞肓が最も適切である。居髎は大腿筋膜張筋付近、衝門・髀関は鼠径部・大腿前面にあり股関節屈筋側の経穴である。",
+    "hasFigure": false,
+    "source": "第30回 はり師・きゅう師国家試験",
+    "sourceUrl": "https://ahaki.or.jp/wordpress/wp-content/uploads/mondai_30_harikyu_pm.pdf",
+    "sourceOrg": "公益財団法人 東洋療法研修試験財団",
+    "sourceReliability": "indexed_official",
+    "verifiedAt": "2026-10-01"
+  },
+  {
+    "id": "30-159",
+    "examRound": 30,
+    "questionNumber": 159,
+    "questionText": "次の文で示す症例について、問題159、問題160の問いに答えよ。「60歳の男性。主訴は足のむくみ。近医で乏尿ではないが、尿量が少ないと指摘された。残尿感はない。下痢しやすい。舌は胖嫩、歯痕、白厚膩苔、脈は滑を認める。」\n\n治療すべき臓腑はどれか。",
+    "choices": [
+      "脾",
+      "心",
+      "肝",
+      "膀胱"
+    ],
+    "answerIndex": 0,
+    "explanation": "下肢のむくみ、尿量の減少、下痢しやすい、胖嫩舌・歯痕・白厚膩苔・滑脈は、脾の運化が失調して水湿が停滞した脾虚湿盛を示す。残尿感がないことから膀胱の病証は考えにくく、治療すべき臓腑は脾である。",
+    "hasFigure": false,
+    "source": "第30回 はり師・きゅう師国家試験",
+    "sourceUrl": "https://ahaki.or.jp/wordpress/wp-content/uploads/mondai_30_harikyu_pm.pdf",
+    "sourceOrg": "公益財団法人 東洋療法研修試験財団",
+    "sourceReliability": "indexed_official",
+    "verifiedAt": "2026-10-01"
+  },
+  {
+    "id": "30-160",
+    "examRound": 30,
+    "questionNumber": 160,
+    "questionText": "次の文で示す症例について、問題159、問題160の問いに答えよ。「60歳の男性。主訴は足のむくみ。近医で乏尿ではないが、尿量が少ないと指摘された。残尿感はない。下痢しやすい。舌は胖嫩、歯痕、白厚膩苔、脈は滑を認める。」\n\n適切な治療穴はどれか。",
+    "choices": [
+      "尺側手根屈筋腱の橈側縁、手関節掌側横紋の上方1寸",
+      "第1中足骨底内側の遠位陥凹部、赤白肉際",
+      "脛骨内側面の中央、内果尖の上方5寸",
+      "腓腹筋外側頭下縁とアキレス腱の間、崑崙の上方7寸"
+    ],
+    "answerIndex": 1,
+    "explanation": "第1中足骨底内側の遠位陥凹部、赤白肉際は脾経の絡穴である公孫で、脾の病証の治療に用いる。①は心経の通里、③は肝経の蠡溝、④は膀胱経の飛揚の部位である。",
+    "hasFigure": false,
+    "source": "第30回 はり師・きゅう師国家試験",
+    "sourceUrl": "https://ahaki.or.jp/wordpress/wp-content/uploads/mondai_30_harikyu_pm.pdf",
+    "sourceOrg": "公益財団法人 東洋療法研修試験財団",
+    "sourceReliability": "indexed_official",
+    "verifiedAt": "2026-10-01"
+  },
+  {
+    "id": "30-161",
+    "examRound": 30,
+    "questionNumber": 161,
+    "questionText": "打鍼法で用いる鍼の鍼尖形状はどれか。",
+    "choices": [
+      "卵形",
+      "松葉形",
+      "ノゲ形",
+      "スリオロシ形"
+    ],
+    "answerIndex": 3,
+    "explanation": "公式正答は④スリオロシ形である。打鍼法は小槌で鍼を叩いて刺入する我が国独自の刺鍼法で、用いる鍼の鍼尖形状は他の毫鍼とは異なるものとして区別して覚えておく。",
+    "hasFigure": false,
+    "source": "第30回 はり師・きゅう師国家試験",
+    "sourceUrl": "https://ahaki.or.jp/wordpress/wp-content/uploads/mondai_30_harikyu_pm.pdf",
+    "sourceOrg": "公益財団法人 東洋療法研修試験財団",
+    "sourceReliability": "indexed_official",
+    "verifiedAt": "2026-10-01",
+    "note": "はり理論試験問題（問題161〜170）。公式表紙により、はり師国家試験を受験する者が解答する区分（きゅう師のみを受験する者はこの区分を除く）。"
+  },
+  {
+    "id": "30-162",
+    "examRound": 30,
+    "questionNumber": 162,
+    "questionText": "刺鍼法と手技の組合せで正しいのはどれか。",
+    "choices": [
+      "撚鍼法 ── 示指打法",
+      "打鍼法 ── 気拍法",
+      "管鍼法 ── 内調術",
+      "小児鍼法 ── 火曳の鍼"
+    ],
+    "answerIndex": 2,
+    "explanation": "内調術は杉山和一による管鍼法の手技の一つで、鍼管を叩いて響きを与える方法である。示指打法は管鍼法の切皮の手技、気拍法・火曳の鍼は打鍼法の手技として伝えられる。",
+    "hasFigure": false,
+    "source": "第30回 はり師・きゅう師国家試験",
+    "sourceUrl": "https://ahaki.or.jp/wordpress/wp-content/uploads/mondai_30_harikyu_pm.pdf",
+    "sourceOrg": "公益財団法人 東洋療法研修試験財団",
+    "sourceReliability": "indexed_official",
+    "verifiedAt": "2026-10-01"
+  },
+  {
+    "id": "30-163",
+    "examRound": 30,
+    "questionNumber": 163,
+    "questionText": "古代九鍼のうち三稜鍼のもとになったのはどれか。",
+    "choices": [
+      "鋒鍼",
+      "鈹鍼",
+      "大鍼",
+      "鑱鍼"
+    ],
+    "answerIndex": 0,
+    "explanation": "九鍼の鋒鍼は鍼尖が三面の刃になっており、瀉血や癰腫の治療に用いられ、現在の三稜鍼のもとになった。鈹鍼は剣状で膿を出すのに用い、大鍼は関節の水腫などに、鑱鍼は皮膚を浅く刺すのに用いた。",
+    "hasFigure": false,
+    "source": "第30回 はり師・きゅう師国家試験",
+    "sourceUrl": "https://ahaki.or.jp/wordpress/wp-content/uploads/mondai_30_harikyu_pm.pdf",
+    "sourceOrg": "公益財団法人 東洋療法研修試験財団",
+    "sourceReliability": "indexed_official",
+    "verifiedAt": "2026-10-01"
+  },
+  {
+    "id": "30-164",
+    "examRound": 30,
+    "questionNumber": 164,
+    "questionText": "徒手検査法が陽性の病態に、局所刺鍼が最も有効なのはどれか。",
+    "choices": [
+      "マクマレーテスト",
+      "トーマステスト",
+      "ラックマンテスト",
+      "ドロップアームテスト"
+    ],
+    "answerIndex": 1,
+    "explanation": "トーマステスト陽性は腸腰筋などの股関節屈筋の短縮（股関節屈曲拘縮）を示し、筋の緊張に対する局所刺鍼が有効と考えられる。マクマレーテストは半月板損傷、ラックマンテストは前十字靱帯損傷、ドロップアームテストは腱板断裂の検査で、器質的損傷への局所刺鍼の効果は限られる。",
+    "hasFigure": false,
+    "source": "第30回 はり師・きゅう師国家試験",
+    "sourceUrl": "https://ahaki.or.jp/wordpress/wp-content/uploads/mondai_30_harikyu_pm.pdf",
+    "sourceOrg": "公益財団法人 東洋療法研修試験財団",
+    "sourceReliability": "indexed_official",
+    "verifiedAt": "2026-10-01"
+  },
+  {
+    "id": "30-165",
+    "examRound": 30,
+    "questionNumber": 165,
+    "questionText": "仰臥位による置鍼時に患者がくしゃみをした場合、最も折鍼が起こりやすい部位はどれか。",
+    "choices": [
+      "印堂",
+      "膻中",
+      "天枢",
+      "中都"
+    ],
+    "answerIndex": 2,
+    "explanation": "くしゃみのときには腹筋が急激に強く収縮するため、腹直筋上に位置する天枢（臍中央の外方2寸）に置鍼していると、筋の急激な収縮によって鍼が曲がったり折れたりしやすい。印堂・膻中は筋の薄い部位、中都は下腿内側にある。",
+    "hasFigure": false,
+    "source": "第30回 はり師・きゅう師国家試験",
+    "sourceUrl": "https://ahaki.or.jp/wordpress/wp-content/uploads/mondai_30_harikyu_pm.pdf",
+    "sourceOrg": "公益財団法人 東洋療法研修試験財団",
+    "sourceReliability": "indexed_official",
+    "verifiedAt": "2026-10-01"
+  },
+  {
+    "id": "30-166",
+    "examRound": 30,
+    "questionNumber": 166,
+    "questionText": "低周波鍼通電療法の安全対策で正しいのはどれか。",
+    "choices": [
+      "電流は直流パルスを用いる。",
+      "鍼の材質はステンレスを用いる。",
+      "心臓を挟む形で電極を配置する。",
+      "通電装置の出力レベルは最大値から始める。"
+    ],
+    "answerIndex": 1,
+    "explanation": "低周波鍼通電療法では、電気分解による腐食・折鍼を起こしにくいステンレス鍼を用いる。電流は直流成分を含まない交流（双極性）パルスを用い、心臓を挟む電極配置は避け、出力は最小から徐々に上げていく。",
+    "hasFigure": false,
+    "source": "第30回 はり師・きゅう師国家試験",
+    "sourceUrl": "https://ahaki.or.jp/wordpress/wp-content/uploads/mondai_30_harikyu_pm.pdf",
+    "sourceOrg": "公益財団法人 東洋療法研修試験財団",
+    "sourceReliability": "indexed_official",
+    "verifiedAt": "2026-10-01"
+  },
+  {
+    "id": "30-167",
+    "examRound": 30,
+    "questionNumber": 167,
+    "questionText": "鍼施術に関する衛生管理で正しいのはどれか。",
+    "choices": [
+      "小児鍼は洗浄して使用する。",
+      "手指の消毒にはベースン法を用いる。",
+      "滅菌済単回使用毫鍼を開封後にスワブ法で清拭する。",
+      "施術野の消毒には70％イソプロピルアルコールを用いる。"
+    ],
+    "answerIndex": 3,
+    "explanation": "施術野の消毒には消毒用エタノールや70％イソプロピルアルコールを用いる。小児鍼などの器具は洗浄後に滅菌して使用し、手指消毒は流水と石けんによる手洗いの後に擦式消毒を行う（ベースン法は推奨されない）。滅菌済単回使用毫鍼は開封後に清拭せずそのまま使用する。",
+    "hasFigure": false,
+    "source": "第30回 はり師・きゅう師国家試験",
+    "sourceUrl": "https://ahaki.or.jp/wordpress/wp-content/uploads/mondai_30_harikyu_pm.pdf",
+    "sourceOrg": "公益財団法人 東洋療法研修試験財団",
+    "sourceReliability": "indexed_official",
+    "verifiedAt": "2026-10-01"
+  },
+  {
+    "id": "30-168",
+    "examRound": 30,
+    "questionNumber": 168,
+    "questionText": "鍼の刺入によりポリモーダル受容器の反応性を増大させるのはどれか。",
+    "choices": [
+      "血管作動性腸ペプチド（VIP）",
+      "CGRP",
+      "サブスタンスP",
+      "プロスタグランジン"
+    ],
+    "answerIndex": 3,
+    "explanation": "プロスタグランジンは組織損傷部で産生され、それ自体は発痛作用が弱いものの、ブラジキニンなどの発痛物質に対するポリモーダル受容器の感受性（反応性）を増大させる。サブスタンスPやCGRPは受容器の興奮により神経終末から放出され、血管拡張などの軸索反射に関与する。",
+    "hasFigure": false,
+    "source": "第30回 はり師・きゅう師国家試験",
+    "sourceUrl": "https://ahaki.or.jp/wordpress/wp-content/uploads/mondai_30_harikyu_pm.pdf",
+    "sourceOrg": "公益財団法人 東洋療法研修試験財団",
+    "sourceReliability": "indexed_official",
+    "verifiedAt": "2026-10-01"
+  },
+  {
+    "id": "30-169",
+    "examRound": 30,
+    "questionNumber": 169,
+    "questionText": "延髄に投射する痛覚の伝導路はどれか。",
+    "choices": [
+      "後索路",
+      "脊髄網様体路",
+      "腹側脊髄視床路",
+      "外側脊髄視床路"
+    ],
+    "answerIndex": 1,
+    "explanation": "脊髄網様体路は脊髄後角から上行して延髄・橋の網様体に投射する痛覚の伝導路で、痛みに伴う覚醒や情動・自律反応に関与する。外側脊髄視床路は視床に投射し、後索路は深部感覚・識別性触圧覚を伝える。",
+    "hasFigure": false,
+    "source": "第30回 はり師・きゅう師国家試験",
+    "sourceUrl": "https://ahaki.or.jp/wordpress/wp-content/uploads/mondai_30_harikyu_pm.pdf",
+    "sourceOrg": "公益財団法人 東洋療法研修試験財団",
+    "sourceReliability": "indexed_official",
+    "verifiedAt": "2026-10-01"
+  },
+  {
+    "id": "30-170",
+    "examRound": 30,
+    "questionNumber": 170,
+    "questionText": "脊髄分節性鎮痛はどれか。",
+    "choices": [
+      "ゲートコントロール説",
+      "下行性疼痛抑制系",
+      "広汎性侵害抑制調節",
+      "末梢性オピオイド鎮痛"
+    ],
+    "answerIndex": 0,
+    "explanation": "ゲートコントロール説は、太い有髄線維（触圧覚）の入力が脊髄後角で細い線維による痛覚の伝達を抑制するという説で、刺激と同じ脊髄分節で働く脊髄分節性鎮痛にあたる。下行性疼痛抑制系・広汎性侵害抑制調節は脳幹を介する全身性（非分節性）の鎮痛機序である。",
+    "hasFigure": false,
+    "source": "第30回 はり師・きゅう師国家試験",
+    "sourceUrl": "https://ahaki.or.jp/wordpress/wp-content/uploads/mondai_30_harikyu_pm.pdf",
+    "sourceOrg": "公益財団法人 東洋療法研修試験財団",
+    "sourceReliability": "indexed_official",
+    "verifiedAt": "2026-10-01"
+  },
+  {
+    "id": "30-171",
+    "examRound": 30,
+    "questionNumber": 171,
+    "questionText": "艾の製造工程で使用する用具と用途の組合せで正しいのはどれか。",
+    "choices": [
+      "裁断機 ── 夾雑物をふるい落とす。",
+      "石臼 ── 葉脈を除去する。",
+      "けんどん（長唐箕） ── 乾燥したヨモギを粉砕する。",
+      "唐箕 ── 毛茸の表面付着物を除去する。"
+    ],
+    "answerIndex": 3,
+    "explanation": "公式正答は④である。艾の製造では、乾燥したヨモギを石臼で粉砕し、唐箕で風を送って軽い毛茸以外の付着物やごみを飛ばして除去し、けんどん（長唐箕）でふるって夾雑物を落とすなどの工程を経て精製する。用具と用途の対応を整理して覚えておく。",
+    "hasFigure": false,
+    "source": "第30回 はり師・きゅう師国家試験",
+    "sourceUrl": "https://ahaki.or.jp/wordpress/wp-content/uploads/mondai_30_harikyu_pm.pdf",
+    "sourceOrg": "公益財団法人 東洋療法研修試験財団",
+    "sourceReliability": "indexed_official",
+    "verifiedAt": "2026-10-01",
+    "note": "きゅう理論試験問題（問題171〜180）。公式表紙により、きゅう師国家試験を受験する者が解答する区分（はり師のみを受験する者はこの区分を除く）。"
+  },
+  {
+    "id": "30-172",
+    "examRound": 30,
+    "questionNumber": 172,
+    "questionText": "無痕灸で主に輻射熱を用いるのはどれか。",
+    "choices": [
+      "漆灸",
+      "塩灸",
+      "艾条灸",
+      "味噌灸"
+    ],
+    "answerIndex": 2,
+    "explanation": "艾条灸（棒灸）は艾を棒状に巻いたものに点火し、皮膚から離してかざすことで主に輻射熱により温める無痕灸である。塩灸・味噌灸は介在物を置いて熱を伝える隔物灸、漆灸は薬物を塗布して刺激する薬物灸である。",
+    "hasFigure": false,
+    "source": "第30回 はり師・きゅう師国家試験",
+    "sourceUrl": "https://ahaki.or.jp/wordpress/wp-content/uploads/mondai_30_harikyu_pm.pdf",
+    "sourceOrg": "公益財団法人 東洋療法研修試験財団",
+    "sourceReliability": "indexed_official",
+    "verifiedAt": "2026-10-01"
+  },
+  {
+    "id": "30-173",
+    "examRound": 30,
+    "questionNumber": 173,
+    "questionText": "施灸後に紅斑と痛みが出現した。該当する熱傷はどれか。",
+    "choices": [
+      "Ⅰ度",
+      "浅達性Ⅱ度",
+      "深達性Ⅱ度",
+      "Ⅲ度"
+    ],
+    "answerIndex": 0,
+    "explanation": "Ⅰ度熱傷は表皮のみの損傷で、紅斑と疼痛（ヒリヒリ感）を生じ、水疱は形成しない。Ⅱ度熱傷では水疱を形成し、Ⅲ度熱傷は皮膚全層の損傷で痛覚が消失する。",
+    "hasFigure": false,
+    "source": "第30回 はり師・きゅう師国家試験",
+    "sourceUrl": "https://ahaki.or.jp/wordpress/wp-content/uploads/mondai_30_harikyu_pm.pdf",
+    "sourceOrg": "公益財団法人 東洋療法研修試験財団",
+    "sourceReliability": "indexed_official",
+    "verifiedAt": "2026-10-01"
+  },
+  {
+    "id": "30-174",
+    "examRound": 30,
+    "questionNumber": 174,
+    "questionText": "灸痕の化膿を防止する方法で誤っているのはどれか。",
+    "choices": [
+      "艾炷を小さくする。",
+      "同一点に施灸する。",
+      "水疱を掻破する。",
+      "痂皮を保護する。"
+    ],
+    "answerIndex": 2,
+    "explanation": "水疱を掻破すると細菌が侵入して化膿の原因となるため誤りである。灸痕の化膿を防ぐには、艾炷を小さくする、毎回同一点に施灸して灸痕を広げない、痂皮を保護して清潔を保つことが大切である。",
+    "hasFigure": false,
+    "source": "第30回 はり師・きゅう師国家試験",
+    "sourceUrl": "https://ahaki.or.jp/wordpress/wp-content/uploads/mondai_30_harikyu_pm.pdf",
+    "sourceOrg": "公益財団法人 東洋療法研修試験財団",
+    "sourceReliability": "indexed_official",
+    "verifiedAt": "2026-10-01"
+  },
+  {
+    "id": "30-175",
+    "examRound": 30,
+    "questionNumber": 175,
+    "questionText": "副腎皮質ホルモン剤を長期服用している患者への施灸方法で最も適しているのはどれか。",
+    "choices": [
+      "棒灸",
+      "焦灼灸",
+      "透熱灸",
+      "糸状灸"
+    ],
+    "answerIndex": 0,
+    "explanation": "副腎皮質ホルモン剤の長期服用者は免疫機能が低下し皮膚も脆弱になっているため、灸痕を残す有痕灸は感染（化膿）の危険がある。皮膚を焼かない無痕灸の棒灸が最も適している。焦灼灸・透熱灸・糸状灸はいずれも有痕灸である。",
+    "hasFigure": false,
+    "source": "第30回 はり師・きゅう師国家試験",
+    "sourceUrl": "https://ahaki.or.jp/wordpress/wp-content/uploads/mondai_30_harikyu_pm.pdf",
+    "sourceOrg": "公益財団法人 東洋療法研修試験財団",
+    "sourceReliability": "indexed_official",
+    "verifiedAt": "2026-10-01"
+  },
+  {
+    "id": "30-176",
+    "examRound": 30,
+    "questionNumber": 176,
+    "questionText": "施灸時の熱刺激を伝える一次求心性神経線維はどれか。",
+    "choices": [
+      "Ⅰa群線維",
+      "Ⅰb群線維",
+      "Ⅱ群線維",
+      "Ⅳ群線維"
+    ],
+    "answerIndex": 3,
+    "explanation": "施灸の熱刺激（侵害性の熱）はポリモーダル受容器などで受容され、無髄のⅣ群線維（C線維）やⅢ群線維（Aδ線維）によって伝えられる。Ⅰa群線維は筋紡錘、Ⅰb群線維は腱器官、Ⅱ群線維は筋紡錘の二次終末や触圧覚の情報を伝える。",
+    "hasFigure": false,
+    "source": "第30回 はり師・きゅう師国家試験",
+    "sourceUrl": "https://ahaki.or.jp/wordpress/wp-content/uploads/mondai_30_harikyu_pm.pdf",
+    "sourceOrg": "公益財団法人 東洋療法研修試験財団",
+    "sourceReliability": "indexed_official",
+    "verifiedAt": "2026-10-01"
+  },
+  {
+    "id": "30-177",
+    "examRound": 30,
+    "questionNumber": 177,
+    "questionText": "熱刺激の伝導で一次求心性神経線維のシナプスがあるのはどれか。",
+    "choices": [
+      "胸髄核",
+      "薄束核",
+      "楔状束核",
+      "脊髄後角"
+    ],
+    "answerIndex": 3,
+    "explanation": "温度覚・痛覚を伝える一次求心性線維は脊髄後角で二次ニューロンとシナプスを形成し、交叉して脊髄視床路を上行する。胸髄核は脊髄小脳路、薄束核・楔状束核は後索路（深部感覚・識別性触圧覚）の中継核である。",
+    "hasFigure": false,
+    "source": "第30回 はり師・きゅう師国家試験",
+    "sourceUrl": "https://ahaki.or.jp/wordpress/wp-content/uploads/mondai_30_harikyu_pm.pdf",
+    "sourceOrg": "公益財団法人 東洋療法研修試験財団",
+    "sourceReliability": "indexed_official",
+    "verifiedAt": "2026-10-01"
+  },
+  {
+    "id": "30-178",
+    "examRound": 30,
+    "questionNumber": 178,
+    "questionText": "施灸時の組織傷害によって放出されるアラキドン酸代謝産物はどれか。",
+    "choices": [
+      "ロイコトリエン",
+      "セロトニン",
+      "CGRP",
+      "ヒスタミン"
+    ],
+    "answerIndex": 0,
+    "explanation": "組織が傷害されると細胞膜のリン脂質からアラキドン酸が遊離し、シクロオキシゲナーゼ系でプロスタグランジン、リポキシゲナーゼ系でロイコトリエンが生成される。セロトニン・ヒスタミンはアミン類、CGRPは神経ペプチドで、アラキドン酸代謝産物ではない。",
+    "hasFigure": false,
+    "source": "第30回 はり師・きゅう師国家試験",
+    "sourceUrl": "https://ahaki.or.jp/wordpress/wp-content/uploads/mondai_30_harikyu_pm.pdf",
+    "sourceOrg": "公益財団法人 東洋療法研修試験財団",
+    "sourceReliability": "indexed_official",
+    "verifiedAt": "2026-10-01"
+  },
+  {
+    "id": "30-179",
+    "examRound": 30,
+    "questionNumber": 179,
+    "questionText": "透熱灸による局所炎症反応で最も早期の反応はどれか。",
+    "choices": [
+      "好中球の活性化",
+      "血管透過性の亢進",
+      "リンパ球の浸潤",
+      "マクロファージの活性化"
+    ],
+    "answerIndex": 1,
+    "explanation": "急性炎症では、まず化学伝達物質（ヒスタミンなど）による血管拡張と血管透過性の亢進が起こり、その後に好中球が遊走・浸潤し、続いてマクロファージやリンパ球が関与する。最も早期の反応は血管透過性の亢進である。",
+    "hasFigure": false,
+    "source": "第30回 はり師・きゅう師国家試験",
+    "sourceUrl": "https://ahaki.or.jp/wordpress/wp-content/uploads/mondai_30_harikyu_pm.pdf",
+    "sourceOrg": "公益財団法人 東洋療法研修試験財団",
+    "sourceReliability": "indexed_official",
+    "verifiedAt": "2026-10-01"
+  },
+  {
+    "id": "30-180",
+    "examRound": 30,
+    "questionNumber": 180,
+    "questionText": "熱刺激時のアドレナリン増加を説明する根拠として適切なのはどれか。",
+    "choices": [
+      "圧自律神経反射",
+      "広汎性侵害抑制調節",
+      "交感神経-副腎髄質系",
+      "視床下部-下垂体-副腎皮質系"
+    ],
+    "answerIndex": 2,
+    "explanation": "侵害性の熱刺激はストレス反応として交感神経を興奮させ、その支配を受ける副腎髄質からアドレナリンが分泌される（交感神経-副腎髄質系）。視床下部-下垂体-副腎皮質系はコルチゾールの分泌に関わり、アドレナリンの増加を直接説明するものではない。",
+    "hasFigure": false,
+    "source": "第30回 はり師・きゅう師国家試験",
+    "sourceUrl": "https://ahaki.or.jp/wordpress/wp-content/uploads/mondai_30_harikyu_pm.pdf",
+    "sourceOrg": "公益財団法人 東洋療法研修試験財団",
+    "sourceReliability": "indexed_official",
+    "verifiedAt": "2026-10-01"
+  }
+]

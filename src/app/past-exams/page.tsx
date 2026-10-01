@@ -26,7 +26,7 @@ function TabLead({ children }: { children: React.ReactNode }) {
 export default function PastExamsPage() {
   const coverage = pastExamCoverage()
   const subjectCounts = pastExamCountsBySubject()
-  // 件数は実過去問データ（第31〜34回の収録問題）からの集計。Theme Masterの count/examRounds/latestRound は使わない
+  // 件数は実過去問データ（収録済みの回の問題）からの集計。Theme Masterの count/examRounds/latestRound は使わない
   const themeCounts = pastExamCountsByTheme()
 
   const themeGroups: PastExamThemeGroup[] = subjects.map((s) => ({

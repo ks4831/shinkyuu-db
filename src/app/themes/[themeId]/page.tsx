@@ -4,7 +4,7 @@ import { notFound } from 'next/navigation'
 import { themes, getTheme, getSubject, getThemesBySubject } from '@/lib/data'
 import { getLearningGuide } from '@/lib/learning'
 import { getThemeExamStats, getThemeQuizCount } from '@/lib/themeStats'
-import { loadPastExamQuestionsByTheme } from '@/lib/pastExams'
+import { loadPastExamQuestionsByTheme, pastExamPracticeRangeLabel } from '@/lib/pastExams'
 import ImportanceBadge from '@/components/ImportanceBadge'
 import Standard2026Badge from '@/components/Standard2026Badge'
 import StudyActions from '@/components/StudyActions'
@@ -79,8 +79,9 @@ export default async function ThemeDetailPage({
   // という Theme Master の手動値へはフォールバックしない。実績0件は0件のまま表示する）。
   const examStats = getThemeExamStats(theme.id)
   const quizCount = getThemeQuizCount(theme.id)
-  // 演習可能な過去問数（第31〜34回）。出題分析（examStats、第29〜34回）とは正本・対象年度が異なるため混同しない。
+  // 演習可能な過去問数（収録済みの回の実データ。現在は pastExamPracticeRangeLabel() で表記）。出題分析（examStats、第29〜34回）とは正本・対象年度が異なるため混同しない。
   const pastExamCount = loadPastExamQuestionsByTheme(theme.id).length
+  const pastExamRange = pastExamPracticeRangeLabel()
   const hasExamData = examStats.count > 0
   const roundsHit = examStats.examRounds
   const appearedRounds = roundsHit.length
@@ -186,14 +187,14 @@ export default async function ThemeDetailPage({
         </div>
       </div>
 
-      {/* 演習：過去問（第31〜34回の実際の国家試験問題）と予想問題（当サイト独自）を分けて提示する。
+      {/* 演習：過去問（収録済みの回の実際の国家試験問題）と予想問題（当サイト独自）を分けて提示する。
           両方とも「このテーマの問題を解く」と呼ぶと混同するため、CTA文言・見出しを明確に分離する。 */}
       {(pastExamCount > 0 || quizCount > 0) && (
         <section className="bg-white rounded-2xl border border-gray-100 p-5 mb-4">
           <h2 className="font-bold text-gray-800 mb-3">✏️ 演習</h2>
           <div className="grid gap-3 sm:grid-cols-2">
             <div className="rounded-xl border border-gray-100 p-4">
-              <p className="text-xs text-gray-400">過去問（第31〜34回）</p>
+              <p className="text-xs text-gray-400">過去問（{pastExamRange}）</p>
               {pastExamCount > 0 ? (
                 <>
                   <p className="mt-0.5 text-sm text-gray-700">収録 {pastExamCount}問</p>
@@ -205,7 +206,7 @@ export default async function ThemeDetailPage({
                   </Link>
                 </>
               ) : (
-                <p className="mt-0.5 text-sm text-gray-400">第31〜34回の収録問題なし</p>
+                <p className="mt-0.5 text-sm text-gray-400">{pastExamRange}の収録問題なし</p>
               )}
             </div>
             <div className="rounded-xl border border-gray-100 p-4">
