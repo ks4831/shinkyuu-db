@@ -1,6 +1,6 @@
 'use client'
 
-import { useEffect, useState } from 'react'
+import { useEffect, useRef, useState } from 'react'
 import Link from 'next/link'
 import { themes } from '@/lib/data'
 import { subjectLabel } from '@/lib/quiz'
@@ -37,13 +37,25 @@ export type PastExamQuestionView = {
 
 /**
  * mode省略時（またはmode:'round'）＝従来通りの単一年度演習。round必須。
- * mode:'theme'＝テーマ横断演習（Ver.9.30で基盤のみ追加。公開routeはまだ無い）。
- * theme modeではroundという概念自体が存在しないため、年度sessionへの参照を
+ * mode:'theme'＝テーマ横断演習（/past-exams/theme/[themeId]）。
+ * mode:'subject'＝科目横断演習（/past-exams/subject/[subjectId]）。
+ * theme/subject modeではroundという概念自体が存在しないため、年度sessionへの参照を
  * 型レベルで持てないようにしている（誤ってroundに偽値を渡す設計を防ぐ）。
  */
 export type PastExamRunnerProps =
   | { mode?: 'round'; round: number; questions: PastExamQuestionView[] }
   | { mode: 'theme'; themeId: string; themeName: string; questions: PastExamQuestionView[] }
+  | { mode: 'subject'; subjectId: string; subjectName: string; questions: PastExamQuestionView[] }
+
+/** 年度横断演習（theme/subject mode）の表示・戻り先情報。round modeではnull */
+type CrossInfo = {
+  /** 開始・結果画面の見出し上に出す名前（テーマ名／科目名） */
+  name: string
+  /** 「テーマ別過去問」「科目別過去問」 */
+  label: string
+  backHref: string
+  backLabel: string
+}
 
 type SessionCheck = {
   /** 進行中（未完走）で、Q1からの連続一致が取れた場合のみ設定 */
@@ -59,8 +71,23 @@ function themeName(themeId?: string): string {
   return themes.find((t) => t.id === themeId)?.name ?? ''
 }
 
-/** 問題番号の小さい順に並んだチップ一覧（間違えた問題の一覧表示に共通利用） */
-function WrongQuestionChips({ questions }: { questions: PastExamQuestionView[] }) {
+/** 年度横断演習の開始画面に出す「第31〜34回」等。設問自身の examRound から算出する */
+function crossRangeLabel(questions: PastExamQuestionView[]): string {
+  const rounds = questions.map((q) => q.examRound)
+  if (rounds.length === 0) return ''
+  const min = Math.min(...rounds)
+  const max = Math.max(...rounds)
+  return min === max ? `第${min}回` : `第${min}〜${max}回`
+}
+
+/** 年度昇順 → 問題番号昇順（単一年度演習では問題番号順と同じ） */
+function byRoundThenNumber(a: PastExamQuestionView, b: PastExamQuestionView): number {
+  return a.examRound - b.examRound || a.questionNumber - b.questionNumber
+}
+
+/** 問題番号の小さい順に並んだチップ一覧（間違えた問題の一覧表示に共通利用）。
+ *  年度横断演習（showRound）では「第33回 問12」のように元の年度も表示する。 */
+function WrongQuestionChips({ questions, showRound }: { questions: PastExamQuestionView[]; showRound: boolean }) {
   return (
     <div className="mt-2 flex flex-wrap gap-1.5">
       {questions.map((q) => (
@@ -68,7 +95,7 @@ function WrongQuestionChips({ questions }: { questions: PastExamQuestionView[] }
           key={q.id}
           className="rounded-full bg-red-50 px-2.5 py-1 text-xs font-semibold text-red-600"
         >
-          問{q.questionNumber}
+          {showRound && `第${q.examRound}回 `}問{q.questionNumber}
         </span>
       ))}
     </div>
@@ -77,16 +104,21 @@ function WrongQuestionChips({ questions }: { questions: PastExamQuestionView[] }
 
 export default function PastExamRunner(props: PastExamRunnerProps) {
   const { questions } = props
-  /** null＝theme mode（年度sessionを持たない）。以降 round!==null が「年度session操作を
-   *  行ってよいか」の唯一の判定基準になる（isThemeModeという別変数は持たず、round自体で判定する）。 */
-  const round = props.mode === 'theme' ? null : props.round
+  /** null＝theme/subject mode（年度sessionを持たない）。以降 round!==null が「年度session操作を
+   *  行ってよいか」の唯一の判定基準になる（mode別の変数は持たず、round自体で判定する）。 */
+  const round = props.mode === 'theme' || props.mode === 'subject' ? null : props.round
   const roundLabel = round !== null ? `第${round}回` : '過去問'
-  const themeInfo = props.mode === 'theme' ? { id: props.themeId, name: props.themeName } : null
-  /** 完走後「もう一度解く」等から戻る先。round modeは従来通り過去問一覧、theme modeはテーマ詳細。 */
-  const backLink = round !== null
-    ? { href: '/past-exams', label: '過去問一覧へ' }
-    : { href: `/themes/${themeInfo?.id ?? ''}`, label: 'テーマ詳細へ戻る' }
-  const resultBackLabel = round !== null ? `${roundLabel}の結果へ` : 'テーマ別過去問の結果へ'
+  const crossInfo: CrossInfo | null =
+    props.mode === 'theme'
+      ? { name: props.themeName, label: 'テーマ別過去問', backHref: `/themes/${props.themeId}`, backLabel: 'テーマ詳細へ戻る' }
+      : props.mode === 'subject'
+        ? { name: props.subjectName, label: '科目別過去問', backHref: '/past-exams?tab=subject', backLabel: '科目一覧へ戻る' }
+        : null
+  /** 完走後「もう一度解く」等から戻る先。round modeは従来通り過去問一覧、theme modeはテーマ詳細、subject modeは科目一覧。 */
+  const backLink = crossInfo
+    ? { href: crossInfo.backHref, label: crossInfo.backLabel }
+    : { href: '/past-exams', label: '過去問一覧へ' }
+  const resultBackLabel = crossInfo ? `${crossInfo.label}の結果へ` : `${roundLabel}の結果へ`
 
   const [phase, setPhase] = useState<'start' | 'question' | 'result'>('start')
   const [index, setIndex] = useState(0)
@@ -101,6 +133,30 @@ export default function PastExamRunner(props: PastExamRunnerProps) {
   const total = questions.length
   const activeQuestions = isReview ? reviewQuestions : questions
   const activeTotal = activeQuestions.length
+
+  /* ── 画面切替時のスクロール（全modeで共通） ──
+     「次の問題」等のユーザー操作で画面が切り替わった直後だけ、新しい画面の先頭
+     （出題画面＝問題番号・進捗の行、結果画面＝結果カード）が見える位置へ移動する。
+     index等を監視して無条件にscrollすると、session復元・初回hydration・
+     開始画面表示でも動いてしまうため、操作ハンドラ側で requestScroll() を呼んだ時だけ
+     フラグを立てる（予想問題のQuizRunnerと同じ方式）。
+     テンポ優先で behavior:'auto'（即時）。既に先頭付近が見えている場合
+     （開始画面→1問目など）は動かさず、不要なジャンプを避ける。 */
+  const screenTopRef = useRef<HTMLDivElement>(null)
+  const scrollPending = useRef(false)
+  function requestScroll() {
+    scrollPending.current = true
+  }
+  useEffect(() => {
+    if (!scrollPending.current) return
+    scrollPending.current = false
+    const el = screenTopRef.current
+    if (!el) return
+    const margin = parseFloat(getComputedStyle(el).scrollMarginTop) || 0
+    const top = el.getBoundingClientRect().top
+    if (top >= margin - 1 && top <= window.innerHeight / 3) return
+    el.scrollIntoView({ behavior: 'auto', block: 'start' })
+  }, [phase, index, isReview, reviewQuestions])
 
   /* 保存済みセッションを確認する。SSR/初回描画では常にnullのまま
      （サーバーとクライアントの初回出力を一致させ、hydration mismatchを避ける）。
@@ -155,6 +211,7 @@ export default function PastExamRunner(props: PastExamRunnerProps) {
     setSessionCheck(EMPTY_SESSION_CHECK)
     setIsReview(false)
     setReviewQuestions([])
+    requestScroll()
     setPhase('question')
   }
 
@@ -171,6 +228,7 @@ export default function PastExamRunner(props: PastExamRunnerProps) {
     setIndex(resumable.answers.length)
     setSelected(null)
     setAnswered(false)
+    requestScroll()
     setPhase('question')
   }
 
@@ -187,6 +245,7 @@ export default function PastExamRunner(props: PastExamRunnerProps) {
     setSelected(null)
     setAnswered(false)
     setResults([])
+    requestScroll()
     setPhase('question')
   }
 
@@ -194,6 +253,7 @@ export default function PastExamRunner(props: PastExamRunnerProps) {
   function handleViewLastResult() {
     if (!sessionCheck.completedSession) return
     setIsReview(false)
+    requestScroll()
     setPhase('result')
   }
 
@@ -206,12 +266,14 @@ export default function PastExamRunner(props: PastExamRunnerProps) {
     setSelected(null)
     setAnswered(false)
     setResults([])
+    requestScroll()
     setPhase('question')
   }
 
   /** 復習結果画面から「第○回の結果へ」：完走セッションの結果画面に戻る（復習結果はどこにも保存しない） */
   function handleBackToResult() {
     setIsReview(false)
+    requestScroll()
     setPhase('result')
   }
 
@@ -233,13 +295,15 @@ export default function PastExamRunner(props: PastExamRunnerProps) {
   }
 
   function handleNext() {
+    // 次の問題・結果画面のどちらへ進む場合も、切替後の画面先頭へ移動する
+    requestScroll()
     if (index + 1 >= activeTotal) {
       if (isReview) {
         // 苦手復習の完走はセッションに保存しない（元の完走結果とは独立）
         setPhase('result')
         return
       }
-      // 年度session・analyticsの完走記録は round mode のみ。theme modeでは
+      // 年度session・analyticsの完走記録は round mode のみ。theme/subject modeでは
       // 第31〜34回のどのsessionもcompletedにしてはいけないため、ここには触れない。
       if (round !== null) {
         trackSessionOnceKeyed('pastexam_complete', String(round), {
@@ -268,6 +332,7 @@ export default function PastExamRunner(props: PastExamRunnerProps) {
     setSelected(null)
     setAnswered(false)
     setResults([])
+    requestScroll()
     setPhase('start')
   }
 
@@ -277,7 +342,7 @@ export default function PastExamRunner(props: PastExamRunnerProps) {
     if (resumable) {
       const answeredCount = resumable.answers.length
       return (
-        <div className="mx-auto max-w-md px-4 py-10 text-center">
+        <div ref={screenTopRef} className="mx-auto max-w-md scroll-mt-20 px-4 py-10 text-center">
           <h1 className="text-xl font-bold text-gray-900">{roundLabel} 過去問</h1>
           <p className="mt-2 text-sm text-gray-500">収録 {total}問</p>
           <p className="mt-3 text-sm font-semibold text-green-700">
@@ -304,7 +369,7 @@ export default function PastExamRunner(props: PastExamRunnerProps) {
     if (completedSession) {
       const lastScore = completedSession.answers.filter((a) => a.correct).length
       return (
-        <div className="mx-auto max-w-md px-4 py-10 text-center">
+        <div ref={screenTopRef} className="mx-auto max-w-md scroll-mt-20 px-4 py-10 text-center">
           <h1 className="text-xl font-bold text-gray-900">{roundLabel} 過去問</h1>
           <p className="mt-2 text-sm text-gray-500">収録 {total}問</p>
           <p className="mt-3 text-sm font-semibold text-gray-600">
@@ -329,22 +394,24 @@ export default function PastExamRunner(props: PastExamRunnerProps) {
     }
 
     return (
-      <div className="mx-auto max-w-md px-4 py-10 text-center">
-        {themeInfo ? (
+      <div ref={screenTopRef} className="mx-auto max-w-md scroll-mt-20 px-4 py-10 text-center">
+        {crossInfo ? (
           <>
-            <p className="text-sm font-semibold text-green-700">{themeInfo.name}</p>
-            <h1 className="mt-1 text-xl font-bold text-gray-900">テーマ別過去問</h1>
+            <p className="text-sm font-semibold text-green-700">{crossInfo.name}</p>
+            <h1 className="mt-1 text-xl font-bold text-gray-900">{crossInfo.label}</h1>
           </>
         ) : (
           <h1 className="text-xl font-bold text-gray-900">{roundLabel} 過去問</h1>
         )}
-        <p className="mt-2 text-sm text-gray-500">{themeInfo ? `全${total}問` : `収録 ${total}問`}</p>
+        <p className="mt-2 text-sm text-gray-500">
+          {crossInfo ? `${crossRangeLabel(questions)}・全${total}問` : `収録 ${total}問`}
+        </p>
         <button
           type="button"
           onClick={handleStart}
           className="mt-6 w-full rounded-xl bg-green-600 px-5 py-4 text-base font-bold text-white hover:bg-green-700"
         >
-          {themeInfo ? '演習を始める' : '過去問を解く'}
+          {crossInfo ? '演習を始める' : '過去問を解く'}
         </button>
       </div>
     )
@@ -357,9 +424,9 @@ export default function PastExamRunner(props: PastExamRunnerProps) {
       const pct = reviewTotal ? Math.round((score / reviewTotal) * 100) : 0
       const stillWrong = activeQuestions
         .filter((_, i) => !results[i])
-        .sort((a, b) => a.questionNumber - b.questionNumber)
+        .sort(byRoundThenNumber)
       return (
-        <div className="mx-auto max-w-md px-4 py-8">
+        <div ref={screenTopRef} className="mx-auto max-w-md scroll-mt-20 px-4 py-8">
           <div className="rounded-2xl border border-gray-100 bg-white p-6 text-center shadow-sm">
             <h1 className="text-base font-bold text-gray-900">苦手復習 完了</h1>
             <p className="mt-3 text-4xl font-black text-gray-900">
@@ -371,7 +438,7 @@ export default function PastExamRunner(props: PastExamRunnerProps) {
             {stillWrong.length > 0 && (
               <div className="mt-5 text-left">
                 <p className="text-sm font-bold text-gray-700">まだ間違えた問題　{stillWrong.length}問</p>
-                <WrongQuestionChips questions={stillWrong} />
+                <WrongQuestionChips questions={stillWrong} showRound={crossInfo !== null} />
               </div>
             )}
 
@@ -414,17 +481,17 @@ export default function PastExamRunner(props: PastExamRunnerProps) {
           .filter((a) => !a.correct)
           .map((a) => questions.find((q) => q.id === a.questionId))
           .filter((q): q is PastExamQuestionView => Boolean(q))
-          .sort((a, b) => a.questionNumber - b.questionNumber)
-      // theme modeなど、completedSession（年度session）を持たない場合はローカルstateから算出する
-      : questions.filter((_, i) => !results[i]).sort((a, b) => a.questionNumber - b.questionNumber)
+          .sort(byRoundThenNumber)
+      // theme/subject modeなど、completedSession（年度session）を持たない場合はローカルstateから算出する
+      : questions.filter((_, i) => !results[i]).sort(byRoundThenNumber)
 
     return (
-      <div className="mx-auto max-w-md px-4 py-8">
+      <div ref={screenTopRef} className="mx-auto max-w-md scroll-mt-20 px-4 py-8">
         <div className="rounded-2xl border border-gray-100 bg-white p-6 text-center shadow-sm">
-          {themeInfo ? (
+          {crossInfo ? (
             <>
-              <p className="text-xs font-semibold text-green-700">{themeInfo.name}</p>
-              <h1 className="mt-0.5 text-base font-bold text-gray-900">テーマ別過去問</h1>
+              <p className="text-xs font-semibold text-green-700">{crossInfo.name}</p>
+              <h1 className="mt-0.5 text-base font-bold text-gray-900">{crossInfo.label}</h1>
             </>
           ) : (
             <h1 className="text-base font-bold text-gray-900">{roundLabel} 過去問</h1>
@@ -440,7 +507,7 @@ export default function PastExamRunner(props: PastExamRunnerProps) {
           ) : (
             <div className="mt-5 text-left">
               <p className="text-sm font-bold text-gray-700">間違えた問題　{wrongQuestions.length}問</p>
-              <WrongQuestionChips questions={wrongQuestions} />
+              <WrongQuestionChips questions={wrongQuestions} showRound={crossInfo !== null} />
             </div>
           )}
 
@@ -481,11 +548,12 @@ export default function PastExamRunner(props: PastExamRunnerProps) {
 
   return (
     <div className="mx-auto max-w-md px-4 pb-28 pt-4">
-      <div className="mb-4">
-        {themeInfo && <p className="mb-1 text-xs font-semibold text-green-700">{themeInfo.name}</p>}
+      {/* 画面切替後のスクロール先。sticky Headerに隠れないよう scroll-mt で余白を確保 */}
+      <div ref={screenTopRef} className="mb-4 scroll-mt-20">
+        {crossInfo && <p className="mb-1 text-xs font-semibold text-green-700">{crossInfo.name}</p>}
         <div className="flex items-center justify-between text-xs text-gray-500">
           <span className="font-semibold text-gray-700">
-            {isReview ? '苦手復習' : `第${q.examRound}回`}　問{q.questionNumber}
+            {isReview && '苦手復習　'}第{q.examRound}回　問{q.questionNumber}
           </span>
           <span>{index + 1} / {activeTotal}問</span>
         </div>

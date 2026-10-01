@@ -107,24 +107,44 @@ export function loadPastExamQuestions(round: number): PastExamQuestion[] {
     .sort((a, b) => a.questionNumber - b.questionNumber)
 }
 
-/** テーマ別過去問演習の対象になる回。演習可能な過去問JSONが揃っている第31〜34回のみを
- *  対象とし、分析専用の第29・30回は含めない。新しい回のJSONを追加した際はここに追記する
- *  （意図的にハードコードしている）。 */
-const THEME_PRACTICE_ROUNDS = [31, 32, 33, 34]
+/** 科目別・テーマ別（年度横断）演習の対象になる回（昇順）。演習可能な過去問JSONが実際に
+ *  存在する回だけを pastExamCoverage() から導出する（現在は第31〜34回。分析専用の第29・30回は
+ *  JSONが無いため自動的に含まれない）。新しい回のJSONを追加すれば、ここも科目別・テーマ別も
+ *  コード変更なしで追従する。 */
+export function pastExamPracticeRounds(): number[] {
+  return pastExamCoverage()
+    .filter((c) => c.available)
+    .map((c) => c.round)
+    .sort((a, b) => a - b)
+}
 
-/** 第31〜34回の全問題（720問）。Ver.9.31で /themes/[themeId] と /past-exams/theme/[themeId]
- *  の双方から142テーマ分繰り返し参照されるため、モジュール内で一度だけ読み込んでキャッシュする
- *  （読み取り専用データなので、ビルド中に値が変わることはない）。 */
-let cachedThemePracticeQuestions: PastExamQuestion[] | null = null
-function loadThemePracticeQuestions(): PastExamQuestion[] {
-  if (!cachedThemePracticeQuestions) {
-    cachedThemePracticeQuestions = THEME_PRACTICE_ROUNDS.flatMap((round) => loadPastExamQuestions(round))
+/** 「第31〜34回」のような年度横断演習の範囲表記（収録が無ければ空文字） */
+export function pastExamPracticeRangeLabel(): string {
+  const rounds = pastExamPracticeRounds()
+  if (rounds.length === 0) return ''
+  const min = rounds[0]
+  const max = rounds[rounds.length - 1]
+  return min === max ? `第${min}回` : `第${min}〜${max}回`
+}
+
+/** 年度横断演習の対象となる全問題（現在720問）。/themes/[themeId]・/past-exams/theme/[themeId]・
+ *  /past-exams/subject/[subjectId]・/past-exams 一覧の集計から繰り返し参照されるため、
+ *  モジュール内で一度だけ読み込んでキャッシュする（読み取り専用データなので、ビルド中に値が変わることはない）。 */
+let cachedPracticeQuestions: PastExamQuestion[] | null = null
+function loadPracticeQuestions(): PastExamQuestion[] {
+  if (!cachedPracticeQuestions) {
+    cachedPracticeQuestions = pastExamPracticeRounds().flatMap((round) => loadPastExamQuestions(round))
   }
-  return cachedThemePracticeQuestions
+  return cachedPracticeQuestions
+}
+
+/** 年度横断演習の並び順：年度昇順 → 同年度内は問題番号昇順 */
+function byRoundThenNumber(a: PastExamQuestion, b: PastExamQuestion): number {
+  return a.examRound - b.examRound || a.questionNumber - b.questionNumber
 }
 
 /**
- * 指定テーマ（themeId）の過去問を、第31〜34回の中から横断的に抽出する。
+ * 指定テーマ（themeId）の過去問を、演習可能な全回の中から横断的に抽出する。
  * 既存の loadPastExamQuestions(round) を年度ごとに呼び出して結合するだけで、
  * 新たなfs読み込み・独自パースは行わない（読み取り専用。データ・sessionは一切変更しない）。
  * 該当テーマの過去問が無い場合や、存在しないthemeIdを渡した場合は空配列を返す
@@ -132,19 +152,50 @@ function loadThemePracticeQuestions(): PastExamQuestion[] {
  * 戻り値は 年度昇順 → 同年度内は問題番号昇順。
  */
 export function loadPastExamQuestionsByTheme(themeId: string): PastExamQuestion[] {
-  return loadThemePracticeQuestions()
+  return loadPracticeQuestions()
     .filter((q) => q.themeId === themeId)
-    .sort((a, b) => a.examRound - b.examRound || a.questionNumber - b.questionNumber)
+    .sort(byRoundThenNumber)
 }
 
 /**
- * 第31〜34回に演習可能な過去問が1問以上あるthemeIdの一覧（重複なし）。
+ * 指定科目（subjects[].id）の過去問を、演習可能な全回の中から横断的に抽出する。
+ * 科目は既存分析CSVの subject（loadPastExamQuestions で結合済み）をそのまま使い、
+ * 独自の科目分類は持たない。存在しない subjectId は空配列（存在確認は呼び出し側）。
+ * 戻り値は 年度昇順 → 同年度内は問題番号昇順。
+ */
+export function loadPastExamQuestionsBySubject(subjectId: string): PastExamQuestion[] {
+  return loadPracticeQuestions()
+    .filter((q) => q.subject === subjectId)
+    .sort(byRoundThenNumber)
+}
+
+/** 年度横断演習の対象問題の総数（現在720問） */
+export function pastExamPracticeTotal(): number {
+  return loadPracticeQuestions().length
+}
+
+/** subjectId → 過去問数。実データからの集計のみ（手入力値は使わない） */
+export function pastExamCountsBySubject(): Record<string, number> {
+  const counts: Record<string, number> = {}
+  for (const q of loadPracticeQuestions()) {
+    if (q.subject) counts[q.subject] = (counts[q.subject] ?? 0) + 1
+  }
+  return counts
+}
+
+/** themeId → 過去問数。実データからの集計のみ（Theme Masterの count/examRounds/latestRound は使わない） */
+export function pastExamCountsByTheme(): Record<string, number> {
+  const counts: Record<string, number> = {}
+  for (const q of loadPracticeQuestions()) {
+    if (q.themeId) counts[q.themeId] = (counts[q.themeId] ?? 0) + 1
+  }
+  return counts
+}
+
+/**
+ * 演習可能な過去問が1問以上あるthemeIdの一覧（重複なし）。
  * /past-exams/theme/[themeId] の generateStaticParams 用。
  */
 export function themeIdsWithPastExamPractice(): string[] {
-  const ids = new Set<string>()
-  for (const q of loadThemePracticeQuestions()) {
-    if (q.themeId) ids.add(q.themeId)
-  }
-  return [...ids]
+  return Object.keys(pastExamCountsByTheme())
 }

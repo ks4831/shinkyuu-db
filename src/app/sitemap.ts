@@ -72,8 +72,16 @@ export default function sitemap(): MetadataRoute.Sitemap {
     priority: 0.6,
   }))
 
+  const pastExamSubjectRoutes: MetadataRoute.Sitemap = subjects.map(s => ({
+    url: `${SITE_URL}/past-exams/subject/${s.id}`,
+    lastModified: now,
+    changeFrequency: 'monthly' as const,
+    priority: 0.6,
+  }))
+
   return [
     ...staticRoutes,
+    ...pastExamSubjectRoutes,
     ...subjectRoutes,
     ...themeRoutes,
     ...acupointRoutes,
