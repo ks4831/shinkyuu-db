@@ -531,7 +531,9 @@ try {
   for (const q of Q) if (q.themeId) quizByTheme[q.themeId] = (quizByTheme[q.themeId] ?? 0) + 1
   const studyOnly = themes.filter((t) => !examByTheme[t.id]).map((t) => t.id)
   // 意図的な学習用テーマ（国試に出ない or 上位テーマの補助）。orphan でも WARN にしない
-  const INTENTIONAL_STUDY_THEMES = new Set(['kei-ketsu-shuchi', 'toyo-rekishi', 'menekigaku', 'cg-innai-kansen'])
+  // oc-hakko-bensho・ky-shigeki-ryo：第29〜34回に該当問題がない出題基準テーマ。
+  // 以前は第29回CSVの誤分類（29-139/140/173）で過去問ありに見えていた（2026-10 修正で0問に）
+  const INTENTIONAL_STUDY_THEMES = new Set(['kei-ketsu-shuchi', 'toyo-rekishi', 'menekigaku', 'cg-innai-kansen', 'oc-hakko-bensho', 'ky-shigeki-ryo'])
   const orphan = themes
     .filter((t) => !examByTheme[t.id] && !quizByTheme[t.id])
     .filter((t) => !t.parentThemeId && !INTENTIONAL_STUDY_THEMES.has(t.id))
