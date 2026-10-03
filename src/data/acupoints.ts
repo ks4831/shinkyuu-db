@@ -1,8 +1,8 @@
 /* ──────────────────────────────────────────────────────────────
-   経穴マスタ（国家試験・特定穴中心の抜粋 約100穴）
+   経穴マスタ（国家試験・特定穴中心の抜粋 146穴）
    - WHO/教科書『経絡経穴概論』に基づく一般的事実のみを収録
    - 位置は要点のみ。詳細な取穴は各自教科書で確認すること
-   - 出題状況は src/lib/acupoints.ts が過去問CSVの本文を走査して付与する
+   - 出題状況は src/data/acupointOccurrences.json（設問単位のレビュー済み判定）から src/lib/acupoints.ts が集計する
    ────────────────────────────────────────────────────────────── */
 
 export type MeridianId =
@@ -55,7 +55,7 @@ export const ACUPOINTS: Acupoint[] = [
   A({ slug: 'lu1', code: 'LU1', name: '中府', reading: 'ちゅうふ', meridian: 'LU', meridianName: '手の太陰肺経', region: '前胸部', location: '前胸部・第1肋間、鎖骨下窩の外方、前正中線の外方6寸', specialPoints: ['肺経の募穴'], importance: 'A', memoryTip: '肺の募穴は自経（肺経）上にある', examPoint: '募穴（肺）であること・前胸部で第1肋間という位置' }),
   A({ slug: 'lu5', code: 'LU5', name: '尺沢', reading: 'しゃくたく', meridian: 'LU', meridianName: '手の太陰肺経', region: '肘', location: '肘窩横紋上、上腕二頭筋腱の外方', specialPoints: ['五兪穴：合（水）'], importance: 'A', memoryTip: '肘窩＝合水穴。肺の実を瀉す', examPoint: '合水穴・上腕二頭筋腱の外側という取穴' }),
   A({ slug: 'lu6', code: 'LU6', name: '孔最', reading: 'こうさい', meridian: 'LU', meridianName: '手の太陰肺経', region: '前腕', location: '前腕前外側、尺沢と太淵を結ぶ線上、手関節横紋の上方7寸', specialPoints: ['郄穴'], importance: 'B', memoryTip: '孔＝穴、最＝あな最も＝郄穴。急性の咳・喀血', examPoint: '肺経の郄穴であること' }),
-  A({ slug: 'lu7', code: 'LU7', name: '列缺', reading: 'れっけつ', meridian: 'LU', meridianName: '手の太陰肺経', region: '前腕', location: '前腕橈側、長母指外転筋腱と短母指伸筋腱の間、手関節横紋の上方1.5寸', specialPoints: ['絡穴', '八脈交会穴（任脈）', '四総穴（頭項）'], importance: 'S', memoryTip: '「頭項は列缺に尋ねよ」。絡穴かつ任脈に通じる', examPoint: '絡穴・八脈交会穴（任脈）・四総穴（頭項）の三役' }),
+  A({ slug: 'lu7', code: 'LU7', name: '列缺', reading: 'れっけつ', meridian: 'LU', meridianName: '手の太陰肺経', region: '前腕', location: '前腕橈側、長母指外転筋腱と短母指伸筋腱の間、手関節横紋の上方1.5寸', specialPoints: ['絡穴', '八脈交会穴（任脈）', '四総穴（頭項）'], aliases: ['列欠'], importance: 'S', memoryTip: '「頭項は列缺に尋ねよ」。絡穴かつ任脈に通じる', examPoint: '絡穴・八脈交会穴（任脈）・四総穴（頭項）の三役' }),
   A({ slug: 'lu9', code: 'LU9', name: '太淵', reading: 'たいえん', meridian: 'LU', meridianName: '手の太陰肺経', region: '手関節', location: '手関節前外側、橈骨茎状突起と舟状骨の間、長母指外転筋腱の尺側陥凹部', specialPoints: ['原穴', '五兪穴：兪（土）', '八会穴（脈会）'], importance: 'S', memoryTip: '陰経は原穴＝輸穴。脈会なので脈拍を診る部位', examPoint: '原穴・輸土穴・八会穴（脈会）が一致すること' }),
   A({ slug: 'lu10', code: 'LU10', name: '魚際', reading: 'ぎょさい', meridian: 'LU', meridianName: '手の太陰肺経', region: '手掌', location: '第1中手骨中点の橈側、赤白肉際', specialPoints: ['五兪穴：滎（火）'], importance: 'B', memoryTip: '手掌の母指球＝魚のはら。滎火穴で熱をとる', examPoint: '滎火穴・赤白肉際の取穴' }),
   A({ slug: 'lu11', code: 'LU11', name: '少商', reading: 'しょうしょう', meridian: 'LU', meridianName: '手の太陰肺経', region: '母指', location: '母指、末節骨橈側、爪甲角の近位外方1分（爪甲角から水平・垂直の交点）', specialPoints: ['五兪穴：井（木）'], importance: 'A', memoryTip: '井穴は爪の際。咽喉腫痛に点刺瀉血', examPoint: '井木穴・咽喉痛への刺絡' }),

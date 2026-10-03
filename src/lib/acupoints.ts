@@ -1,61 +1,79 @@
 import { ACUPOINTS, MERIDIANS, type Acupoint, type MeridianId } from '@/data/acupoints'
-import { loadAllExamQuestions } from './examQuestions'
 import { EXAM_ROUNDS } from './examQuestions'
+import {
+  ACUPOINT_OCCURRENCE_DATA,
+  isCountedRole,
+  isMasterRef,
+  type AcupointEvidence,
+  type AcupointRole,
+} from './acupointOccurrences'
+
+/** 経穴が登場した過去問1問 */
+export type AcupointQuestionRef = {
+  questionId: string
+  examRound: number
+  questionNumber: number
+  role: AcupointRole
+  evidence: AcupointEvidence
+}
 
 export type AcupointStat = Acupoint & {
-  /** 名称が本文に登場した回（第29〜34回） */
+  /** 出題年度（第29〜34回のうち、この経穴の知識を問う設問があった回。同一回に複数問でも1回） */
   examRounds: number[]
-  /** 登場した設問の延べ数 */
-  mentions: number
+  /** 出題問題数（role が direct / required の設問数。1問1カウント） */
+  questionCount: number
+  /** 出題扱いの設問（direct / required） */
+  questions: AcupointQuestionRef[]
+  /** 誤答選択肢としてのみ登場した設問（統計には含めない） */
+  distractorQuestions: AcupointQuestionRef[]
 }
 
 /**
- * 過去問CSVの本文（studyPoint / subTheme / officialSmall）を走査し、
- * 各経穴の名称が「どの回で」「何問ぶん」言及されたかを集計する。
- * ※ 公式の設問文ではなく、当サイトが独自に付した学習ポイント欄の文字列を対象とする。
+ * src/data/acupointOccurrences.json（設問単位のレビュー済み判定）から集計する。
+ * 定義: docs/acupoint-occurrence-definition.md
  */
-function buildAppearanceMap(): Map<string, { rounds: Set<number>; mentions: number }> {
-  const map = new Map<string, { rounds: Set<number>; mentions: number }>()
-  for (const a of ACUPOINTS) {
-    map.set(a.name, { rounds: new Set(), mentions: 0 })
-  }
+function buildStats(): AcupointStat[] {
+  const bySlug = new Map<string, { questions: AcupointQuestionRef[]; distractors: AcupointQuestionRef[] }>()
+  for (const a of ACUPOINTS) bySlug.set(a.slug, { questions: [], distractors: [] })
 
-  // 経穴ごとに「本文で探す語」（正式名称＋別名・異体字）を用意
-  const needles = ACUPOINTS.map((a) => ({
-    name: a.name,
-    terms: [a.name, ...(a.aliases ?? [])],
-  }))
-
-  const questions = loadAllExamQuestions()
-  for (const q of questions) {
-    const haystack = [q.studyPoint, q.subTheme, q.officialSmall, q.normalizedTheme]
-      .filter(Boolean)
-      .join(' ')
-    if (!haystack) continue
-    for (const n of needles) {
-      if (n.terms.some((t) => haystack.includes(t))) {
-        const entry = map.get(n.name)!
-        entry.rounds.add(q.examRound)
-        entry.mentions += 1
+  for (const occ of ACUPOINT_OCCURRENCE_DATA.occurrences) {
+    for (const ref of occ.acupoints) {
+      if (!isMasterRef(ref)) continue
+      const entry = bySlug.get(ref.slug)
+      if (!entry) continue
+      const q: AcupointQuestionRef = {
+        questionId: occ.questionId,
+        examRound: occ.examRound,
+        questionNumber: occ.questionNumber,
+        role: ref.role,
+        evidence: ref.evidence,
       }
+      if (isCountedRole(ref.role)) entry.questions.push(q)
+      else if (ref.role === 'distractor') entry.distractors.push(q)
     }
   }
-  return map
+
+  const byQuestion = (x: AcupointQuestionRef, y: AcupointQuestionRef) =>
+    x.examRound - y.examRound || x.questionNumber - y.questionNumber
+
+  return ACUPOINTS.map((a) => {
+    const entry = bySlug.get(a.slug)!
+    const questions = [...entry.questions].sort(byQuestion)
+    return {
+      ...a,
+      examRounds: [...new Set(questions.map((q) => q.examRound))].sort((x, y) => x - y),
+      questionCount: questions.length,
+      questions,
+      distractorQuestions: [...entry.distractors].sort(byQuestion),
+    }
+  })
 }
 
 let cache: AcupointStat[] | null = null
 
 export function getAcupointStats(): AcupointStat[] {
   if (cache) return cache
-  const map = buildAppearanceMap()
-  cache = ACUPOINTS.map((a) => {
-    const entry = map.get(a.name)!
-    return {
-      ...a,
-      examRounds: [...entry.rounds].sort((x, y) => x - y),
-      mentions: entry.mentions,
-    }
-  })
+  cache = buildStats()
   return cache
 }
 
@@ -63,19 +81,24 @@ export function getAcupointStat(slug: string): AcupointStat | undefined {
   return getAcupointStats().find((a) => a.slug === slug)
 }
 
-/** 言及数の多い順（人気経穴ランキング） */
+/** 出題年度数 → 出題問題数 → マスタ収録順 */
+function byFrequency(a: AcupointStat, b: AcupointStat): number {
+  return b.examRounds.length - a.examRounds.length || b.questionCount - a.questionCount
+}
+
+/** 頻出経穴ランキング（収録146穴が対象） */
 export function getPopularAcupoints(limit = 10): AcupointStat[] {
-  return [...getAcupointStats()]
-    .filter((a) => a.mentions > 0)
-    .sort((a, b) => b.mentions - a.mentions || b.examRounds.length - a.examRounds.length)
+  return getAcupointStats()
+    .filter((a) => a.questionCount > 0)
+    .sort(byFrequency)
     .slice(0, limit)
 }
 
-/** 過去6年で一度も本文に登場しなかった経穴 */
+/** 第29〜34回で、その経穴の知識を問う設問（direct / required）が0問の経穴 */
 export function getUnaskedAcupoints(): AcupointStat[] {
   return getAcupointStats()
-    .filter((a) => a.examRounds.length === 0)
-    .sort((a, b) => a.meridian.localeCompare(b.meridian) || a.code.localeCompare(b.code))
+    .filter((a) => a.questionCount === 0)
+    .sort((a, b) => a.meridian.localeCompare(b.meridian) || a.code.localeCompare(b.code, undefined, { numeric: true }))
 }
 
 /** 特定穴カテゴリごとのランキング */
@@ -105,7 +128,7 @@ export function getSpecialPointGroups(): SpecialPointGroup[] {
     label,
     points: stats
       .filter((a) => a.specialPoints.some((sp) => sp.includes(label)))
-      .sort((a, b) => b.mentions - a.mentions || a.code.localeCompare(b.code)),
+      .sort((a, b) => byFrequency(a, b) || a.code.localeCompare(b.code)),
   })).filter((g) => g.points.length > 0)
 }
 

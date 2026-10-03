@@ -9,9 +9,9 @@ import {
 import AcupointSearch from '@/components/acupoints/AcupointSearch'
 
 export const metadata: Metadata = {
-  title: '経穴から学ぶ｜人気経穴・特定穴・経脈別ランキング',
+  title: '経穴から学ぶ｜頻出経穴・特定穴・経脈別ランキング',
   description:
-    '過去6年の出題分析に基づく人気経穴ランキング、特定穴（原穴・絡穴・郄穴・募穴・八会穴ほか）の一覧、経脈別の経穴、経穴検索。国家試験の経絡経穴概論対策に。',
+    '第29〜34回の国家試験で経穴の知識が問われた問題を設問ごとに集計した頻出経穴ランキング、特定穴（原穴・絡穴・郄穴・募穴・八会穴ほか）の一覧、経脈別の経穴、経穴検索。経絡経穴概論対策に。',
 }
 
 const IMP_COLOR: Record<string, string> = {
@@ -37,7 +37,7 @@ export default function AcupointsPage() {
 
       <h1 className="text-2xl font-bold text-gray-900">経穴から学ぶ</h1>
       <p className="mt-1 text-sm text-gray-500">
-        収録{all.length}穴（特定穴中心）。過去6年の出題分析にもとづく傾向つき。
+        収録{all.length}穴（特定穴中心・全361穴の一部）。第29〜34回で経穴の知識が問われた問題を設問ごとに集計しています。
       </p>
 
       <Link
@@ -52,14 +52,16 @@ export default function AcupointsPage() {
       <section className="mt-6">
         <h2 className="mb-2 text-sm font-bold text-gray-700">経穴を検索</h2>
         <AcupointSearch points={all.map((a) => ({
-          slug: a.slug, code: a.code, name: a.name, reading: a.reading, meridianName: a.meridianName,
+          slug: a.slug, code: a.code, name: a.name, reading: a.reading, meridianName: a.meridianName, aliases: a.aliases ?? [],
         }))} />
       </section>
 
-      {/* 人気経穴 */}
+      {/* 頻出経穴 */}
       <section className="mt-8">
-        <h2 className="mb-1 text-sm font-bold text-gray-700">人気経穴 TOP10</h2>
-        <p className="mb-2 text-xs text-gray-400">出題分析での言及の多い順</p>
+        <h2 className="mb-1 text-sm font-bold text-gray-700">頻出経穴 TOP10</h2>
+        <p className="mb-2 text-xs text-gray-400">
+          第29〜34回で経穴の知識が問われた問題を集計。出題年度数の多い順（同数なら出題問題数順）。収録{all.length}穴が対象です。
+        </p>
         <ol className="divide-y divide-gray-50 rounded-2xl border border-gray-100 bg-white">
           {popular.map((a, i) => (
             <li key={a.slug}>
@@ -75,7 +77,7 @@ export default function AcupointsPage() {
                   <span className="block truncate text-xs text-gray-500">{a.meridianName}</span>
                 </span>
                 <span className="flex-shrink-0 text-right">
-                  <span className="block text-xs font-bold text-green-700">{a.examRounds.length} / 6回</span>
+                  <span className="block whitespace-nowrap text-xs font-bold text-green-700">{a.examRounds.length}年度・{a.questionCount}問</span>
                   <span className={`mt-0.5 inline-block rounded border px-1.5 text-[10px] font-bold ${IMP_COLOR[a.importance]}`}>{a.importance}</span>
                 </span>
               </Link>
@@ -114,7 +116,7 @@ export default function AcupointsPage() {
       >
         <span>
           <span className="block text-sm font-bold text-gray-800">過去6年 未出題の経穴</span>
-          <span className="block text-xs text-gray-500">出題分析で一度も登場しなかった経穴</span>
+          <span className="block text-xs text-gray-500">第29〜34回で、知識を問う設問がなかった経穴</span>
         </span>
         <span className="text-gray-300">›</span>
       </Link>

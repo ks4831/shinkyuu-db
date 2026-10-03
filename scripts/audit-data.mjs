@@ -5,6 +5,7 @@
    - src/lib/data.ts（themes / subjects）
    - src/data/quizQuestions.ts（オリジナルクイズ）
    - src/data/acupoints.ts / src/data/learningDiagrams.ts
+   - src/data/acupointOccurrences.json（経穴出題データ）
    を機械的に検査し、ERROR / WARN を分けて報告する。
    終了コード：ERROR があれば 1、なければ 0。
    ────────────────────────────────────────────────────────────── */
@@ -617,7 +618,7 @@ try {
   const badAcuRef = [...new Set(Q.flatMap((q) => q.relatedAcupoints || []))].filter((s) => !slugSet.has(s))
   if (badAcuRef.length) E(`quiz relatedAcupoints 参照切れ: ${badAcuRef.join(', ')}`)
 
-  // 未出題経穴（現ロジック）
+  // 未出題経穴（acupointOccurrences.json 基準）
   try {
     const acuLib = await importTS('src/lib/acupoints.ts')
     const unasked = acuLib.getUnaskedAcupoints ? acuLib.getUnaskedAcupoints() : []
@@ -720,6 +721,130 @@ try {
   E(`data/quiz/acupoints の読み込みに失敗: ${e.stack || e.message}`)
 }
 
+/* ── 経穴出題データ（src/data/acupointOccurrences.json）
+      定義: docs/acupoint-occurrence-definition.md ── */
+try {
+  const acuText = await import(pathToFileURL(path.join(ROOT, 'scripts/lib/acupoint-text.mjs')).href)
+  const { ACUPOINTS: MASTER } = await importTS('src/data/acupoints.ts')
+  const occPath = path.join(ROOT, 'src/data/acupointOccurrences.json')
+  const occ = JSON.parse(fs.readFileSync(occPath, 'utf-8'))
+  const ROLES = new Set(['direct', 'required', 'distractor', 'ambiguous'])
+  const EVIDENCES = new Set(['named', 'implicit'])
+  const bySlug = new Map(MASTER.map((a) => [a.slug, a]))
+  const masterTermOwner = new Map()
+  for (const a of MASTER) for (const t of acuText.masterTerms(a)) masterTermOwner.set(t, a.slug)
+
+  if (occ.schemaVersion !== 1) E(`acupointOccurrences: schemaVersion ${occ.schemaVersion} は未対応`)
+
+  // 過去問JSON（questionId → 問題）
+  const peDir = path.join(ROOT, 'src/data/pastExams')
+  const pastById = new Map()
+  for (const f of fs.readdirSync(peDir).filter((f) => /^exam-\d+\.json$/.test(f))) {
+    for (const q of JSON.parse(fs.readFileSync(path.join(peDir, f), 'utf-8'))) pastById.set(q.id, q)
+  }
+
+  // マスタ外経穴の登録簿：タイプミスと本当のマスタ外を区別する
+  const outside = new Map()
+  for (const o of occ.outsideMaster ?? []) {
+    if (outside.has(o.name)) E(`acupointOccurrences: outsideMaster 重複 ${o.name}`)
+    if (masterTermOwner.has(o.name)) E(`acupointOccurrences: outsideMaster ${o.name} はマスタ収録穴（slug ${masterTermOwner.get(o.name)} で参照する）`)
+    outside.set(o.name, 0)
+  }
+
+  const seenQ = new Set()
+  const roleCount = { direct: 0, required: 0, distractor: 0, ambiguous: 0 }
+  const evCount = { named: 0, implicit: 0 }
+  let masterRefs = 0
+  let outsideRefs = 0
+  for (const o of occ.occurrences ?? []) {
+    const id = o.questionId
+    if (!/^\d{2}-\d{3}$/.test(id ?? '')) { E(`acupointOccurrences: questionId 形式不正 ${id}`); continue }
+    if (seenQ.has(id)) E(`acupointOccurrences: questionId 重複 ${id}`)
+    seenQ.add(id)
+    const q = pastById.get(id)
+    if (!q) { E(`acupointOccurrences ${id}: 過去問JSONに存在しない`); continue }
+    if (o.examRound !== q.examRound || o.questionNumber !== q.questionNumber) {
+      E(`acupointOccurrences ${id}: examRound/questionNumber (${o.examRound}/${o.questionNumber}) が過去問JSON (${q.examRound}/${q.questionNumber}) と不一致`)
+    }
+    const text = acuText.officialText(q)
+    const seenRef = new Set()
+    for (const ref of o.acupoints ?? []) {
+      const hasSlug = typeof ref.slug === 'string'
+      const hasName = typeof ref.name === 'string'
+      if (hasSlug === hasName) { E(`acupointOccurrences ${id}: slug と name はどちらか一方を指定`); continue }
+      const key = hasSlug ? `slug:${ref.slug}` : `name:${ref.name}`
+      if (seenRef.has(key)) E(`acupointOccurrences ${id}: 経穴の重複 ${hasSlug ? ref.slug : ref.name}`)
+      seenRef.add(key)
+      if (!ROLES.has(ref.role)) E(`acupointOccurrences ${id}: role 不正 ${ref.role}`)
+      else roleCount[ref.role]++
+      if (!EVIDENCES.has(ref.evidence)) E(`acupointOccurrences ${id}: evidence 不正 ${ref.evidence}`)
+      else evCount[ref.evidence]++
+      let terms
+      if (hasSlug) {
+        const a = bySlug.get(ref.slug)
+        if (!a) { E(`acupointOccurrences ${id}: マスタに存在しない slug ${ref.slug}（タイプミス？ マスタ外なら name＋outsideMaster で登録）`); continue }
+        terms = acuText.masterTerms(a)
+        masterRefs++
+      } else {
+        if (masterTermOwner.has(ref.name)) { E(`acupointOccurrences ${id}: ${ref.name} はマスタ収録穴（slug ${masterTermOwner.get(ref.name)} で参照する）`); continue }
+        if (!outside.has(ref.name)) { E(`acupointOccurrences ${id}: マスタ外経穴 ${ref.name} が outsideMaster に未登録（タイプミス？）`); continue }
+        outside.set(ref.name, outside.get(ref.name) + 1)
+        terms = [ref.name]
+        outsideRefs++
+      }
+      // evidence は公式本文（問題文＋選択肢）から再現できること
+      const named = terms.some((t) => acuText.containsTerm(text, t))
+      if (ref.evidence === 'named' && !named) E(`acupointOccurrences ${id}: ${hasSlug ? ref.slug : ref.name} は evidence=named だが公式本文に名称がない`)
+      if (ref.evidence === 'implicit' && named) E(`acupointOccurrences ${id}: ${hasSlug ? ref.slug : ref.name} は evidence=implicit だが公式本文に名称がある`)
+      if (ref.role === 'ambiguous') W(`acupointOccurrences ${id}: ${hasSlug ? ref.slug : ref.name} が ambiguous（要再確認）`)
+    }
+    // 公式本文に名称が明示されたマスタ経穴は、判定か ignoredMentions のどちらかが必要
+    const ignored = new Set((o.ignoredMentions ?? []).map((m) => m.name))
+    for (const m of o.ignoredMentions ?? []) {
+      if (!m.reason) E(`acupointOccurrences ${id}: ignoredMentions ${m.name} に reason がない`)
+      const owner = masterTermOwner.get(m.name)
+      if (!owner || !acuText.containsTerm(text, m.name)) W(`acupointOccurrences ${id}: ignoredMentions ${m.name} が公式本文のマスタ経穴名と一致しない`)
+    }
+    for (const slug of acuText.namedMasterSlugs(q, MASTER)) {
+      if (seenRef.has(`slug:${slug}`)) continue
+      if (acuText.masterTerms(bySlug.get(slug)).some((t) => ignored.has(t))) continue
+      E(`acupointOccurrences ${id}: 公式本文にある ${bySlug.get(slug).name} の判定がない（role を付けるか ignoredMentions に理由を記載）`)
+    }
+    if (!(o.acupoints ?? []).length && !o.note) W(`acupointOccurrences ${id}: 経穴なしの判定に note がない`)
+  }
+  for (const [name, n] of outside) if (n === 0) W(`acupointOccurrences: outsideMaster ${name} はどの設問からも参照されていない`)
+
+  // レビュー漏れ：候補なのに未登録の設問
+  const subjectById = new Map(rows.map((r) => [r.id, normalizeSubjectToId(r.subject)]))
+  const missing = [...pastById.values()]
+    .filter((q) => acuText.isCandidate(q, subjectById.get(q.id), MASTER))
+    .filter((q) => !seenQ.has(q.id))
+    .map((q) => q.id)
+  if (missing.length) E(`acupointOccurrences: レビュー未登録の候補 ${missing.length} 問: ${missing.slice(0, 20).join(', ')}${missing.length > 20 ? ' …' : ''}（npm run extract:acupoints）`)
+
+  // 旧方式（CSV説明欄・themeId からの推定）に戻っていないか
+  const libSrc = fs.readFileSync(path.join(ROOT, 'src/lib/acupoints.ts'), 'utf-8')
+  if (/studyPoint|themeId|loadAllExamQuestions/.test(libSrc)) {
+    E('src/lib/acupoints.ts が CSV（studyPoint/themeId 等）を参照している。経穴統計の正本は acupointOccurrences.json')
+  }
+
+  const acuLib = await importTS('src/lib/acupoints.ts')
+  const stats = acuLib.getAcupointStats()
+  info.acupointOccurrence = {
+    entries: seenQ.size,
+    pairs: masterRefs + outsideRefs,
+    masterRefs,
+    outsideRefs,
+    outsideNames: outside.size,
+    roles: roleCount,
+    evidences: evCount,
+    askedMaster: stats.filter((a) => a.questionCount > 0).length,
+    unaskedMaster: stats.filter((a) => a.questionCount === 0).length,
+  }
+} catch (e) {
+  E(`acupointOccurrences の監査に失敗: ${e.stack || e.message}`)
+}
+
 /* ── Ver.7.2.3: ユーザー向け分析UIが旧 normalizedTheme を使っていないか ── */
 {
   const UI_GLOBS = [
@@ -758,6 +883,10 @@ if (j) {
   console.log(`統一テーマ Master: ${info.themeCount} 件（過去問接続 ${info.themeConnected} / 学習用 ${info.themeStudyOnly?.length ?? 0} / orphan ${info.themeOrphan?.length ?? 0}）`)
   console.log(`themeId 接続: 過去問 ${info.examThemeIdConnected}/${info.csvTotal}（未設定 ${info.examThemeIdMissing}）  クイズ ${info.quizThemeIdConnected}/${info.quizCount}`)
   console.log(`2026年版基準(standard2026): テーマ ${info.standard2026ThemeCount ?? 0} 件（新設 ${info.standard2026NewThemes ?? 0} / 拡充・再編 ${info.standard2026ExpandedThemes ?? 0}）  新基準クイズ ${info.standard2026QuizCount ?? 0} 問`)
+  if (info.acupointOccurrence) {
+    const o = info.acupointOccurrence
+    console.log(`経穴出題データ: ${o.entries} 設問 / 経穴×設問 ${o.pairs}（マスタ内 ${o.masterRefs} / マスタ外 ${o.outsideRefs}・${o.outsideNames} 穴）  role[direct ${o.roles.direct} / required ${o.roles.required} / distractor ${o.roles.distractor} / ambiguous ${o.roles.ambiguous}]  evidence[named ${o.evidences.named} / implicit ${o.evidences.implicit}]  収録穴: 出題あり ${o.askedMaster} / 未出題 ${o.unaskedMaster}`)
+  }
   console.log(`過去問演習(/past-exams): 収録 ${info.pastExamCount ?? 0} 問・演習可能 ${info.pastExamPlayableCount ?? 0} 問（${(info.pastExamRounds ?? []).map((r) => `第${r}回=${info.pastExamByRound[r]}`).join('  ') || '収録なし'}）`)
   console.log('\n--- 科目別 6年問題数（正規id基準） ---')
   for (const [id, name] of CANONICAL_SUBJECTS) {

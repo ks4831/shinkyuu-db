@@ -128,11 +128,32 @@ export default async function AcupointDetailPage({
             })}
           </div>
           <p className="mt-3 text-xs text-gray-500">
-            出題分析での言及：<strong className="text-gray-800">{a.examRounds.length} / {TOTAL_EXAM_ROUNDS}回</strong>
-            {a.mentions > 0 && `（延べ${a.mentions}問）`}
+            出題：<strong className="text-gray-800">{a.examRounds.length}年度（{TOTAL_EXAM_ROUNDS}回中）・{a.questionCount}問</strong>
           </p>
-          <p className="mt-1 text-[11px] text-gray-400">
-            当サイトが独自に付した学習ポイント欄の記述を対象とした集計です（設問文の掲載はありません）。
+          {a.questions.length > 0 && (
+            <ul className="mt-2 flex flex-wrap gap-1.5">
+              {a.questions.map((q) => (
+                <li key={q.questionId}>
+                  <Link
+                    href={`/past-exams/${q.examRound}`}
+                    className="inline-block rounded-full border border-green-200 bg-green-50 px-2.5 py-1 text-xs font-semibold text-green-700 hover:border-green-400"
+                  >
+                    第{q.examRound}回 問{q.questionNumber}
+                  </Link>
+                </li>
+              ))}
+            </ul>
+          )}
+          {a.distractorQuestions.length > 0 && (
+            <p className="mt-2 text-xs text-gray-500">
+              選択肢として登場（誤答肢のみ）：{a.distractorQuestions.length}問
+              <span className="ml-1 text-gray-400">
+                {a.distractorQuestions.map((q) => `第${q.examRound}回 問${q.questionNumber}`).join('・')}
+              </span>
+            </p>
+          )}
+          <p className="mt-2 text-[11px] text-gray-400">
+            公式の過去問（問題文・選択肢・正答）をもとに、この経穴の知識が正答に必要な設問を1問ずつ判定して集計しています。名前が書かれていなくても部位や要穴分類から特定が必要な設問を含み、誤答の選択肢として登場しただけの設問は含みません。
           </p>
           <p className="mt-1 text-[11px] text-gray-400">
             第29〜34回＝{roundToYear(29)}〜{roundToYear(34)}年実施

@@ -6,7 +6,7 @@ import { MERIDIANS } from '@/data/acupoints'
 export const metadata: Metadata = {
   title: '過去6年 未出題の経穴｜鍼灸国家試験の出題分析',
   description:
-    '第29〜34回の出題分析で一度も登場しなかった経穴の一覧。所属経脈・特定穴分類つき。「未出題＝覚えなくてよい」ではない点に注意。',
+    '第29〜34回の国家試験で、その経穴の知識を問う設問がなかった経穴の一覧（当サイト収録146穴が対象）。所属経脈・特定穴分類つき。「未出題＝覚えなくてよい」ではない点に注意。',
 }
 
 export default function UnaskedAcupointsPage() {
@@ -30,8 +30,11 @@ export default function UnaskedAcupointsPage() {
 
       <h1 className="text-2xl font-bold text-gray-900">過去6年 未出題の経穴</h1>
       <p className="mt-1 text-sm text-gray-500">
-        収録{total}穴のうち、第29〜34回の出題分析で一度も本文に登場しなかった経穴は
+        収録{total}穴のうち、第29〜34回で<strong className="text-gray-800">この経穴の知識を問う設問がなかった</strong>経穴は
         <strong className="text-gray-800"> {unasked.length}穴</strong>。
+      </p>
+      <p className="mt-1 text-xs text-gray-400">
+        対象は当サイト収録の{total}穴（全361穴の一部）です。誤答の選択肢として名前が出ただけの設問は「出題」に含めず、「選択肢として登場」として表示しています。
       </p>
 
       {/* 注意書き（必須） */}
@@ -45,7 +48,7 @@ export default function UnaskedAcupointsPage() {
       </div>
 
       {unasked.length === 0 ? (
-        <p className="mt-8 text-sm text-gray-500">収録しているすべての経穴が、過去6年の分析に登場しています。</p>
+        <p className="mt-8 text-sm text-gray-500">収録しているすべての経穴が、第29〜34回で出題されています。</p>
       ) : (
         <div className="mt-6 space-y-4">
           {byMeridian.map((g) => (
@@ -60,10 +63,14 @@ export default function UnaskedAcupointsPage() {
                         <span className="ml-2 text-xs text-gray-400">{a.code}</span>
                       </span>
                       <span className="text-right">
-                        <span className="text-xs text-gray-500">
+                        <span className="block text-xs text-gray-500">
                           {a.specialPoints[0] ?? '—'}
                         </span>
-                        <span className="ml-2 text-xs font-bold text-gray-300">出題回数 0</span>
+                        {a.distractorQuestions.length > 0 && (
+                          <span className="block whitespace-nowrap text-[11px] text-gray-400">
+                            選択肢として登場 {a.distractorQuestions.length}問
+                          </span>
+                        )}
                       </span>
                     </Link>
                   </li>

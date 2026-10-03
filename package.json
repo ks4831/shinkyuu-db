@@ -8,7 +8,8 @@
     "start": "next start",
     "lint": "eslint",
     "download": "npx tsx scripts/download-official-exams.ts",
-    "audit:data": "npx tsx scripts/audit-data.mjs"
+    "audit:data": "npx tsx scripts/audit-data.mjs",
+    "extract:acupoints": "npx tsx scripts/extract-acupoint-candidates.mjs"
   },
   "dependencies": {
     "@next/third-parties": "16.3.4",

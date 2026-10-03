@@ -9,6 +9,7 @@ type Row = {
   name: string
   reading: string
   meridianName: string
+  aliases: string[]
 }
 
 export default function AcupointSearch({ points }: { points: Row[] }) {
@@ -21,6 +22,7 @@ export default function AcupointSearch({ points }: { points: Row[] }) {
       .filter(
         (p) =>
           p.name.includes(query) ||
+          p.aliases.some((x) => x.includes(query)) ||
           p.reading.includes(query) ||
           p.code.toLowerCase().includes(query.toLowerCase()) ||
           p.meridianName.includes(query),
