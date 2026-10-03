@@ -6,7 +6,7 @@ import Link from 'next/link'
 type Row = {
   slug: string
   code: string
-  name: string
+  name?: string
   reading?: string
   meridianName: string
   aliases: string[]
@@ -21,7 +21,7 @@ export default function AcupointSearch({ points }: { points: Row[] }) {
     return points
       .filter(
         (p) =>
-          p.name.includes(query) ||
+          (p.name?.includes(query) ?? false) ||
           p.aliases.some((x) => x.includes(query)) ||
           (p.reading?.includes(query) ?? false) ||
           p.code.toLowerCase().includes(query.toLowerCase()) ||
@@ -50,8 +50,8 @@ export default function AcupointSearch({ points }: { points: Row[] }) {
             <li key={p.slug}>
               <Link href={`/acupoints/${p.slug}`} className="flex items-center justify-between px-4 py-3">
                 <span>
-                  <span className="text-sm font-bold text-gray-900">{p.name}</span>
-                  <span className="ml-2 text-xs text-gray-400">{p.reading ? `${p.reading}・${p.code}` : p.code}</span>
+                  <span className="text-sm font-bold text-gray-900">{p.name ?? p.code}</span>
+                  {p.name && <span className="ml-2 text-xs text-gray-400">{p.reading ? `${p.reading}・${p.code}` : p.code}</span>}
                 </span>
                 <span className="text-xs text-gray-400">{p.meridianName}</span>
               </Link>

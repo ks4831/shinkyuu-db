@@ -1,7 +1,7 @@
 import type { Metadata } from 'next'
 import Link from 'next/link'
 import { notFound } from 'next/navigation'
-import { ACUPOINTS } from '@/data/acupoints'
+import { ACUPOINTS, acupointLabel } from '@/data/acupoints'
 import { getAcupointStat, TOTAL_EXAM_ROUNDS } from '@/lib/acupoints'
 import { questionsForAcupoint } from '@/lib/quiz'
 import { roundToYear } from '@/lib/utils'
@@ -19,9 +19,9 @@ export async function generateMetadata({
   const a = getAcupointStat(slug)
   if (!a) return { title: '経穴が見つかりません' }
   return {
-    title: `${a.name}（${a.code}）｜${a.meridianName}の経穴｜国家試験対策`,
+    title: a.name ? `${a.name}（${a.code}）｜${a.meridianName}の経穴｜国家試験対策` : `${a.code}｜${a.meridianName}の経穴｜国家試験対策`,
     description: [
-      `${a.name}（${a.code}）は${a.meridianName}の経穴。`,
+      a.name ? `${a.name}（${a.code}）は${a.meridianName}の経穴。` : `${a.code}は${a.meridianName}の経穴（WHO標準経穴）。`,
       a.specialPoints?.length ? `${a.specialPoints.join('・')}。` : '',
       a.location ? `位置：${a.location}。` : '',
       '第29〜34回の国家試験での出題状況。',
@@ -52,7 +52,7 @@ export default async function AcupointDetailPage({
   const jsonLd = {
     '@context': 'https://schema.org',
     '@type': 'DefinedTerm',
-    name: `${a.name}（${a.code}）`,
+    name: a.name ? `${a.name}（${a.code}）` : a.code,
     description: [
       `${a.meridianName}の経穴。`,
       a.specialPoints?.length ? `${a.specialPoints.join('・')}。` : '',
@@ -70,14 +70,16 @@ export default async function AcupointDetailPage({
         <span className="mx-1">/</span>
         <Link href="/acupoints" className="hover:text-green-600">経穴</Link>
         <span className="mx-1">/</span>
-        <span className="text-gray-600">{a.name}</span>
+        <span className="text-gray-600">{acupointLabel(a)}</span>
       </nav>
 
       {/* 見出し */}
       <div className="flex items-start justify-between gap-3">
         <div>
-          <h1 className="text-3xl font-black text-gray-900">{a.name}</h1>
-          <p className="mt-0.5 text-sm text-gray-500">{a.reading ? `${a.reading}・${a.code}` : a.code}</p>
+          <h1 className="text-3xl font-black text-gray-900">{acupointLabel(a)}</h1>
+          {a.name && (
+            <p className="mt-0.5 text-sm text-gray-500">{a.reading ? `${a.reading}・${a.code}` : a.code}</p>
+          )}
         </div>
         {a.importance && (
           <span className={`mt-1 rounded-full border px-2.5 py-1 text-xs font-bold ${IMP_COLOR[a.importance]}`}>
@@ -124,7 +126,7 @@ export default async function AcupointDetailPage({
       {a.location ? (
         <p className="mt-1.5 text-xs text-gray-400">※ 位置は要点のみ。正確な取穴は教科書『経絡経穴概論』で確認してください。</p>
       ) : (
-        <p className="mt-1.5 text-xs text-gray-400">※ 位置などの詳細情報は準備中です。</p>
+        <p className="mt-1.5 text-xs text-gray-400">※ {a.name ? '位置' : '日本語名・位置'}などの詳細情報は準備中です。</p>
       )}
 
       {/* 過去6年の出題状況 */}

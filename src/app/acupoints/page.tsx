@@ -7,6 +7,7 @@ import {
   getAcupointStats,
 } from '@/lib/acupoints'
 import AcupointSearch from '@/components/acupoints/AcupointSearch'
+import { acupointLabel } from '@/data/acupoints'
 
 export const metadata: Metadata = {
   title: '経穴から学ぶ｜頻出経穴・特定穴・経脈別ランキング',
@@ -37,7 +38,7 @@ export default function AcupointsPage() {
 
       <h1 className="text-2xl font-bold text-gray-900">経穴から学ぶ</h1>
       <p className="mt-1 text-sm text-gray-500">
-        WHO標準経穴361穴のうち{all.length}穴を収録（特定穴と、第29〜34回で出題された経穴が中心）。第29〜34回で経穴の知識が問われた問題を設問ごとに集計しています。
+        WHO標準経穴{all.length}穴を収録（日本語名・読み・位置などの詳細情報は順次整備中。日本語名が未確認の穴はWHOコードで表示）。第29〜34回で経穴の知識が問われた問題を設問ごとに集計しています。
       </p>
 
       <Link
@@ -71,8 +72,8 @@ export default function AcupointsPage() {
                 }`}>{i + 1}</span>
                 <span className="min-w-0 flex-1">
                   <span className="block text-sm font-bold text-gray-900">
-                    {a.name}
-                    <span className="ml-1.5 text-xs font-normal text-gray-400">{a.code}</span>
+                    {acupointLabel(a)}
+                    {a.name && <span className="ml-1.5 text-xs font-normal text-gray-400">{a.code}</span>}
                   </span>
                   <span className="block truncate text-xs text-gray-500">{a.meridianName}</span>
                 </span>
@@ -102,7 +103,7 @@ export default function AcupointsPage() {
                     href={`/acupoints/${p.slug}`}
                     className="rounded-full border border-gray-200 bg-gray-50 px-2.5 py-1 text-xs font-semibold text-gray-700 hover:border-green-300 hover:bg-green-50"
                   >
-                    {p.name}
+                    {acupointLabel(p)}
                   </Link>
                 ))}
               </div>
@@ -140,7 +141,7 @@ export default function AcupointsPage() {
                     href={`/acupoints/${p.slug}`}
                     className="rounded-full border border-gray-200 bg-gray-50 px-2.5 py-1 text-xs font-semibold text-gray-700 hover:border-green-300"
                   >
-                    {p.name}
+                    {acupointLabel(p)}
                   </Link>
                 ))}
               </div>

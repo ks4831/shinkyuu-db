@@ -607,11 +607,11 @@ try {
   if (dupCode.length) W(`acupoint code 重複: ${dupCode.join(', ')}`)
   // 必須フィールド（標準経穴の最小構成。詳細は段階追加: docs/acupoint-master-sources.md）
   A.forEach((a) => {
-    for (const f of ['slug', 'code', 'name', 'kind', 'meridian', 'meridianName']) {
+    for (const f of ['slug', 'code', 'kind', 'meridian', 'meridianName']) {
       if (!a[f] || !String(a[f]).trim()) E(`acupoint ${a.slug} の ${f} が空`)
     }
     // 任意フィールドは「未設定」か「値あり」。空文字・空白で入力済みに見せない
-    for (const f of ['reading', 'region', 'location', 'memoryTip', 'examPoint', 'importance']) {
+    for (const f of ['name', 'reading', 'region', 'location', 'memoryTip', 'examPoint', 'importance']) {
       if (f in a && (a[f] === undefined || !String(a[f]).trim())) E(`acupoint ${a.slug} の ${f} が空文字（未確認なら未設定にする）`)
     }
     if ('specialPoints' in a && !Array.isArray(a.specialPoints)) E(`acupoint ${a.slug} の specialPoints が配列でない`)
@@ -633,10 +633,23 @@ try {
     if (a.slug !== a.code.toLowerCase()) E(`acupoint ${a.slug} の slug が code の小文字（${a.code.toLowerCase()}）でない`)
     if (meridianNameById.get(a.meridian) !== a.meridianName) E(`acupoint ${a.slug} の meridianName ${a.meridianName} が MERIDIANS と不一致`)
   })
-  const stdCount = A.filter((a) => a.kind === 'standard').length
-  if (stdCount > 361) E(`標準経穴が361穴を超えている: ${stdCount}`)
-  info.acupointStandardCount = stdCount
-  info.acupointReadingCount = A.filter((a) => a.reading !== undefined).length
+  // 標準経穴は WHO 361穴ちょうど・各経脈で 1〜N の連番（欠番・重複なし）
+  const std = A.filter((a) => a.kind === 'standard')
+  if (std.length !== 361) E(`標準経穴が361穴でない: ${std.length}`)
+  for (const [mid, n] of Object.entries(WHO_POINT_COUNTS)) {
+    const nums = std.filter((a) => a.meridian === mid).map((a) => Number(a.code.slice(mid.length)))
+    const missing = []
+    for (let i = 1; i <= n; i++) if (!nums.includes(i)) missing.push(`${mid}${i}`)
+    if (missing.length) E(`標準経穴の欠番: ${missing.join(', ')}`)
+    if (nums.length !== n) E(`${mid} の標準経穴数 ${nums.length} ≠ WHO ${n}`)
+  }
+  // 日本語名の重複（別穴に同じ名前を付けていないか）
+  const nameSeen = new Map()
+  for (const a of std) if (a.name) nameSeen.set(a.name, [...(nameSeen.get(a.name) ?? []), a.code])
+  for (const [n, codes] of nameSeen) if (codes.length > 1) E(`経穴の日本語名が重複: ${n}（${codes.join(', ')}）`)
+  info.acupointStandardCount = std.length
+  info.acupointNameCount = std.filter((a) => a.name !== undefined).length
+  info.acupointReadingCount = std.filter((a) => a.reading !== undefined).length
   info.acupointAliasCount = A.reduce((n, a) => n + (Array.isArray(a.aliases) ? a.aliases.length : 0), 0)
 
   // quiz.relatedAcupoints 参照
@@ -903,7 +916,7 @@ if (j) {
   console.log('\n=== 鍼灸DB データ監査 ===\n')
   console.log(`CSV総問題数: ${info.csvTotal}`)
   console.log(`年度別: ${ROUNDS.map((r) => `第${r}回=${perRound[r]}`).join('  ')}`)
-  console.log(`科目定義: ${info.subjectDefCount} / テーマ: ${info.themeCount} / クイズ: ${info.quizCount} / 経穴: ${info.acupointCount}（標準 ${info.acupointStandardCount}/361・読みあり ${info.acupointReadingCount}・alias ${info.acupointAliasCount}）/ 図解: ${info.diagramCount}`)
+  console.log(`科目定義: ${info.subjectDefCount} / テーマ: ${info.themeCount} / クイズ: ${info.quizCount} / 経穴: ${info.acupointCount}（標準 ${info.acupointStandardCount}/361・日本語名あり ${info.acupointNameCount}・読みあり ${info.acupointReadingCount}・alias ${info.acupointAliasCount}）/ 図解: ${info.diagramCount}`)
   console.log(`CSV科目値の種類: ${info.subjectRawValues}（正規id化が必要 ${info.subjectNeedsNormalize} 行 / 未解決 ${info.subjectUnresolved} 行）`)
   console.log(`CSV normalizedTheme: ${info.csvThemeCount} 種（空欄 ${info.csvThemeEmpty}）`)
   console.log(`統一テーマ Master: ${info.themeCount} 件（過去問接続 ${info.themeConnected} / 学習用 ${info.themeStudyOnly?.length ?? 0} / orphan ${info.themeOrphan?.length ?? 0}）`)

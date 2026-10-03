@@ -14,7 +14,18 @@ export function normalizeText(s) {
 const BLOCKING_WORDS = {
   腕骨: ['上腕骨'],
   下関: ['上下関係'],
+  陰交: ['三陰交'],
+  膝関: ['膝関節'],
+  水分: ['加水分解'],
+  本神: ['本神篇'],
 }
+
+/**
+ * 一般語・解剖語・概念語と同じ字面の経穴名（水分代謝・排尿中枢・胃の幽門・奇経の帯脈 など）。
+ * 名称一致だけではレビュー候補にしない（候補 ≠ 出題）。
+ * 登録済みの設問では他の経穴名と同じく、判定か ignoredMentions が必要。
+ */
+export const HOMONYM_TERMS = new Set(['水分', '中枢', '幽門', '帯脈'])
 
 /**
  * text 中に term が「経穴名として」現れるか。
@@ -41,7 +52,7 @@ export function containsTerm(text, term) {
 
 /** 経穴マスタ1件の照合語（正式名＋別名） */
 export function masterTerms(a) {
-  return [a.name, ...(a.aliases ?? [])]
+  return [a.name, ...(a.aliases ?? [])].filter(Boolean)
 }
 
 /** 過去問1問の公式本文（問題文＋選択肢） */
@@ -49,10 +60,14 @@ export function officialText(q) {
   return [q.questionText, ...(q.choices ?? [])].join('\n')
 }
 
-/** 公式本文に明示されているマスタ経穴（slug 配列） */
-export function namedMasterSlugs(q, acupoints) {
+/**
+ * 公式本文に明示されているマスタ経穴（slug 配列）
+ * @param opts.excludeHomonyms true なら HOMONYM_TERMS の一致を数えない（候補抽出用）
+ */
+export function namedMasterSlugs(q, acupoints, opts = {}) {
   const text = officialText(q)
-  return acupoints.filter((a) => masterTerms(a).some((t) => containsTerm(text, t))).map((a) => a.slug)
+  const terms = (a) => masterTerms(a).filter((t) => !(opts.excludeHomonyms && HOMONYM_TERMS.has(t)))
+  return acupoints.filter((a) => terms(a).some((t) => containsTerm(text, t))).map((a) => a.slug)
 }
 
 /** 経穴関連の設問かを判定するキーワード（名称が書かれない出題を拾うため） */
@@ -66,9 +81,9 @@ const ACUPOINT_SUBJECT = 'meridians-acupoints'
  * @param subject 分析CSVの subject（正規id）
  */
 export function isCandidate(q, subject, acupoints) {
-  if (namedMasterSlugs(q, acupoints).length > 0) return true
+  if (namedMasterSlugs(q, acupoints, { excludeHomonyms: true }).length > 0) return true
   if (subject === ACUPOINT_SUBJECT) return true
   if (KEYWORD_RE.test(normalizeText(officialText(q)))) return true
   const exp = q.explanation ?? ''
-  return acupoints.some((a) => masterTerms(a).some((t) => containsTerm(exp, t)))
+  return acupoints.some((a) => masterTerms(a).some((t) => !HOMONYM_TERMS.has(t) && containsTerm(exp, t)))
 }

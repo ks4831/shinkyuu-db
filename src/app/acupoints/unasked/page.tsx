@@ -1,7 +1,7 @@
 import type { Metadata } from 'next'
 import Link from 'next/link'
 import { getUnaskedAcupoints, getAcupointStats } from '@/lib/acupoints'
-import { MERIDIANS } from '@/data/acupoints'
+import { MERIDIANS, acupointLabel } from '@/data/acupoints'
 
 export const metadata: Metadata = {
   title: '過去6年 未出題の経穴｜鍼灸国家試験の出題分析',
@@ -34,7 +34,7 @@ export default function UnaskedAcupointsPage() {
         <strong className="text-gray-800"> {unasked.length}穴</strong>。
       </p>
       <p className="mt-1 text-xs text-gray-400">
-        対象は当サイト収録の標準経穴{total}穴（WHO標準361穴の一部）です。誤答の選択肢として名前が出ただけの設問は「出題」に含めず、「選択肢として登場」として表示しています。
+        対象は当サイト収録のWHO標準経穴{total}穴です（日本語名が未確認の穴はWHOコードで表示）。誤答の選択肢として名前が出ただけの設問は「出題」に含めず、「選択肢として登場」として表示しています。
       </p>
 
       {/* 注意書き（必須） */}
@@ -59,8 +59,8 @@ export default function UnaskedAcupointsPage() {
                   <li key={a.slug}>
                     <Link href={`/acupoints/${a.slug}`} className="flex items-center justify-between py-2.5">
                       <span>
-                        <span className="text-sm font-bold text-gray-900">{a.name}</span>
-                        <span className="ml-2 text-xs text-gray-400">{a.code}</span>
+                        <span className="text-sm font-bold text-gray-900">{acupointLabel(a)}</span>
+                        {a.name && <span className="ml-2 text-xs text-gray-400">{a.code}</span>}
                       </span>
                       <span className="text-right">
                         {a.specialPoints && (
