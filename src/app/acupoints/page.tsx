@@ -37,7 +37,7 @@ export default function AcupointsPage() {
 
       <h1 className="text-2xl font-bold text-gray-900">経穴から学ぶ</h1>
       <p className="mt-1 text-sm text-gray-500">
-        収録{all.length}穴（特定穴中心・全361穴の一部）。第29〜34回で経穴の知識が問われた問題を設問ごとに集計しています。
+        WHO標準経穴361穴のうち{all.length}穴を収録（特定穴と、第29〜34回で出題された経穴が中心）。第29〜34回で経穴の知識が問われた問題を設問ごとに集計しています。
       </p>
 
       <Link
@@ -78,7 +78,9 @@ export default function AcupointsPage() {
                 </span>
                 <span className="flex-shrink-0 text-right">
                   <span className="block whitespace-nowrap text-xs font-bold text-green-700">{a.examRounds.length}年度・{a.questionCount}問</span>
-                  <span className={`mt-0.5 inline-block rounded border px-1.5 text-[10px] font-bold ${IMP_COLOR[a.importance]}`}>{a.importance}</span>
+                  {a.importance && (
+                    <span className={`mt-0.5 inline-block rounded border px-1.5 text-[10px] font-bold ${IMP_COLOR[a.importance]}`}>{a.importance}</span>
+                  )}
                 </span>
               </Link>
             </li>

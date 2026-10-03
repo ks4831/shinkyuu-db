@@ -6,7 +6,7 @@ import { MERIDIANS } from '@/data/acupoints'
 export const metadata: Metadata = {
   title: '過去6年 未出題の経穴｜鍼灸国家試験の出題分析',
   description:
-    '第29〜34回の国家試験で、その経穴の知識を問う設問がなかった経穴の一覧（当サイト収録146穴が対象）。所属経脈・特定穴分類つき。「未出題＝覚えなくてよい」ではない点に注意。',
+    '第29〜34回の国家試験で、その経穴の知識を問う設問がなかった経穴の一覧（当サイト収録の標準経穴が対象）。所属経脈・特定穴分類つき。「未出題＝覚えなくてよい」ではない点に注意。',
 }
 
 export default function UnaskedAcupointsPage() {
@@ -34,7 +34,7 @@ export default function UnaskedAcupointsPage() {
         <strong className="text-gray-800"> {unasked.length}穴</strong>。
       </p>
       <p className="mt-1 text-xs text-gray-400">
-        対象は当サイト収録の{total}穴（全361穴の一部）です。誤答の選択肢として名前が出ただけの設問は「出題」に含めず、「選択肢として登場」として表示しています。
+        対象は当サイト収録の標準経穴{total}穴（WHO標準361穴の一部）です。誤答の選択肢として名前が出ただけの設問は「出題」に含めず、「選択肢として登場」として表示しています。
       </p>
 
       {/* 注意書き（必須） */}
@@ -63,9 +63,11 @@ export default function UnaskedAcupointsPage() {
                         <span className="ml-2 text-xs text-gray-400">{a.code}</span>
                       </span>
                       <span className="text-right">
-                        <span className="block text-xs text-gray-500">
-                          {a.specialPoints[0] ?? '—'}
-                        </span>
+                        {a.specialPoints && (
+                          <span className="block text-xs text-gray-500">
+                            {a.specialPoints[0] ?? '—'}
+                          </span>
+                        )}
                         {a.distractorQuestions.length > 0 && (
                           <span className="block whitespace-nowrap text-[11px] text-gray-400">
                             選択肢として登場 {a.distractorQuestions.length}問

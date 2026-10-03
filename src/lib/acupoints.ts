@@ -127,7 +127,7 @@ export function getSpecialPointGroups(): SpecialPointGroup[] {
     key: label,
     label,
     points: stats
-      .filter((a) => a.specialPoints.some((sp) => sp.includes(label)))
+      .filter((a) => (a.specialPoints ?? []).some((sp) => sp.includes(label)))
       .sort((a, b) => byFrequency(a, b) || a.code.localeCompare(b.code)),
   })).filter((g) => g.points.length > 0)
 }

@@ -605,12 +605,38 @@ try {
   A.forEach((a) => codeSeen.set(a.code, (codeSeen.get(a.code) ?? 0) + 1))
   const dupCode = [...codeSeen.entries()].filter(([, c]) => c > 1).map(([s]) => s)
   if (dupCode.length) W(`acupoint code 重複: ${dupCode.join(', ')}`)
-  // 必須フィールド
+  // 必須フィールド（標準経穴の最小構成。詳細は段階追加: docs/acupoint-master-sources.md）
   A.forEach((a) => {
-    for (const f of ['name', 'reading', 'code', 'meridian', 'location', 'examPoint', 'memoryTip']) {
+    for (const f of ['slug', 'code', 'name', 'kind', 'meridian', 'meridianName']) {
       if (!a[f] || !String(a[f]).trim()) E(`acupoint ${a.slug} の ${f} が空`)
     }
+    // 任意フィールドは「未設定」か「値あり」。空文字・空白で入力済みに見せない
+    for (const f of ['reading', 'region', 'location', 'memoryTip', 'examPoint', 'importance']) {
+      if (f in a && (a[f] === undefined || !String(a[f]).trim())) E(`acupoint ${a.slug} の ${f} が空文字（未確認なら未設定にする）`)
+    }
+    if ('specialPoints' in a && !Array.isArray(a.specialPoints)) E(`acupoint ${a.slug} の specialPoints が配列でない`)
   })
+
+  // 標準経穴：WHO標準361穴（WHO Standard Acupuncture Point Locations in the Western Pacific Region, 2008）
+  // のコード体系と照合（経脈ごとの穴数は同資料で機械確認済み）
+  const WHO_POINT_COUNTS = { LU: 11, LI: 20, ST: 45, SP: 21, HT: 9, SI: 19, BL: 67, KI: 27, PC: 9, TE: 23, GB: 44, LR: 14, GV: 28, CV: 24 }
+  if (Object.values(WHO_POINT_COUNTS).reduce((s, n) => s + n, 0) !== 361) E('WHO_POINT_COUNTS の合計が361でない')
+  const meridianNameById = new Map(acu.MERIDIANS.map((m) => [m.id, m.name]))
+  A.forEach((a) => {
+    if (a.kind !== 'standard') { E(`acupoint ${a.slug} の kind が不正: ${a.kind}`); return }
+    const m = /^([A-Z]{2})(\d{1,2})$/.exec(a.code ?? '')
+    if (!m || !(m[1] in WHO_POINT_COUNTS)) { E(`acupoint ${a.slug} の code が WHOコード形式でない: ${a.code}`); return }
+    const n = Number(m[2])
+    if (n < 1 || n > WHO_POINT_COUNTS[m[1]]) E(`acupoint ${a.slug} の code ${a.code} は WHO標準の範囲外（${m[1]}1〜${m[1]}${WHO_POINT_COUNTS[m[1]]}）`)
+    if (String(n) !== m[2]) E(`acupoint ${a.slug} の code ${a.code} に先頭0がある`)
+    if (a.meridian !== m[1]) E(`acupoint ${a.slug} の meridian ${a.meridian} が code ${a.code} と不一致`)
+    if (a.slug !== a.code.toLowerCase()) E(`acupoint ${a.slug} の slug が code の小文字（${a.code.toLowerCase()}）でない`)
+    if (meridianNameById.get(a.meridian) !== a.meridianName) E(`acupoint ${a.slug} の meridianName ${a.meridianName} が MERIDIANS と不一致`)
+  })
+  const stdCount = A.filter((a) => a.kind === 'standard').length
+  if (stdCount > 361) E(`標準経穴が361穴を超えている: ${stdCount}`)
+  info.acupointStandardCount = stdCount
+  info.acupointReadingCount = A.filter((a) => a.reading !== undefined).length
   info.acupointAliasCount = A.reduce((n, a) => n + (Array.isArray(a.aliases) ? a.aliases.length : 0), 0)
 
   // quiz.relatedAcupoints 参照
@@ -877,7 +903,7 @@ if (j) {
   console.log('\n=== 鍼灸DB データ監査 ===\n')
   console.log(`CSV総問題数: ${info.csvTotal}`)
   console.log(`年度別: ${ROUNDS.map((r) => `第${r}回=${perRound[r]}`).join('  ')}`)
-  console.log(`科目定義: ${info.subjectDefCount} / テーマ: ${info.themeCount} / クイズ: ${info.quizCount} / 経穴: ${info.acupointCount}（alias ${info.acupointAliasCount}）/ 図解: ${info.diagramCount}`)
+  console.log(`科目定義: ${info.subjectDefCount} / テーマ: ${info.themeCount} / クイズ: ${info.quizCount} / 経穴: ${info.acupointCount}（標準 ${info.acupointStandardCount}/361・読みあり ${info.acupointReadingCount}・alias ${info.acupointAliasCount}）/ 図解: ${info.diagramCount}`)
   console.log(`CSV科目値の種類: ${info.subjectRawValues}（正規id化が必要 ${info.subjectNeedsNormalize} 行 / 未解決 ${info.subjectUnresolved} 行）`)
   console.log(`CSV normalizedTheme: ${info.csvThemeCount} 種（空欄 ${info.csvThemeEmpty}）`)
   console.log(`統一テーマ Master: ${info.themeCount} 件（過去問接続 ${info.themeConnected} / 学習用 ${info.themeStudyOnly?.length ?? 0} / orphan ${info.themeOrphan?.length ?? 0}）`)

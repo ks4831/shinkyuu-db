@@ -20,7 +20,12 @@ export async function generateMetadata({
   if (!a) return { title: '経穴が見つかりません' }
   return {
     title: `${a.name}（${a.code}）｜${a.meridianName}の経穴｜国家試験対策`,
-    description: `${a.name}は${a.meridianName}の経穴。${a.specialPoints.join('・') || '要穴'}。位置：${a.location}。過去6年の出題状況・覚え方・関連クイズ。`,
+    description: [
+      `${a.name}（${a.code}）は${a.meridianName}の経穴。`,
+      a.specialPoints?.length ? `${a.specialPoints.join('・')}。` : '',
+      a.location ? `位置：${a.location}。` : '',
+      '第29〜34回の国家試験での出題状況。',
+    ].join(''),
   }
 }
 
@@ -48,7 +53,11 @@ export default async function AcupointDetailPage({
     '@context': 'https://schema.org',
     '@type': 'DefinedTerm',
     name: `${a.name}（${a.code}）`,
-    description: `${a.meridianName}の経穴。${a.specialPoints.join('・')}。位置：${a.location}`,
+    description: [
+      `${a.meridianName}の経穴。`,
+      a.specialPoints?.length ? `${a.specialPoints.join('・')}。` : '',
+      a.location ? `位置：${a.location}` : '',
+    ].join(''),
     inDefinedTermSet: '経絡経穴概論',
   }
 
@@ -68,11 +77,13 @@ export default async function AcupointDetailPage({
       <div className="flex items-start justify-between gap-3">
         <div>
           <h1 className="text-3xl font-black text-gray-900">{a.name}</h1>
-          <p className="mt-0.5 text-sm text-gray-500">{a.reading}・{a.code}</p>
+          <p className="mt-0.5 text-sm text-gray-500">{a.reading ? `${a.reading}・${a.code}` : a.code}</p>
         </div>
-        <span className={`mt-1 rounded-full border px-2.5 py-1 text-xs font-bold ${IMP_COLOR[a.importance]}`}>
-          {IMP_LABEL[a.importance]}（{a.importance}）
-        </span>
+        {a.importance && (
+          <span className={`mt-1 rounded-full border px-2.5 py-1 text-xs font-bold ${IMP_COLOR[a.importance]}`}>
+            {IMP_LABEL[a.importance]}（{a.importance}）
+          </span>
+        )}
       </div>
 
       {/* 基本情報 */}
@@ -81,10 +92,13 @@ export default async function AcupointDetailPage({
           <dt className="w-20 flex-shrink-0 font-bold text-gray-500">所属経脈</dt>
           <dd className="text-gray-900">{a.meridianName}</dd>
         </div>
-        <div className="flex gap-3">
-          <dt className="w-20 flex-shrink-0 font-bold text-gray-500">部位</dt>
-          <dd className="text-gray-900">{a.region}</dd>
-        </div>
+        {a.region && (
+          <div className="flex gap-3">
+            <dt className="w-20 flex-shrink-0 font-bold text-gray-500">部位</dt>
+            <dd className="text-gray-900">{a.region}</dd>
+          </div>
+        )}
+        {a.specialPoints && (
         <div className="flex gap-3">
           <dt className="w-20 flex-shrink-0 font-bold text-gray-500">特定穴</dt>
           <dd className="text-gray-900">
@@ -99,12 +113,19 @@ export default async function AcupointDetailPage({
             )}
           </dd>
         </div>
-        <div className="flex gap-3">
-          <dt className="w-20 flex-shrink-0 font-bold text-gray-500">位置</dt>
-          <dd className="leading-relaxed text-gray-900">{a.location}</dd>
-        </div>
+        )}
+        {a.location && (
+          <div className="flex gap-3">
+            <dt className="w-20 flex-shrink-0 font-bold text-gray-500">位置</dt>
+            <dd className="leading-relaxed text-gray-900">{a.location}</dd>
+          </div>
+        )}
       </dl>
-      <p className="mt-1.5 text-xs text-gray-400">※ 位置は要点のみ。正確な取穴は教科書『経絡経穴概論』で確認してください。</p>
+      {a.location ? (
+        <p className="mt-1.5 text-xs text-gray-400">※ 位置は要点のみ。正確な取穴は教科書『経絡経穴概論』で確認してください。</p>
+      ) : (
+        <p className="mt-1.5 text-xs text-gray-400">※ 位置などの詳細情報は準備中です。</p>
+      )}
 
       {/* 過去6年の出題状況 */}
       <section className="mt-6">
@@ -162,20 +183,24 @@ export default async function AcupointDetailPage({
       </section>
 
       {/* 何を問われやすいか */}
-      <section className="mt-6">
-        <h2 className="mb-2 text-sm font-bold text-gray-700">何を問われやすいか</h2>
-        <p className="rounded-2xl border border-gray-100 bg-white p-4 text-sm leading-relaxed text-gray-700">
-          {a.examPoint}
-        </p>
-      </section>
+      {a.examPoint && (
+        <section className="mt-6">
+          <h2 className="mb-2 text-sm font-bold text-gray-700">何を問われやすいか</h2>
+          <p className="rounded-2xl border border-gray-100 bg-white p-4 text-sm leading-relaxed text-gray-700">
+            {a.examPoint}
+          </p>
+        </section>
+      )}
 
       {/* 覚え方 */}
-      <section className="mt-6">
-        <h2 className="mb-2 text-sm font-bold text-gray-700">覚え方</h2>
-        <p className="rounded-2xl border border-green-100 bg-green-50 p-4 text-sm leading-relaxed text-gray-800">
-          {a.memoryTip}
-        </p>
-      </section>
+      {a.memoryTip && (
+        <section className="mt-6">
+          <h2 className="mb-2 text-sm font-bold text-gray-700">覚え方</h2>
+          <p className="rounded-2xl border border-green-100 bg-green-50 p-4 text-sm leading-relaxed text-gray-800">
+            {a.memoryTip}
+          </p>
+        </section>
+      )}
 
       {/* この経穴のクイズを解く */}
       <Link

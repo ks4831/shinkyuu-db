@@ -7,7 +7,7 @@ type Row = {
   slug: string
   code: string
   name: string
-  reading: string
+  reading?: string
   meridianName: string
   aliases: string[]
 }
@@ -23,7 +23,7 @@ export default function AcupointSearch({ points }: { points: Row[] }) {
         (p) =>
           p.name.includes(query) ||
           p.aliases.some((x) => x.includes(query)) ||
-          p.reading.includes(query) ||
+          (p.reading?.includes(query) ?? false) ||
           p.code.toLowerCase().includes(query.toLowerCase()) ||
           p.meridianName.includes(query),
       )
@@ -51,7 +51,7 @@ export default function AcupointSearch({ points }: { points: Row[] }) {
               <Link href={`/acupoints/${p.slug}`} className="flex items-center justify-between px-4 py-3">
                 <span>
                   <span className="text-sm font-bold text-gray-900">{p.name}</span>
-                  <span className="ml-2 text-xs text-gray-400">{p.reading}・{p.code}</span>
+                  <span className="ml-2 text-xs text-gray-400">{p.reading ? `${p.reading}・${p.code}` : p.code}</span>
                 </span>
                 <span className="text-xs text-gray-400">{p.meridianName}</span>
               </Link>

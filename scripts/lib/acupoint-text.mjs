@@ -13,6 +13,7 @@ export function normalizeText(s) {
 /** 経穴名を含む別語（この範囲内の一致は経穴として扱わない） */
 const BLOCKING_WORDS = {
   腕骨: ['上腕骨'],
+  下関: ['上下関係'],
 }
 
 /**
