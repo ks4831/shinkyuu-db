@@ -2445,13 +2445,13 @@
     "questionNumber": 123,
     "questionText": "中風七穴はどれか。",
     "choices": [
-      "肩髃",
+      "肩髎",
       "梁丘",
       "陽陵泉",
       "曲池"
     ],
     "answerIndex": 3,
-    "explanation": "曲池は中風七穴の一つに数えられる代表的な経穴である。梁丘・陽陵泉は中風七穴には含まれない。",
+    "explanation": "曲池は中風七穴の一つに数えられる代表的な経穴である。肩髎・梁丘・陽陵泉は中風七穴には含まれない。",
     "hasFigure": false,
     "source": "第33回 はり師・きゅう師国家試験",
     "sourceUrl": "https://ahaki.or.jp/wordpress/wp-content/uploads/mondai_33_harikyu_pm.pdf",
@@ -2966,7 +2966,7 @@
     "questionText": "灸治療が骨盤位の矯正に効果的とされる膀胱経の要穴はどれか。",
     "choices": [
       "井穴",
-      "栄穴",
+      "滎穴",
       "兪穴",
       "経穴"
     ],
