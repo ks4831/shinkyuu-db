@@ -13,20 +13,20 @@ export default function Header() {
             <path d="M20.5 19.5 Q19 15 20.5 11" stroke="#15803d" strokeWidth="1.2" strokeLinecap="round" />
             <path d="M25 19.5 Q26.5 16 25 12.5" stroke="#15803d" strokeWidth="1.2" strokeLinecap="round" />
           </svg>
-          <span className="text-sm font-bold text-gray-800 group-hover:text-green-700 sm:text-base">
-            鍼灸国試 <span className="hidden sm:inline">過去問・予想問題・分析</span>
+          <span className="whitespace-nowrap text-sm font-bold text-gray-800 group-hover:text-green-700 sm:text-base">
+            鍼灸国試 <span className="hidden lg:inline">過去問・予想問題・分析</span>
           </span>
         </Link>
 
         {/* Desktop nav */}
         <nav className="hidden items-center gap-1 text-sm sm:flex">
-          <Link href="/past-exams" className="rounded-lg px-3 py-1.5 text-gray-600 hover:bg-green-50 hover:text-green-700">過去問</Link>
-          <Link href="/quiz" className="rounded-lg px-3 py-1.5 text-gray-600 hover:bg-green-50 hover:text-green-700">予想問題</Link>
-          <Link href="/acupoints" className="rounded-lg px-3 py-1.5 text-gray-600 hover:bg-green-50 hover:text-green-700">経穴</Link>
-          <Link href="/subjects" className="rounded-lg px-3 py-1.5 text-gray-600 hover:bg-green-50 hover:text-green-700">科目</Link>
-          <Link href="/analysis/compare/recent-6-years" className="rounded-lg px-3 py-1.5 text-gray-600 hover:bg-green-50 hover:text-green-700">分析</Link>
-          <Link href="/dashboard" className="rounded-lg px-3 py-1.5 text-gray-600 hover:bg-green-50 hover:text-green-700">学習記録</Link>
-          <Link href="/menu" className="rounded-lg px-3 py-1.5 text-gray-600 hover:bg-green-50 hover:text-green-700">メニュー</Link>
+          <Link href="/past-exams" className="whitespace-nowrap rounded-lg px-2.5 py-1.5 lg:px-3 text-gray-600 hover:bg-green-50 hover:text-green-700">過去問</Link>
+          <Link href="/quiz" className="whitespace-nowrap rounded-lg px-2.5 py-1.5 lg:px-3 text-gray-600 hover:bg-green-50 hover:text-green-700">予想問題</Link>
+          <Link href="/acupoints" className="whitespace-nowrap rounded-lg px-2.5 py-1.5 lg:px-3 text-gray-600 hover:bg-green-50 hover:text-green-700">経穴</Link>
+          <Link href="/subjects" className="whitespace-nowrap rounded-lg px-2.5 py-1.5 lg:px-3 text-gray-600 hover:bg-green-50 hover:text-green-700">科目</Link>
+          <Link href="/analysis/compare/recent-6-years" className="whitespace-nowrap rounded-lg px-2.5 py-1.5 lg:px-3 text-gray-600 hover:bg-green-50 hover:text-green-700">分析</Link>
+          <Link href="/dashboard" className="whitespace-nowrap rounded-lg px-2.5 py-1.5 lg:px-3 text-gray-600 hover:bg-green-50 hover:text-green-700">学習記録</Link>
+          <Link href="/menu" className="whitespace-nowrap rounded-lg px-2.5 py-1.5 lg:px-3 text-gray-600 hover:bg-green-50 hover:text-green-700">メニュー</Link>
         </nav>
       </div>
     </header>
