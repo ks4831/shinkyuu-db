@@ -871,7 +871,7 @@
       "再生不良性貧血"
     ],
     "answerIndex": 0,
-    "explanation": "出血後は骨髄での血小板産生が反応性に亢進し、血小板数が増加することがある。紫斑病・急性白血病・再生不良性貧血はいずれも血小板が減少する病態である。",
+    "explanation": "出血後は骨髄での血小板産生が反応性に亢進し、血小板数が増加することがある。紫斑病では血小板は増加せず（特発性血小板減少性紫斑病では減少する）、急性白血病・再生不良性貧血は血小板が減少する病態である。",
     "hasFigure": false,
     "source": "第34回 はり師・きゅう師国家試験",
     "sourceUrl": "https://ahaki.or.jp/wordpress/wp-content/uploads/mondai_34_harikyu_am.pdf",
@@ -2811,7 +2811,7 @@
       "行間"
     ],
     "answerIndex": 1,
-    "explanation": "消穀善飢・滑数脈は胃熱の症候であり、胃経の五行穴を用いた瀉法（迎法）では、鍼尖を陥谷の方向に向けて斜刺する。",
+    "explanation": "消穀善飢・滑数脈は胃熱の症候であり、身熱を主る（難経六十八難）胃経の滎穴・内庭を用いる。迎随の瀉法（迎）では経脈の流注に逆らって刺すため、足へ下行する胃経では鍼尖を体幹側に向け、内庭の近位にある陥谷の方向へ斜刺する。",
     "hasFigure": false,
     "source": "第34回 はり師・きゅう師国家試験",
     "sourceUrl": "https://ahaki.or.jp/wordpress/wp-content/uploads/mondai_34_harikyu_pm.pdf",
@@ -2951,7 +2951,7 @@
       "足臨泣"
     ],
     "answerIndex": 3,
-    "explanation": "腹部の脹り・腰部の不安定感・寒熱往来は帯脈の病証に一致し、その八脈交会穴である足臨泣が下肢の治療穴として適切である。",
+    "explanation": "腹部の脹り・腰のすわりの悪さは帯脈、寒熱往来に苦しむのは陽維脈の病証（難経二十九難）であり、帯脈の八脈交会穴で陽維脈の外関と組になる足臨泣が下肢の治療穴として適切である。",
     "hasFigure": false,
     "source": "第34回 はり師・きゅう師国家試験",
     "sourceUrl": "https://ahaki.or.jp/wordpress/wp-content/uploads/mondai_34_harikyu_pm.pdf",
