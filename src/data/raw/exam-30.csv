@@ -53,7 +53,7 @@ id,examRound,year,questionNumber,session,subject,officialLarge,officialMedium,of
 30-052,30,2022,52,共通,clinical-specific,専門基礎科目,臨床医学各論,外傷,orthopedics,外傷とその原因の組合せ,,コーレス骨折（橈骨遠位端）：転倒・手掌をついた際。マレット変形：指先への強制屈曲。ボクサー骨折：第5中手骨頸部骨折（拳で打つ）,,indexed_official,2020,180,,cs-gaisho
 30-053,30,2022,53,共通,clinical-specific,専門基礎科目,臨床医学各論,神経筋疾患,neurology,ALSによくみられるもの,,ALS：上位・下位運動ニューロン障害（筋萎縮・線維束性収縮・痙縮・腱反射亢進が混在）。感覚障害・排尿障害・眼球運動障害は通常みられない（Spared systems）,,indexed_official,2020,180,,cs-shinkeikin
 30-054,30,2022,54,共通,clinical-specific,専門基礎科目,臨床医学各論,パーキンソン病,neurology,パーキンソン病の振戦が起こりやすい場面,,パーキンソン病の振戦は安静時振戦（pill-rolling tremor）が特徴。随意運動時には減少し、安静・緊張時に出現・増悪する。本態性振戦は動作時,,indexed_official,2020,180,,cs-parkinson
-30-055,30,2022,55,共通,clinical-specific,専門基礎科目,臨床医学各論,脳血管疾患,neurology,高血圧性脳出血の最好発部位,,高血圧性脳出血の最好発部位は被殻（全体の約60%）。レンズ核線条体動脈が破綻する。次いで視床・小脳・橋・皮質下の順,,indexed_official,2020,180,,cs-nokekkan
+30-055,30,2022,55,共通,clinical-specific,専門基礎科目,臨床医学各論,脳血管疾患,neurology,高血圧性脳出血の最好発部位,,高血圧性脳出血の最好発部位は被殻（約3割、レンズ核線条体動脈の破綻）。次いで視床（約3割弱）、皮質下、小脳・脳幹（橋）の順,,indexed_official,2020,180,,cs-nokekkan
 30-056,30,2022,56,共通,clinical-specific,専門基礎科目,臨床医学各論,血液疾患,hematology,汎血球減少症をきたす疾患,,汎血球減少症（赤血球・白血球・血小板すべて減少）：再生不良性貧血・骨髄異形成症候群・白血病（骨髄浸潤）・巨赤芽球性貧血（ビタミンB12・葉酸欠乏）,,indexed_official,2020,180,,cs-ketsueki
 30-057,30,2022,57,共通,clinical-specific,専門基礎科目,臨床医学各論,白血病,hematology,急性骨髄性白血病の特徴,,AML：骨髄芽球増加・Auer小体出現（特徴的）・汎血球減少・M3型（APL）はDICを合併しやすい。ALL（急性リンパ性）は小児に多い,,indexed_official,2020,180,,cs-ketsueki
 30-058,30,2022,58,共通,clinical-specific,専門基礎科目,臨床医学各論,婦人科疾患,gynecology,子宮筋腫の特徴,,子宮筋腫：良性の平滑筋腫瘍・エストロゲン依存性（閉経後に縮小）・月経過多・不正出血・貧血を引き起こす。最多の女性生殖器良性腫瘍,,indexed_official,2020,180,,cs-fujinka-nyusen
@@ -72,7 +72,7 @@ id,examRound,year,questionNumber,session,subject,officialLarge,officialMedium,of
 30-071,30,2022,71,共通,rehabilitation,専門基礎科目,リハビリテーション医学,社会的リハビリテーション,rehabilitation,社会的リハビリテーションに該当するもの,,社会的リハビリテーション：社会生活力を高め社会参加を支援する（施設入所支援・福祉サービスの利用など）。職業訓練は職業的リハ、特別支援教育は教育的リハ、二次的合併症の予防は医学的リハ,,indexed_official,2020,180,,rh-team
 30-072,30,2022,72,共通,rehabilitation,専門基礎科目,リハビリテーション医学,多職種連携,rehabilitation,退院後の在宅施設利用調整を行う職種,,医療ソーシャルワーカー（MSW）は退院支援として、退院後の在宅生活や施設利用などの社会資源の調整・相談を担う。看護師・作業療法士・義肢装具士の役割と区別する,,indexed_official,2020,180,,rh-team
 30-073,30,2022,73,共通,rehabilitation,専門基礎科目,リハビリテーション医学,歩行分析,rehabilitation,疾患と異常歩行の組合せ,,片麻痺→分回し歩行（患側下肢を外側に振り回す）。PD→小刻み歩行・すくみ足。中殿筋麻痺→トレンデレンブルグ歩行。小脳失調→酩酊様歩行,,indexed_official,2020,180,,rh-team
-30-074,30,2022,74,共通,rehabilitation,専門基礎科目,リハビリテーション医学,装具療法,rehabilitation,手関節背屈装具の適応,,手関節背屈装具（コックアップスプリント）の適応：橈骨神経麻痺（垂手）。尺骨神経麻痺には中手指節関節伸展装具（鷲手矯正）。神経麻痺と装具の対応を整理,,indexed_official,2020,180,,rh-gishi-sogu
+30-074,30,2022,74,共通,rehabilitation,専門基礎科目,リハビリテーション医学,装具療法,rehabilitation,手関節背屈装具の適応,,手関節背屈装具（コックアップスプリント）の適応：橈骨神経麻痺（垂手）。尺骨神経麻痺（鷲手）にはMP関節の過伸展を防ぎ屈曲位に保持する装具（ナックルベンダー・虫様筋カフ）。正中神経麻痺（猿手）には対立装具,,indexed_official,2020,180,,rh-gishi-sogu
 30-075,30,2022,75,共通,rehabilitation,専門基礎科目,リハビリテーション医学,動作分析,rehabilitation,スプーン操作の前腕・手関節運動,,スプーンでスープを口に運ぶ動作は、前腕回外と手関節屈曲（掌屈）を組み合わせてスプーンを口へ向ける（公式正答）。食事動作を前腕と手関節の運動方向に分けて分析する,,indexed_official,2020,180,,rh-team
 30-076,30,2022,76,共通,rehabilitation,専門基礎科目,リハビリテーション医学,脳卒中リハ,rehabilitation,生活期に最も使用される装具,,脳卒中片麻痺の生活期（在宅期）で最多使用される装具はプラスチック製短下肢装具（AFO）。尖足変形を防ぎ安定した歩行を実現する,,indexed_official,2020,180,,rh-nosocchu
 30-077,30,2022,77,共通,rehabilitation,専門基礎科目,リハビリテーション医学,脊髄損傷,rehabilitation,脊髄損傷の自律神経過反射,,自律神経過反射：T6以上の損傷で発生。誘因は膀胱充満・便秘・圧迫。急激な血圧上昇・発汗・頭痛・顔面紅潮→座位・誘因除去が緊急対応,,indexed_official,2020,180,,rh-sekizui
@@ -82,7 +82,7 @@ id,examRound,year,questionNumber,session,subject,officialLarge,officialMedium,of
 30-081,30,2022,81,共通,rehabilitation,専門基礎科目,リハビリテーション医学,変形性膝関節症リハ,rehabilitation,変形性膝関節症の最も適切なリハ,,変形性膝関節症のリハ：大腿四頭筋（特に内側広筋）強化訓練が基本。体重コントロール・水中歩行・痛みに応じた有酸素運動が推奨,,indexed_official,2020,180,,rh-shinkei-undoki
 30-082,30,2022,82,共通,rehabilitation,専門基礎科目,リハビリテーション医学,パーキンソン病,neurology,パーキンソン病の症状,,PD4主徴：安静時振戦・筋強剛（歯車様）・無動・姿勢反射障害。非運動症状：便秘・抑うつ・嗅覚障害・睡眠障害・自律神経症状（起立性低血圧等）,,indexed_official,2020,180,,rh-shinkei-undoki
 30-083,30,2022,83,共通,clinical-specific,専門基礎科目,臨床医学各論,脳血管疾患,neurology,右被殻出血の高次脳機能障害,,右半球の被殻出血では左半側空間無視（左USN）が出現しやすい。失語症は左半球病変。半側空間無視は日常生活・リハに大きく影響する,,indexed_official,2020,180,,cs-nokekkan
-30-084,30,2022,84,共通,rehabilitation,専門基礎科目,リハビリテーション医学,高次脳機能障害,rehabilitation,視覚見落とし（左USN）への対応,,左半側空間無視への対応：重要物を患者の右側に配置・視覚的手がかり・プリズム適応療法・ミラーセラピー（幻肢痛には使用）は不適切,,indexed_official,2020,180,,rh-engo-shogai
+30-084,30,2022,84,共通,rehabilitation,専門基礎科目,リハビリテーション医学,高次脳機能障害,rehabilitation,視覚見落とし（左USN）への対応,,左半側空間無視への対応：左側の段差・障害物を見落として転倒・衝突しやすいため、左側への注意を促す指導を行う。視覚探索訓練・プリズム適応療法などが用いられる,,indexed_official,2020,180,,rh-engo-shogai
 30-085,30,2022,85,共通,clinical-specific,専門基礎科目,臨床医学各論,肩関節疾患,orthopedics,腱板断裂の診察所見,,腱板断裂：中高年の肩峰部痛で、他動的には外転できても自力で外転位を保持できない（ドロップアームテスト陽性）。肩関節前方脱臼（上腕外転外旋位で弾性固定）との区別,,indexed_official,2020,180,,cs-gaisho
 30-086,30,2022,86,共通,clinical-specific,専門基礎科目,臨床医学各論,肩関節疾患,orthopedics,腱板断裂の確定検査,,腱板断裂の確定にはMRI（または超音波検査）で腱の断裂を描出する。単純X線は骨病変・脱臼の評価向きで腱は描出できない,,indexed_official,2020,180,,cs-gaisho
 30-087,30,2022,87,共通,clinical-specific,専門基礎科目,臨床医学各論,膵疾患,renal-urological,膵臓癌の症状,,膵臓癌：持続する背部の鈍痛、食欲不振、体重減少、倦怠感（膵頭部では黄疸）。発熱のない持続性背部痛と体重減少では悪性腫瘍を疑う,,indexed_official,2020,180,,cs-shokaki
@@ -120,7 +120,7 @@ id,examRound,year,questionNumber,session,subject,officialLarge,officialMedium,of
 30-119,30,2022,119,共通,meridians-acupoints,専門科目,経絡経穴概論,経脈関係,meridians-acupoints,表裏関係にある経脈の経穴,,手の太陰肺経（裏）⇔手の陽明大腸経（表）。両経に位置する経穴で隣接・対応するもの：列欠（LU7）⇔偏歴（LI6）等の絡穴の組合せ,,indexed_official,2020,180,,kei-myaku-ryuchu
 30-120,30,2022,120,共通,meridians-acupoints,専門科目,経絡経穴概論,経穴部位,meridians-acupoints,腓骨後方の経穴,,陽交（陽維脈の郄穴）は外果尖の上方7寸、腓骨の後方。外丘（胆経の郄穴）は同じ高さの腓骨前方、光明（胆経の絡穴）は外果尖の上方5寸、懸鍾（髄会）は上方3寸,,indexed_official,2020,180,,juni-kei-myaku
 30-121,30,2022,121,共通,meridians-acupoints,専門科目,経絡経穴概論,五兪穴,meridians-acupoints,五兪穴と咳嗽・発熱への選穴,,難経六十八難：井は心下満、滎は身熱、兪は体重節痛、経は喘咳寒熱、合は逆気して泄するを主る。咳嗽と発熱には経穴（陰経では金穴）を用い、腎経の経金穴は復溜,,indexed_official,2020,180,,go-yu-ketsu
-30-122,30,2022,122,共通,meridians-acupoints,専門科目,経絡経穴概論,経穴部位,meridians-acupoints,六つ灸と同高さの経穴,,六つ灸（膈兪・肝兪・脾兪を含む背部兪穴群）と同高さに位置する膀胱経第2行（外方3寸）の経穴：膏肓（T4）・魂門（T9）・意舎（T11）等の対応,,indexed_official,2020,180,,juni-kei-myaku
+30-122,30,2022,122,共通,meridians-acupoints,専門科目,経絡経穴概論,経穴部位,meridians-acupoints,六つ灸と同高さの経穴,,六つ灸＝左右の膈兪（第7胸椎）・肝兪（第9胸椎）・脾兪（第11胸椎）。同じ高さに督脈の至陽・筋縮・脊中、膀胱経第2行の膈関・魂門・意舎がある,,indexed_official,2020,180,,juni-kei-myaku
 30-123,30,2022,123,共通,meridians-acupoints,専門科目,経絡経穴概論,五兪穴,meridians-acupoints,大腸下合穴所属経脈の経火穴,,大腸の下合穴は上巨虚（胃経ST37）。上巨虚が所属する胃経の経火穴（五兪穴「経」穴は五行配当の「火行」）は解渓（ST41）,,indexed_official,2020,180,,go-yu-ketsu
 30-124,30,2022,124,共通,meridians-acupoints,専門科目,経絡経穴概論,経穴部位,meridians-acupoints,腓骨頭直下と脛骨粗面下端中間の経穴,,中風七穴：百会・曲鬢・肩井・風市・足三里・懸鍾（絶骨）・曲池。本問の部位の経穴は中風七穴に属する（公式正答）。陽陵泉（筋会＝八会穴・腓骨頭前下方）と位置を区別する,,indexed_official,2020,180,,juni-kei-myaku
 30-125,30,2022,125,共通,meridians-acupoints,専門科目,経絡経穴概論,刺鍼反応,acupuncture-technique,皮膚温変化を示す反応点,,皮膚温変化（体表温度異常）を示す反応点：良導点（皮膚電気抵抗低下点）・圧痛点・過敏点。サーモグラフィで検出可能。内臓-体性反射で出現する,,indexed_official,2020,180,,me-shishin-anzen
@@ -160,7 +160,7 @@ id,examRound,year,questionNumber,session,subject,officialLarge,officialMedium,of
 30-159,30,2022,159,共通,oriental-clinical,専門科目,東洋医学臨床論,浮腫の弁証,tcm-clinical,むくみ患者の治療臓腑,,浮腫（むくみ）に関わる臓腑：肺（宣発粛降・水の上源）・脾（運化・水湿停留防止）・腎（温化・気化機能）の三臓が水液代謝を担う,,indexed_official,2020,180,,oc-kakka-chiryo
 30-160,30,2022,160,共通,oriental-clinical,専門科目,東洋医学臨床論,浮腫の治療,tcm-clinical,むくみへの治療穴,,浮腫の治療穴：水分（RN9・水液調節）・気海（RN6）・脾兪（BL20）・腎兪（BL23）・陰陵泉（SP9）・三陰交（SP6）・足三里（ST36）,,indexed_official,2020,180,,oc-kakka-chiryo
 30-161,30,2022,161,共通,acupuncture-theory,専門科目,はり理論,鍼の形状,acupuncture-technique,打鍼法の鍼尖形状,,打鍼法は日本独自の鍼法で、鍼を腹部などに当てて小槌で叩いて刺激する。打鍼の鍼尖はスリオロシ形（公式正答）。鍼尖の形状（松葉形・卵形・ノゲ形・スリオロシ形）の違いを整理する,,indexed_official,2020,180,,ha-goshin-kozo
-30-162,30,2022,162,共通,acupuncture-theory,専門科目,はり理論,刺鍼手技,acupuncture-technique,刺鍼法と手技の組合せ,,刺鍼手技の名称と動作：雀啄術（上下の出入り運動）・回旋術（鍼体を軸とした回転）・屋漏術（弾くような断続的刺激）・振せん術（微細な振動）,,indexed_official,2020,180,,ha-shishinho
+30-162,30,2022,162,共通,acupuncture-theory,専門科目,はり理論,刺鍼手技,acupuncture-technique,刺鍼法と手技の組合せ,,刺鍼手技の名称と動作：雀啄術（上下の出入り運動）・回旋術（鍼体を軸とした回転）・振せん術（微細な振動）,,indexed_official,2020,180,,ha-shishinho
 30-163,30,2022,163,共通,acupuncture-theory,専門科目,はり理論,古代鍼,acupuncture-technique,古代九鍼と三稜鍼の対応,,古代九鍼「鋒鍼（ほうしん）」が現代の三稜鍼に相当する。三角錐状の鍼尖で瀉血・排膿に使用する刺法（絡刺・豹文刺）で用いる,,indexed_official,2020,180,,ha-kodai-kyushin
 30-164,30,2022,164,共通,acupuncture-theory,専門科目,はり理論,徒手検査と刺鍼,acupuncture-technique,徒手検査法と局所刺鍼の組合せ,,徒手検査で罹患部位を特定→局所刺鍼：ニールダウンテスト（+）→棘上筋。ドロップアームテスト（+）→棘上筋断裂。パターンを整理,,indexed_official,2020,180,,ha-shishinho
 30-165,30,2022,165,共通,acupuncture-theory,専門科目,はり理論,刺鍼リスク管理,acupuncture-technique,置鍼時の折鍼リスク部位,,折鍼リスクが高い条件：細径鍼（01番以下）・長時間置鍼・筋運動が多い部位（頸肩・咬筋）・繰り返し使用による金属疲労。ディスポ鍼使用で予防,,indexed_official,2020,180,,hari-risk-kanri
