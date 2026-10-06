@@ -28,14 +28,6 @@ export default function Header() {
           <Link href="/dashboard" className="rounded-lg px-3 py-1.5 text-gray-600 hover:bg-green-50 hover:text-green-700">学習記録</Link>
           <Link href="/menu" className="rounded-lg px-3 py-1.5 text-gray-600 hover:bg-green-50 hover:text-green-700">メニュー</Link>
         </nav>
-
-        {/* Mobile: single CTA */}
-        <Link
-          href="/quiz/daily"
-          className="rounded-full bg-green-600 px-4 py-1.5 text-xs font-bold text-white hover:bg-green-700 sm:hidden"
-        >
-          今日の10問
-        </Link>
       </div>
     </header>
   )
