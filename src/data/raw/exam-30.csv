@@ -123,7 +123,7 @@ id,examRound,year,questionNumber,session,subject,officialLarge,officialMedium,of
 30-122,30,2022,122,共通,meridians-acupoints,専門科目,経絡経穴概論,経穴部位,meridians-acupoints,六つ灸と同高さの経穴,,六つ灸＝左右の膈兪（第7胸椎）・肝兪（第9胸椎）・脾兪（第11胸椎）。同じ高さに督脈の至陽・筋縮・脊中、膀胱経第2行の膈関・魂門・意舎がある,,indexed_official,2020,180,,juni-kei-myaku
 30-123,30,2022,123,共通,meridians-acupoints,専門科目,経絡経穴概論,五兪穴,meridians-acupoints,大腸下合穴所属経脈の経火穴,,大腸の下合穴は上巨虚（胃経ST37）。上巨虚が所属する胃経の経火穴（五兪穴「経」穴は五行配当の「火行」）は解渓（ST41）,,indexed_official,2020,180,,go-yu-ketsu
 30-124,30,2022,124,共通,meridians-acupoints,専門科目,経絡経穴概論,経穴部位,meridians-acupoints,腓骨頭直下と脛骨粗面下端中間の経穴,,中風七穴の構成穴は文献により異なる。本問の部位の経穴は中風七穴に属する（公式正答）。陽陵泉（筋会＝八会穴・腓骨頭前下方）と位置を区別する,,indexed_official,2020,180,,juni-kei-myaku
-30-125,30,2022,125,共通,meridians-acupoints,専門科目,経絡経穴概論,刺鍼反応,acupuncture-technique,皮膚温変化を示す反応点,,皮膚温の変化を示すのはエアポケット現象（公式正答）。丘疹点は皮膚の丘疹状の変化、ヘッド帯は内臓疾患に伴う皮膚の知覚過敏帯、ボアス点は胃潰瘍などでみられる背部の圧痛点,,indexed_official,2020,180,,me-shishin-anzen
+30-125,30,2022,125,共通,meridians-acupoints,専門科目,経絡経穴概論,刺鍼反応,acupuncture-technique,皮膚温変化を示す反応点,,皮膚温の変化を示すのはエアポケット現象（内臓疾患に伴う局所的な皮膚温低下。松永藤雄が命名）。ボアス点は胃・十二指腸潰瘍などでみられる背部の圧痛点,,indexed_official,2020,180,,me-shishin-anzen
 30-126,30,2022,126,共通,meridians-acupoints,専門科目,経絡経穴概論,禁灸部位,acupuncture-technique,透熱灸を避けるべき経穴,,透熱灸（直接有痕灸）を避ける部位：顔面（色素沈着・瘢痕残存）・大血管上・粘膜・関節部・妊婦の腰腹部。睛明・承泣・瞳子髎などの眼周囲穴も禁忌,,indexed_official,2020,180,,me-shishin-anzen
 30-127,30,2022,127,共通,oriental-clinical,専門科目,東洋医学臨床論,頭痛の治療,tcm-clinical,緊張型頭痛の罹患筋と治療穴,,緊張型頭痛の局所治療：後頭筋上の玉枕（外後頭隆起上縁の外方）が正しい組合せ。風池は胸鎖乳突筋と僧帽筋の間、翳風は耳垂後方、脳空は後頭筋上にある,,indexed_official,2020,180,,oc-kakka-chiryo
 30-128,30,2022,128,共通,oriental-clinical,専門科目,東洋医学臨床論,低周波鍼通電療法,acupuncture-technique,片麻痺への低周波鍼通電療法,,マン・ウェルニッケ肢位の上肢は屈筋群が痙縮。相反性Ⅰa抑制を応用し、拮抗筋の伸筋群（上腕三頭筋上の消濼、前腕伸筋群上の外関など）に低周波鍼通電を行って痙縮筋を抑制する,,indexed_official,2020,180,,oc-kakka-chiryo
@@ -159,7 +159,7 @@ id,examRound,year,questionNumber,session,subject,officialLarge,officialMedium,of
 30-158,30,2022,158,共通,oriental-clinical,専門科目,東洋医学臨床論,腰痛治療,tcm-clinical,腰部筋力低下への局所治療穴,,伸長・弱化した大殿筋への局所治療穴：殿部の胞肓（第2後仙骨孔の高さ、正中仙骨稜の外方3寸）。居髎（大腿筋膜張筋付近）・衝門・髀関（股関節屈筋側）は不適切,,indexed_official,2020,180,,oc-keiraku-chiryo
 30-159,30,2022,159,共通,oriental-clinical,専門科目,東洋医学臨床論,浮腫の弁証,tcm-clinical,むくみ患者の治療臓腑,,浮腫（むくみ）に関わる臓腑：肺（宣発粛降・水の上源）・脾（運化・水湿停留防止）・腎（温化・気化機能）の三臓が水液代謝を担う,,indexed_official,2020,180,,oc-kakka-chiryo
 30-160,30,2022,160,共通,oriental-clinical,専門科目,東洋医学臨床論,浮腫の治療,tcm-clinical,むくみへの治療穴,,浮腫の治療穴：水分（RN9・水液調節）・気海（RN6）・脾兪（BL20）・腎兪（BL23）・陰陵泉（SP9）・三陰交（SP6）・足三里（ST36）,,indexed_official,2020,180,,oc-kakka-chiryo
-30-161,30,2022,161,共通,acupuncture-theory,専門科目,はり理論,鍼の形状,acupuncture-technique,打鍼法の鍼尖形状,,打鍼法は日本独自の鍼法で、鍼を腹部などに当てて小槌で叩いて刺激する。打鍼の鍼尖はスリオロシ形（公式正答）。鍼尖の形状（松葉形・卵形・ノゲ形・スリオロシ形）の違いを整理する,,indexed_official,2020,180,,ha-goshin-kozo
+30-161,30,2022,161,共通,acupuncture-theory,専門科目,はり理論,鍼の形状,acupuncture-technique,打鍼法の鍼尖形状,,打鍼術の鍼は先が鋭く尖ったスリオロシ形（公式正答。古文献の打鍼図による）,,indexed_official,2020,180,,ha-goshin-kozo
 30-162,30,2022,162,共通,acupuncture-theory,専門科目,はり理論,刺鍼手技,acupuncture-technique,刺鍼法と手技の組合せ,,刺鍼手技の名称と動作：雀啄術（上下の出入り運動）・回旋術（鍼体を軸とした回転）・振せん術（微細な振動）,,indexed_official,2020,180,,ha-shishinho
 30-163,30,2022,163,共通,acupuncture-theory,専門科目,はり理論,古代鍼,acupuncture-technique,古代九鍼と三稜鍼の対応,,古代九鍼「鋒鍼（ほうしん）」が現代の三稜鍼に相当する。三角錐状の鍼尖で瀉血・排膿に使用する刺法（絡刺・豹文刺）で用いる,,indexed_official,2020,180,,ha-kodai-kyushin
 30-164,30,2022,164,共通,acupuncture-theory,専門科目,はり理論,徒手検査と刺鍼,acupuncture-technique,徒手検査法と局所刺鍼の組合せ,,トーマステスト陽性（股関節屈筋の短縮）など筋の短縮・緊張には局所刺鍼が有効と考えられる。マクマレー（半月板損傷）・ラックマン（前十字靱帯損傷）・ドロップアーム（腱板断裂）陽性の器質的損傷には局所刺鍼の効果は限られる,,indexed_official,2020,180,,ha-shishinho
@@ -171,7 +171,7 @@ id,examRound,year,questionNumber,session,subject,officialLarge,officialMedium,of
 30-170,30,2022,170,共通,acupuncture-theory,専門科目,はり理論,鍼鎮痛,acupuncture-technique,脊髄分節性鎮痛の機序,,脊髄分節性鎮痛：疼痛部位と同じ脊髄分節の部位に刺鍼→脊髄後角での侵害入力抑制（ゲートコントロール理論）。分節的な鎮痛を発揮する,,indexed_official,2020,180,,ha-chintsu-kiko
 30-171,30,2022,171,共通,moxibustion-theory,専門科目,きゅう理論,艾の製造,acupuncture-technique,艾の製造工程と用具,,艾（もぐさ）の製造：ヨモギ葉を乾燥→粉砕（臼）→篩い分け→けんどん（夾雑物除去器具）→精製を繰り返す。高精製ほど繊維質が多く白くなる,,indexed_official,2020,180,,ky-mogusa
 30-172,30,2022,172,共通,moxibustion-theory,専門科目,きゅう理論,灸の種類,acupuncture-technique,無痕灸の種類,,無痕灸（瘢痕を残さない灸）：棒灸（艾条灸）・温灸器使用・隔物灸（生姜灸・塩灸・附子餅灸）・灸頭鍼（鍼柄に艾を付ける）。透熱灸は有痕灸,,indexed_official,2020,180,,ky-kyuho-shurui
-30-173,30,2022,173,共通,moxibustion-theory,専門科目,きゅう理論,灸の副作用,acupuncture-technique,施灸後の熱傷の程度判定,,熱傷の深度：Ⅰ度（発赤・灼熱感）・浅達性Ⅱ度（水疱・疼痛）・深達性Ⅱ度（水疱・知覚鈍麻）・Ⅲ度（壊死・潰瘍・知覚消失）。打膿灸は意図的なⅡ度熱傷,,indexed_official,2020,180,,ky-fukusayo-hosoku
+30-173,30,2022,173,共通,moxibustion-theory,専門科目,きゅう理論,灸の副作用,acupuncture-technique,施灸後の熱傷の程度判定,,施灸後に紅斑と痛み（水疱なし）＝Ⅰ度熱傷（表皮まで）。Ⅱ度は真皮に達して水疱と強い痛み、Ⅲ度は皮膚全層で痛みを感じない（日本熱傷学会 熱傷用語集2015）,,indexed_official,2020,180,,ky-fukusayo-hosoku
 30-174,30,2022,174,共通,moxibustion-theory,専門科目,きゅう理論,灸の副作用,acupuncture-technique,灸痕の化膿防止方法,,施灸後の化膿予防：灸痕を清潔保持（滅菌ガーゼ保護）・抗菌軟膏塗布。糖尿病患者・ステロイド長期服用・高齢者は易感染性・創傷治癒遅延に注意,,indexed_official,2020,180,,ky-fukusayo-hosoku
 30-175,30,2022,175,共通,moxibustion-theory,専門科目,きゅう理論,灸の適応と注意,acupuncture-technique,副腎皮質ホルモン長期服用患者への施灸,,ステロイド（副腎皮質ホルモン）長期服用患者：皮膚菲薄化・易感染性・創傷治癒遅延があるため直接灸（透熱灸）は慎重に。温灸・隔物灸が推奨される,,indexed_official,2020,180,,ky-kyuho-shurui
 30-176,30,2022,176,共通,moxibustion-theory,専門科目,きゅう理論,神経生理,neurophysiology,熱刺激の一次求心性神経線維,,灸の熱刺激を伝える一次求心性神経：Aδ線維（第一次痛・鋭い熱感・快速伝導）とC線維（第二次痛・ジンジンする鈍い熱感・遅伝導）。ポリモーダル受容器を介する,,indexed_official,2020,180,,ky-zenshin-sayo

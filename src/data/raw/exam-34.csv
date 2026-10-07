@@ -96,7 +96,7 @@ id,examRound,year,questionNumber,session,subject,officialLarge,officialMedium,of
 34-095,34,2026,95,共通,oriental-overview,専門科目,東洋医学概論,六腑の機能,tcm-fundamentals,六腑の機能（三焦）,,六腑（胆・小腸・胃・大腸・膀胱・三焦）の機能と三焦の原気通路としての役割を整理する,,indexed_official,2020,180,,zo-sho
 34-096,34,2026,96,共通,oriental-overview,専門科目,東洋医学概論,経脈の気血,meridians-acupoints,経脈の気血の多少,,太陰経と少陽経はいずれも気血の多少が「多気少血」とされる経脈,,indexed_official,2020,180,,ki-ketsu-shin-eki
 34-097,34,2026,97,共通,oriental-overview,専門科目,東洋医学概論,六淫,tcm-fundamentals,六淫（風邪）の性質,,風邪は上部（頭部・体表）を侵しやすく、発汗を生じやすく、他の邪気を先導するため「百病の長」といわれる。燥邪を伴うことは風邪の代表的な性質ではない,,indexed_official,2020,180,,roku-in
-34-098,34,2026,98,共通,oriental-overview,専門科目,東洋医学概論,病因論,tcm-fundamentals,三毒説・病因分類,,三毒説に直接関係するのは飲食不節（正答）。房事過多・七情の失調・労倦は三毒説に直接関係しない,,indexed_official,2020,180,,shichi-jo
+34-098,34,2026,98,共通,oriental-overview,専門科目,東洋医学概論,病因論,tcm-fundamentals,三毒説・病因分類,,三毒＝瘀血（血毒）・水毒・食毒。飲食不節は食毒に直接関係する,,indexed_official,2020,180,,shichi-jo
 34-099,34,2026,99,共通,oriental-overview,専門科目,東洋医学概論,弁証論治,tcm-clinical,肝気犯胃の症候,,肝気犯胃・肝脾不和の症候（胸苦しさ・噯気・放屁・脹り感）を整理する,,indexed_official,2020,180,,oo-shinsatsu-bensho
 34-100,34,2026,100,共通,oriental-overview,専門科目,東洋医学概論,弁証論治,tcm-clinical,陰虚内熱の症候,,陰虚内熱の症候（午後の微熱・五心煩熱・盗汗・頬の発赤・脈細数）を整理する,,indexed_official,2020,180,,oo-shinsatsu-bensho
 34-101,34,2026,101,共通,oriental-overview,専門科目,東洋医学概論,弁証・舌診,tcm-clinical,胃熱の症候と舌所見,,胃熱（胃火上炎）の典型症候（呑酸・げっぷ・食後空腹感）と舌苔（黄苔）を整理する,,indexed_official,2020,180,,oo-shinsatsu-bensho
