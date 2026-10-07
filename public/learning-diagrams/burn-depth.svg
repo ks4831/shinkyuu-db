@@ -1,4 +1,4 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 480 280" role="img" aria-label="熱傷の深度と皮膚の層の関係を示した図">
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 480 262" role="img" aria-label="熱傷の深度と皮膚の層の関係を示した図">
   <style>
     .t{font-family:'Hiragino Sans','Noto Sans JP',sans-serif;}
     .h{font-weight:700;fill:#166534;}
@@ -10,7 +10,7 @@
     .line{stroke:#9ca3af;stroke-width:1;}
     .depth{stroke:#166534;stroke-width:2;}
   </style>
-  <rect width="480" height="280" fill="#ffffff"/>
+  <rect width="480" height="262" fill="#ffffff"/>
   <text class="t h" x="20" y="28" font-size="16">熱傷の深度と皮膚の層</text>
 
   <!-- skin layers -->
@@ -41,7 +41,6 @@
     <text class="t" x="300" y="200" fill="#1f2937">皮膚全層・壊死・無痛（知覚消失）</text>
   </g>
 
-  <text class="t" x="20" y="234" font-size="12" fill="#6b7280">※ 打膿灸は意図的に「Ⅱ度」の熱傷をつくる有痕灸。</text>
-  <text class="t" x="20" y="252" font-size="12" fill="#6b7280">※ 痛みが強い＝浅い（Ⅱ度）。Ⅲ度はむしろ痛みを感じない。</text>
-  <text class="t" x="20" y="270" font-size="12" fill="#6b7280">※ 透熱灸では小さな浅達性Ⅱ度の水疱→小灸痕となる。</text>
+  <text class="t" x="20" y="234" font-size="12" fill="#6b7280">※ 痛みが強い＝浅い（Ⅱ度）。Ⅲ度はむしろ痛みを感じない。</text>
+  <text class="t" x="20" y="252" font-size="12" fill="#6b7280">※ 透熱灸では小さな浅達性Ⅱ度の水疱→小灸痕となる。</text>
 </svg>

@@ -111,7 +111,7 @@ export const LEARNING_DIAGRAMS: Record<string, LearningDiagram> = {
     file: '/learning-diagrams/burn-depth.svg',
     title: '熱傷の深度',
     alt: 'Ⅰ度（表皮・発赤）、浅達性Ⅱ度（真皮浅層・水疱・強い痛み・瘢痕なし）、深達性Ⅱ度（真皮深層・水疱・知覚鈍麻・瘢痕あり）、Ⅲ度（皮膚全層・壊死・無痛）を皮膚の層とともに示した図。',
-    caption: 'Ⅰ度＝発赤、Ⅱ度＝水疱、Ⅲ度＝壊死・無痛。痛みが強いほど浅い。打膿灸は意図的なⅡ度熱傷。',
+    caption: 'Ⅰ度＝発赤、Ⅱ度＝水疱、Ⅲ度＝壊死・無痛。痛みが強いほど浅い。',
   },
 }
 
