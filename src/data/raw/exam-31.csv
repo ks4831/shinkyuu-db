@@ -103,7 +103,7 @@ id,examRound,year,questionNumber,session,subject,officialLarge,officialMedium,of
 31-102,31,2023,102,共通,oriental-overview,専門科目,東洋医学概論,経脈病証の症例,tcm-diagnosis,腰痛・下腹部痛・季肋部腫れの経脈病証,,腰痛（前後屈困難）＋下腹部痛＋季肋部腫れ＋咽渇＋下痢は足の厥陰肝経の病証（肝経の循行と病証に一致）,,indexed_official,2020,180,,oo-shinsatsu-bensho
 31-103,31,2023,103,共通,oriental-overview,専門科目,東洋医学概論,弁証・脈診,tcm-diagnosis,汗と脈状の対応,,手足心汗と細脈の組合せが正しい（陰虚で手足心汗・細脈）。無汗は浮緊脈。大汗は大・洪脈,,indexed_official,2020,180,,oo-shinsatsu-bensho
 31-104,31,2023,104,共通,oriental-overview,専門科目,東洋医学概論,腹診,tcm-diagnosis,瘀血の腹診所見（少腹急結）,,転職ストレス・刺痛・シミ→瘀血→腹診所見は少腹急結（正しい）。腹裏拘急は虚寒。心下痞鞕は水飲・気滞。小腹不仁は腎虚,,indexed_official,2020,180,,oo-shinsatsu-bensho
-31-105,31,2023,105,共通,oriental-overview,専門科目,東洋医学概論,鍼灸治療論・選穴,tcm-diagnosis,六部定位・難経六十九難に基づく治療穴,,左関上沈実（肝実）→難経六十九難（実則瀉其子）→肝の子は心（火行）→肝経の火穴を瀉す→行間（または心経）。少府は心経,,indexed_official,2020,180,,oo-chiryo-gairon
+31-105,31,2023,105,共通,oriental-overview,専門科目,東洋医学概論,鍼灸治療論・選穴,tcm-diagnosis,六部定位・難経六十九難に基づく治療穴,,左関上の沈は肝。沈実（肝実）には難経六十九難「実すればその子を瀉す」を用いる。肝（木）の子は火で、子経（心経）の火穴＝少府を瀉す（正答）。自経（肝経）の火穴＝行間も同じ理由で用いるが選択肢にない。陰谷は腎経の水穴、経渠は肺経の金穴、陽輔は胆経の火穴,,indexed_official,2020,180,,oo-chiryo-gairon
 31-106,31,2023,106,共通,oriental-overview,専門科目,東洋医学概論,病証の症例,tcm-diagnosis,COVID後遺症・陰液損傷の病理,,乾いた咳嗽・黄色少量の痰・手足のほてり・紅い頰→陰液の損傷（肺陰虚）。肺気不足は気虚。風寒侵襲は表証。痰湿停留は湿痰,,indexed_official,2020,180,,oo-shinsatsu-bensho
 31-107,31,2023,107,共通,meridians-acupoints,専門科目,経絡経穴概論,経絡の概要,meridians-acupoints,胸中で接続する経脈の井穴,,胸中で接続する経脈は足少陰腎経と手厥陰心包経（腎経は肺を経て心包に絡い胸中に注ぐ）。両経の井穴は湧泉（腎経）と中衝（心包経）。少沢・至陰は手太陽小腸経と足太陽膀胱経の井穴で睛明での接続,,indexed_official,2020,180,,juni-kei-myaku
 31-108,31,2023,108,共通,meridians-acupoints,専門科目,経絡経穴概論,経絡の概要,meridians-acupoints,十二経筋の特性,,十二経筋は四肢末端から始まる（正しい）。奇経八脈は奇経同士に表裏関係はない。十二経別は正経と合する（陰陽合穴）。正経は中焦から始まる,,indexed_official,2020,180,,juni-kei-myaku
