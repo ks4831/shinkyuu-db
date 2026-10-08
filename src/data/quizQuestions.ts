@@ -1734,7 +1734,7 @@ export const QUIZ_QUESTIONS: QuizQuestion[] = [
     correctAnswer: 0,
     explanation:
       '知熱灸は艾炷が燃え尽きる前、熱さを感じた時点で取り除くため灸痕を残さない無痕灸。透熱灸・焦灼灸・打膿灸はいずれも艾炷を皮膚上で燃焼させ灸痕（有痕灸）を残す。',
-    memoryPoint: '無痕灸＝知熱灸・糸状灸・隔物灸・温灸。有痕灸＝透熱灸・焦灼灸・打膿灸。',
+    memoryPoint: '無痕灸＝知熱灸・隔物灸・温灸など。有痕灸＝透熱灸・焦灼灸・打膿灸。',
     commonMistake: '透熱灸は「熱を感じたら取る」ではなく燃焼しきる有痕灸。',
     difficulty: 'normal',
     importance: 'A',
@@ -1807,7 +1807,7 @@ export const QUIZ_QUESTIONS: QuizQuestion[] = [
     ],
     correctAnswer: 0,
     explanation:
-      '打膿灸は多壮の施灸を行い、膏薬を貼って化膿を促す有痕灸。強力な生体反応（白血球増多・免疫賦活）をねらう伝統的手技。鍼柄に艾をつけるのは灸頭鍼。',
+      '打膿灸は有痕灸の一つで、灸痕の化膿を促し（通常はその後に膏薬を貼る）、排膿させる目的で行う。鍼柄に艾をつけるのは灸頭鍼。',
     memoryPoint: '打膿灸＝わざと化膿させる有痕灸。灸頭鍼＝鍼＋艾。',
     commonMistake: '打膿灸を「無痕灸」と誤りやすい。灸痕・化膿を残す。',
     difficulty: 'normal',
