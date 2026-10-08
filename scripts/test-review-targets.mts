@@ -149,4 +149,68 @@ test('学習記録の「復習待ち」は重複を1問として数える', () =
   assert.equal(s.weakCount, 2); assert.equal(s.reviewCount, 2); assert.equal(s.reviewTargetCount, 3)
 })
 
+/* ── 過去問との関係・今日の10問・苦手復習・途中再開 ── */
+const P = await import('../src/lib/pastExamStorage')
+const PS = await import('../src/lib/pastExamSession')
+const D = await import('../src/lib/dailyQuiz')
+
+test('過去問とIDが衝突しても別の問題として扱う（保存キーが別・予想問題にない id は出題しない）', () => {
+  // 過去問の解答は別キーに保存され、予想問題の復習対象に影響しない
+  P.recordPastExamAttempt({ questionId: '30-057', examRound: 30, correct: false })
+  P.recordPastExamAttempt({ questionId: ids[0], examRound: 30, correct: false }) // 仮に予想問題と同じ id でも
+  assert.equal(T.readReviewTargets().kind, 'empty')
+  // 予想問題の解答は過去問の履歴に入らない
+  answer(ids[1], false)
+  assert.equal(P.getPastExamHistory().length, 2)
+  // 過去問の id が予想問題の保存データに紛れ込んでも出題しない
+  S.addReview('30-057')
+  const t = T.readReviewTargets()
+  assert.deepEqual(t.ids, [ids[1]]); assert.equal(t.kind, 'wrongOnly')
+})
+
+test('復習の操作は過去問の途中再開データを変えない', () => {
+  const raw = JSON.stringify({ 30: { mode: 'round', index: 5 } })
+  store.set(PS.PAST_EXAM_SESSION_KEY, raw)
+  answer(ids[0], false); S.addReview(ids[1]); S.removeReview(ids[1]); T.readReviewTargets()
+  assert.equal(store.get(PS.PAST_EXAM_SESSION_KEY), raw)
+})
+
+test('今日の10問：途中再開しても回答は保持され、終了後の復習対象は不正解と手動登録から決まる', () => {
+  const st = D.getOrCreateDailyState()
+  const qs = D.resolveDailyQuestions(st)
+  assert.equal(qs.length, D.DAILY_COUNT)
+  // 前半5問：1問目だけ不正解
+  qs.slice(0, 5).forEach((q, i) => { answer(q.id, i !== 0); D.recordDailyAnswer(i, i !== 0) })
+  // 途中再開（保存データから読み直す）
+  const resumed = D.getOrCreateDailyState()
+  assert.equal(resumed.currentIndex, 5)
+  assert.deepEqual(resumed.questionIds, st.questionIds)
+  // 後半5問：全問正解し、うち1問を手動登録
+  qs.slice(5).forEach((q, j) => { answer(q.id, true); D.recordDailyAnswer(5 + j, true) })
+  S.addReview(qs[7].id)
+  const fin = D.finalizeDailyIfComplete()
+  assert.equal(fin.completed, true)
+  const t = T.readReviewTargets()
+  assert.equal(t.kind, 'mixed'); assert.equal(t.total, 2); assert.deepEqual(t.ids, [qs[0].id, qs[7].id])
+  // 復習対象を読んでも今日の10問の状態は変わらない
+  const before = store.get(D.DAILY_STATE_KEY)
+  T.readReviewTargets()
+  assert.equal(store.get(D.DAILY_STATE_KEY), before)
+})
+
+test('苦手復習：開始時の対象はセッション中に固定され、終了後は既存ルールで更新される', () => {
+  answer(ids[0], false); answer(ids[1], false); S.addReview(ids[2])
+  const atStart = T.readReviewTargets()
+  assert.equal(atStart.kind, 'mixed'); assert.equal(atStart.total, 3)
+  // セッション中に全問正解（間違えた問題は1回目の正解ではまだ外れない）
+  atStart.ids.forEach((id) => answer(id, true))
+  assert.deepEqual(atStart.ids, [ids[0], ids[1], ids[2]])
+  const mid = T.readReviewTargets()
+  assert.equal(mid.total, 3)
+  // もう一度全問正解 → 間違えた問題は外れ、手動登録だけ残る
+  mid.ids.forEach((id) => answer(id, true))
+  const after = T.readReviewTargets()
+  assert.equal(after.kind, 'savedOnly'); assert.deepEqual(after.ids, [ids[2]])
+})
+
 console.log(`OK: ${n} 件`)
