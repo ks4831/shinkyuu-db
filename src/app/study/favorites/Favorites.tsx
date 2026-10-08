@@ -56,19 +56,19 @@ export default function Favorites({ examStats }: Props) {
         <span>›</span>
         <Link href="/study/dashboard" className="hover:text-green-600 transition-colors">ダッシュボード</Link>
         <span>›</span>
-        <span className="text-gray-700">復習リスト</span>
+        <span className="text-gray-700">お気に入りテーマ</span>
       </nav>
 
       <div className="mb-6">
-        <h1 className="text-2xl font-bold text-gray-900">あとで見るテーマ</h1>
-        <p className="text-sm text-gray-500 mt-1">「あとで復習」したテーマをまとめて確認できます</p>
+        <h1 className="text-2xl font-bold text-gray-900">お気に入りテーマ</h1>
+        <p className="text-sm text-gray-500 mt-1">お気に入りに登録したテーマをまとめて確認できます</p>
       </div>
 
       {themes.length === 0 ? (
         <div className="text-center py-16 text-gray-400">
           <p className="text-4xl mb-4">☆</p>
-          <p className="font-semibold text-gray-500 mb-2">復習リストは空です</p>
-          <p className="text-sm">テーマ詳細ページで「あとで復習」ボタンを押すと追加されます</p>
+          <p className="font-semibold text-gray-500 mb-2">お気に入りテーマはまだありません</p>
+          <p className="text-sm">テーマ詳細ページの「☆ お気に入り」ボタンで追加できます</p>
           <Link
             href="/themes"
             className="mt-4 inline-block bg-green-600 text-white px-5 py-2.5 rounded-full text-sm font-semibold hover:bg-green-700 transition-colors"

@@ -101,7 +101,7 @@ export default function RootLayout({
                   <li><Link href="/study" className="text-gray-500 hover:text-green-600 transition-colors">テーマを暗記する</Link></li>
                   <li><Link href="/study/dashboard" className="text-gray-500 hover:text-green-600 transition-colors">テーマ暗記の進捗</Link></li>
                   <li><Link href="/study/checklist" className="text-gray-500 hover:text-green-600 transition-colors">テーマのチェックリスト</Link></li>
-                  <li><Link href="/study/favorites" className="text-gray-500 hover:text-green-600 transition-colors">あとで見るテーマ</Link></li>
+                  <li><Link href="/study/favorites" className="text-gray-500 hover:text-green-600 transition-colors">お気に入りテーマ</Link></li>
                   <li><Link href="/study/weakness" className="text-gray-500 hover:text-green-600 transition-colors">苦手に登録したテーマ</Link></li>
                 </ul>
               </div>

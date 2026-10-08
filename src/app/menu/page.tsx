@@ -58,7 +58,7 @@ const groups = [
     links: [
       { href: '/study', label: 'テーマを暗記する（今日の10テーマ）' },
       { href: '/study/checklist', label: 'テーマのチェックリスト' },
-      { href: '/study/favorites', label: 'あとで見るテーマ' },
+      { href: '/study/favorites', label: 'お気に入りテーマ' },
       { href: '/study/weakness', label: '苦手に登録したテーマ' },
       { href: '/study/dashboard', label: 'テーマ暗記の進捗' },
     ],

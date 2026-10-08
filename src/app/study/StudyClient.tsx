@@ -268,7 +268,7 @@ export default function StudyClient({ themes, examStats }: Props) {
                             : 'bg-white text-gray-600 border-gray-200 hover:border-orange-300 hover:text-orange-600'
                         }`}
                       >
-                        {isFav ? '★ 復習リスト済' : '☆ あとで復習'}
+                        {isFav ? '★ お気に入り済' : '☆ お気に入り'}
                       </button>
                       <button
                         onClick={() => toggleAction(WEAKNESS_KEY, theme.id, weakness, setWeakness)}

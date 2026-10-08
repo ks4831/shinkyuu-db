@@ -73,7 +73,7 @@ export default function Dashboard() {
           <p className="text-xs text-gray-400">/ {total} テーマ</p>
         </div>
         <div className="bg-white rounded-xl border border-gray-100 p-4 text-center">
-          <p className="text-xs text-gray-400 mb-1">復習リスト</p>
+          <p className="text-xs text-gray-400 mb-1">お気に入りテーマ</p>
           <p className="text-3xl font-black text-orange-600">{favorites.size}</p>
           <p className="text-xs text-gray-400">テーマ</p>
         </div>
@@ -109,8 +109,8 @@ export default function Dashboard() {
             ★
           </div>
           <div>
-            <p className="font-bold text-gray-900">復習リスト</p>
-            <p className="text-xs text-gray-500">あとで復習するテーマ（{favorites.size}件）</p>
+            <p className="font-bold text-gray-900">お気に入りテーマ</p>
+            <p className="text-xs text-gray-500">お気に入りに登録したテーマ（{favorites.size}件）</p>
           </div>
         </Link>
         <Link href="/study/weakness" className="flex items-center gap-4 bg-white rounded-2xl border border-gray-100 hover:border-green-200 hover:shadow-sm p-5 transition-all">

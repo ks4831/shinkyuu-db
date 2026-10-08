@@ -213,4 +213,31 @@ test('苦手復習：開始時の対象はセッション中に固定され、�
   assert.equal(after.kind, 'savedOnly'); assert.deepEqual(after.ids, [ids[2]])
 })
 
+/* 今日の10問を実際に記録して、終了後の復習対象を確かめる（A〜E） */
+function playDaily(wrongAt: number[], saveAt: number[]) {
+  const qs = D.resolveDailyQuestions(D.getOrCreateDailyState())
+  qs.forEach((q, i) => {
+    answer(q.id, !wrongAt.includes(i))
+    D.recordDailyAnswer(i, !wrongAt.includes(i))
+    if (saveAt.includes(i)) S.addReview(q.id)
+  })
+  assert.equal(D.finalizeDailyIfComplete().completed, true)
+  return qs.map((q) => q.id)
+}
+for (const [name, wrongAt, saveAt, kind, total] of [
+  ['今日の10問A：全問正解・復習リスト0問 → empty', [], [], 'empty', 0],
+  ['今日の10問B：全問正解・手動1問 → savedOnly 1問（間違えた問題と表示しない）', [], [3], 'savedOnly', 1],
+  ['今日の10問C：不正解2問のみ → wrongOnly 2問', [0, 5], [], 'wrongOnly', 2],
+  ['今日の10問D：不正解1問＋手動1問（別問題）→ mixed 2問', [0], [4], 'mixed', 2],
+  ['今日の10問E：不正解2問＋手動2問（1問重複）→ mixed 3問', [0, 2], [2, 6], 'mixed', 3],
+] as const) {
+  test(name, () => {
+    const qids = playDaily([...wrongAt], [...saveAt])
+    const t = T.readReviewTargets()
+    assert.equal(t.kind, kind); assert.equal(t.total, total)
+    const expected = [...new Set([...wrongAt.map((i) => qids[i]), ...saveAt.map((i) => qids[i])])]
+    assert.deepEqual([...t.ids].sort(), expected.sort())
+  })
+}
+
 console.log(`OK: ${n} 件`)

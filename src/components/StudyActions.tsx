@@ -66,7 +66,7 @@ export default function StudyActions({ themeId }: Props) {
               : 'bg-white text-gray-600 border-gray-200 hover:border-orange-300 hover:text-orange-600'
           }`}
         >
-          {isFav ? '★ 復習リスト済' : '☆ あとで復習'}
+          {isFav ? '★ お気に入り済' : '☆ お気に入り'}
         </button>
         <button
           onClick={() => toggle(WEAKNESS_KEY, isWeak, setIsWeak)}
@@ -79,9 +79,9 @@ export default function StudyActions({ themeId }: Props) {
           {isWeak ? '✗ 苦手登録済' : '苦手に追加'}
         </button>
       </div>
-      <div className="mt-3 flex gap-3 text-xs text-gray-400">
+      <div className="mt-3 flex flex-wrap gap-x-3 gap-y-1 whitespace-nowrap text-xs text-gray-400">
         <Link href="/study/checklist" className="hover:text-green-600 transition-colors">チェックリスト</Link>
-        <Link href="/study/favorites" className="hover:text-green-600 transition-colors">復習リスト</Link>
+        <Link href="/study/favorites" className="hover:text-green-600 transition-colors">お気に入りテーマ</Link>
         <Link href="/study/weakness" className="hover:text-green-600 transition-colors">苦手テーマ</Link>
         <Link href="/study/dashboard" className="hover:text-green-600 transition-colors">ダッシュボード</Link>
       </div>
