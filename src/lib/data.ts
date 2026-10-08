@@ -2035,7 +2035,7 @@ export const themes: Theme[] = [
     normalizedTheme: '灸法の種類',
     aliases: ['透熱灸', '知熱灸', '隔物灸', '灸頭鍼', '棒灸'],
     relatedThemes: ['ky-mogusa', 'ky-kinki', 'kyu-fukusayo'],
-    studyPoint: '有痕灸（灸痕を残す）：透熱灸（艾炷を燃焼しきる）・焦灼灸（ウオノメ等の組織焼灼）・打膿灸（化膿させる）。無痕灸（灸痕を残さない）：知熱灸（熱を感じたら除去）・糸状灸・隔物灸（生姜・にんにく・塩・味噌・附子）・温灸（棒灸・温筒灸）・灸頭鍼。小児には艾条灸（棒灸）が適する。',
+    studyPoint: '有痕灸（灸痕を残す）：透熱灸（艾炷を燃焼しきる）・焦灼灸（ウオノメ等の組織焼灼）・打膿灸（化膿させる）。無痕灸（灸痕を残さない）：知熱灸（熱を感じたら除去）・隔物灸（生姜・にんにく・塩・味噌・附子）・温灸（棒灸・温筒灸）・灸頭鍼。小児には艾条灸（棒灸）が適する。',
     blueprintVersion: '2020',
     questionCountMode: '180',
     sourceReliability: 'indexed_official',
