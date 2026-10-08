@@ -14,8 +14,9 @@ import {
 } from '@/lib/pastExamSession'
 import { trackSessionOnceKeyed } from '@/lib/analytics'
 import { getAcceptedAnswerIndexes, isPastExamAnswerCorrect, formatAcceptedAnswers } from '@/lib/pastExamAnswers'
+import { PAST_EXAM_CHOICE_LABELS } from '@/lib/choiceLabels'
 
-const CIRCLED = ['①', '②', '③', '④']
+const CIRCLED = PAST_EXAM_CHOICE_LABELS
 
 export type PastExamQuestionView = {
   id: string

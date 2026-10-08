@@ -4,6 +4,7 @@ import { useEffect, useRef, useState, type ReactNode } from 'react'
 import Link from 'next/link'
 import type { QuizQuestion } from '@/lib/quiz'
 import { subjectLabel } from '@/lib/quiz'
+import { QUIZ_CHOICE_LABELS } from '@/lib/choiceLabels'
 import { recordAttempt, toggleReview, isInReview } from '@/lib/quizStorage'
 import DiagramView from './DiagramView'
 
@@ -47,7 +48,7 @@ function buildSet(
   })
 }
 
-const LETTERS = ['A', 'B', 'C', 'D', 'E']
+const LETTERS = QUIZ_CHOICE_LABELS
 
 export default function QuizRunner({
   questions,

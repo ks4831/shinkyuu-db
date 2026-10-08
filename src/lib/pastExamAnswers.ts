@@ -12,7 +12,9 @@ export type PastExamAnswerSource = {
   answerIndexes?: number[]
 }
 
-const CIRCLED = ['①', '②', '③', '④']
+import { PAST_EXAM_CHOICE_LABELS } from './choiceLabels'
+
+const CIRCLED = PAST_EXAM_CHOICE_LABELS
 
 /** 正答として認められる選択肢インデックス（0-3）の一覧。answerIndexes優先 */
 export function getAcceptedAnswerIndexes(q: PastExamAnswerSource): number[] {

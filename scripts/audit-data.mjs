@@ -488,6 +488,26 @@ try {
   info.quizProblems = quizProblems
   quizProblems.forEach((m) => W(`quiz: ${m}`))
 
+  // 予想問題は選択肢をシャッフルして表示するため、解説で選択肢を位置（①・2・B・選択肢3 など）で指すと
+  // 表示中のラベルと一致しない。位置参照は ERROR。内容で引用した「…」が選択肢本文にない場合も検出する。
+  const choiceLabelMod = await importTS('src/lib/choiceLabels.ts')
+  let quizPositional = 0
+  Q.forEach((q) => {
+    for (const f of ['question', 'explanation', 'memoryPoint', 'commonMistake']) {
+      const text = String(q[f] || '')
+      const hits = choiceLabelMod.findPositionalChoiceRefs(text)
+      if (hits.length) {
+        quizPositional += 1
+        E(`quiz ${q.id}: ${f} が選択肢を位置で参照（${hits.map((h) => h.match).join('・')}）。選択肢はシャッフルされるため内容で書く`)
+      }
+      // 「…」の選択肢 と書いた引用は、選択肢本文の部分文字列でなければならない
+      for (const phrase of choiceLabelMod.findQuotedChoicePhrases(text)) {
+        if (!q.choices.some((c) => c.includes(phrase))) E(`quiz ${q.id}: ${f} の「${phrase}」の選択肢 が選択肢本文に見つからない`)
+      }
+    }
+  })
+  info.quizPositionalChoiceRefs = quizPositional
+
   // quiz の科目別数（公開分は10問以上）
   const quizBySub = {}
   Q.forEach((q) => (quizBySub[q.subject] = (quizBySub[q.subject] ?? 0) + 1))
@@ -671,6 +691,7 @@ try {
       ? fs.readdirSync(peDir).filter((f) => /^exam-\d+\.json$/.test(f))
       : []
     const pastExamMod = await importTS('src/lib/pastExams.ts')
+    const pastChoiceLabelMod = await importTS('src/lib/choiceLabels.ts')
 
     let pastExamTotal = 0
     let pastExamPlayableTotal = 0
@@ -729,6 +750,18 @@ try {
           }
         }
         if (!q.explanation || !String(q.explanation).trim()) E(`過去問 ${q.id}: explanation が空`)
+        // 過去問は公式の順のまま ①〜④ で表示する。解説の選択肢参照は ①〜④ に限り、
+        // 「公式正答は③…」と書く番号は正答（answerIndex / answerIndexes）と一致させる。
+        {
+          const text = String(q.explanation || '')
+          const nonCircled = pastChoiceLabelMod.findPositionalChoiceRefs(text).filter((h) => !/^(?:選択肢\s*)?[①-④]$/.test(h.match))
+          if (nonCircled.length) E(`過去問 ${q.id}: explanation の選択肢参照が ①〜④ 以外（${nonCircled.map((h) => h.match).join('・')}）`)
+          if (/[⑤-⑨]/.test(text)) W(`過去問 ${q.id}: explanation に ⑤ 以降の丸数字（4択の選択肢を指していないか要確認）`)
+          const accepted = Array.isArray(q.answerIndexes) && q.answerIndexes.length ? q.answerIndexes : [q.answerIndex]
+          for (const n of pastChoiceLabelMod.findStatedAnswerLabels(text)) {
+            if (!accepted.includes(n)) E(`過去問 ${q.id}: explanation の正答番号 ${pastChoiceLabelMod.PAST_EXAM_CHOICE_LABELS[n]} が正答（${accepted.map((i) => pastChoiceLabelMod.PAST_EXAM_CHOICE_LABELS[i]).join('・')}）と不一致`)
+          }
+        }
         if (!q.source || !String(q.source).trim()) E(`過去問 ${q.id}: source が空`)
         if (!q.sourceOrg || !String(q.sourceOrg).trim()) E(`過去問 ${q.id}: sourceOrg が空`)
         if (!q.sourceUrl || !String(q.sourceUrl).trim()) W(`過去問 ${q.id}: sourceUrl が空`)
