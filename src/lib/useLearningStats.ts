@@ -13,6 +13,7 @@ const ZERO: LearningStats = {
   streakDays: 0,
   reviewCount: 0,
   weakCount: 0,
+  reviewTargetCount: 0,
   bySubject: [],
 }
 

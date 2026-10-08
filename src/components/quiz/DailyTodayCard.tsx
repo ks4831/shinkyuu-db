@@ -3,6 +3,7 @@
 import { useEffect, useState } from 'react'
 import Link from 'next/link'
 import { peekDailyState, displayStreak, DAILY_COUNT, type DailyState } from '@/lib/dailyQuiz'
+import ReviewTargetsLink from './ReviewTargetsLink'
 
 type View = {
   answered: number
@@ -63,16 +64,13 @@ export default function DailyTodayCard({ compact = false }: { compact?: boolean 
             正解 <strong className="text-green-700">{view.correct} / {DAILY_COUNT}</strong>
             <span className="ml-1 text-gray-400">（正答率 {Math.round((view.correct / DAILY_COUNT) * 100)}%）</span>
           </p>
-          <div className="mt-3 flex gap-2">
-            {view.wrong > 0 ? (
-              <Link href="/quiz/weak" className="flex-1 rounded-xl bg-green-600 px-4 py-3 text-center text-sm font-bold text-white hover:bg-green-700">
-                間違えた{view.wrong}問を復習
-              </Link>
-            ) : (
-              <Link href="/quiz/daily" className="flex-1 rounded-xl bg-green-600 px-4 py-3 text-center text-sm font-bold text-white hover:bg-green-700">
-                今日の結果を見る
-              </Link>
-            )}
+          <div className="mt-3">
+            <ReviewTargetsLink compact />
+          </div>
+          <div className="mt-2 flex gap-2">
+            <Link href="/quiz/daily" className="flex-1 rounded-xl border border-gray-200 bg-white px-4 py-3 text-center text-sm font-bold text-gray-700 hover:border-green-300">
+              今日の結果を見る
+            </Link>
             <Link href="/dashboard" className="flex-1 rounded-xl border border-gray-200 bg-white px-4 py-3 text-center text-sm font-bold text-gray-700 hover:border-green-300">
               学習記録
             </Link>

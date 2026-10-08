@@ -3,8 +3,8 @@ import Link from 'next/link'
 import WeakQuizClient from '@/components/quiz/WeakQuizClient'
 
 export const metadata: Metadata = {
-  title: '苦手復習クイズ｜間違えた問題だけ解き直す',
-  description: '間違えた問題や復習登録した問題だけを出題。連続で正解すると苦手リストから自動で外れます。',
+  title: '苦手復習クイズ｜間違えた問題や復習リストの問題を解き直す',
+  description: '間違えた問題や復習リストに追加した問題を出題。間違えた問題は2回続けて正解すると自動で外れます。復習リストの問題は自分で解除するまで残ります。',
 }
 
 export default function WeakQuizPage() {

@@ -3,6 +3,7 @@
 import { useEffect, useMemo, useState } from 'react'
 import Link from 'next/link'
 import QuizRunner from './QuizRunner'
+import ReviewTargetsLink from './ReviewTargetsLink'
 import {
   getOrCreateDailyState,
   resolveDailyQuestions,
@@ -81,7 +82,6 @@ function DailyResult({ state, questions }: { state: DailyState; questions: QuizQ
   const correct = state.answers.filter((a) => a === true).length
   const total = state.answers.length || 10
   const pct = Math.round((correct / total) * 100)
-  const wrongIdx = state.answers.map((a, i) => (a === false ? i : -1)).filter((i) => i >= 0)
 
   return (
     <div className="mx-auto max-w-md px-4 pb-28 pt-6">
@@ -117,11 +117,7 @@ function DailyResult({ state, questions }: { state: DailyState; questions: QuizQ
         </div>
 
         <div className="mt-6 space-y-2.5">
-          {wrongIdx.length > 0 && (
-            <Link href="/quiz/weak" className="block rounded-xl bg-green-600 px-5 py-3.5 text-sm font-bold text-white hover:bg-green-700">
-              間違えた{wrongIdx.length}問を復習する
-            </Link>
-          )}
+          <ReviewTargetsLink />
           <Link href="/dashboard" className="block rounded-xl border border-gray-200 bg-white px-5 py-3.5 text-sm font-bold text-gray-700 hover:border-green-300">
             学習の記録を見る
           </Link>

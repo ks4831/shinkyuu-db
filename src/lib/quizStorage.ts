@@ -101,6 +101,8 @@ export type LearningStats = {
   streakDays: number
   reviewCount: number
   weakCount: number
+  /** 間違えた問題と復習リストの和集合の数（両方に入っている問題は1問として数える） */
+  reviewTargetCount: number
   bySubject: { subject: string; answered: number; correct: number; accuracy: number }[]
 }
 
@@ -149,6 +151,7 @@ export function getStats(): LearningStats {
     streakDays: computeStreak(h.studyDays),
     reviewCount: review.length,
     weakCount: weak.length,
+    reviewTargetCount: new Set([...weak.map((w) => w.qid), ...review]).size,
     bySubject: [...subjMap.entries()]
       .map(([subject, v]) => ({
         subject,

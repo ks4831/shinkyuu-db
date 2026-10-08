@@ -7,6 +7,7 @@ import { subjectLabel } from '@/lib/quiz'
 import { QUIZ_CHOICE_LABELS } from '@/lib/choiceLabels'
 import { recordAttempt, toggleReview, isInReview } from '@/lib/quizStorage'
 import DiagramView from './DiagramView'
+import ReviewTargetsLink from './ReviewTargetsLink'
 
 type PreparedQuestion = QuizQuestion & {
   shownChoices: string[]
@@ -207,12 +208,7 @@ export default function QuizRunner({
           </div>
 
           <div className="mt-6 space-y-2.5">
-            <Link
-              href={reviewHref}
-              className="block rounded-xl bg-green-600 px-5 py-3.5 text-sm font-bold text-white hover:bg-green-700"
-            >
-              間違えた問題を復習する
-            </Link>
+            <ReviewTargetsLink href={reviewHref} />
             {retryHref && (
               <Link
                 href={retryHref}

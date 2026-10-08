@@ -4,24 +4,25 @@ import { useEffect, useState } from 'react'
 import Link from 'next/link'
 import QuizRunner from './QuizRunner'
 import { pickByIds, type QuizQuestion } from '@/lib/quiz'
-import { getWeakIds, getReviewIds } from '@/lib/quizStorage'
+import { readReviewTargets, reviewBreakdown, reviewHeading, type ReviewTargets } from '@/lib/reviewTargets'
 import { trackSessionOnce } from '@/lib/analytics'
 
 export default function WeakQuizClient({ count = 10 }: { count?: number }) {
   const [ready, setReady] = useState(false)
   const [questions, setQuestions] = useState<QuizQuestion[]>([])
+  // 出題開始時点の対象（回答で保存データが変わっても、このセッションの説明は固定）
+  const [targets, setTargets] = useState<ReviewTargets | null>(null)
 
   useEffect(() => {
-    // 苦手（自動登録）を優先し、足りなければ復習リストで補う
-    const weak = getWeakIds()
-    const review = getReviewIds().filter((id) => !weak.includes(id))
-    const ids = [...weak, ...review]
-    const picked = pickByIds(ids, count)
+    // 間違えた問題（自動登録）を優先し、足りなければ復習リストで補う（重複は1問）
+    const t = readReviewTargets(count)
+    const picked = pickByIds(t.ids)
+    setTargets(t)
     setQuestions(picked)
     setReady(true)
     // 復習を開始した（出題対象あり）。タブのセッション中に1回だけ計上する。
     if (picked.length > 0) {
-      trackSessionOnce('review_start', { queued: ids.length })
+      trackSessionOnce('review_start', { queued: t.available })
     }
   }, [count])
 
@@ -33,7 +34,7 @@ export default function WeakQuizClient({ count = 10 }: { count?: number }) {
     return (
       <div className="mx-auto max-w-md px-4 py-16 text-center">
         <p className="text-3xl">🌱</p>
-        <p className="mt-3 font-bold text-gray-800">復習が必要な問題はまだありません</p>
+        <p className="mt-3 font-bold text-gray-800">{reviewHeading('empty')}</p>
         <p className="mt-1 text-sm text-gray-500">
           予想問題を解いて間違えると、自動でここに追加されます。<br />
           解説の「☆ 復習に追加」でも登録できます。
@@ -49,17 +50,24 @@ export default function WeakQuizClient({ count = 10 }: { count?: number }) {
   }
 
   return (
-    <QuizRunner
-      questions={questions}
-      title="苦手復習"
-      reviewHref="/quiz/weak"
-      retryHref="/quiz/weak"
-      onFinished={(results) =>
-        trackSessionOnce('review_complete', {
-          score: results.filter(Boolean).length,
-          total: results.length,
-        })
-      }
-    />
+    <>
+      {targets && (
+        <p className="mx-auto max-w-md px-4 text-xs leading-relaxed text-gray-600">
+          <span className="font-bold text-gray-800">{reviewHeading(targets.kind)}</span>
+          <span className="ml-1">対象{targets.total}問（{reviewBreakdown(targets)}）</span>
+        </p>
+      )}
+      <QuizRunner
+        questions={questions}
+        title="苦手復習"
+        reviewHref="/quiz/weak"
+        onFinished={(results) =>
+          trackSessionOnce('review_complete', {
+            score: results.filter(Boolean).length,
+            total: results.length,
+          })
+        }
+      />
+    </>
   )
 }

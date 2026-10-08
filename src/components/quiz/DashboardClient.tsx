@@ -3,6 +3,7 @@
 import Link from 'next/link'
 import { useLearningStats } from '@/lib/useLearningStats'
 import { subjectLabel } from '@/lib/quiz'
+import ReviewTargetsLink from './ReviewTargetsLink'
 
 export default function DashboardClient() {
   const { stats, ready } = useLearningStats()
@@ -30,7 +31,7 @@ export default function DashboardClient() {
   const cards = [
     { label: 'のべ解答', value: `${stats.totalAnswered}問` },
     { label: '累計正答率', value: stats.totalAnswered ? `${stats.accuracy}%` : '–' },
-    { label: '復習待ち', value: `${stats.reviewCount + stats.weakCount}問` },
+    { label: '復習待ち', value: `${stats.reviewTargetCount}問` },
     { label: '学習日数', value: `${stats.streakDays}日連続` },
   ]
 
@@ -75,9 +76,7 @@ export default function DashboardClient() {
       )}
 
       <div className="mt-6 space-y-2.5">
-        <Link href="/quiz/weak" className="block rounded-xl bg-green-600 px-5 py-3.5 text-center text-sm font-bold text-white hover:bg-green-700">
-          苦手を復習する（{stats.reviewCount + stats.weakCount}問）
-        </Link>
+        <ReviewTargetsLink />
         <Link href="/quiz/daily" className="block rounded-xl border border-gray-200 bg-white px-5 py-3.5 text-center text-sm font-bold text-gray-700 hover:border-green-300">
           今日の10問を解く
         </Link>
