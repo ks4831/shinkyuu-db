@@ -42,13 +42,13 @@ export const QUIZ_QUESTIONS: QuizQuestion[] = [
     theme: '五兪穴・原穴',
     themeId: 'go-yu-ketsu',
     question: '陰経において原穴と一致する五兪穴はどれか。',
-    choices: ['井穴', '滎穴', '輸穴', '合穴'],
+    choices: ['井穴', '滎穴', '兪穴', '合穴'],
     correctAnswer: 2,
     explanation:
-      '陰経では原穴が独立して存在せず、五兪穴の「輸穴」が原穴を兼ねる。例：太淵（肺）、太白（脾）、太衝（肝）、太渓（腎）、神門（心）、大陵（心包）。',
-    memoryPoint: '陰経は「原＝輸」。陽経は原穴が輸穴の次に独立してある。',
+      '陰経では原穴が独立して存在せず、五兪穴の「兪穴」が原穴を兼ねる。例：太淵（肺）、太白（脾）、太衝（肝）、太渓（腎）、神門（心）、大陵（心包）。',
+    memoryPoint: '陰経は「原＝兪」。陽経は原穴が兪穴の次に独立してある。',
     commonMistake:
-      '陽経では原穴は独立しており輸穴とは別（例：京骨と束骨）。陰経と混同しない。',
+      '陽経では原穴は独立しており兪穴とは別（例：京骨と束骨）。陰経と混同しない。',
     difficulty: 'normal',
     importance: 'A',
     relatedAcupoints: ['lu9', 'sp3', 'lr3', 'ki3'],

@@ -941,6 +941,59 @@ try {
   }
 }
 
+/* ── 経穴の出典管理（src/data/acupointSources.json）
+      定義: docs/acupoint-source-schema.md ── */
+try {
+  const src = await importTS('src/lib/acupointSources.ts')
+  const { ACUPOINTS: MASTER } = await importTS('src/data/acupoints.ts')
+  const D = src.ACUPOINT_SOURCE_DATA
+  if (D.schemaVersion !== 1) E(`acupointSources: schemaVersion ${D.schemaVersion} は未対応`)
+  const docs = new Map()
+  for (const s of D.sources) {
+    if (docs.has(s.id)) E(`acupointSources: 資料ID重複 ${s.id}`)
+    if (!src.SOURCE_TYPES.includes(s.sourceType)) E(`acupointSources: 資料 ${s.id} の sourceType が不正: ${s.sourceType}`)
+    docs.set(s.id, s)
+  }
+  const bySlug = new Map(MASTER.map((a) => [a.slug, a]))
+  const valueOf = (a, f, claim) => (f === 'specialPoints' ? ((a.specialPoints ?? []).includes(claim) ? claim : undefined) : a[f])
+  let stale = 0
+  D.records.forEach((r, i) => {
+    const at = `acupointSources.records[${i}]（${r.acupointId} ${r.fieldName}）`
+    const a = bySlug.get(r.acupointId)
+    if (!a) { E(`${at}: 経穴マスターにない slug`); return }
+    if (!src.SOURCE_FIELDS.includes(r.fieldName)) E(`${at}: fieldName が不正`)
+    if (!src.RECORD_STATUSES.includes(r.verificationStatus)) E(`${at}: verificationStatus が不正: ${r.verificationStatus}`)
+    if (!src.COVERAGES.includes(r.coverage)) E(`${at}: coverage が不正: ${r.coverage}`)
+    if (!/^\d{4}-\d{2}-\d{2}$/.test(r.verifiedAt ?? '')) E(`${at}: verifiedAt の形式が不正`)
+    if (!String(r.sourcePage ?? '').trim()) E(`${at}: sourcePage が空（問題IDやページを書く。推測で書かない）`)
+    if (r.claim !== r.currentValue) E(`${at}: claim と currentValue が一致しない`)
+    const doc = docs.get(r.sourceId)
+    if (!doc) { E(`${at}: 未登録の資料 ${r.sourceId}`); return }
+    // 日本の確認は日本の資料だけ、WHO の確認は国際資料だけ
+    const jp = src.JAPANESE_SOURCE_TYPES.includes(doc.sourceType)
+    if (['JAPAN_VERIFIED', 'JAPAN_INFERRED'].includes(r.verificationStatus) && !jp) E(`${at}: ${r.verificationStatus} は日本の資料にだけ使える（${r.sourceId}）`)
+    if (r.verificationStatus === 'WHO_VERIFIED' && doc.sourceType !== 'international') E(`${at}: WHO_VERIFIED は国際資料にだけ使える（${r.sourceId}）`)
+    if (r.verificationStatus === 'HISTORICAL_ONLY' && doc.sourceType !== 'classic') E(`${at}: HISTORICAL_ONLY は古典にだけ使える（${r.sourceId}）`)
+    // 確認した時点から値が変わったレコード（総合判定では使われない）
+    if (valueOf(a, r.fieldName, r.claim) !== r.currentValue) stale++
+  })
+  if (stale) W(`acupointSources: 確認後にマスターの値が変わったレコード ${stale} 件（再確認が必要）`)
+  // 詳細情報（location）がある穴は、WHO との照合レコードを持つ
+  const whoChecked = new Set(D.records.filter((r) => r.fieldName === 'location' && docs.get(r.sourceId)?.sourceType === 'international').map((r) => r.acupointId))
+  const noWho = MASTER.filter((a) => a.location && !whoChecked.has(a.slug)).map((a) => a.slug)
+  if (noWho.length) W(`acupointSources: location の WHO 照合レコードがない穴 ${noWho.length}: ${noWho.join(', ')}`)
+  const summary = {}
+  for (const a of MASTER) {
+    for (const s of src.getAcupointSourceStatus(a)) {
+      summary[s.field] ??= {}
+      summary[s.field][s.status] = (summary[s.field][s.status] ?? 0) + 1
+    }
+  }
+  info.acupointSources = { records: D.records.length, summary }
+} catch (e) {
+  E(`経穴の出典管理データの監査に失敗: ${e.stack || e.message}`)
+}
+
 /* ══════════════ 出力 ══════════════ */
 const j = process.argv.includes('--json')
 if (j) {
@@ -958,6 +1011,11 @@ if (j) {
   if (info.acupointOccurrence) {
     const o = info.acupointOccurrence
     console.log(`経穴出題データ: ${o.entries} 設問 / 経穴×設問 ${o.pairs}（マスタ内 ${o.masterRefs} / マスタ外 ${o.outsideRefs}・${o.outsideNames} 穴）  role[direct ${o.roles.direct} / required ${o.roles.required} / distractor ${o.roles.distractor} / ambiguous ${o.roles.ambiguous}]  evidence[named ${o.evidences.named} / implicit ${o.evidences.implicit}]  収録穴: 出題あり ${o.askedMaster} / 未出題 ${o.unaskedMaster}`)
+  }
+  if (info.acupointSources) {
+    const s = info.acupointSources
+    const fmt = (o) => Object.entries(o ?? {}).map(([k, v]) => `${k} ${v}`).join(' / ')
+    console.log(`経穴の出典管理: レコード ${s.records} 件  name[${fmt(s.summary.name)}]  reading[${fmt(s.summary.reading)}]  location[${fmt(s.summary.location)}]  specialPoints[${fmt(s.summary.specialPoints)}]`)
   }
   console.log(`過去問演習(/past-exams): 収録 ${info.pastExamCount ?? 0} 問・演習可能 ${info.pastExamPlayableCount ?? 0} 問（${(info.pastExamRounds ?? []).map((r) => `第${r}回=${info.pastExamByRound[r]}`).join('  ') || '収録なし'}）`)
   console.log('\n--- 科目別 6年問題数（正規id基準） ---')

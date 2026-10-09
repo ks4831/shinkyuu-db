@@ -1,6 +1,7 @@
 /* ──────────────────────────────────────────────────────────────
    経穴マスタ（国家試験・特定穴中心の抜粋 146穴）
-   - WHO/教科書『経絡経穴概論』に基づく一般的事実のみを収録
+   - 項目ごとの出典と確認状況は src/data/acupointSources.json で管理（docs/acupoint-source-schema.md）。
+     日本の教科書本文との照合は未実施
    - 位置は要点のみ。詳細な取穴は各自教科書で確認すること
    - 出題状況は src/data/acupointOccurrences.json（設問単位のレビュー済み判定）から src/lib/acupoints.ts が集計する
    ────────────────────────────────────────────────────────────── */
@@ -61,7 +62,7 @@ const A = (a: Omit<Acupoint, 'kind'>): Acupoint => ({ kind: 'standard', ...a })
 
 export const ACUPOINTS: Acupoint[] = [
   /* ── 手の太陰肺経 ─────────────────────────── */
-  A({ slug: 'lu1', code: 'LU1', name: '中府', reading: 'ちゅうふ', meridian: 'LU', meridianName: '手の太陰肺経', region: '前胸部', location: '前胸部・第1肋間、鎖骨下窩の外方、前正中線の外方6寸', specialPoints: ['肺経の募穴'], importance: 'A', memoryTip: '肺の募穴は自経（肺経）上にある', examPoint: '募穴（肺）であること・前胸部で第1肋間という位置' }),
+  A({ slug: 'lu1', code: 'LU1', name: '中府', reading: 'ちゅうふ', meridian: 'LU', meridianName: '手の太陰肺経', region: '前胸部', location: '前胸部・第1肋間、鎖骨下窩の外方、前正中線の外方6寸', specialPoints: ['肺の募穴'], importance: 'A', memoryTip: '肺の募穴は自経（肺経）上にある', examPoint: '募穴（肺）であること・前胸部で第1肋間という位置' }),
   A({ slug: 'lu2', code: 'LU2', name: '雲門', meridian: 'LU', meridianName: '手の太陰肺経' }),
   A({ slug: 'lu3', code: 'LU3', name: '天府', meridian: 'LU', meridianName: '手の太陰肺経' }),
   A({ slug: 'lu4', code: 'LU4', name: '侠白', meridian: 'LU', meridianName: '手の太陰肺経' }),
@@ -120,7 +121,7 @@ export const ACUPOINTS: Acupoint[] = [
   A({ slug: 'st22', code: 'ST22', meridian: 'ST', meridianName: '足の陽明胃経' }),
   A({ slug: 'st23', code: 'ST23', name: '太乙', meridian: 'ST', meridianName: '足の陽明胃経' }),
   A({ slug: 'st24', code: 'ST24', name: '滑肉門', meridian: 'ST', meridianName: '足の陽明胃経' }),
-  A({ slug: 'st25', code: 'ST25', name: '天枢', reading: 'てんすう', meridian: 'ST', meridianName: '足の陽明胃経', region: '上腹部', location: '臍中央の外方2寸', specialPoints: ['大腸経の募穴'], importance: 'S', memoryTip: '大腸の募穴は胃経上（臍の外2寸）。便秘・下痢の要穴', examPoint: '募穴（大腸）であること・臍外方2寸' }),
+  A({ slug: 'st25', code: 'ST25', name: '天枢', reading: 'てんすう', meridian: 'ST', meridianName: '足の陽明胃経', region: '上腹部', location: '臍中央の外方2寸', specialPoints: ['大腸の募穴'], importance: 'S', memoryTip: '大腸の募穴は胃経上（臍の外2寸）。便秘・下痢の要穴', examPoint: '募穴（大腸）であること・臍外方2寸' }),
   A({ slug: 'st26', code: 'ST26', meridian: 'ST', meridianName: '足の陽明胃経' }),
   A({ slug: 'st27', code: 'ST27', meridian: 'ST', meridianName: '足の陽明胃経' }),
   A({ slug: 'st28', code: 'ST28', meridian: 'ST', meridianName: '足の陽明胃経' }),
@@ -276,7 +277,7 @@ export const ACUPOINTS: Acupoint[] = [
   A({ slug: 'ki7', code: 'KI7', name: '復溜', reading: 'ふくりゅう', meridian: 'KI', meridianName: '足の少陰腎経', region: '下腿', location: 'アキレス腱の前縁、内果尖の上方2寸', specialPoints: ['五兪穴：経（金）'], importance: 'B', memoryTip: '太渓の上2寸＝経金穴。発汗異常（合谷と組む）', examPoint: '経金穴・内果上2寸／発汗調節' }),
   A({ slug: 'ki8', code: 'KI8', name: '交信', meridian: 'KI', meridianName: '足の少陰腎経' }),
   A({ slug: 'ki9', code: 'KI9', name: '築賓', meridian: 'KI', meridianName: '足の少陰腎経' }),
-  A({ slug: 'ki10', code: 'KI10', name: '陰谷', reading: 'いんこく', meridian: 'KI', meridianName: '足の少陰腎経', region: '膝', location: '膝窩横紋上、半腱様筋腱と半膜様筋腱の間', specialPoints: ['五兪穴：合（水）'], importance: 'C', memoryTip: '膝窩内側の腱の間＝合水穴（腎は水、本経なので水水）', examPoint: '合水穴・膝窩内側' }),
+  A({ slug: 'ki10', code: 'KI10', name: '陰谷', reading: 'いんこく', meridian: 'KI', meridianName: '足の少陰腎経', region: '膝', location: '膝窩横紋上、半腱様筋腱の外縁', specialPoints: ['五兪穴：合（水）'], importance: 'C', memoryTip: '膝窩横紋上・半腱様筋腱の外縁＝合水穴（腎は水、本経なので水水）', examPoint: '合水穴・膝窩内側' }),
   A({ slug: 'ki11', code: 'KI11', meridian: 'KI', meridianName: '足の少陰腎経' }),
   A({ slug: 'ki12', code: 'KI12', meridian: 'KI', meridianName: '足の少陰腎経' }),
   A({ slug: 'ki13', code: 'KI13', meridian: 'KI', meridianName: '足の少陰腎経' }),
@@ -355,7 +356,7 @@ export const ACUPOINTS: Acupoint[] = [
   A({ slug: 'gb21', code: 'GB21', name: '肩井', reading: 'けんせい', meridian: 'GB', meridianName: '足の少陽胆経', region: '後頸部', location: '第7頸椎棘突起と肩峰外縁を結ぶ線の中点', specialPoints: [], importance: 'A', memoryTip: '肩の「井戸」＝肩こりの代表穴。深刺で気胸のリスク・妊婦は慎重', examPoint: '第7頸椎棘突起と肩峰の中点／気胸のリスク・妊婦への配慮' }),
   A({ slug: 'gb22', code: 'GB22', name: '淵腋', meridian: 'GB', meridianName: '足の少陽胆経' }),
   A({ slug: 'gb23', code: 'GB23', name: '輒筋', meridian: 'GB', meridianName: '足の少陽胆経' }),
-  A({ slug: 'gb24', code: 'GB24', name: '日月', reading: 'じつげつ', meridian: 'GB', meridianName: '足の少陽胆経', region: '前胸部', location: '第7肋間、前正中線の外方4寸（期門の1肋間下）', specialPoints: ['胆経の募穴'], importance: 'A', memoryTip: '胆の募穴は自経（胆経）上。期門（肝の募穴）の1肋間下', examPoint: '募穴（胆）であること・期門との位置関係' }),
+  A({ slug: 'gb24', code: 'GB24', name: '日月', reading: 'じつげつ', meridian: 'GB', meridianName: '足の少陽胆経', region: '前胸部', location: '第7肋間、前正中線の外方4寸（期門の1肋間下）', specialPoints: ['胆の募穴'], importance: 'A', memoryTip: '胆の募穴は自経（胆経）上。期門（肝の募穴）の1肋間下', examPoint: '募穴（胆）であること・期門との位置関係' }),
   A({ slug: 'gb25', code: 'GB25', name: '京門', reading: 'けいもん', meridian: 'GB', meridianName: '足の少陽胆経', region: '側腹部', location: '第12肋骨端下縁', specialPoints: ['腎の募穴'], importance: 'A', memoryTip: '腎の募穴は胆経上（第12肋骨先端）。腎の募が背側寄りにあるのが特徴', examPoint: '募穴（腎）であること・第12肋骨端という位置' }),
   A({ slug: 'gb26', code: 'GB26', name: '帯脈', meridian: 'GB', meridianName: '足の少陽胆経' }),
   A({ slug: 'gb27', code: 'GB27', name: '五枢', meridian: 'GB', meridianName: '足の少陽胆経' }),
