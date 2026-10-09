@@ -64,7 +64,7 @@ export const QUIZ_QUESTIONS: QuizQuestion[] = [
     choices: ['太淵', '膈兪', '膻中', '大杼'],
     correctAnswer: 0,
     explanation:
-      '太淵は脈会。橈骨動脈拍動部にあり、肺経の原穴・輸土穴でもある。膈兪＝血会、膻中＝気会、大杼＝骨会。',
+      '太淵は脈会。橈骨動脈拍動部にあり、肺経の原穴・兪土穴でもある。膈兪＝血会、膻中＝気会、大杼＝骨会。',
     memoryPoint: '脈会・血会・気会・骨会 → 太淵・膈兪・膻中・大杼。',
     commonMistake: '「血会」の膈兪と混同しやすい。脈＝太淵、血＝膈兪。',
     difficulty: 'normal',
@@ -320,7 +320,7 @@ export const QUIZ_QUESTIONS: QuizQuestion[] = [
     choices: ['木', '火', '金', '水'],
     correctAnswer: 0,
     explanation:
-      '陰経の五兪穴の五行配当は、井（木）・滎（火）・輸（土）・経（金）・合（水）。陽経は井（金）から始まる。',
+      '陰経の五兪穴の五行配当は、井（木）・滎（火）・兪（土）・経（金）・合（水）。陽経は井（金）から始まる。',
     memoryPoint: '陰経の井＝木、陽経の井＝金。「陰は木から、陽は金から」。',
     commonMistake: '陽経の五行配当（金・水・木・火・土）と取り違えない。',
     difficulty: 'normal',

@@ -20,7 +20,7 @@
   <text class="t lbl" x="65"  y="71" font-size="14" text-anchor="middle">経の種類</text>
   <text class="t lbl" x="145" y="71" font-size="15" text-anchor="middle">井</text>
   <text class="t lbl" x="215" y="71" font-size="15" text-anchor="middle">滎</text>
-  <text class="t lbl" x="285" y="71" font-size="15" text-anchor="middle">輸</text>
+  <text class="t lbl" x="285" y="71" font-size="15" text-anchor="middle">兪</text>
   <text class="t lbl" x="355" y="71" font-size="15" text-anchor="middle">経</text>
   <text class="t lbl" x="425" y="71" font-size="15" text-anchor="middle">合</text>
 
@@ -52,7 +52,7 @@
   <text class="t c"   x="355" y="157" font-size="16" text-anchor="middle">火</text>
   <text class="t c"   x="425" y="157" font-size="16" text-anchor="middle">土</text>
 
-  <text class="t" x="20" y="205" font-size="13" fill="#4b5563">・陰経は「原穴＝輸穴」が一致する（例：太淵・太白・太衝・太渓）</text>
+  <text class="t" x="20" y="205" font-size="13" fill="#4b5563">・陰経は「原穴＝兪穴」が一致する（例：太淵・太白・太衝・太渓）</text>
   <text class="t" x="20" y="226" font-size="13" fill="#4b5563">・陰経は木から、陽経は金から始まると覚える</text>
   <text class="t" x="20" y="247" font-size="13" fill="#4b5563">・合穴＝下合穴が一致：足三里・委中・陽陵泉</text>
 </svg>

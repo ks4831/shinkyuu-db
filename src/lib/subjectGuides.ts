@@ -34,7 +34,7 @@ export const subjectGuides: SubjectGuide[] = [
       { themeId: 'kei-myaku-ryuchu', name: '経脈の流注', note: '各経脈の走行と起始・終止を整理' },
       { themeId: 'kiki-hachi-myaku', name: '奇経八脈', note: '別称（陽の海・陰の海・血の海）を覚える' },
       { themeId: 'go-yu-ketsu', name: '五兪穴', note: '陰陽で五行配当が逆になる規則を確実に' },
-      { themeId: 'gen-ketsu', name: '原穴', note: '陰経の原穴＝輸穴の規則と12穴の穴名' },
+      { themeId: 'gen-ketsu', name: '原穴', note: '陰経の原穴＝兪穴の規則と12穴の穴名' },
       { themeId: 'geki-ketsu', name: '郄穴', note: '十六郄穴（十二経＋奇経4穴）を表で整理' },
       { themeId: 'bo-ketsu', name: '募穴', note: '12募穴の穴名と帰属経脈の例外に注意' },
       { themeId: 'kei-ketsu-shuchi', name: '経穴の主治', note: '百会・足三里・三陰交・合谷を最優先' },
@@ -42,11 +42,11 @@ export const subjectGuides: SubjectGuide[] = [
     commonConfusions: [
       {
         title: '陰経と陽経の五行配当が逆になる',
-        desc: '陰経は「木（井）→火（滎）→土（輸）→金（経）→水（合）」、陽経は「金（井）→水（滎）→木（輸）→火（経）→土（合）」。逆に覚えると全問落とす。',
+        desc: '陰経は「木（井）→火（滎）→土（兪）→金（経）→水（合）」、陽経は「金（井）→水（滎）→木（兪）→火（経）→土（合）」。逆に覚えると全問落とす。',
       },
       {
         title: '原穴と五兪穴の関係（陰経 vs 陽経）',
-        desc: '陰経の原穴＝五兪穴の輸穴（同一穴）。陽経の原穴は輸穴とは別の穴。大腸経の原穴は合谷（輸穴の三間とは別）。',
+        desc: '陰経の原穴＝五兪穴の兪穴（同一穴）。陽経の原穴は兪穴とは別の穴。大腸経の原穴は合谷（兪穴の三間とは別）。',
       },
       {
         title: '募穴の帰属経脈と穴名を混同する',
@@ -61,7 +61,7 @@ export const subjectGuides: SubjectGuide[] = [
       { name: '経穴の主治（百会・足三里・三陰交・合谷）', reason: '特定穴の主治パターンが深掘りされる傾向', likelihood: 'high' },
       { name: '五兪穴の応用（症状別選穴）', reason: '近年は陰陽の配当だけでなく難経の症状別適応が増加傾向', likelihood: 'high' },
       { name: '奇経八脈の走行・機能', reason: '第32回で未出で直近2回連続出題、パターンが継続する可能性が高い', likelihood: 'high' },
-      { name: '募穴と背兪穴の組み合わせ（俞募配穴）', reason: '直近では俞穴との対比問題が増えている', likelihood: 'medium' },
+      { name: '募穴と背兪穴の組み合わせ（兪募配穴）', reason: '直近では兪穴との対比問題が増えている', likelihood: 'medium' },
     ],
   },
   {
@@ -230,7 +230,7 @@ export const subjectGuides: SubjectGuide[] = [
   },
   {
     subjectId: 'moxibustion-theory',
-    overview: 'きゅう理論は施灸法の種類・禁灸部位・熱傷の処置が中心。はり理論と並行して学ぶと効率的。無瘢痕灸・有瘢痕灸の特徴と施灸量の調節もあわせて整理しておこう。',
+    overview: 'きゅう理論は施灸法の種類・禁灸部位・熱傷の処置が中心。はり理論と並行して学ぶと効率的。有痕灸・無痕灸の特徴と施灸量の調節もあわせて整理しておこう。',
     studyHours: '10〜15時間',
     roadmap: [
       { themeId: 'kyu-fukusayo', name: '灸の副作用', note: '熱傷の深度（Ⅰ〜Ⅲ度）と処置・禁灸部位を整理' },
@@ -243,7 +243,7 @@ export const subjectGuides: SubjectGuide[] = [
     ],
     nextExamPredictions: [
       { name: '灸の副作用と禁灸部位', reason: '不出年度に復活する傾向があり、第35回は注意が必要', likelihood: 'medium' },
-      { name: '施灸法の種類（無瘢痕・有瘢痕）', reason: '灸の種類と適応の比較問題が増加傾向', likelihood: 'medium' },
+      { name: '施灸法の種類（有痕灸・無痕灸）', reason: '灸の種類と適応の比較問題が増加傾向', likelihood: 'medium' },
     ],
   },
   {

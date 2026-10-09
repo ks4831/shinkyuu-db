@@ -19,7 +19,7 @@ export const LEARNING_DIAGRAMS: Record<string, LearningDiagram> = {
     id: 'five-shu-points',
     file: '/learning-diagrams/five-shu-points.svg',
     title: '五兪穴と五行配当',
-    alt: '井・滎・輸・経・合の五兪穴について、陰経は木火土金水、陽経は金水木火土の順に五行が配当されることを示した表。',
+    alt: '井・滎・兪・経・合の五兪穴について、陰経は木火土金水、陽経は金水木火土の順に五行が配当されることを示した表。',
     caption: '陰経は「木」から、陽経は「金」から始まる。',
   },
   'eight-influential': {

@@ -130,7 +130,7 @@ id,examRound,year,questionNumber,session,subject,officialLarge,officialMedium,of
 30-129,30,2022,129,共通,oriental-clinical,専門科目,東洋医学臨床論,神経根症状,tcm-clinical,障害神経根部位の判定,,上肢症状のデルマトーム：C5（肩外側）・C6（母指〜前腕橈側）・C7（中指〜前腕中央）・C8（環・小指〜前腕尺側）・T1（前腕内側）で判定,,indexed_official,2020,180,,oc-undoki-shinkei
 30-130,30,2022,130,共通,oriental-clinical,専門科目,東洋医学臨床論,腱鞘炎,tcm-clinical,ドケルバン病の局所治療穴,,ドケルバン病：長母指外転筋腱・短母指伸筋腱の狭窄性腱鞘炎で、アイヒホッフテスト陽性。家事・育児などの手の使い過ぎで起こる。両腱の間にある列缺付近が局所治療穴,,indexed_official,2020,180,,oc-undoki-shinkei
 30-131,30,2022,131,共通,oriental-clinical,専門科目,東洋医学臨床論,顎関節症,tcm-clinical,顎関節症の筋刺激,,顎関節症の刺鍼治療：咬筋・側頭筋・外側翼突筋が主な刺鍼対象。局所穴：下関（ST7）・頬車（ST6）・聴宮（SI19）。遠隔穴：合谷（LI4）,,indexed_official,2020,180,,oc-kakka-chiryo
-30-132,30,2022,132,共通,oriental-clinical,専門科目,東洋医学臨床論,末梢神経治療,tcm-clinical,罹患神経に対応する治療穴,,末梢神経別治療穴：正中神経（内関・大陵・郄門）・尺骨神経（神門・通里・小海）・橈骨神経（偏歴・列欠・陽渓）・腓骨神経（陽陵泉・懸鐘）,,indexed_official,2020,180,,oc-undoki-shinkei
+30-132,30,2022,132,共通,oriental-clinical,専門科目,東洋医学臨床論,末梢神経治療,tcm-clinical,罹患神経に対応する治療穴,,末梢神経別治療穴：正中神経（内関・大陵・郄門）・尺骨神経（神門・通里・小海）・橈骨神経（偏歴・列欠・陽渓）・腓骨神経（陽陵泉・懸鍾）,,indexed_official,2020,180,,oc-undoki-shinkei
 30-133,30,2022,133,共通,oriental-clinical,専門科目,東洋医学臨床論,顔面神経麻痺,tcm-clinical,顔面神経麻痺の後遺症,,顔面神経麻痺後遺症：顔面拘縮・病的共同運動（口を動かすと目が閉じる）・ワニの涙（咀嚼時の流涙）・顔面痙攣。後遺症期の刺鍼は強刺激を避ける,,indexed_official,2020,180,,oc-undoki-shinkei
 30-134,30,2022,134,共通,oriental-clinical,専門科目,東洋医学臨床論,頭部神経痛,tcm-clinical,頭部神経痛の種類と治療穴,,三叉神経第1枝（眼窩上神経痛）：攅竹・陽白・頭維。後頭神経痛：天柱・風池・完骨。耳介側頭神経痛：翳風・聴会・太陽。神経分布に沿った取穴,,indexed_official,2020,180,,oc-kakka-chiryo
 30-135,30,2022,135,共通,oriental-clinical,専門科目,東洋医学臨床論,サルコペニア,orthopedics,サルコペニアの特徴,,サルコペニアは加齢に伴う筋肉量・筋力・身体機能の低下。歩行速度低下・握力低下が特徴。フレイルと密接に関連,,indexed_official,2020,180,,oc-undoki-shinkei
@@ -170,7 +170,7 @@ id,examRound,year,questionNumber,session,subject,officialLarge,officialMedium,of
 30-169,30,2022,169,共通,acupuncture-theory,専門科目,はり理論,神経生理,neurophysiology,鍼刺激の痛覚伝導路,,鍼刺激→Aδ（鋭い第一痛・11〜30m/s）とC線維（鈍い第二痛・0.5〜2m/s）→脊髄後角（Rexed Ⅰ〜Ⅱ層）→脊髄視床路→視床→大脳皮質,,indexed_official,2020,180,,ha-tsukaku-dendoro
 30-170,30,2022,170,共通,acupuncture-theory,専門科目,はり理論,鍼鎮痛,acupuncture-technique,脊髄分節性鎮痛の機序,,脊髄分節性鎮痛：疼痛部位と同じ脊髄分節の部位に刺鍼→脊髄後角での侵害入力抑制（ゲートコントロール理論）。分節的な鎮痛を発揮する,,indexed_official,2020,180,,ha-chintsu-kiko
 30-171,30,2022,171,共通,moxibustion-theory,専門科目,きゅう理論,艾の製造,acupuncture-technique,艾の製造工程と用具,,艾（もぐさ）の製造：ヨモギ葉を乾燥→粉砕（臼）→篩い分け→けんどん（夾雑物除去器具）→精製を繰り返す。高精製ほど繊維質が多く白くなる,,indexed_official,2020,180,,ky-mogusa
-30-172,30,2022,172,共通,moxibustion-theory,専門科目,きゅう理論,灸の種類,acupuncture-technique,無痕灸の種類,,無痕灸（瘢痕を残さない灸）：棒灸（艾条灸）・温灸器使用・隔物灸（生姜灸・塩灸・附子餅灸）・灸頭鍼（鍼柄に艾を付ける）。透熱灸は有痕灸,,indexed_official,2020,180,,ky-kyuho-shurui
+30-172,30,2022,172,共通,moxibustion-theory,専門科目,きゅう理論,灸の種類,acupuncture-technique,無痕灸の種類,,無痕灸（灸痕を残さない灸）：棒灸（艾条灸）・温灸器使用・隔物灸（生姜灸・塩灸・附子餅灸）・灸頭鍼（鍼柄に艾を付ける）。透熱灸は有痕灸,,indexed_official,2020,180,,ky-kyuho-shurui
 30-173,30,2022,173,共通,moxibustion-theory,専門科目,きゅう理論,灸の副作用,acupuncture-technique,施灸後の熱傷の程度判定,,施灸後に紅斑と痛み（水疱なし）＝Ⅰ度熱傷（表皮まで）。Ⅱ度は真皮に達して水疱と強い痛み、Ⅲ度は皮膚全層で痛みを感じない（日本熱傷学会 熱傷用語集2015）,,indexed_official,2020,180,,ky-fukusayo-hosoku
 30-174,30,2022,174,共通,moxibustion-theory,専門科目,きゅう理論,灸の副作用,acupuncture-technique,灸痕の化膿防止方法,,施灸後の化膿予防：灸痕を清潔保持（滅菌ガーゼ保護）・抗菌軟膏塗布。糖尿病患者・ステロイド長期服用・高齢者は易感染性・創傷治癒遅延に注意,,indexed_official,2020,180,,ky-fukusayo-hosoku
 30-175,30,2022,175,共通,moxibustion-theory,専門科目,きゅう理論,灸の適応と注意,acupuncture-technique,副腎皮質ホルモン長期服用患者への施灸,,ステロイド（副腎皮質ホルモン）長期服用患者：皮膚菲薄化・易感染性・創傷治癒遅延があるため直接灸（透熱灸）は慎重に。温灸・隔物灸が推奨される,,indexed_official,2020,180,,ky-kyuho-shurui

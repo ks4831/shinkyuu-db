@@ -119,7 +119,7 @@ id,examRound,year,questionNumber,session,subject,officialLarge,officialMedium,of
 34-118,34,2026,118,共通,meridians-acupoints,専門科目,経絡経穴概論,上肢経穴,meridians-acupoints,上腕部経穴の解剖学的位置,,天泉＝上腕二頭筋の長頭と短頭の間（腋窩横紋前端の下方2寸）。天府＝上腕二頭筋外側縁、青霊＝上腕二頭筋内側縁、臂臑＝三角筋前縁,,indexed_official,2020,180,,juni-kei-myaku
 34-119,34,2026,119,共通,meridians-acupoints,専門科目,経絡経穴概論,顔面部経穴,meridians-acupoints,耳前部3穴の位置と所属経脈,,耳前部3穴（聴宮・聴会・耳門）の位置の違いと所属経脈（小腸経・胆経・三焦経）を整理する,,indexed_official,2020,180,,juni-kei-myaku
 34-120,34,2026,120,共通,meridians-acupoints,専門科目,経絡経穴概論,特定穴,meridians-acupoints,五兪穴の適応症と腎経の部位,,難経六十八難：合は逆気して泄するを主る（のぼせ・失禁）。腎経の合水穴＝陰谷（膝後内側、半腱様筋腱の外縁、膝窩横紋上）,,indexed_official,2020,180,,go-yu-ketsu
-34-121,34,2026,121,共通,meridians-acupoints,専門科目,経絡経穴概論,特定穴（原穴）,meridians-acupoints,原穴の部位と主治（体重節痛・原気）,,原穴は三焦の原気が注ぐ穴。陽経の原穴は五行穴の輸穴とは別穴。体重節痛に用いる各原穴の部位を整理する,,indexed_official,2020,180,,gen-ketsu
+34-121,34,2026,121,共通,meridians-acupoints,専門科目,経絡経穴概論,特定穴（原穴）,meridians-acupoints,原穴の部位と主治（体重節痛・原気）,,原穴は三焦の原気が注ぐ穴。陽経の原穴は五行穴の兪穴とは別穴。体重節痛に用いる各原穴の部位を整理する,,indexed_official,2020,180,,gen-ketsu
 34-122,34,2026,122,共通,meridians-acupoints,専門科目,経絡経穴概論,特定穴（郄穴）,meridians-acupoints,郄穴の部位と所属経脈,,会宗（三焦経の郄穴）＝前腕後面、尺骨の橈側縁、手関節背側横紋の上方3寸,,indexed_official,2020,180,,geki-ketsu
 34-123,34,2026,123,共通,meridians-acupoints,専門科目,経絡経穴概論,特定穴（絡穴）,meridians-acupoints,絡穴の部位と所属経脈,,絡穴15穴の部位と各経の絡穴名（豊隆・列缺・支正等）を整理する,,indexed_official,2020,180,,me-sonota-tokketsu
 34-124,34,2026,124,共通,meridians-acupoints,専門科目,経絡経穴概論,特定穴（八会穴）,meridians-acupoints,八会穴と募穴の重複（気会＝膻中）,,八会穴8穴の主治と、募穴を兼ねる穴（気会＝膻中は心包の募穴）を整理する,,indexed_official,2020,180,,me-sonota-tokketsu
