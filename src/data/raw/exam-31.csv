@@ -120,7 +120,7 @@ id,examRound,year,questionNumber,session,subject,officialLarge,officialMedium,of
 31-119,31,2023,119,共通,meridians-acupoints,専門科目,経絡経穴概論,胸部経穴,meridians-acupoints,鎖骨下縁に取る経穴,,鎖骨下縁に取るのは兪府（腎経・前正中線外方2寸）。欠盆は鎖骨上窩。中府は第1肋間。天突は胸骨上縁,,indexed_official,2020,180,,juni-kei-myaku
 31-120,31,2023,120,共通,meridians-acupoints,専門科目,経絡経穴概論,前腕・手部経穴,meridians-acupoints,橈側手根屈筋腱橈側の経穴,,橈側手根屈筋腱の橈側に位置する経穴は列欠（肺経）。霊道・内関は前腕掌側内側。支正は前腕後面,,indexed_official,2020,180,,juni-kei-myaku
 31-121,31,2023,121,共通,meridians-acupoints,専門科目,経絡経穴概論,胸部経穴と禁忌,meridians-acupoints,深刺で肺を損傷するリスクのある経穴,,深刺すると前鋸筋・肋間筋を貫き肺を損傷するのは輒筋（胆経）。膺窓・胸郷は前胸部、期門は季肋部に位置し、いずれも前鋸筋を貫く経路上にはない,,indexed_official,2020,180,,juni-kei-myaku
-31-122,31,2023,122,共通,meridians-acupoints,専門科目,経絡経穴概論,五要穴・特定穴,meridians-acupoints,足太陰経経金穴（商丘）の部位,,足の太陰経の経金穴（商丘）は足内側・内果前下方・舟状骨粗面と内果尖の中央陥凹部（正しい）。太渓は内果後方。解谿は足関節前面。丘墟は外果前下方,,indexed_official,2020,180,,go-yu-ketsu
+31-122,31,2023,122,共通,meridians-acupoints,専門科目,経絡経穴概論,五要穴・特定穴,meridians-acupoints,足太陰経経金穴（商丘）の部位,,足の太陰経の経金穴（商丘）は足内側・内果前下方・舟状骨粗面と内果尖の中央陥凹部（正しい）。太渓は内果後方。解渓は足関節前面。丘墟は外果前下方,,indexed_official,2020,180,,go-yu-ketsu
 31-123,31,2023,123,共通,meridians-acupoints,専門科目,経絡経穴概論,五要穴・特定穴,meridians-acupoints,五要穴（原穴・絡穴・郄穴・募穴）の特徴,,五要穴のうち郄穴には同じ高さで並ぶものがある（正解：外丘と中都はともに果の上方7寸）。手の原穴のうち合谷・腕骨は手関節横紋上にない。自経にある募穴は中府・期門・日月の3穴,,indexed_official,2020,180,,go-yu-ketsu
 31-124,31,2023,124,共通,meridians-acupoints,専門科目,経絡経穴概論,特定穴・組合せ穴,meridians-acupoints,八会穴を含まない組合せ穴,,八会穴を含まないのは小児斜差の灸（正答）。脚気八処の穴には髄会の絶骨が含まれ、六つ灸には血会の膈兪が含まれる。中風七穴の構成は文献により異なるが、絶骨を含む構成が用いられる,,indexed_official,2020,180,,me-sonota-tokketsu
 31-125,31,2023,125,共通,meridians-acupoints,専門科目,経絡経穴概論,奇穴,meridians-acupoints,肓門外方5分の奇穴と主治,,肓門穴の外方5分にある奇穴（痞根）の主治は痞塊。喘息は定喘・天突付近、動悸は心兪・厥陰兪付近の主治で、いずれもこの奇穴の主治ではない,,indexed_official,2020,180,,me-kiketsu

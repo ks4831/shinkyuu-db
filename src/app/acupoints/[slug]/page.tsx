@@ -3,6 +3,7 @@ import Link from 'next/link'
 import { notFound } from 'next/navigation'
 import { ACUPOINTS, acupointLabel } from '@/data/acupoints'
 import { getAcupointStat, TOTAL_EXAM_ROUNDS } from '@/lib/acupoints'
+import { describeAcupointSources, type SourceTone } from '@/lib/acupointSources'
 import { questionsForAcupoint } from '@/lib/quiz'
 import { roundToYear } from '@/lib/utils'
 
@@ -29,6 +30,14 @@ export async function generateMetadata({
   }
 }
 
+/** 根拠の種類。色だけに頼らず、文字でも区別する */
+const TONE: Record<SourceTone, { label: string; cls: string }> = {
+  jp: { label: '日本の資料', cls: 'bg-green-50 text-green-700' },
+  intl: { label: 'WHO', cls: 'bg-blue-50 text-blue-700' },
+  conflict: { label: '要確認', cls: 'bg-amber-50 text-amber-700' },
+  pending: { label: '未確認', cls: 'bg-gray-100 text-gray-500' },
+}
+
 const IMP_LABEL: Record<string, string> = { S: '最重要', A: '重要', B: '標準', C: '参考' }
 const IMP_COLOR: Record<string, string> = {
   S: 'bg-red-50 text-red-700 border-red-200',
@@ -47,6 +56,7 @@ export default async function AcupointDetailPage({
   if (!a) notFound()
 
   const related = questionsForAcupoint(slug)
+  const sources = describeAcupointSources(a)
   const askedRounds = new Set(a.examRounds)
 
   const jsonLd = {
@@ -127,6 +137,51 @@ export default async function AcupointDetailPage({
         <p className="mt-1.5 text-xs text-gray-400">※ 位置は要点のみ。正確な取穴は教科書『経絡経穴概論』で確認してください。</p>
       ) : (
         <p className="mt-1.5 text-xs text-gray-400">※ {a.name ? '位置' : '日本語名・位置'}などの詳細情報は準備中です。</p>
+      )}
+
+      {/* 情報の根拠（項目ごとに分ける。WHO と日本の資料を混同しない） */}
+      {sources.lines.length > 0 && (
+        <section className="mt-6">
+          <h2 className="mb-2 text-sm font-bold text-gray-700">情報の根拠</h2>
+          <div className="rounded-2xl border border-gray-100 bg-white p-4 text-sm">
+            <dl className="space-y-2.5">
+              {sources.lines.map((l) => (
+                <div key={l.field} className="flex gap-3">
+                  <dt className="w-10 flex-shrink-0 font-bold text-gray-500">{l.label}</dt>
+                  <dd className="min-w-0">
+                    <span className={`mr-1.5 inline-block rounded px-1.5 py-0.5 text-[11px] font-bold ${TONE[l.tone].cls}`}>{TONE[l.tone].label}</span>
+                    <span className="text-gray-800">{l.verdict}</span>
+                    {l.note && <p className="mt-0.5 text-xs text-gray-500">{l.note}</p>}
+                  </dd>
+                </div>
+              ))}
+            </dl>
+            {sources.records.length > 0 && (
+              <details className="mt-3 border-t border-gray-100 pt-3">
+                <summary className="cursor-pointer text-xs font-bold text-green-700">出典の詳細（{sources.records.length}件）</summary>
+                <ul className="mt-2 space-y-2">
+                  {sources.records.map((r, i) => (
+                    <li key={i} className="break-words text-xs leading-relaxed text-gray-600">
+                      <span className="font-bold text-gray-700">{r.fieldLabel}</span>
+                      <span className="mx-1 text-gray-300">|</span>
+                      {r.url ? (
+                        <a href={r.url} target="_blank" rel="noopener noreferrer" className="text-green-700 underline">{r.source}</a>
+                      ) : (
+                        r.source
+                      )}
+                      <span className="ml-1 text-gray-400">{r.page}</span>
+                      <span className="ml-1">— {r.status}</span>
+                      {r.sourceText && <span className="ml-1 text-gray-500">（資料の表記：{r.sourceText}）</span>}
+                    </li>
+                  ))}
+                </ul>
+              </details>
+            )}
+          </div>
+          <p className="mt-1.5 text-xs text-gray-400">
+            「日本の資料」は公式過去問・国家試験出題基準で直接確かめたものです。WHO の位置と一致していても、日本の教科書で照合するまでは日本基準で確認済みとは扱っていません。
+          </p>
+        </section>
       )}
 
       {/* 過去6年の出題状況 */}

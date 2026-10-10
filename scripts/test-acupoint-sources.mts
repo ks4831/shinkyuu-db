@@ -2,8 +2,10 @@
 /* ──────────────────────────────────────────────────────────────
    経穴の名称・検索・出典管理のテスト
    `npm run test:sources`
-   - 列欠／列缺のどちらでも同じ経穴（lu7）に着くこと、slug・URL が変わらないこと
-   - 表記を変えた予想問題（ma-004・ma-006・oc-014）の正答判定がシャッフル後も保たれること
+   - 列欠／列缺・攅竹／攢竹・懸鍾／懸鐘・解渓／解谿・欠盆／缺盆のどちらでも同じ経穴に着くこと、slug・URL が変わらないこと
+   - 表記を変えた予想問題（ma-004・ma-006・oc-014・oc-007・oc-011・at-008）の正答判定がシャッフル後も保たれること
+   - 出題基準2026 で補った名称（JAPAN-SOURCE 07）に出典があること
+   - 経穴ページの「情報の根拠」が、WHO・推論を日本の資料での確認と書かないこと
    - 出典管理の検査（scripts/lib/acupoint-source-check.mjs）が、わざと壊したデータを検出すること
    ────────────────────────────────────────────────────────────── */
 import assert from 'node:assert/strict'
@@ -57,6 +59,15 @@ test('6. 経穴は361穴のまま（別名を足しても増えない）・slug 
   assert.ok(ACUPOINTS.every((a) => a.slug === a.code.toLowerCase()))
   assert.equal(ACUPOINTS.filter((a) => a.location).length, 146)
 })
+for (const [name, old, slug] of [['攅竹', '攢竹', 'bl2'], ['懸鍾', '懸鐘', 'gb39'], ['解渓', '解谿', 'st41'], ['欠盆', '缺盆', 'st12']]) {
+  test(`5b. 「${name}」「${old}」のどちらでも ${slug} が1件だけ出る（正規名は ${name}）`, () => {
+    assert.deepEqual(searchAcupoints(rows, name).map((p) => p.slug), [slug])
+    assert.deepEqual(searchAcupoints(rows, old).map((p) => p.slug), [slug])
+    const a = ACUPOINTS.find((x) => x.slug === slug)!
+    assert.equal(a.name, name)
+    assert.ok(a.aliases?.includes(old))
+  })
+}
 test('7. 別名が他の穴の正規名・別名と衝突しない', () => {
   const owner = new Map<string, string>()
   for (const a of ACUPOINTS) {
@@ -67,10 +78,18 @@ test('7. 別名が他の穴の正規名・別名と衝突しない', () => {
   }
 })
 
-console.log('予想問題（表記変更した3問）')
+console.log('予想問題（表記変更した6問）')
 const EXPECT: Record<string, { correctAnswer: number; text: string; choices: string[] }> = {
   'ma-004': { correctAnswer: 1, text: '任脈', choices: ['督脈', '任脈', '衝脈', '帯脈'] },
   'ma-006': { correctAnswer: 3, text: '合谷', choices: ['足三里', '委中', '列欠', '合谷'] },
+  'oc-007': { correctAnswer: 0, text: '風池・天柱・肩井・合谷', choices: ['風池・天柱・肩井・合谷', '関元・気海・三陰交', '中脘・足三里・内関', '睛明・攅竹・太陽'] },
+  'oc-011': { correctAnswer: 0, text: '天枢・大腸兪・上巨虚・支溝', choices: ['天枢・大腸兪・上巨虚・支溝', '中府・雲門・膻中', '睛明・攅竹・魚腰', '肩井・天宗・臂臑'] },
+  'at-008': { correctAnswer: 0, text: '胸背部の肋間を深く刺入する部位', choices: ['胸背部の肋間を深く刺入する部位', '前腕伸側', '下腿外側', '手背'] },
+}
+// 表記を変えた問題ごとの［旧表記, 新表記］
+const NOTATION: Record<string, [string, string]> = {
+  'ma-004': ['列缺', '列欠'], 'ma-006': ['列缺', '列欠'], 'oc-014': ['列缺', '列欠'],
+  'oc-007': ['攢竹', '攅竹'], 'oc-011': ['攢竹', '攅竹'], 'at-008': ['缺盆', '欠盆'],
 }
 // QuizRunner.buildSet と同じ手順（選択肢の添字を Fisher–Yates で並べ替え、shownCorrect = idx.indexOf(correctAnswer)）
 const shuffle = <T,>(a: T[]) => {
@@ -80,12 +99,12 @@ const shuffle = <T,>(a: T[]) => {
   }
   return a
 }
-for (const id of ['ma-004', 'ma-006', 'oc-014']) {
-  test(`8. ${id}：本文に「列缺」がなく、正答がシャッフル後も同じ選択肢`, () => {
+for (const [id, [oldText, newText]] of Object.entries(NOTATION)) {
+  test(`8. ${id}：本文に「${oldText}」がなく「${newText}」があり、正答がシャッフル後も同じ選択肢`, () => {
     const q = ALL_QUESTIONS.find((x) => x.id === id)!
     assert.ok(q, id)
-    assert.ok(!JSON.stringify(q).includes('列缺'))
-    assert.ok(JSON.stringify(q).includes('列欠'))
+    assert.ok(!JSON.stringify(q).includes(oldText))
+    assert.ok(JSON.stringify(q).includes(newText))
     const e = EXPECT[id]
     if (e) {
       assert.equal(q.correctAnswer, e.correctAnswer)
@@ -122,9 +141,10 @@ test('11. lu7 の名称は日本の資料で確認済み（公式・出題基準
   assert.equal(old.length, 2)
   assert.ok(old.every((r) => r.claim === '列缺' && r.verificationStatus === 'CONFLICT' && r.sourceText === '列欠'))
 })
-test('12. 未確認は確認済みにならない（攢竹は CONFLICT、水溝の位置は WHO_VERIFIED、足三里の位置は SOURCE_NEEDED）', () => {
+test('12. 未確認は確認済みにならない（水溝の名称は SOURCE_NEEDED、水溝の位置は WHO_VERIFIED、足三里の位置は SOURCE_NEEDED）', () => {
   const get = (slug: string, field: string) => lib.getAcupointSourceStatus(ACUPOINTS.find((a) => a.slug === slug)!).find((s) => s.field === field)!.status
-  assert.equal(get('bl2', 'name'), 'CONFLICT')
+  assert.equal(get('bl2', 'name'), 'JAPAN_VERIFIED')
+  assert.equal(get('gv26', 'name'), 'SOURCE_NEEDED')
   assert.equal(get('gv26', 'location'), 'WHO_VERIFIED')
   assert.equal(get('st36', 'location'), 'SOURCE_NEEDED')
   assert.equal(get('li11', 'location'), 'CONFLICT')
@@ -151,8 +171,8 @@ test('14. 実データは ERROR 0・WARN 0', () => {
   const r = run()
   assert.deepEqual(r.errors, [])
   assert.deepEqual(r.warns, [])
-  assert.equal(r.stats.records, 652)
-  assert.equal(r.stats.active, 650)
+  assert.equal(r.stats.records, 669)
+  assert.equal(r.stats.active, 666)
 })
 const BROKEN: [string, (d: AcupointSourceData) => void, RegExp][] = [
   ['存在しない経穴ID', (d) => d.records.push(base({ acupointId: 'lu99' })), /経穴マスターにない slug/],
@@ -186,9 +206,71 @@ test('16. 検出：名称を変えたのにレコードを更新しない → WA
   assert.ok(r.warns.some((m: string) => /確認後にマスターの値が変わった/.test(m)))
 })
 test('17. 検出：資料の表記が別名にない → WARN（その表記で検索できない）', () => {
-  const master = ACUPOINTS.map((a) => (a.slug === 'bl2' ? { ...a, aliases: [] } : a))
-  const r = run(D, master)
+  const d = clone()
+  d.records.push(base({ acupointId: 'st12', claim: '欠盆', currentValue: '欠盆', sourceId: 'KIJUN-2026', sourcePage: 'p.63', verificationStatus: 'CONFLICT', sourceText: '缺盆' }))
+  const master = ACUPOINTS.map((a) => (a.slug === 'st12' ? { ...a, aliases: [] } : a))
+  const r = run(d, master)
   assert.ok(r.warns.some((m: string) => /検索できない/.test(m)))
+})
+
+console.log('名称補完（JAPAN-SOURCE 07）')
+const COMPLETED: Record<string, string> = {
+  gv23: '上星', st1: '承泣', st18: '乳根', st19: '不容', st27: '大巨', st30: '気衝', sp14: '腹結', ht1: '極泉',
+  si15: '肩中兪', bl14: '厥陰兪', bl27: '小腸兪', bl32: '次髎', bl37: '殷門', pc1: '天池', te15: '天髎', gb1: '瞳子髎',
+}
+test('18. 補った16穴は名称だけ（読み・位置・要穴は入れない）、出題基準2026 の直接確認レコードがある', () => {
+  for (const [slug, name] of Object.entries(COMPLETED)) {
+    const a = ACUPOINTS.find((x) => x.slug === slug)!
+    assert.equal(a.name, name, slug)
+    assert.equal(a.reading, undefined, slug)
+    assert.equal(a.location, undefined, slug)
+    assert.equal(a.specialPoints, undefined, slug)
+    assert.equal(lib.getAcupointSourceStatus(a).find((s) => s.field === 'name')!.status, 'JAPAN_VERIFIED', slug)
+    assert.ok(D.records.some((r) => r.acupointId === slug && r.sourceId === 'KIJUN-2026' && r.sourceText === name && r.verificationStatus === 'JAPAN_VERIFIED'), slug)
+  }
+})
+test('19. 名称は289穴・未設定72穴（重複なし）。睛明（bl1）は出題基準の表記「晴明」と違うため未設定のまま', () => {
+  assert.equal(ACUPOINTS.filter((a) => a.name).length, 289)
+  assert.equal(ACUPOINTS.filter((a) => !a.name).length, 72)
+  assert.equal(new Set(ACUPOINTS.filter((a) => a.name).map((a) => a.name)).size, 289)
+  assert.equal(ACUPOINTS.find((a) => a.slug === 'bl1')!.name, undefined)
+})
+
+console.log('経穴ページの「情報の根拠」')
+test('20. 全361穴：WHO・推論・確認待ちを日本の資料での確認と表示しない', () => {
+  for (const a of ACUPOINTS) {
+    const { lines, records } = lib.describeAcupointSources(a)
+    const st = lib.getAcupointSourceStatus(a)
+    for (const l of lines) {
+      const fs = st.filter((s) => s.field === l.field && s.status !== 'NOT_APPLICABLE')
+      if (l.tone === 'jp') assert.ok(fs.every((s) => s.status === 'JAPAN_VERIFIED'), `${a.slug} ${l.field}`)
+      if (fs.some((s) => s.status === 'WHO_VERIFIED')) {
+        assert.equal(l.tone, 'intl', `${a.slug} ${l.field}`)
+        assert.ok(l.verdict.includes('WHO'), `${a.slug} ${l.field}`)
+        assert.ok(l.note?.includes('日本の資料（教科書・公式問題）では未確認'), `${a.slug} ${l.field}`)
+      }
+      if (l.tone !== 'jp') assert.ok(!/(過去問|出題基準\d*)で確認/.test(l.verdict) || l.field === 'specialPoints', `${a.slug} ${l.field}`)
+      // 位置を日本の資料で確認済みと出すときは、教科書が未照合であることを必ず添える（教科書のレコードはまだない）
+      if (l.field === 'location' && l.tone === 'jp') assert.ok(l.note?.includes('教科書では未照合'), a.slug)
+    }
+    // リンクは日本の公的機関の資料だけ（WHO は第三者の転載なのでリンクしない）
+    for (const r of records) {
+      assert.ok(!r.url || r.url.startsWith('https://ahaki.or.jp/'), `${a.slug} ${r.url}`)
+      if (r.source.startsWith('WHO')) assert.equal(r.url, undefined)
+    }
+  }
+})
+test('21. 具体例：列欠・攅竹・水溝・曲池・陰谷・睛明の表示', () => {
+  const lines = (slug: string) => lib.describeAcupointSources(ACUPOINTS.find((a) => a.slug === slug)!).lines
+  const line = (slug: string, f: string) => lines(slug).find((l) => l.field === f)!
+  assert.equal(line('lu7', 'name').verdict, '公式過去問（第29〜34回）・国家試験出題基準2026で確認')
+  assert.equal(line('bl2', 'name').verdict, '国家試験出題基準2026で確認')
+  assert.equal(line('gv26', 'name').tone, 'pending')
+  assert.equal(line('gv26', 'location').tone, 'intl')
+  assert.equal(line('li11', 'location').tone, 'conflict')
+  assert.equal(line('ki10', 'location').tone, 'jp')
+  assert.ok(lib.describeAcupointSources(ACUPOINTS.find((a) => a.slug === 'lu7')!).records.every((r) => !r.claim.includes('列缺')))
+  assert.equal(lines('bl1').length, 0)
 })
 
 console.log(`\n${n} 件成功`)
