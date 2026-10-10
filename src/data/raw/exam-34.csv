@@ -121,7 +121,7 @@ id,examRound,year,questionNumber,session,subject,officialLarge,officialMedium,of
 34-120,34,2026,120,共通,meridians-acupoints,専門科目,経絡経穴概論,特定穴,meridians-acupoints,五兪穴の適応症と腎経の部位,,難経六十八難：合は逆気して泄するを主る（のぼせ・失禁）。腎経の合水穴＝陰谷（膝後内側、半腱様筋腱の外縁、膝窩横紋上）,,indexed_official,2020,180,,go-yu-ketsu
 34-121,34,2026,121,共通,meridians-acupoints,専門科目,経絡経穴概論,特定穴（原穴）,meridians-acupoints,原穴の部位と主治（体重節痛・原気）,,原穴は三焦の原気が注ぐ穴。陽経の原穴は五行穴の兪穴とは別穴。体重節痛に用いる各原穴の部位を整理する,,indexed_official,2020,180,,gen-ketsu
 34-122,34,2026,122,共通,meridians-acupoints,専門科目,経絡経穴概論,特定穴（郄穴）,meridians-acupoints,郄穴の部位と所属経脈,,会宗（三焦経の郄穴）＝前腕後面、尺骨の橈側縁、手関節背側横紋の上方3寸,,indexed_official,2020,180,,geki-ketsu
-34-123,34,2026,123,共通,meridians-acupoints,専門科目,経絡経穴概論,特定穴（絡穴）,meridians-acupoints,絡穴の部位と所属経脈,,絡穴15穴の部位と各経の絡穴名（豊隆・列缺・支正等）を整理する,,indexed_official,2020,180,,me-sonota-tokketsu
+34-123,34,2026,123,共通,meridians-acupoints,専門科目,経絡経穴概論,特定穴（絡穴）,meridians-acupoints,絡穴の部位と所属経脈,,絡穴15穴の部位と各経の絡穴名（豊隆・列欠・支正等）を整理する,,indexed_official,2020,180,,me-sonota-tokketsu
 34-124,34,2026,124,共通,meridians-acupoints,専門科目,経絡経穴概論,特定穴（八会穴）,meridians-acupoints,八会穴と募穴の重複（気会＝膻中）,,八会穴8穴の主治と、募穴を兼ねる穴（気会＝膻中は心包の募穴）を整理する,,indexed_official,2020,180,,me-sonota-tokketsu
 34-125,34,2026,125,共通,meridians-acupoints,専門科目,経絡経穴概論,特定穴（八総穴）,meridians-acupoints,八総穴（八脈交会穴）の部位と対応奇経,,八総穴の申脈＝外果尖の直下、外果下縁と踵骨の間の陥凹部（正答）。選択肢①は下巨虚、②（外果尖の上方3寸）は懸鍾（髄会）、④は委中。光明（胆経の絡穴）は外果尖の上方5寸,,indexed_official,2020,180,,me-sonota-tokketsu
 34-126,34,2026,126,共通,meridians-acupoints,専門科目,経絡経穴概論,刺鍼リスク,acupuncture-technique,危険部位への深刺リスク（亜門と延髄損傷）,,瘂門（第2頸椎棘突起上方の陥凹部）は後頸部で大後頭孔に近く、深刺すると延髄損傷の危険性が最も高い,,indexed_official,2020,180,,me-shishin-anzen

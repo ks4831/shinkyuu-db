@@ -1,7 +1,7 @@
 {
  "schemaVersion": 1,
  "definition": "docs/acupoint-source-schema.md",
- "generatedAt": "2026-10-09",
+ "generatedAt": "2026-10-10",
  "sources": [
   {
    "id": "OFFICIAL-29-34",
@@ -19,7 +19,7 @@
    "organization": "公益財団法人 東洋療法研修試験財団",
    "url": "https://ahaki.or.jp/wordpress/wp-content/uploads/2026_shikenkijyun.pdf",
    "edition": "2026年版（第35回から適用）",
-   "note": "第29〜34回の判定には遡及適用しない。名称の確認は「経穴（180穴）・奇穴（4穴）一覧」"
+   "note": "第29〜34回の判定には遡及適用しない。名称の確認は「あん摩マッサージ指圧師 経穴（180穴）・奇穴（4穴）一覧」（印刷頁63＝PDF 69頁）。はり師・きゅう師の部には経穴名の一覧がない"
   },
   {
    "id": "WHO-2008",
@@ -3051,7 +3051,10 @@
    "verifiedAt": "2026-10-09",
    "verificationStatus": "CONFLICT",
    "coverage": "full",
-   "notes": "公式は別の表記（列欠）"
+   "notes": "公式は別の表記（列欠）",
+   "sourceText": "列欠",
+   "supersededAt": "2026-10-10",
+   "supersededBy": "JS06-001：マスターの名称を「列欠」に変更（承認済み）。同じ資料の name=列欠 のレコードが後継"
   },
   {
    "acupointId": "lu7",
@@ -3063,7 +3066,36 @@
    "verifiedAt": "2026-10-09",
    "verificationStatus": "CONFLICT",
    "coverage": "full",
-   "notes": "出題基準の表記は「列欠」（字形の差）"
+   "notes": "出題基準の表記は「列欠」（字形の差）",
+   "sourceText": "列欠",
+   "supersededAt": "2026-10-10",
+   "supersededBy": "JS06-001：マスターの名称を「列欠」に変更（承認済み）。同じ資料の name=列欠 のレコードが後継"
+  },
+  {
+   "acupointId": "lu7",
+   "fieldName": "name",
+   "claim": "列欠",
+   "currentValue": "列欠",
+   "sourceId": "OFFICIAL-29-34",
+   "sourcePage": "30-106・30-130・31-120・33-159・34-112",
+   "verifiedAt": "2026-10-10",
+   "verificationStatus": "JAPAN_VERIFIED",
+   "coverage": "full",
+   "notes": "問題文・選択肢の表記は「列欠」（5問）。「列缺」は0件",
+   "sourceText": "列欠"
+  },
+  {
+   "acupointId": "lu7",
+   "fieldName": "name",
+   "claim": "列欠",
+   "currentValue": "列欠",
+   "sourceId": "KIJUN-2026",
+   "sourcePage": "経穴（180穴）・奇穴（4穴）一覧（p.63）",
+   "verifiedAt": "2026-10-10",
+   "verificationStatus": "JAPAN_VERIFIED",
+   "coverage": "full",
+   "notes": "あん摩マッサージ指圧師の経穴一覧に同じ表記（第35回以降の基準）。PDF（2026_shikenkijyun.pdf）の印刷頁63で再確認",
+   "sourceText": "列欠"
   },
   {
    "acupointId": "lu8",
@@ -4875,7 +4907,8 @@
    "verifiedAt": "2026-10-09",
    "verificationStatus": "CONFLICT",
    "coverage": "full",
-   "notes": "出題基準の表記は「攅竹」（字形の差）"
+   "notes": "出題基準の表記は「攅竹」（字形の差）",
+   "sourceText": "攅竹"
   },
   {
    "acupointId": "bl4",

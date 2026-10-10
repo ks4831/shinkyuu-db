@@ -10,6 +10,7 @@
     "download": "npx tsx scripts/download-official-exams.ts",
     "audit:data": "npx tsx scripts/audit-data.mjs",
     "test:review": "npx tsx scripts/test-review-targets.mts",
+    "test:sources": "npx tsx scripts/test-acupoint-sources.mts",
     "extract:acupoints": "npx tsx scripts/extract-acupoint-candidates.mjs"
   },
   "dependencies": {

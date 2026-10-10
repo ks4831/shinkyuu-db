@@ -67,6 +67,12 @@ export type AcupointSourceRecord = {
   verificationStatus: RecordStatus
   coverage: Coverage
   notes: string
+  /** 資料に書かれている表記（原文のまま）。省略時は claim と同じ表記。名称の CONFLICT では必須 */
+  sourceText?: string
+  /** マスターの値を変えたため総合判定から外したレコード（履歴として残す）。変えた日付 */
+  supersededAt?: string
+  /** 外した理由と後継レコード（台帳の ID など） */
+  supersededBy?: string
 }
 
 export type AcupointSourceData = {
@@ -79,7 +85,7 @@ export type AcupointSourceData = {
 
 export const ACUPOINT_SOURCE_DATA = data as AcupointSourceData
 
-const sourceTypeById = new Map(ACUPOINT_SOURCE_DATA.sources.map((s) => [s.id, s.sourceType]))
+const sourceTypeById: ReadonlyMap<string, SourceType> = new Map(ACUPOINT_SOURCE_DATA.sources.map((s) => [s.id, s.sourceType]))
 
 /** 項目の現在値（specialPoints は分類ごと）。値がなければ undefined */
 function currentValues(a: Acupoint, field: SourceField): string[] | undefined {
@@ -91,14 +97,19 @@ function currentValues(a: Acupoint, field: SourceField): string[] | undefined {
 /**
  * 1つの記述の総合判定。優先順：
  * 日本の資料の CONFLICT → 日本の資料の JAPAN_VERIFIED（full）→ WHO の CONFLICT → WHO_VERIFIED（full）→ HISTORICAL_ONLY → SOURCE_NEEDED
- * 確認時点から値が変わったレコードは使わない。
+ * 確認時点から値が変わったレコード・履歴として外したレコード（supersededAt）は使わない。
  */
 export function summarizeClaim(acupointId: string, field: SourceField, value: string): SummaryStatus {
   const rs = ACUPOINT_SOURCE_DATA.records.filter(
-    (r) => r.acupointId === acupointId && r.fieldName === field && r.claim === value && r.currentValue === value,
+    (r) => r.acupointId === acupointId && r.fieldName === field && r.claim === value && r.currentValue === value && !r.supersededAt,
   )
-  const isJp = (r: AcupointSourceRecord) => JAPANESE_SOURCE_TYPES.includes(sourceTypeById.get(r.sourceId) as SourceType)
-  const isIntl = (r: AcupointSourceRecord) => sourceTypeById.get(r.sourceId) === 'international'
+  return summarizeRecords(rs, sourceTypeById)
+}
+
+/** 同じ記述についてのレコード群を総合判定にまとめる（監査・テストからも使う） */
+export function summarizeRecords(rs: AcupointSourceRecord[], typeOf: ReadonlyMap<string, SourceType>): SummaryStatus {
+  const isJp = (r: AcupointSourceRecord) => JAPANESE_SOURCE_TYPES.includes(typeOf.get(r.sourceId) as SourceType)
+  const isIntl = (r: AcupointSourceRecord) => typeOf.get(r.sourceId) === 'international'
   const jp = rs.filter(isJp)
   if (jp.some((r) => r.verificationStatus === 'CONFLICT')) return 'CONFLICT'
   if (jp.some((r) => r.verificationStatus === 'JAPAN_VERIFIED' && r.coverage === 'full')) return 'JAPAN_VERIFIED'

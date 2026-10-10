@@ -2,33 +2,13 @@
 
 import { useMemo, useState } from 'react'
 import Link from 'next/link'
+import { searchAcupoints, type AcupointSearchRow } from '@/lib/acupointSearch'
 
-type Row = {
-  slug: string
-  code: string
-  name?: string
-  reading?: string
-  meridianName: string
-  aliases: string[]
-}
-
-export default function AcupointSearch({ points }: { points: Row[] }) {
+export default function AcupointSearch({ points }: { points: AcupointSearchRow[] }) {
   const [q, setQ] = useState('')
   const query = q.trim()
 
-  const results = useMemo(() => {
-    if (!query) return []
-    return points
-      .filter(
-        (p) =>
-          (p.name?.includes(query) ?? false) ||
-          p.aliases.some((x) => x.includes(query)) ||
-          (p.reading?.includes(query) ?? false) ||
-          p.code.toLowerCase().includes(query.toLowerCase()) ||
-          p.meridianName.includes(query),
-      )
-      .slice(0, 20)
-  }, [query, points])
+  const results = useMemo(() => searchAcupoints(points, query), [query, points])
 
   return (
     <div>

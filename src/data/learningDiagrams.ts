@@ -47,14 +47,14 @@ export const LEARNING_DIAGRAMS: Record<string, LearningDiagram> = {
     id: 'four-command',
     file: '/learning-diagrams/four-command.svg',
     title: '四総穴',
-    alt: '人体の模式図に、肚腹＝足三里、腰背＝委中、頭項＝列缺、面口＝合谷の対応を示した図。',
-    caption: '「四総穴の歌」：肚腹三里、腰背委中、頭項列缺、面口合谷。',
+    alt: '人体の模式図に、肚腹＝足三里、腰背＝委中、頭項＝列欠、面口＝合谷の対応を示した図。',
+    caption: '「四総穴の歌」：肚腹三里、腰背委中、頭項列欠、面口合谷。',
   },
   'eight-confluent': {
     id: 'eight-confluent',
     file: '/learning-diagrams/eight-confluent.svg',
     title: '八脈交会穴の配穴',
-    alt: '公孫（衝脈）と内関（陰維脈）、後渓（督脈）と申脈（陽蹻脈）、足臨泣（帯脈）と外関（陽維脈）、列缺（任脈）と照海（陰蹻脈）の4組の配穴を示した表。',
+    alt: '公孫（衝脈）と内関（陰維脈）、後渓（督脈）と申脈（陽蹻脈）、足臨泣（帯脈）と外関（陽維脈）、列欠（任脈）と照海（陰蹻脈）の4組の配穴を示した表。',
     caption: '上肢の穴と下肢の穴を1組にして用いる。',
   },
   'five-phases': {
