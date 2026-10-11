@@ -6,6 +6,7 @@
    - 表記を変えた予想問題（ma-004・ma-006・oc-014・oc-007・oc-011・at-008）の正答判定がシャッフル後も保たれること
    - 出題基準2026 で補った名称（JAPAN-SOURCE 07）に出典があること
    - 経穴ページの「情報の根拠」が、WHO・推論を日本の資料での確認と書かないこと
+   - 34-123 の解説の「飛陽」を正規名「飛揚」に直したこと（JAPAN-SOURCE 08。公式の問題文・選択肢・正答は不変）
    - 出典管理の検査（scripts/lib/acupoint-source-check.mjs）が、わざと壊したデータを検出すること
    ────────────────────────────────────────────────────────────── */
 import assert from 'node:assert/strict'
@@ -271,6 +272,28 @@ test('21. 具体例：列欠・攅竹・水溝・曲池・陰谷・睛明の表�
   assert.equal(line('ki10', 'location').tone, 'jp')
   assert.ok(lib.describeAcupointSources(ACUPOINTS.find((a) => a.slug === 'lu7')!).records.every((r) => !r.claim.includes('列缺')))
   assert.equal(lines('bl1').length, 0)
+})
+
+console.log('飛揚／飛陽（JAPAN-SOURCE 08）')
+test('22. 「飛揚」「飛陽」のどちらでも bl58 が1件だけ出る（正規名は飛揚、飛陽は別名）', () => {
+  assert.deepEqual(searchAcupoints(rows, '飛揚').map((p) => p.slug), ['bl58'])
+  assert.deepEqual(searchAcupoints(rows, '飛陽').map((p) => p.slug), ['bl58'])
+  const a = ACUPOINTS.find((x) => x.slug === 'bl58')!
+  assert.equal(a.name, '飛揚')
+  assert.ok(a.aliases?.includes('飛陽'))
+})
+test('23. 34-123：解説は「飛揚」、公式の問題文・選択肢・正答は不変。過去問の解説に「飛陽」は残っていない', () => {
+  const q = exams.flat().find((x: { id: string }) => x.id === '34-123')
+  assert.equal(q.questionText, '絡穴の部位はどれか。')
+  assert.deepEqual(q.choices, [
+    '下腿外側、腓骨の前方、外果尖の上方4寸',
+    '下腿前面、犢鼻と解渓を結ぶ線上、犢鼻の下方8寸',
+    '下腿内側、脛骨内縁の後際、陰陵泉の下方3寸',
+    '下腿後外側、腓腹筋外側頭下縁とアキレス腱の間、崑崙の上方7寸',
+  ])
+  assert.equal(q.answerIndex, 3)
+  assert.ok(q.explanation.startsWith('飛揚は足の太陽膀胱経の絡穴'))
+  assert.ok(exams.flat().every((x: { explanation: string }) => !x.explanation.includes('飛陽')))
 })
 
 console.log(`\n${n} 件成功`)
