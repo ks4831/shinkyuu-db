@@ -10,6 +10,7 @@ import {
 } from '@/lib/pastExams'
 import PastExamsTabs from '@/components/pastExams/PastExamsTabs'
 import PastExamThemePicker, { type PastExamThemeGroup } from '@/components/pastExams/PastExamThemePicker'
+import NoteArticleLinks from '@/components/NoteArticleLinks'
 
 const RANGE_LABEL = pastExamPracticeRangeLabel()
 const PRACTICE_TOTAL = pastExamPracticeTotal()
@@ -138,6 +139,8 @@ export default function PastExamsPage() {
       </p>
 
       <PastExamsTabs panels={{ round: roundPanel, subject: subjectPanel, theme: themePanel }} />
+
+      <NoteArticleLinks placement="past-exams" />
     </main>
   )
 }

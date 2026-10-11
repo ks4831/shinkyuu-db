@@ -8,6 +8,7 @@ import {
 } from '@/lib/acupoints'
 import AcupointSearch from '@/components/acupoints/AcupointSearch'
 import { acupointLabel } from '@/data/acupoints'
+import NoteArticleLinks from '@/components/NoteArticleLinks'
 
 export const metadata: Metadata = {
   title: '経穴から学ぶ｜頻出経穴・特定穴・経脈別ランキング',
@@ -149,6 +150,8 @@ export default function AcupointsPage() {
           ))}
         </div>
       </section>
+
+      <NoteArticleLinks placement="acupoints" />
     </main>
   )
 }

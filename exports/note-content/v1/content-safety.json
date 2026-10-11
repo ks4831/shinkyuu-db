@@ -1,0 +1,105 @@
+{
+ "stableId": "content-safety",
+ "title": "記事化の安全ルールと除外リスト",
+ "sourceVersion": "shinkyuu-db@2d05bdd",
+ "updatedAt": "2026-10-11T09:56:26+09:00",
+ "rules": [
+  {
+   "id": "R1",
+   "rule": "公式過去問の問題文・選択肢を記事・教材に転載しない。扱うときは「何が問われたか」を自分の言葉で要約し、問題IDで出典を示す（財団への確認範囲は Web 学習サイトでの演習まで）"
+  },
+  {
+   "id": "R2",
+   "rule": "JAPAN_VERIFIED だけを「日本の資料で確認済み」と書く。WHO_VERIFIED は「WHO 基準では」と明記する。JAPAN_INFERRED・SOURCE_NEEDED・CONFLICT は確定情報として書かない"
+  },
+  {
+   "id": "R3",
+   "rule": "教科書の本文・図表を転載しない。権利が不明な画像・図表を使わない。図表はオリジナルで作る"
+  },
+  {
+   "id": "R4",
+   "rule": "数値には対象（回）・母数・集計方法を添える。出題数は当DBのテーマ分類による"
+  },
+  {
+   "id": "R5",
+   "rule": "過去の出題傾向から「次に出る」「合格できる」と書かない"
+  },
+  {
+   "id": "R6",
+   "rule": "公式正答と DB の解説の確認状況を混同しない。下の questionCautions の問題は、公式正答以外を断定しない"
+  },
+  {
+   "id": "R8",
+   "rule": "経穴の位置の文言は公式過去問と同じ言い回しのことがある（location.pastExamTextOverlap）。記事・教材では文をそのまま使わない"
+  },
+  {
+   "id": "R7",
+   "rule": "DB の memoryTip・examPoint・importance（手動評価）・読みは出典未確認のため書き出していない。記事で使わない"
+  }
+ ],
+ "statusDefinitions": {
+  "JAPAN_VERIFIED": "日本の資料（公式過去問・出題基準など）が記述全体を直接裏づける",
+  "WHO_VERIFIED": "WHO 標準経穴部位（2008）の主位置で確認。日本の教科書では未確認",
+  "SOURCE_NEEDED": "根拠不足（一部だけ確認・公式問題からの推論 JAPAN_INFERRED のみ、を含む）",
+  "CONFLICT": "資料と現在の記述が食い違う",
+  "NOT_APPLICABLE": "値が未設定"
+ },
+ "questionCautions": [
+  {
+   "questionId": "30-162",
+   "reason": "NEEDS_TEXTBOOK：解説の根拠に教科書の確認が必要"
+  },
+  {
+   "questionId": "31-096",
+   "reason": "NEEDS_TEXTBOOK：解説の根拠に教科書の確認が必要"
+  },
+  {
+   "questionId": "31-062",
+   "reason": "OFFICIAL_ANSWER_CONCERN：公式正答と選択肢の解釈に疑問が残る"
+  },
+  {
+   "questionId": "31-123",
+   "reason": "OFFICIAL_ANSWER_CONCERN：公式正答と選択肢の解釈に疑問が残る"
+  },
+  {
+   "questionId": "32-125",
+   "reason": "JAPAN_DIFF：解説の構成穴の名称を日本の教科書で直す予定"
+  },
+  {
+   "questionId": "32-115",
+   "reason": "JAPAN_DIFF：解説に下極兪の位置を追記する予定（教科書確認待ち）"
+  },
+  {
+   "questionId": "31-126",
+   "reason": "JAPAN_DIFF：解説の出典表記を日本の資料に差し替える予定"
+  }
+ ],
+ "acupointCautions": {
+  "pendingDecisions": [
+   {
+    "acupointId": "bl1",
+    "reason": "名称の表記（晴明／睛明）が承認待ち。記事では BL1 と書くか扱わない"
+   }
+  ],
+  "unnamedCount": 72,
+  "conflictRecords": [
+   {
+    "acupointId": "li11",
+    "fieldName": "location",
+    "sourceId": "WHO-2008"
+   },
+   {
+    "acupointId": "bl10",
+    "fieldName": "location",
+    "sourceId": "WHO-2008"
+   }
+  ]
+ },
+ "excludedFromExport": [
+  "公式過去問の問題文・選択肢・正答・解説（件数と問題IDのみ書き出す）",
+  "オリジナル予想問題の本文（DB の演習でのみ公開）",
+  "経穴の読み、memoryTip、examPoint、importance（手動評価）",
+  "確認状況が SOURCE_NEEDED・CONFLICT・NOT_APPLICABLE の値",
+  "利用者の学習履歴・localStorage の内容（DB は note に何も送らない）"
+ ]
+}

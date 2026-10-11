@@ -5,6 +5,7 @@ import { getThemeExamStats } from '@/lib/themeStats'
 import { sixYearThemes } from '@/lib/analysisThemes'
 import { standard2026QuizCount } from '@/lib/quiz'
 import Standard2026Badge from '@/components/Standard2026Badge'
+import NoteArticleLinks from '@/components/NoteArticleLinks'
 
 const SITE_URL = process.env.NEXT_PUBLIC_SITE_URL ?? 'https://shinkyuu-db.vercel.app'
 
@@ -241,6 +242,8 @@ export default function Exam35Page() {
           第29〜34回の出題実績にもとづく当サイトの分析であり、第35回の出題を保証するものではありません。
         </p>
       </section>
+
+      <NoteArticleLinks placement="exam-35" />
     </main>
   )
 }

@@ -1,0 +1,5808 @@
+{
+ "stableId": "topic-statistics",
+ "sourceVersion": "shinkyuu-db@2d05bdd",
+ "updatedAt": "2026-10-11T09:56:26+09:00",
+ "countMethod": "第29〜34回の公式過去問1080問を、当DBのテーマ分類（themeId・1問1テーマ）で数えた件数。テーマ分類は当DB独自（出題基準の項目を参考に作成）",
+ "subjects": [
+  {
+   "stableId": "subject:medical-overview",
+   "title": "医療概論",
+   "subject": "medical-overview",
+   "total": 24,
+   "byRound": {
+    "29": 4,
+    "30": 4,
+    "31": 4,
+    "32": 4,
+    "33": 4,
+    "34": 4
+   },
+   "practiceCount": 24,
+   "sourceVersion": "shinkyuu-db@2d05bdd",
+   "verifiedStatus": "COMPUTED_FROM_OFFICIAL_EXAMS",
+   "sourceType": "official_exam",
+   "relatedDbUrl": "https://shinkyuu-db.vercel.app/past-exams/subject/medical-overview",
+   "updatedAt": "2026-10-11T09:56:26+09:00",
+   "publicationAllowed": true,
+   "warningNotes": [
+    "母数：第29〜34回の1080問。科目は当DBの分類"
+   ]
+  },
+  {
+   "stableId": "subject:hygiene",
+   "title": "衛生学・公衆衛生学",
+   "subject": "hygiene",
+   "total": 36,
+   "byRound": {
+    "29": 6,
+    "30": 6,
+    "31": 6,
+    "32": 6,
+    "33": 6,
+    "34": 6
+   },
+   "practiceCount": 36,
+   "sourceVersion": "shinkyuu-db@2d05bdd",
+   "verifiedStatus": "COMPUTED_FROM_OFFICIAL_EXAMS",
+   "sourceType": "official_exam",
+   "relatedDbUrl": "https://shinkyuu-db.vercel.app/past-exams/subject/hygiene",
+   "updatedAt": "2026-10-11T09:56:26+09:00",
+   "publicationAllowed": true,
+   "warningNotes": [
+    "母数：第29〜34回の1080問。科目は当DBの分類"
+   ]
+  },
+  {
+   "stableId": "subject:regulations",
+   "title": "関係法規",
+   "subject": "regulations",
+   "total": 24,
+   "byRound": {
+    "29": 4,
+    "30": 4,
+    "31": 4,
+    "32": 4,
+    "33": 4,
+    "34": 4
+   },
+   "practiceCount": 24,
+   "sourceVersion": "shinkyuu-db@2d05bdd",
+   "verifiedStatus": "COMPUTED_FROM_OFFICIAL_EXAMS",
+   "sourceType": "official_exam",
+   "relatedDbUrl": "https://shinkyuu-db.vercel.app/past-exams/subject/regulations",
+   "updatedAt": "2026-10-11T09:56:26+09:00",
+   "publicationAllowed": true,
+   "warningNotes": [
+    "母数：第29〜34回の1080問。科目は当DBの分類"
+   ]
+  },
+  {
+   "stableId": "subject:anatomy",
+   "title": "解剖学",
+   "subject": "anatomy",
+   "total": 54,
+   "byRound": {
+    "29": 9,
+    "30": 9,
+    "31": 9,
+    "32": 9,
+    "33": 9,
+    "34": 9
+   },
+   "practiceCount": 54,
+   "sourceVersion": "shinkyuu-db@2d05bdd",
+   "verifiedStatus": "COMPUTED_FROM_OFFICIAL_EXAMS",
+   "sourceType": "official_exam",
+   "relatedDbUrl": "https://shinkyuu-db.vercel.app/past-exams/subject/anatomy",
+   "updatedAt": "2026-10-11T09:56:26+09:00",
+   "publicationAllowed": true,
+   "warningNotes": [
+    "母数：第29〜34回の1080問。科目は当DBの分類"
+   ]
+  },
+  {
+   "stableId": "subject:physiology",
+   "title": "生理学",
+   "subject": "physiology",
+   "total": 54,
+   "byRound": {
+    "29": 9,
+    "30": 9,
+    "31": 9,
+    "32": 9,
+    "33": 9,
+    "34": 9
+   },
+   "practiceCount": 54,
+   "sourceVersion": "shinkyuu-db@2d05bdd",
+   "verifiedStatus": "COMPUTED_FROM_OFFICIAL_EXAMS",
+   "sourceType": "official_exam",
+   "relatedDbUrl": "https://shinkyuu-db.vercel.app/past-exams/subject/physiology",
+   "updatedAt": "2026-10-11T09:56:26+09:00",
+   "publicationAllowed": true,
+   "warningNotes": [
+    "母数：第29〜34回の1080問。科目は当DBの分類"
+   ]
+  },
+  {
+   "stableId": "subject:pathology",
+   "title": "病理学概論",
+   "subject": "pathology",
+   "total": 36,
+   "byRound": {
+    "29": 6,
+    "30": 6,
+    "31": 6,
+    "32": 6,
+    "33": 6,
+    "34": 6
+   },
+   "practiceCount": 36,
+   "sourceVersion": "shinkyuu-db@2d05bdd",
+   "verifiedStatus": "COMPUTED_FROM_OFFICIAL_EXAMS",
+   "sourceType": "official_exam",
+   "relatedDbUrl": "https://shinkyuu-db.vercel.app/past-exams/subject/pathology",
+   "updatedAt": "2026-10-11T09:56:26+09:00",
+   "publicationAllowed": true,
+   "warningNotes": [
+    "母数：第29〜34回の1080問。科目は当DBの分類"
+   ]
+  },
+  {
+   "stableId": "subject:clinical-general",
+   "title": "臨床医学総論",
+   "subject": "clinical-general",
+   "total": 60,
+   "byRound": {
+    "29": 10,
+    "30": 10,
+    "31": 10,
+    "32": 10,
+    "33": 10,
+    "34": 10
+   },
+   "practiceCount": 60,
+   "sourceVersion": "shinkyuu-db@2d05bdd",
+   "verifiedStatus": "COMPUTED_FROM_OFFICIAL_EXAMS",
+   "sourceType": "official_exam",
+   "relatedDbUrl": "https://shinkyuu-db.vercel.app/past-exams/subject/clinical-general",
+   "updatedAt": "2026-10-11T09:56:26+09:00",
+   "publicationAllowed": true,
+   "warningNotes": [
+    "母数：第29〜34回の1080問。科目は当DBの分類"
+   ]
+  },
+  {
+   "stableId": "subject:clinical-specific",
+   "title": "臨床医学各論",
+   "subject": "clinical-specific",
+   "total": 175,
+   "byRound": {
+    "29": 28,
+    "30": 29,
+    "31": 29,
+    "32": 30,
+    "33": 30,
+    "34": 29
+   },
+   "practiceCount": 175,
+   "sourceVersion": "shinkyuu-db@2d05bdd",
+   "verifiedStatus": "COMPUTED_FROM_OFFICIAL_EXAMS",
+   "sourceType": "official_exam",
+   "relatedDbUrl": "https://shinkyuu-db.vercel.app/past-exams/subject/clinical-specific",
+   "updatedAt": "2026-10-11T09:56:26+09:00",
+   "publicationAllowed": true,
+   "warningNotes": [
+    "母数：第29〜34回の1080問。科目は当DBの分類"
+   ]
+  },
+  {
+   "stableId": "subject:rehabilitation",
+   "title": "リハビリテーション医学",
+   "subject": "rehabilitation",
+   "total": 77,
+   "byRound": {
+    "29": 14,
+    "30": 13,
+    "31": 13,
+    "32": 12,
+    "33": 12,
+    "34": 13
+   },
+   "practiceCount": 77,
+   "sourceVersion": "shinkyuu-db@2d05bdd",
+   "verifiedStatus": "COMPUTED_FROM_OFFICIAL_EXAMS",
+   "sourceType": "official_exam",
+   "relatedDbUrl": "https://shinkyuu-db.vercel.app/past-exams/subject/rehabilitation",
+   "updatedAt": "2026-10-11T09:56:26+09:00",
+   "publicationAllowed": true,
+   "warningNotes": [
+    "母数：第29〜34回の1080問。科目は当DBの分類"
+   ]
+  },
+  {
+   "stableId": "subject:oriental-overview",
+   "title": "東洋医学概論",
+   "subject": "oriental-overview",
+   "total": 96,
+   "byRound": {
+    "29": 16,
+    "30": 16,
+    "31": 16,
+    "32": 16,
+    "33": 16,
+    "34": 16
+   },
+   "practiceCount": 96,
+   "sourceVersion": "shinkyuu-db@2d05bdd",
+   "verifiedStatus": "COMPUTED_FROM_OFFICIAL_EXAMS",
+   "sourceType": "official_exam",
+   "relatedDbUrl": "https://shinkyuu-db.vercel.app/past-exams/subject/oriental-overview",
+   "updatedAt": "2026-10-11T09:56:26+09:00",
+   "publicationAllowed": true,
+   "warningNotes": [
+    "母数：第29〜34回の1080問。科目は当DBの分類"
+   ]
+  },
+  {
+   "stableId": "subject:meridians-acupoints",
+   "title": "経絡経穴概論",
+   "subject": "meridians-acupoints",
+   "total": 120,
+   "byRound": {
+    "29": 20,
+    "30": 20,
+    "31": 20,
+    "32": 20,
+    "33": 20,
+    "34": 20
+   },
+   "practiceCount": 120,
+   "sourceVersion": "shinkyuu-db@2d05bdd",
+   "verifiedStatus": "COMPUTED_FROM_OFFICIAL_EXAMS",
+   "sourceType": "official_exam",
+   "relatedDbUrl": "https://shinkyuu-db.vercel.app/past-exams/subject/meridians-acupoints",
+   "updatedAt": "2026-10-11T09:56:26+09:00",
+   "publicationAllowed": true,
+   "warningNotes": [
+    "母数：第29〜34回の1080問。科目は当DBの分類"
+   ]
+  },
+  {
+   "stableId": "subject:acupuncture-theory",
+   "title": "はり理論",
+   "subject": "acupuncture-theory",
+   "total": 60,
+   "byRound": {
+    "29": 10,
+    "30": 10,
+    "31": 10,
+    "32": 10,
+    "33": 10,
+    "34": 10
+   },
+   "practiceCount": 60,
+   "sourceVersion": "shinkyuu-db@2d05bdd",
+   "verifiedStatus": "COMPUTED_FROM_OFFICIAL_EXAMS",
+   "sourceType": "official_exam",
+   "relatedDbUrl": "https://shinkyuu-db.vercel.app/past-exams/subject/acupuncture-theory",
+   "updatedAt": "2026-10-11T09:56:26+09:00",
+   "publicationAllowed": true,
+   "warningNotes": [
+    "母数：第29〜34回の1080問。科目は当DBの分類"
+   ]
+  },
+  {
+   "stableId": "subject:moxibustion-theory",
+   "title": "きゅう理論",
+   "subject": "moxibustion-theory",
+   "total": 60,
+   "byRound": {
+    "29": 10,
+    "30": 10,
+    "31": 10,
+    "32": 10,
+    "33": 10,
+    "34": 10
+   },
+   "practiceCount": 60,
+   "sourceVersion": "shinkyuu-db@2d05bdd",
+   "verifiedStatus": "COMPUTED_FROM_OFFICIAL_EXAMS",
+   "sourceType": "official_exam",
+   "relatedDbUrl": "https://shinkyuu-db.vercel.app/past-exams/subject/moxibustion-theory",
+   "updatedAt": "2026-10-11T09:56:26+09:00",
+   "publicationAllowed": true,
+   "warningNotes": [
+    "母数：第29〜34回の1080問。科目は当DBの分類"
+   ]
+  },
+  {
+   "stableId": "subject:oriental-clinical",
+   "title": "東洋医学臨床論",
+   "subject": "oriental-clinical",
+   "total": 204,
+   "byRound": {
+    "29": 34,
+    "30": 34,
+    "31": 34,
+    "32": 34,
+    "33": 34,
+    "34": 34
+   },
+   "practiceCount": 204,
+   "sourceVersion": "shinkyuu-db@2d05bdd",
+   "verifiedStatus": "COMPUTED_FROM_OFFICIAL_EXAMS",
+   "sourceType": "official_exam",
+   "relatedDbUrl": "https://shinkyuu-db.vercel.app/past-exams/subject/oriental-clinical",
+   "updatedAt": "2026-10-11T09:56:26+09:00",
+   "publicationAllowed": true,
+   "warningNotes": [
+    "母数：第29〜34回の1080問。科目は当DBの分類"
+   ]
+  }
+ ],
+ "themes": [
+  {
+   "stableId": "theme:gen-ketsu",
+   "title": "原穴",
+   "subject": "meridians-acupoints",
+   "subjectName": "経絡経穴概論",
+   "examCount": 3,
+   "examRounds": [
+    29,
+    33,
+    34
+   ],
+   "byRound": {
+    "29": 1,
+    "30": 0,
+    "31": 0,
+    "32": 0,
+    "33": 1,
+    "34": 1
+   },
+   "recent3Count": 2,
+   "pastExamPracticeCount": 3,
+   "originalQuizCount": 0,
+   "standard2026Status": null,
+   "sourceVersion": "shinkyuu-db@2d05bdd",
+   "verifiedStatus": "COMPUTED_FROM_OFFICIAL_EXAMS",
+   "sourceType": "official_exam",
+   "relatedDbUrl": "https://shinkyuu-db.vercel.app/past-exams/theme/gen-ketsu",
+   "relatedDbUrls": {
+    "theme": "https://shinkyuu-db.vercel.app/themes/gen-ketsu",
+    "pastExams": "https://shinkyuu-db.vercel.app/past-exams/theme/gen-ketsu"
+   },
+   "updatedAt": "2026-10-11T09:56:26+09:00",
+   "publicationAllowed": true,
+   "warningNotes": [
+    "テーマ分類は当DB独自。出題数は「このテーマに分類した問題数」"
+   ]
+  },
+  {
+   "stableId": "theme:geki-ketsu",
+   "title": "郄穴",
+   "subject": "meridians-acupoints",
+   "subjectName": "経絡経穴概論",
+   "examCount": 4,
+   "examRounds": [
+    29,
+    33,
+    34
+   ],
+   "byRound": {
+    "29": 2,
+    "30": 0,
+    "31": 0,
+    "32": 0,
+    "33": 1,
+    "34": 1
+   },
+   "recent3Count": 2,
+   "pastExamPracticeCount": 4,
+   "originalQuizCount": 1,
+   "standard2026Status": null,
+   "sourceVersion": "shinkyuu-db@2d05bdd",
+   "verifiedStatus": "COMPUTED_FROM_OFFICIAL_EXAMS",
+   "sourceType": "official_exam",
+   "relatedDbUrl": "https://shinkyuu-db.vercel.app/past-exams/theme/geki-ketsu",
+   "relatedDbUrls": {
+    "theme": "https://shinkyuu-db.vercel.app/themes/geki-ketsu",
+    "pastExams": "https://shinkyuu-db.vercel.app/past-exams/theme/geki-ketsu",
+    "quiz": "https://shinkyuu-db.vercel.app/quiz/theme/geki-ketsu"
+   },
+   "updatedAt": "2026-10-11T09:56:26+09:00",
+   "publicationAllowed": true,
+   "warningNotes": [
+    "テーマ分類は当DB独自。出題数は「このテーマに分類した問題数」"
+   ]
+  },
+  {
+   "stableId": "theme:bo-ketsu",
+   "title": "募穴",
+   "subject": "meridians-acupoints",
+   "subjectName": "経絡経穴概論",
+   "examCount": 4,
+   "examRounds": [
+    30,
+    33,
+    34
+   ],
+   "byRound": {
+    "29": 0,
+    "30": 2,
+    "31": 0,
+    "32": 0,
+    "33": 1,
+    "34": 1
+   },
+   "recent3Count": 2,
+   "pastExamPracticeCount": 4,
+   "originalQuizCount": 4,
+   "standard2026Status": null,
+   "sourceVersion": "shinkyuu-db@2d05bdd",
+   "verifiedStatus": "COMPUTED_FROM_OFFICIAL_EXAMS",
+   "sourceType": "official_exam",
+   "relatedDbUrl": "https://shinkyuu-db.vercel.app/past-exams/theme/bo-ketsu",
+   "relatedDbUrls": {
+    "theme": "https://shinkyuu-db.vercel.app/themes/bo-ketsu",
+    "pastExams": "https://shinkyuu-db.vercel.app/past-exams/theme/bo-ketsu",
+    "quiz": "https://shinkyuu-db.vercel.app/quiz/theme/bo-ketsu"
+   },
+   "updatedAt": "2026-10-11T09:56:26+09:00",
+   "publicationAllowed": true,
+   "warningNotes": [
+    "テーマ分類は当DB独自。出題数は「このテーマに分類した問題数」"
+   ]
+  },
+  {
+   "stableId": "theme:go-yu-ketsu",
+   "title": "五兪穴",
+   "subject": "meridians-acupoints",
+   "subjectName": "経絡経穴概論",
+   "examCount": 12,
+   "examRounds": [
+    29,
+    30,
+    31,
+    32,
+    33,
+    34
+   ],
+   "byRound": {
+    "29": 3,
+    "30": 2,
+    "31": 2,
+    "32": 2,
+    "33": 2,
+    "34": 1
+   },
+   "recent3Count": 5,
+   "pastExamPracticeCount": 12,
+   "originalQuizCount": 3,
+   "standard2026Status": null,
+   "sourceVersion": "shinkyuu-db@2d05bdd",
+   "verifiedStatus": "COMPUTED_FROM_OFFICIAL_EXAMS",
+   "sourceType": "official_exam",
+   "relatedDbUrl": "https://shinkyuu-db.vercel.app/past-exams/theme/go-yu-ketsu",
+   "relatedDbUrls": {
+    "theme": "https://shinkyuu-db.vercel.app/themes/go-yu-ketsu",
+    "pastExams": "https://shinkyuu-db.vercel.app/past-exams/theme/go-yu-ketsu",
+    "quiz": "https://shinkyuu-db.vercel.app/quiz/theme/go-yu-ketsu"
+   },
+   "updatedAt": "2026-10-11T09:56:26+09:00",
+   "publicationAllowed": true,
+   "warningNotes": [
+    "テーマ分類は当DB独自。出題数は「このテーマに分類した問題数」"
+   ]
+  },
+  {
+   "stableId": "theme:kiki-hachi-myaku",
+   "title": "奇経八脈",
+   "subject": "meridians-acupoints",
+   "subjectName": "経絡経穴概論",
+   "examCount": 7,
+   "examRounds": [
+    29,
+    31,
+    32,
+    34
+   ],
+   "byRound": {
+    "29": 1,
+    "30": 0,
+    "31": 3,
+    "32": 2,
+    "33": 0,
+    "34": 1
+   },
+   "recent3Count": 3,
+   "pastExamPracticeCount": 7,
+   "originalQuizCount": 0,
+   "standard2026Status": null,
+   "sourceVersion": "shinkyuu-db@2d05bdd",
+   "verifiedStatus": "COMPUTED_FROM_OFFICIAL_EXAMS",
+   "sourceType": "official_exam",
+   "relatedDbUrl": "https://shinkyuu-db.vercel.app/past-exams/theme/kiki-hachi-myaku",
+   "relatedDbUrls": {
+    "theme": "https://shinkyuu-db.vercel.app/themes/kiki-hachi-myaku",
+    "pastExams": "https://shinkyuu-db.vercel.app/past-exams/theme/kiki-hachi-myaku"
+   },
+   "updatedAt": "2026-10-11T09:56:26+09:00",
+   "publicationAllowed": true,
+   "warningNotes": [
+    "テーマ分類は当DB独自。出題数は「このテーマに分類した問題数」"
+   ]
+  },
+  {
+   "stableId": "theme:juni-kei-myaku",
+   "title": "十二経脈",
+   "subject": "meridians-acupoints",
+   "subjectName": "経絡経穴概論",
+   "examCount": 51,
+   "examRounds": [
+    29,
+    30,
+    31,
+    32,
+    33,
+    34
+   ],
+   "byRound": {
+    "29": 9,
+    "30": 9,
+    "31": 10,
+    "32": 9,
+    "33": 7,
+    "34": 7
+   },
+   "recent3Count": 23,
+   "pastExamPracticeCount": 51,
+   "originalQuizCount": 0,
+   "standard2026Status": null,
+   "sourceVersion": "shinkyuu-db@2d05bdd",
+   "verifiedStatus": "COMPUTED_FROM_OFFICIAL_EXAMS",
+   "sourceType": "official_exam",
+   "relatedDbUrl": "https://shinkyuu-db.vercel.app/past-exams/theme/juni-kei-myaku",
+   "relatedDbUrls": {
+    "theme": "https://shinkyuu-db.vercel.app/themes/juni-kei-myaku",
+    "pastExams": "https://shinkyuu-db.vercel.app/past-exams/theme/juni-kei-myaku"
+   },
+   "updatedAt": "2026-10-11T09:56:26+09:00",
+   "publicationAllowed": true,
+   "warningNotes": [
+    "テーマ分類は当DB独自。出題数は「このテーマに分類した問題数」"
+   ]
+  },
+  {
+   "stableId": "theme:kei-myaku-ryuchu",
+   "title": "経脈の流注",
+   "subject": "meridians-acupoints",
+   "subjectName": "経絡経穴概論",
+   "examCount": 5,
+   "examRounds": [
+    30,
+    32,
+    33
+   ],
+   "byRound": {
+    "29": 0,
+    "30": 2,
+    "31": 0,
+    "32": 2,
+    "33": 1,
+    "34": 0
+   },
+   "recent3Count": 3,
+   "pastExamPracticeCount": 5,
+   "originalQuizCount": 0,
+   "standard2026Status": null,
+   "sourceVersion": "shinkyuu-db@2d05bdd",
+   "verifiedStatus": "COMPUTED_FROM_OFFICIAL_EXAMS",
+   "sourceType": "official_exam",
+   "relatedDbUrl": "https://shinkyuu-db.vercel.app/past-exams/theme/kei-myaku-ryuchu",
+   "relatedDbUrls": {
+    "theme": "https://shinkyuu-db.vercel.app/themes/kei-myaku-ryuchu",
+    "pastExams": "https://shinkyuu-db.vercel.app/past-exams/theme/kei-myaku-ryuchu"
+   },
+   "updatedAt": "2026-10-11T09:56:26+09:00",
+   "publicationAllowed": true,
+   "warningNotes": [
+    "テーマ分類は当DB独自。出題数は「このテーマに分類した問題数」"
+   ]
+  },
+  {
+   "stableId": "theme:kei-ketsu-shuchi",
+   "title": "経穴の主治",
+   "subject": "meridians-acupoints",
+   "subjectName": "経絡経穴概論",
+   "examCount": 0,
+   "examRounds": [],
+   "byRound": {
+    "29": 0,
+    "30": 0,
+    "31": 0,
+    "32": 0,
+    "33": 0,
+    "34": 0
+   },
+   "recent3Count": 0,
+   "pastExamPracticeCount": 0,
+   "originalQuizCount": 0,
+   "standard2026Status": null,
+   "sourceVersion": "shinkyuu-db@2d05bdd",
+   "verifiedStatus": "COMPUTED_FROM_OFFICIAL_EXAMS",
+   "sourceType": "official_exam",
+   "relatedDbUrl": "https://shinkyuu-db.vercel.app/themes/kei-ketsu-shuchi",
+   "relatedDbUrls": {
+    "theme": "https://shinkyuu-db.vercel.app/themes/kei-ketsu-shuchi"
+   },
+   "updatedAt": "2026-10-11T09:56:26+09:00",
+   "publicationAllowed": true,
+   "warningNotes": [
+    "テーマ分類は当DB独自。出題数は「このテーマに分類した問題数」",
+    "第29〜34回に出題実績なし（学習用テーマ）"
+   ]
+  },
+  {
+   "stableId": "theme:in-yo-ron",
+   "title": "陰陽論",
+   "subject": "oriental-overview",
+   "subjectName": "東洋医学概論",
+   "examCount": 3,
+   "examRounds": [
+    29,
+    30,
+    34
+   ],
+   "byRound": {
+    "29": 1,
+    "30": 1,
+    "31": 0,
+    "32": 0,
+    "33": 0,
+    "34": 1
+   },
+   "recent3Count": 1,
+   "pastExamPracticeCount": 3,
+   "originalQuizCount": 0,
+   "standard2026Status": null,
+   "sourceVersion": "shinkyuu-db@2d05bdd",
+   "verifiedStatus": "COMPUTED_FROM_OFFICIAL_EXAMS",
+   "sourceType": "official_exam",
+   "relatedDbUrl": "https://shinkyuu-db.vercel.app/past-exams/theme/in-yo-ron",
+   "relatedDbUrls": {
+    "theme": "https://shinkyuu-db.vercel.app/themes/in-yo-ron",
+    "pastExams": "https://shinkyuu-db.vercel.app/past-exams/theme/in-yo-ron"
+   },
+   "updatedAt": "2026-10-11T09:56:26+09:00",
+   "publicationAllowed": true,
+   "warningNotes": [
+    "テーマ分類は当DB独自。出題数は「このテーマに分類した問題数」"
+   ]
+  },
+  {
+   "stableId": "theme:go-gyo-ron",
+   "title": "五行論",
+   "subject": "oriental-overview",
+   "subjectName": "東洋医学概論",
+   "examCount": 6,
+   "examRounds": [
+    29,
+    30,
+    31,
+    32,
+    33
+   ],
+   "byRound": {
+    "29": 1,
+    "30": 1,
+    "31": 2,
+    "32": 1,
+    "33": 1,
+    "34": 0
+   },
+   "recent3Count": 2,
+   "pastExamPracticeCount": 6,
+   "originalQuizCount": 2,
+   "standard2026Status": null,
+   "sourceVersion": "shinkyuu-db@2d05bdd",
+   "verifiedStatus": "COMPUTED_FROM_OFFICIAL_EXAMS",
+   "sourceType": "official_exam",
+   "relatedDbUrl": "https://shinkyuu-db.vercel.app/past-exams/theme/go-gyo-ron",
+   "relatedDbUrls": {
+    "theme": "https://shinkyuu-db.vercel.app/themes/go-gyo-ron",
+    "pastExams": "https://shinkyuu-db.vercel.app/past-exams/theme/go-gyo-ron",
+    "quiz": "https://shinkyuu-db.vercel.app/quiz/theme/go-gyo-ron"
+   },
+   "updatedAt": "2026-10-11T09:56:26+09:00",
+   "publicationAllowed": true,
+   "warningNotes": [
+    "テーマ分類は当DB独自。出題数は「このテーマに分類した問題数」"
+   ]
+  },
+  {
+   "stableId": "theme:ki-ketsu-shin-eki",
+   "title": "気血津液",
+   "subject": "oriental-overview",
+   "subjectName": "東洋医学概論",
+   "examCount": 11,
+   "examRounds": [
+    29,
+    30,
+    31,
+    32,
+    33,
+    34
+   ],
+   "byRound": {
+    "29": 2,
+    "30": 1,
+    "31": 2,
+    "32": 1,
+    "33": 2,
+    "34": 3
+   },
+   "recent3Count": 6,
+   "pastExamPracticeCount": 11,
+   "originalQuizCount": 1,
+   "standard2026Status": null,
+   "sourceVersion": "shinkyuu-db@2d05bdd",
+   "verifiedStatus": "COMPUTED_FROM_OFFICIAL_EXAMS",
+   "sourceType": "official_exam",
+   "relatedDbUrl": "https://shinkyuu-db.vercel.app/past-exams/theme/ki-ketsu-shin-eki",
+   "relatedDbUrls": {
+    "theme": "https://shinkyuu-db.vercel.app/themes/ki-ketsu-shin-eki",
+    "pastExams": "https://shinkyuu-db.vercel.app/past-exams/theme/ki-ketsu-shin-eki",
+    "quiz": "https://shinkyuu-db.vercel.app/quiz/theme/ki-ketsu-shin-eki"
+   },
+   "updatedAt": "2026-10-11T09:56:26+09:00",
+   "publicationAllowed": true,
+   "warningNotes": [
+    "テーマ分類は当DB独自。出題数は「このテーマに分類した問題数」"
+   ]
+  },
+  {
+   "stableId": "theme:zo-sho",
+   "title": "蔵象",
+   "subject": "oriental-overview",
+   "subjectName": "東洋医学概論",
+   "examCount": 11,
+   "examRounds": [
+    29,
+    30,
+    31,
+    32,
+    33,
+    34
+   ],
+   "byRound": {
+    "29": 2,
+    "30": 1,
+    "31": 2,
+    "32": 2,
+    "33": 2,
+    "34": 2
+   },
+   "recent3Count": 6,
+   "pastExamPracticeCount": 11,
+   "originalQuizCount": 5,
+   "standard2026Status": null,
+   "sourceVersion": "shinkyuu-db@2d05bdd",
+   "verifiedStatus": "COMPUTED_FROM_OFFICIAL_EXAMS",
+   "sourceType": "official_exam",
+   "relatedDbUrl": "https://shinkyuu-db.vercel.app/past-exams/theme/zo-sho",
+   "relatedDbUrls": {
+    "theme": "https://shinkyuu-db.vercel.app/themes/zo-sho",
+    "pastExams": "https://shinkyuu-db.vercel.app/past-exams/theme/zo-sho",
+    "quiz": "https://shinkyuu-db.vercel.app/quiz/theme/zo-sho"
+   },
+   "updatedAt": "2026-10-11T09:56:26+09:00",
+   "publicationAllowed": true,
+   "warningNotes": [
+    "テーマ分類は当DB独自。出題数は「このテーマに分類した問題数」"
+   ]
+  },
+  {
+   "stableId": "theme:roku-in",
+   "title": "六淫",
+   "subject": "oriental-overview",
+   "subjectName": "東洋医学概論",
+   "examCount": 7,
+   "examRounds": [
+    29,
+    30,
+    31,
+    32,
+    33,
+    34
+   ],
+   "byRound": {
+    "29": 1,
+    "30": 1,
+    "31": 1,
+    "32": 2,
+    "33": 1,
+    "34": 1
+   },
+   "recent3Count": 4,
+   "pastExamPracticeCount": 7,
+   "originalQuizCount": 1,
+   "standard2026Status": null,
+   "sourceVersion": "shinkyuu-db@2d05bdd",
+   "verifiedStatus": "COMPUTED_FROM_OFFICIAL_EXAMS",
+   "sourceType": "official_exam",
+   "relatedDbUrl": "https://shinkyuu-db.vercel.app/past-exams/theme/roku-in",
+   "relatedDbUrls": {
+    "theme": "https://shinkyuu-db.vercel.app/themes/roku-in",
+    "pastExams": "https://shinkyuu-db.vercel.app/past-exams/theme/roku-in",
+    "quiz": "https://shinkyuu-db.vercel.app/quiz/theme/roku-in"
+   },
+   "updatedAt": "2026-10-11T09:56:26+09:00",
+   "publicationAllowed": true,
+   "warningNotes": [
+    "テーマ分類は当DB独自。出題数は「このテーマに分類した問題数」"
+   ]
+  },
+  {
+   "stableId": "theme:shichi-jo",
+   "title": "七情",
+   "subject": "oriental-overview",
+   "subjectName": "東洋医学概論",
+   "examCount": 6,
+   "examRounds": [
+    29,
+    30,
+    31,
+    32,
+    33,
+    34
+   ],
+   "byRound": {
+    "29": 1,
+    "30": 1,
+    "31": 1,
+    "32": 1,
+    "33": 1,
+    "34": 1
+   },
+   "recent3Count": 3,
+   "pastExamPracticeCount": 6,
+   "originalQuizCount": 1,
+   "standard2026Status": null,
+   "sourceVersion": "shinkyuu-db@2d05bdd",
+   "verifiedStatus": "COMPUTED_FROM_OFFICIAL_EXAMS",
+   "sourceType": "official_exam",
+   "relatedDbUrl": "https://shinkyuu-db.vercel.app/past-exams/theme/shichi-jo",
+   "relatedDbUrls": {
+    "theme": "https://shinkyuu-db.vercel.app/themes/shichi-jo",
+    "pastExams": "https://shinkyuu-db.vercel.app/past-exams/theme/shichi-jo",
+    "quiz": "https://shinkyuu-db.vercel.app/quiz/theme/shichi-jo"
+   },
+   "updatedAt": "2026-10-11T09:56:26+09:00",
+   "publicationAllowed": true,
+   "warningNotes": [
+    "テーマ分類は当DB独自。出題数は「このテーマに分類した問題数」"
+   ]
+  },
+  {
+   "stableId": "theme:toyo-rekishi",
+   "title": "東洋医学の歴史",
+   "subject": "oriental-overview",
+   "subjectName": "東洋医学概論",
+   "examCount": 0,
+   "examRounds": [],
+   "byRound": {
+    "29": 0,
+    "30": 0,
+    "31": 0,
+    "32": 0,
+    "33": 0,
+    "34": 0
+   },
+   "recent3Count": 0,
+   "pastExamPracticeCount": 0,
+   "originalQuizCount": 0,
+   "standard2026Status": "expanded",
+   "sourceVersion": "shinkyuu-db@2d05bdd",
+   "verifiedStatus": "COMPUTED_FROM_OFFICIAL_EXAMS",
+   "sourceType": "official_exam",
+   "relatedDbUrl": "https://shinkyuu-db.vercel.app/themes/toyo-rekishi",
+   "relatedDbUrls": {
+    "theme": "https://shinkyuu-db.vercel.app/themes/toyo-rekishi"
+   },
+   "updatedAt": "2026-10-11T09:56:26+09:00",
+   "publicationAllowed": true,
+   "warningNotes": [
+    "テーマ分類は当DB独自。出題数は「このテーマに分類した問題数」",
+    "第29〜34回に出題実績なし（学習用テーマ）",
+    "2026年版出題基準の変更区分は公式の事実。第35回で出ることを示すものではない"
+   ]
+  },
+  {
+   "stableId": "theme:kenko-nihon-21",
+   "title": "健康日本21",
+   "subject": "hygiene",
+   "subjectName": "衛生学・公衆衛生学",
+   "examCount": 1,
+   "examRounds": [
+    34
+   ],
+   "byRound": {
+    "29": 0,
+    "30": 0,
+    "31": 0,
+    "32": 0,
+    "33": 0,
+    "34": 1
+   },
+   "recent3Count": 1,
+   "pastExamPracticeCount": 1,
+   "originalQuizCount": 0,
+   "standard2026Status": null,
+   "sourceVersion": "shinkyuu-db@2d05bdd",
+   "verifiedStatus": "COMPUTED_FROM_OFFICIAL_EXAMS",
+   "sourceType": "official_exam",
+   "relatedDbUrl": "https://shinkyuu-db.vercel.app/past-exams/theme/kenko-nihon-21",
+   "relatedDbUrls": {
+    "theme": "https://shinkyuu-db.vercel.app/themes/kenko-nihon-21",
+    "pastExams": "https://shinkyuu-db.vercel.app/past-exams/theme/kenko-nihon-21"
+   },
+   "updatedAt": "2026-10-11T09:56:26+09:00",
+   "publicationAllowed": true,
+   "warningNotes": [
+    "テーマ分類は当DB独自。出題数は「このテーマに分類した問題数」"
+   ]
+  },
+  {
+   "stableId": "theme:kansen-sho",
+   "title": "感染症",
+   "subject": "hygiene",
+   "subjectName": "衛生学・公衆衛生学",
+   "examCount": 5,
+   "examRounds": [
+    29,
+    31,
+    32,
+    33,
+    34
+   ],
+   "byRound": {
+    "29": 1,
+    "30": 0,
+    "31": 1,
+    "32": 1,
+    "33": 1,
+    "34": 1
+   },
+   "recent3Count": 3,
+   "pastExamPracticeCount": 5,
+   "originalQuizCount": 0,
+   "standard2026Status": null,
+   "sourceVersion": "shinkyuu-db@2d05bdd",
+   "verifiedStatus": "COMPUTED_FROM_OFFICIAL_EXAMS",
+   "sourceType": "official_exam",
+   "relatedDbUrl": "https://shinkyuu-db.vercel.app/past-exams/theme/kansen-sho",
+   "relatedDbUrls": {
+    "theme": "https://shinkyuu-db.vercel.app/themes/kansen-sho",
+    "pastExams": "https://shinkyuu-db.vercel.app/past-exams/theme/kansen-sho"
+   },
+   "updatedAt": "2026-10-11T09:56:26+09:00",
+   "publicationAllowed": true,
+   "warningNotes": [
+    "テーマ分類は当DB独自。出題数は「このテーマに分類した問題数」"
+   ]
+  },
+  {
+   "stableId": "theme:seikatsu-shukan-byo",
+   "title": "生活習慣病",
+   "subject": "hygiene",
+   "subjectName": "衛生学・公衆衛生学",
+   "examCount": 3,
+   "examRounds": [
+    30,
+    31,
+    32
+   ],
+   "byRound": {
+    "29": 0,
+    "30": 1,
+    "31": 1,
+    "32": 1,
+    "33": 0,
+    "34": 0
+   },
+   "recent3Count": 1,
+   "pastExamPracticeCount": 3,
+   "originalQuizCount": 0,
+   "standard2026Status": null,
+   "sourceVersion": "shinkyuu-db@2d05bdd",
+   "verifiedStatus": "COMPUTED_FROM_OFFICIAL_EXAMS",
+   "sourceType": "official_exam",
+   "relatedDbUrl": "https://shinkyuu-db.vercel.app/past-exams/theme/seikatsu-shukan-byo",
+   "relatedDbUrls": {
+    "theme": "https://shinkyuu-db.vercel.app/themes/seikatsu-shukan-byo",
+    "pastExams": "https://shinkyuu-db.vercel.app/past-exams/theme/seikatsu-shukan-byo"
+   },
+   "updatedAt": "2026-10-11T09:56:26+09:00",
+   "publicationAllowed": true,
+   "warningNotes": [
+    "テーマ分類は当DB独自。出題数は「このテーマに分類した問題数」"
+   ]
+  },
+  {
+   "stableId": "theme:kin-kishi-teishi",
+   "title": "筋の起始停止",
+   "subject": "anatomy",
+   "subjectName": "解剖学",
+   "examCount": 2,
+   "examRounds": [
+    29,
+    34
+   ],
+   "byRound": {
+    "29": 1,
+    "30": 0,
+    "31": 0,
+    "32": 0,
+    "33": 0,
+    "34": 1
+   },
+   "recent3Count": 1,
+   "pastExamPracticeCount": 2,
+   "originalQuizCount": 0,
+   "standard2026Status": null,
+   "sourceVersion": "shinkyuu-db@2d05bdd",
+   "verifiedStatus": "COMPUTED_FROM_OFFICIAL_EXAMS",
+   "sourceType": "official_exam",
+   "relatedDbUrl": "https://shinkyuu-db.vercel.app/past-exams/theme/kin-kishi-teishi",
+   "relatedDbUrls": {
+    "theme": "https://shinkyuu-db.vercel.app/themes/kin-kishi-teishi",
+    "pastExams": "https://shinkyuu-db.vercel.app/past-exams/theme/kin-kishi-teishi"
+   },
+   "updatedAt": "2026-10-11T09:56:26+09:00",
+   "publicationAllowed": true,
+   "warningNotes": [
+    "テーマ分類は当DB独自。出題数は「このテーマに分類した問題数」"
+   ]
+  },
+  {
+   "stableId": "theme:no-shinkei",
+   "title": "脳神経",
+   "subject": "anatomy",
+   "subjectName": "解剖学",
+   "examCount": 5,
+   "examRounds": [
+    29,
+    31,
+    34
+   ],
+   "byRound": {
+    "29": 1,
+    "30": 0,
+    "31": 1,
+    "32": 0,
+    "33": 0,
+    "34": 3
+   },
+   "recent3Count": 3,
+   "pastExamPracticeCount": 5,
+   "originalQuizCount": 1,
+   "standard2026Status": null,
+   "sourceVersion": "shinkyuu-db@2d05bdd",
+   "verifiedStatus": "COMPUTED_FROM_OFFICIAL_EXAMS",
+   "sourceType": "official_exam",
+   "relatedDbUrl": "https://shinkyuu-db.vercel.app/past-exams/theme/no-shinkei",
+   "relatedDbUrls": {
+    "theme": "https://shinkyuu-db.vercel.app/themes/no-shinkei",
+    "pastExams": "https://shinkyuu-db.vercel.app/past-exams/theme/no-shinkei",
+    "quiz": "https://shinkyuu-db.vercel.app/quiz/theme/no-shinkei"
+   },
+   "updatedAt": "2026-10-11T09:56:26+09:00",
+   "publicationAllowed": true,
+   "warningNotes": [
+    "テーマ分類は当DB独自。出題数は「このテーマに分類した問題数」"
+   ]
+  },
+  {
+   "stableId": "theme:kansetsu-kozo",
+   "title": "関節の構造",
+   "subject": "anatomy",
+   "subjectName": "解剖学",
+   "examCount": 2,
+   "examRounds": [
+    31
+   ],
+   "byRound": {
+    "29": 0,
+    "30": 0,
+    "31": 2,
+    "32": 0,
+    "33": 0,
+    "34": 0
+   },
+   "recent3Count": 0,
+   "pastExamPracticeCount": 2,
+   "originalQuizCount": 0,
+   "standard2026Status": null,
+   "sourceVersion": "shinkyuu-db@2d05bdd",
+   "verifiedStatus": "COMPUTED_FROM_OFFICIAL_EXAMS",
+   "sourceType": "official_exam",
+   "relatedDbUrl": "https://shinkyuu-db.vercel.app/past-exams/theme/kansetsu-kozo",
+   "relatedDbUrls": {
+    "theme": "https://shinkyuu-db.vercel.app/themes/kansetsu-kozo",
+    "pastExams": "https://shinkyuu-db.vercel.app/past-exams/theme/kansetsu-kozo"
+   },
+   "updatedAt": "2026-10-11T09:56:26+09:00",
+   "publicationAllowed": true,
+   "warningNotes": [
+    "テーマ分類は当DB独自。出題数は「このテーマに分類した問題数」"
+   ]
+  },
+  {
+   "stableId": "theme:jiritsu-shinkei",
+   "title": "自律神経",
+   "subject": "physiology",
+   "subjectName": "生理学",
+   "examCount": 2,
+   "examRounds": [
+    29,
+    32
+   ],
+   "byRound": {
+    "29": 1,
+    "30": 0,
+    "31": 0,
+    "32": 1,
+    "33": 0,
+    "34": 0
+   },
+   "recent3Count": 1,
+   "pastExamPracticeCount": 2,
+   "originalQuizCount": 2,
+   "standard2026Status": null,
+   "sourceVersion": "shinkyuu-db@2d05bdd",
+   "verifiedStatus": "COMPUTED_FROM_OFFICIAL_EXAMS",
+   "sourceType": "official_exam",
+   "relatedDbUrl": "https://shinkyuu-db.vercel.app/past-exams/theme/jiritsu-shinkei",
+   "relatedDbUrls": {
+    "theme": "https://shinkyuu-db.vercel.app/themes/jiritsu-shinkei",
+    "pastExams": "https://shinkyuu-db.vercel.app/past-exams/theme/jiritsu-shinkei",
+    "quiz": "https://shinkyuu-db.vercel.app/quiz/theme/jiritsu-shinkei"
+   },
+   "updatedAt": "2026-10-11T09:56:26+09:00",
+   "publicationAllowed": true,
+   "warningNotes": [
+    "テーマ分類は当DB独自。出題数は「このテーマに分類した問題数」"
+   ]
+  },
+  {
+   "stableId": "theme:junkan-kino",
+   "title": "循環機能",
+   "subject": "physiology",
+   "subjectName": "生理学",
+   "examCount": 0,
+   "examRounds": [],
+   "byRound": {
+    "29": 0,
+    "30": 0,
+    "31": 0,
+    "32": 0,
+    "33": 0,
+    "34": 0
+   },
+   "recent3Count": 0,
+   "pastExamPracticeCount": 0,
+   "originalQuizCount": 0,
+   "standard2026Status": null,
+   "sourceVersion": "shinkyuu-db@2d05bdd",
+   "verifiedStatus": "COMPUTED_FROM_OFFICIAL_EXAMS",
+   "sourceType": "official_exam",
+   "relatedDbUrl": "https://shinkyuu-db.vercel.app/themes/junkan-kino",
+   "relatedDbUrls": {
+    "theme": "https://shinkyuu-db.vercel.app/themes/junkan-kino"
+   },
+   "updatedAt": "2026-10-11T09:56:26+09:00",
+   "publicationAllowed": true,
+   "warningNotes": [
+    "テーマ分類は当DB独自。出題数は「このテーマに分類した問題数」",
+    "第29〜34回に出題実績なし（学習用テーマ）"
+   ]
+  },
+  {
+   "stableId": "theme:kanke-hokki",
+   "title": "関係法規",
+   "subject": "regulations",
+   "subjectName": "関係法規",
+   "examCount": 2,
+   "examRounds": [
+    30,
+    33
+   ],
+   "byRound": {
+    "29": 0,
+    "30": 1,
+    "31": 0,
+    "32": 0,
+    "33": 1,
+    "34": 0
+   },
+   "recent3Count": 1,
+   "pastExamPracticeCount": 2,
+   "originalQuizCount": 1,
+   "standard2026Status": null,
+   "sourceVersion": "shinkyuu-db@2d05bdd",
+   "verifiedStatus": "COMPUTED_FROM_OFFICIAL_EXAMS",
+   "sourceType": "official_exam",
+   "relatedDbUrl": "https://shinkyuu-db.vercel.app/past-exams/theme/kanke-hokki",
+   "relatedDbUrls": {
+    "theme": "https://shinkyuu-db.vercel.app/themes/kanke-hokki",
+    "pastExams": "https://shinkyuu-db.vercel.app/past-exams/theme/kanke-hokki",
+    "quiz": "https://shinkyuu-db.vercel.app/quiz/theme/kanke-hokki"
+   },
+   "updatedAt": "2026-10-11T09:56:26+09:00",
+   "publicationAllowed": true,
+   "warningNotes": [
+    "テーマ分類は当DB独自。出題数は「このテーマに分類した問題数」"
+   ]
+  },
+  {
+   "stableId": "theme:hari-risk-kanri",
+   "title": "鍼のリスク管理",
+   "subject": "acupuncture-theory",
+   "subjectName": "はり理論",
+   "examCount": 5,
+   "examRounds": [
+    30,
+    32,
+    33
+   ],
+   "byRound": {
+    "29": 0,
+    "30": 1,
+    "31": 0,
+    "32": 1,
+    "33": 3,
+    "34": 0
+   },
+   "recent3Count": 4,
+   "pastExamPracticeCount": 5,
+   "originalQuizCount": 2,
+   "standard2026Status": null,
+   "sourceVersion": "shinkyuu-db@2d05bdd",
+   "verifiedStatus": "COMPUTED_FROM_OFFICIAL_EXAMS",
+   "sourceType": "official_exam",
+   "relatedDbUrl": "https://shinkyuu-db.vercel.app/past-exams/theme/hari-risk-kanri",
+   "relatedDbUrls": {
+    "theme": "https://shinkyuu-db.vercel.app/themes/hari-risk-kanri",
+    "pastExams": "https://shinkyuu-db.vercel.app/past-exams/theme/hari-risk-kanri",
+    "quiz": "https://shinkyuu-db.vercel.app/quiz/theme/hari-risk-kanri"
+   },
+   "updatedAt": "2026-10-11T09:56:26+09:00",
+   "publicationAllowed": true,
+   "warningNotes": [
+    "テーマ分類は当DB独自。出題数は「このテーマに分類した問題数」"
+   ]
+  },
+  {
+   "stableId": "theme:hari-shigeki-ryo",
+   "title": "鍼の刺激量",
+   "subject": "acupuncture-theory",
+   "subjectName": "はり理論",
+   "examCount": 3,
+   "examRounds": [
+    29,
+    32,
+    34
+   ],
+   "byRound": {
+    "29": 1,
+    "30": 0,
+    "31": 0,
+    "32": 1,
+    "33": 0,
+    "34": 1
+   },
+   "recent3Count": 2,
+   "pastExamPracticeCount": 3,
+   "originalQuizCount": 0,
+   "standard2026Status": null,
+   "sourceVersion": "shinkyuu-db@2d05bdd",
+   "verifiedStatus": "COMPUTED_FROM_OFFICIAL_EXAMS",
+   "sourceType": "official_exam",
+   "relatedDbUrl": "https://shinkyuu-db.vercel.app/past-exams/theme/hari-shigeki-ryo",
+   "relatedDbUrls": {
+    "theme": "https://shinkyuu-db.vercel.app/themes/hari-shigeki-ryo",
+    "pastExams": "https://shinkyuu-db.vercel.app/past-exams/theme/hari-shigeki-ryo"
+   },
+   "updatedAt": "2026-10-11T09:56:26+09:00",
+   "publicationAllowed": true,
+   "warningNotes": [
+    "テーマ分類は当DB独自。出題数は「このテーマに分類した問題数」"
+   ]
+  },
+  {
+   "stableId": "theme:kyu-fukusayo",
+   "title": "灸の副作用",
+   "subject": "moxibustion-theory",
+   "subjectName": "きゅう理論",
+   "examCount": 0,
+   "examRounds": [],
+   "byRound": {
+    "29": 0,
+    "30": 0,
+    "31": 0,
+    "32": 0,
+    "33": 0,
+    "34": 0
+   },
+   "recent3Count": 0,
+   "pastExamPracticeCount": 0,
+   "originalQuizCount": 0,
+   "standard2026Status": null,
+   "sourceVersion": "shinkyuu-db@2d05bdd",
+   "verifiedStatus": "COMPUTED_FROM_OFFICIAL_EXAMS",
+   "sourceType": "official_exam",
+   "relatedDbUrl": "https://shinkyuu-db.vercel.app/themes/kyu-fukusayo",
+   "relatedDbUrls": {
+    "theme": "https://shinkyuu-db.vercel.app/themes/kyu-fukusayo"
+   },
+   "updatedAt": "2026-10-11T09:56:26+09:00",
+   "publicationAllowed": true,
+   "warningNotes": [
+    "テーマ分類は当DB独自。出題数は「このテーマに分類した問題数」",
+    "第29〜34回に出題実績なし（学習用テーマ）"
+   ]
+  },
+  {
+   "stableId": "theme:ben-sho-ron-chi",
+   "title": "弁証論治",
+   "subject": "oriental-clinical",
+   "subjectName": "東洋医学臨床論",
+   "examCount": 9,
+   "examRounds": [
+    30,
+    31,
+    32,
+    33
+   ],
+   "byRound": {
+    "29": 0,
+    "30": 4,
+    "31": 1,
+    "32": 1,
+    "33": 3,
+    "34": 0
+   },
+   "recent3Count": 4,
+   "pastExamPracticeCount": 9,
+   "originalQuizCount": 1,
+   "standard2026Status": null,
+   "sourceVersion": "shinkyuu-db@2d05bdd",
+   "verifiedStatus": "COMPUTED_FROM_OFFICIAL_EXAMS",
+   "sourceType": "official_exam",
+   "relatedDbUrl": "https://shinkyuu-db.vercel.app/past-exams/theme/ben-sho-ron-chi",
+   "relatedDbUrls": {
+    "theme": "https://shinkyuu-db.vercel.app/themes/ben-sho-ron-chi",
+    "pastExams": "https://shinkyuu-db.vercel.app/past-exams/theme/ben-sho-ron-chi",
+    "quiz": "https://shinkyuu-db.vercel.app/quiz/theme/ben-sho-ron-chi"
+   },
+   "updatedAt": "2026-10-11T09:56:26+09:00",
+   "publicationAllowed": true,
+   "warningNotes": [
+    "テーマ分類は当DB独自。出題数は「このテーマに分類した問題数」"
+   ]
+  },
+  {
+   "stableId": "theme:kei-myaku-byo-sho",
+   "title": "経絡病証",
+   "subject": "oriental-clinical",
+   "subjectName": "東洋医学臨床論",
+   "examCount": 3,
+   "examRounds": [
+    30,
+    32,
+    33
+   ],
+   "byRound": {
+    "29": 0,
+    "30": 1,
+    "31": 0,
+    "32": 1,
+    "33": 1,
+    "34": 0
+   },
+   "recent3Count": 2,
+   "pastExamPracticeCount": 3,
+   "originalQuizCount": 0,
+   "standard2026Status": null,
+   "sourceVersion": "shinkyuu-db@2d05bdd",
+   "verifiedStatus": "COMPUTED_FROM_OFFICIAL_EXAMS",
+   "sourceType": "official_exam",
+   "relatedDbUrl": "https://shinkyuu-db.vercel.app/past-exams/theme/kei-myaku-byo-sho",
+   "relatedDbUrls": {
+    "theme": "https://shinkyuu-db.vercel.app/themes/kei-myaku-byo-sho",
+    "pastExams": "https://shinkyuu-db.vercel.app/past-exams/theme/kei-myaku-byo-sho"
+   },
+   "updatedAt": "2026-10-11T09:56:26+09:00",
+   "publicationAllowed": true,
+   "warningNotes": [
+    "テーマ分類は当DB独自。出題数は「このテーマに分類した問題数」"
+   ]
+  },
+  {
+   "stableId": "theme:menekigaku",
+   "title": "免疫学",
+   "subject": "clinical-general",
+   "subjectName": "臨床医学総論",
+   "examCount": 0,
+   "examRounds": [],
+   "byRound": {
+    "29": 0,
+    "30": 0,
+    "31": 0,
+    "32": 0,
+    "33": 0,
+    "34": 0
+   },
+   "recent3Count": 0,
+   "pastExamPracticeCount": 0,
+   "originalQuizCount": 0,
+   "standard2026Status": null,
+   "sourceVersion": "shinkyuu-db@2d05bdd",
+   "verifiedStatus": "COMPUTED_FROM_OFFICIAL_EXAMS",
+   "sourceType": "official_exam",
+   "relatedDbUrl": "https://shinkyuu-db.vercel.app/themes/menekigaku",
+   "relatedDbUrls": {
+    "theme": "https://shinkyuu-db.vercel.app/themes/menekigaku"
+   },
+   "updatedAt": "2026-10-11T09:56:26+09:00",
+   "publicationAllowed": true,
+   "warningNotes": [
+    "テーマ分類は当DB独自。出題数は「このテーマに分類した問題数」",
+    "第29〜34回に出題実績なし（学習用テーマ）"
+   ]
+  },
+  {
+   "stableId": "theme:cg-vital-physical",
+   "title": "バイタルサインとフィジカルアセスメント",
+   "subject": "clinical-general",
+   "subjectName": "臨床医学総論",
+   "examCount": 10,
+   "examRounds": [
+    29,
+    31,
+    32,
+    33
+   ],
+   "byRound": {
+    "29": 2,
+    "30": 0,
+    "31": 2,
+    "32": 2,
+    "33": 4,
+    "34": 0
+   },
+   "recent3Count": 6,
+   "pastExamPracticeCount": 10,
+   "originalQuizCount": 4,
+   "standard2026Status": null,
+   "sourceVersion": "shinkyuu-db@2d05bdd",
+   "verifiedStatus": "COMPUTED_FROM_OFFICIAL_EXAMS",
+   "sourceType": "official_exam",
+   "relatedDbUrl": "https://shinkyuu-db.vercel.app/past-exams/theme/cg-vital-physical",
+   "relatedDbUrls": {
+    "theme": "https://shinkyuu-db.vercel.app/themes/cg-vital-physical",
+    "pastExams": "https://shinkyuu-db.vercel.app/past-exams/theme/cg-vital-physical",
+    "quiz": "https://shinkyuu-db.vercel.app/quiz/theme/cg-vital-physical"
+   },
+   "updatedAt": "2026-10-11T09:56:26+09:00",
+   "publicationAllowed": true,
+   "warningNotes": [
+    "テーマ分類は当DB独自。出題数は「このテーマに分類した問題数」"
+   ]
+  },
+  {
+   "stableId": "theme:cg-kensa-shindan",
+   "title": "臨床検査・画像診断・腫瘍マーカー",
+   "subject": "clinical-general",
+   "subjectName": "臨床医学総論",
+   "examCount": 4,
+   "examRounds": [
+    29,
+    31,
+    32
+   ],
+   "byRound": {
+    "29": 2,
+    "30": 0,
+    "31": 1,
+    "32": 1,
+    "33": 0,
+    "34": 0
+   },
+   "recent3Count": 1,
+   "pastExamPracticeCount": 4,
+   "originalQuizCount": 2,
+   "standard2026Status": null,
+   "sourceVersion": "shinkyuu-db@2d05bdd",
+   "verifiedStatus": "COMPUTED_FROM_OFFICIAL_EXAMS",
+   "sourceType": "official_exam",
+   "relatedDbUrl": "https://shinkyuu-db.vercel.app/past-exams/theme/cg-kensa-shindan",
+   "relatedDbUrls": {
+    "theme": "https://shinkyuu-db.vercel.app/themes/cg-kensa-shindan",
+    "pastExams": "https://shinkyuu-db.vercel.app/past-exams/theme/cg-kensa-shindan",
+    "quiz": "https://shinkyuu-db.vercel.app/quiz/theme/cg-kensa-shindan"
+   },
+   "updatedAt": "2026-10-11T09:56:26+09:00",
+   "publicationAllowed": true,
+   "warningNotes": [
+    "テーマ分類は当DB独自。出題数は「このテーマに分類した問題数」"
+   ]
+  },
+  {
+   "stableId": "theme:cg-kyukyu-bls",
+   "title": "救急医療・一次救命処置・ショック",
+   "subject": "clinical-general",
+   "subjectName": "臨床医学総論",
+   "examCount": 3,
+   "examRounds": [
+    30,
+    31,
+    32
+   ],
+   "byRound": {
+    "29": 0,
+    "30": 1,
+    "31": 1,
+    "32": 1,
+    "33": 0,
+    "34": 0
+   },
+   "recent3Count": 1,
+   "pastExamPracticeCount": 3,
+   "originalQuizCount": 2,
+   "standard2026Status": null,
+   "sourceVersion": "shinkyuu-db@2d05bdd",
+   "verifiedStatus": "COMPUTED_FROM_OFFICIAL_EXAMS",
+   "sourceType": "official_exam",
+   "relatedDbUrl": "https://shinkyuu-db.vercel.app/past-exams/theme/cg-kyukyu-bls",
+   "relatedDbUrls": {
+    "theme": "https://shinkyuu-db.vercel.app/themes/cg-kyukyu-bls",
+    "pastExams": "https://shinkyuu-db.vercel.app/past-exams/theme/cg-kyukyu-bls",
+    "quiz": "https://shinkyuu-db.vercel.app/quiz/theme/cg-kyukyu-bls"
+   },
+   "updatedAt": "2026-10-11T09:56:26+09:00",
+   "publicationAllowed": true,
+   "warningNotes": [
+    "テーマ分類は当DB独自。出題数は「このテーマに分類した問題数」"
+   ]
+  },
+  {
+   "stableId": "theme:cg-chiryo-gaku",
+   "title": "治療学の基礎",
+   "subject": "clinical-general",
+   "subjectName": "臨床医学総論",
+   "examCount": 2,
+   "examRounds": [
+    33,
+    34
+   ],
+   "byRound": {
+    "29": 0,
+    "30": 0,
+    "31": 0,
+    "32": 0,
+    "33": 1,
+    "34": 1
+   },
+   "recent3Count": 2,
+   "pastExamPracticeCount": 2,
+   "originalQuizCount": 0,
+   "standard2026Status": null,
+   "sourceVersion": "shinkyuu-db@2d05bdd",
+   "verifiedStatus": "COMPUTED_FROM_OFFICIAL_EXAMS",
+   "sourceType": "official_exam",
+   "relatedDbUrl": "https://shinkyuu-db.vercel.app/past-exams/theme/cg-chiryo-gaku",
+   "relatedDbUrls": {
+    "theme": "https://shinkyuu-db.vercel.app/themes/cg-chiryo-gaku",
+    "pastExams": "https://shinkyuu-db.vercel.app/past-exams/theme/cg-chiryo-gaku"
+   },
+   "updatedAt": "2026-10-11T09:56:26+09:00",
+   "publicationAllowed": true,
+   "warningNotes": [
+    "テーマ分類は当DB独自。出題数は「このテーマに分類した問題数」"
+   ]
+  },
+  {
+   "stableId": "theme:cg-innai-kansen",
+   "title": "院内感染対策・標準予防策",
+   "subject": "clinical-general",
+   "subjectName": "臨床医学総論",
+   "examCount": 0,
+   "examRounds": [],
+   "byRound": {
+    "29": 0,
+    "30": 0,
+    "31": 0,
+    "32": 0,
+    "33": 0,
+    "34": 0
+   },
+   "recent3Count": 0,
+   "pastExamPracticeCount": 0,
+   "originalQuizCount": 1,
+   "standard2026Status": null,
+   "sourceVersion": "shinkyuu-db@2d05bdd",
+   "verifiedStatus": "COMPUTED_FROM_OFFICIAL_EXAMS",
+   "sourceType": "official_exam",
+   "relatedDbUrl": "https://shinkyuu-db.vercel.app/themes/cg-innai-kansen",
+   "relatedDbUrls": {
+    "theme": "https://shinkyuu-db.vercel.app/themes/cg-innai-kansen",
+    "quiz": "https://shinkyuu-db.vercel.app/quiz/theme/cg-innai-kansen"
+   },
+   "updatedAt": "2026-10-11T09:56:26+09:00",
+   "publicationAllowed": true,
+   "warningNotes": [
+    "テーマ分類は当DB独自。出題数は「このテーマに分類した問題数」",
+    "第29〜34回に出題実績なし（学習用テーマ）"
+   ]
+  },
+  {
+   "stableId": "theme:mo-iryo-hoken-seido",
+   "title": "医療保険制度と国民医療費",
+   "subject": "medical-overview",
+   "subjectName": "医療概論",
+   "examCount": 5,
+   "examRounds": [
+    29,
+    30,
+    31,
+    33
+   ],
+   "byRound": {
+    "29": 1,
+    "30": 2,
+    "31": 1,
+    "32": 0,
+    "33": 1,
+    "34": 0
+   },
+   "recent3Count": 1,
+   "pastExamPracticeCount": 5,
+   "originalQuizCount": 2,
+   "standard2026Status": null,
+   "sourceVersion": "shinkyuu-db@2d05bdd",
+   "verifiedStatus": "COMPUTED_FROM_OFFICIAL_EXAMS",
+   "sourceType": "official_exam",
+   "relatedDbUrl": "https://shinkyuu-db.vercel.app/past-exams/theme/mo-iryo-hoken-seido",
+   "relatedDbUrls": {
+    "theme": "https://shinkyuu-db.vercel.app/themes/mo-iryo-hoken-seido",
+    "pastExams": "https://shinkyuu-db.vercel.app/past-exams/theme/mo-iryo-hoken-seido",
+    "quiz": "https://shinkyuu-db.vercel.app/quiz/theme/mo-iryo-hoken-seido"
+   },
+   "updatedAt": "2026-10-11T09:56:26+09:00",
+   "publicationAllowed": true,
+   "warningNotes": [
+    "テーマ分類は当DB独自。出題数は「このテーマに分類した問題数」"
+   ]
+  },
+  {
+   "stableId": "theme:mo-iryo-teikyo",
+   "title": "医療提供体制（医療法・医療計画）",
+   "subject": "medical-overview",
+   "subjectName": "医療概論",
+   "examCount": 2,
+   "examRounds": [
+    29,
+    32
+   ],
+   "byRound": {
+    "29": 1,
+    "30": 0,
+    "31": 0,
+    "32": 1,
+    "33": 0,
+    "34": 0
+   },
+   "recent3Count": 1,
+   "pastExamPracticeCount": 2,
+   "originalQuizCount": 1,
+   "standard2026Status": null,
+   "sourceVersion": "shinkyuu-db@2d05bdd",
+   "verifiedStatus": "COMPUTED_FROM_OFFICIAL_EXAMS",
+   "sourceType": "official_exam",
+   "relatedDbUrl": "https://shinkyuu-db.vercel.app/past-exams/theme/mo-iryo-teikyo",
+   "relatedDbUrls": {
+    "theme": "https://shinkyuu-db.vercel.app/themes/mo-iryo-teikyo",
+    "pastExams": "https://shinkyuu-db.vercel.app/past-exams/theme/mo-iryo-teikyo",
+    "quiz": "https://shinkyuu-db.vercel.app/quiz/theme/mo-iryo-teikyo"
+   },
+   "updatedAt": "2026-10-11T09:56:26+09:00",
+   "publicationAllowed": true,
+   "warningNotes": [
+    "テーマ分類は当DB独自。出題数は「このテーマに分類した問題数」"
+   ]
+  },
+  {
+   "stableId": "theme:mo-nanbyo",
+   "title": "難病対策",
+   "subject": "medical-overview",
+   "subjectName": "医療概論",
+   "examCount": 2,
+   "examRounds": [
+    32,
+    34
+   ],
+   "byRound": {
+    "29": 0,
+    "30": 0,
+    "31": 0,
+    "32": 1,
+    "33": 0,
+    "34": 1
+   },
+   "recent3Count": 2,
+   "pastExamPracticeCount": 2,
+   "originalQuizCount": 1,
+   "standard2026Status": null,
+   "sourceVersion": "shinkyuu-db@2d05bdd",
+   "verifiedStatus": "COMPUTED_FROM_OFFICIAL_EXAMS",
+   "sourceType": "official_exam",
+   "relatedDbUrl": "https://shinkyuu-db.vercel.app/past-exams/theme/mo-nanbyo",
+   "relatedDbUrls": {
+    "theme": "https://shinkyuu-db.vercel.app/themes/mo-nanbyo",
+    "pastExams": "https://shinkyuu-db.vercel.app/past-exams/theme/mo-nanbyo",
+    "quiz": "https://shinkyuu-db.vercel.app/quiz/theme/mo-nanbyo"
+   },
+   "updatedAt": "2026-10-11T09:56:26+09:00",
+   "publicationAllowed": true,
+   "warningNotes": [
+    "テーマ分類は当DB独自。出題数は「このテーマに分類した問題数」"
+   ]
+  },
+  {
+   "stableId": "theme:mo-informed-consent",
+   "title": "インフォームド・コンセントと患者中心の医療",
+   "subject": "medical-overview",
+   "subjectName": "医療概論",
+   "examCount": 4,
+   "examRounds": [
+    29,
+    30,
+    31,
+    33
+   ],
+   "byRound": {
+    "29": 1,
+    "30": 1,
+    "31": 1,
+    "32": 0,
+    "33": 1,
+    "34": 0
+   },
+   "recent3Count": 1,
+   "pastExamPracticeCount": 4,
+   "originalQuizCount": 2,
+   "standard2026Status": null,
+   "sourceVersion": "shinkyuu-db@2d05bdd",
+   "verifiedStatus": "COMPUTED_FROM_OFFICIAL_EXAMS",
+   "sourceType": "official_exam",
+   "relatedDbUrl": "https://shinkyuu-db.vercel.app/past-exams/theme/mo-informed-consent",
+   "relatedDbUrls": {
+    "theme": "https://shinkyuu-db.vercel.app/themes/mo-informed-consent",
+    "pastExams": "https://shinkyuu-db.vercel.app/past-exams/theme/mo-informed-consent",
+    "quiz": "https://shinkyuu-db.vercel.app/quiz/theme/mo-informed-consent"
+   },
+   "updatedAt": "2026-10-11T09:56:26+09:00",
+   "publicationAllowed": true,
+   "warningNotes": [
+    "テーマ分類は当DB独自。出題数は「このテーマに分類した問題数」"
+   ]
+  },
+  {
+   "stableId": "theme:mo-team-iryo",
+   "title": "チーム医療",
+   "subject": "medical-overview",
+   "subjectName": "医療概論",
+   "examCount": 3,
+   "examRounds": [
+    31,
+    32,
+    34
+   ],
+   "byRound": {
+    "29": 0,
+    "30": 0,
+    "31": 1,
+    "32": 1,
+    "33": 0,
+    "34": 1
+   },
+   "recent3Count": 2,
+   "pastExamPracticeCount": 3,
+   "originalQuizCount": 1,
+   "standard2026Status": null,
+   "sourceVersion": "shinkyuu-db@2d05bdd",
+   "verifiedStatus": "COMPUTED_FROM_OFFICIAL_EXAMS",
+   "sourceType": "official_exam",
+   "relatedDbUrl": "https://shinkyuu-db.vercel.app/past-exams/theme/mo-team-iryo",
+   "relatedDbUrls": {
+    "theme": "https://shinkyuu-db.vercel.app/themes/mo-team-iryo",
+    "pastExams": "https://shinkyuu-db.vercel.app/past-exams/theme/mo-team-iryo",
+    "quiz": "https://shinkyuu-db.vercel.app/quiz/theme/mo-team-iryo"
+   },
+   "updatedAt": "2026-10-11T09:56:26+09:00",
+   "publicationAllowed": true,
+   "warningNotes": [
+    "テーマ分類は当DB独自。出題数は「このテーマに分類した問題数」"
+   ]
+  },
+  {
+   "stableId": "theme:mo-i-no-rinri",
+   "title": "医の倫理・生命倫理",
+   "subject": "medical-overview",
+   "subjectName": "医療概論",
+   "examCount": 3,
+   "examRounds": [
+    31,
+    33,
+    34
+   ],
+   "byRound": {
+    "29": 0,
+    "30": 0,
+    "31": 1,
+    "32": 0,
+    "33": 1,
+    "34": 1
+   },
+   "recent3Count": 2,
+   "pastExamPracticeCount": 3,
+   "originalQuizCount": 1,
+   "standard2026Status": "expanded",
+   "sourceVersion": "shinkyuu-db@2d05bdd",
+   "verifiedStatus": "COMPUTED_FROM_OFFICIAL_EXAMS",
+   "sourceType": "official_exam",
+   "relatedDbUrl": "https://shinkyuu-db.vercel.app/past-exams/theme/mo-i-no-rinri",
+   "relatedDbUrls": {
+    "theme": "https://shinkyuu-db.vercel.app/themes/mo-i-no-rinri",
+    "pastExams": "https://shinkyuu-db.vercel.app/past-exams/theme/mo-i-no-rinri",
+    "quiz": "https://shinkyuu-db.vercel.app/quiz/theme/mo-i-no-rinri"
+   },
+   "updatedAt": "2026-10-11T09:56:26+09:00",
+   "publicationAllowed": true,
+   "warningNotes": [
+    "テーマ分類は当DB独自。出題数は「このテーマに分類した問題数」",
+    "2026年版出題基準の変更区分は公式の事実。第35回で出ることを示すものではない"
+   ]
+  },
+  {
+   "stableId": "theme:mo-kaigo-hoken",
+   "title": "介護保険制度と社会保障",
+   "subject": "medical-overview",
+   "subjectName": "医療概論",
+   "examCount": 5,
+   "examRounds": [
+    29,
+    30,
+    32,
+    33,
+    34
+   ],
+   "byRound": {
+    "29": 1,
+    "30": 1,
+    "31": 0,
+    "32": 1,
+    "33": 1,
+    "34": 1
+   },
+   "recent3Count": 3,
+   "pastExamPracticeCount": 5,
+   "originalQuizCount": 2,
+   "standard2026Status": null,
+   "sourceVersion": "shinkyuu-db@2d05bdd",
+   "verifiedStatus": "COMPUTED_FROM_OFFICIAL_EXAMS",
+   "sourceType": "official_exam",
+   "relatedDbUrl": "https://shinkyuu-db.vercel.app/past-exams/theme/mo-kaigo-hoken",
+   "relatedDbUrls": {
+    "theme": "https://shinkyuu-db.vercel.app/themes/mo-kaigo-hoken",
+    "pastExams": "https://shinkyuu-db.vercel.app/past-exams/theme/mo-kaigo-hoken",
+    "quiz": "https://shinkyuu-db.vercel.app/quiz/theme/mo-kaigo-hoken"
+   },
+   "updatedAt": "2026-10-11T09:56:26+09:00",
+   "publicationAllowed": true,
+   "warningNotes": [
+    "テーマ分類は当DB独自。出題数は「このテーマに分類した問題数」"
+   ]
+  },
+  {
+   "stableId": "theme:pa-junkan-shogai",
+   "title": "循環障害",
+   "subject": "pathology",
+   "subjectName": "病理学概論",
+   "examCount": 9,
+   "examRounds": [
+    29,
+    30,
+    31,
+    33,
+    34
+   ],
+   "byRound": {
+    "29": 2,
+    "30": 1,
+    "31": 2,
+    "32": 0,
+    "33": 2,
+    "34": 2
+   },
+   "recent3Count": 4,
+   "pastExamPracticeCount": 9,
+   "originalQuizCount": 1,
+   "standard2026Status": null,
+   "sourceVersion": "shinkyuu-db@2d05bdd",
+   "verifiedStatus": "COMPUTED_FROM_OFFICIAL_EXAMS",
+   "sourceType": "official_exam",
+   "relatedDbUrl": "https://shinkyuu-db.vercel.app/past-exams/theme/pa-junkan-shogai",
+   "relatedDbUrls": {
+    "theme": "https://shinkyuu-db.vercel.app/themes/pa-junkan-shogai",
+    "pastExams": "https://shinkyuu-db.vercel.app/past-exams/theme/pa-junkan-shogai",
+    "quiz": "https://shinkyuu-db.vercel.app/quiz/theme/pa-junkan-shogai"
+   },
+   "updatedAt": "2026-10-11T09:56:26+09:00",
+   "publicationAllowed": true,
+   "warningNotes": [
+    "テーマ分類は当DB独自。出題数は「このテーマに分類した問題数」"
+   ]
+  },
+  {
+   "stableId": "theme:pa-ensho",
+   "title": "炎症",
+   "subject": "pathology",
+   "subjectName": "病理学概論",
+   "examCount": 4,
+   "examRounds": [
+    30,
+    31,
+    32,
+    34
+   ],
+   "byRound": {
+    "29": 0,
+    "30": 1,
+    "31": 1,
+    "32": 1,
+    "33": 0,
+    "34": 1
+   },
+   "recent3Count": 2,
+   "pastExamPracticeCount": 4,
+   "originalQuizCount": 2,
+   "standard2026Status": null,
+   "sourceVersion": "shinkyuu-db@2d05bdd",
+   "verifiedStatus": "COMPUTED_FROM_OFFICIAL_EXAMS",
+   "sourceType": "official_exam",
+   "relatedDbUrl": "https://shinkyuu-db.vercel.app/past-exams/theme/pa-ensho",
+   "relatedDbUrls": {
+    "theme": "https://shinkyuu-db.vercel.app/themes/pa-ensho",
+    "pastExams": "https://shinkyuu-db.vercel.app/past-exams/theme/pa-ensho",
+    "quiz": "https://shinkyuu-db.vercel.app/quiz/theme/pa-ensho"
+   },
+   "updatedAt": "2026-10-11T09:56:26+09:00",
+   "publicationAllowed": true,
+   "warningNotes": [
+    "テーマ分類は当DB独自。出題数は「このテーマに分類した問題数」"
+   ]
+  },
+  {
+   "stableId": "theme:pa-shuyo",
+   "title": "腫瘍",
+   "subject": "pathology",
+   "subjectName": "病理学概論",
+   "examCount": 4,
+   "examRounds": [
+    30,
+    31,
+    32,
+    34
+   ],
+   "byRound": {
+    "29": 0,
+    "30": 1,
+    "31": 1,
+    "32": 1,
+    "33": 0,
+    "34": 1
+   },
+   "recent3Count": 2,
+   "pastExamPracticeCount": 4,
+   "originalQuizCount": 2,
+   "standard2026Status": null,
+   "sourceVersion": "shinkyuu-db@2d05bdd",
+   "verifiedStatus": "COMPUTED_FROM_OFFICIAL_EXAMS",
+   "sourceType": "official_exam",
+   "relatedDbUrl": "https://shinkyuu-db.vercel.app/past-exams/theme/pa-shuyo",
+   "relatedDbUrls": {
+    "theme": "https://shinkyuu-db.vercel.app/themes/pa-shuyo",
+    "pastExams": "https://shinkyuu-db.vercel.app/past-exams/theme/pa-shuyo",
+    "quiz": "https://shinkyuu-db.vercel.app/quiz/theme/pa-shuyo"
+   },
+   "updatedAt": "2026-10-11T09:56:26+09:00",
+   "publicationAllowed": true,
+   "warningNotes": [
+    "テーマ分類は当DB独自。出題数は「このテーマに分類した問題数」"
+   ]
+  },
+  {
+   "stableId": "theme:pa-kansen-meneki",
+   "title": "感染症・免疫・アレルギー",
+   "subject": "pathology",
+   "subjectName": "病理学概論",
+   "examCount": 7,
+   "examRounds": [
+    29,
+    30,
+    31,
+    32,
+    33
+   ],
+   "byRound": {
+    "29": 1,
+    "30": 2,
+    "31": 1,
+    "32": 1,
+    "33": 2,
+    "34": 0
+   },
+   "recent3Count": 3,
+   "pastExamPracticeCount": 7,
+   "originalQuizCount": 0,
+   "standard2026Status": null,
+   "sourceVersion": "shinkyuu-db@2d05bdd",
+   "verifiedStatus": "COMPUTED_FROM_OFFICIAL_EXAMS",
+   "sourceType": "official_exam",
+   "relatedDbUrl": "https://shinkyuu-db.vercel.app/past-exams/theme/pa-kansen-meneki",
+   "relatedDbUrls": {
+    "theme": "https://shinkyuu-db.vercel.app/themes/pa-kansen-meneki",
+    "pastExams": "https://shinkyuu-db.vercel.app/past-exams/theme/pa-kansen-meneki"
+   },
+   "updatedAt": "2026-10-11T09:56:26+09:00",
+   "publicationAllowed": true,
+   "warningNotes": [
+    "テーマ分類は当DB独自。出題数は「このテーマに分類した問題数」"
+   ]
+  },
+  {
+   "stableId": "theme:pa-saibo-shogai",
+   "title": "細胞傷害・変性・壊死",
+   "subject": "pathology",
+   "subjectName": "病理学概論",
+   "examCount": 3,
+   "examRounds": [
+    31,
+    32,
+    34
+   ],
+   "byRound": {
+    "29": 0,
+    "30": 0,
+    "31": 1,
+    "32": 1,
+    "33": 0,
+    "34": 1
+   },
+   "recent3Count": 2,
+   "pastExamPracticeCount": 3,
+   "originalQuizCount": 4,
+   "standard2026Status": null,
+   "sourceVersion": "shinkyuu-db@2d05bdd",
+   "verifiedStatus": "COMPUTED_FROM_OFFICIAL_EXAMS",
+   "sourceType": "official_exam",
+   "relatedDbUrl": "https://shinkyuu-db.vercel.app/past-exams/theme/pa-saibo-shogai",
+   "relatedDbUrls": {
+    "theme": "https://shinkyuu-db.vercel.app/themes/pa-saibo-shogai",
+    "pastExams": "https://shinkyuu-db.vercel.app/past-exams/theme/pa-saibo-shogai",
+    "quiz": "https://shinkyuu-db.vercel.app/quiz/theme/pa-saibo-shogai"
+   },
+   "updatedAt": "2026-10-11T09:56:26+09:00",
+   "publicationAllowed": true,
+   "warningNotes": [
+    "テーマ分類は当DB独自。出題数は「このテーマに分類した問題数」"
+   ]
+  },
+  {
+   "stableId": "theme:pa-iden",
+   "title": "遺伝性疾患と遺伝の基礎",
+   "subject": "pathology",
+   "subjectName": "病理学概論",
+   "examCount": 2,
+   "examRounds": [
+    29,
+    30
+   ],
+   "byRound": {
+    "29": 1,
+    "30": 1,
+    "31": 0,
+    "32": 0,
+    "33": 0,
+    "34": 0
+   },
+   "recent3Count": 0,
+   "pastExamPracticeCount": 2,
+   "originalQuizCount": 1,
+   "standard2026Status": null,
+   "sourceVersion": "shinkyuu-db@2d05bdd",
+   "verifiedStatus": "COMPUTED_FROM_OFFICIAL_EXAMS",
+   "sourceType": "official_exam",
+   "relatedDbUrl": "https://shinkyuu-db.vercel.app/past-exams/theme/pa-iden",
+   "relatedDbUrls": {
+    "theme": "https://shinkyuu-db.vercel.app/themes/pa-iden",
+    "pastExams": "https://shinkyuu-db.vercel.app/past-exams/theme/pa-iden",
+    "quiz": "https://shinkyuu-db.vercel.app/quiz/theme/pa-iden"
+   },
+   "updatedAt": "2026-10-11T09:56:26+09:00",
+   "publicationAllowed": true,
+   "warningNotes": [
+    "テーマ分類は当DB独自。出題数は「このテーマに分類した問題数」"
+   ]
+  },
+  {
+   "stableId": "theme:pa-taisha-ijo",
+   "title": "代謝異常・物質沈着",
+   "subject": "pathology",
+   "subjectName": "病理学概論",
+   "examCount": 2,
+   "examRounds": [
+    32,
+    33
+   ],
+   "byRound": {
+    "29": 0,
+    "30": 0,
+    "31": 0,
+    "32": 1,
+    "33": 1,
+    "34": 0
+   },
+   "recent3Count": 2,
+   "pastExamPracticeCount": 2,
+   "originalQuizCount": 0,
+   "standard2026Status": null,
+   "sourceVersion": "shinkyuu-db@2d05bdd",
+   "verifiedStatus": "COMPUTED_FROM_OFFICIAL_EXAMS",
+   "sourceType": "official_exam",
+   "relatedDbUrl": "https://shinkyuu-db.vercel.app/past-exams/theme/pa-taisha-ijo",
+   "relatedDbUrls": {
+    "theme": "https://shinkyuu-db.vercel.app/themes/pa-taisha-ijo",
+    "pastExams": "https://shinkyuu-db.vercel.app/past-exams/theme/pa-taisha-ijo"
+   },
+   "updatedAt": "2026-10-11T09:56:26+09:00",
+   "publicationAllowed": true,
+   "warningNotes": [
+    "テーマ分類は当DB独自。出題数は「このテーマに分類した問題数」"
+   ]
+  },
+  {
+   "stableId": "theme:pa-shippei-keika",
+   "title": "疾病の経過・転帰と疾患の性差",
+   "subject": "pathology",
+   "subjectName": "病理学概論",
+   "examCount": 5,
+   "examRounds": [
+    29,
+    32,
+    33,
+    34
+   ],
+   "byRound": {
+    "29": 2,
+    "30": 0,
+    "31": 0,
+    "32": 1,
+    "33": 1,
+    "34": 1
+   },
+   "recent3Count": 3,
+   "pastExamPracticeCount": 5,
+   "originalQuizCount": 0,
+   "standard2026Status": null,
+   "sourceVersion": "shinkyuu-db@2d05bdd",
+   "verifiedStatus": "COMPUTED_FROM_OFFICIAL_EXAMS",
+   "sourceType": "official_exam",
+   "relatedDbUrl": "https://shinkyuu-db.vercel.app/past-exams/theme/pa-shippei-keika",
+   "relatedDbUrls": {
+    "theme": "https://shinkyuu-db.vercel.app/themes/pa-shippei-keika",
+    "pastExams": "https://shinkyuu-db.vercel.app/past-exams/theme/pa-shippei-keika"
+   },
+   "updatedAt": "2026-10-11T09:56:26+09:00",
+   "publicationAllowed": true,
+   "warningNotes": [
+    "テーマ分類は当DB独自。出題数は「このテーマに分類した問題数」"
+   ]
+  },
+  {
+   "stableId": "theme:cs-nokekkan",
+   "title": "脳血管疾患・高次脳機能障害・めまい",
+   "subject": "clinical-specific",
+   "subjectName": "臨床医学各論",
+   "examCount": 5,
+   "examRounds": [
+    30,
+    31,
+    34
+   ],
+   "byRound": {
+    "29": 0,
+    "30": 2,
+    "31": 1,
+    "32": 0,
+    "33": 0,
+    "34": 2
+   },
+   "recent3Count": 2,
+   "pastExamPracticeCount": 5,
+   "originalQuizCount": 0,
+   "standard2026Status": null,
+   "sourceVersion": "shinkyuu-db@2d05bdd",
+   "verifiedStatus": "COMPUTED_FROM_OFFICIAL_EXAMS",
+   "sourceType": "official_exam",
+   "relatedDbUrl": "https://shinkyuu-db.vercel.app/past-exams/theme/cs-nokekkan",
+   "relatedDbUrls": {
+    "theme": "https://shinkyuu-db.vercel.app/themes/cs-nokekkan",
+    "pastExams": "https://shinkyuu-db.vercel.app/past-exams/theme/cs-nokekkan"
+   },
+   "updatedAt": "2026-10-11T09:56:26+09:00",
+   "publicationAllowed": true,
+   "warningNotes": [
+    "テーマ分類は当DB独自。出題数は「このテーマに分類した問題数」"
+   ]
+  },
+  {
+   "stableId": "theme:cs-ninchisho",
+   "title": "認知症",
+   "subject": "clinical-specific",
+   "subjectName": "臨床医学各論",
+   "examCount": 6,
+   "examRounds": [
+    29,
+    31,
+    32,
+    33,
+    34
+   ],
+   "byRound": {
+    "29": 1,
+    "30": 0,
+    "31": 1,
+    "32": 1,
+    "33": 2,
+    "34": 1
+   },
+   "recent3Count": 4,
+   "pastExamPracticeCount": 6,
+   "originalQuizCount": 1,
+   "standard2026Status": null,
+   "sourceVersion": "shinkyuu-db@2d05bdd",
+   "verifiedStatus": "COMPUTED_FROM_OFFICIAL_EXAMS",
+   "sourceType": "official_exam",
+   "relatedDbUrl": "https://shinkyuu-db.vercel.app/past-exams/theme/cs-ninchisho",
+   "relatedDbUrls": {
+    "theme": "https://shinkyuu-db.vercel.app/themes/cs-ninchisho",
+    "pastExams": "https://shinkyuu-db.vercel.app/past-exams/theme/cs-ninchisho",
+    "quiz": "https://shinkyuu-db.vercel.app/quiz/theme/cs-ninchisho"
+   },
+   "updatedAt": "2026-10-11T09:56:26+09:00",
+   "publicationAllowed": true,
+   "warningNotes": [
+    "テーマ分類は当DB独自。出題数は「このテーマに分類した問題数」"
+   ]
+  },
+  {
+   "stableId": "theme:cs-parkinson",
+   "title": "パーキンソン病・不随意運動",
+   "subject": "clinical-specific",
+   "subjectName": "臨床医学各論",
+   "examCount": 4,
+   "examRounds": [
+    30,
+    32,
+    33
+   ],
+   "byRound": {
+    "29": 0,
+    "30": 1,
+    "31": 0,
+    "32": 2,
+    "33": 1,
+    "34": 0
+   },
+   "recent3Count": 3,
+   "pastExamPracticeCount": 4,
+   "originalQuizCount": 0,
+   "standard2026Status": null,
+   "sourceVersion": "shinkyuu-db@2d05bdd",
+   "verifiedStatus": "COMPUTED_FROM_OFFICIAL_EXAMS",
+   "sourceType": "official_exam",
+   "relatedDbUrl": "https://shinkyuu-db.vercel.app/past-exams/theme/cs-parkinson",
+   "relatedDbUrls": {
+    "theme": "https://shinkyuu-db.vercel.app/themes/cs-parkinson",
+    "pastExams": "https://shinkyuu-db.vercel.app/past-exams/theme/cs-parkinson"
+   },
+   "updatedAt": "2026-10-11T09:56:26+09:00",
+   "publicationAllowed": true,
+   "warningNotes": [
+    "テーマ分類は当DB独自。出題数は「このテーマに分類した問題数」"
+   ]
+  },
+  {
+   "stableId": "theme:cs-shinkeikin",
+   "title": "神経筋疾患・末梢神経障害",
+   "subject": "clinical-specific",
+   "subjectName": "臨床医学各論",
+   "examCount": 12,
+   "examRounds": [
+    29,
+    30,
+    32,
+    33,
+    34
+   ],
+   "byRound": {
+    "29": 4,
+    "30": 1,
+    "31": 0,
+    "32": 1,
+    "33": 4,
+    "34": 2
+   },
+   "recent3Count": 7,
+   "pastExamPracticeCount": 12,
+   "originalQuizCount": 1,
+   "standard2026Status": null,
+   "sourceVersion": "shinkyuu-db@2d05bdd",
+   "verifiedStatus": "COMPUTED_FROM_OFFICIAL_EXAMS",
+   "sourceType": "official_exam",
+   "relatedDbUrl": "https://shinkyuu-db.vercel.app/past-exams/theme/cs-shinkeikin",
+   "relatedDbUrls": {
+    "theme": "https://shinkyuu-db.vercel.app/themes/cs-shinkeikin",
+    "pastExams": "https://shinkyuu-db.vercel.app/past-exams/theme/cs-shinkeikin",
+    "quiz": "https://shinkyuu-db.vercel.app/quiz/theme/cs-shinkeikin"
+   },
+   "updatedAt": "2026-10-11T09:56:26+09:00",
+   "publicationAllowed": true,
+   "warningNotes": [
+    "テーマ分類は当DB独自。出題数は「このテーマに分類した問題数」"
+   ]
+  },
+  {
+   "stableId": "theme:cs-seishin",
+   "title": "精神疾患",
+   "subject": "clinical-specific",
+   "subjectName": "臨床医学各論",
+   "examCount": 6,
+   "examRounds": [
+    29,
+    30,
+    31,
+    32,
+    33,
+    34
+   ],
+   "byRound": {
+    "29": 1,
+    "30": 1,
+    "31": 1,
+    "32": 1,
+    "33": 1,
+    "34": 1
+   },
+   "recent3Count": 3,
+   "pastExamPracticeCount": 6,
+   "originalQuizCount": 1,
+   "standard2026Status": null,
+   "sourceVersion": "shinkyuu-db@2d05bdd",
+   "verifiedStatus": "COMPUTED_FROM_OFFICIAL_EXAMS",
+   "sourceType": "official_exam",
+   "relatedDbUrl": "https://shinkyuu-db.vercel.app/past-exams/theme/cs-seishin",
+   "relatedDbUrls": {
+    "theme": "https://shinkyuu-db.vercel.app/themes/cs-seishin",
+    "pastExams": "https://shinkyuu-db.vercel.app/past-exams/theme/cs-seishin",
+    "quiz": "https://shinkyuu-db.vercel.app/quiz/theme/cs-seishin"
+   },
+   "updatedAt": "2026-10-11T09:56:26+09:00",
+   "publicationAllowed": true,
+   "warningNotes": [
+    "テーマ分類は当DB独自。出題数は「このテーマに分類した問題数」"
+   ]
+  },
+  {
+   "stableId": "theme:cs-hentai-kansetsu",
+   "title": "変形性関節症・関節リウマチ・骨代謝疾患",
+   "subject": "clinical-specific",
+   "subjectName": "臨床医学各論",
+   "examCount": 11,
+   "examRounds": [
+    29,
+    30,
+    31,
+    33,
+    34
+   ],
+   "byRound": {
+    "29": 1,
+    "30": 3,
+    "31": 2,
+    "32": 0,
+    "33": 4,
+    "34": 1
+   },
+   "recent3Count": 5,
+   "pastExamPracticeCount": 11,
+   "originalQuizCount": 1,
+   "standard2026Status": null,
+   "sourceVersion": "shinkyuu-db@2d05bdd",
+   "verifiedStatus": "COMPUTED_FROM_OFFICIAL_EXAMS",
+   "sourceType": "official_exam",
+   "relatedDbUrl": "https://shinkyuu-db.vercel.app/past-exams/theme/cs-hentai-kansetsu",
+   "relatedDbUrls": {
+    "theme": "https://shinkyuu-db.vercel.app/themes/cs-hentai-kansetsu",
+    "pastExams": "https://shinkyuu-db.vercel.app/past-exams/theme/cs-hentai-kansetsu",
+    "quiz": "https://shinkyuu-db.vercel.app/quiz/theme/cs-hentai-kansetsu"
+   },
+   "updatedAt": "2026-10-11T09:56:26+09:00",
+   "publicationAllowed": true,
+   "warningNotes": [
+    "テーマ分類は当DB独自。出題数は「このテーマに分類した問題数」"
+   ]
+  },
+  {
+   "stableId": "theme:cs-sekitsui",
+   "title": "脊椎疾患・神経根障害と整形外科的徒手検査",
+   "subject": "clinical-specific",
+   "subjectName": "臨床医学各論",
+   "examCount": 10,
+   "examRounds": [
+    29,
+    31,
+    32,
+    33,
+    34
+   ],
+   "byRound": {
+    "29": 2,
+    "30": 0,
+    "31": 2,
+    "32": 3,
+    "33": 1,
+    "34": 2
+   },
+   "recent3Count": 6,
+   "pastExamPracticeCount": 10,
+   "originalQuizCount": 1,
+   "standard2026Status": null,
+   "sourceVersion": "shinkyuu-db@2d05bdd",
+   "verifiedStatus": "COMPUTED_FROM_OFFICIAL_EXAMS",
+   "sourceType": "official_exam",
+   "relatedDbUrl": "https://shinkyuu-db.vercel.app/past-exams/theme/cs-sekitsui",
+   "relatedDbUrls": {
+    "theme": "https://shinkyuu-db.vercel.app/themes/cs-sekitsui",
+    "pastExams": "https://shinkyuu-db.vercel.app/past-exams/theme/cs-sekitsui",
+    "quiz": "https://shinkyuu-db.vercel.app/quiz/theme/cs-sekitsui"
+   },
+   "updatedAt": "2026-10-11T09:56:26+09:00",
+   "publicationAllowed": true,
+   "warningNotes": [
+    "テーマ分類は当DB独自。出題数は「このテーマに分類した問題数」"
+   ]
+  },
+  {
+   "stableId": "theme:cs-gaisho",
+   "title": "外傷・脱臼・スポーツ障害",
+   "subject": "clinical-specific",
+   "subjectName": "臨床医学各論",
+   "examCount": 12,
+   "examRounds": [
+    29,
+    30,
+    31,
+    32,
+    33,
+    34
+   ],
+   "byRound": {
+    "29": 1,
+    "30": 3,
+    "31": 1,
+    "32": 3,
+    "33": 1,
+    "34": 3
+   },
+   "recent3Count": 7,
+   "pastExamPracticeCount": 12,
+   "originalQuizCount": 1,
+   "standard2026Status": null,
+   "sourceVersion": "shinkyuu-db@2d05bdd",
+   "verifiedStatus": "COMPUTED_FROM_OFFICIAL_EXAMS",
+   "sourceType": "official_exam",
+   "relatedDbUrl": "https://shinkyuu-db.vercel.app/past-exams/theme/cs-gaisho",
+   "relatedDbUrls": {
+    "theme": "https://shinkyuu-db.vercel.app/themes/cs-gaisho",
+    "pastExams": "https://shinkyuu-db.vercel.app/past-exams/theme/cs-gaisho",
+    "quiz": "https://shinkyuu-db.vercel.app/quiz/theme/cs-gaisho"
+   },
+   "updatedAt": "2026-10-11T09:56:26+09:00",
+   "publicationAllowed": true,
+   "warningNotes": [
+    "テーマ分類は当DB独自。出題数は「このテーマに分類した問題数」"
+   ]
+  },
+  {
+   "stableId": "theme:cs-ketsueki",
+   "title": "血液疾患",
+   "subject": "clinical-specific",
+   "subjectName": "臨床医学各論",
+   "examCount": 15,
+   "examRounds": [
+    29,
+    30,
+    31,
+    32,
+    33,
+    34
+   ],
+   "byRound": {
+    "29": 3,
+    "30": 2,
+    "31": 3,
+    "32": 4,
+    "33": 2,
+    "34": 1
+   },
+   "recent3Count": 7,
+   "pastExamPracticeCount": 15,
+   "originalQuizCount": 2,
+   "standard2026Status": null,
+   "sourceVersion": "shinkyuu-db@2d05bdd",
+   "verifiedStatus": "COMPUTED_FROM_OFFICIAL_EXAMS",
+   "sourceType": "official_exam",
+   "relatedDbUrl": "https://shinkyuu-db.vercel.app/past-exams/theme/cs-ketsueki",
+   "relatedDbUrls": {
+    "theme": "https://shinkyuu-db.vercel.app/themes/cs-ketsueki",
+    "pastExams": "https://shinkyuu-db.vercel.app/past-exams/theme/cs-ketsueki",
+    "quiz": "https://shinkyuu-db.vercel.app/quiz/theme/cs-ketsueki"
+   },
+   "updatedAt": "2026-10-11T09:56:26+09:00",
+   "publicationAllowed": true,
+   "warningNotes": [
+    "テーマ分類は当DB独自。出題数は「このテーマに分類した問題数」"
+   ]
+  },
+  {
+   "stableId": "theme:cs-kansen",
+   "title": "感染症",
+   "subject": "clinical-specific",
+   "subjectName": "臨床医学各論",
+   "examCount": 23,
+   "examRounds": [
+    29,
+    30,
+    31,
+    32,
+    33,
+    34
+   ],
+   "byRound": {
+    "29": 4,
+    "30": 5,
+    "31": 4,
+    "32": 4,
+    "33": 4,
+    "34": 2
+   },
+   "recent3Count": 10,
+   "pastExamPracticeCount": 23,
+   "originalQuizCount": 3,
+   "standard2026Status": null,
+   "sourceVersion": "shinkyuu-db@2d05bdd",
+   "verifiedStatus": "COMPUTED_FROM_OFFICIAL_EXAMS",
+   "sourceType": "official_exam",
+   "relatedDbUrl": "https://shinkyuu-db.vercel.app/past-exams/theme/cs-kansen",
+   "relatedDbUrls": {
+    "theme": "https://shinkyuu-db.vercel.app/themes/cs-kansen",
+    "pastExams": "https://shinkyuu-db.vercel.app/past-exams/theme/cs-kansen",
+    "quiz": "https://shinkyuu-db.vercel.app/quiz/theme/cs-kansen"
+   },
+   "updatedAt": "2026-10-11T09:56:26+09:00",
+   "publicationAllowed": true,
+   "warningNotes": [
+    "テーマ分類は当DB独自。出題数は「このテーマに分類した問題数」"
+   ]
+  },
+  {
+   "stableId": "theme:cs-shokaki",
+   "title": "消化器疾患（肝・胆・膵・消化管）",
+   "subject": "clinical-specific",
+   "subjectName": "臨床医学各論",
+   "examCount": 14,
+   "examRounds": [
+    29,
+    30,
+    31,
+    32,
+    33,
+    34
+   ],
+   "byRound": {
+    "29": 2,
+    "30": 4,
+    "31": 1,
+    "32": 2,
+    "33": 3,
+    "34": 2
+   },
+   "recent3Count": 7,
+   "pastExamPracticeCount": 14,
+   "originalQuizCount": 2,
+   "standard2026Status": null,
+   "sourceVersion": "shinkyuu-db@2d05bdd",
+   "verifiedStatus": "COMPUTED_FROM_OFFICIAL_EXAMS",
+   "sourceType": "official_exam",
+   "relatedDbUrl": "https://shinkyuu-db.vercel.app/past-exams/theme/cs-shokaki",
+   "relatedDbUrls": {
+    "theme": "https://shinkyuu-db.vercel.app/themes/cs-shokaki",
+    "pastExams": "https://shinkyuu-db.vercel.app/past-exams/theme/cs-shokaki",
+    "quiz": "https://shinkyuu-db.vercel.app/quiz/theme/cs-shokaki"
+   },
+   "updatedAt": "2026-10-11T09:56:26+09:00",
+   "publicationAllowed": true,
+   "warningNotes": [
+    "テーマ分類は当DB独自。出題数は「このテーマに分類した問題数」"
+   ]
+  },
+  {
+   "stableId": "theme:cs-junkanki",
+   "title": "循環器疾患",
+   "subject": "clinical-specific",
+   "subjectName": "臨床医学各論",
+   "examCount": 9,
+   "examRounds": [
+    30,
+    31,
+    32,
+    34
+   ],
+   "byRound": {
+    "29": 0,
+    "30": 1,
+    "31": 2,
+    "32": 3,
+    "33": 0,
+    "34": 3
+   },
+   "recent3Count": 6,
+   "pastExamPracticeCount": 9,
+   "originalQuizCount": 1,
+   "standard2026Status": null,
+   "sourceVersion": "shinkyuu-db@2d05bdd",
+   "verifiedStatus": "COMPUTED_FROM_OFFICIAL_EXAMS",
+   "sourceType": "official_exam",
+   "relatedDbUrl": "https://shinkyuu-db.vercel.app/past-exams/theme/cs-junkanki",
+   "relatedDbUrls": {
+    "theme": "https://shinkyuu-db.vercel.app/themes/cs-junkanki",
+    "pastExams": "https://shinkyuu-db.vercel.app/past-exams/theme/cs-junkanki",
+    "quiz": "https://shinkyuu-db.vercel.app/quiz/theme/cs-junkanki"
+   },
+   "updatedAt": "2026-10-11T09:56:26+09:00",
+   "publicationAllowed": true,
+   "warningNotes": [
+    "テーマ分類は当DB独自。出題数は「このテーマに分類した問題数」"
+   ]
+  },
+  {
+   "stableId": "theme:cs-kokyuki",
+   "title": "呼吸器疾患",
+   "subject": "clinical-specific",
+   "subjectName": "臨床医学各論",
+   "examCount": 10,
+   "examRounds": [
+    29,
+    31,
+    32,
+    33,
+    34
+   ],
+   "byRound": {
+    "29": 1,
+    "30": 0,
+    "31": 3,
+    "32": 3,
+    "33": 2,
+    "34": 1
+   },
+   "recent3Count": 6,
+   "pastExamPracticeCount": 10,
+   "originalQuizCount": 1,
+   "standard2026Status": null,
+   "sourceVersion": "shinkyuu-db@2d05bdd",
+   "verifiedStatus": "COMPUTED_FROM_OFFICIAL_EXAMS",
+   "sourceType": "official_exam",
+   "relatedDbUrl": "https://shinkyuu-db.vercel.app/past-exams/theme/cs-kokyuki",
+   "relatedDbUrls": {
+    "theme": "https://shinkyuu-db.vercel.app/themes/cs-kokyuki",
+    "pastExams": "https://shinkyuu-db.vercel.app/past-exams/theme/cs-kokyuki",
+    "quiz": "https://shinkyuu-db.vercel.app/quiz/theme/cs-kokyuki"
+   },
+   "updatedAt": "2026-10-11T09:56:26+09:00",
+   "publicationAllowed": true,
+   "warningNotes": [
+    "テーマ分類は当DB独自。出題数は「このテーマに分類した問題数」"
+   ]
+  },
+  {
+   "stableId": "theme:cs-jin-hinyoki",
+   "title": "腎・泌尿器疾患",
+   "subject": "clinical-specific",
+   "subjectName": "臨床医学各論",
+   "examCount": 13,
+   "examRounds": [
+    29,
+    30,
+    31,
+    32,
+    33,
+    34
+   ],
+   "byRound": {
+    "29": 3,
+    "30": 1,
+    "31": 4,
+    "32": 1,
+    "33": 1,
+    "34": 3
+   },
+   "recent3Count": 5,
+   "pastExamPracticeCount": 13,
+   "originalQuizCount": 2,
+   "standard2026Status": null,
+   "sourceVersion": "shinkyuu-db@2d05bdd",
+   "verifiedStatus": "COMPUTED_FROM_OFFICIAL_EXAMS",
+   "sourceType": "official_exam",
+   "relatedDbUrl": "https://shinkyuu-db.vercel.app/past-exams/theme/cs-jin-hinyoki",
+   "relatedDbUrls": {
+    "theme": "https://shinkyuu-db.vercel.app/themes/cs-jin-hinyoki",
+    "pastExams": "https://shinkyuu-db.vercel.app/past-exams/theme/cs-jin-hinyoki",
+    "quiz": "https://shinkyuu-db.vercel.app/quiz/theme/cs-jin-hinyoki"
+   },
+   "updatedAt": "2026-10-11T09:56:26+09:00",
+   "publicationAllowed": true,
+   "warningNotes": [
+    "テーマ分類は当DB独自。出題数は「このテーマに分類した問題数」"
+   ]
+  },
+  {
+   "stableId": "theme:cs-naibunpi",
+   "title": "内分泌・代謝疾患",
+   "subject": "clinical-specific",
+   "subjectName": "臨床医学各論",
+   "examCount": 10,
+   "examRounds": [
+    29,
+    31,
+    33,
+    34
+   ],
+   "byRound": {
+    "29": 5,
+    "30": 0,
+    "31": 2,
+    "32": 0,
+    "33": 1,
+    "34": 2
+   },
+   "recent3Count": 3,
+   "pastExamPracticeCount": 10,
+   "originalQuizCount": 1,
+   "standard2026Status": null,
+   "sourceVersion": "shinkyuu-db@2d05bdd",
+   "verifiedStatus": "COMPUTED_FROM_OFFICIAL_EXAMS",
+   "sourceType": "official_exam",
+   "relatedDbUrl": "https://shinkyuu-db.vercel.app/past-exams/theme/cs-naibunpi",
+   "relatedDbUrls": {
+    "theme": "https://shinkyuu-db.vercel.app/themes/cs-naibunpi",
+    "pastExams": "https://shinkyuu-db.vercel.app/past-exams/theme/cs-naibunpi",
+    "quiz": "https://shinkyuu-db.vercel.app/quiz/theme/cs-naibunpi"
+   },
+   "updatedAt": "2026-10-11T09:56:26+09:00",
+   "publicationAllowed": true,
+   "warningNotes": [
+    "テーマ分類は当DB独自。出題数は「このテーマに分類した問題数」"
+   ]
+  },
+  {
+   "stableId": "theme:cs-hifu-shuyo",
+   "title": "皮膚・アレルギー疾患・悪性腫瘍",
+   "subject": "clinical-specific",
+   "subjectName": "臨床医学各論",
+   "examCount": 6,
+   "examRounds": [
+    30,
+    31,
+    33,
+    34
+   ],
+   "byRound": {
+    "29": 0,
+    "30": 1,
+    "31": 2,
+    "32": 0,
+    "33": 2,
+    "34": 1
+   },
+   "recent3Count": 3,
+   "pastExamPracticeCount": 6,
+   "originalQuizCount": 0,
+   "standard2026Status": null,
+   "sourceVersion": "shinkyuu-db@2d05bdd",
+   "verifiedStatus": "COMPUTED_FROM_OFFICIAL_EXAMS",
+   "sourceType": "official_exam",
+   "relatedDbUrl": "https://shinkyuu-db.vercel.app/past-exams/theme/cs-hifu-shuyo",
+   "relatedDbUrls": {
+    "theme": "https://shinkyuu-db.vercel.app/themes/cs-hifu-shuyo",
+    "pastExams": "https://shinkyuu-db.vercel.app/past-exams/theme/cs-hifu-shuyo"
+   },
+   "updatedAt": "2026-10-11T09:56:26+09:00",
+   "publicationAllowed": true,
+   "warningNotes": [
+    "テーマ分類は当DB独自。出題数は「このテーマに分類した問題数」"
+   ]
+  },
+  {
+   "stableId": "theme:rh-soron",
+   "title": "リハビリテーション総論（ICF・評価法）",
+   "subject": "rehabilitation",
+   "subjectName": "リハビリテーション医学",
+   "examCount": 4,
+   "examRounds": [
+    31,
+    33,
+    34
+   ],
+   "byRound": {
+    "29": 0,
+    "30": 0,
+    "31": 1,
+    "32": 0,
+    "33": 2,
+    "34": 1
+   },
+   "recent3Count": 3,
+   "pastExamPracticeCount": 4,
+   "originalQuizCount": 1,
+   "standard2026Status": null,
+   "sourceVersion": "shinkyuu-db@2d05bdd",
+   "verifiedStatus": "COMPUTED_FROM_OFFICIAL_EXAMS",
+   "sourceType": "official_exam",
+   "relatedDbUrl": "https://shinkyuu-db.vercel.app/past-exams/theme/rh-soron",
+   "relatedDbUrls": {
+    "theme": "https://shinkyuu-db.vercel.app/themes/rh-soron",
+    "pastExams": "https://shinkyuu-db.vercel.app/past-exams/theme/rh-soron",
+    "quiz": "https://shinkyuu-db.vercel.app/quiz/theme/rh-soron"
+   },
+   "updatedAt": "2026-10-11T09:56:26+09:00",
+   "publicationAllowed": true,
+   "warningNotes": [
+    "テーマ分類は当DB独自。出題数は「このテーマに分類した問題数」"
+   ]
+  },
+  {
+   "stableId": "theme:rh-nosocchu",
+   "title": "脳卒中のリハビリテーション",
+   "subject": "rehabilitation",
+   "subjectName": "リハビリテーション医学",
+   "examCount": 5,
+   "examRounds": [
+    30,
+    31,
+    32
+   ],
+   "byRound": {
+    "29": 0,
+    "30": 1,
+    "31": 2,
+    "32": 2,
+    "33": 0,
+    "34": 0
+   },
+   "recent3Count": 2,
+   "pastExamPracticeCount": 5,
+   "originalQuizCount": 0,
+   "standard2026Status": null,
+   "sourceVersion": "shinkyuu-db@2d05bdd",
+   "verifiedStatus": "COMPUTED_FROM_OFFICIAL_EXAMS",
+   "sourceType": "official_exam",
+   "relatedDbUrl": "https://shinkyuu-db.vercel.app/past-exams/theme/rh-nosocchu",
+   "relatedDbUrls": {
+    "theme": "https://shinkyuu-db.vercel.app/themes/rh-nosocchu",
+    "pastExams": "https://shinkyuu-db.vercel.app/past-exams/theme/rh-nosocchu"
+   },
+   "updatedAt": "2026-10-11T09:56:26+09:00",
+   "publicationAllowed": true,
+   "warningNotes": [
+    "テーマ分類は当DB独自。出題数は「このテーマに分類した問題数」"
+   ]
+  },
+  {
+   "stableId": "theme:rh-sekizui",
+   "title": "脊髄損傷のリハビリテーション",
+   "subject": "rehabilitation",
+   "subjectName": "リハビリテーション医学",
+   "examCount": 8,
+   "examRounds": [
+    29,
+    30,
+    31,
+    32,
+    33,
+    34
+   ],
+   "byRound": {
+    "29": 3,
+    "30": 1,
+    "31": 1,
+    "32": 1,
+    "33": 1,
+    "34": 1
+   },
+   "recent3Count": 3,
+   "pastExamPracticeCount": 8,
+   "originalQuizCount": 1,
+   "standard2026Status": null,
+   "sourceVersion": "shinkyuu-db@2d05bdd",
+   "verifiedStatus": "COMPUTED_FROM_OFFICIAL_EXAMS",
+   "sourceType": "official_exam",
+   "relatedDbUrl": "https://shinkyuu-db.vercel.app/past-exams/theme/rh-sekizui",
+   "relatedDbUrls": {
+    "theme": "https://shinkyuu-db.vercel.app/themes/rh-sekizui",
+    "pastExams": "https://shinkyuu-db.vercel.app/past-exams/theme/rh-sekizui",
+    "quiz": "https://shinkyuu-db.vercel.app/quiz/theme/rh-sekizui"
+   },
+   "updatedAt": "2026-10-11T09:56:26+09:00",
+   "publicationAllowed": true,
+   "warningNotes": [
+    "テーマ分類は当DB独自。出題数は「このテーマに分類した問題数」"
+   ]
+  },
+  {
+   "stableId": "theme:rh-noseimahi",
+   "title": "脳性麻痺のリハビリテーション",
+   "subject": "rehabilitation",
+   "subjectName": "リハビリテーション医学",
+   "examCount": 5,
+   "examRounds": [
+    29,
+    30,
+    31,
+    32,
+    33
+   ],
+   "byRound": {
+    "29": 1,
+    "30": 1,
+    "31": 1,
+    "32": 1,
+    "33": 1,
+    "34": 0
+   },
+   "recent3Count": 2,
+   "pastExamPracticeCount": 5,
+   "originalQuizCount": 1,
+   "standard2026Status": null,
+   "sourceVersion": "shinkyuu-db@2d05bdd",
+   "verifiedStatus": "COMPUTED_FROM_OFFICIAL_EXAMS",
+   "sourceType": "official_exam",
+   "relatedDbUrl": "https://shinkyuu-db.vercel.app/past-exams/theme/rh-noseimahi",
+   "relatedDbUrls": {
+    "theme": "https://shinkyuu-db.vercel.app/themes/rh-noseimahi",
+    "pastExams": "https://shinkyuu-db.vercel.app/past-exams/theme/rh-noseimahi",
+    "quiz": "https://shinkyuu-db.vercel.app/quiz/theme/rh-noseimahi"
+   },
+   "updatedAt": "2026-10-11T09:56:26+09:00",
+   "publicationAllowed": true,
+   "warningNotes": [
+    "テーマ分類は当DB独自。出題数は「このテーマに分類した問題数」"
+   ]
+  },
+  {
+   "stableId": "theme:rh-shinkei-undoki",
+   "title": "神経・運動器疾患のリハビリテーション",
+   "subject": "rehabilitation",
+   "subjectName": "リハビリテーション医学",
+   "examCount": 13,
+   "examRounds": [
+    29,
+    30,
+    31,
+    32,
+    33,
+    34
+   ],
+   "byRound": {
+    "29": 2,
+    "30": 2,
+    "31": 2,
+    "32": 2,
+    "33": 2,
+    "34": 3
+   },
+   "recent3Count": 7,
+   "pastExamPracticeCount": 13,
+   "originalQuizCount": 2,
+   "standard2026Status": null,
+   "sourceVersion": "shinkyuu-db@2d05bdd",
+   "verifiedStatus": "COMPUTED_FROM_OFFICIAL_EXAMS",
+   "sourceType": "official_exam",
+   "relatedDbUrl": "https://shinkyuu-db.vercel.app/past-exams/theme/rh-shinkei-undoki",
+   "relatedDbUrls": {
+    "theme": "https://shinkyuu-db.vercel.app/themes/rh-shinkei-undoki",
+    "pastExams": "https://shinkyuu-db.vercel.app/past-exams/theme/rh-shinkei-undoki",
+    "quiz": "https://shinkyuu-db.vercel.app/quiz/theme/rh-shinkei-undoki"
+   },
+   "updatedAt": "2026-10-11T09:56:26+09:00",
+   "publicationAllowed": true,
+   "warningNotes": [
+    "テーマ分類は当DB独自。出題数は「このテーマに分類した問題数」"
+   ]
+  },
+  {
+   "stableId": "theme:rh-engo-shogai",
+   "title": "摂食嚥下障害・言語障害・高次脳機能障害",
+   "subject": "rehabilitation",
+   "subjectName": "リハビリテーション医学",
+   "examCount": 6,
+   "examRounds": [
+    29,
+    30,
+    32,
+    33,
+    34
+   ],
+   "byRound": {
+    "29": 2,
+    "30": 1,
+    "31": 0,
+    "32": 1,
+    "33": 1,
+    "34": 1
+   },
+   "recent3Count": 3,
+   "pastExamPracticeCount": 6,
+   "originalQuizCount": 1,
+   "standard2026Status": null,
+   "sourceVersion": "shinkyuu-db@2d05bdd",
+   "verifiedStatus": "COMPUTED_FROM_OFFICIAL_EXAMS",
+   "sourceType": "official_exam",
+   "relatedDbUrl": "https://shinkyuu-db.vercel.app/past-exams/theme/rh-engo-shogai",
+   "relatedDbUrls": {
+    "theme": "https://shinkyuu-db.vercel.app/themes/rh-engo-shogai",
+    "pastExams": "https://shinkyuu-db.vercel.app/past-exams/theme/rh-engo-shogai",
+    "quiz": "https://shinkyuu-db.vercel.app/quiz/theme/rh-engo-shogai"
+   },
+   "updatedAt": "2026-10-11T09:56:26+09:00",
+   "publicationAllowed": true,
+   "warningNotes": [
+    "テーマ分類は当DB独自。出題数は「このテーマに分類した問題数」"
+   ]
+  },
+  {
+   "stableId": "theme:rh-gishi-sogu",
+   "title": "義肢・装具・切断のリハビリテーション",
+   "subject": "rehabilitation",
+   "subjectName": "リハビリテーション医学",
+   "examCount": 6,
+   "examRounds": [
+    30,
+    31,
+    32,
+    34
+   ],
+   "byRound": {
+    "29": 0,
+    "30": 2,
+    "31": 1,
+    "32": 1,
+    "33": 0,
+    "34": 2
+   },
+   "recent3Count": 3,
+   "pastExamPracticeCount": 6,
+   "originalQuizCount": 1,
+   "standard2026Status": null,
+   "sourceVersion": "shinkyuu-db@2d05bdd",
+   "verifiedStatus": "COMPUTED_FROM_OFFICIAL_EXAMS",
+   "sourceType": "official_exam",
+   "relatedDbUrl": "https://shinkyuu-db.vercel.app/past-exams/theme/rh-gishi-sogu",
+   "relatedDbUrls": {
+    "theme": "https://shinkyuu-db.vercel.app/themes/rh-gishi-sogu",
+    "pastExams": "https://shinkyuu-db.vercel.app/past-exams/theme/rh-gishi-sogu",
+    "quiz": "https://shinkyuu-db.vercel.app/quiz/theme/rh-gishi-sogu"
+   },
+   "updatedAt": "2026-10-11T09:56:26+09:00",
+   "publicationAllowed": true,
+   "warningNotes": [
+    "テーマ分類は当DB独自。出題数は「このテーマに分類した問題数」"
+   ]
+  },
+  {
+   "stableId": "theme:rh-haiyo-frailty",
+   "title": "廃用症候群・フレイル・サルコペニア",
+   "subject": "rehabilitation",
+   "subjectName": "リハビリテーション医学",
+   "examCount": 3,
+   "examRounds": [
+    29,
+    33,
+    34
+   ],
+   "byRound": {
+    "29": 1,
+    "30": 0,
+    "31": 0,
+    "32": 0,
+    "33": 1,
+    "34": 1
+   },
+   "recent3Count": 2,
+   "pastExamPracticeCount": 3,
+   "originalQuizCount": 0,
+   "standard2026Status": "expanded",
+   "sourceVersion": "shinkyuu-db@2d05bdd",
+   "verifiedStatus": "COMPUTED_FROM_OFFICIAL_EXAMS",
+   "sourceType": "official_exam",
+   "relatedDbUrl": "https://shinkyuu-db.vercel.app/past-exams/theme/rh-haiyo-frailty",
+   "relatedDbUrls": {
+    "theme": "https://shinkyuu-db.vercel.app/themes/rh-haiyo-frailty",
+    "pastExams": "https://shinkyuu-db.vercel.app/past-exams/theme/rh-haiyo-frailty"
+   },
+   "updatedAt": "2026-10-11T09:56:26+09:00",
+   "publicationAllowed": true,
+   "warningNotes": [
+    "テーマ分類は当DB独自。出題数は「このテーマに分類した問題数」",
+    "2026年版出題基準の変更区分は公式の事実。第35回で出ることを示すものではない"
+   ]
+  },
+  {
+   "stableId": "theme:rh-naibu-shogai",
+   "title": "内部障害のリハビリテーション（心臓・呼吸）",
+   "subject": "rehabilitation",
+   "subjectName": "リハビリテーション医学",
+   "examCount": 8,
+   "examRounds": [
+    29,
+    30,
+    31,
+    32,
+    33,
+    34
+   ],
+   "byRound": {
+    "29": 2,
+    "30": 1,
+    "31": 1,
+    "32": 1,
+    "33": 2,
+    "34": 1
+   },
+   "recent3Count": 4,
+   "pastExamPracticeCount": 8,
+   "originalQuizCount": 5,
+   "standard2026Status": "expanded",
+   "sourceVersion": "shinkyuu-db@2d05bdd",
+   "verifiedStatus": "COMPUTED_FROM_OFFICIAL_EXAMS",
+   "sourceType": "official_exam",
+   "relatedDbUrl": "https://shinkyuu-db.vercel.app/past-exams/theme/rh-naibu-shogai",
+   "relatedDbUrls": {
+    "theme": "https://shinkyuu-db.vercel.app/themes/rh-naibu-shogai",
+    "pastExams": "https://shinkyuu-db.vercel.app/past-exams/theme/rh-naibu-shogai",
+    "quiz": "https://shinkyuu-db.vercel.app/quiz/theme/rh-naibu-shogai"
+   },
+   "updatedAt": "2026-10-11T09:56:26+09:00",
+   "publicationAllowed": true,
+   "warningNotes": [
+    "テーマ分類は当DB独自。出題数は「このテーマに分類した問題数」",
+    "2026年版出題基準の変更区分は公式の事実。第35回で出ることを示すものではない"
+   ]
+  },
+  {
+   "stableId": "theme:rh-team",
+   "title": "リハビリテーションチームと多職種連携・歩行分析",
+   "subject": "rehabilitation",
+   "subjectName": "リハビリテーション医学",
+   "examCount": 19,
+   "examRounds": [
+    29,
+    30,
+    31,
+    32,
+    33,
+    34
+   ],
+   "byRound": {
+    "29": 3,
+    "30": 4,
+    "31": 4,
+    "32": 3,
+    "33": 2,
+    "34": 3
+   },
+   "recent3Count": 8,
+   "pastExamPracticeCount": 19,
+   "originalQuizCount": 2,
+   "standard2026Status": null,
+   "sourceVersion": "shinkyuu-db@2d05bdd",
+   "verifiedStatus": "COMPUTED_FROM_OFFICIAL_EXAMS",
+   "sourceType": "official_exam",
+   "relatedDbUrl": "https://shinkyuu-db.vercel.app/past-exams/theme/rh-team",
+   "relatedDbUrls": {
+    "theme": "https://shinkyuu-db.vercel.app/themes/rh-team",
+    "pastExams": "https://shinkyuu-db.vercel.app/past-exams/theme/rh-team",
+    "quiz": "https://shinkyuu-db.vercel.app/quiz/theme/rh-team"
+   },
+   "updatedAt": "2026-10-11T09:56:26+09:00",
+   "publicationAllowed": true,
+   "warningNotes": [
+    "テーマ分類は当DB独自。出題数は「このテーマに分類した問題数」"
+   ]
+  },
+  {
+   "stableId": "theme:hy-ekigaku",
+   "title": "疫学・保健統計",
+   "subject": "hygiene",
+   "subjectName": "衛生学・公衆衛生学",
+   "examCount": 7,
+   "examRounds": [
+    29,
+    30,
+    31,
+    32,
+    33,
+    34
+   ],
+   "byRound": {
+    "29": 1,
+    "30": 1,
+    "31": 2,
+    "32": 1,
+    "33": 1,
+    "34": 1
+   },
+   "recent3Count": 3,
+   "pastExamPracticeCount": 7,
+   "originalQuizCount": 3,
+   "standard2026Status": null,
+   "sourceVersion": "shinkyuu-db@2d05bdd",
+   "verifiedStatus": "COMPUTED_FROM_OFFICIAL_EXAMS",
+   "sourceType": "official_exam",
+   "relatedDbUrl": "https://shinkyuu-db.vercel.app/past-exams/theme/hy-ekigaku",
+   "relatedDbUrls": {
+    "theme": "https://shinkyuu-db.vercel.app/themes/hy-ekigaku",
+    "pastExams": "https://shinkyuu-db.vercel.app/past-exams/theme/hy-ekigaku",
+    "quiz": "https://shinkyuu-db.vercel.app/quiz/theme/hy-ekigaku"
+   },
+   "updatedAt": "2026-10-11T09:56:26+09:00",
+   "publicationAllowed": true,
+   "warningNotes": [
+    "テーマ分類は当DB独自。出題数は「このテーマに分類した問題数」"
+   ]
+  },
+  {
+   "stableId": "theme:hy-kansen-yobo",
+   "title": "感染予防と消毒・滅菌",
+   "subject": "hygiene",
+   "subjectName": "衛生学・公衆衛生学",
+   "examCount": 4,
+   "examRounds": [
+    29,
+    32,
+    33
+   ],
+   "byRound": {
+    "29": 2,
+    "30": 0,
+    "31": 0,
+    "32": 1,
+    "33": 1,
+    "34": 0
+   },
+   "recent3Count": 2,
+   "pastExamPracticeCount": 4,
+   "originalQuizCount": 2,
+   "standard2026Status": null,
+   "sourceVersion": "shinkyuu-db@2d05bdd",
+   "verifiedStatus": "COMPUTED_FROM_OFFICIAL_EXAMS",
+   "sourceType": "official_exam",
+   "relatedDbUrl": "https://shinkyuu-db.vercel.app/past-exams/theme/hy-kansen-yobo",
+   "relatedDbUrls": {
+    "theme": "https://shinkyuu-db.vercel.app/themes/hy-kansen-yobo",
+    "pastExams": "https://shinkyuu-db.vercel.app/past-exams/theme/hy-kansen-yobo",
+    "quiz": "https://shinkyuu-db.vercel.app/quiz/theme/hy-kansen-yobo"
+   },
+   "updatedAt": "2026-10-11T09:56:26+09:00",
+   "publicationAllowed": true,
+   "warningNotes": [
+    "テーマ分類は当DB独自。出題数は「このテーマに分類した問題数」"
+   ]
+  },
+  {
+   "stableId": "theme:hy-yobo-danal",
+   "title": "疾病予防の段階と健康指標",
+   "subject": "hygiene",
+   "subjectName": "衛生学・公衆衛生学",
+   "examCount": 4,
+   "examRounds": [
+    30,
+    31,
+    32,
+    33
+   ],
+   "byRound": {
+    "29": 0,
+    "30": 1,
+    "31": 1,
+    "32": 1,
+    "33": 1,
+    "34": 0
+   },
+   "recent3Count": 2,
+   "pastExamPracticeCount": 4,
+   "originalQuizCount": 2,
+   "standard2026Status": null,
+   "sourceVersion": "shinkyuu-db@2d05bdd",
+   "verifiedStatus": "COMPUTED_FROM_OFFICIAL_EXAMS",
+   "sourceType": "official_exam",
+   "relatedDbUrl": "https://shinkyuu-db.vercel.app/past-exams/theme/hy-yobo-danal",
+   "relatedDbUrls": {
+    "theme": "https://shinkyuu-db.vercel.app/themes/hy-yobo-danal",
+    "pastExams": "https://shinkyuu-db.vercel.app/past-exams/theme/hy-yobo-danal",
+    "quiz": "https://shinkyuu-db.vercel.app/quiz/theme/hy-yobo-danal"
+   },
+   "updatedAt": "2026-10-11T09:56:26+09:00",
+   "publicationAllowed": true,
+   "warningNotes": [
+    "テーマ分類は当DB独自。出題数は「このテーマに分類した問題数」"
+   ]
+  },
+  {
+   "stableId": "theme:hy-sangyo-hoken",
+   "title": "産業保健（労働衛生の3管理）",
+   "subject": "hygiene",
+   "subjectName": "衛生学・公衆衛生学",
+   "examCount": 2,
+   "examRounds": [
+    30,
+    33
+   ],
+   "byRound": {
+    "29": 0,
+    "30": 1,
+    "31": 0,
+    "32": 0,
+    "33": 1,
+    "34": 0
+   },
+   "recent3Count": 1,
+   "pastExamPracticeCount": 2,
+   "originalQuizCount": 1,
+   "standard2026Status": null,
+   "sourceVersion": "shinkyuu-db@2d05bdd",
+   "verifiedStatus": "COMPUTED_FROM_OFFICIAL_EXAMS",
+   "sourceType": "official_exam",
+   "relatedDbUrl": "https://shinkyuu-db.vercel.app/past-exams/theme/hy-sangyo-hoken",
+   "relatedDbUrls": {
+    "theme": "https://shinkyuu-db.vercel.app/themes/hy-sangyo-hoken",
+    "pastExams": "https://shinkyuu-db.vercel.app/past-exams/theme/hy-sangyo-hoken",
+    "quiz": "https://shinkyuu-db.vercel.app/quiz/theme/hy-sangyo-hoken"
+   },
+   "updatedAt": "2026-10-11T09:56:26+09:00",
+   "publicationAllowed": true,
+   "warningNotes": [
+    "テーマ分類は当DB独自。出題数は「このテーマに分類した問題数」"
+   ]
+  },
+  {
+   "stableId": "theme:hy-gakko-hoken",
+   "title": "学校保健",
+   "subject": "hygiene",
+   "subjectName": "衛生学・公衆衛生学",
+   "examCount": 3,
+   "examRounds": [
+    30,
+    33,
+    34
+   ],
+   "byRound": {
+    "29": 0,
+    "30": 1,
+    "31": 0,
+    "32": 0,
+    "33": 1,
+    "34": 1
+   },
+   "recent3Count": 2,
+   "pastExamPracticeCount": 3,
+   "originalQuizCount": 0,
+   "standard2026Status": null,
+   "sourceVersion": "shinkyuu-db@2d05bdd",
+   "verifiedStatus": "COMPUTED_FROM_OFFICIAL_EXAMS",
+   "sourceType": "official_exam",
+   "relatedDbUrl": "https://shinkyuu-db.vercel.app/past-exams/theme/hy-gakko-hoken",
+   "relatedDbUrls": {
+    "theme": "https://shinkyuu-db.vercel.app/themes/hy-gakko-hoken",
+    "pastExams": "https://shinkyuu-db.vercel.app/past-exams/theme/hy-gakko-hoken"
+   },
+   "updatedAt": "2026-10-11T09:56:26+09:00",
+   "publicationAllowed": true,
+   "warningNotes": [
+    "テーマ分類は当DB独自。出題数は「このテーマに分類した問題数」"
+   ]
+  },
+  {
+   "stableId": "theme:hy-boshi-hoken",
+   "title": "母子保健・環境保健",
+   "subject": "hygiene",
+   "subjectName": "衛生学・公衆衛生学",
+   "examCount": 4,
+   "examRounds": [
+    29,
+    31,
+    34
+   ],
+   "byRound": {
+    "29": 2,
+    "30": 0,
+    "31": 1,
+    "32": 0,
+    "33": 0,
+    "34": 1
+   },
+   "recent3Count": 1,
+   "pastExamPracticeCount": 4,
+   "originalQuizCount": 2,
+   "standard2026Status": null,
+   "sourceVersion": "shinkyuu-db@2d05bdd",
+   "verifiedStatus": "COMPUTED_FROM_OFFICIAL_EXAMS",
+   "sourceType": "official_exam",
+   "relatedDbUrl": "https://shinkyuu-db.vercel.app/past-exams/theme/hy-boshi-hoken",
+   "relatedDbUrls": {
+    "theme": "https://shinkyuu-db.vercel.app/themes/hy-boshi-hoken",
+    "pastExams": "https://shinkyuu-db.vercel.app/past-exams/theme/hy-boshi-hoken",
+    "quiz": "https://shinkyuu-db.vercel.app/quiz/theme/hy-boshi-hoken"
+   },
+   "updatedAt": "2026-10-11T09:56:26+09:00",
+   "publicationAllowed": true,
+   "warningNotes": [
+    "テーマ分類は当DB独自。出題数は「このテーマに分類した問題数」"
+   ]
+  },
+  {
+   "stableId": "theme:rg-menkyo",
+   "title": "あはき法：免許と名簿",
+   "subject": "regulations",
+   "subjectName": "関係法規",
+   "examCount": 5,
+   "examRounds": [
+    29,
+    31,
+    32,
+    33,
+    34
+   ],
+   "byRound": {
+    "29": 1,
+    "30": 0,
+    "31": 1,
+    "32": 1,
+    "33": 1,
+    "34": 1
+   },
+   "recent3Count": 3,
+   "pastExamPracticeCount": 5,
+   "originalQuizCount": 3,
+   "standard2026Status": null,
+   "sourceVersion": "shinkyuu-db@2d05bdd",
+   "verifiedStatus": "COMPUTED_FROM_OFFICIAL_EXAMS",
+   "sourceType": "official_exam",
+   "relatedDbUrl": "https://shinkyuu-db.vercel.app/past-exams/theme/rg-menkyo",
+   "relatedDbUrls": {
+    "theme": "https://shinkyuu-db.vercel.app/themes/rg-menkyo",
+    "pastExams": "https://shinkyuu-db.vercel.app/past-exams/theme/rg-menkyo",
+    "quiz": "https://shinkyuu-db.vercel.app/quiz/theme/rg-menkyo"
+   },
+   "updatedAt": "2026-10-11T09:56:26+09:00",
+   "publicationAllowed": true,
+   "warningNotes": [
+    "テーマ分類は当DB独自。出題数は「このテーマに分類した問題数」"
+   ]
+  },
+  {
+   "stableId": "theme:rg-seijutsujo",
+   "title": "施術所の届出と構造設備基準",
+   "subject": "regulations",
+   "subjectName": "関係法規",
+   "examCount": 7,
+   "examRounds": [
+    29,
+    30,
+    31,
+    32,
+    33,
+    34
+   ],
+   "byRound": {
+    "29": 1,
+    "30": 1,
+    "31": 1,
+    "32": 2,
+    "33": 1,
+    "34": 1
+   },
+   "recent3Count": 4,
+   "pastExamPracticeCount": 7,
+   "originalQuizCount": 2,
+   "standard2026Status": null,
+   "sourceVersion": "shinkyuu-db@2d05bdd",
+   "verifiedStatus": "COMPUTED_FROM_OFFICIAL_EXAMS",
+   "sourceType": "official_exam",
+   "relatedDbUrl": "https://shinkyuu-db.vercel.app/past-exams/theme/rg-seijutsujo",
+   "relatedDbUrls": {
+    "theme": "https://shinkyuu-db.vercel.app/themes/rg-seijutsujo",
+    "pastExams": "https://shinkyuu-db.vercel.app/past-exams/theme/rg-seijutsujo",
+    "quiz": "https://shinkyuu-db.vercel.app/quiz/theme/rg-seijutsujo"
+   },
+   "updatedAt": "2026-10-11T09:56:26+09:00",
+   "publicationAllowed": true,
+   "warningNotes": [
+    "テーマ分類は当DB独自。出題数は「このテーマに分類した問題数」"
+   ]
+  },
+  {
+   "stableId": "theme:rg-kokoku",
+   "title": "施術所の広告規制",
+   "subject": "regulations",
+   "subjectName": "関係法規",
+   "examCount": 2,
+   "examRounds": [
+    30,
+    32
+   ],
+   "byRound": {
+    "29": 0,
+    "30": 1,
+    "31": 0,
+    "32": 1,
+    "33": 0,
+    "34": 0
+   },
+   "recent3Count": 1,
+   "pastExamPracticeCount": 2,
+   "originalQuizCount": 1,
+   "standard2026Status": null,
+   "sourceVersion": "shinkyuu-db@2d05bdd",
+   "verifiedStatus": "COMPUTED_FROM_OFFICIAL_EXAMS",
+   "sourceType": "official_exam",
+   "relatedDbUrl": "https://shinkyuu-db.vercel.app/past-exams/theme/rg-kokoku",
+   "relatedDbUrls": {
+    "theme": "https://shinkyuu-db.vercel.app/themes/rg-kokoku",
+    "pastExams": "https://shinkyuu-db.vercel.app/past-exams/theme/rg-kokoku",
+    "quiz": "https://shinkyuu-db.vercel.app/quiz/theme/rg-kokoku"
+   },
+   "updatedAt": "2026-10-11T09:56:26+09:00",
+   "publicationAllowed": true,
+   "warningNotes": [
+    "テーマ分類は当DB独自。出題数は「このテーマに分類した問題数」"
+   ]
+  },
+  {
+   "stableId": "theme:rg-bassoku",
+   "title": "罰則規定と業務上の義務",
+   "subject": "regulations",
+   "subjectName": "関係法規",
+   "examCount": 4,
+   "examRounds": [
+    29,
+    30,
+    31,
+    34
+   ],
+   "byRound": {
+    "29": 1,
+    "30": 1,
+    "31": 1,
+    "32": 0,
+    "33": 0,
+    "34": 1
+   },
+   "recent3Count": 1,
+   "pastExamPracticeCount": 4,
+   "originalQuizCount": 2,
+   "standard2026Status": null,
+   "sourceVersion": "shinkyuu-db@2d05bdd",
+   "verifiedStatus": "COMPUTED_FROM_OFFICIAL_EXAMS",
+   "sourceType": "official_exam",
+   "relatedDbUrl": "https://shinkyuu-db.vercel.app/past-exams/theme/rg-bassoku",
+   "relatedDbUrls": {
+    "theme": "https://shinkyuu-db.vercel.app/themes/rg-bassoku",
+    "pastExams": "https://shinkyuu-db.vercel.app/past-exams/theme/rg-bassoku",
+    "quiz": "https://shinkyuu-db.vercel.app/quiz/theme/rg-bassoku"
+   },
+   "updatedAt": "2026-10-11T09:56:26+09:00",
+   "publicationAllowed": true,
+   "warningNotes": [
+    "テーマ分類は当DB独自。出題数は「このテーマに分類した問題数」"
+   ]
+  },
+  {
+   "stableId": "theme:rg-iryo-kanren",
+   "title": "医療関係法規（医療法・他職種法・保健所）",
+   "subject": "regulations",
+   "subjectName": "関係法規",
+   "examCount": 4,
+   "examRounds": [
+    29,
+    31,
+    33,
+    34
+   ],
+   "byRound": {
+    "29": 1,
+    "30": 0,
+    "31": 1,
+    "32": 0,
+    "33": 1,
+    "34": 1
+   },
+   "recent3Count": 2,
+   "pastExamPracticeCount": 4,
+   "originalQuizCount": 1,
+   "standard2026Status": null,
+   "sourceVersion": "shinkyuu-db@2d05bdd",
+   "verifiedStatus": "COMPUTED_FROM_OFFICIAL_EXAMS",
+   "sourceType": "official_exam",
+   "relatedDbUrl": "https://shinkyuu-db.vercel.app/past-exams/theme/rg-iryo-kanren",
+   "relatedDbUrls": {
+    "theme": "https://shinkyuu-db.vercel.app/themes/rg-iryo-kanren",
+    "pastExams": "https://shinkyuu-db.vercel.app/past-exams/theme/rg-iryo-kanren",
+    "quiz": "https://shinkyuu-db.vercel.app/quiz/theme/rg-iryo-kanren"
+   },
+   "updatedAt": "2026-10-11T09:56:26+09:00",
+   "publicationAllowed": true,
+   "warningNotes": [
+    "テーマ分類は当DB独自。出題数は「このテーマに分類した問題数」"
+   ]
+  },
+  {
+   "stableId": "theme:ph-shinkei-seiri",
+   "title": "神経の生理（膜電位・シナプス・脊髄反射・脳波）",
+   "subject": "physiology",
+   "subjectName": "生理学",
+   "examCount": 10,
+   "examRounds": [
+    29,
+    30,
+    31,
+    32,
+    33,
+    34
+   ],
+   "byRound": {
+    "29": 1,
+    "30": 2,
+    "31": 1,
+    "32": 2,
+    "33": 2,
+    "34": 2
+   },
+   "recent3Count": 6,
+   "pastExamPracticeCount": 10,
+   "originalQuizCount": 1,
+   "standard2026Status": null,
+   "sourceVersion": "shinkyuu-db@2d05bdd",
+   "verifiedStatus": "COMPUTED_FROM_OFFICIAL_EXAMS",
+   "sourceType": "official_exam",
+   "relatedDbUrl": "https://shinkyuu-db.vercel.app/past-exams/theme/ph-shinkei-seiri",
+   "relatedDbUrls": {
+    "theme": "https://shinkyuu-db.vercel.app/themes/ph-shinkei-seiri",
+    "pastExams": "https://shinkyuu-db.vercel.app/past-exams/theme/ph-shinkei-seiri",
+    "quiz": "https://shinkyuu-db.vercel.app/quiz/theme/ph-shinkei-seiri"
+   },
+   "updatedAt": "2026-10-11T09:56:26+09:00",
+   "publicationAllowed": true,
+   "warningNotes": [
+    "テーマ分類は当DB独自。出題数は「このテーマに分類した問題数」"
+   ]
+  },
+  {
+   "stableId": "theme:ph-kinshukushuku",
+   "title": "筋の生理・筋収縮のしくみ",
+   "subject": "physiology",
+   "subjectName": "生理学",
+   "examCount": 4,
+   "examRounds": [
+    29,
+    30,
+    31,
+    32
+   ],
+   "byRound": {
+    "29": 1,
+    "30": 1,
+    "31": 1,
+    "32": 1,
+    "33": 0,
+    "34": 0
+   },
+   "recent3Count": 1,
+   "pastExamPracticeCount": 4,
+   "originalQuizCount": 0,
+   "standard2026Status": null,
+   "sourceVersion": "shinkyuu-db@2d05bdd",
+   "verifiedStatus": "COMPUTED_FROM_OFFICIAL_EXAMS",
+   "sourceType": "official_exam",
+   "relatedDbUrl": "https://shinkyuu-db.vercel.app/past-exams/theme/ph-kinshukushuku",
+   "relatedDbUrls": {
+    "theme": "https://shinkyuu-db.vercel.app/themes/ph-kinshukushuku",
+    "pastExams": "https://shinkyuu-db.vercel.app/past-exams/theme/ph-kinshukushuku"
+   },
+   "updatedAt": "2026-10-11T09:56:26+09:00",
+   "publicationAllowed": true,
+   "warningNotes": [
+    "テーマ分類は当DB独自。出題数は「このテーマに分類した問題数」"
+   ]
+  },
+  {
+   "stableId": "theme:ph-junkan-seiri",
+   "title": "循環の生理（刺激伝導系・血圧調節・血液）",
+   "subject": "physiology",
+   "subjectName": "生理学",
+   "examCount": 6,
+   "examRounds": [
+    30,
+    31,
+    32,
+    33,
+    34
+   ],
+   "byRound": {
+    "29": 0,
+    "30": 1,
+    "31": 1,
+    "32": 1,
+    "33": 2,
+    "34": 1
+   },
+   "recent3Count": 4,
+   "pastExamPracticeCount": 6,
+   "originalQuizCount": 3,
+   "standard2026Status": null,
+   "sourceVersion": "shinkyuu-db@2d05bdd",
+   "verifiedStatus": "COMPUTED_FROM_OFFICIAL_EXAMS",
+   "sourceType": "official_exam",
+   "relatedDbUrl": "https://shinkyuu-db.vercel.app/past-exams/theme/ph-junkan-seiri",
+   "relatedDbUrls": {
+    "theme": "https://shinkyuu-db.vercel.app/themes/ph-junkan-seiri",
+    "pastExams": "https://shinkyuu-db.vercel.app/past-exams/theme/ph-junkan-seiri",
+    "quiz": "https://shinkyuu-db.vercel.app/quiz/theme/ph-junkan-seiri"
+   },
+   "updatedAt": "2026-10-11T09:56:26+09:00",
+   "publicationAllowed": true,
+   "warningNotes": [
+    "テーマ分類は当DB独自。出題数は「このテーマに分類した問題数」"
+   ]
+  },
+  {
+   "stableId": "theme:ph-kokyu-seiri",
+   "title": "呼吸の生理",
+   "subject": "physiology",
+   "subjectName": "生理学",
+   "examCount": 3,
+   "examRounds": [
+    32,
+    33,
+    34
+   ],
+   "byRound": {
+    "29": 0,
+    "30": 0,
+    "31": 0,
+    "32": 1,
+    "33": 1,
+    "34": 1
+   },
+   "recent3Count": 3,
+   "pastExamPracticeCount": 3,
+   "originalQuizCount": 0,
+   "standard2026Status": null,
+   "sourceVersion": "shinkyuu-db@2d05bdd",
+   "verifiedStatus": "COMPUTED_FROM_OFFICIAL_EXAMS",
+   "sourceType": "official_exam",
+   "relatedDbUrl": "https://shinkyuu-db.vercel.app/past-exams/theme/ph-kokyu-seiri",
+   "relatedDbUrls": {
+    "theme": "https://shinkyuu-db.vercel.app/themes/ph-kokyu-seiri",
+    "pastExams": "https://shinkyuu-db.vercel.app/past-exams/theme/ph-kokyu-seiri"
+   },
+   "updatedAt": "2026-10-11T09:56:26+09:00",
+   "publicationAllowed": true,
+   "warningNotes": [
+    "テーマ分類は当DB独自。出題数は「このテーマに分類した問題数」"
+   ]
+  },
+  {
+   "stableId": "theme:ph-shokaku-seiri",
+   "title": "消化・吸収の生理",
+   "subject": "physiology",
+   "subjectName": "生理学",
+   "examCount": 5,
+   "examRounds": [
+    29,
+    30,
+    31,
+    33,
+    34
+   ],
+   "byRound": {
+    "29": 1,
+    "30": 1,
+    "31": 1,
+    "32": 0,
+    "33": 1,
+    "34": 1
+   },
+   "recent3Count": 2,
+   "pastExamPracticeCount": 5,
+   "originalQuizCount": 0,
+   "standard2026Status": null,
+   "sourceVersion": "shinkyuu-db@2d05bdd",
+   "verifiedStatus": "COMPUTED_FROM_OFFICIAL_EXAMS",
+   "sourceType": "official_exam",
+   "relatedDbUrl": "https://shinkyuu-db.vercel.app/past-exams/theme/ph-shokaku-seiri",
+   "relatedDbUrls": {
+    "theme": "https://shinkyuu-db.vercel.app/themes/ph-shokaku-seiri",
+    "pastExams": "https://shinkyuu-db.vercel.app/past-exams/theme/ph-shokaku-seiri"
+   },
+   "updatedAt": "2026-10-11T09:56:26+09:00",
+   "publicationAllowed": true,
+   "warningNotes": [
+    "テーマ分類は当DB独自。出題数は「このテーマに分類した問題数」"
+   ]
+  },
+  {
+   "stableId": "theme:ph-naibunpi-seiri",
+   "title": "内分泌の生理（ホルモンの分類・作用・分泌調節）",
+   "subject": "physiology",
+   "subjectName": "生理学",
+   "examCount": 9,
+   "examRounds": [
+    29,
+    30,
+    31,
+    32,
+    33,
+    34
+   ],
+   "byRound": {
+    "29": 2,
+    "30": 1,
+    "31": 2,
+    "32": 1,
+    "33": 1,
+    "34": 2
+   },
+   "recent3Count": 4,
+   "pastExamPracticeCount": 9,
+   "originalQuizCount": 2,
+   "standard2026Status": null,
+   "sourceVersion": "shinkyuu-db@2d05bdd",
+   "verifiedStatus": "COMPUTED_FROM_OFFICIAL_EXAMS",
+   "sourceType": "official_exam",
+   "relatedDbUrl": "https://shinkyuu-db.vercel.app/past-exams/theme/ph-naibunpi-seiri",
+   "relatedDbUrls": {
+    "theme": "https://shinkyuu-db.vercel.app/themes/ph-naibunpi-seiri",
+    "pastExams": "https://shinkyuu-db.vercel.app/past-exams/theme/ph-naibunpi-seiri",
+    "quiz": "https://shinkyuu-db.vercel.app/quiz/theme/ph-naibunpi-seiri"
+   },
+   "updatedAt": "2026-10-11T09:56:26+09:00",
+   "publicationAllowed": true,
+   "warningNotes": [
+    "テーマ分類は当DB独自。出題数は「このテーマに分類した問題数」"
+   ]
+  },
+  {
+   "stableId": "theme:ph-taion-taisha",
+   "title": "体温調節・代謝・栄養素の生理",
+   "subject": "physiology",
+   "subjectName": "生理学",
+   "examCount": 5,
+   "examRounds": [
+    29,
+    30,
+    31,
+    32,
+    34
+   ],
+   "byRound": {
+    "29": 1,
+    "30": 1,
+    "31": 1,
+    "32": 1,
+    "33": 0,
+    "34": 1
+   },
+   "recent3Count": 2,
+   "pastExamPracticeCount": 5,
+   "originalQuizCount": 1,
+   "standard2026Status": null,
+   "sourceVersion": "shinkyuu-db@2d05bdd",
+   "verifiedStatus": "COMPUTED_FROM_OFFICIAL_EXAMS",
+   "sourceType": "official_exam",
+   "relatedDbUrl": "https://shinkyuu-db.vercel.app/past-exams/theme/ph-taion-taisha",
+   "relatedDbUrls": {
+    "theme": "https://shinkyuu-db.vercel.app/themes/ph-taion-taisha",
+    "pastExams": "https://shinkyuu-db.vercel.app/past-exams/theme/ph-taion-taisha",
+    "quiz": "https://shinkyuu-db.vercel.app/quiz/theme/ph-taion-taisha"
+   },
+   "updatedAt": "2026-10-11T09:56:26+09:00",
+   "publicationAllowed": true,
+   "warningNotes": [
+    "テーマ分類は当DB独自。出題数は「このテーマに分類した問題数」"
+   ]
+  },
+  {
+   "stableId": "theme:ph-jin-taieki-meneki",
+   "title": "腎・体液・免疫の生理",
+   "subject": "physiology",
+   "subjectName": "生理学",
+   "examCount": 5,
+   "examRounds": [
+    29,
+    31,
+    33,
+    34
+   ],
+   "byRound": {
+    "29": 1,
+    "30": 0,
+    "31": 2,
+    "32": 0,
+    "33": 1,
+    "34": 1
+   },
+   "recent3Count": 2,
+   "pastExamPracticeCount": 5,
+   "originalQuizCount": 1,
+   "standard2026Status": null,
+   "sourceVersion": "shinkyuu-db@2d05bdd",
+   "verifiedStatus": "COMPUTED_FROM_OFFICIAL_EXAMS",
+   "sourceType": "official_exam",
+   "relatedDbUrl": "https://shinkyuu-db.vercel.app/past-exams/theme/ph-jin-taieki-meneki",
+   "relatedDbUrls": {
+    "theme": "https://shinkyuu-db.vercel.app/themes/ph-jin-taieki-meneki",
+    "pastExams": "https://shinkyuu-db.vercel.app/past-exams/theme/ph-jin-taieki-meneki",
+    "quiz": "https://shinkyuu-db.vercel.app/quiz/theme/ph-jin-taieki-meneki"
+   },
+   "updatedAt": "2026-10-11T09:56:26+09:00",
+   "publicationAllowed": true,
+   "warningNotes": [
+    "テーマ分類は当DB独自。出題数は「このテーマに分類した問題数」"
+   ]
+  },
+  {
+   "stableId": "theme:ph-saibo-idenshi",
+   "title": "細胞の生理と遺伝子",
+   "subject": "physiology",
+   "subjectName": "生理学",
+   "examCount": 5,
+   "examRounds": [
+    29,
+    30,
+    32,
+    33
+   ],
+   "byRound": {
+    "29": 1,
+    "30": 2,
+    "31": 0,
+    "32": 1,
+    "33": 1,
+    "34": 0
+   },
+   "recent3Count": 2,
+   "pastExamPracticeCount": 5,
+   "originalQuizCount": 0,
+   "standard2026Status": null,
+   "sourceVersion": "shinkyuu-db@2d05bdd",
+   "verifiedStatus": "COMPUTED_FROM_OFFICIAL_EXAMS",
+   "sourceType": "official_exam",
+   "relatedDbUrl": "https://shinkyuu-db.vercel.app/past-exams/theme/ph-saibo-idenshi",
+   "relatedDbUrls": {
+    "theme": "https://shinkyuu-db.vercel.app/themes/ph-saibo-idenshi",
+    "pastExams": "https://shinkyuu-db.vercel.app/past-exams/theme/ph-saibo-idenshi"
+   },
+   "updatedAt": "2026-10-11T09:56:26+09:00",
+   "publicationAllowed": true,
+   "warningNotes": [
+    "テーマ分類は当DB独自。出題数は「このテーマに分類した問題数」"
+   ]
+  },
+  {
+   "stableId": "theme:an-undoki",
+   "title": "運動器の解剖（骨・関節・筋・靭帯）",
+   "subject": "anatomy",
+   "subjectName": "解剖学",
+   "examCount": 14,
+   "examRounds": [
+    29,
+    30,
+    31,
+    32,
+    33
+   ],
+   "byRound": {
+    "29": 2,
+    "30": 3,
+    "31": 2,
+    "32": 4,
+    "33": 3,
+    "34": 0
+   },
+   "recent3Count": 7,
+   "pastExamPracticeCount": 14,
+   "originalQuizCount": 5,
+   "standard2026Status": null,
+   "sourceVersion": "shinkyuu-db@2d05bdd",
+   "verifiedStatus": "COMPUTED_FROM_OFFICIAL_EXAMS",
+   "sourceType": "official_exam",
+   "relatedDbUrl": "https://shinkyuu-db.vercel.app/past-exams/theme/an-undoki",
+   "relatedDbUrls": {
+    "theme": "https://shinkyuu-db.vercel.app/themes/an-undoki",
+    "pastExams": "https://shinkyuu-db.vercel.app/past-exams/theme/an-undoki",
+    "quiz": "https://shinkyuu-db.vercel.app/quiz/theme/an-undoki"
+   },
+   "updatedAt": "2026-10-11T09:56:26+09:00",
+   "publicationAllowed": true,
+   "warningNotes": [
+    "テーマ分類は当DB独自。出題数は「このテーマに分類した問題数」"
+   ]
+  },
+  {
+   "stableId": "theme:an-shinkei",
+   "title": "神経系の解剖（脳・脳神経・脊髄・伝導路）",
+   "subject": "anatomy",
+   "subjectName": "解剖学",
+   "examCount": 7,
+   "examRounds": [
+    29,
+    30,
+    32,
+    33,
+    34
+   ],
+   "byRound": {
+    "29": 1,
+    "30": 1,
+    "31": 0,
+    "32": 2,
+    "33": 2,
+    "34": 1
+   },
+   "recent3Count": 5,
+   "pastExamPracticeCount": 7,
+   "originalQuizCount": 1,
+   "standard2026Status": null,
+   "sourceVersion": "shinkyuu-db@2d05bdd",
+   "verifiedStatus": "COMPUTED_FROM_OFFICIAL_EXAMS",
+   "sourceType": "official_exam",
+   "relatedDbUrl": "https://shinkyuu-db.vercel.app/past-exams/theme/an-shinkei",
+   "relatedDbUrls": {
+    "theme": "https://shinkyuu-db.vercel.app/themes/an-shinkei",
+    "pastExams": "https://shinkyuu-db.vercel.app/past-exams/theme/an-shinkei",
+    "quiz": "https://shinkyuu-db.vercel.app/quiz/theme/an-shinkei"
+   },
+   "updatedAt": "2026-10-11T09:56:26+09:00",
+   "publicationAllowed": true,
+   "warningNotes": [
+    "テーマ分類は当DB独自。出題数は「このテーマに分類した問題数」"
+   ]
+  },
+  {
+   "stableId": "theme:an-junkanki",
+   "title": "循環器の解剖（心臓・動脈・静脈）",
+   "subject": "anatomy",
+   "subjectName": "解剖学",
+   "examCount": 7,
+   "examRounds": [
+    29,
+    30,
+    31,
+    32,
+    33,
+    34
+   ],
+   "byRound": {
+    "29": 1,
+    "30": 2,
+    "31": 1,
+    "32": 1,
+    "33": 1,
+    "34": 1
+   },
+   "recent3Count": 3,
+   "pastExamPracticeCount": 7,
+   "originalQuizCount": 1,
+   "standard2026Status": null,
+   "sourceVersion": "shinkyuu-db@2d05bdd",
+   "verifiedStatus": "COMPUTED_FROM_OFFICIAL_EXAMS",
+   "sourceType": "official_exam",
+   "relatedDbUrl": "https://shinkyuu-db.vercel.app/past-exams/theme/an-junkanki",
+   "relatedDbUrls": {
+    "theme": "https://shinkyuu-db.vercel.app/themes/an-junkanki",
+    "pastExams": "https://shinkyuu-db.vercel.app/past-exams/theme/an-junkanki",
+    "quiz": "https://shinkyuu-db.vercel.app/quiz/theme/an-junkanki"
+   },
+   "updatedAt": "2026-10-11T09:56:26+09:00",
+   "publicationAllowed": true,
+   "warningNotes": [
+    "テーマ分類は当DB独自。出題数は「このテーマに分類した問題数」"
+   ]
+  },
+  {
+   "stableId": "theme:an-naizo",
+   "title": "内臓の解剖（消化器・呼吸器・泌尿生殖器）",
+   "subject": "anatomy",
+   "subjectName": "解剖学",
+   "examCount": 11,
+   "examRounds": [
+    29,
+    30,
+    31,
+    32,
+    33,
+    34
+   ],
+   "byRound": {
+    "29": 3,
+    "30": 2,
+    "31": 2,
+    "32": 2,
+    "33": 1,
+    "34": 1
+   },
+   "recent3Count": 4,
+   "pastExamPracticeCount": 11,
+   "originalQuizCount": 2,
+   "standard2026Status": null,
+   "sourceVersion": "shinkyuu-db@2d05bdd",
+   "verifiedStatus": "COMPUTED_FROM_OFFICIAL_EXAMS",
+   "sourceType": "official_exam",
+   "relatedDbUrl": "https://shinkyuu-db.vercel.app/past-exams/theme/an-naizo",
+   "relatedDbUrls": {
+    "theme": "https://shinkyuu-db.vercel.app/themes/an-naizo",
+    "pastExams": "https://shinkyuu-db.vercel.app/past-exams/theme/an-naizo",
+    "quiz": "https://shinkyuu-db.vercel.app/quiz/theme/an-naizo"
+   },
+   "updatedAt": "2026-10-11T09:56:26+09:00",
+   "publicationAllowed": true,
+   "warningNotes": [
+    "テーマ分類は当DB独自。出題数は「このテーマに分類した問題数」"
+   ]
+  },
+  {
+   "stableId": "theme:an-naibunpi",
+   "title": "内分泌器官の解剖",
+   "subject": "anatomy",
+   "subjectName": "解剖学",
+   "examCount": 2,
+   "examRounds": [
+    33,
+    34
+   ],
+   "byRound": {
+    "29": 0,
+    "30": 0,
+    "31": 0,
+    "32": 0,
+    "33": 1,
+    "34": 1
+   },
+   "recent3Count": 2,
+   "pastExamPracticeCount": 2,
+   "originalQuizCount": 0,
+   "standard2026Status": null,
+   "sourceVersion": "shinkyuu-db@2d05bdd",
+   "verifiedStatus": "COMPUTED_FROM_OFFICIAL_EXAMS",
+   "sourceType": "official_exam",
+   "relatedDbUrl": "https://shinkyuu-db.vercel.app/past-exams/theme/an-naibunpi",
+   "relatedDbUrls": {
+    "theme": "https://shinkyuu-db.vercel.app/themes/an-naibunpi",
+    "pastExams": "https://shinkyuu-db.vercel.app/past-exams/theme/an-naibunpi"
+   },
+   "updatedAt": "2026-10-11T09:56:26+09:00",
+   "publicationAllowed": true,
+   "warningNotes": [
+    "テーマ分類は当DB独自。出題数は「このテーマに分類した問題数」"
+   ]
+  },
+  {
+   "stableId": "theme:an-soshiki",
+   "title": "組織学（上皮・結合組織・細胞間結合・皮膚）",
+   "subject": "anatomy",
+   "subjectName": "解剖学",
+   "examCount": 4,
+   "examRounds": [
+    30,
+    31,
+    33,
+    34
+   ],
+   "byRound": {
+    "29": 0,
+    "30": 1,
+    "31": 1,
+    "32": 0,
+    "33": 1,
+    "34": 1
+   },
+   "recent3Count": 2,
+   "pastExamPracticeCount": 4,
+   "originalQuizCount": 0,
+   "standard2026Status": null,
+   "sourceVersion": "shinkyuu-db@2d05bdd",
+   "verifiedStatus": "COMPUTED_FROM_OFFICIAL_EXAMS",
+   "sourceType": "official_exam",
+   "relatedDbUrl": "https://shinkyuu-db.vercel.app/past-exams/theme/an-soshiki",
+   "relatedDbUrls": {
+    "theme": "https://shinkyuu-db.vercel.app/themes/an-soshiki",
+    "pastExams": "https://shinkyuu-db.vercel.app/past-exams/theme/an-soshiki"
+   },
+   "updatedAt": "2026-10-11T09:56:26+09:00",
+   "publicationAllowed": true,
+   "warningNotes": [
+    "テーマ分類は当DB独自。出題数は「このテーマに分類した問題数」"
+   ]
+  },
+  {
+   "stableId": "theme:ha-goshin-kozo",
+   "title": "毫鍼の構造・鍼の種類と規格",
+   "subject": "acupuncture-theory",
+   "subjectName": "はり理論",
+   "examCount": 6,
+   "examRounds": [
+    30,
+    31,
+    32,
+    34
+   ],
+   "byRound": {
+    "29": 0,
+    "30": 1,
+    "31": 2,
+    "32": 1,
+    "33": 0,
+    "34": 2
+   },
+   "recent3Count": 3,
+   "pastExamPracticeCount": 6,
+   "originalQuizCount": 1,
+   "standard2026Status": null,
+   "sourceVersion": "shinkyuu-db@2d05bdd",
+   "verifiedStatus": "COMPUTED_FROM_OFFICIAL_EXAMS",
+   "sourceType": "official_exam",
+   "relatedDbUrl": "https://shinkyuu-db.vercel.app/past-exams/theme/ha-goshin-kozo",
+   "relatedDbUrls": {
+    "theme": "https://shinkyuu-db.vercel.app/themes/ha-goshin-kozo",
+    "pastExams": "https://shinkyuu-db.vercel.app/past-exams/theme/ha-goshin-kozo",
+    "quiz": "https://shinkyuu-db.vercel.app/quiz/theme/ha-goshin-kozo"
+   },
+   "updatedAt": "2026-10-11T09:56:26+09:00",
+   "publicationAllowed": true,
+   "warningNotes": [
+    "テーマ分類は当DB独自。出題数は「このテーマに分類した問題数」"
+   ]
+  },
+  {
+   "stableId": "theme:ha-shishinho",
+   "title": "刺鍼の方式と刺法",
+   "subject": "acupuncture-theory",
+   "subjectName": "はり理論",
+   "examCount": 11,
+   "examRounds": [
+    29,
+    30,
+    31,
+    32,
+    33,
+    34
+   ],
+   "byRound": {
+    "29": 3,
+    "30": 2,
+    "31": 1,
+    "32": 1,
+    "33": 2,
+    "34": 2
+   },
+   "recent3Count": 5,
+   "pastExamPracticeCount": 11,
+   "originalQuizCount": 2,
+   "standard2026Status": null,
+   "sourceVersion": "shinkyuu-db@2d05bdd",
+   "verifiedStatus": "COMPUTED_FROM_OFFICIAL_EXAMS",
+   "sourceType": "official_exam",
+   "relatedDbUrl": "https://shinkyuu-db.vercel.app/past-exams/theme/ha-shishinho",
+   "relatedDbUrls": {
+    "theme": "https://shinkyuu-db.vercel.app/themes/ha-shishinho",
+    "pastExams": "https://shinkyuu-db.vercel.app/past-exams/theme/ha-shishinho",
+    "quiz": "https://shinkyuu-db.vercel.app/quiz/theme/ha-shishinho"
+   },
+   "updatedAt": "2026-10-11T09:56:26+09:00",
+   "publicationAllowed": true,
+   "warningNotes": [
+    "テーマ分類は当DB独自。出題数は「このテーマに分類した問題数」"
+   ]
+  },
+  {
+   "stableId": "theme:ha-hosha",
+   "title": "補瀉手技",
+   "subject": "acupuncture-theory",
+   "subjectName": "はり理論",
+   "examCount": 0,
+   "examRounds": [],
+   "byRound": {
+    "29": 0,
+    "30": 0,
+    "31": 0,
+    "32": 0,
+    "33": 0,
+    "34": 0
+   },
+   "recent3Count": 0,
+   "pastExamPracticeCount": 0,
+   "originalQuizCount": 1,
+   "standard2026Status": null,
+   "sourceVersion": "shinkyuu-db@2d05bdd",
+   "verifiedStatus": "COMPUTED_FROM_OFFICIAL_EXAMS",
+   "sourceType": "official_exam",
+   "relatedDbUrl": "https://shinkyuu-db.vercel.app/themes/ha-hosha",
+   "relatedDbUrls": {
+    "theme": "https://shinkyuu-db.vercel.app/themes/ha-hosha",
+    "quiz": "https://shinkyuu-db.vercel.app/quiz/theme/ha-hosha"
+   },
+   "updatedAt": "2026-10-11T09:56:26+09:00",
+   "publicationAllowed": true,
+   "warningNotes": [
+    "テーマ分類は当DB独自。出題数は「このテーマに分類した問題数」",
+    "第29〜34回に出題実績なし（学習用テーマ）"
+   ]
+  },
+  {
+   "stableId": "theme:ha-kodai-kyushin",
+   "title": "古代九鍼",
+   "subject": "acupuncture-theory",
+   "subjectName": "はり理論",
+   "examCount": 2,
+   "examRounds": [
+    30,
+    33
+   ],
+   "byRound": {
+    "29": 0,
+    "30": 1,
+    "31": 0,
+    "32": 0,
+    "33": 1,
+    "34": 0
+   },
+   "recent3Count": 1,
+   "pastExamPracticeCount": 2,
+   "originalQuizCount": 1,
+   "standard2026Status": null,
+   "sourceVersion": "shinkyuu-db@2d05bdd",
+   "verifiedStatus": "COMPUTED_FROM_OFFICIAL_EXAMS",
+   "sourceType": "official_exam",
+   "relatedDbUrl": "https://shinkyuu-db.vercel.app/past-exams/theme/ha-kodai-kyushin",
+   "relatedDbUrls": {
+    "theme": "https://shinkyuu-db.vercel.app/themes/ha-kodai-kyushin",
+    "pastExams": "https://shinkyuu-db.vercel.app/past-exams/theme/ha-kodai-kyushin",
+    "quiz": "https://shinkyuu-db.vercel.app/quiz/theme/ha-kodai-kyushin"
+   },
+   "updatedAt": "2026-10-11T09:56:26+09:00",
+   "publicationAllowed": true,
+   "warningNotes": [
+    "テーマ分類は当DB独自。出題数は「このテーマに分類した問題数」"
+   ]
+  },
+  {
+   "stableId": "theme:ha-tokki",
+   "title": "得気（ひびき）と刺鍼反応",
+   "subject": "acupuncture-theory",
+   "subjectName": "はり理論",
+   "examCount": 2,
+   "examRounds": [
+    34
+   ],
+   "byRound": {
+    "29": 0,
+    "30": 0,
+    "31": 0,
+    "32": 0,
+    "33": 0,
+    "34": 2
+   },
+   "recent3Count": 2,
+   "pastExamPracticeCount": 2,
+   "originalQuizCount": 0,
+   "standard2026Status": null,
+   "sourceVersion": "shinkyuu-db@2d05bdd",
+   "verifiedStatus": "COMPUTED_FROM_OFFICIAL_EXAMS",
+   "sourceType": "official_exam",
+   "relatedDbUrl": "https://shinkyuu-db.vercel.app/past-exams/theme/ha-tokki",
+   "relatedDbUrls": {
+    "theme": "https://shinkyuu-db.vercel.app/themes/ha-tokki",
+    "pastExams": "https://shinkyuu-db.vercel.app/past-exams/theme/ha-tokki"
+   },
+   "updatedAt": "2026-10-11T09:56:26+09:00",
+   "publicationAllowed": true,
+   "warningNotes": [
+    "テーマ分類は当DB独自。出題数は「このテーマに分類した問題数」"
+   ]
+  },
+  {
+   "stableId": "theme:ha-kansen-taisaku",
+   "title": "鍼の消毒・感染対策",
+   "subject": "acupuncture-theory",
+   "subjectName": "はり理論",
+   "examCount": 6,
+   "examRounds": [
+    29,
+    30,
+    31,
+    32,
+    34
+   ],
+   "byRound": {
+    "29": 2,
+    "30": 1,
+    "31": 1,
+    "32": 1,
+    "33": 0,
+    "34": 1
+   },
+   "recent3Count": 2,
+   "pastExamPracticeCount": 6,
+   "originalQuizCount": 1,
+   "standard2026Status": "expanded",
+   "sourceVersion": "shinkyuu-db@2d05bdd",
+   "verifiedStatus": "COMPUTED_FROM_OFFICIAL_EXAMS",
+   "sourceType": "official_exam",
+   "relatedDbUrl": "https://shinkyuu-db.vercel.app/past-exams/theme/ha-kansen-taisaku",
+   "relatedDbUrls": {
+    "theme": "https://shinkyuu-db.vercel.app/themes/ha-kansen-taisaku",
+    "pastExams": "https://shinkyuu-db.vercel.app/past-exams/theme/ha-kansen-taisaku",
+    "quiz": "https://shinkyuu-db.vercel.app/quiz/theme/ha-kansen-taisaku"
+   },
+   "updatedAt": "2026-10-11T09:56:26+09:00",
+   "publicationAllowed": true,
+   "warningNotes": [
+    "テーマ分類は当DB独自。出題数は「このテーマに分類した問題数」",
+    "2026年版出題基準の変更区分は公式の事実。第35回で出ることを示すものではない"
+   ]
+  },
+  {
+   "stableId": "theme:ha-chintsu-kiko",
+   "title": "鍼鎮痛の機序",
+   "subject": "acupuncture-theory",
+   "subjectName": "はり理論",
+   "examCount": 8,
+   "examRounds": [
+    30,
+    31,
+    33,
+    34
+   ],
+   "byRound": {
+    "29": 0,
+    "30": 1,
+    "31": 1,
+    "32": 0,
+    "33": 4,
+    "34": 2
+   },
+   "recent3Count": 6,
+   "pastExamPracticeCount": 8,
+   "originalQuizCount": 1,
+   "standard2026Status": null,
+   "sourceVersion": "shinkyuu-db@2d05bdd",
+   "verifiedStatus": "COMPUTED_FROM_OFFICIAL_EXAMS",
+   "sourceType": "official_exam",
+   "relatedDbUrl": "https://shinkyuu-db.vercel.app/past-exams/theme/ha-chintsu-kiko",
+   "relatedDbUrls": {
+    "theme": "https://shinkyuu-db.vercel.app/themes/ha-chintsu-kiko",
+    "pastExams": "https://shinkyuu-db.vercel.app/past-exams/theme/ha-chintsu-kiko",
+    "quiz": "https://shinkyuu-db.vercel.app/quiz/theme/ha-chintsu-kiko"
+   },
+   "updatedAt": "2026-10-11T09:56:26+09:00",
+   "publicationAllowed": true,
+   "warningNotes": [
+    "テーマ分類は当DB独自。出題数は「このテーマに分類した問題数」"
+   ]
+  },
+  {
+   "stableId": "theme:ha-tsukaku-dendoro",
+   "title": "痛みの受容器と伝導路",
+   "subject": "acupuncture-theory",
+   "subjectName": "はり理論",
+   "examCount": 8,
+   "examRounds": [
+    29,
+    30,
+    31,
+    32
+   ],
+   "byRound": {
+    "29": 1,
+    "30": 2,
+    "31": 3,
+    "32": 2,
+    "33": 0,
+    "34": 0
+   },
+   "recent3Count": 2,
+   "pastExamPracticeCount": 8,
+   "originalQuizCount": 1,
+   "standard2026Status": null,
+   "sourceVersion": "shinkyuu-db@2d05bdd",
+   "verifiedStatus": "COMPUTED_FROM_OFFICIAL_EXAMS",
+   "sourceType": "official_exam",
+   "relatedDbUrl": "https://shinkyuu-db.vercel.app/past-exams/theme/ha-tsukaku-dendoro",
+   "relatedDbUrls": {
+    "theme": "https://shinkyuu-db.vercel.app/themes/ha-tsukaku-dendoro",
+    "pastExams": "https://shinkyuu-db.vercel.app/past-exams/theme/ha-tsukaku-dendoro",
+    "quiz": "https://shinkyuu-db.vercel.app/quiz/theme/ha-tsukaku-dendoro"
+   },
+   "updatedAt": "2026-10-11T09:56:26+09:00",
+   "publicationAllowed": true,
+   "warningNotes": [
+    "テーマ分類は当DB独自。出題数は「このテーマに分類した問題数」"
+   ]
+  },
+  {
+   "stableId": "theme:ha-hari-tsuden",
+   "title": "低周波鍼通電療法",
+   "subject": "acupuncture-theory",
+   "subjectName": "はり理論",
+   "examCount": 3,
+   "examRounds": [
+    29,
+    30,
+    32
+   ],
+   "byRound": {
+    "29": 1,
+    "30": 1,
+    "31": 0,
+    "32": 1,
+    "33": 0,
+    "34": 0
+   },
+   "recent3Count": 1,
+   "pastExamPracticeCount": 3,
+   "originalQuizCount": 0,
+   "standard2026Status": null,
+   "sourceVersion": "shinkyuu-db@2d05bdd",
+   "verifiedStatus": "COMPUTED_FROM_OFFICIAL_EXAMS",
+   "sourceType": "official_exam",
+   "relatedDbUrl": "https://shinkyuu-db.vercel.app/past-exams/theme/ha-hari-tsuden",
+   "relatedDbUrls": {
+    "theme": "https://shinkyuu-db.vercel.app/themes/ha-hari-tsuden",
+    "pastExams": "https://shinkyuu-db.vercel.app/past-exams/theme/ha-hari-tsuden"
+   },
+   "updatedAt": "2026-10-11T09:56:26+09:00",
+   "publicationAllowed": true,
+   "warningNotes": [
+    "テーマ分類は当DB独自。出題数は「このテーマに分類した問題数」"
+   ]
+  },
+  {
+   "stableId": "theme:ha-shishin-seiri",
+   "title": "刺鍼の生理作用（軸索反射・自律神経反応・局所血流）",
+   "subject": "acupuncture-theory",
+   "subjectName": "はり理論",
+   "examCount": 6,
+   "examRounds": [
+    29,
+    31,
+    32
+   ],
+   "byRound": {
+    "29": 2,
+    "30": 0,
+    "31": 2,
+    "32": 2,
+    "33": 0,
+    "34": 0
+   },
+   "recent3Count": 2,
+   "pastExamPracticeCount": 6,
+   "originalQuizCount": 0,
+   "standard2026Status": null,
+   "sourceVersion": "shinkyuu-db@2d05bdd",
+   "verifiedStatus": "COMPUTED_FROM_OFFICIAL_EXAMS",
+   "sourceType": "official_exam",
+   "relatedDbUrl": "https://shinkyuu-db.vercel.app/past-exams/theme/ha-shishin-seiri",
+   "relatedDbUrls": {
+    "theme": "https://shinkyuu-db.vercel.app/themes/ha-shishin-seiri",
+    "pastExams": "https://shinkyuu-db.vercel.app/past-exams/theme/ha-shishin-seiri"
+   },
+   "updatedAt": "2026-10-11T09:56:26+09:00",
+   "publicationAllowed": true,
+   "warningNotes": [
+    "テーマ分類は当DB独自。出題数は「このテーマに分類した問題数」"
+   ]
+  },
+  {
+   "stableId": "theme:ky-mogusa",
+   "title": "艾（もぐさ）の原料・製造・品質",
+   "subject": "moxibustion-theory",
+   "subjectName": "きゅう理論",
+   "examCount": 8,
+   "examRounds": [
+    29,
+    30,
+    31,
+    32,
+    33,
+    34
+   ],
+   "byRound": {
+    "29": 1,
+    "30": 1,
+    "31": 2,
+    "32": 1,
+    "33": 1,
+    "34": 2
+   },
+   "recent3Count": 4,
+   "pastExamPracticeCount": 8,
+   "originalQuizCount": 2,
+   "standard2026Status": null,
+   "sourceVersion": "shinkyuu-db@2d05bdd",
+   "verifiedStatus": "COMPUTED_FROM_OFFICIAL_EXAMS",
+   "sourceType": "official_exam",
+   "relatedDbUrl": "https://shinkyuu-db.vercel.app/past-exams/theme/ky-mogusa",
+   "relatedDbUrls": {
+    "theme": "https://shinkyuu-db.vercel.app/themes/ky-mogusa",
+    "pastExams": "https://shinkyuu-db.vercel.app/past-exams/theme/ky-mogusa",
+    "quiz": "https://shinkyuu-db.vercel.app/quiz/theme/ky-mogusa"
+   },
+   "updatedAt": "2026-10-11T09:56:26+09:00",
+   "publicationAllowed": true,
+   "warningNotes": [
+    "テーマ分類は当DB独自。出題数は「このテーマに分類した問題数」"
+   ]
+  },
+  {
+   "stableId": "theme:ky-kyuho-shurui",
+   "title": "灸法の種類（有痕灸・無痕灸・隔物灸・灸頭鍼）",
+   "subject": "moxibustion-theory",
+   "subjectName": "きゅう理論",
+   "examCount": 10,
+   "examRounds": [
+    29,
+    30,
+    31,
+    32,
+    33,
+    34
+   ],
+   "byRound": {
+    "29": 1,
+    "30": 2,
+    "31": 1,
+    "32": 4,
+    "33": 1,
+    "34": 1
+   },
+   "recent3Count": 6,
+   "pastExamPracticeCount": 10,
+   "originalQuizCount": 3,
+   "standard2026Status": null,
+   "sourceVersion": "shinkyuu-db@2d05bdd",
+   "verifiedStatus": "COMPUTED_FROM_OFFICIAL_EXAMS",
+   "sourceType": "official_exam",
+   "relatedDbUrl": "https://shinkyuu-db.vercel.app/past-exams/theme/ky-kyuho-shurui",
+   "relatedDbUrls": {
+    "theme": "https://shinkyuu-db.vercel.app/themes/ky-kyuho-shurui",
+    "pastExams": "https://shinkyuu-db.vercel.app/past-exams/theme/ky-kyuho-shurui",
+    "quiz": "https://shinkyuu-db.vercel.app/quiz/theme/ky-kyuho-shurui"
+   },
+   "updatedAt": "2026-10-11T09:56:26+09:00",
+   "publicationAllowed": true,
+   "warningNotes": [
+    "テーマ分類は当DB独自。出題数は「このテーマに分類した問題数」"
+   ]
+  },
+  {
+   "stableId": "theme:ky-shigeki-ryo",
+   "title": "施灸量と刺激の調節",
+   "subject": "moxibustion-theory",
+   "subjectName": "きゅう理論",
+   "examCount": 0,
+   "examRounds": [],
+   "byRound": {
+    "29": 0,
+    "30": 0,
+    "31": 0,
+    "32": 0,
+    "33": 0,
+    "34": 0
+   },
+   "recent3Count": 0,
+   "pastExamPracticeCount": 0,
+   "originalQuizCount": 0,
+   "standard2026Status": null,
+   "sourceVersion": "shinkyuu-db@2d05bdd",
+   "verifiedStatus": "COMPUTED_FROM_OFFICIAL_EXAMS",
+   "sourceType": "official_exam",
+   "relatedDbUrl": "https://shinkyuu-db.vercel.app/themes/ky-shigeki-ryo",
+   "relatedDbUrls": {
+    "theme": "https://shinkyuu-db.vercel.app/themes/ky-shigeki-ryo"
+   },
+   "updatedAt": "2026-10-11T09:56:26+09:00",
+   "publicationAllowed": true,
+   "warningNotes": [
+    "テーマ分類は当DB独自。出題数は「このテーマに分類した問題数」",
+    "第29〜34回に出題実績なし（学習用テーマ）"
+   ]
+  },
+  {
+   "stableId": "theme:ky-kinki",
+   "title": "施灸の禁忌・禁灸部位と注意を要する患者",
+   "subject": "moxibustion-theory",
+   "subjectName": "きゅう理論",
+   "examCount": 6,
+   "examRounds": [
+    29,
+    33,
+    34
+   ],
+   "byRound": {
+    "29": 2,
+    "30": 0,
+    "31": 0,
+    "32": 0,
+    "33": 3,
+    "34": 1
+   },
+   "recent3Count": 4,
+   "pastExamPracticeCount": 6,
+   "originalQuizCount": 1,
+   "standard2026Status": null,
+   "sourceVersion": "shinkyuu-db@2d05bdd",
+   "verifiedStatus": "COMPUTED_FROM_OFFICIAL_EXAMS",
+   "sourceType": "official_exam",
+   "relatedDbUrl": "https://shinkyuu-db.vercel.app/past-exams/theme/ky-kinki",
+   "relatedDbUrls": {
+    "theme": "https://shinkyuu-db.vercel.app/themes/ky-kinki",
+    "pastExams": "https://shinkyuu-db.vercel.app/past-exams/theme/ky-kinki",
+    "quiz": "https://shinkyuu-db.vercel.app/quiz/theme/ky-kinki"
+   },
+   "updatedAt": "2026-10-11T09:56:26+09:00",
+   "publicationAllowed": true,
+   "warningNotes": [
+    "テーマ分類は当DB独自。出題数は「このテーマに分類した問題数」"
+   ]
+  },
+  {
+   "stableId": "theme:ky-kyokusho-hanno",
+   "title": "施灸の局所反応（フレア現象・軸索反射）",
+   "subject": "moxibustion-theory",
+   "subjectName": "きゅう理論",
+   "examCount": 6,
+   "examRounds": [
+    29,
+    30,
+    33,
+    34
+   ],
+   "byRound": {
+    "29": 1,
+    "30": 1,
+    "31": 0,
+    "32": 0,
+    "33": 2,
+    "34": 2
+   },
+   "recent3Count": 4,
+   "pastExamPracticeCount": 6,
+   "originalQuizCount": 1,
+   "standard2026Status": null,
+   "sourceVersion": "shinkyuu-db@2d05bdd",
+   "verifiedStatus": "COMPUTED_FROM_OFFICIAL_EXAMS",
+   "sourceType": "official_exam",
+   "relatedDbUrl": "https://shinkyuu-db.vercel.app/past-exams/theme/ky-kyokusho-hanno",
+   "relatedDbUrls": {
+    "theme": "https://shinkyuu-db.vercel.app/themes/ky-kyokusho-hanno",
+    "pastExams": "https://shinkyuu-db.vercel.app/past-exams/theme/ky-kyokusho-hanno",
+    "quiz": "https://shinkyuu-db.vercel.app/quiz/theme/ky-kyokusho-hanno"
+   },
+   "updatedAt": "2026-10-11T09:56:26+09:00",
+   "publicationAllowed": true,
+   "warningNotes": [
+    "テーマ分類は当DB独自。出題数は「このテーマに分類した問題数」"
+   ]
+  },
+  {
+   "stableId": "theme:ky-zenshin-sayo",
+   "title": "灸の全身作用と作用機序",
+   "subject": "moxibustion-theory",
+   "subjectName": "きゅう理論",
+   "examCount": 25,
+   "examRounds": [
+    29,
+    30,
+    31,
+    32,
+    33,
+    34
+   ],
+   "byRound": {
+    "29": 3,
+    "30": 4,
+    "31": 6,
+    "32": 5,
+    "33": 3,
+    "34": 4
+   },
+   "recent3Count": 12,
+   "pastExamPracticeCount": 25,
+   "originalQuizCount": 4,
+   "standard2026Status": "expanded",
+   "sourceVersion": "shinkyuu-db@2d05bdd",
+   "verifiedStatus": "COMPUTED_FROM_OFFICIAL_EXAMS",
+   "sourceType": "official_exam",
+   "relatedDbUrl": "https://shinkyuu-db.vercel.app/past-exams/theme/ky-zenshin-sayo",
+   "relatedDbUrls": {
+    "theme": "https://shinkyuu-db.vercel.app/themes/ky-zenshin-sayo",
+    "pastExams": "https://shinkyuu-db.vercel.app/past-exams/theme/ky-zenshin-sayo",
+    "quiz": "https://shinkyuu-db.vercel.app/quiz/theme/ky-zenshin-sayo"
+   },
+   "updatedAt": "2026-10-11T09:56:26+09:00",
+   "publicationAllowed": true,
+   "warningNotes": [
+    "テーマ分類は当DB独自。出題数は「このテーマに分類した問題数」",
+    "2026年版出題基準の変更区分は公式の事実。第35回で出ることを示すものではない"
+   ]
+  },
+  {
+   "stableId": "theme:ky-fukusayo-hosoku",
+   "title": "灸の副作用（熱傷・化膿・灸あたり）と管理",
+   "subject": "moxibustion-theory",
+   "subjectName": "きゅう理論",
+   "examCount": 5,
+   "examRounds": [
+    29,
+    30,
+    31
+   ],
+   "byRound": {
+    "29": 2,
+    "30": 2,
+    "31": 1,
+    "32": 0,
+    "33": 0,
+    "34": 0
+   },
+   "recent3Count": 0,
+   "pastExamPracticeCount": 5,
+   "originalQuizCount": 2,
+   "standard2026Status": null,
+   "sourceVersion": "shinkyuu-db@2d05bdd",
+   "verifiedStatus": "COMPUTED_FROM_OFFICIAL_EXAMS",
+   "sourceType": "official_exam",
+   "relatedDbUrl": "https://shinkyuu-db.vercel.app/past-exams/theme/ky-fukusayo-hosoku",
+   "relatedDbUrls": {
+    "theme": "https://shinkyuu-db.vercel.app/themes/ky-fukusayo-hosoku",
+    "pastExams": "https://shinkyuu-db.vercel.app/past-exams/theme/ky-fukusayo-hosoku",
+    "quiz": "https://shinkyuu-db.vercel.app/quiz/theme/ky-fukusayo-hosoku"
+   },
+   "updatedAt": "2026-10-11T09:56:26+09:00",
+   "publicationAllowed": true,
+   "warningNotes": [
+    "テーマ分類は当DB独自。出題数は「このテーマに分類した問題数」"
+   ]
+  },
+  {
+   "stableId": "theme:oc-hakko-bensho",
+   "title": "八綱弁証（表裏・寒熱・虚実・陰陽）",
+   "subject": "oriental-clinical",
+   "subjectName": "東洋医学臨床論",
+   "examCount": 0,
+   "examRounds": [],
+   "byRound": {
+    "29": 0,
+    "30": 0,
+    "31": 0,
+    "32": 0,
+    "33": 0,
+    "34": 0
+   },
+   "recent3Count": 0,
+   "pastExamPracticeCount": 0,
+   "originalQuizCount": 0,
+   "standard2026Status": null,
+   "sourceVersion": "shinkyuu-db@2d05bdd",
+   "verifiedStatus": "COMPUTED_FROM_OFFICIAL_EXAMS",
+   "sourceType": "official_exam",
+   "relatedDbUrl": "https://shinkyuu-db.vercel.app/themes/oc-hakko-bensho",
+   "relatedDbUrls": {
+    "theme": "https://shinkyuu-db.vercel.app/themes/oc-hakko-bensho"
+   },
+   "updatedAt": "2026-10-11T09:56:26+09:00",
+   "publicationAllowed": true,
+   "warningNotes": [
+    "テーマ分類は当DB独自。出題数は「このテーマに分類した問題数」",
+    "第29〜34回に出題実績なし（学習用テーマ）"
+   ]
+  },
+  {
+   "stableId": "theme:oc-kiketsu-bensho",
+   "title": "気血津液弁証",
+   "subject": "oriental-clinical",
+   "subjectName": "東洋医学臨床論",
+   "examCount": 13,
+   "examRounds": [
+    29,
+    31,
+    32,
+    33,
+    34
+   ],
+   "byRound": {
+    "29": 2,
+    "30": 0,
+    "31": 4,
+    "32": 2,
+    "33": 2,
+    "34": 3
+   },
+   "recent3Count": 7,
+   "pastExamPracticeCount": 13,
+   "originalQuizCount": 2,
+   "standard2026Status": null,
+   "sourceVersion": "shinkyuu-db@2d05bdd",
+   "verifiedStatus": "COMPUTED_FROM_OFFICIAL_EXAMS",
+   "sourceType": "official_exam",
+   "relatedDbUrl": "https://shinkyuu-db.vercel.app/past-exams/theme/oc-kiketsu-bensho",
+   "relatedDbUrls": {
+    "theme": "https://shinkyuu-db.vercel.app/themes/oc-kiketsu-bensho",
+    "pastExams": "https://shinkyuu-db.vercel.app/past-exams/theme/oc-kiketsu-bensho",
+    "quiz": "https://shinkyuu-db.vercel.app/quiz/theme/oc-kiketsu-bensho"
+   },
+   "updatedAt": "2026-10-11T09:56:26+09:00",
+   "publicationAllowed": true,
+   "warningNotes": [
+    "テーマ分類は当DB独自。出題数は「このテーマに分類した問題数」"
+   ]
+  },
+  {
+   "stableId": "theme:oc-zofu-bensho",
+   "title": "臓腑弁証",
+   "subject": "oriental-clinical",
+   "subjectName": "東洋医学臨床論",
+   "examCount": 24,
+   "examRounds": [
+    29,
+    30,
+    31,
+    32,
+    34
+   ],
+   "byRound": {
+    "29": 10,
+    "30": 1,
+    "31": 4,
+    "32": 5,
+    "33": 0,
+    "34": 4
+   },
+   "recent3Count": 9,
+   "pastExamPracticeCount": 24,
+   "originalQuizCount": 3,
+   "standard2026Status": null,
+   "sourceVersion": "shinkyuu-db@2d05bdd",
+   "verifiedStatus": "COMPUTED_FROM_OFFICIAL_EXAMS",
+   "sourceType": "official_exam",
+   "relatedDbUrl": "https://shinkyuu-db.vercel.app/past-exams/theme/oc-zofu-bensho",
+   "relatedDbUrls": {
+    "theme": "https://shinkyuu-db.vercel.app/themes/oc-zofu-bensho",
+    "pastExams": "https://shinkyuu-db.vercel.app/past-exams/theme/oc-zofu-bensho",
+    "quiz": "https://shinkyuu-db.vercel.app/quiz/theme/oc-zofu-bensho"
+   },
+   "updatedAt": "2026-10-11T09:56:26+09:00",
+   "publicationAllowed": true,
+   "warningNotes": [
+    "テーマ分類は当DB独自。出題数は「このテーマに分類した問題数」"
+   ]
+  },
+  {
+   "stableId": "theme:oc-shinho-shindan",
+   "title": "四診（脈診・舌診）と証の把握",
+   "subject": "oriental-clinical",
+   "subjectName": "東洋医学臨床論",
+   "examCount": 3,
+   "examRounds": [
+    30,
+    31,
+    33
+   ],
+   "byRound": {
+    "29": 0,
+    "30": 1,
+    "31": 1,
+    "32": 0,
+    "33": 1,
+    "34": 0
+   },
+   "recent3Count": 1,
+   "pastExamPracticeCount": 3,
+   "originalQuizCount": 0,
+   "standard2026Status": null,
+   "sourceVersion": "shinkyuu-db@2d05bdd",
+   "verifiedStatus": "COMPUTED_FROM_OFFICIAL_EXAMS",
+   "sourceType": "official_exam",
+   "relatedDbUrl": "https://shinkyuu-db.vercel.app/past-exams/theme/oc-shinho-shindan",
+   "relatedDbUrls": {
+    "theme": "https://shinkyuu-db.vercel.app/themes/oc-shinho-shindan",
+    "pastExams": "https://shinkyuu-db.vercel.app/past-exams/theme/oc-shinho-shindan"
+   },
+   "updatedAt": "2026-10-11T09:56:26+09:00",
+   "publicationAllowed": true,
+   "warningNotes": [
+    "テーマ分類は当DB独自。出題数は「このテーマに分類した問題数」"
+   ]
+  },
+  {
+   "stableId": "theme:oc-keiraku-chiryo",
+   "title": "経絡治療・配穴法則と経脈病証",
+   "subject": "oriental-clinical",
+   "subjectName": "東洋医学臨床論",
+   "examCount": 28,
+   "examRounds": [
+    29,
+    30,
+    31,
+    32,
+    33,
+    34
+   ],
+   "byRound": {
+    "29": 3,
+    "30": 7,
+    "31": 4,
+    "32": 4,
+    "33": 4,
+    "34": 6
+   },
+   "recent3Count": 14,
+   "pastExamPracticeCount": 28,
+   "originalQuizCount": 3,
+   "standard2026Status": null,
+   "sourceVersion": "shinkyuu-db@2d05bdd",
+   "verifiedStatus": "COMPUTED_FROM_OFFICIAL_EXAMS",
+   "sourceType": "official_exam",
+   "relatedDbUrl": "https://shinkyuu-db.vercel.app/past-exams/theme/oc-keiraku-chiryo",
+   "relatedDbUrls": {
+    "theme": "https://shinkyuu-db.vercel.app/themes/oc-keiraku-chiryo",
+    "pastExams": "https://shinkyuu-db.vercel.app/past-exams/theme/oc-keiraku-chiryo",
+    "quiz": "https://shinkyuu-db.vercel.app/quiz/theme/oc-keiraku-chiryo"
+   },
+   "updatedAt": "2026-10-11T09:56:26+09:00",
+   "publicationAllowed": true,
+   "warningNotes": [
+    "テーマ分類は当DB独自。出題数は「このテーマに分類した問題数」"
+   ]
+  },
+  {
+   "stableId": "theme:oc-kakka-chiryo",
+   "title": "各科疾患・症状別の鍼灸治療",
+   "subject": "oriental-clinical",
+   "subjectName": "東洋医学臨床論",
+   "examCount": 48,
+   "examRounds": [
+    29,
+    30,
+    31,
+    32,
+    33,
+    34
+   ],
+   "byRound": {
+    "29": 4,
+    "30": 12,
+    "31": 6,
+    "32": 9,
+    "33": 8,
+    "34": 9
+   },
+   "recent3Count": 26,
+   "pastExamPracticeCount": 48,
+   "originalQuizCount": 8,
+   "standard2026Status": "reorganized",
+   "sourceVersion": "shinkyuu-db@2d05bdd",
+   "verifiedStatus": "COMPUTED_FROM_OFFICIAL_EXAMS",
+   "sourceType": "official_exam",
+   "relatedDbUrl": "https://shinkyuu-db.vercel.app/past-exams/theme/oc-kakka-chiryo",
+   "relatedDbUrls": {
+    "theme": "https://shinkyuu-db.vercel.app/themes/oc-kakka-chiryo",
+    "pastExams": "https://shinkyuu-db.vercel.app/past-exams/theme/oc-kakka-chiryo",
+    "quiz": "https://shinkyuu-db.vercel.app/quiz/theme/oc-kakka-chiryo"
+   },
+   "updatedAt": "2026-10-11T09:56:26+09:00",
+   "publicationAllowed": true,
+   "warningNotes": [
+    "テーマ分類は当DB独自。出題数は「このテーマに分類した問題数」",
+    "2026年版出題基準の変更区分は公式の事実。第35回で出ることを示すものではない"
+   ]
+  },
+  {
+   "stableId": "theme:oc-undoki-shinkei",
+   "title": "運動器・神経疾患の鍼灸治療",
+   "subject": "oriental-clinical",
+   "subjectName": "東洋医学臨床論",
+   "examCount": 71,
+   "examRounds": [
+    29,
+    30,
+    31,
+    32,
+    33,
+    34
+   ],
+   "byRound": {
+    "29": 10,
+    "30": 8,
+    "31": 14,
+    "32": 12,
+    "33": 15,
+    "34": 12
+   },
+   "recent3Count": 39,
+   "pastExamPracticeCount": 71,
+   "originalQuizCount": 6,
+   "standard2026Status": null,
+   "sourceVersion": "shinkyuu-db@2d05bdd",
+   "verifiedStatus": "COMPUTED_FROM_OFFICIAL_EXAMS",
+   "sourceType": "official_exam",
+   "relatedDbUrl": "https://shinkyuu-db.vercel.app/past-exams/theme/oc-undoki-shinkei",
+   "relatedDbUrls": {
+    "theme": "https://shinkyuu-db.vercel.app/themes/oc-undoki-shinkei",
+    "pastExams": "https://shinkyuu-db.vercel.app/past-exams/theme/oc-undoki-shinkei",
+    "quiz": "https://shinkyuu-db.vercel.app/quiz/theme/oc-undoki-shinkei"
+   },
+   "updatedAt": "2026-10-11T09:56:26+09:00",
+   "publicationAllowed": true,
+   "warningNotes": [
+    "テーマ分類は当DB独自。出題数は「このテーマに分類した問題数」"
+   ]
+  },
+  {
+   "stableId": "theme:cg-shokogaku",
+   "title": "主要症候の診かた（症候学）",
+   "subject": "clinical-general",
+   "subjectName": "臨床医学総論",
+   "examCount": 42,
+   "examRounds": [
+    29,
+    30,
+    31,
+    32,
+    33,
+    34
+   ],
+   "byRound": {
+    "29": 7,
+    "30": 9,
+    "31": 6,
+    "32": 6,
+    "33": 5,
+    "34": 9
+   },
+   "recent3Count": 20,
+   "pastExamPracticeCount": 42,
+   "originalQuizCount": 1,
+   "standard2026Status": null,
+   "sourceVersion": "shinkyuu-db@2d05bdd",
+   "verifiedStatus": "COMPUTED_FROM_OFFICIAL_EXAMS",
+   "sourceType": "official_exam",
+   "relatedDbUrl": "https://shinkyuu-db.vercel.app/past-exams/theme/cg-shokogaku",
+   "relatedDbUrls": {
+    "theme": "https://shinkyuu-db.vercel.app/themes/cg-shokogaku",
+    "pastExams": "https://shinkyuu-db.vercel.app/past-exams/theme/cg-shokogaku",
+    "quiz": "https://shinkyuu-db.vercel.app/quiz/theme/cg-shokogaku"
+   },
+   "updatedAt": "2026-10-11T09:56:26+09:00",
+   "publicationAllowed": true,
+   "warningNotes": [
+    "テーマ分類は当DB独自。出題数は「このテーマに分類した問題数」"
+   ]
+  },
+  {
+   "stableId": "theme:oo-shinsatsu-bensho",
+   "title": "四診と弁証の枠組み",
+   "subject": "oriental-overview",
+   "subjectName": "東洋医学概論",
+   "examCount": 30,
+   "examRounds": [
+    29,
+    30,
+    31,
+    32,
+    33,
+    34
+   ],
+   "byRound": {
+    "29": 4,
+    "30": 5,
+    "31": 5,
+    "32": 6,
+    "33": 6,
+    "34": 4
+   },
+   "recent3Count": 16,
+   "pastExamPracticeCount": 30,
+   "originalQuizCount": 0,
+   "standard2026Status": null,
+   "sourceVersion": "shinkyuu-db@2d05bdd",
+   "verifiedStatus": "COMPUTED_FROM_OFFICIAL_EXAMS",
+   "sourceType": "official_exam",
+   "relatedDbUrl": "https://shinkyuu-db.vercel.app/past-exams/theme/oo-shinsatsu-bensho",
+   "relatedDbUrls": {
+    "theme": "https://shinkyuu-db.vercel.app/themes/oo-shinsatsu-bensho",
+    "pastExams": "https://shinkyuu-db.vercel.app/past-exams/theme/oo-shinsatsu-bensho"
+   },
+   "updatedAt": "2026-10-11T09:56:26+09:00",
+   "publicationAllowed": true,
+   "warningNotes": [
+    "テーマ分類は当DB独自。出題数は「このテーマに分類した問題数」"
+   ]
+  },
+  {
+   "stableId": "theme:oo-keiraku-keimyaku",
+   "title": "経絡系統と経脈病証",
+   "subject": "oriental-overview",
+   "subjectName": "東洋医学概論",
+   "examCount": 14,
+   "examRounds": [
+    29,
+    30,
+    31,
+    32,
+    33,
+    34
+   ],
+   "byRound": {
+    "29": 2,
+    "30": 4,
+    "31": 1,
+    "32": 2,
+    "33": 2,
+    "34": 3
+   },
+   "recent3Count": 7,
+   "pastExamPracticeCount": 14,
+   "originalQuizCount": 0,
+   "standard2026Status": null,
+   "sourceVersion": "shinkyuu-db@2d05bdd",
+   "verifiedStatus": "COMPUTED_FROM_OFFICIAL_EXAMS",
+   "sourceType": "official_exam",
+   "relatedDbUrl": "https://shinkyuu-db.vercel.app/past-exams/theme/oo-keiraku-keimyaku",
+   "relatedDbUrls": {
+    "theme": "https://shinkyuu-db.vercel.app/themes/oo-keiraku-keimyaku",
+    "pastExams": "https://shinkyuu-db.vercel.app/past-exams/theme/oo-keiraku-keimyaku"
+   },
+   "updatedAt": "2026-10-11T09:56:26+09:00",
+   "publicationAllowed": true,
+   "warningNotes": [
+    "テーマ分類は当DB独自。出題数は「このテーマに分類した問題数」"
+   ]
+  },
+  {
+   "stableId": "theme:oo-chiryo-gairon",
+   "title": "東洋医学の治療原則（補瀉・刺法の基礎）",
+   "subject": "oriental-overview",
+   "subjectName": "東洋医学概論",
+   "examCount": 8,
+   "examRounds": [
+    29,
+    30,
+    31,
+    32,
+    33,
+    34
+   ],
+   "byRound": {
+    "29": 2,
+    "30": 1,
+    "31": 2,
+    "32": 1,
+    "33": 1,
+    "34": 1
+   },
+   "recent3Count": 3,
+   "pastExamPracticeCount": 8,
+   "originalQuizCount": 0,
+   "standard2026Status": null,
+   "sourceVersion": "shinkyuu-db@2d05bdd",
+   "verifiedStatus": "COMPUTED_FROM_OFFICIAL_EXAMS",
+   "sourceType": "official_exam",
+   "relatedDbUrl": "https://shinkyuu-db.vercel.app/past-exams/theme/oo-chiryo-gairon",
+   "relatedDbUrls": {
+    "theme": "https://shinkyuu-db.vercel.app/themes/oo-chiryo-gairon",
+    "pastExams": "https://shinkyuu-db.vercel.app/past-exams/theme/oo-chiryo-gairon"
+   },
+   "updatedAt": "2026-10-11T09:56:26+09:00",
+   "publicationAllowed": true,
+   "warningNotes": [
+    "テーマ分類は当DB独自。出題数は「このテーマに分類した問題数」"
+   ]
+  },
+  {
+   "stableId": "theme:cs-ganka-jibi",
+   "title": "眼科・耳鼻咽喉科疾患",
+   "subject": "clinical-specific",
+   "subjectName": "臨床医学各論",
+   "examCount": 7,
+   "examRounds": [
+    29,
+    30,
+    32,
+    33
+   ],
+   "byRound": {
+    "29": 2,
+    "30": 3,
+    "31": 0,
+    "32": 1,
+    "33": 1,
+    "34": 0
+   },
+   "recent3Count": 2,
+   "pastExamPracticeCount": 7,
+   "originalQuizCount": 1,
+   "standard2026Status": null,
+   "sourceVersion": "shinkyuu-db@2d05bdd",
+   "verifiedStatus": "COMPUTED_FROM_OFFICIAL_EXAMS",
+   "sourceType": "official_exam",
+   "relatedDbUrl": "https://shinkyuu-db.vercel.app/past-exams/theme/cs-ganka-jibi",
+   "relatedDbUrls": {
+    "theme": "https://shinkyuu-db.vercel.app/themes/cs-ganka-jibi",
+    "pastExams": "https://shinkyuu-db.vercel.app/past-exams/theme/cs-ganka-jibi",
+    "quiz": "https://shinkyuu-db.vercel.app/quiz/theme/cs-ganka-jibi"
+   },
+   "updatedAt": "2026-10-11T09:56:26+09:00",
+   "publicationAllowed": true,
+   "warningNotes": [
+    "テーマ分類は当DB独自。出題数は「このテーマに分類した問題数」"
+   ]
+  },
+  {
+   "stableId": "theme:cs-fujinka-nyusen",
+   "title": "女性生殖器・乳腺疾患",
+   "subject": "clinical-specific",
+   "subjectName": "臨床医学各論",
+   "examCount": 5,
+   "examRounds": [
+    29,
+    30,
+    32,
+    34
+   ],
+   "byRound": {
+    "29": 1,
+    "30": 1,
+    "31": 0,
+    "32": 1,
+    "33": 0,
+    "34": 2
+   },
+   "recent3Count": 3,
+   "pastExamPracticeCount": 5,
+   "originalQuizCount": 6,
+   "standard2026Status": "expanded",
+   "sourceVersion": "shinkyuu-db@2d05bdd",
+   "verifiedStatus": "COMPUTED_FROM_OFFICIAL_EXAMS",
+   "sourceType": "official_exam",
+   "relatedDbUrl": "https://shinkyuu-db.vercel.app/past-exams/theme/cs-fujinka-nyusen",
+   "relatedDbUrls": {
+    "theme": "https://shinkyuu-db.vercel.app/themes/cs-fujinka-nyusen",
+    "pastExams": "https://shinkyuu-db.vercel.app/past-exams/theme/cs-fujinka-nyusen",
+    "quiz": "https://shinkyuu-db.vercel.app/quiz/theme/cs-fujinka-nyusen"
+   },
+   "updatedAt": "2026-10-11T09:56:26+09:00",
+   "publicationAllowed": true,
+   "warningNotes": [
+    "テーマ分類は当DB独自。出題数は「このテーマに分類した問題数」",
+    "2026年版出題基準の変更区分は公式の事実。第35回で出ることを示すものではない"
+   ]
+  },
+  {
+   "stableId": "theme:me-kotsudo-shuketsu",
+   "title": "骨度法・取穴法",
+   "subject": "meridians-acupoints",
+   "subjectName": "経絡経穴概論",
+   "examCount": 7,
+   "examRounds": [
+    29,
+    30,
+    31,
+    33,
+    34
+   ],
+   "byRound": {
+    "29": 1,
+    "30": 2,
+    "31": 1,
+    "32": 0,
+    "33": 1,
+    "34": 2
+   },
+   "recent3Count": 3,
+   "pastExamPracticeCount": 7,
+   "originalQuizCount": 0,
+   "standard2026Status": null,
+   "sourceVersion": "shinkyuu-db@2d05bdd",
+   "verifiedStatus": "COMPUTED_FROM_OFFICIAL_EXAMS",
+   "sourceType": "official_exam",
+   "relatedDbUrl": "https://shinkyuu-db.vercel.app/past-exams/theme/me-kotsudo-shuketsu",
+   "relatedDbUrls": {
+    "theme": "https://shinkyuu-db.vercel.app/themes/me-kotsudo-shuketsu",
+    "pastExams": "https://shinkyuu-db.vercel.app/past-exams/theme/me-kotsudo-shuketsu"
+   },
+   "updatedAt": "2026-10-11T09:56:26+09:00",
+   "publicationAllowed": true,
+   "warningNotes": [
+    "テーマ分類は当DB独自。出題数は「このテーマに分類した問題数」"
+   ]
+  },
+  {
+   "stableId": "theme:me-kiketsu",
+   "title": "奇穴",
+   "subject": "meridians-acupoints",
+   "subjectName": "経絡経穴概論",
+   "examCount": 6,
+   "examRounds": [
+    29,
+    31,
+    33,
+    34
+   ],
+   "byRound": {
+    "29": 2,
+    "30": 0,
+    "31": 2,
+    "32": 0,
+    "33": 1,
+    "34": 1
+   },
+   "recent3Count": 2,
+   "pastExamPracticeCount": 6,
+   "originalQuizCount": 0,
+   "standard2026Status": null,
+   "sourceVersion": "shinkyuu-db@2d05bdd",
+   "verifiedStatus": "COMPUTED_FROM_OFFICIAL_EXAMS",
+   "sourceType": "official_exam",
+   "relatedDbUrl": "https://shinkyuu-db.vercel.app/past-exams/theme/me-kiketsu",
+   "relatedDbUrls": {
+    "theme": "https://shinkyuu-db.vercel.app/themes/me-kiketsu",
+    "pastExams": "https://shinkyuu-db.vercel.app/past-exams/theme/me-kiketsu"
+   },
+   "updatedAt": "2026-10-11T09:56:26+09:00",
+   "publicationAllowed": true,
+   "warningNotes": [
+    "テーマ分類は当DB独自。出題数は「このテーマに分類した問題数」"
+   ]
+  },
+  {
+   "stableId": "theme:me-sonota-tokketsu",
+   "title": "その他の特定穴（絡穴・八会穴・下合穴・四総穴・八脈交会穴・背部兪穴）",
+   "subject": "meridians-acupoints",
+   "subjectName": "経絡経穴概論",
+   "examCount": 12,
+   "examRounds": [
+    29,
+    31,
+    32,
+    33,
+    34
+   ],
+   "byRound": {
+    "29": 1,
+    "30": 0,
+    "31": 2,
+    "32": 3,
+    "33": 2,
+    "34": 4
+   },
+   "recent3Count": 9,
+   "pastExamPracticeCount": 12,
+   "originalQuizCount": 12,
+   "standard2026Status": null,
+   "sourceVersion": "shinkyuu-db@2d05bdd",
+   "verifiedStatus": "COMPUTED_FROM_OFFICIAL_EXAMS",
+   "sourceType": "official_exam",
+   "relatedDbUrl": "https://shinkyuu-db.vercel.app/past-exams/theme/me-sonota-tokketsu",
+   "relatedDbUrls": {
+    "theme": "https://shinkyuu-db.vercel.app/themes/me-sonota-tokketsu",
+    "pastExams": "https://shinkyuu-db.vercel.app/past-exams/theme/me-sonota-tokketsu",
+    "quiz": "https://shinkyuu-db.vercel.app/quiz/theme/me-sonota-tokketsu"
+   },
+   "updatedAt": "2026-10-11T09:56:26+09:00",
+   "publicationAllowed": true,
+   "warningNotes": [
+    "テーマ分類は当DB独自。出題数は「このテーマに分類した問題数」"
+   ]
+  },
+  {
+   "stableId": "theme:me-shishin-anzen",
+   "title": "経穴と刺鍼の安全性（危険部位・禁鍼穴・禁灸穴）",
+   "subject": "meridians-acupoints",
+   "subjectName": "経絡経穴概論",
+   "examCount": 10,
+   "examRounds": [
+    29,
+    30,
+    32,
+    33,
+    34
+   ],
+   "byRound": {
+    "29": 1,
+    "30": 3,
+    "31": 0,
+    "32": 2,
+    "33": 3,
+    "34": 1
+   },
+   "recent3Count": 6,
+   "pastExamPracticeCount": 10,
+   "originalQuizCount": 0,
+   "standard2026Status": null,
+   "sourceVersion": "shinkyuu-db@2d05bdd",
+   "verifiedStatus": "COMPUTED_FROM_OFFICIAL_EXAMS",
+   "sourceType": "official_exam",
+   "relatedDbUrl": "https://shinkyuu-db.vercel.app/past-exams/theme/me-shishin-anzen",
+   "relatedDbUrls": {
+    "theme": "https://shinkyuu-db.vercel.app/themes/me-shishin-anzen",
+    "pastExams": "https://shinkyuu-db.vercel.app/past-exams/theme/me-shishin-anzen"
+   },
+   "updatedAt": "2026-10-11T09:56:26+09:00",
+   "publicationAllowed": true,
+   "warningNotes": [
+    "テーマ分類は当DB独自。出題数は「このテーマに分類した問題数」"
+   ]
+  },
+  {
+   "stableId": "theme:hy-chiiki-kokusai",
+   "title": "地域保健・精神保健・国際保健",
+   "subject": "hygiene",
+   "subjectName": "衛生学・公衆衛生学",
+   "examCount": 3,
+   "examRounds": [
+    30,
+    32,
+    34
+   ],
+   "byRound": {
+    "29": 0,
+    "30": 1,
+    "31": 0,
+    "32": 1,
+    "33": 0,
+    "34": 1
+   },
+   "recent3Count": 2,
+   "pastExamPracticeCount": 3,
+   "originalQuizCount": 0,
+   "standard2026Status": null,
+   "sourceVersion": "shinkyuu-db@2d05bdd",
+   "verifiedStatus": "COMPUTED_FROM_OFFICIAL_EXAMS",
+   "sourceType": "official_exam",
+   "relatedDbUrl": "https://shinkyuu-db.vercel.app/past-exams/theme/hy-chiiki-kokusai",
+   "relatedDbUrls": {
+    "theme": "https://shinkyuu-db.vercel.app/themes/hy-chiiki-kokusai",
+    "pastExams": "https://shinkyuu-db.vercel.app/past-exams/theme/hy-chiiki-kokusai"
+   },
+   "updatedAt": "2026-10-11T09:56:26+09:00",
+   "publicationAllowed": true,
+   "warningNotes": [
+    "テーマ分類は当DB独自。出題数は「このテーマに分類した問題数」"
+   ]
+  },
+  {
+   "stableId": "theme:oc-ebm-kenkyu",
+   "title": "根拠に基づいた鍼灸治療（臨床研究とエビデンス）",
+   "subject": "oriental-clinical",
+   "subjectName": "東洋医学臨床論",
+   "examCount": 0,
+   "examRounds": [],
+   "byRound": {
+    "29": 0,
+    "30": 0,
+    "31": 0,
+    "32": 0,
+    "33": 0,
+    "34": 0
+   },
+   "recent3Count": 0,
+   "pastExamPracticeCount": 0,
+   "originalQuizCount": 5,
+   "standard2026Status": "new",
+   "sourceVersion": "shinkyuu-db@2d05bdd",
+   "verifiedStatus": "COMPUTED_FROM_OFFICIAL_EXAMS",
+   "sourceType": "official_exam",
+   "relatedDbUrl": "https://shinkyuu-db.vercel.app/themes/oc-ebm-kenkyu",
+   "relatedDbUrls": {
+    "theme": "https://shinkyuu-db.vercel.app/themes/oc-ebm-kenkyu",
+    "quiz": "https://shinkyuu-db.vercel.app/quiz/theme/oc-ebm-kenkyu"
+   },
+   "updatedAt": "2026-10-11T09:56:26+09:00",
+   "publicationAllowed": true,
+   "warningNotes": [
+    "テーマ分類は当DB独自。出題数は「このテーマに分類した問題数」",
+    "第29〜34回に出題実績なし（学習用テーマ）",
+    "2026年版出題基準の変更区分は公式の事実。第35回で出ることを示すものではない"
+   ]
+  },
+  {
+   "stableId": "theme:oc-kanwa-care",
+   "title": "緩和ケアにおける鍼灸",
+   "subject": "oriental-clinical",
+   "subjectName": "東洋医学臨床論",
+   "examCount": 0,
+   "examRounds": [],
+   "byRound": {
+    "29": 0,
+    "30": 0,
+    "31": 0,
+    "32": 0,
+    "33": 0,
+    "34": 0
+   },
+   "recent3Count": 0,
+   "pastExamPracticeCount": 0,
+   "originalQuizCount": 3,
+   "standard2026Status": "new",
+   "sourceVersion": "shinkyuu-db@2d05bdd",
+   "verifiedStatus": "COMPUTED_FROM_OFFICIAL_EXAMS",
+   "sourceType": "official_exam",
+   "relatedDbUrl": "https://shinkyuu-db.vercel.app/themes/oc-kanwa-care",
+   "relatedDbUrls": {
+    "theme": "https://shinkyuu-db.vercel.app/themes/oc-kanwa-care",
+    "quiz": "https://shinkyuu-db.vercel.app/quiz/theme/oc-kanwa-care"
+   },
+   "updatedAt": "2026-10-11T09:56:26+09:00",
+   "publicationAllowed": true,
+   "warningNotes": [
+    "テーマ分類は当DB独自。出題数は「このテーマに分類した問題数」",
+    "第29〜34回に出題実績なし（学習用テーマ）",
+    "2026年版出題基準の変更区分は公式の事実。第35回で出ることを示すものではない"
+   ]
+  },
+  {
+   "stableId": "theme:oc-saigai-iryo",
+   "title": "災害医療と鍼灸師の役割",
+   "subject": "oriental-clinical",
+   "subjectName": "東洋医学臨床論",
+   "examCount": 0,
+   "examRounds": [],
+   "byRound": {
+    "29": 0,
+    "30": 0,
+    "31": 0,
+    "32": 0,
+    "33": 0,
+    "34": 0
+   },
+   "recent3Count": 0,
+   "pastExamPracticeCount": 0,
+   "originalQuizCount": 3,
+   "standard2026Status": "new",
+   "sourceVersion": "shinkyuu-db@2d05bdd",
+   "verifiedStatus": "COMPUTED_FROM_OFFICIAL_EXAMS",
+   "sourceType": "official_exam",
+   "relatedDbUrl": "https://shinkyuu-db.vercel.app/themes/oc-saigai-iryo",
+   "relatedDbUrls": {
+    "theme": "https://shinkyuu-db.vercel.app/themes/oc-saigai-iryo",
+    "quiz": "https://shinkyuu-db.vercel.app/quiz/theme/oc-saigai-iryo"
+   },
+   "updatedAt": "2026-10-11T09:56:26+09:00",
+   "publicationAllowed": true,
+   "warningNotes": [
+    "テーマ分類は当DB独自。出題数は「このテーマに分類した問題数」",
+    "第29〜34回に出題実績なし（学習用テーマ）",
+    "2026年版出題基準の変更区分は公式の事実。第35回で出ることを示すものではない"
+   ]
+  },
+  {
+   "stableId": "theme:oo-nihon-dento-igaku",
+   "title": "日本伝統医学（古方派・後世派・折衷派・腹診）",
+   "subject": "oriental-overview",
+   "subjectName": "東洋医学概論",
+   "examCount": 0,
+   "examRounds": [],
+   "byRound": {
+    "29": 0,
+    "30": 0,
+    "31": 0,
+    "32": 0,
+    "33": 0,
+    "34": 0
+   },
+   "recent3Count": 0,
+   "pastExamPracticeCount": 0,
+   "originalQuizCount": 5,
+   "standard2026Status": "new",
+   "sourceVersion": "shinkyuu-db@2d05bdd",
+   "verifiedStatus": "COMPUTED_FROM_OFFICIAL_EXAMS",
+   "sourceType": "official_exam",
+   "relatedDbUrl": "https://shinkyuu-db.vercel.app/themes/oo-nihon-dento-igaku",
+   "relatedDbUrls": {
+    "theme": "https://shinkyuu-db.vercel.app/themes/oo-nihon-dento-igaku",
+    "quiz": "https://shinkyuu-db.vercel.app/quiz/theme/oo-nihon-dento-igaku"
+   },
+   "updatedAt": "2026-10-11T09:56:26+09:00",
+   "publicationAllowed": true,
+   "warningNotes": [
+    "テーマ分類は当DB独自。出題数は「このテーマに分類した問題数」",
+    "第29〜34回に出題実績なし（学習用テーマ）",
+    "2026年版出題基準の変更区分は公式の事実。第35回で出ることを示すものではない"
+   ]
+  },
+  {
+   "stableId": "theme:cs-koreisha-shikkan",
+   "title": "高齢者に多い疾患（フレイル・サルコペニア・ロコモ・老年症候群）",
+   "subject": "clinical-specific",
+   "subjectName": "臨床医学各論",
+   "examCount": 0,
+   "examRounds": [],
+   "byRound": {
+    "29": 0,
+    "30": 0,
+    "31": 0,
+    "32": 0,
+    "33": 0,
+    "34": 0
+   },
+   "recent3Count": 0,
+   "pastExamPracticeCount": 0,
+   "originalQuizCount": 4,
+   "standard2026Status": "new",
+   "sourceVersion": "shinkyuu-db@2d05bdd",
+   "verifiedStatus": "COMPUTED_FROM_OFFICIAL_EXAMS",
+   "sourceType": "official_exam",
+   "relatedDbUrl": "https://shinkyuu-db.vercel.app/themes/cs-koreisha-shikkan",
+   "relatedDbUrls": {
+    "theme": "https://shinkyuu-db.vercel.app/themes/cs-koreisha-shikkan",
+    "quiz": "https://shinkyuu-db.vercel.app/quiz/theme/cs-koreisha-shikkan"
+   },
+   "updatedAt": "2026-10-11T09:56:26+09:00",
+   "publicationAllowed": true,
+   "warningNotes": [
+    "テーマ分類は当DB独自。出題数は「このテーマに分類した問題数」",
+    "第29〜34回に出題実績なし（学習用テーマ）",
+    "2026年版出題基準の変更区分は公式の事実。第35回で出ることを示すものではない"
+   ]
+  }
+ ]
+}

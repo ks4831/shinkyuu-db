@@ -1,0 +1,210 @@
+{
+ "stableId": "link-map",
+ "title": "note と DB の相互リンク",
+ "sourceVersion": "shinkyuu-db@2d05bdd",
+ "updatedAt": "2026-10-11T09:56:26+09:00",
+ "utm": {
+  "rule": "note → DB のリンクには必ず UTM を付ける。utm_campaign は記事の stableId（例: free-01-kankeihoki）",
+  "template": "{url}?utm_source=note&utm_medium=article&utm_campaign={articleId}",
+  "params": {
+   "utm_source": "note",
+   "utm_medium": "article",
+   "utm_campaign": "{articleId}"
+  }
+ },
+ "dbPages": [
+  {
+   "stableId": "db:home",
+   "title": "トップ",
+   "path": "/",
+   "url": "https://shinkyuu-db.vercel.app/"
+  },
+  {
+   "stableId": "db:past-exams",
+   "title": "過去問（年度別・科目別・テーマ別）",
+   "path": "/past-exams",
+   "url": "https://shinkyuu-db.vercel.app/past-exams"
+  },
+  {
+   "stableId": "db:quiz-weak",
+   "title": "弱点復習",
+   "path": "/quiz/weak",
+   "url": "https://shinkyuu-db.vercel.app/quiz/weak"
+  },
+  {
+   "stableId": "db:quiz-daily",
+   "title": "今日の10問",
+   "path": "/quiz/daily",
+   "url": "https://shinkyuu-db.vercel.app/quiz/daily"
+  },
+  {
+   "stableId": "db:acupoints",
+   "title": "経穴から学ぶ",
+   "path": "/acupoints",
+   "url": "https://shinkyuu-db.vercel.app/acupoints"
+  },
+  {
+   "stableId": "db:exam-35",
+   "title": "第35回対策（2026年版出題基準）",
+   "path": "/exam-35",
+   "url": "https://shinkyuu-db.vercel.app/exam-35"
+  },
+  {
+   "stableId": "db:study-checklist",
+   "title": "学習チェックリスト",
+   "path": "/study/checklist",
+   "url": "https://shinkyuu-db.vercel.app/study/checklist"
+  },
+  {
+   "stableId": "db:past-exams-subject:medical-overview",
+   "title": "医療概論の過去問",
+   "path": "/past-exams/subject/medical-overview",
+   "url": "https://shinkyuu-db.vercel.app/past-exams/subject/medical-overview"
+  },
+  {
+   "stableId": "db:past-exams-subject:hygiene",
+   "title": "衛生学・公衆衛生学の過去問",
+   "path": "/past-exams/subject/hygiene",
+   "url": "https://shinkyuu-db.vercel.app/past-exams/subject/hygiene"
+  },
+  {
+   "stableId": "db:past-exams-subject:regulations",
+   "title": "関係法規の過去問",
+   "path": "/past-exams/subject/regulations",
+   "url": "https://shinkyuu-db.vercel.app/past-exams/subject/regulations"
+  },
+  {
+   "stableId": "db:past-exams-subject:anatomy",
+   "title": "解剖学の過去問",
+   "path": "/past-exams/subject/anatomy",
+   "url": "https://shinkyuu-db.vercel.app/past-exams/subject/anatomy"
+  },
+  {
+   "stableId": "db:past-exams-subject:physiology",
+   "title": "生理学の過去問",
+   "path": "/past-exams/subject/physiology",
+   "url": "https://shinkyuu-db.vercel.app/past-exams/subject/physiology"
+  },
+  {
+   "stableId": "db:past-exams-subject:pathology",
+   "title": "病理学概論の過去問",
+   "path": "/past-exams/subject/pathology",
+   "url": "https://shinkyuu-db.vercel.app/past-exams/subject/pathology"
+  },
+  {
+   "stableId": "db:past-exams-subject:clinical-general",
+   "title": "臨床医学総論の過去問",
+   "path": "/past-exams/subject/clinical-general",
+   "url": "https://shinkyuu-db.vercel.app/past-exams/subject/clinical-general"
+  },
+  {
+   "stableId": "db:past-exams-subject:clinical-specific",
+   "title": "臨床医学各論の過去問",
+   "path": "/past-exams/subject/clinical-specific",
+   "url": "https://shinkyuu-db.vercel.app/past-exams/subject/clinical-specific"
+  },
+  {
+   "stableId": "db:past-exams-subject:rehabilitation",
+   "title": "リハビリテーション医学の過去問",
+   "path": "/past-exams/subject/rehabilitation",
+   "url": "https://shinkyuu-db.vercel.app/past-exams/subject/rehabilitation"
+  },
+  {
+   "stableId": "db:past-exams-subject:oriental-overview",
+   "title": "東洋医学概論の過去問",
+   "path": "/past-exams/subject/oriental-overview",
+   "url": "https://shinkyuu-db.vercel.app/past-exams/subject/oriental-overview"
+  },
+  {
+   "stableId": "db:past-exams-subject:meridians-acupoints",
+   "title": "経絡経穴概論の過去問",
+   "path": "/past-exams/subject/meridians-acupoints",
+   "url": "https://shinkyuu-db.vercel.app/past-exams/subject/meridians-acupoints"
+  },
+  {
+   "stableId": "db:past-exams-subject:acupuncture-theory",
+   "title": "はり理論の過去問",
+   "path": "/past-exams/subject/acupuncture-theory",
+   "url": "https://shinkyuu-db.vercel.app/past-exams/subject/acupuncture-theory"
+  },
+  {
+   "stableId": "db:past-exams-subject:moxibustion-theory",
+   "title": "きゅう理論の過去問",
+   "path": "/past-exams/subject/moxibustion-theory",
+   "url": "https://shinkyuu-db.vercel.app/past-exams/subject/moxibustion-theory"
+  },
+  {
+   "stableId": "db:past-exams-subject:oriental-clinical",
+   "title": "東洋医学臨床論の過去問",
+   "path": "/past-exams/subject/oriental-clinical",
+   "url": "https://shinkyuu-db.vercel.app/past-exams/subject/oriental-clinical"
+  }
+ ],
+ "noteArticles": [
+  {
+   "stableId": "note:nb284e53363b1",
+   "title": "鍼灸国試の過去問は何年分やればいい？1,080問を実際に分析してみた",
+   "url": "https://note.com/fine_hornet161/n/nb284e53363b1",
+   "topics": [
+    "past-exams",
+    "study-plan"
+   ],
+   "dbPlacements": [
+    "https://shinkyuu-db.vercel.app/past-exams"
+   ],
+   "measurement": "DB 側の GA4 イベント note_link_click（note_id, placement）"
+  },
+  {
+   "stableId": "note:nd65e3564a30e",
+   "title": "鍼灸国試、何から勉強すればいい？ まず「全部やらなきゃ」をやめてみる",
+   "url": "https://note.com/fine_hornet161/n/nd65e3564a30e",
+   "topics": [
+    "study-plan"
+   ],
+   "dbPlacements": [
+    "https://shinkyuu-db.vercel.app/past-exams"
+   ],
+   "measurement": "DB 側の GA4 イベント note_link_click（note_id, placement）"
+  },
+  {
+   "stableId": "note:n1f60a0e5a4ec",
+   "title": "経穴が覚えられない鍼灸学生へ。まず「バラバラに覚える」のをやめてみる",
+   "url": "https://note.com/fine_hornet161/n/n1f60a0e5a4ec",
+   "topics": [
+    "acupoints",
+    "memorization"
+   ],
+   "dbPlacements": [
+    "https://shinkyuu-db.vercel.app/acupoints"
+   ],
+   "measurement": "DB 側の GA4 イベント note_link_click（note_id, placement）"
+  },
+  {
+   "stableId": "note:nbdd12746a84d",
+   "title": "鍼灸国試、経穴はどこまで覚える？2026年版出題基準から整理してみた",
+   "url": "https://note.com/fine_hornet161/n/nbdd12746a84d",
+   "topics": [
+    "acupoints",
+    "standard-2026"
+   ],
+   "dbPlacements": [
+    "https://shinkyuu-db.vercel.app/acupoints",
+    "https://shinkyuu-db.vercel.app/exam-35"
+   ],
+   "measurement": "DB 側の GA4 イベント note_link_click（note_id, placement）"
+  },
+  {
+   "stableId": "note:nbad325d6a396",
+   "title": "第35回鍼灸国試、何が変わる？2026年版出題基準を調べてみた",
+   "url": "https://note.com/fine_hornet161/n/nbad325d6a396",
+   "topics": [
+    "standard-2026"
+   ],
+   "dbPlacements": [
+    "https://shinkyuu-db.vercel.app/exam-35"
+   ],
+   "measurement": "DB 側の GA4 イベント note_link_click（note_id, placement）"
+  }
+ ],
+ "noteAccountUrl": "https://note.com/fine_hornet161"
+}

@@ -1,0 +1,397 @@
+{
+ "stableId": "recommended-articles",
+ "sourceVersion": "shinkyuu-db@2d05bdd",
+ "updatedAt": "2026-10-11T09:56:26+09:00",
+ "candidates": [
+  {
+   "stableId": "candidate:C01",
+   "title": "鍼灸国家試験の過去問は何年分必要か",
+   "subject": null,
+   "articleType": "free",
+   "evidence": {
+    "themeExamCount": null,
+    "subjectExamCount": null,
+    "topThemes": [],
+    "basis": "第29〜34回の公式過去問1080問を、当DBのテーマ分類（themeId・1問1テーマ）で数えた件数。テーマ分類は当DB独自（出題基準の項目を参考に作成）"
+   },
+   "overlapWithNote": {
+    "noteId": "nb284e53363b1",
+    "status": "overlap_existing"
+   },
+   "sourceVersion": "shinkyuu-db@2d05bdd",
+   "verifiedStatus": "EDITORIAL_CANDIDATE",
+   "sourceType": "db_statistics",
+   "relatedDbUrl": "https://shinkyuu-db.vercel.app/past-exams",
+   "updatedAt": "2026-10-11T09:56:26+09:00",
+   "publicationAllowed": true,
+   "warningNotes": [
+    "公開済み記事と同じ主題。新記事ではなく既存記事の更新・内部リンクで対応",
+    "公開順は note 側で既存記事との重複を再確認してから決める"
+   ]
+  },
+  {
+   "stableId": "candidate:C02",
+   "title": "経穴の覚え方と復習方法",
+   "subject": "meridians-acupoints",
+   "articleType": "free",
+   "evidence": {
+    "themeExamCount": 23,
+    "subjectExamCount": 120,
+    "topThemes": [
+     {
+      "themeId": "juni-kei-myaku",
+      "title": "十二経脈",
+      "examCount": 51
+     },
+     {
+      "themeId": "go-yu-ketsu",
+      "title": "五兪穴",
+      "examCount": 12
+     },
+     {
+      "themeId": "me-sonota-tokketsu",
+      "title": "その他の特定穴（絡穴・八会穴・下合穴・四総穴・八脈交会穴・背部兪穴）",
+      "examCount": 12
+     },
+     {
+      "themeId": "me-shishin-anzen",
+      "title": "経穴と刺鍼の安全性（危険部位・禁鍼穴・禁灸穴）",
+      "examCount": 10
+     },
+     {
+      "themeId": "kiki-hachi-myaku",
+      "title": "奇経八脈",
+      "examCount": 7
+     }
+    ],
+    "basis": "第29〜34回の公式過去問1080問を、当DBのテーマ分類（themeId・1問1テーマ）で数えた件数。テーマ分類は当DB独自（出題基準の項目を参考に作成）"
+   },
+   "overlapWithNote": {
+    "noteId": "n1f60a0e5a4ec",
+    "status": "overlap_existing"
+   },
+   "sourceVersion": "shinkyuu-db@2d05bdd",
+   "verifiedStatus": "EDITORIAL_CANDIDATE",
+   "sourceType": "db_statistics",
+   "relatedDbUrl": "https://shinkyuu-db.vercel.app/past-exams/theme/go-yu-ketsu",
+   "updatedAt": "2026-10-11T09:56:26+09:00",
+   "publicationAllowed": true,
+   "warningNotes": [
+    "公開済み記事と主題が近い。「復習方法」に絞るか、既存記事の続編にする",
+    "公開順は note 側で既存記事との重複を再確認してから決める"
+   ]
+  },
+  {
+   "stableId": "candidate:C03",
+   "title": "五兪穴の整理と間違えやすいポイント",
+   "subject": "meridians-acupoints",
+   "articleType": "free",
+   "evidence": {
+    "themeExamCount": 12,
+    "subjectExamCount": 120,
+    "topThemes": [
+     {
+      "themeId": "juni-kei-myaku",
+      "title": "十二経脈",
+      "examCount": 51
+     },
+     {
+      "themeId": "go-yu-ketsu",
+      "title": "五兪穴",
+      "examCount": 12
+     },
+     {
+      "themeId": "me-sonota-tokketsu",
+      "title": "その他の特定穴（絡穴・八会穴・下合穴・四総穴・八脈交会穴・背部兪穴）",
+      "examCount": 12
+     },
+     {
+      "themeId": "me-shishin-anzen",
+      "title": "経穴と刺鍼の安全性（危険部位・禁鍼穴・禁灸穴）",
+      "examCount": 10
+     },
+     {
+      "themeId": "kiki-hachi-myaku",
+      "title": "奇経八脈",
+      "examCount": 7
+     }
+    ],
+    "basis": "第29〜34回の公式過去問1080問を、当DBのテーマ分類（themeId・1問1テーマ）で数えた件数。テーマ分類は当DB独自（出題基準の項目を参考に作成）"
+   },
+   "overlapWithNote": {
+    "noteId": null,
+    "status": "no_published_overlap"
+   },
+   "sourceVersion": "shinkyuu-db@2d05bdd",
+   "verifiedStatus": "EDITORIAL_CANDIDATE",
+   "sourceType": "db_statistics",
+   "relatedDbUrl": "https://shinkyuu-db.vercel.app/past-exams/theme/go-yu-ketsu",
+   "updatedAt": "2026-10-11T09:56:26+09:00",
+   "publicationAllowed": true,
+   "warningNotes": [
+    "経穴の値は acupoint-learning.json の publish=allowed のものだけを使う",
+    "公開順は note 側で既存記事との重複を再確認してから決める"
+   ]
+  },
+  {
+   "stableId": "candidate:C04",
+   "title": "原穴・郄穴・絡穴の違い",
+   "subject": "meridians-acupoints",
+   "articleType": "free",
+   "evidence": {
+    "themeExamCount": 7,
+    "subjectExamCount": 120,
+    "topThemes": [
+     {
+      "themeId": "juni-kei-myaku",
+      "title": "十二経脈",
+      "examCount": 51
+     },
+     {
+      "themeId": "go-yu-ketsu",
+      "title": "五兪穴",
+      "examCount": 12
+     },
+     {
+      "themeId": "me-sonota-tokketsu",
+      "title": "その他の特定穴（絡穴・八会穴・下合穴・四総穴・八脈交会穴・背部兪穴）",
+      "examCount": 12
+     },
+     {
+      "themeId": "me-shishin-anzen",
+      "title": "経穴と刺鍼の安全性（危険部位・禁鍼穴・禁灸穴）",
+      "examCount": 10
+     },
+     {
+      "themeId": "kiki-hachi-myaku",
+      "title": "奇経八脈",
+      "examCount": 7
+     }
+    ],
+    "basis": "第29〜34回の公式過去問1080問を、当DBのテーマ分類（themeId・1問1テーマ）で数えた件数。テーマ分類は当DB独自（出題基準の項目を参考に作成）"
+   },
+   "overlapWithNote": {
+    "noteId": null,
+    "status": "no_published_overlap"
+   },
+   "sourceVersion": "shinkyuu-db@2d05bdd",
+   "verifiedStatus": "EDITORIAL_CANDIDATE",
+   "sourceType": "db_statistics",
+   "relatedDbUrl": "https://shinkyuu-db.vercel.app/past-exams/theme/gen-ketsu",
+   "updatedAt": "2026-10-11T09:56:26+09:00",
+   "publicationAllowed": true,
+   "warningNotes": [
+    "絡穴の分類は未確認（excluded）の穴がある。個別の穴名は publish=allowed のものだけ",
+    "公開順は note 側で既存記事との重複を再確認してから決める"
+   ]
+  },
+  {
+   "stableId": "candidate:C05",
+   "title": "東洋医学概論の頻出テーマ",
+   "subject": "oriental-overview",
+   "articleType": "free",
+   "evidence": {
+    "themeExamCount": null,
+    "subjectExamCount": 96,
+    "topThemes": [
+     {
+      "themeId": "oo-shinsatsu-bensho",
+      "title": "四診と弁証の枠組み",
+      "examCount": 30
+     },
+     {
+      "themeId": "oo-keiraku-keimyaku",
+      "title": "経絡系統と経脈病証",
+      "examCount": 14
+     },
+     {
+      "themeId": "ki-ketsu-shin-eki",
+      "title": "気血津液",
+      "examCount": 11
+     },
+     {
+      "themeId": "zo-sho",
+      "title": "蔵象",
+      "examCount": 11
+     },
+     {
+      "themeId": "oo-chiryo-gairon",
+      "title": "東洋医学の治療原則（補瀉・刺法の基礎）",
+      "examCount": 8
+     }
+    ],
+    "basis": "第29〜34回の公式過去問1080問を、当DBのテーマ分類（themeId・1問1テーマ）で数えた件数。テーマ分類は当DB独自（出題基準の項目を参考に作成）"
+   },
+   "overlapWithNote": {
+    "noteId": null,
+    "status": "no_published_overlap"
+   },
+   "sourceVersion": "shinkyuu-db@2d05bdd",
+   "verifiedStatus": "EDITORIAL_CANDIDATE",
+   "sourceType": "db_statistics",
+   "relatedDbUrl": "https://shinkyuu-db.vercel.app/past-exams/subject/oriental-overview",
+   "updatedAt": "2026-10-11T09:56:26+09:00",
+   "publicationAllowed": true,
+   "warningNotes": [
+    "topic-statistics.json の科目内上位テーマから構成",
+    "公開順は note 側で既存記事との重複を再確認してから決める"
+   ]
+  },
+  {
+   "stableId": "candidate:C06",
+   "title": "はりきゅう理論の学習ポイント",
+   "subject": "acupuncture-theory",
+   "articleType": "free",
+   "evidence": {
+    "themeExamCount": null,
+    "subjectExamCount": 60,
+    "topThemes": [
+     {
+      "themeId": "ha-shishinho",
+      "title": "刺鍼の方式と刺法",
+      "examCount": 11
+     },
+     {
+      "themeId": "ha-chintsu-kiko",
+      "title": "鍼鎮痛の機序",
+      "examCount": 8
+     },
+     {
+      "themeId": "ha-tsukaku-dendoro",
+      "title": "痛みの受容器と伝導路",
+      "examCount": 8
+     },
+     {
+      "themeId": "ha-goshin-kozo",
+      "title": "毫鍼の構造・鍼の種類と規格",
+      "examCount": 6
+     },
+     {
+      "themeId": "ha-kansen-taisaku",
+      "title": "鍼の消毒・感染対策",
+      "examCount": 6
+     }
+    ],
+    "basis": "第29〜34回の公式過去問1080問を、当DBのテーマ分類（themeId・1問1テーマ）で数えた件数。テーマ分類は当DB独自（出題基準の項目を参考に作成）"
+   },
+   "overlapWithNote": {
+    "noteId": null,
+    "status": "no_published_overlap"
+   },
+   "sourceVersion": "shinkyuu-db@2d05bdd",
+   "verifiedStatus": "EDITORIAL_CANDIDATE",
+   "sourceType": "db_statistics",
+   "relatedDbUrl": "https://shinkyuu-db.vercel.app/past-exams/subject/acupuncture-theory",
+   "updatedAt": "2026-10-11T09:56:26+09:00",
+   "publicationAllowed": true,
+   "warningNotes": [
+    "はり理論・きゅう理論の2科目。きゅう理論の上位テーマも併記",
+    "公開順は note 側で既存記事との重複を再確認してから決める"
+   ]
+  },
+  {
+   "stableId": "candidate:C07",
+   "title": "国家試験直前30日の勉強計画",
+   "subject": null,
+   "articleType": "paid",
+   "evidence": {
+    "themeExamCount": null,
+    "subjectExamCount": null,
+    "topThemes": [],
+    "basis": "第29〜34回の公式過去問1080問を、当DBのテーマ分類（themeId・1問1テーマ）で数えた件数。テーマ分類は当DB独自（出題基準の項目を参考に作成）"
+   },
+   "overlapWithNote": {
+    "noteId": null,
+    "status": "no_published_overlap"
+   },
+   "sourceVersion": "shinkyuu-db@2d05bdd",
+   "verifiedStatus": "EDITORIAL_CANDIDATE",
+   "sourceType": "db_statistics",
+   "relatedDbUrl": "https://shinkyuu-db.vercel.app/past-exams",
+   "updatedAt": "2026-10-11T09:56:26+09:00",
+   "publicationAllowed": true,
+   "warningNotes": [
+    "有料教材候補（直前チェック）。科目別の出題数（subjectStats）で配分を示す",
+    "公開順は note 側で既存記事との重複を再確認してから決める"
+   ]
+  },
+  {
+   "stableId": "candidate:C08",
+   "title": "苦手分野を減らす復習法",
+   "subject": null,
+   "articleType": "free",
+   "evidence": {
+    "themeExamCount": null,
+    "subjectExamCount": null,
+    "topThemes": [],
+    "basis": "第29〜34回の公式過去問1080問を、当DBのテーマ分類（themeId・1問1テーマ）で数えた件数。テーマ分類は当DB独自（出題基準の項目を参考に作成）"
+   },
+   "overlapWithNote": {
+    "noteId": null,
+    "status": "no_published_overlap"
+   },
+   "sourceVersion": "shinkyuu-db@2d05bdd",
+   "verifiedStatus": "EDITORIAL_CANDIDATE",
+   "sourceType": "db_statistics",
+   "relatedDbUrl": "https://shinkyuu-db.vercel.app/past-exams",
+   "updatedAt": "2026-10-11T09:56:26+09:00",
+   "publicationAllowed": true,
+   "warningNotes": [
+    "DB の弱点復習（/quiz/weak）への導線記事",
+    "公開順は note 側で既存記事との重複を再確認してから決める"
+   ]
+  },
+  {
+   "stableId": "candidate:C09",
+   "title": "無料で使える鍼灸国試DBの活用方法",
+   "subject": null,
+   "articleType": "free",
+   "evidence": {
+    "themeExamCount": null,
+    "subjectExamCount": null,
+    "topThemes": [],
+    "basis": "第29〜34回の公式過去問1080問を、当DBのテーマ分類（themeId・1問1テーマ）で数えた件数。テーマ分類は当DB独自（出題基準の項目を参考に作成）"
+   },
+   "overlapWithNote": {
+    "noteId": null,
+    "status": "no_published_overlap"
+   },
+   "sourceVersion": "shinkyuu-db@2d05bdd",
+   "verifiedStatus": "EDITORIAL_CANDIDATE",
+   "sourceType": "db_statistics",
+   "relatedDbUrl": "https://shinkyuu-db.vercel.app/past-exams",
+   "updatedAt": "2026-10-11T09:56:26+09:00",
+   "publicationAllowed": true,
+   "warningNotes": [
+    "DB の機能紹介。既存記事と重複しない（DB の使い方を主題にした記事はまだない）",
+    "公開順は note 側で既存記事との重複を再確認してから決める"
+   ]
+  },
+  {
+   "stableId": "candidate:C10",
+   "title": "国家試験対策に使える学習チェックリスト",
+   "subject": null,
+   "articleType": "paid",
+   "evidence": {
+    "themeExamCount": null,
+    "subjectExamCount": null,
+    "topThemes": [],
+    "basis": "第29〜34回の公式過去問1080問を、当DBのテーマ分類（themeId・1問1テーマ）で数えた件数。テーマ分類は当DB独自（出題基準の項目を参考に作成）"
+   },
+   "overlapWithNote": {
+    "noteId": null,
+    "status": "no_published_overlap"
+   },
+   "sourceVersion": "shinkyuu-db@2d05bdd",
+   "verifiedStatus": "EDITORIAL_CANDIDATE",
+   "sourceType": "db_statistics",
+   "relatedDbUrl": "https://shinkyuu-db.vercel.app/past-exams",
+   "updatedAt": "2026-10-11T09:56:26+09:00",
+   "publicationAllowed": true,
+   "warningNotes": [
+    "有料教材候補。DB の /study/checklist と内容を重複させない（印刷用・科目横断の版にする）",
+    "公開順は note 側で既存記事との重複を再確認してから決める"
+   ]
+  }
+ ]
+}

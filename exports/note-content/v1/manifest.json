@@ -1,0 +1,49 @@
+{
+ "schemaVersion": "v1",
+ "sourceVersion": "shinkyuu-db@2d05bdd",
+ "sourceCommit": "2d05bdd",
+ "dataDirty": false,
+ "updatedAt": "2026-10-11T09:56:26+09:00",
+ "spec": "docs/note-export-spec.md",
+ "counts": {
+  "pastExamQuestions": 1080,
+  "pastExamPractice": 1080,
+  "originalQuiz": 205,
+  "themes": 142,
+  "subjects": 14,
+  "acupoints": 361,
+  "acupointsNamePublishable": 283,
+  "acupointsLocationAllowed": 3,
+  "acupointsLocationLabelRequired": 137,
+  "sourceRecords": 669,
+  "noteArticles": 5,
+  "candidates": 10
+ },
+ "files": [
+  {
+   "name": "topic-statistics.json",
+   "sha256": "375ad7cf6918cad60f2168584f04fd6b5b431a8c98a07549911b767c715c1ffa",
+   "bytes": 165253
+  },
+  {
+   "name": "acupoint-learning.json",
+   "sha256": "891ef4501598c5c108991229bbffb68267c935f3c0f3bd4a696b604660b1687a",
+   "bytes": 378157
+  },
+  {
+   "name": "content-safety.json",
+   "sha256": "1d3238fe4c31972110c3d7279e6e56f75b55359203d2dc31fbff46ba5d66e1b6",
+   "bytes": 3992
+  },
+  {
+   "name": "recommended-articles.json",
+   "sha256": "ad3979caa508a83d6dd298b3079d086860a05b4863b263c688a6af83a073a7e2",
+   "bytes": 13706
+  },
+  {
+   "name": "link-map.json",
+   "sha256": "48f31bc8276a9828dc3954993fdeee946707c684673354284df2a38ac95142e6",
+   "bytes": 7163
+  }
+ ]
+}
