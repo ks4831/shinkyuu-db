@@ -33,10 +33,12 @@ const OUT = path.join(ROOT, 'exports', 'note-content', SCHEMA_VERSION)
 const SITE = 'https://shinkyuu-db.vercel.app'
 
 const git = (cmd: string) => execSync(`git ${cmd}`, { cwd: ROOT, encoding: 'utf8' }).trim()
-const sourceCommit = git('rev-parse --short HEAD')
-const updatedAt = git('log -1 --format=%cI')
+// 版は「学習データ（src/data）を最後に変えた commit」。DB の画面や台本だけの commit では変わらないので、書き出しが無駄に古くならない
+const DATA_PATHS = 'src/data ":!src/data/noteArticles.ts"'
+const sourceCommit = git(`log -1 --format=%h -- ${DATA_PATHS}`)
+const updatedAt = git(`log -1 --format=%cI -- ${DATA_PATHS}`)
 // 学習データ（src/data）が commit と違うときは +dirty を付ける。note の記事台帳（noteArticles.ts）は学習データではないので除く
-const dataDirty = git('status --porcelain -- src/data ":!src/data/noteArticles.ts"') !== ''
+const dataDirty = git(`status --porcelain -- ${DATA_PATHS}`) !== ''
 const sourceVersion = `shinkyuu-db@${sourceCommit}${dataDirty ? '+dirty' : ''}`
 
 const subjectName = new Map(subjects.map((s) => [s.id, s.name]))

@@ -20,8 +20,9 @@ note「治療家の道｜かず」の記事制作で使う、DB の読み取り�
 ## 共通項目
 stableId・title・subject・sourceVersion・verifiedStatus・sourceType・relatedDbUrl・updatedAt・publicationAllowed・warningNotes。
 
-- `updatedAt` は、書き出し時刻ではなく commit の日時です（同じ commit から同じファイルができるようにするため）。
-- `sourceVersion` は `shinkyuu-db@<commit>` です。学習データが commit と違うときは `+dirty` が付きます（`test:export` で失敗します）。
+- `sourceVersion` は `shinkyuu-db@<commit>` で、学習データ（`src/data`。note の記事台帳 `noteArticles.ts` は除く）を最後に変えた commit です。画面やスクリプトだけの commit では変わりません。
+- `updatedAt` は、書き出した時刻ではなくその commit の日時です（同じデータから同じファイルができるようにするため）。
+- 学習データが commit と違うときは `+dirty` が付きます（`test:export` で失敗します）。
 
 ## 経穴の項目の扱い（publish）
 | status | publish | 値 | 記事での書き方 |
