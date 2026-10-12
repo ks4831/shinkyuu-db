@@ -46,5 +46,6 @@ stableId・title・subject・sourceVersion・verifiedStatus・sourceType・relat
 - 記事台帳は `src/data/noteArticles.ts`。ID（note の記事キー）・URL の重複は `npm run test:export` が検査する
 - 掲載先：一覧ページ（`placements`）、科目ページ `/subjects/[subjectId]`（`subjectId`）、テーマページ `/themes/[themeId]`（`themeIds`。記事の本文で取り上げたテーマだけ）
 - リンクには UTM を付ける：`utm_source=shinkyuu-db&utm_medium=referral&utm_campaign={utmCampaign または note_<id>}&utm_content={置き場所}`（置き場所は past_exams / acupoints / exam_35 / subject_page / theme_page）
-- クリックは GA4 の既存イベント `note_link_click`（note_id, placement, subject, price_type, link_url）。学習履歴・個人を特定する情報は送らない
+- クリックは GA4 の既存イベント `note_link_click`（article_id, note_id, subject, placement, article_type, price, destination_url）。学習履歴・個人を特定する情報は送らない（Phase A12 で price_type→article_type、link_url→destination_url に改名し、article_id・price を追加。note_id は互換のため残す）
+- 有料教材（price: 'paid'、priceYen）は科目ページ・テーマページのカードだけに出す。一覧ページ・過去問の演習画面には出さない
 

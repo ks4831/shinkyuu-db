@@ -193,6 +193,12 @@ test('13b. note 記事は重複登録がなく、科目・テーマの掲載先�
     assert.ok(href.searchParams.get('utm_campaign'))
     assert.equal(href.searchParams.get('utm_content'), 'subject_page')
   }
+  for (const a of NOTE_ARTICLES) {
+    if (a.price === 'paid') {
+      assert.ok(a.priceYen && a.priceYen > 0, `有料記事に価格がない: ${a.id}`)
+      assert.equal(a.placements.length, 0, `有料記事は一覧ページに出さない: ${a.id}`)
+    } else assert.equal(a.priceYen, undefined, `無料記事に価格がある: ${a.id}`)
+  }
   const exported = links.noteArticles.map((x: { stableId: string }) => x.stableId)
   assert.deepEqual(exported, ids.map((id) => `note:${id}`))
 })

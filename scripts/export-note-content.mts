@@ -317,13 +317,14 @@ const linkMap = {
     url: a.url,
     topics: a.topics,
     price: a.price,
+    priceYen: a.priceYen ?? 0,
     dbPlacements: [
       ...a.placements.map((p) => `${SITE}/${p}`),
       ...(a.subjectId ? [`${SITE}/subjects/${a.subjectId}`] : []),
       ...(a.themeIds ?? []).map((t) => `${SITE}/themes/${t}`),
     ],
     dbToNoteUtm: { utm_source: 'shinkyuu-db', utm_medium: 'referral', utm_campaign: a.utmCampaign ?? `note_${a.id}`, utm_content: '{placement}' },
-    measurement: 'DB 側の GA4 イベント note_link_click（note_id, placement, subject, price_type, link_url）',
+    measurement: 'DB 側の GA4 イベント note_link_click（article_id, note_id, subject, placement, article_type, price, destination_url）',
   })),
   noteAccountUrl: NOTE_ACCOUNT_URL,
 }

@@ -1,6 +1,8 @@
 /* ──────────────────────────────────────────────────────────────
    note「治療家の道｜かず」で公開済みの記事（DB → note の導線）
    - 公開済みの記事だけを載せる（下書き・未公開の記事は載せない）
+   - 無料記事（price: 'free'）と有料教材（price: 'paid'・priceYen）を区別する。有料教材は科目・テーマページのカードだけに出し、
+     一覧ページ（placements）や過去問の演習画面には出さない
    - 記事の正本は note。タイトルは公開ページの表記（2026-10-11 に RSS、
      2026-10-12 に追加分を公開ページで確認）
    - 掲載先は学習を妨げない位置に1か所1ブロックまで。同じ記事を1画面に2回出さない
@@ -23,8 +25,10 @@ export type NoteArticle = {
   topics: string[]
   /** 一覧ページ（/past-exams・/acupoints・/exam-35）への掲載 */
   placements: NotePlacement[]
-  /** 無料記事か有料記事か。DB から案内するのは今のところ無料記事だけ */
+  /** 無料記事か有料記事（教材）か */
   price: 'free' | 'paid'
+  /** 有料記事の価格（円）。無料記事は省略 */
+  priceYen?: number
   /** note の公開日（JST） */
   publishedAt?: string
   /** 科目ページ /subjects/[subjectId] に案内を出す科目 */
@@ -35,6 +39,10 @@ export type NoteArticle = {
   ctaLabel?: string
   /** 案内の補足（1文） */
   summary?: string
+  /** 科目ページ・テーマページのカードの見出し（未設定なら ctaLabel → title） */
+  cardHeading?: string
+  /** カードのボタン文言（未設定なら「記事を読む」） */
+  buttonLabel?: string
   /** UTM の utm_campaign。未設定なら note_<id> */
   utmCampaign?: string
 }
@@ -95,6 +103,8 @@ export const NOTE_ARTICLES: NoteArticle[] = [
     themeIds: ['rg-menkyo', 'rg-seijutsujo', 'rg-bassoku', 'rg-kokoku'],
     ctaLabel: '関係法規の過去6年24問の分類と、繰り返し問われている5つのことを無料で読む',
     summary: '第29〜34回の関係法規24問を、DBのデータで分類した記事です。',
+    cardHeading: '無料で出題傾向を確認',
+    buttonLabel: '無料記事を読む',
     utmCampaign: 'regulations_2026',
   },
   {
@@ -109,8 +119,28 @@ export const NOTE_ARTICLES: NoteArticle[] = [
     // 本文で節を立てて取り上げた上位5テーマ（2026-10-12 の分類見直し後）と、神経系の節で触れた脳神経
     themeIds: ['an-undoki', 'an-naizo', 'an-shinkei', 'an-junkanki', 'an-soshiki', 'no-shinkei'],
     ctaLabel: '解剖学の過去6年の出題傾向と復習の優先順位を無料で読む',
-    summary: '第29〜34回の解剖学54問を、DBのテーマ別に集計した記事です。',
+    summary: '過去6年54問の分析と、復習の優先順位を紹介しています。',
+    cardHeading: '無料で出題傾向を確認',
+    buttonLabel: '無料記事を読む',
     utmCampaign: 'anatomy_2026',
+  },
+  {
+    // 有料教材（980円）。内容はオリジナル問題で、DB の過去問データは使っていない
+    id: 'n042d1f1052e6',
+    title: '第35回鍼灸国試｜解剖学 頻出テーマ攻略ノート',
+    url: 'https://note.com/fine_hornet161/n/n042d1f1052e6',
+    topics: ['anatomy', 'original-questions', 'study-plan'],
+    placements: [],
+    price: 'paid',
+    priceYen: 980,
+    publishedAt: '2026-10-12',
+    subjectId: 'anatomy',
+    // 教材の60問が扱う主なテーマ（問題数の多い順に上位5）
+    themeIds: ['an-undoki', 'an-naizo', 'an-shinkei', 'an-junkanki', 'an-soshiki'],
+    cardHeading: '問題演習で理解を確認',
+    summary: 'オリジナル四択60問と詳しい解説（PDF 41ページ・Excel 6シート）。7日間の復習プランと暗記チェックリストつき。',
+    buttonLabel: '教材の内容を見る',
+    utmCampaign: 'anatomy_paid_2026',
   },
 ]
 
@@ -120,12 +150,17 @@ export function noteArticlesFor(placement: NotePlacement): NoteArticle[] {
 
 /** 科目ページに案内する記事 */
 export function noteArticlesForSubject(subjectId: string): NoteArticle[] {
-  return NOTE_ARTICLES.filter((a) => a.subjectId === subjectId)
+  return sortFreeFirst(NOTE_ARTICLES.filter((a) => a.subjectId === subjectId))
+}
+
+/** 無料記事を先、有料教材を後に並べる（同じ区分の中は台帳の順） */
+function sortFreeFirst(list: NoteArticle[]): NoteArticle[] {
+  return [...list.filter((a) => a.price === 'free'), ...list.filter((a) => a.price === 'paid')]
 }
 
 /** テーマページに案内する記事 */
 export function noteArticlesForTheme(themeId: string): NoteArticle[] {
-  return NOTE_ARTICLES.filter((a) => a.themeIds?.includes(themeId))
+  return sortFreeFirst(NOTE_ARTICLES.filter((a) => a.themeIds?.includes(themeId)))
 }
 
 /** DB → note のリンク先（UTM 付き）。utm_content は置いた場所 */
