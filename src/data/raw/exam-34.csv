@@ -13,13 +13,13 @@ id,examRound,year,questionNumber,session,subject,officialLarge,officialMedium,of
 34-012,34,2026,12,共通,regulations,専門基礎科目,関係法規,あはき法,hari-kyu-law,業務開始届出の要否,,専ら出張のみで業務を行う施術者は業務開始時に住所地の都道府県知事へ届出（第9条の3）。施術所の開設は開設後10日以内に所在地の知事へ届出（第9条の2）。施術所に雇われる施術者・料金改定にはこの届出は不要,,indexed_official,2020,180,,rg-seijutsujo
 34-013,34,2026,13,共通,regulations,専門基礎科目,関係法規,あはき法,hari-kyu-law,罰金対象行為,,外科手術・薬品の投与・その指示は禁止（第4条）だが罰則規定はない。はり師の消毒義務（第6条）違反は30万円以下の罰金（第13条の8）,,indexed_official,2020,180,,rg-bassoku
 34-014,34,2026,14,共通,regulations,専門基礎科目,関係法規,医療保険関連法規,health-insurance-law,特定健康診査・特定保健指導,,特定健康診査・特定保健指導は、高齢者の医療の確保に関する法律に基づき医療保険者に実施が義務付けられている,,indexed_official,2020,180,,rg-iryo-kanren
-34-015,34,2026,15,共通,anatomy,専門基礎科目,解剖学,神経系,nervous-system,上肢末梢神経の走行,,橈骨神経は上腕骨体後面のらせん溝（橈骨神経溝）に沿って走行する。尺骨神経は上腕骨内側上顆の後面を通る,,indexed_official,2020,180,,no-shinkei
+34-015,34,2026,15,共通,anatomy,専門基礎科目,解剖学,神経系,nervous-system,上肢末梢神経の走行,,橈骨神経は上腕骨体後面のらせん溝（橈骨神経溝）に沿って走行する。尺骨神経は上腕骨内側上顆の後面を通る,,indexed_official,2020,180,,an-shinkei
 34-016,34,2026,16,共通,anatomy,専門基礎科目,解剖学,筋系,musculoskeletal-system,腹筋群の構造と機能,,鼠径靱帯は外腹斜筋の停止腱膜の下縁が肥厚したもの。精巣挙筋は内腹斜筋の筋束から形成される,,indexed_official,2020,180,,kin-kishi-teishi
 34-017,34,2026,17,共通,anatomy,専門基礎科目,解剖学,脈管系,circulatory-system,内転筋管の内容物,,内転筋管（ハンター管）を通過する構造物（大腿動脈・伏在神経）を整理する,,indexed_official,2020,180,,an-junkanki
 34-018,34,2026,18,共通,anatomy,専門基礎科目,解剖学,生殖器系,reproductive-system,男性生殖器の構造,,ライディッヒ細胞（間質細胞）はテストステロンなどの男性ホルモンを分泌する。精管は精嚢の導管と合流して射精管となる,,indexed_official,2020,180,,an-naizo
 34-019,34,2026,19,共通,anatomy,専門基礎科目,解剖学,内分泌系,endocrine-system,ランゲルハンス島の細胞,,ランゲルハンス島のβ細胞はインスリン、α細胞はグルカゴンを分泌し、構成比はβ細胞の方が多い,,indexed_official,2020,180,,an-naibunpi
 34-020,34,2026,20,共通,anatomy,専門基礎科目,解剖学,神経系,nervous-system,視覚伝導路,,視覚伝導路（網膜→視交叉→外側膝状体→視覚野）の経路と視野の対応を整理する,,indexed_official,2020,180,,an-shinkei
-34-021,34,2026,21,共通,anatomy,専門基礎科目,解剖学,神経系,nervous-system,仙骨神経叢・腰神経叢の分枝,,陰部神経は仙骨神経叢の枝。閉鎖神経・腸骨鼠径神経・陰部大腿神経は腰神経叢の枝,,indexed_official,2020,180,,no-shinkei
+34-021,34,2026,21,共通,anatomy,専門基礎科目,解剖学,神経系,nervous-system,仙骨神経叢・腰神経叢の分枝,,陰部神経は仙骨神経叢の枝。閉鎖神経・腸骨鼠径神経・陰部大腿神経は腰神経叢の枝,,indexed_official,2020,180,,an-shinkei
 34-022,34,2026,22,共通,anatomy,専門基礎科目,解剖学,神経系,nervous-system,副交感神経節と分布先,,涙腺に分布する副交感性節後線維の細胞体は翼口蓋神経節にある。耳神経節は耳下腺、顎下神経節は顎下腺・舌下腺に分布する,,indexed_official,2020,180,,no-shinkei
 34-023,34,2026,23,共通,anatomy,専門基礎科目,解剖学,組織学,histology,細胞間接着装置の種類と機能,,タイト結合（密着結合）は隣接する細胞膜を密着させて細胞間隙を塞ぎ、水や分子の通過を制限するバリアとなる,,indexed_official,2020,180,,an-soshiki
 34-024,34,2026,24,共通,physiology,専門基礎科目,生理学,内臓系,visceral-anatomy,肝臓の細胞と機能,,肝細胞はアルブミンなどの血漿タンパクを合成する。ビタミンAを貯蔵するのは伊東細胞（クッパー細胞ではない）。門脈は肝臓へ血液が流入する血管,,indexed_official,2020,180,,ph-shokaku-seiri

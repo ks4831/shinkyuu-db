@@ -21,7 +21,7 @@ id,examRound,year,questionNumber,session,subject,officialLarge,officialMedium,of
 31-020,31,2023,20,共通,anatomy,専門基礎科目,解剖学,鼻腔の解剖,visceral-anatomy,鼻腔・キーゼルバッハ部位,,キーゼルバッハ部位は鼻中隔の前端部（正しい）。嗅上皮は鼻腔上部。上顎洞は中鼻道と交通。鼻涙管は下鼻道に開口,,indexed_official,2020,180,,an-naizo
 31-021,31,2023,21,共通,anatomy,専門基礎科目,解剖学,消化管の解剖,visceral-anatomy,胃の構造と細胞機能,,幽門では括約筋が発達（正しい）。胃底部は噴門に連続。塩酸は壁細胞から分泌。小網は小弯に付着,,indexed_official,2020,180,,an-naizo
 31-022,31,2023,22,共通,anatomy,専門基礎科目,解剖学,脳神経と神経節,nervous-system,脳神経と神経節の組合せ,,舌咽神経→耳神経節（正しい）。毛様体神経節で中継する副交感節前線維は動眼神経由来（眼神経の鼻毛様体神経は知覚根として通過するのみ）。翼口蓋神経節・顎下神経節は顔面神経、耳神経節は舌咽神経の副交感線維を中継する。らせん神経節は蝸牛神経の感覚神経節,,indexed_official,2020,180,,no-shinkei
-31-023,31,2023,23,共通,anatomy,専門基礎科目,解剖学,眼球の構造,nervous-system,眼房水の循環とシュレム管,,眼房水はシュレム管に吸収（正しい）。視神経乳頭は盲点（視覚なし）。錐体細胞は色覚。副交感神経は瞳孔括約筋支配,,indexed_official,2020,180,,kansetsu-kozo
+31-023,31,2023,23,共通,anatomy,専門基礎科目,解剖学,眼球の構造,nervous-system,眼房水の循環とシュレム管,,眼房水はシュレム管に吸収（正しい）。視神経乳頭は盲点（視覚なし）。錐体細胞は色覚。副交感神経は瞳孔括約筋支配,,indexed_official,2020,180,,an-shinkei
 31-024,31,2023,24,共通,physiology,専門基礎科目,生理学,心臓の刺激伝導系,cardiovascular-physiology,刺激伝導系の伝達経路,,刺激は洞房結節→房室結節→ヒス束→プルキンエ線維の順。房室結節は自動能をもつ。プルキンエ線維は心室を収縮させる,,indexed_official,2020,180,,ph-junkan-seiri
 31-025,31,2023,25,共通,physiology,専門基礎科目,生理学,消化と吸収,metabolic-physiology,消化管での栄養素吸収部位,,モノグリセリドは小腸で吸収（正しい）。グルコースは小腸で吸収（胃でない）。アミノ酸は小腸吸収。水分の約80%は小腸,,indexed_official,2020,180,,ph-shokaku-seiri
 31-026,31,2023,26,共通,physiology,専門基礎科目,生理学,内分泌ホルモン,endocrine-physiology,甲状腺とサイロキシンの対応,,甲状腺→サイロキシン（正しい）。膵臓はインスリン・グルカゴン。副腎髄質はアドレナリン。卵巣はエストロゲン,,indexed_official,2020,180,,ph-naibunpi-seiri

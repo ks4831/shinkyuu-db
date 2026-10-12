@@ -20,7 +20,7 @@ id,examRound,year,questionNumber,session,subject,officialLarge,officialMedium,of
 32-019,32,2024,19,共通,anatomy,専門基礎科目,解剖学,口腔・唾液腺,visceral-anatomy,耳下腺管の開口部,,耳下腺管（ステノン管）は口腔前庭（頬粘膜）に開口。内舌筋は舌下神経支配。舌扁桃は舌根部,,indexed_official,2020,180,,an-naizo
 32-020,32,2024,20,共通,anatomy,専門基礎科目,解剖学,消化管の解剖,visceral-anatomy,上行結腸の腹膜垂,,腹膜垂（脂肪垂）は結腸外面にみられる、脂肪組織を含む漿膜の小突起。腸間膜・腸絨毛・パイエル板は小腸。腹膜垂は大腸の特徴,,indexed_official,2020,180,,an-naizo
 32-021,32,2024,21,共通,anatomy,専門基礎科目,解剖学,脳の被膜・硬膜,nervous-system,小脳テントと髄膜,,小脳テントは大脳後頭葉と小脳の境（正しい）。脳実質に最近位は軟膜（クモ膜でない）。硬膜静脈洞は内頸静脈へ,,indexed_official,2020,180,,an-shinkei
-32-022,32,2024,22,共通,anatomy,専門基礎科目,解剖学,腕神経叢,nervous-system,後神経束からの分枝,,後神経束の分枝：腋窩神経・橈骨神経・胸背神経（広背筋支配）。肩甲上・肩甲背・長胸神経は後神経束からでない,,indexed_official,2020,180,,an-undoki
+32-022,32,2024,22,共通,anatomy,専門基礎科目,解剖学,腕神経叢,nervous-system,後神経束からの分枝,,後神経束の分枝：腋窩神経・橈骨神経・胸背神経（広背筋支配）。肩甲上・肩甲背・長胸神経は後神経束からでない,,indexed_official,2020,180,,an-shinkei
 32-023,32,2024,23,共通,anatomy,専門基礎科目,解剖学,感覚路・味覚,nervous-system,味覚の中継核,,味覚の中継は孤束核（延髄）。舌前2/3の味覚は顔面神経（鼓索神経）。舌後1/3は舌咽神経。糸状乳頭に味蕾なし,,indexed_official,2020,180,,an-shinkei
 32-024,32,2024,24,共通,physiology,専門基礎科目,生理学,細胞生物学・核酸,metabolic-physiology,核酸の機能,,mRNA・tRNA・rRNAはタンパク質合成に必要。DNAは4種塩基（A・T・G・C）。RNAはウラシルを含む,,indexed_official,2020,180,,ph-saibo-idenshi
 32-025,32,2024,25,共通,physiology,専門基礎科目,生理学,血液生理,cardiovascular-physiology,赤血球の特徴,,赤血球は低張液（蒸留水）で溶血。骨髄で産生。無核細胞。寿命約120日。腎臓はエリスロポエチンを産生,,indexed_official,2020,180,,ph-junkan-seiri

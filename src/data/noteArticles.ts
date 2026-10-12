@@ -106,8 +106,8 @@ export const NOTE_ARTICLES: NoteArticle[] = [
     price: 'free',
     publishedAt: '2026-10-12',
     subjectId: 'anatomy',
-    // 本文で節を立てて取り上げた上位5テーマ
-    themeIds: ['an-undoki', 'an-naizo', 'an-junkanki', 'an-shinkei', 'no-shinkei'],
+    // 本文で節を立てて取り上げた上位5テーマ（2026-10-12 の分類見直し後）と、神経系の節で触れた脳神経
+    themeIds: ['an-undoki', 'an-naizo', 'an-shinkei', 'an-junkanki', 'an-soshiki', 'no-shinkei'],
     ctaLabel: '解剖学の過去6年の出題傾向と復習の優先順位を無料で読む',
     summary: '第29〜34回の解剖学54問を、DBのテーマ別に集計した記事です。',
     utmCampaign: 'anatomy_2026',
