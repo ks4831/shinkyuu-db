@@ -1,8 +1,8 @@
 {
  "stableId": "link-map",
  "title": "note と DB の相互リンク",
- "sourceVersion": "shinkyuu-db@2d05bdd",
- "updatedAt": "2026-10-11T09:56:26+09:00",
+ "sourceVersion": "shinkyuu-db@ee647cd",
+ "updatedAt": "2026-10-12T20:53:05+09:00",
  "utm": {
   "rule": "note → DB のリンクには必ず UTM を付ける。utm_campaign は記事の stableId（例: free-01-kankeihoki）",
   "template": "{url}?utm_source=note&utm_medium=article&utm_campaign={articleId}",
@@ -278,8 +278,9 @@
     "https://shinkyuu-db.vercel.app/subjects/anatomy",
     "https://shinkyuu-db.vercel.app/themes/an-undoki",
     "https://shinkyuu-db.vercel.app/themes/an-naizo",
-    "https://shinkyuu-db.vercel.app/themes/an-junkanki",
     "https://shinkyuu-db.vercel.app/themes/an-shinkei",
+    "https://shinkyuu-db.vercel.app/themes/an-junkanki",
+    "https://shinkyuu-db.vercel.app/themes/an-soshiki",
     "https://shinkyuu-db.vercel.app/themes/no-shinkei"
    ],
    "dbToNoteUtm": {

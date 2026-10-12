@@ -1,8 +1,8 @@
 {
  "stableId": "content-safety",
  "title": "記事化の安全ルールと除外リスト",
- "sourceVersion": "shinkyuu-db@2d05bdd",
- "updatedAt": "2026-10-11T09:56:26+09:00",
+ "sourceVersion": "shinkyuu-db@ee647cd",
+ "updatedAt": "2026-10-12T20:53:05+09:00",
  "rules": [
   {
    "id": "R1",
