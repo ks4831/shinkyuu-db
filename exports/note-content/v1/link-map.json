@@ -149,10 +149,17 @@
     "past-exams",
     "study-plan"
    ],
+   "price": "free",
    "dbPlacements": [
     "https://shinkyuu-db.vercel.app/past-exams"
    ],
-   "measurement": "DB 側の GA4 イベント note_link_click（note_id, placement）"
+   "dbToNoteUtm": {
+    "utm_source": "shinkyuu-db",
+    "utm_medium": "referral",
+    "utm_campaign": "note_nb284e53363b1",
+    "utm_content": "{placement}"
+   },
+   "measurement": "DB 側の GA4 イベント note_link_click（note_id, placement, subject, price_type, link_url）"
   },
   {
    "stableId": "note:nd65e3564a30e",
@@ -161,10 +168,17 @@
    "topics": [
     "study-plan"
    ],
+   "price": "free",
    "dbPlacements": [
     "https://shinkyuu-db.vercel.app/past-exams"
    ],
-   "measurement": "DB 側の GA4 イベント note_link_click（note_id, placement）"
+   "dbToNoteUtm": {
+    "utm_source": "shinkyuu-db",
+    "utm_medium": "referral",
+    "utm_campaign": "note_nd65e3564a30e",
+    "utm_content": "{placement}"
+   },
+   "measurement": "DB 側の GA4 イベント note_link_click（note_id, placement, subject, price_type, link_url）"
   },
   {
    "stableId": "note:n1f60a0e5a4ec",
@@ -174,10 +188,17 @@
     "acupoints",
     "memorization"
    ],
+   "price": "free",
    "dbPlacements": [
     "https://shinkyuu-db.vercel.app/acupoints"
    ],
-   "measurement": "DB 側の GA4 イベント note_link_click（note_id, placement）"
+   "dbToNoteUtm": {
+    "utm_source": "shinkyuu-db",
+    "utm_medium": "referral",
+    "utm_campaign": "note_n1f60a0e5a4ec",
+    "utm_content": "{placement}"
+   },
+   "measurement": "DB 側の GA4 イベント note_link_click（note_id, placement, subject, price_type, link_url）"
   },
   {
    "stableId": "note:nbdd12746a84d",
@@ -187,11 +208,18 @@
     "acupoints",
     "standard-2026"
    ],
+   "price": "free",
    "dbPlacements": [
     "https://shinkyuu-db.vercel.app/acupoints",
     "https://shinkyuu-db.vercel.app/exam-35"
    ],
-   "measurement": "DB 側の GA4 イベント note_link_click（note_id, placement）"
+   "dbToNoteUtm": {
+    "utm_source": "shinkyuu-db",
+    "utm_medium": "referral",
+    "utm_campaign": "note_nbdd12746a84d",
+    "utm_content": "{placement}"
+   },
+   "measurement": "DB 側の GA4 イベント note_link_click（note_id, placement, subject, price_type, link_url）"
   },
   {
    "stableId": "note:nbad325d6a396",
@@ -200,10 +228,67 @@
    "topics": [
     "standard-2026"
    ],
+   "price": "free",
    "dbPlacements": [
     "https://shinkyuu-db.vercel.app/exam-35"
    ],
-   "measurement": "DB 側の GA4 イベント note_link_click（note_id, placement）"
+   "dbToNoteUtm": {
+    "utm_source": "shinkyuu-db",
+    "utm_medium": "referral",
+    "utm_campaign": "note_nbad325d6a396",
+    "utm_content": "{placement}"
+   },
+   "measurement": "DB 側の GA4 イベント note_link_click（note_id, placement, subject, price_type, link_url）"
+  },
+  {
+   "stableId": "note:nbb0e2d581329",
+   "title": "鍼灸国試の関係法規、過去6年の24問を全部分類してみた｜あはき法で繰り返し問われている5つのこと",
+   "url": "https://note.com/fine_hornet161/n/nbb0e2d581329",
+   "topics": [
+    "regulations",
+    "past-exams"
+   ],
+   "price": "free",
+   "dbPlacements": [
+    "https://shinkyuu-db.vercel.app/subjects/regulations",
+    "https://shinkyuu-db.vercel.app/themes/rg-menkyo",
+    "https://shinkyuu-db.vercel.app/themes/rg-seijutsujo",
+    "https://shinkyuu-db.vercel.app/themes/rg-bassoku",
+    "https://shinkyuu-db.vercel.app/themes/rg-kokoku"
+   ],
+   "dbToNoteUtm": {
+    "utm_source": "shinkyuu-db",
+    "utm_medium": "referral",
+    "utm_campaign": "regulations_2026",
+    "utm_content": "{placement}"
+   },
+   "measurement": "DB 側の GA4 イベント note_link_click（note_id, placement, subject, price_type, link_url）"
+  },
+  {
+   "stableId": "note:nd244c9e50879",
+   "title": "第35回鍼灸国試｜解剖学はどこから勉強する？過去6年の出題傾向から考える復習の優先順位",
+   "url": "https://note.com/fine_hornet161/n/nd244c9e50879",
+   "topics": [
+    "anatomy",
+    "past-exams",
+    "study-plan"
+   ],
+   "price": "free",
+   "dbPlacements": [
+    "https://shinkyuu-db.vercel.app/subjects/anatomy",
+    "https://shinkyuu-db.vercel.app/themes/an-undoki",
+    "https://shinkyuu-db.vercel.app/themes/an-naizo",
+    "https://shinkyuu-db.vercel.app/themes/an-junkanki",
+    "https://shinkyuu-db.vercel.app/themes/an-shinkei",
+    "https://shinkyuu-db.vercel.app/themes/no-shinkei"
+   ],
+   "dbToNoteUtm": {
+    "utm_source": "shinkyuu-db",
+    "utm_medium": "referral",
+    "utm_campaign": "anatomy_2026",
+    "utm_content": "{placement}"
+   },
+   "measurement": "DB 側の GA4 イベント note_link_click（note_id, placement, subject, price_type, link_url）"
   }
  ],
  "noteAccountUrl": "https://note.com/fine_hornet161"

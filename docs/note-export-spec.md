@@ -15,7 +15,7 @@ note「治療家の道｜かず」の記事制作で使う、DB の読み取り�
 | acupoint-learning.json | 経穴361穴。名称・位置・要穴分類ごとの確認状況、出題回、出題した問題ID |
 | content-safety.json | 記事化のルール（R1〜R8）、確認状況の定義、注意が必要な問題・経穴、書き出していない情報 |
 | recommended-articles.json | 記事候補10件と、裏づけになる出題数・既存の note 記事との重なり |
-| link-map.json | DB の主なページ、note の公開済み記事、UTM の付け方 |
+| link-map.json | DB の主なページ、note の公開済み記事（無料/有料・DB での掲載先）、UTM の付け方（note → DB と DB → note） |
 
 ## 共通項目
 stableId・title・subject・sourceVersion・verifiedStatus・sourceType・relatedDbUrl・updatedAt・publicationAllowed・warningNotes。
@@ -40,3 +40,11 @@ stableId・title・subject・sourceVersion・verifiedStatus・sourceType・relat
 
 ## 版の上げ方
 項目の意味を変えるとき、または削除するときは `v2` を作り、`v1` は残します。項目の追加だけなら `v1` のままにします。
+
+## DB → note の導線（Phase A10）
+
+- 記事台帳は `src/data/noteArticles.ts`。ID（note の記事キー）・URL の重複は `npm run test:export` が検査する
+- 掲載先：一覧ページ（`placements`）、科目ページ `/subjects/[subjectId]`（`subjectId`）、テーマページ `/themes/[themeId]`（`themeIds`。記事の本文で取り上げたテーマだけ）
+- リンクには UTM を付ける：`utm_source=shinkyuu-db&utm_medium=referral&utm_campaign={utmCampaign または note_<id>}&utm_content={置き場所}`（置き場所は past_exams / acupoints / exam_35 / subject_page / theme_page）
+- クリックは GA4 の既存イベント `note_link_click`（note_id, placement, subject, price_type, link_url）。学習履歴・個人を特定する情報は送らない
+

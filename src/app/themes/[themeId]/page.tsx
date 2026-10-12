@@ -8,6 +8,8 @@ import { loadPastExamQuestionsByTheme, pastExamPracticeRangeLabel } from '@/lib/
 import ImportanceBadge from '@/components/ImportanceBadge'
 import Standard2026Badge from '@/components/Standard2026Badge'
 import StudyActions from '@/components/StudyActions'
+import NoteArticleCallout from '@/components/NoteArticleCallout'
+import { noteArticlesForTheme } from '@/data/noteArticles'
 import { importanceLabel } from '@/lib/utils'
 
 const STANDARD2026_HEADING: Record<string, string> = {
@@ -569,6 +571,9 @@ export default async function ThemeDetailPage({
           </div>
         )}
       </section>
+
+      {/* note の関連記事（このテーマを本文で取り上げた記事だけ） */}
+      <NoteArticleCallout articles={noteArticlesForTheme(theme.id)} placement="theme-page" />
 
       {/* フッターナビ */}
       <div className="flex gap-4 flex-wrap items-center pt-2 border-t border-gray-100">

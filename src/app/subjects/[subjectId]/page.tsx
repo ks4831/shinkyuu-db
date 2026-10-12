@@ -7,6 +7,8 @@ import { ALL_QUESTIONS } from '@/lib/quiz'
 import { getThemeExamStats, themeExamStatsRecord } from '@/lib/themeStats'
 import ImportanceBadge from '@/components/ImportanceBadge'
 import SubjectSearch from '@/components/SubjectSearch'
+import NoteArticleCallout from '@/components/NoteArticleCallout'
+import { noteArticlesForSubject } from '@/data/noteArticles'
 
 const SITE_URL = process.env.NEXT_PUBLIC_SITE_URL ?? 'https://shinkyuu-db.vercel.app'
 
@@ -386,6 +388,9 @@ export default async function SubjectDetailPage({
           <SubjectSearch themes={sorted} subjectName={subject.name} examStats={themeExamStatsRecord(sorted.map(t => t.id))} />
         </>
       )}
+
+      {/* note の関連記事（科目の内容と直接関係する記事だけ） */}
+      <NoteArticleCallout articles={noteArticlesForSubject(subjectId)} placement="subject-page" />
 
       {/* フッターナビ */}
       <div className="mt-8 pt-6 border-t border-gray-100 flex flex-wrap gap-4">

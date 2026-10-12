@@ -37,7 +37,7 @@ const { subjects, themes } = await import('../src/lib/data')
 const { ALL_QUESTIONS, themeIdsWithQuiz } = await import('../src/lib/quiz')
 const { themeIdsWithPastExamPractice } = await import('../src/lib/pastExams')
 const { ACUPOINTS } = await import('../src/data/acupoints')
-const { NOTE_ARTICLES } = await import('../src/data/noteArticles')
+const { NOTE_ARTICLES, noteArticleHref } = await import('../src/data/noteArticles')
 const src = await import('../src/lib/acupointSources')
 
 const manifest = json('manifest.json')
@@ -175,10 +175,31 @@ test('13. note 記事の URL は公開記事の形式で、ID と一致する', 
   for (const a of NOTE_ARTICLES) assert.equal(a.url, `https://note.com/fine_hornet161/n/${a.id}`)
   assert.equal(links.utm.params.utm_source, 'note')
 })
+test('13b. note 記事は重複登録がなく、科目・テーマの掲載先が実在し、DB → note のリンクに UTM が付く', () => {
+  const ids = NOTE_ARTICLES.map((a) => a.id)
+  assert.equal(new Set(ids).size, ids.length, `記事IDの重複: ${ids}`)
+  const urls = NOTE_ARTICLES.map((a) => a.url)
+  assert.equal(new Set(urls).size, urls.length, '記事URLの重複')
+  const subjectIds = new Set(subjects.map((s: { id: string }) => s.id))
+  const themeIds = new Set(themes.map((t: { id: string }) => t.id))
+  for (const a of NOTE_ARTICLES) {
+    if (a.subjectId) assert.ok(subjectIds.has(a.subjectId), `存在しない科目: ${a.subjectId}`)
+    for (const t of a.themeIds ?? []) assert.ok(themeIds.has(t), `存在しないテーマ: ${t}`)
+    if (a.themeIds) assert.equal(new Set(a.themeIds).size, a.themeIds.length, `テーマの重複: ${a.id}`)
+    const href = new URL(noteArticleHref(a, 'subject-page'))
+    assert.equal(href.origin + href.pathname, a.url)
+    assert.equal(href.searchParams.get('utm_source'), 'shinkyuu-db')
+    assert.equal(href.searchParams.get('utm_medium'), 'referral')
+    assert.ok(href.searchParams.get('utm_campaign'))
+    assert.equal(href.searchParams.get('utm_content'), 'subject_page')
+  }
+  const exported = links.noteArticles.map((x: { stableId: string }) => x.stableId)
+  assert.deepEqual(exported, ids.map((id) => `note:${id}`))
+})
 
 console.log('既存データ・学習履歴への影響')
-test('14. 学習データ（src/data）と学習履歴の保存処理が HEAD から変わっていない', () => {
-  const changed = execSync('git diff --name-only HEAD -- src/data src/lib/quizStorage.ts src/lib/pastExamStorage.ts src/lib/learning.ts src/lib/useLearningStats.ts', { encoding: 'utf8' }).trim()
+test('14. 学習データ（src/data。note の記事台帳 noteArticles.ts は除く）と学習履歴の保存処理が HEAD から変わっていない', () => {
+  const changed = execSync('git diff --name-only HEAD -- src/data ":!src/data/noteArticles.ts" src/lib/quizStorage.ts src/lib/pastExamStorage.ts src/lib/learning.ts src/lib/useLearningStats.ts', { encoding: 'utf8' }).trim()
   assert.equal(changed, '', `変更あり: ${changed}`)
 })
 
