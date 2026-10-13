@@ -155,7 +155,7 @@ export const NOTE_ARTICLES: NoteArticle[] = [
     // 教材の60問が扱う主なテーマ（問題数の多い順に上位5）
     themeIds: ['an-undoki', 'an-naizo', 'an-shinkei', 'an-junkanki', 'an-soshiki'],
     cardHeading: '問題演習で理解を確認',
-    summary: 'オリジナル四択60問と詳しい解説（PDF 41ページ・Excel 6シート）。7日間の復習プランと暗記チェックリストつき。',
+    summary: 'オリジナル四択60問と全問解説（PDF 41ページ）、解答記録用のExcel 6シート。サンプル2問は販売ページで無料で読めます。ファイルはパソコンでZIPを解凍して使います。',
     buttonLabel: '教材の内容を見る',
     utmCampaign: 'anatomy_paid_2026',
   },
