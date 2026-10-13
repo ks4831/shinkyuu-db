@@ -18,8 +18,8 @@ export async function generateMetadata({
   const theme = getTheme(themeId)
   if (!theme) return {}
   return {
-    title: `${theme.name}の過去問｜鍼灸国家試験 頻出分析DB`,
-    description: `${theme.name}に関連する${pastExamPracticeRangeLabel()}の鍼灸国家試験過去問をまとめて演習できます。`,
+    title: `${theme.name}の過去問｜はり師・きゅう師国家試験`,
+    description: `${theme.name}に関連する${pastExamPracticeRangeLabel()}のはり師・きゅう師国家試験の過去問を、まとめて1問ずつ解けます。正答と解説つき。`,
   }
 }
 

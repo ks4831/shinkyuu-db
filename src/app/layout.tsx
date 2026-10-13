@@ -23,8 +23,10 @@ const GA_ENABLED = process.env.NODE_ENV === 'production' && !!GA_ID
 export const metadata: Metadata = {
   title: {
     default: '鍼灸国試｜過去問・予想問題・出題分析',
-    template: '%s | 鍼灸国試 過去問・予想問題・分析',
+    template: '%s | 鍼灸国試DB',
   },
+  // 各ページ自身のURLを canonical にする（?tab= や UTM つきURLの重複を1つにまとめる）
+  alternates: { canonical: './' },
   description:
     `鍼灸国家試験（はり師・きゅう師）の対策サイト。${PAST_EXAM_ROUND_RANGE}の実際の過去問演習（${PAST_EXAM_TOTAL}問）、過去問の頻出傾向・第35回新出題基準にもとづくオリジナル予想問題、第29〜34回1,080問の出題分析ができます。`,
   keywords: [

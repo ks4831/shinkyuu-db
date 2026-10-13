@@ -402,8 +402,8 @@ export default function PastExamRunner(props: PastExamRunnerProps) {
       <div ref={screenTopRef} className="mx-auto max-w-md scroll-mt-20 px-4 py-10 text-center">
         {crossInfo ? (
           <>
-            <p className="text-sm font-semibold text-green-700">{crossInfo.name}</p>
-            <h1 className="mt-1 text-xl font-bold text-gray-900">{crossInfo.label}</h1>
+            <p className="text-sm font-semibold text-green-700">{crossInfo.label}</p>
+            <h1 className="mt-1 text-xl font-bold text-gray-900">{crossInfo.name}の過去問</h1>
           </>
         ) : (
           <h1 className="text-xl font-bold text-gray-900">{roundLabel} 過去問</h1>

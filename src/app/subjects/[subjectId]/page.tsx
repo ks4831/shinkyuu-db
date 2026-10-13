@@ -9,6 +9,7 @@ import ImportanceBadge from '@/components/ImportanceBadge'
 import SubjectSearch from '@/components/SubjectSearch'
 import NoteArticleCallout from '@/components/NoteArticleCallout'
 import { noteArticlesForSubject } from '@/data/noteArticles'
+import { loadPastExamQuestionsBySubject, pastExamPracticeRangeLabel } from '@/lib/pastExams'
 
 const SITE_URL = process.env.NEXT_PUBLIC_SITE_URL ?? 'https://shinkyuu-db.vercel.app'
 
@@ -24,8 +25,8 @@ export async function generateMetadata({
   const { subjectId } = await params
   const subject = getSubject(subjectId)
   if (!subject) return {}
-  const title = `${subject.name}｜鍼灸国家試験 完全攻略ガイド`
-  const description = `【鍼灸国家試験】${subject.name}の頻出テーマランキング・学習ロードマップ・第35回予想を完全収録。出題回数・重要度分析・よく間違えるポイントまで徹底解説。`
+  const title = `${subject.name}｜鍼灸国家試験の頻出テーマと出題傾向（第29〜34回）`
+  const description = `はり師・きゅう師国家試験の${subject.name}を、第29〜34回の出題数と頻出テーマで整理。テーマごとのポイントを確認して、${subject.name}の過去問・予想問題の演習へ進めます。`
   return {
     title,
     description,
@@ -74,6 +75,7 @@ export default async function SubjectDetailPage({
   )
   const top20 = sorted.filter(t => qCount(t.id) > 0).slice(0, 20)
   const subjectExamTotal = subjectThemes.reduce((n, t) => n + qCount(t.id), 0)
+  const pastExamCount = loadPastExamQuestionsBySubject(subjectId).length
 
   const sCount = subjectThemes.filter(t => t.importance === 'S').length
   const aCount = subjectThemes.filter(t => t.importance === 'A').length
@@ -134,6 +136,20 @@ export default async function SubjectDetailPage({
           </div>
         )}
       </div>
+
+      {/* この科目の過去問 */}
+      {pastExamCount > 0 && (
+        <Link
+          href={`/past-exams/subject/${subjectId}`}
+          className="flex items-center justify-between gap-3 rounded-2xl border-2 border-blue-200 bg-blue-50 px-5 py-4 mb-3 transition-colors hover:border-blue-300 hover:bg-blue-100"
+        >
+          <span>
+            <span className="block text-sm font-bold text-blue-800">{subject.name}の過去問を解く</span>
+            <span className="block text-xs text-blue-700 mt-0.5">{pastExamPracticeRangeLabel()}の実際の国家試験から{subject.name}の{pastExamCount}問を1問ずつ・正答と解説つき</span>
+          </span>
+          <span className="text-blue-600 text-lg" aria-hidden>›</span>
+        </Link>
+      )}
 
       {/* この科目のクイズ */}
       {quizCount >= 5 && (

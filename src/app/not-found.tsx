@@ -3,6 +3,8 @@ import type { Metadata } from 'next'
 
 export const metadata: Metadata = {
   title: '404 — ページが見つかりません',
+  // 存在しないURLには canonical を出さない（layout の './' が /_not-found になるため）
+  alternates: { canonical: null },
 }
 
 export default function NotFound() {

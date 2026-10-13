@@ -17,9 +17,10 @@ export async function generateMetadata({
   const { subjectId } = await params
   const subject = getSubject(subjectId)
   if (!subject) return {}
+  const count = loadPastExamQuestionsBySubject(subjectId).length
   return {
-    title: `${subject.name}の過去問｜鍼灸国家試験 頻出分析DB`,
-    description: `${subject.name}の鍼灸国家試験過去問（${pastExamPracticeRangeLabel()}）を科目別にまとめて演習できます。`,
+    title: `${subject.name}の過去問（${pastExamPracticeRangeLabel()}・${count}問）｜はり師・きゅう師国家試験`,
+    description: `はり師・きゅう師国家試験の${subject.name}の過去問${count}問（${pastExamPracticeRangeLabel()}）を、科目別にまとめて1問ずつ解けます。正答と解説つき。`,
   }
 }
 

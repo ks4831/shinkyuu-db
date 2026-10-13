@@ -2,7 +2,7 @@ import type { MetadataRoute } from 'next'
 import { subjects, themes } from '@/lib/data'
 import { ACUPOINTS } from '@/data/acupoints'
 import { subjectQuestionCounts } from '@/lib/quiz'
-import { pastExamPracticeRounds } from '@/lib/pastExams'
+import { pastExamPracticeRounds, pastExamCountsByTheme } from '@/lib/pastExams'
 
 const SITE_URL = process.env.NEXT_PUBLIC_SITE_URL ?? 'https://shinkyuu-db.vercel.app'
 
@@ -20,10 +20,8 @@ export default function sitemap(): MetadataRoute.Sitemap {
     { url: `${SITE_URL}/quiz/frequent`,                      lastModified: now, changeFrequency: 'weekly',  priority: 0.8 },
     { url: `${SITE_URL}/quiz/acupoints`,                     lastModified: now, changeFrequency: 'weekly',  priority: 0.85 },
     { url: `${SITE_URL}/quiz/subjects`,                      lastModified: now, changeFrequency: 'monthly', priority: 0.75 },
-    { url: `${SITE_URL}/quiz/weak`,                          lastModified: now, changeFrequency: 'monthly', priority: 0.6 },
     { url: `${SITE_URL}/acupoints`,                          lastModified: now, changeFrequency: 'weekly',  priority: 0.9 },
     { url: `${SITE_URL}/acupoints/unasked`,                  lastModified: now, changeFrequency: 'monthly', priority: 0.7 },
-    { url: `${SITE_URL}/dashboard`,                          lastModified: now, changeFrequency: 'monthly', priority: 0.5 },
     { url: `${SITE_URL}/menu`,                               lastModified: now, changeFrequency: 'monthly', priority: 0.5 },
     { url: `${SITE_URL}/analysis/exam-34`,                   lastModified: now, changeFrequency: 'monthly', priority: 0.9 },
     { url: `${SITE_URL}/analysis/exam-33`,                   lastModified: now, changeFrequency: 'monthly', priority: 0.9 },
@@ -87,10 +85,22 @@ export default function sitemap(): MetadataRoute.Sitemap {
     priority: 0.6,
   }))
 
+  // テーマ別過去問：/past-exams のテーマ一覧からリンクしている、過去問が1問以上あるテーマのみ
+  const pastExamThemeCounts = pastExamCountsByTheme()
+  const pastExamThemeRoutes: MetadataRoute.Sitemap = themes
+    .filter(t => (pastExamThemeCounts[t.id] ?? 0) > 0)
+    .map(t => ({
+      url: `${SITE_URL}/past-exams/theme/${t.id}`,
+      lastModified: now,
+      changeFrequency: 'monthly' as const,
+      priority: 0.6,
+    }))
+
   return [
     ...staticRoutes,
     ...pastExamRoundRoutes,
     ...pastExamSubjectRoutes,
+    ...pastExamThemeRoutes,
     ...subjectRoutes,
     ...themeRoutes,
     ...acupointRoutes,

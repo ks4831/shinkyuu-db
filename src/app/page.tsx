@@ -14,7 +14,7 @@ const ANALYSIS_ROUND_RANGE = `第${EXAM_ROUNDS[0]}〜${EXAM_ROUNDS[EXAM_ROUNDS.l
 const ANALYSIS_TOTAL = (EXAM_ROUNDS.length * QUESTIONS_PER_ROUND).toLocaleString()
 
 export const metadata: Metadata = {
-  title: '鍼灸国家試験対策｜過去問・予想問題・出題分析',
+  title: `鍼灸国家試験の過去問${PAST_EXAM_TOTAL}問・予想問題｜はり師・きゅう師 国試対策`,
   description: `鍼灸国家試験の過去問（${PAST_EXAM_ROUND_RANGE}・${PAST_EXAM_TOTAL}問）、頻出テーマから作成した予想問題${QUIZ_TOTAL}問、出題分析をひとつのサイトで。年度別・科目別・テーマ別にスマホで解けます。`,
 }
 

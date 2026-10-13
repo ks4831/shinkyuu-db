@@ -16,7 +16,7 @@ const RANGE_LABEL = pastExamPracticeRangeLabel()
 const PRACTICE_TOTAL = pastExamPracticeTotal()
 
 export const metadata: Metadata = {
-  title: '過去問｜実際の国家試験問題を解く',
+  title: `はり師・きゅう師国家試験の過去問（${RANGE_LABEL}・${PRACTICE_TOTAL.toLocaleString()}問）`,
   description: `はり師・きゅう師国家試験の過去問（${RANGE_LABEL}・${PRACTICE_TOTAL}問）を、公式資料にもとづいて出題形式のまま解ける過去問演習。年度別・科目別・テーマ別に演習できます。`,
 }
 

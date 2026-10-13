@@ -3,6 +3,8 @@ import DashboardClient from '@/components/quiz/DashboardClient'
 import DailyDashboardCard from '@/components/quiz/DailyDashboardCard'
 
 export const metadata: Metadata = {
+  // 端末内の学習記録だけを表示するページなので検索結果には出さない
+  robots: { index: false, follow: true },
   title: '学習の記録｜鍼灸国家試験クイズ',
   description: '解いた問題数・正答率・連続学習日数・科目別の正答率を確認できます。データは端末内にのみ保存されます。',
 }

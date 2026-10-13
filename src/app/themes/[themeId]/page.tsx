@@ -34,8 +34,8 @@ export async function generateMetadata({
   const theme = getTheme(themeId)
   if (!theme) return {}
   const subject = getSubject(theme.subject)
-  const title = `${theme.name}｜国家試験での出題傾向・重要ポイント`
-  const description = `【鍼灸国家試験】${theme.name}の出題傾向と学習ポイントを徹底解説。第29〜34回の分析データ・重要度${theme.importance}（${importanceLabel(theme.importance)}）・試験対策まとめ。${subject ? subject.name + '科目。' : ''}`
+  const title = `${theme.name}｜鍼灸国家試験の出題傾向`
+  const description = `はり師・きゅう師国家試験の「${theme.name}」の出題傾向と学習ポイント。第29〜34回の出題データ、重要度${theme.importance}（${importanceLabel(theme.importance)}）。${subject ? subject.name + '科目。' : ''}`
   return {
     title,
     description,
