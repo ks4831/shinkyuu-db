@@ -299,6 +299,33 @@
    "measurement": "DB 側の GA4 イベント note_link_click（article_id, note_id, subject, placement, article_type, price, destination_url）"
   },
   {
+   "stableId": "note:n71e70e443d05",
+   "title": "第35回鍼灸国試｜生理学はどこから勉強する？過去6年の出題傾向と復習の優先順位",
+   "url": "https://note.com/fine_hornet161/n/n71e70e443d05",
+   "topics": [
+    "physiology",
+    "past-exams",
+    "study-plan"
+   ],
+   "price": "free",
+   "priceYen": 0,
+   "dbPlacements": [
+    "https://shinkyuu-db.vercel.app/subjects/physiology",
+    "https://shinkyuu-db.vercel.app/themes/ph-shinkei-seiri",
+    "https://shinkyuu-db.vercel.app/themes/ph-naibunpi-seiri",
+    "https://shinkyuu-db.vercel.app/themes/ph-junkan-seiri",
+    "https://shinkyuu-db.vercel.app/themes/ph-kinshukushuku",
+    "https://shinkyuu-db.vercel.app/themes/ph-kokyu-seiri"
+   ],
+   "dbToNoteUtm": {
+    "utm_source": "shinkyuu-db",
+    "utm_medium": "referral",
+    "utm_campaign": "physiology_2026",
+    "utm_content": "{placement}"
+   },
+   "measurement": "DB 側の GA4 イベント note_link_click（article_id, note_id, subject, placement, article_type, price, destination_url）"
+  },
+  {
    "stableId": "note:n042d1f1052e6",
    "title": "第35回鍼灸国試｜解剖学 頻出テーマ攻略ノート",
    "url": "https://note.com/fine_hornet161/n/n042d1f1052e6",

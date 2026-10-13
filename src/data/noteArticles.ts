@@ -125,6 +125,23 @@ export const NOTE_ARTICLES: NoteArticle[] = [
     utmCampaign: 'anatomy_2026',
   },
   {
+    id: 'n71e70e443d05',
+    title: '第35回鍼灸国試｜生理学はどこから勉強する？過去6年の出題傾向と復習の優先順位',
+    url: 'https://note.com/fine_hornet161/n/n71e70e443d05',
+    topics: ['physiology', 'past-exams', 'study-plan'],
+    placements: [],
+    price: 'free',
+    publishedAt: '2026-10-13',
+    subjectId: 'physiology',
+    // 本文で節を立てて取り上げたテーマ（神経・内分泌・循環・筋・呼吸）
+    themeIds: ['ph-shinkei-seiri', 'ph-naibunpi-seiri', 'ph-junkan-seiri', 'ph-kinshukushuku', 'ph-kokyu-seiri'],
+    ctaLabel: '生理学の過去6年の出題傾向と復習の優先順位を無料で読む',
+    summary: '過去6年54問の分析と、頻出テーマで押さえたい仕組みを紹介しています。',
+    cardHeading: '無料で出題傾向を確認',
+    buttonLabel: '無料記事を読む',
+    utmCampaign: 'physiology_2026',
+  },
+  {
     // 有料教材（980円）。内容はオリジナル問題で、DB の過去問データは使っていない
     id: 'n042d1f1052e6',
     title: '第35回鍼灸国試｜解剖学 頻出テーマ攻略ノート',
