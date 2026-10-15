@@ -105,6 +105,12 @@ export default function HomePage() {
           <p className="mt-3 text-sm font-semibold text-gray-600 sm:text-base">
             {PAST_EXAM_ROUND_RANGE} 過去問<span className="font-black text-blue-700">{PAST_EXAM_TOTAL}問</span>を収録
           </p>
+          {/* 初めての人が「お金・登録・記録の行き先」で迷わないよう、最初の画面で伝える */}
+          <ul className="mt-3 flex flex-wrap gap-1.5 text-xs font-bold text-gray-700" aria-label="このサイトの使い方">
+            <li className="rounded-full border border-gray-200 bg-white px-2.5 py-1">無料</li>
+            <li className="rounded-full border border-gray-200 bg-white px-2.5 py-1">会員登録なし</li>
+            <li className="rounded-full border border-gray-200 bg-white px-2.5 py-1">学習記録はこの端末に保存</li>
+          </ul>
         </div>
       </section>
 
@@ -166,7 +172,7 @@ export default function HomePage() {
       <section className="px-4 pt-8">
         <div className="mx-auto max-w-5xl">
           <p className="text-[11px] leading-relaxed text-gray-400">
-            予想問題は、過去問の頻出傾向などをもとにしたオリジナル問題です。学習記録は端末内にのみ保存されます。
+            予想問題は、過去問の頻出傾向などをもとにしたオリジナル問題です。解答履歴などの学習記録は、この端末のブラウザにだけ保存されます。
             <Link href="/about" className="ml-1 text-gray-500 underline hover:text-gray-700">くわしく</Link>
           </p>
         </div>

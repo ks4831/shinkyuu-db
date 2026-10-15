@@ -6,7 +6,7 @@ import {
   ALL_QUESTIONS,
   type QuizQuestion,
 } from '@/lib/quiz'
-import { trackSessionOnce } from '@/lib/analytics'
+import { trackSessionOnce, trackSessionOnceKeyed } from '@/lib/analytics'
 
 type Mode = 'random' | 'frequent' | 'acupoints' | 'subject' | 'theme' | 'standard2026'
 
@@ -59,6 +59,15 @@ export default function QuizSession({
   useEffect(() => {
     if (isStandard2026) trackSessionOnce('standard2026_quiz_start')
   }, [isStandard2026])
+
+  // それ以外の予想問題の開始。モード・科目・テーマごとにタブのセッション中1回だけ計上する。
+  // 新基準クイズは上の既存イベントで数えるため、ここでは送らない（二重計上の防止）。
+  // 送るのはモードと科目・テーマのIDだけで、解答内容や学習履歴は送らない。
+  useEffect(() => {
+    if (isStandard2026) return
+    const target = subjectId ?? themeId ?? 'all'
+    trackSessionOnceKeyed('quiz_start', `${mode}:${target}`, { mode, target })
+  }, [isStandard2026, mode, subjectId, themeId])
 
   return (
     <QuizRunner

@@ -411,6 +411,11 @@ export default function PastExamRunner(props: PastExamRunnerProps) {
         <p className="mt-2 text-sm text-gray-500">
           {crossInfo ? `${crossRangeLabel(questions)}・全${total}問` : `収録 ${total}問`}
         </p>
+        {/* 初回の開始画面だけに出す。問題数の多さで身構えないよう、進め方を短く伝える */}
+        <p className="mx-auto mt-4 max-w-xs text-left text-xs leading-relaxed text-gray-600">
+          1問ずつ解いて、そのつど正解と解説を確認できます。
+          {round !== null && '途中でやめても、次に開いたときに続きから再開できます（この端末に保存）。'}
+        </p>
         <button
           type="button"
           onClick={handleStart}

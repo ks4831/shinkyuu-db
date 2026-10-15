@@ -42,7 +42,7 @@ export default function NoteArticleCallout({
                 target="_blank"
                 rel="noopener noreferrer"
                 onClick={() => trackNoteLinkClick(a, placement, href)}
-                className={`mt-3 inline-flex items-center justify-center self-start rounded-full px-4 py-2 text-xs font-bold transition-colors ${
+                className={`mt-3 inline-flex min-h-11 items-center justify-center self-start rounded-full px-5 text-sm font-bold transition-colors ${
                   paid
                     ? 'border border-gray-400 text-gray-700 hover:bg-gray-100'
                     : 'border border-green-600 text-green-700 hover:bg-green-50'
