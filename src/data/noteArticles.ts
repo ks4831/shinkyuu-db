@@ -14,7 +14,7 @@
 export type NotePlacement = 'past-exams' | 'acupoints' | 'exam-35'
 
 /** リンクを置いた場所。UTM の utm_content と GA4 の placement に使う */
-export type NoteLinkPlacement = NotePlacement | 'subject-page' | 'theme-page'
+export type NoteLinkPlacement = NotePlacement | 'subject-page' | 'theme-page' | 'exam-analysis'
 
 export type NoteArticle = {
   /** note の記事キー（URL の /n/ 以下）。安定ID として使う */
@@ -163,6 +163,15 @@ export const NOTE_ARTICLES: NoteArticle[] = [
 
 export function noteArticlesFor(placement: NotePlacement): NoteArticle[] {
   return NOTE_ARTICLES.filter((a) => a.placements.includes(placement))
+}
+
+/** 回別の出題分析ページ（/analysis/exam-*）に案内する記事。
+    出題傾向の分析と学習の優先順位を扱う無料記事だけ（有料教材は載せない）。
+    placements には入れない（placements は一覧ページのURLとして共有データに書き出すため） */
+const EXAM_ANALYSIS_ARTICLE_IDS = ['nb284e53363b1', 'nd65e3564a30e']
+
+export function noteArticlesForExamAnalysis(): NoteArticle[] {
+  return NOTE_ARTICLES.filter((a) => a.price === 'free' && EXAM_ANALYSIS_ARTICLE_IDS.includes(a.id))
 }
 
 /** 科目ページに案内する記事 */

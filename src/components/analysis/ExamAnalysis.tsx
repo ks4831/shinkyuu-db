@@ -1,6 +1,9 @@
 import Link from 'next/link'
+import NoteArticleLinks from '@/components/NoteArticleLinks'
+import { noteArticlesForExamAnalysis } from '@/data/noteArticles'
 import { themesForRound, subjectCountsForRounds } from '@/lib/analysisThemes'
-import { getTheme } from '@/lib/data'
+import { getTheme, subjects } from '@/lib/data'
+import { pastExamCoverage } from '@/lib/pastExams'
 import { quizCountByTheme } from '@/lib/quiz'
 import type { Importance } from '@/lib/types'
 
@@ -30,6 +33,9 @@ export default function ExamAnalysis({ round }: { round: number }) {
   const maxCount = rows[0]?.count ?? 1
   const subjectList = subjectCountsForRounds([round])
   const maxSubject = subjectList[0]?.count ?? 1
+  const subjectIdByName = new Map(subjects.map(s => [s.name, s.id]))
+  // この回の過去問演習（/past-exams/[round]）。収録済みの回だけリンクする
+  const roundPlayable = pastExamCoverage().find(c => c.round === round)?.playable ?? 0
 
   const byTier: Record<Importance, typeof rows> = { S: [], A: [], B: [], C: [] }
   for (const r of rows) byTier[r.freqTier].push(r)
@@ -112,6 +118,20 @@ export default function ExamAnalysis({ round }: { round: number }) {
             </div>
           ))}
         </div>
+
+        {roundPlayable > 0 && (
+          <div className="mt-4 flex flex-col gap-2 rounded-xl border border-blue-100 bg-blue-50 p-4 sm:flex-row sm:items-center sm:justify-between">
+            <p className="text-sm text-gray-700">
+              分析した第{round}回の問題を、1問ずつ正解と解説つきで解けます（無料・登録なし）。
+            </p>
+            <Link
+              href={`/past-exams/${round}`}
+              className="inline-flex min-h-11 flex-shrink-0 items-center justify-center self-start rounded-full bg-blue-600 px-5 text-sm font-bold text-white hover:bg-blue-700 sm:self-auto"
+            >
+              第{round}回の過去問を解く（{roundPlayable}問）
+            </Link>
+          </div>
+        )}
       </section>
 
       {/* 頻出テーマ ランキング */}
@@ -173,11 +193,22 @@ export default function ExamAnalysis({ round }: { round: number }) {
       {/* 科目別出題割合（14科目・Ver.7.2.1で確定） */}
       <section>
         <h2 className="text-lg font-bold text-gray-800 mb-1">科目別出題割合</h2>
-        <p className="text-sm text-gray-500 mb-4">出題基準（令和2年版）の14科目別。第{round}回。</p>
+        <p className="text-sm text-gray-500 mb-4">
+          出題基準（令和2年版）の14科目別。第{round}回。科目名をタップすると、その科目の過去問（全収録回）を解けます。
+        </p>
         <div className="bg-white rounded-2xl border border-gray-100 p-5 space-y-3">
           {subjectList.map(({ name, count }) => (
             <div key={name} className="flex items-center gap-3">
-              <span className="text-xs text-gray-600 w-32 flex-shrink-0 text-right leading-snug">{name}</span>
+              {subjectIdByName.has(name) ? (
+                <Link
+                  href={`/past-exams/subject/${subjectIdByName.get(name)}`}
+                  className="text-xs text-green-700 underline decoration-green-200 underline-offset-2 hover:decoration-green-600 w-32 flex-shrink-0 text-right leading-snug"
+                >
+                  {name}
+                </Link>
+              ) : (
+                <span className="text-xs text-gray-600 w-32 flex-shrink-0 text-right leading-snug">{name}</span>
+              )}
               <div className="flex-1 bg-gray-100 rounded-full h-3">
                 <div className="h-3 rounded-full bg-green-500" style={{ width: `${Math.round((count / maxSubject) * 100)}%` }} />
               </div>
@@ -251,8 +282,13 @@ export default function ExamAnalysis({ round }: { round: number }) {
         </div>
       </section>
 
+      <NoteArticleLinks placement="exam-analysis" articles={noteArticlesForExamAnalysis()} />
+
       <div className="pt-4 border-t border-gray-100 flex items-center gap-4 text-sm flex-wrap">
         <Link href="/" className="text-green-600 hover:underline">← トップに戻る</Link>
+        {roundPlayable > 0 && (
+          <Link href={`/past-exams/${round}`} className="text-green-600 hover:underline">第{round}回の過去問を解く →</Link>
+        )}
         <Link href="/themes" className="text-green-600 hover:underline">テーマ一覧を見る →</Link>
       </div>
     </main>
