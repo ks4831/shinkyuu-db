@@ -30,7 +30,8 @@ const { NOTE_ARTICLES, NOTE_ACCOUNT_URL } = await import('../src/data/noteArticl
 
 export const SCHEMA_VERSION = 'v1'
 const OUT = path.join(ROOT, 'exports', 'note-content', SCHEMA_VERSION)
-const SITE = 'https://shinkyuu-db.vercel.app'
+// 公開URL。移行後は NEXT_PUBLIC_SITE_URL で切り替える（未設定なら現行の Vercel）
+const SITE = process.env.NEXT_PUBLIC_SITE_URL ?? 'https://shinkyuu-db.vercel.app'
 
 const git = (cmd: string) => execSync(`git ${cmd}`, { cwd: ROOT, encoding: 'utf8' }).trim()
 // 版は「学習データ（src/data）を最後に変えた commit」。DB の画面や台本だけの commit では変わらないので、書き出しが無駄に古くならない

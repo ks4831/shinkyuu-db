@@ -4,6 +4,8 @@ import { ACUPOINTS } from '@/data/acupoints'
 import { subjectQuestionCounts } from '@/lib/quiz'
 import { pastExamPracticeRounds, pastExamCountsByTheme } from '@/lib/pastExams'
 
+export const dynamic = 'force-static'
+
 const SITE_URL = process.env.NEXT_PUBLIC_SITE_URL ?? 'https://shinkyuu-db.vercel.app'
 
 export default function sitemap(): MetadataRoute.Sitemap {

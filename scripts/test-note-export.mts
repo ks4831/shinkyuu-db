@@ -18,7 +18,8 @@ import path from 'node:path'
 const ROOT = path.resolve(import.meta.dirname, '..')
 process.chdir(ROOT)
 const DIR = path.join(ROOT, 'exports', 'note-content', 'v1')
-const SITE = 'https://shinkyuu-db.vercel.app'
+// 公開URL。移行後は NEXT_PUBLIC_SITE_URL で切り替える（未設定なら現行の Vercel）
+const SITE = process.env.NEXT_PUBLIC_SITE_URL ?? 'https://shinkyuu-db.vercel.app'
 
 let n = 0
 function test(name: string, fn: () => void) {

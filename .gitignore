@@ -45,3 +45,6 @@ next-env.d.ts
 
 # local analysis text files
 *.txt
+
+# Cloudflare Wrangler（ローカルのプレビュー用の一時ファイル）
+/.wrangler/

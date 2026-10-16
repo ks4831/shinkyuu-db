@@ -4,7 +4,7 @@ import { existsSync, statSync } from 'fs'
 import path from 'path'
 import { EXAM_SOURCES, getLocalPaths } from '@/data/examSources'
 
-export const dynamic = 'force-dynamic'
+export const dynamic = 'force-static'
 
 export const metadata: Metadata = {
   title: '公式ソース管理 | 管理',
