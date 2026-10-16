@@ -14,7 +14,8 @@
     "extract:acupoints": "npx tsx scripts/extract-acupoint-candidates.mjs",
     "export:note": "npx tsx scripts/export-note-content.mts",
     "test:export": "npx tsx scripts/test-note-export.mts",
-    "test:classification": "npx tsx scripts/test-anatomy-classification.mts"
+    "test:classification": "npx tsx scripts/test-anatomy-classification.mts",
+    "test:analytics": "npx tsx scripts/test-analytics.mts"
   },
   "dependencies": {
     "@next/third-parties": "16.3.4",

@@ -5,10 +5,18 @@
 
    - NEXT_PUBLIC_GA_ID 未設定 / 本番以外 では常に no-op。
      → ID が無くてもサイトは壊れず、開発環境ではイベントを送らない。
-   - window.gtag 未ロード時も黙ってスキップする。
+   - window.gtag 未定義（GA の初期化スクリプトが未実行）のときは、
+     このページ内の待ち行列に入れて、定義されたら送る（最大 RETRY_LIMIT_MS）。
+     初期化スクリプトは next/script の afterInteractive で、ハイドレーション後に実行される。
+     ページを直接開くと、子コンポーネントの useEffect のほうが先に走るため、
+     待たずに送ると開始イベントが落ちる（BUSINESS-07 で発見）。
    - 個人を直接特定する情報は送信しない（呼び出し側の責務でもある）。
    - 重複発火防止：
-       ・同一ロード内は in-memory Set で二重送信を防ぐ
+       ・同一ロード内は in-memory Set で二重送信を防ぐ（待ち行列に入れた時点で登録）
+       ・「送信済み」の印（localStorage / sessionStorage）は、gtag('event', …) を
+         実際に呼べたときだけ付ける。待ちきれなかったときは印を付けず、
+         同一ロード内の登録も外して、次の機会に送れるようにする。
+         ※ gtag の呼び出し＝送信処理の実行。GA4 サーバーでの受信までは保証しない。
        ・trackDailyOnce … 端末×日付で1回だけ（localStorage）
        ・trackSessionOnce … タブのセッション中に1回だけ（sessionStorage）
      いずれも analytics 専用の新規キーのみを追加し、
@@ -94,16 +102,74 @@ function sessionMarkFired(key: string) {
 
 /* ── 送信 ───────────────────────────────────────────────────── */
 
-/** GA4 にイベントを1件送る。重複防止は呼び出し側 or trackXxxOnce で担保する。 */
-export function track(event: string, params?: Params) {
-  if (!ENABLED || typeof window === 'undefined') return
-  const w = window as unknown as { gtag?: (...args: unknown[]) => void }
-  if (typeof w.gtag !== 'function') return
+type Gtag = (...args: unknown[]) => void
+
+/** gtag が定義されるのを待つ間隔と上限 */
+const RETRY_INTERVAL_MS = 200
+const RETRY_LIMIT_MS = 15000
+
+type PendingEvent = {
+  event: string
+  params?: Params
+  onSent?: () => void
+  onGiveUp?: () => void
+}
+
+/** gtag の定義待ちのイベント（このページロード内だけ。保存はしない） */
+const pending: PendingEvent[] = []
+let retryTimer: ReturnType<typeof setTimeout> | null = null
+let waitedMs = 0
+
+function getGtag(): Gtag | null {
+  const w = window as unknown as { gtag?: Gtag }
+  return typeof w.gtag === 'function' ? w.gtag : null
+}
+
+/** gtag を呼ぶ。呼べたら true（計測の失敗はサイト動作に影響させない） */
+function callGtag(gtag: Gtag, item: PendingEvent): boolean {
   try {
-    w.gtag('event', event, params ?? {})
+    gtag('event', item.event, item.params ?? {})
   } catch {
-    /* 計測の失敗はサイト動作に影響させない */
+    item.onGiveUp?.()
+    return false
   }
+  item.onSent?.()
+  return true
+}
+
+function flushPending() {
+  retryTimer = null
+  const gtag = getGtag()
+  if (gtag) {
+    waitedMs = 0
+    for (const item of pending.splice(0)) callGtag(gtag, item)
+    return
+  }
+  waitedMs += RETRY_INTERVAL_MS
+  if (waitedMs >= RETRY_LIMIT_MS) {
+    // GA の初期化スクリプトが読み込めない（ブロック等）。送らず、送信済みの印も付けない
+    waitedMs = 0
+    for (const item of pending.splice(0)) item.onGiveUp?.()
+    return
+  }
+  retryTimer = setTimeout(flushPending, RETRY_INTERVAL_MS)
+}
+
+function dispatch(item: PendingEvent) {
+  if (!ENABLED || typeof window === 'undefined') return
+  const gtag = getGtag()
+  // 先に待っているイベントがあれば、順番を守るため後ろに並べる
+  if (gtag && pending.length === 0) {
+    callGtag(gtag, item)
+    return
+  }
+  pending.push(item)
+  if (retryTimer === null) retryTimer = setTimeout(flushPending, RETRY_INTERVAL_MS)
+}
+
+/** GA4 にイベントを1件送る（gtag が未定義なら定義を待つ）。重複防止は呼び出し側 or trackXxxOnce で担保する。 */
+export function track(event: string, params?: Params) {
+  dispatch({ event, params })
 }
 
 /**
@@ -120,8 +186,12 @@ export function trackDailyOnce(event: string, params?: Params) {
     return
   }
   firedThisLoad.add(key)
-  markFired(key)
-  track(event, params)
+  dispatch({
+    event,
+    params,
+    onSent: () => markFired(key),
+    onGiveUp: () => firedThisLoad.delete(key),
+  })
 }
 
 /**
@@ -138,8 +208,12 @@ export function trackSessionOnce(event: string, params?: Params) {
     return
   }
   firedThisLoad.add(key)
-  sessionMarkFired(key)
-  track(event, params)
+  dispatch({
+    event,
+    params,
+    onSent: () => sessionMarkFired(key),
+    onGiveUp: () => firedThisLoad.delete(key),
+  })
 }
 
 /**
@@ -158,6 +232,10 @@ export function trackSessionOnceKeyed(event: string, dedupKey: string, params?: 
     return
   }
   firedThisLoad.add(key)
-  sessionMarkFired(key)
-  track(event, params)
+  dispatch({
+    event,
+    params,
+    onSent: () => sessionMarkFired(key),
+    onGiveUp: () => firedThisLoad.delete(key),
+  })
 }
