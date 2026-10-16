@@ -1,4 +1,5 @@
 import type { Metadata } from 'next'
+import Link from 'next/link'
 import DashboardClient from '@/components/quiz/DashboardClient'
 import DailyDashboardCard from '@/components/quiz/DailyDashboardCard'
 
@@ -16,6 +17,11 @@ export default function DashboardPage() {
       <p className="mt-1 text-sm text-gray-500">クイズの解答履歴から集計しています（端末内保存）。</p>
       <DailyDashboardCard />
       <DashboardClient />
+      <p className="mt-8 text-center text-sm">
+        <Link href="/dashboard/transfer" className="text-green-700 underline">
+          学習記録をファイルに保存・読み込む
+        </Link>
+      </p>
     </main>
   )
 }
