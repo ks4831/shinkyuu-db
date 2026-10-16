@@ -4,6 +4,7 @@ import './globals.css'
 import Header from '@/components/Header'
 import BottomNav from '@/components/BottomNav'
 import ScrollToTop from '@/components/ScrollToTop'
+import MovedNotice from '@/components/MovedNotice'
 import Link from 'next/link'
 import { pastExamCoverage } from '@/lib/pastExams'
 
@@ -67,6 +68,7 @@ export default function RootLayout({
   return (
     <html lang="ja" className="h-full">
       <body className="min-h-full flex flex-col bg-white">
+        <MovedNotice />
         <Header />
         <div className="flex-1">{children}</div>
         <ScrollToTop />
