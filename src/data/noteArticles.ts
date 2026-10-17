@@ -159,6 +159,24 @@ export const NOTE_ARTICLES: NoteArticle[] = [
     buttonLabel: '教材の内容を見る',
     utmCampaign: 'anatomy_paid_2026',
   },
+  {
+    // 有料教材（500円）。整理表3枚と、条文をもとにしたオリジナル○×40問。公式の過去問は載せていない
+    id: 'n71bb141488b4',
+    title: '【鍼灸国試】関係法規 直前整理ノート｜期限・届出先・数字・罰則を3枚の表に＋オリジナル○×40問（条文つき）',
+    url: 'https://note.com/fine_hornet161/n/n71bb141488b4',
+    topics: ['regulations', 'original-questions'],
+    placements: [],
+    price: 'paid',
+    priceYen: 500,
+    publishedAt: '2026-10-11',
+    subjectId: 'regulations',
+    // 教材の○×問題の節（免許・施術所・構造設備・広告・罰則・医療関係法規）が扱うテーマ
+    themeIds: ['rg-menkyo', 'rg-seijutsujo', 'rg-kokoku', 'rg-bassoku', 'rg-iryo-kanren'],
+    cardHeading: '関係法規のオリジナル復習教材',
+    summary: '期限・届出先・数字・罰則を3枚の表に整理し、条文つきのオリジナル○×40問を収録しています。note で購入する商品で、このサイトの無料の過去問とは別のものです（公式の過去問は載せていません）。',
+    buttonLabel: '教材の内容を見る',
+    utmCampaign: 'kankeihoki_paid_2026',
+  },
 ]
 
 export function noteArticlesFor(placement: NotePlacement): NoteArticle[] {

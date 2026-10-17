@@ -19,7 +19,7 @@ const STANDARD2026_HEADING: Record<string, string> = {
   unchanged: '2026年版で変更なし',
 }
 
-const SITE_URL = process.env.NEXT_PUBLIC_SITE_URL ?? 'https://shinkyuu-db.vercel.app'
+const SITE_URL = process.env.NEXT_PUBLIC_SITE_URL ?? 'https://shinkyuu-db.pages.dev'
 
 export function generateStaticParams() {
   return themes.map(t => ({ themeId: t.id }))

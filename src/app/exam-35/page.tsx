@@ -7,7 +7,7 @@ import { standard2026QuizCount } from '@/lib/quiz'
 import Standard2026Badge from '@/components/Standard2026Badge'
 import NoteArticleLinks from '@/components/NoteArticleLinks'
 
-const SITE_URL = process.env.NEXT_PUBLIC_SITE_URL ?? 'https://shinkyuu-db.vercel.app'
+const SITE_URL = process.env.NEXT_PUBLIC_SITE_URL ?? 'https://shinkyuu-db.pages.dev'
 
 export const metadata: Metadata = {
   title: '第35回 はり師・きゅう師国家試験対策｜2026年版 新出題基準',

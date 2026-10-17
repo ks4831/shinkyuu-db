@@ -8,7 +8,7 @@ import MovedNotice from '@/components/MovedNotice'
 import Link from 'next/link'
 import { pastExamCoverage } from '@/lib/pastExams'
 
-const SITE_URL = process.env.NEXT_PUBLIC_SITE_URL ?? 'https://shinkyuu-db.vercel.app'
+const SITE_URL = process.env.NEXT_PUBLIC_SITE_URL ?? 'https://shinkyuu-db.pages.dev'
 
 const pastExamAvailable = pastExamCoverage().filter((c) => c.available)
 const PAST_EXAM_TOTAL = pastExamAvailable.reduce((sum, c) => sum + c.collected, 0)

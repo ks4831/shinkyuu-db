@@ -16,19 +16,19 @@
   "acupointsLocationAllowed": 3,
   "acupointsLocationLabelRequired": 137,
   "sourceRecords": 669,
-  "noteArticles": 9,
+  "noteArticles": 10,
   "candidates": 10
  },
  "files": [
   {
    "name": "topic-statistics.json",
-   "sha256": "dc46acfbf188a7be6d56a2fcc26d7ed9334590ed4081bfc8a6c4c0f588ccbcc4",
-   "bytes": 165263
+   "sha256": "c360aa47517cf7ebccc557615f4e8bd096e909d3bbe90b20e5e97cc698443098",
+   "bytes": 164741
   },
   {
    "name": "acupoint-learning.json",
-   "sha256": "f74ebecbef9e581aafe087cc8e41e5cfde8451ea703f3f480ab70f4746ea9986",
-   "bytes": 378157
+   "sha256": "c033a4ae96ca014900d4205afca4199cd9644b197e95e29bafdc5576d69539fe",
+   "bytes": 377796
   },
   {
    "name": "content-safety.json",
@@ -37,13 +37,13 @@
   },
   {
    "name": "recommended-articles.json",
-   "sha256": "1b6d0b5eeb6cf08b0da2cd758d238094c77248e7be0711ab9ce39ff8ff01d9a4",
-   "bytes": 13706
+   "sha256": "24b6023d05be426847c2d09f04818fef57b5470ac55cf74d97ae24f6594c676f",
+   "bytes": 13696
   },
   {
    "name": "link-map.json",
-   "sha256": "4accf2ef0d8acdea17263ca7edd2541e6e9d23a4836363ca126cb860f053c4fd",
-   "bytes": 12532
+   "sha256": "38aae8bfe583f1ae89f037b6b67c71c010a2db65f1a53fd0b3bdf93b1ec889c0",
+   "bytes": 13538
   }
  ]
 }

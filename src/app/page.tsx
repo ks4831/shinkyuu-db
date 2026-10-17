@@ -111,6 +111,13 @@ export default function HomePage() {
             <li className="rounded-full border border-gray-200 bg-white px-2.5 py-1">会員登録なし</li>
             <li className="rounded-full border border-gray-200 bg-white px-2.5 py-1">学習記録はこの端末に保存</li>
           </ul>
+          {/* 2026-10 に URL を移したため、旧URLで学習していた人に記録の移し方を案内する */}
+          <p className="mt-3 text-xs text-gray-500">
+            以前のURL（shinkyuu-db.vercel.app）で学習していた方へ：学習記録は自動では引き継がれません。
+            <Link href="/dashboard/transfer" className="ml-1 font-semibold text-green-700 underline">
+              記録の移し方
+            </Link>
+          </p>
         </div>
       </section>
 

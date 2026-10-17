@@ -6,7 +6,7 @@ import { pastExamPracticeRounds, pastExamCountsByTheme } from '@/lib/pastExams'
 
 export const dynamic = 'force-static'
 
-const SITE_URL = process.env.NEXT_PUBLIC_SITE_URL ?? 'https://shinkyuu-db.vercel.app'
+const SITE_URL = process.env.NEXT_PUBLIC_SITE_URL ?? 'https://shinkyuu-db.pages.dev'
 
 export default function sitemap(): MetadataRoute.Sitemap {
   const now = new Date()

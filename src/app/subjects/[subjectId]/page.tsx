@@ -11,7 +11,7 @@ import NoteArticleCallout from '@/components/NoteArticleCallout'
 import { noteArticlesForSubject } from '@/data/noteArticles'
 import { loadPastExamQuestionsBySubject, pastExamPracticeRangeLabel } from '@/lib/pastExams'
 
-const SITE_URL = process.env.NEXT_PUBLIC_SITE_URL ?? 'https://shinkyuu-db.vercel.app'
+const SITE_URL = process.env.NEXT_PUBLIC_SITE_URL ?? 'https://shinkyuu-db.pages.dev'
 
 export function generateStaticParams() {
   return subjects.map(s => ({ subjectId: s.id }))
