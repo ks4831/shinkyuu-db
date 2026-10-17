@@ -1,6 +1,6 @@
 # note 向け共有データ（exports/note-content/v1）
 
-note「治療家の道｜かず」の記事制作で使う、DB の読み取り専用の書き出しです。DB を学習データの正本とし、note 側で経穴の情報や正答を作り直さないようにします。
+note「鍼灸国試ラボ｜かず」（旧：治療家の道｜かず）の記事制作で使う、DB の読み取り専用の書き出しです。DB を学習データの正本とし、note 側で経穴の情報や正答を作り直さないようにします。
 
 - 作成：`npm run export:note`（`scripts/export-note-content.mts`）
 - 検査：`npm run test:export`（`scripts/test-note-export.mts`）

@@ -15,7 +15,7 @@ export default function NoteArticleLinks({ placement, articles }: Props) {
   if (list.length === 0) return null
   return (
     <section className="mt-8 rounded-2xl border border-gray-100 bg-gray-50 p-4">
-      <h2 className="text-xs font-bold text-gray-600">学習の進め方を読む（note・治療家の道）</h2>
+      <h2 className="text-xs font-bold text-gray-600">学習の進め方を読む（note・鍼灸国試ラボ）</h2>
       <ul className="mt-2 space-y-2">
         {list.map((a) => {
           const href = noteArticleHref(a, placement)

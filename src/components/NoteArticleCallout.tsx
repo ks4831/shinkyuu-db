@@ -21,7 +21,7 @@ export default function NoteArticleCallout({
   const hasPaid = unique.some((a) => a.price === 'paid')
   return (
     <section className="mt-8 mb-4 rounded-2xl border border-gray-100 bg-gray-50 p-4" aria-label="関連する note の記事">
-      <h2 className="text-xs font-bold text-gray-600">関連する記事・教材（note・治療家の道）</h2>
+      <h2 className="text-xs font-bold text-gray-600">関連する記事・教材（note・鍼灸国試ラボ）</h2>
       <ul className={`mt-3 grid gap-3 ${unique.length > 1 ? 'sm:grid-cols-2' : ''}`}>
         {unique.map((a) => {
           const href = noteArticleHref(a, placement)
