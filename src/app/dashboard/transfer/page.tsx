@@ -1,6 +1,7 @@
 import type { Metadata } from 'next'
 import Link from 'next/link'
 import LearningDataTransfer from '@/components/quiz/LearningDataTransfer'
+import LegacyExportGuide from '@/components/quiz/LegacyExportGuide'
 
 export const metadata: Metadata = {
   // 端末内の学習記録を扱うページなので検索結果には出さない
@@ -22,6 +23,12 @@ export default function LearningDataTransferPage() {
         学習記録は、この端末のブラウザの中だけに保存しています。サイトのURLやブラウザが変わったときは、ここでファイルに保存して、新しい方で読み込んでください。
       </p>
       <LearningDataTransfer />
+      {/* 旧URL（Vercel）でビルドしたときは、旧サイトからの持ち出し手順を出さない */}
+      {!process.env.NEXT_PUBLIC_MOVED_TO && (
+        <div className="mt-6">
+          <LegacyExportGuide />
+        </div>
+      )}
     </main>
   )
 }

@@ -218,4 +218,106 @@ test('ファイル名は日付だけ（個人を特定する情報を入れな�
   assert.equal(T.exportFileName(new Date(2026, 9, 16)), 'shinkyuu-db-learning-20261016.json')
 })
 
+// ── 旧サイト用の保存ブックマーク（src/lib/legacyExport.ts） ──
+const L = await import('../src/lib/legacyExport')
+const vm = await import('node:vm')
+
+/** 旧サイトのページでブックマークを実行したときの動きを再現する */
+async function runBookmarklet(host: string, store: ReturnType<typeof makeStorage>) {
+  const blobs: Blob[] = []
+  const downloads: string[] = []
+  const messages: string[] = []
+  const calls: string[] = []
+  const el = (tag: string) => {
+    const o: Record<string, unknown> = {
+      tag,
+      setAttribute: () => {},
+      remove: () => {},
+      click() {
+        if (tag === 'a') downloads.push(String(o.download))
+      },
+    }
+    return o
+  }
+  const watched = {
+    getItem: (k: string) => (calls.push('get:' + k), store.getItem(k)),
+    setItem: () => void calls.push('set'),
+    removeItem: () => void calls.push('remove'),
+    clear: () => void calls.push('clear'),
+  }
+  const ctx = {
+    location: { hostname: host },
+    window: { localStorage: watched },
+    document: {
+      createElement: el,
+      body: {
+        appendChild: (o: { tag: string; textContent?: string }) => {
+          if (o.tag === 'div') messages.push(String(o.textContent))
+        },
+      },
+    },
+    URL: { createObjectURL: (b: Blob) => (blobs.push(b), 'blob:x'), revokeObjectURL: () => {} },
+    Blob,
+    setTimeout: () => 0,
+  }
+  // 利用者がブックマークに登録する文字列（javascript:…）を、ブラウザと同じく復号して実行する
+  const code = decodeURIComponent(L.legacyExportBookmarklet().slice('javascript:'.length))
+  vm.runInNewContext(code, ctx)
+  const text = blobs.length ? await blobs[0].text() : null
+  return { text, downloads, messages, calls }
+}
+
+async function testAsync(name: string, fn: () => Promise<void>) {
+  reset()
+  await fn()
+  n++
+  out(`  ✓ ${name}`)
+}
+
+await testAsync('旧サイト用ブックマーク：保存したファイルを新サイトでそのまま読み込める', async () => {
+  seed(oldSite, SAMPLE)
+  oldSite.setItem('shinkyuu_analytics_fired_v1', JSON.stringify({ x: 1 }))
+  oldSite.setItem('other_key', 'not-learning-data')
+  const before = new Map(oldSite.map)
+  const r = await runBookmarklet('shinkyuu-db.vercel.app', oldSite)
+  assert.equal(r.downloads.length, 1)
+  assert.match(r.downloads[0], /^shinkyuu-db-learning-\d{8}\.json$/)
+  assert.ok(r.text)
+  const parsed = T.parseImport(r.text!)
+  assert.ok(parsed.ok)
+  assert.deepEqual(parsed.file.data, SAMPLE)
+  // 旧サイトの記録は変わらない（読むだけ）。読むのは対象の11キーだけ
+  assert.deepEqual(oldSite.map, before)
+  assert.ok(!r.calls.some((c) => c === 'set' || c === 'remove' || c === 'clear'))
+  assert.deepEqual(r.calls.map((c) => c.slice(4)).sort(), T.LEARNING_KEYS.map((k) => k.key).sort())
+  // 新サイトで読み込むと、元の値と一致する
+  current = newSite
+  T.applyImport(parsed.file, 'fill')
+  for (const [k, v] of Object.entries(SAMPLE)) assert.deepEqual(JSON.parse(newSite.getItem(k)!), v)
+})
+
+await testAsync('旧サイト用ブックマーク：旧サイト以外では何も読まず、保存しない', async () => {
+  seed(oldSite, SAMPLE)
+  const r = await runBookmarklet('example.com', oldSite)
+  assert.equal(r.downloads.length, 0)
+  assert.equal(r.calls.length, 0)
+  assert.match(r.messages[0], /旧サイト/)
+})
+
+await testAsync('旧サイト用ブックマーク：記録がなければ保存しない・壊れた値は飛ばす', async () => {
+  oldSite.setItem('shinkyuu_quiz_review_v1', '[]')
+  oldSite.setItem('shinkyuu_checked', '{broken')
+  const r = await runBookmarklet('shinkyuu-db.vercel.app', oldSite)
+  assert.equal(r.downloads.length, 0)
+  assert.match(r.messages[0], /見つかりませんでした/)
+})
+
+test('旧サイト用ブックマーク：通信・書き込みの処理を含まない', () => {
+  const src = L.legacyExportSource()
+  for (const bad of ['fetch', 'XMLHttpRequest', 'sendBeacon', 'Image', 'WebSocket', 'setItem', 'removeItem', 'clear(', 'eval', 'import(', '<script', 'cookie']) {
+    assert.ok(!src.includes(bad), bad)
+  }
+  assert.ok(L.legacyExportBookmarklet().startsWith('javascript:'))
+})
+
 out(`\n${n} tests passed`)
