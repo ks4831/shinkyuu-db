@@ -1,8 +1,8 @@
 /* ──────────────────────────────────────────────────────────────
    note「鍼灸国試ラボ｜かず」（2026-10-17 に「治療家の道｜かず」から改名）で公開済みの記事（DB → note の導線）
    - 公開済みの記事だけを載せる（下書き・未公開の記事は載せない）
-   - 無料記事（price: 'free'）と有料教材（price: 'paid'・priceYen）を区別する。有料教材は科目・テーマページのカードだけに出し、
-     一覧ページ（placements）や過去問の演習画面には出さない
+   - 無料記事（price: 'free'）と有料教材（price: 'paid'・priceYen）を区別する。有料教材は科目・テーマページのカードと、
+     科目別過去問の結果画面（resultCard を持つ教材だけ・1枚）に出す。一覧ページ（placements）や出題中の画面には出さない
    - 記事の正本は note。タイトルは公開ページの表記（2026-10-11 に RSS、
      2026-10-12 に追加分を公開ページで確認）
    - 掲載先は学習を妨げない位置に1か所1ブロックまで。同じ記事を1画面に2回出さない
@@ -14,7 +14,7 @@
 export type NotePlacement = 'past-exams' | 'acupoints' | 'exam-35'
 
 /** リンクを置いた場所。UTM の utm_content と GA4 の placement に使う */
-export type NoteLinkPlacement = NotePlacement | 'subject-page' | 'theme-page' | 'exam-analysis'
+export type NoteLinkPlacement = NotePlacement | 'subject-page' | 'theme-page' | 'exam-analysis' | 'pastexam-result'
 
 export type NoteArticle = {
   /** note の記事キー（URL の /n/ 以下）。安定ID として使う */
@@ -45,6 +45,8 @@ export type NoteArticle = {
   buttonLabel?: string
   /** UTM の utm_campaign。未設定なら note_<id> */
   utmCampaign?: string
+  /** 科目別過去問の結果画面に出す案内（有料教材のみ。未設定なら出さない） */
+  resultCard?: { heading: string; summary: string }
 }
 
 export const NOTE_ACCOUNT_URL = 'https://note.com/fine_hornet161'
@@ -158,6 +160,10 @@ export const NOTE_ARTICLES: NoteArticle[] = [
     summary: 'オリジナル四択60問と全問解説（PDF 41ページ）、解答記録用のExcel 6シート。サンプル2問は販売ページで無料で読めます。ファイルはパソコンでZIPを解凍して使います。',
     buttonLabel: '教材の内容を見る',
     utmCampaign: 'anatomy_paid_2026',
+    resultCard: {
+      heading: '解剖学 頻出テーマ攻略ノート',
+      summary: 'オリジナル四択60問と全問の解説（PDF）、解答記録用のExcel。パソコンでZIPを解凍して使います。',
+    },
   },
   {
     // 有料教材（500円）。整理表3枚と、条文をもとにしたオリジナル○×40問。公式の過去問は載せていない
@@ -176,6 +182,10 @@ export const NOTE_ARTICLES: NoteArticle[] = [
     summary: '期限・届出先・数字・罰則を3枚の表に整理し、条文つきのオリジナル○×40問を収録しています。note で購入する商品で、このサイトの無料の過去問とは別のものです（公式の過去問は載せていません）。',
     buttonLabel: '教材の内容を見る',
     utmCampaign: 'kankeihoki_paid_2026',
+    resultCard: {
+      heading: '関係法規 直前整理ノート',
+      summary: '期限・届出先・数字・罰則の整理表3枚と、条文つきのオリジナル○×40問。note の記事の中で読めます。',
+    },
   },
 ]
 
@@ -200,6 +210,11 @@ export function noteArticlesForSubject(subjectId: string): NoteArticle[] {
 /** 無料記事を先、有料教材を後に並べる（同じ区分の中は台帳の順） */
 function sortFreeFirst(list: NoteArticle[]): NoteArticle[] {
   return [...list.filter((a) => a.price === 'free'), ...list.filter((a) => a.price === 'paid')]
+}
+
+/** 科目別過去問の結果画面に案内する教材（その科目の有料教材のうち resultCard を持つ最初の1つ。なければ null） */
+export function noteMaterialForPastExamResult(subjectId: string): NoteArticle | null {
+  return NOTE_ARTICLES.find((a) => a.price === 'paid' && a.subjectId === subjectId && a.resultCard) ?? null
 }
 
 /** テーマページに案内する記事 */

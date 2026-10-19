@@ -2,6 +2,7 @@
 
 import { useEffect, useRef, useState } from 'react'
 import Link from 'next/link'
+import PastExamResultMaterialCard from '@/components/pastExams/PastExamResultMaterialCard'
 import { themes } from '@/lib/data'
 import { subjectLabel } from '@/lib/quiz'
 import { recordPastExamAttempt } from '@/lib/pastExamStorage'
@@ -546,6 +547,8 @@ export default function PastExamRunner(props: PastExamRunnerProps) {
             </Link>
           </div>
         </div>
+        {/* 関連教材の案内は、科目別演習の結果カードの下だけ（出題中・苦手復習の結果には出さない） */}
+        {props.mode === 'subject' && <PastExamResultMaterialCard subjectId={props.subjectId} />}
       </div>
     )
   }
