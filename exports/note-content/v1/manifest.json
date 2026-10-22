@@ -16,7 +16,7 @@
   "acupointsLocationAllowed": 3,
   "acupointsLocationLabelRequired": 137,
   "sourceRecords": 669,
-  "noteArticles": 10,
+  "noteArticles": 12,
   "candidates": 10
  },
  "files": [
@@ -42,8 +42,8 @@
   },
   {
    "name": "link-map.json",
-   "sha256": "38aae8bfe583f1ae89f037b6b67c71c010a2db65f1a53fd0b3bdf93b1ec889c0",
-   "bytes": 13538
+   "sha256": "c916ebf9938eaaf9ddde707c943e93aba60924c844e05040177e9ca5142bfaa0",
+   "bytes": 14918
   }
  ]
 }

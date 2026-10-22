@@ -326,6 +326,43 @@
    "measurement": "DB 側の GA4 イベント note_link_click（article_id, note_id, subject, placement, article_type, price, destination_url）"
   },
   {
+   "stableId": "note:ncaa7b8608b3a",
+   "title": "鍼灸国試｜解剖学で間違えやすい5問｜真肋・食道の狭窄部・胸管・大脳基底核・上皮小体をオリジナル四択で確認",
+   "url": "https://note.com/fine_hornet161/n/ncaa7b8608b3a",
+   "topics": [
+    "anatomy",
+    "original-questions"
+   ],
+   "price": "free",
+   "priceYen": 0,
+   "dbPlacements": [],
+   "dbToNoteUtm": {
+    "utm_source": "shinkyuu-db",
+    "utm_medium": "referral",
+    "utm_campaign": "note_ncaa7b8608b3a",
+    "utm_content": "{placement}"
+   },
+   "measurement": "DB 側の GA4 イベント note_link_click（article_id, note_id, subject, placement, article_type, price, destination_url）"
+  },
+  {
+   "stableId": "note:n69ee08ed4c1d",
+   "title": "鍼灸国試｜関係法規で混同しやすいポイント5選｜第4条と第5条・消毒義務・許可と届出・病院と診療所",
+   "url": "https://note.com/fine_hornet161/n/n69ee08ed4c1d",
+   "topics": [
+    "regulations"
+   ],
+   "price": "free",
+   "priceYen": 0,
+   "dbPlacements": [],
+   "dbToNoteUtm": {
+    "utm_source": "shinkyuu-db",
+    "utm_medium": "referral",
+    "utm_campaign": "note_n69ee08ed4c1d",
+    "utm_content": "{placement}"
+   },
+   "measurement": "DB 側の GA4 イベント note_link_click（article_id, note_id, subject, placement, article_type, price, destination_url）"
+  },
+  {
    "stableId": "note:n042d1f1052e6",
    "title": "第35回鍼灸国試｜解剖学 頻出テーマ攻略ノート",
    "url": "https://note.com/fine_hornet161/n/n042d1f1052e6",
