@@ -1,6 +1,6 @@
 {
  "stableId": "recommended-articles",
- "sourceVersion": "shinkyuu-db@ee647cd",
+ "sourceVersion": "shinkyuu-db@ee647cd+dirty",
  "updatedAt": "2026-10-12T20:53:05+09:00",
  "candidates": [
   {
@@ -18,7 +18,7 @@
     "noteId": "nb284e53363b1",
     "status": "overlap_existing"
    },
-   "sourceVersion": "shinkyuu-db@ee647cd",
+   "sourceVersion": "shinkyuu-db@ee647cd+dirty",
    "verifiedStatus": "EDITORIAL_CANDIDATE",
    "sourceType": "db_statistics",
    "relatedDbUrl": "https://shinkyuu-db.pages.dev/past-exams",
@@ -70,7 +70,7 @@
     "noteId": "n1f60a0e5a4ec",
     "status": "overlap_existing"
    },
-   "sourceVersion": "shinkyuu-db@ee647cd",
+   "sourceVersion": "shinkyuu-db@ee647cd+dirty",
    "verifiedStatus": "EDITORIAL_CANDIDATE",
    "sourceType": "db_statistics",
    "relatedDbUrl": "https://shinkyuu-db.pages.dev/past-exams/theme/go-yu-ketsu",
@@ -122,7 +122,7 @@
     "noteId": null,
     "status": "no_published_overlap"
    },
-   "sourceVersion": "shinkyuu-db@ee647cd",
+   "sourceVersion": "shinkyuu-db@ee647cd+dirty",
    "verifiedStatus": "EDITORIAL_CANDIDATE",
    "sourceType": "db_statistics",
    "relatedDbUrl": "https://shinkyuu-db.pages.dev/past-exams/theme/go-yu-ketsu",
@@ -174,7 +174,7 @@
     "noteId": null,
     "status": "no_published_overlap"
    },
-   "sourceVersion": "shinkyuu-db@ee647cd",
+   "sourceVersion": "shinkyuu-db@ee647cd+dirty",
    "verifiedStatus": "EDITORIAL_CANDIDATE",
    "sourceType": "db_statistics",
    "relatedDbUrl": "https://shinkyuu-db.pages.dev/past-exams/theme/gen-ketsu",
@@ -226,7 +226,7 @@
     "noteId": null,
     "status": "no_published_overlap"
    },
-   "sourceVersion": "shinkyuu-db@ee647cd",
+   "sourceVersion": "shinkyuu-db@ee647cd+dirty",
    "verifiedStatus": "EDITORIAL_CANDIDATE",
    "sourceType": "db_statistics",
    "relatedDbUrl": "https://shinkyuu-db.pages.dev/past-exams/subject/oriental-overview",
@@ -278,7 +278,7 @@
     "noteId": null,
     "status": "no_published_overlap"
    },
-   "sourceVersion": "shinkyuu-db@ee647cd",
+   "sourceVersion": "shinkyuu-db@ee647cd+dirty",
    "verifiedStatus": "EDITORIAL_CANDIDATE",
    "sourceType": "db_statistics",
    "relatedDbUrl": "https://shinkyuu-db.pages.dev/past-exams/subject/acupuncture-theory",
@@ -304,7 +304,7 @@
     "noteId": null,
     "status": "no_published_overlap"
    },
-   "sourceVersion": "shinkyuu-db@ee647cd",
+   "sourceVersion": "shinkyuu-db@ee647cd+dirty",
    "verifiedStatus": "EDITORIAL_CANDIDATE",
    "sourceType": "db_statistics",
    "relatedDbUrl": "https://shinkyuu-db.pages.dev/past-exams",
@@ -330,7 +330,7 @@
     "noteId": null,
     "status": "no_published_overlap"
    },
-   "sourceVersion": "shinkyuu-db@ee647cd",
+   "sourceVersion": "shinkyuu-db@ee647cd+dirty",
    "verifiedStatus": "EDITORIAL_CANDIDATE",
    "sourceType": "db_statistics",
    "relatedDbUrl": "https://shinkyuu-db.pages.dev/past-exams",
@@ -356,7 +356,7 @@
     "noteId": null,
     "status": "no_published_overlap"
    },
-   "sourceVersion": "shinkyuu-db@ee647cd",
+   "sourceVersion": "shinkyuu-db@ee647cd+dirty",
    "verifiedStatus": "EDITORIAL_CANDIDATE",
    "sourceType": "db_statistics",
    "relatedDbUrl": "https://shinkyuu-db.pages.dev/past-exams",
@@ -382,7 +382,7 @@
     "noteId": null,
     "status": "no_published_overlap"
    },
-   "sourceVersion": "shinkyuu-db@ee647cd",
+   "sourceVersion": "shinkyuu-db@ee647cd+dirty",
    "verifiedStatus": "EDITORIAL_CANDIDATE",
    "sourceType": "db_statistics",
    "relatedDbUrl": "https://shinkyuu-db.pages.dev/past-exams",

@@ -1,7 +1,7 @@
 {
  "stableId": "link-map",
  "title": "note と DB の相互リンク",
- "sourceVersion": "shinkyuu-db@ee647cd",
+ "sourceVersion": "shinkyuu-db@ee647cd+dirty",
  "updatedAt": "2026-10-12T20:53:05+09:00",
  "utm": {
   "rule": "note → DB のリンクには必ず UTM を付ける。utm_campaign は記事の stableId（例: free-01-kankeihoki）",

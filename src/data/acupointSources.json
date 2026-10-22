@@ -219,7 +219,8 @@
    "verifiedAt": "2026-10-09",
    "verificationStatus": "CONFLICT",
    "coverage": "full",
-   "notes": "WHO主位置は「尺沢（LU5）と上腕骨外側上顆を結ぶ線の中点」。現行の「肘窩横紋の外端と外側上顆の中点」は中国国家標準型の表現。WHOの注記「肘を十分に屈曲すると肘窩横紋外端の陥凹部」とも同じではない"
+   "sourceText": "On the lateral aspect of the elbow, at the midpoint of the line connecting LU5 with the lateral epicondyle of the humerus. Note: When the elbow is fully flexed, LI11 is located in the depression on the lateral end of the cubital crease.",
+   "notes": "WHO主位置は「尺沢（LU5）と上腕骨外側上顆を結ぶ線の中点」（注記：肘を十分に屈曲すると肘窩横紋外端の陥凹部）。現行の「肘窩横紋の外端と外側上顆の中点」は基準点が異なる表現。日本の標準教科書・公式問題に位置の記載がなく、どちらが日本の基準かを確認できないため記述は変えていない（BUSINESS-34・2026-10-22再確認）"
   },
   {
    "acupointId": "li15",
@@ -759,7 +760,8 @@
    "verifiedAt": "2026-10-09",
    "verificationStatus": "CONFLICT",
    "coverage": "full",
-   "notes": "WHO主位置は「第2頸椎棘突起上縁と同じ高さ、僧帽筋外縁の陥凹部」。現行の「後髪際の上方5分」はWHOにない基準（伝統的・中国式の表現）"
+   "sourceText": "In the posterior region of the neck, at the same level as the superior border of the spinous process of the second cervical vertebra (C2), in the depression lateral to the trapezius muscle.",
+   "notes": "WHO主位置は「第2頸椎棘突起上縁と同じ高さ、僧帽筋外縁の陥凹部」。現行の「後髪際の上方5分」はWHOにない基準。日本の標準教科書・公式問題に位置の記載がなく、どちらが日本の基準かを確認できないため記述は変えていない（BUSINESS-34・2026-10-22再確認）"
   },
   {
    "acupointId": "bl11",
@@ -1851,7 +1853,7 @@
    "verifiedAt": "2026-10-09",
    "verificationStatus": "JAPAN_VERIFIED",
    "coverage": "partial",
-   "notes": "問題文「第4・第5中手骨の間にあるのはどれか」→ 正答 少府。「握ったとき小指頭が当たる所」は公式で未確認"
+   "notes": "問題文「第4・第5中手骨の間にあるのはどれか」→ 正答 少府。「握ったとき小指頭が当たる所」は公式で未確認。BUSINESS-34（2026-10-22）再確認：問題文に「第4・第5中手骨の間」と正答少府があり、その部分は直接確認。残りは未確認のため「一部」のまま"
   },
   {
    "acupointId": "gv4",
@@ -1863,7 +1865,7 @@
    "verifiedAt": "2026-10-09",
    "verificationStatus": "JAPAN_VERIFIED",
    "coverage": "partial",
-   "notes": "32-115「左右の第12肋骨先端を結ぶ線と後正中線の交点で、棘突起下方陥凹部」→ 命門。34-114（誤りを選ぶ問題）で「命門 ― 第12肋骨先端」は正しい組合せ。第2腰椎とは書かれていない"
+   "notes": "32-115「左右の第12肋骨先端を結ぶ線と後正中線の交点で、棘突起下方陥凹部」→ 命門。34-114（誤りを選ぶ問題）で「命門 ― 第12肋骨先端」は正しい組合せ。第2腰椎とは書かれていない。BUSINESS-34（2026-10-22）再確認：問題文に「後正中線…棘突起下方陥凹部」と正答命門があり、その部分は直接確認。第2腰椎は未確認のため「一部」のまま"
   },
   {
    "acupointId": "gv9",
@@ -1875,7 +1877,7 @@
    "verifiedAt": "2026-10-09",
    "verificationStatus": "JAPAN_VERIFIED",
    "coverage": "partial",
-   "notes": "誤りを選ぶ問題で「至陽 ― 肩甲骨下角」は正しい組合せ（括弧内の指標を確認）"
+   "notes": "誤りを選ぶ問題で「至陽 ― 肩甲骨下角」は正しい組合せ（括弧内の指標を確認）。BUSINESS-34（2026-10-22）再確認：誤りを選ぶ単一正答の問題で「至陽 ― 肩甲骨下角」は正しい組合せと読める（括弧内のみ）。第7胸椎は未確認のため「一部」のまま"
   },
   {
    "acupointId": "gv9",
@@ -1897,9 +1899,9 @@
    "sourceId": "OFFICIAL-29-34",
    "sourcePage": "34-114",
    "verifiedAt": "2026-10-09",
-   "verificationStatus": "JAPAN_VERIFIED",
+   "verificationStatus": "JAPAN_INFERRED",
    "coverage": "partial",
-   "notes": "誤りを選ぶ問題で「腰陽関 ― 腸骨稜最高点」は正しい組合せ（ヤコビー線の高さを確認）"
+   "notes": "誤りを選ぶ問題で「腰陽関 ― 腸骨稜最高点」は正しい組合せ。問題に「ヤコビー線」「第4腰椎」の語はなく、腸骨稜最高点＝ヤコビー線という知識を介するため推論に変更（BUSINESS-34・2026-10-22再確認）"
   },
   {
    "acupointId": "si19",
@@ -1911,7 +1913,7 @@
    "verifiedAt": "2026-10-09",
    "verificationStatus": "JAPAN_VERIFIED",
    "coverage": "partial",
-   "notes": "問題文「顔面部、耳珠中央の前縁と下顎骨関節突起の間の陥凹部にあるのはどれか」→ 聴宮。「口を開けたとき」は公式で未確認"
+   "notes": "問題文「顔面部、耳珠中央の前縁と下顎骨関節突起の間の陥凹部にあるのはどれか」→ 聴宮。「口を開けたとき」は公式で未確認。BUSINESS-34（2026-10-22）再確認：問題文と正答聴宮で前半は直接確認。「口を開けたとき」は未確認のため「一部」のまま"
   },
   {
    "acupointId": "st6",
@@ -1921,9 +1923,9 @@
    "sourceId": "OFFICIAL-29-34",
    "sourcePage": "34-111",
    "verifiedAt": "2026-10-09",
-   "verificationStatus": "JAPAN_VERIFIED",
-   "coverage": "partial",
-   "notes": "「中指末節骨の指幅を1横指として取穴する経穴」→ 頬車（1横指の取り方を確認）"
+   "verificationStatus": "JAPAN_INFERRED",
+   "coverage": "related",
+   "notes": "「中指末節骨の指幅を1横指として取穴する経穴」→ 頬車。問題が示すのは1横指の取り方だけで、下顎角・咬筋などの位置は書かれていないため推論（関連情報）に変更（BUSINESS-34・2026-10-22再確認）"
   },
   {
    "acupointId": "lu7",
@@ -1933,9 +1935,9 @@
    "sourceId": "OFFICIAL-29-34",
    "sourcePage": "31-120",
    "verifiedAt": "2026-10-09",
-   "verificationStatus": "JAPAN_VERIFIED",
+   "verificationStatus": "JAPAN_INFERRED",
    "coverage": "related",
-   "notes": "「橈側手根屈筋腱の橈側に位置する経穴」→ 列欠。現行の location には書かれていない指標"
+   "notes": "「橈側手根屈筋腱の橈側に位置する経穴」→ 列欠。現行の location には書かれていない指標で、記述を直接裏づけないため推論（関連情報）に変更（BUSINESS-34・2026-10-22再確認）"
   },
   {
    "acupointId": "lu7",
@@ -2235,7 +2237,7 @@
    "verifiedAt": "2026-10-09",
    "verificationStatus": "JAPAN_VERIFIED",
    "coverage": "partial",
-   "notes": "「外眼角で接続する経脈の井穴の組合せ」→ 関衝 ── 足竅陰（井穴を確認。五行の金は未確認）"
+   "notes": "「外眼角で接続する経脈の井穴の組合せ」→ 関衝 ── 足竅陰（井穴を確認。五行の金は未確認）。BUSINESS-34（2026-10-22）再確認：正答「関衝 ── 足竅陰」で井穴は直接確認。五行の金は未確認のため「一部」のまま"
   },
   {
    "acupointId": "ki1",
@@ -2247,7 +2249,7 @@
    "verifiedAt": "2026-10-09",
    "verificationStatus": "JAPAN_VERIFIED",
    "coverage": "partial",
-   "notes": "「胸中で接続する経脈の井穴の組合せ」→ 湧泉 ── 中衝（井穴を確認。木は未確認）"
+   "notes": "「胸中で接続する経脈の井穴の組合せ」→ 湧泉 ── 中衝（井穴を確認。木は未確認）。BUSINESS-34（2026-10-22）再確認：正答「湧泉 ── 中衝」で井穴は直接確認。五行の木は未確認のため「一部」のまま"
   },
   {
    "acupointId": "pc9",
@@ -2259,7 +2261,7 @@
    "verifiedAt": "2026-10-09",
    "verificationStatus": "JAPAN_VERIFIED",
    "coverage": "partial",
-   "notes": "同上"
+   "notes": "同上。BUSINESS-34（2026-10-22）再確認：正答「湧泉 ── 中衝」で井穴は直接確認。五行の木は未確認のため「一部」のまま"
   },
   {
    "acupointId": "te4",
@@ -2283,7 +2285,7 @@
    "verifiedAt": "2026-10-09",
    "verificationStatus": "JAPAN_VERIFIED",
    "coverage": "full",
-   "notes": "「大腸の下合穴が所属する経脈の経火穴はどれか」→ 解渓"
+   "notes": "「大腸の下合穴が所属する経脈の経火穴はどれか」→ 解渓。BUSINESS-34（2026-10-22）再確認：問題文「…経火穴はどれか」の正答が解渓で、解渓が経火穴であることは問題文と正答で直接確認できる。機械照合の不一致は「経（火）」と「経火穴」の表記差によるもので、確認済みのまま"
   },
   {
    "acupointId": "gb24",
@@ -2295,7 +2297,7 @@
    "verifiedAt": "2026-10-09",
    "verificationStatus": "JAPAN_VERIFIED",
    "coverage": "partial",
-   "notes": "「肺を損傷するリスクが最も高い募穴はどれか」→ 日月（募穴を確認。胆の募穴であることは書かれていない）"
+   "notes": "「肺を損傷するリスクが最も高い募穴はどれか」→ 日月（募穴を確認。胆の募穴であることは書かれていない）。BUSINESS-34（2026-10-22）再確認：問題文の「募穴」と正答日月で募穴は直接確認。「胆の」は未確認のため「一部」のまま"
   },
   {
    "acupointId": "li4",
@@ -2307,7 +2309,7 @@
    "verifiedAt": "2026-10-09",
    "verificationStatus": "JAPAN_VERIFIED",
    "coverage": "partial",
-   "notes": "「四総穴の主治を踏まえて治療する場合」→ 合谷（四総穴を確認。面口は推論）"
+   "notes": "「四総穴の主治を踏まえて治療する場合」→ 合谷（四総穴を確認。面口は推論）。BUSINESS-34（2026-10-22）再確認：問題文の「四総穴」と正答合谷で四総穴は直接確認。「面口」は未確認のため「一部」のまま"
   },
   {
    "acupointId": "lu7",
@@ -2319,7 +2321,7 @@
    "verifiedAt": "2026-10-09",
    "verificationStatus": "JAPAN_VERIFIED",
    "coverage": "partial",
-   "notes": "「陰経を総括する奇経の八脈交会穴はどれか」→ 列欠（陰経を総括する奇経＝任脈は知識による）"
+   "notes": "「陰経を総括する奇経の八脈交会穴はどれか」→ 列欠（陰経を総括する奇経＝任脈は知識による）。BUSINESS-34（2026-10-22）再確認：問題文の「八脈交会穴」と正答列欠で八脈交会穴は直接確認。任脈は未確認のため「一部」のまま"
   },
   {
    "acupointId": "gb36",
@@ -2343,7 +2345,7 @@
    "verifiedAt": "2026-10-09",
    "verificationStatus": "JAPAN_VERIFIED",
    "coverage": "partial",
-   "notes": "問題文「八会穴を用いて…膈兪とともに選穴する」（八会穴を確認。血会は推論）"
+   "notes": "問題文「八会穴を用いて…膈兪とともに選穴する」（八会穴を確認。血会は推論）。BUSINESS-34（2026-10-22）再確認：問題文「八会穴を用いて…膈兪とともに」で八会穴は直接確認。血会は未確認のため「一部」のまま"
   },
   {
    "acupointId": "gb39",

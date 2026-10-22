@@ -180,6 +180,12 @@ const RECORD_LABELS: Record<RecordStatus, string> = {
   CONFLICT: '表現・表記が異なる',
 }
 const COVERAGE_LABELS: Record<Coverage, string> = { full: '', partial: '・一部', related: '・関連情報' }
+/** 一覧の判定名。直接確認でも記述の一部だけのときは、確認済みに見えないよう「一部のみ」と書く */
+function recordLabel(r: AcupointSourceRecord): string {
+  if (r.verificationStatus === 'JAPAN_VERIFIED' && r.coverage === 'partial') return '一部のみ直接確認（残りは未確認）'
+  if (r.verificationStatus === 'JAPAN_VERIFIED' && r.coverage === 'related') return '関連する記載のみ（直接確認ではない）'
+  return RECORD_LABELS[r.verificationStatus] + COVERAGE_LABELS[r.coverage]
+}
 const LINKABLE = new Set(['OFFICIAL-29-34', 'KIJUN-2026'])
 
 function activeRecords(a: Acupoint, field: SourceField, value: string) {
@@ -207,7 +213,8 @@ function lineFor(a: Acupoint, field: SourceField, value: string, status: Summary
     case 'CONFLICT': {
       const c = rs.find((r) => r.verificationStatus === 'CONFLICT')
       const src = c ? shortName(c.sourceId) : '資料'
-      return { verdict: `${src}と表現が異なる`, tone: 'conflict', note: c?.sourceText ? `資料の表記：${c.sourceText}` : '日本の教科書で確認するまで記述を変えていません' }
+      const keep = '日本の教科書で確認するまで記述を変えていません'
+      return { verdict: `${src}と表現が異なる`, tone: 'conflict', note: c?.sourceText ? `資料の表記：${c.sourceText}（${keep}）` : keep }
     }
     case 'HISTORICAL_ONLY':
       return { verdict: '古典の記載のみ', tone: 'pending', note: textbook }
@@ -259,7 +266,7 @@ export function describeAcupointSources(a: Acupoint): { lines: SourceDisplayLine
         source: shortName(r.sourceId),
         url: LINKABLE.has(r.sourceId) && doc?.url ? doc.url : undefined,
         page: r.sourcePage,
-        status: RECORD_LABELS[r.verificationStatus] + COVERAGE_LABELS[r.coverage],
+        status: recordLabel(r),
         sourceText: r.sourceText && r.sourceText !== r.claim ? r.sourceText : undefined,
       }
     })
