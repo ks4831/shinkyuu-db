@@ -10,6 +10,7 @@ import {
 } from '@/lib/pastExams'
 import PastExamsTabs from '@/components/pastExams/PastExamsTabs'
 import PastExamRoundStatus from '@/components/pastExams/PastExamRoundStatus'
+import PastExamSubjectStatus from '@/components/pastExams/PastExamSubjectStatus'
 import PastExamThemePicker, { type PastExamThemeGroup } from '@/components/pastExams/PastExamThemePicker'
 import NoteArticleLinks from '@/components/NoteArticleLinks'
 
@@ -99,6 +100,7 @@ export default function PastExamsPage() {
               <span className="min-w-0">
                 <span className="block text-sm font-bold text-gray-900">{s.name}</span>
                 <span className="mt-0.5 block text-xs text-gray-500">{RANGE_LABEL}</span>
+                <PastExamSubjectStatus subjectId={s.id} total={count} />
               </span>
               <span className="flex flex-shrink-0 items-center gap-2 text-sm font-bold text-green-700">
                 {count}問

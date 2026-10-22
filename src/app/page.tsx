@@ -1,7 +1,8 @@
 import type { Metadata } from 'next'
 import Link from 'next/link'
 import { EXAM_ROUNDS, QUESTIONS_PER_ROUND } from '@/lib/examQuestions'
-import { pastExamCoverage } from '@/lib/pastExams'
+import { pastExamCountsBySubject, pastExamCoverage } from '@/lib/pastExams'
+import { subjects } from '@/lib/data'
 import { ALL_QUESTIONS } from '@/lib/quiz'
 import HomeResumeCard from '@/components/home/HomeResumeCard'
 import HomeNoteSection from '@/components/home/HomeNoteSection'
@@ -13,6 +14,9 @@ const PAST_EXAM_ROUND_RANGE = pastExamAvailable.length
   : ''
 /** 回ごとの演習可能数（HOMEの「続きから解く」で進捗の分母に使う） */
 const PAST_EXAM_TOTALS: Record<number, number> = Object.fromEntries(pastExamAvailable.map((c) => [c.round, c.playable]))
+/** 科目ごとの過去問数と科目名（HOMEの「続きから解く」の科目別で使う） */
+const PAST_EXAM_SUBJECT_TOTALS = pastExamCountsBySubject()
+const SUBJECT_NAMES: Record<string, string> = Object.fromEntries(subjects.map((s) => [s.id, s.name]))
 const QUIZ_TOTAL = ALL_QUESTIONS.length.toLocaleString()
 const ANALYSIS_ROUND_RANGE = `第${EXAM_ROUNDS[0]}〜${EXAM_ROUNDS[EXAM_ROUNDS.length - 1]}回`
 const ANALYSIS_TOTAL = (EXAM_ROUNDS.length * QUESTIONS_PER_ROUND).toLocaleString()
@@ -132,8 +136,8 @@ export default function HomePage() {
         </div>
       </section>
 
-      {/* ── 続きから解く（年度別過去問で途中の回があるときだけ） ── */}
-      <HomeResumeCard totals={PAST_EXAM_TOTALS} />
+      {/* ── 続きから解く（年度別・科目別の過去問で途中のものがあるときだけ） ── */}
+      <HomeResumeCard totals={PAST_EXAM_TOTALS} subjectTotals={PAST_EXAM_SUBJECT_TOTALS} subjectNames={SUBJECT_NAMES} />
 
       {/* ── メイン3カード（スマホ縦1列 / PC 3カラム） ── */}
       <section className="px-4 pt-5 sm:pt-8">

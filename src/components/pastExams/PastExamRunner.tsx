@@ -1,6 +1,6 @@
 'use client'
 
-import { useEffect, useRef, useState } from 'react'
+import { useEffect, useMemo, useRef, useState } from 'react'
 import Link from 'next/link'
 import PastExamResultMaterialCard from '@/components/pastExams/PastExamResultMaterialCard'
 import { themes } from '@/lib/data'
@@ -11,8 +11,14 @@ import {
   savePastExamProgress,
   markPastExamSessionCompleted,
   resetPastExamSession,
-  type PastExamSession,
 } from '@/lib/pastExamSession'
+import {
+  getPastExamSubjectSession,
+  savePastExamSubjectProgress,
+  markPastExamSubjectSessionCompleted,
+  resetPastExamSubjectSession,
+  resolveSubjectSession,
+} from '@/lib/pastExamSubjectSession'
 import { trackSessionOnceKeyed } from '@/lib/analytics'
 import { getAcceptedAnswerIndexes, isPastExamAnswerCorrect, formatAcceptedAnswers } from '@/lib/pastExamAnswers'
 import { PAST_EXAM_CHOICE_LABELS } from '@/lib/choiceLabels'
@@ -59,11 +65,18 @@ type CrossInfo = {
   backLabel: string
 }
 
+/** 年度別・科目別のセッションに共通する部分（回答済み設問と正誤。出題順に並べたもの） */
+type SessionView = {
+  answers: { questionId: string; correct: boolean }[]
+  /** 科目別だけ：再開に使う出題順（questionId）。年度別は問題番号順のため持たない */
+  order?: string[]
+}
+
 type SessionCheck = {
-  /** 進行中（未完走）で、Q1からの連続一致が取れた場合のみ設定 */
-  resumable: PastExamSession | null
+  /** 進行中（未完走）で、先頭からの連続一致が取れた場合のみ設定 */
+  resumable: SessionView | null
   /** 完走済みで、現在の設問セットと完全一致する場合のみ設定 */
-  completedSession: PastExamSession | null
+  completedSession: SessionView | null
 }
 
 const EMPTY_SESSION_CHECK: SessionCheck = { resumable: null, completedSession: null }
@@ -109,10 +122,11 @@ function WrongQuestionChips({ questions, showRound }: { questions: PastExamQuest
 }
 
 export default function PastExamRunner(props: PastExamRunnerProps) {
-  const { questions } = props
   /** null＝theme/subject mode（年度sessionを持たない）。以降 round!==null が「年度session操作を
    *  行ってよいか」の唯一の判定基準になる（mode別の変数は持たず、round自体で判定する）。 */
   const round = props.mode === 'theme' || props.mode === 'subject' ? null : props.round
+  /** 科目別演習のときだけ設定。科目別セッション（年度別とは別キー）の読み書きはこれが null でないときに限る */
+  const subjectId = props.mode === 'subject' ? props.subjectId : null
   const roundLabel = round !== null ? `第${round}回` : '過去問'
   const crossInfo: CrossInfo | null =
     props.mode === 'theme'
@@ -135,7 +149,17 @@ export default function PastExamRunner(props: PastExamRunnerProps) {
   /** 苦手復習モード中か。true の間は questions ではなく reviewQuestions を出題する */
   const [isReview, setIsReview] = useState(false)
   const [reviewQuestions, setReviewQuestions] = useState<PastExamQuestionView[]>([])
+  /** 科目別の再開時だけ使う出題順（保存時の順）。null のときは props の順（年度→問題番号） */
+  const [resumeOrder, setResumeOrder] = useState<string[] | null>(null)
+  /** 科目別の「最初から解く」の確認表示 */
+  const [confirmRestart, setConfirmRestart] = useState(false)
 
+  const questions = useMemo(() => {
+    if (!resumeOrder) return props.questions
+    const byId = new Map(props.questions.map((q) => [q.id, q]))
+    const ordered = resumeOrder.map((id) => byId.get(id)).filter((q): q is PastExamQuestionView => Boolean(q))
+    return ordered.length === props.questions.length ? ordered : props.questions
+  }, [props.questions, resumeOrder])
   const total = questions.length
   const activeQuestions = isReview ? reviewQuestions : questions
   const activeTotal = activeQuestions.length
@@ -165,12 +189,13 @@ export default function PastExamRunner(props: PastExamRunnerProps) {
   }, [phase, index, isReview, reviewQuestions])
 
   /** 保存済みの回答済み分をresultsへ復元し、次の未回答問題から再開する（「続きから解く」とHOMEからの直接再開で共用） */
-  function resumeFrom(resumable: PastExamSession) {
+  function resumeFrom(resumable: SessionView) {
     if (round !== null) {
       trackSessionOnceKeyed('pastexam_start', String(round), { exam_round: round, question_count: total })
     }
     setIsReview(false)
     setReviewQuestions([])
+    setResumeOrder(resumable.order ?? null)
     setResults(resumable.answers.map((a) => a.correct))
     setIndex(resumable.answers.length)
     setSelected(null)
@@ -191,6 +216,14 @@ export default function PastExamRunner(props: PastExamRunnerProps) {
      react-hooks/set-state-in-effect の警告を増やさないようにしている。 */
   useEffect(() => {
     function compute(): SessionCheck {
+      if (subjectId !== null) {
+        // 科目別：保存時の出題順を、いまの問題データに合わせて並べ直してから判定する
+        const s = getPastExamSubjectSession(subjectId)
+        const resolved = s ? resolveSubjectSession(s, props.questions.map((q) => q.id)) : null
+        if (!resolved) return EMPTY_SESSION_CHECK
+        const view = { answers: resolved.answers, order: resolved.order }
+        return resolved.status === 'completed' ? { resumable: null, completedSession: view } : { resumable: view, completedSession: null }
+      }
       // theme modeでは年度sessionという概念自体が無いため、読み込みを一切行わない
       if (round === null) return EMPTY_SESSION_CHECK
       const s = getPastExamSession(round)
@@ -205,7 +238,7 @@ export default function PastExamRunner(props: PastExamRunnerProps) {
       if (!isContiguousPrefix) return EMPTY_SESSION_CHECK
       // 最終問に回答したあと「結果を見る」を押さずに閉じた場合は、全問回答済みとして完了扱いにする
       // （ここでは保存し直さない。復元経路からは書き込まない方針を維持する）
-      if (sorted.length === total) return { resumable: null, completedSession: { ...s, answers: sorted, completed: true } }
+      if (sorted.length === total) return { resumable: null, completedSession: { ...s, answers: sorted } }
       return { resumable: { ...s, answers: sorted }, completedSession: null }
     }
     const check = compute()
@@ -223,7 +256,7 @@ export default function PastExamRunner(props: PastExamRunnerProps) {
     }
     setSessionCheck(check)
     // eslint-disable-next-line react-hooks/exhaustive-deps
-  }, [round])
+  }, [round, subjectId])
 
   if (total === 0) {
     return (
@@ -246,6 +279,12 @@ export default function PastExamRunner(props: PastExamRunnerProps) {
       resetPastExamSession(round)
       trackSessionOnceKeyed('pastexam_start', String(round), { exam_round: round, question_count: total })
     }
+    if (subjectId !== null) resetPastExamSubjectSession(subjectId)
+    setResumeOrder(null)
+    setIndex(0)
+    setSelected(null)
+    setAnswered(false)
+    setResults([])
     setSessionCheck(EMPTY_SESSION_CHECK)
     setIsReview(false)
     setReviewQuestions([])
@@ -258,12 +297,15 @@ export default function PastExamRunner(props: PastExamRunnerProps) {
     if (sessionCheck.resumable) resumeFrom(sessionCheck.resumable)
   }
 
-  /** 「最初から解く」：この年度の保存セッションのみ削除しQ1から開始（回答履歴historyは削除しない） */
+  /** 「最初から解く」：この年度（科目別ではこの科目）の保存セッションのみ削除し1問目から開始（回答履歴historyは削除しない） */
   function handleRestart() {
     if (round !== null) {
       resetPastExamSession(round)
       trackSessionOnceKeyed('pastexam_start', String(round), { exam_round: round, question_count: total })
     }
+    if (subjectId !== null) resetPastExamSubjectSession(subjectId)
+    setResumeOrder(null)
+    setConfirmRestart(false)
     setSessionCheck(EMPTY_SESSION_CHECK)
     setIsReview(false)
     setReviewQuestions([])
@@ -318,6 +360,10 @@ export default function PastExamRunner(props: PastExamRunnerProps) {
     if (!isReview && round !== null) {
       savePastExamProgress(round, { questionId: q.id, questionNumber: q.questionNumber, correct: isCorrect })
     }
+    // 科目別は科目ごとの別キーに保存する（年度別のセッションには触れない）
+    if (!isReview && subjectId !== null) {
+      savePastExamSubjectProgress(subjectId, questions.map((x) => x.id), { questionId: q.id, correct: isCorrect })
+    }
   }
 
   function handleNext() {
@@ -340,6 +386,7 @@ export default function PastExamRunner(props: PastExamRunnerProps) {
         markPastExamSessionCompleted(round)
         setSessionCheck({ resumable: null, completedSession: getPastExamSession(round) })
       }
+      if (subjectId !== null) markPastExamSubjectSessionCompleted(subjectId)
       setPhase('result')
       return
     }
@@ -351,6 +398,8 @@ export default function PastExamRunner(props: PastExamRunnerProps) {
   /** 「もう一度{total}問解く」：この年度のセッションを削除し、新しいセッションとしてQ1からやり直す */
   function handleRetry() {
     if (round !== null) resetPastExamSession(round)
+    if (subjectId !== null) resetPastExamSubjectSession(subjectId)
+    setResumeOrder(null)
     setSessionCheck(EMPTY_SESSION_CHECK)
     setIsReview(false)
     setReviewQuestions([])
@@ -364,13 +413,23 @@ export default function PastExamRunner(props: PastExamRunnerProps) {
 
   if (phase === 'start') {
     const { resumable, completedSession } = sessionCheck
+    // 開始画面の見出し。科目別・テーマ別は「科目別過去問」などの区分と名前、年度別は「第○回 過去問」
+    const startHeading = crossInfo ? (
+      <>
+        <p className="text-sm font-semibold text-green-700">{crossInfo.label}</p>
+        <h1 className="mt-1 text-xl font-bold text-gray-900">{crossInfo.name}の過去問</h1>
+      </>
+    ) : (
+      <h1 className="text-xl font-bold text-gray-900">{roundLabel} 過去問</h1>
+    )
+    const startSubtitle = crossInfo ? `${crossRangeLabel(questions)}・全${total}問` : `収録 ${total}問`
 
     if (resumable) {
       const answeredCount = resumable.answers.length
       return (
         <div ref={screenTopRef} className="mx-auto max-w-md scroll-mt-20 px-4 py-10 text-center">
-          <h1 className="text-xl font-bold text-gray-900">{roundLabel} 過去問</h1>
-          <p className="mt-2 text-sm text-gray-500">収録 {total}問</p>
+          {startHeading}
+          <p className="mt-2 text-sm text-gray-500">{startSubtitle}</p>
           <p className="mt-3 text-sm font-semibold text-green-700">
             {answeredCount}問回答済み・残り{total - answeredCount}問
           </p>
@@ -381,13 +440,39 @@ export default function PastExamRunner(props: PastExamRunnerProps) {
           >
             続きから解く
           </button>
-          <button
-            type="button"
-            onClick={handleRestart}
-            className="mt-3 w-full rounded-xl border border-gray-200 bg-white px-5 py-3.5 text-sm font-bold text-gray-600 hover:border-green-300"
-          >
-            最初から解く
-          </button>
+          {/* 科目別は問題数が多く途中記録を失う影響が大きいため、消す前に確認する（年度別は従来どおり） */}
+          {subjectId !== null && confirmRestart ? (
+            <div className="mt-3 rounded-xl border border-amber-200 bg-amber-50 p-3 text-left" role="alert">
+              <p className="text-sm font-bold text-gray-900">{crossInfo?.name}の途中の記録（{answeredCount}問）を消して、1問目から解きますか？</p>
+              <p className="mt-1 text-xs leading-relaxed text-gray-600">
+                消えるのはこの科目の「続きから」の記録だけです。学習記録（解答履歴）や、ほかの科目・年度別の途中の記録は残ります。
+              </p>
+              <div className="mt-3 flex gap-2">
+                <button
+                  type="button"
+                  onClick={() => setConfirmRestart(false)}
+                  className="min-h-11 flex-1 rounded-xl border border-gray-200 bg-white px-3 text-sm font-bold text-gray-600"
+                >
+                  やめる
+                </button>
+                <button
+                  type="button"
+                  onClick={handleRestart}
+                  className="min-h-11 flex-1 rounded-xl bg-gray-900 px-3 text-sm font-bold text-white"
+                >
+                  消して最初から
+                </button>
+              </div>
+            </div>
+          ) : (
+            <button
+              type="button"
+              onClick={subjectId !== null ? () => setConfirmRestart(true) : handleRestart}
+              className="mt-3 w-full rounded-xl border border-gray-200 bg-white px-5 py-3.5 text-sm font-bold text-gray-600 hover:border-green-300"
+            >
+              最初から解く
+            </button>
+          )}
         </div>
       )
     }
@@ -396,8 +481,8 @@ export default function PastExamRunner(props: PastExamRunnerProps) {
       const lastScore = completedSession.answers.filter((a) => a.correct).length
       return (
         <div ref={screenTopRef} className="mx-auto max-w-md scroll-mt-20 px-4 py-10 text-center">
-          <h1 className="text-xl font-bold text-gray-900">{roundLabel} 過去問</h1>
-          <p className="mt-2 text-sm text-gray-500">収録 {total}問</p>
+          {startHeading}
+          <p className="mt-2 text-sm text-gray-500">{startSubtitle}</p>
           <p className="mt-3 text-sm font-semibold text-gray-600">
             前回 {lastScore} / {total}問正解
           </p>
@@ -406,7 +491,7 @@ export default function PastExamRunner(props: PastExamRunnerProps) {
             onClick={handleStart}
             className="mt-6 w-full rounded-xl bg-green-600 px-5 py-4 text-base font-bold text-white hover:bg-green-700"
           >
-            過去問を解く
+            {subjectId !== null ? 'もう一度1問目から解く' : '過去問を解く'}
           </button>
           <button
             type="button"
@@ -421,21 +506,12 @@ export default function PastExamRunner(props: PastExamRunnerProps) {
 
     return (
       <div ref={screenTopRef} className="mx-auto max-w-md scroll-mt-20 px-4 py-10 text-center">
-        {crossInfo ? (
-          <>
-            <p className="text-sm font-semibold text-green-700">{crossInfo.label}</p>
-            <h1 className="mt-1 text-xl font-bold text-gray-900">{crossInfo.name}の過去問</h1>
-          </>
-        ) : (
-          <h1 className="text-xl font-bold text-gray-900">{roundLabel} 過去問</h1>
-        )}
-        <p className="mt-2 text-sm text-gray-500">
-          {crossInfo ? `${crossRangeLabel(questions)}・全${total}問` : `収録 ${total}問`}
-        </p>
+        {startHeading}
+        <p className="mt-2 text-sm text-gray-500">{startSubtitle}</p>
         {/* 初回の開始画面だけに出す。問題数の多さで身構えないよう、進め方を短く伝える */}
         <p className="mx-auto mt-4 max-w-xs text-left text-xs leading-relaxed text-gray-600">
           1問ずつ解いて、そのつど正解と解説を確認できます。
-          {round !== null && '途中でやめても、次に開いたときに続きから再開できます（この端末に保存）。'}
+          {(round !== null || subjectId !== null) && '途中でやめても、次に開いたときに続きから再開できます（この端末に保存）。'}
         </p>
         <button
           type="button"
