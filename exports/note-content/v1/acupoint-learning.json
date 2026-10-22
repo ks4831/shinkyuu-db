@@ -1,7 +1,7 @@
 {
  "stableId": "acupoint-learning",
- "sourceVersion": "shinkyuu-db@ee647cd+dirty",
- "updatedAt": "2026-10-12T20:53:05+09:00",
+ "sourceVersion": "shinkyuu-db@d090183",
+ "updatedAt": "2026-10-22T14:06:51+09:00",
  "acupoints": [
   {
    "stableId": "acupoint:lu1",
@@ -37,11 +37,11 @@
     "30-106",
     "32-154"
    ],
-   "sourceVersion": "shinkyuu-db@ee647cd+dirty",
+   "sourceVersion": "shinkyuu-db@d090183",
    "verifiedStatus": "JAPAN_VERIFIED",
    "sourceType": "acupoint_source_records",
    "relatedDbUrl": "https://shinkyuu-db.pages.dev/acupoints/lu1",
-   "updatedAt": "2026-10-12T20:53:05+09:00",
+   "updatedAt": "2026-10-22T14:06:51+09:00",
    "publicationAllowed": true,
    "warningNotes": [
     "位置は WHO 基準でのみ確認。「WHO 基準では」と明記し、日本の教科書で確認済みと書かない",
@@ -71,11 +71,11 @@
    "examRounds": [],
    "examQuestionCount": 0,
    "examQuestionIds": [],
-   "sourceVersion": "shinkyuu-db@ee647cd+dirty",
+   "sourceVersion": "shinkyuu-db@d090183",
    "verifiedStatus": "JAPAN_VERIFIED",
    "sourceType": "acupoint_source_records",
    "relatedDbUrl": "https://shinkyuu-db.pages.dev/acupoints/lu2",
-   "updatedAt": "2026-10-12T20:53:05+09:00",
+   "updatedAt": "2026-10-22T14:06:51+09:00",
    "publicationAllowed": true,
    "warningNotes": [
     "読みは出典未確認のため書き出していない"
@@ -103,11 +103,11 @@
    "examRounds": [],
    "examQuestionCount": 0,
    "examQuestionIds": [],
-   "sourceVersion": "shinkyuu-db@ee647cd+dirty",
+   "sourceVersion": "shinkyuu-db@d090183",
    "verifiedStatus": "JAPAN_VERIFIED",
    "sourceType": "acupoint_source_records",
    "relatedDbUrl": "https://shinkyuu-db.pages.dev/acupoints/lu3",
-   "updatedAt": "2026-10-12T20:53:05+09:00",
+   "updatedAt": "2026-10-22T14:06:51+09:00",
    "publicationAllowed": true,
    "warningNotes": [
     "読みは出典未確認のため書き出していない"
@@ -135,11 +135,11 @@
    "examRounds": [],
    "examQuestionCount": 0,
    "examQuestionIds": [],
-   "sourceVersion": "shinkyuu-db@ee647cd+dirty",
+   "sourceVersion": "shinkyuu-db@d090183",
    "verifiedStatus": "JAPAN_VERIFIED",
    "sourceType": "acupoint_source_records",
    "relatedDbUrl": "https://shinkyuu-db.pages.dev/acupoints/lu4",
-   "updatedAt": "2026-10-12T20:53:05+09:00",
+   "updatedAt": "2026-10-22T14:06:51+09:00",
    "publicationAllowed": true,
    "warningNotes": [
     "読みは出典未確認のため書き出していない"
@@ -173,11 +173,11 @@
    "examRounds": [],
    "examQuestionCount": 0,
    "examQuestionIds": [],
-   "sourceVersion": "shinkyuu-db@ee647cd+dirty",
+   "sourceVersion": "shinkyuu-db@d090183",
    "verifiedStatus": "JAPAN_VERIFIED",
    "sourceType": "acupoint_source_records",
    "relatedDbUrl": "https://shinkyuu-db.pages.dev/acupoints/lu5",
-   "updatedAt": "2026-10-12T20:53:05+09:00",
+   "updatedAt": "2026-10-22T14:06:51+09:00",
    "publicationAllowed": true,
    "warningNotes": [
     "位置は WHO 基準でのみ確認。「WHO 基準では」と明記し、日本の教科書で確認済みと書かない",
@@ -219,11 +219,11 @@
     "29-135",
     "32-124"
    ],
-   "sourceVersion": "shinkyuu-db@ee647cd+dirty",
+   "sourceVersion": "shinkyuu-db@d090183",
    "verifiedStatus": "JAPAN_VERIFIED",
    "sourceType": "acupoint_source_records",
    "relatedDbUrl": "https://shinkyuu-db.pages.dev/acupoints/lu6",
-   "updatedAt": "2026-10-12T20:53:05+09:00",
+   "updatedAt": "2026-10-22T14:06:51+09:00",
    "publicationAllowed": true,
    "warningNotes": [
     "位置は WHO 基準でのみ確認。「WHO 基準では」と明記し、日本の教科書で確認済みと書かない",
@@ -278,11 +278,11 @@
     "31-120",
     "34-112"
    ],
-   "sourceVersion": "shinkyuu-db@ee647cd+dirty",
+   "sourceVersion": "shinkyuu-db@d090183",
    "verifiedStatus": "JAPAN_VERIFIED",
    "sourceType": "acupoint_source_records",
    "relatedDbUrl": "https://shinkyuu-db.pages.dev/acupoints/lu7",
-   "updatedAt": "2026-10-12T20:53:05+09:00",
+   "updatedAt": "2026-10-22T14:06:51+09:00",
    "publicationAllowed": true,
    "warningNotes": [
     "位置は WHO 基準でのみ確認。「WHO 基準では」と明記し、日本の教科書で確認済みと書かない",
@@ -312,11 +312,11 @@
    "examRounds": [],
    "examQuestionCount": 0,
    "examQuestionIds": [],
-   "sourceVersion": "shinkyuu-db@ee647cd+dirty",
+   "sourceVersion": "shinkyuu-db@d090183",
    "verifiedStatus": "JAPAN_VERIFIED",
    "sourceType": "acupoint_source_records",
    "relatedDbUrl": "https://shinkyuu-db.pages.dev/acupoints/lu8",
-   "updatedAt": "2026-10-12T20:53:05+09:00",
+   "updatedAt": "2026-10-22T14:06:51+09:00",
    "publicationAllowed": true,
    "warningNotes": [
     "読みは出典未確認のため書き出していない"
@@ -365,11 +365,11 @@
     "32-123",
     "32-143"
    ],
-   "sourceVersion": "shinkyuu-db@ee647cd+dirty",
+   "sourceVersion": "shinkyuu-db@d090183",
    "verifiedStatus": "JAPAN_VERIFIED",
    "sourceType": "acupoint_source_records",
    "relatedDbUrl": "https://shinkyuu-db.pages.dev/acupoints/lu9",
-   "updatedAt": "2026-10-12T20:53:05+09:00",
+   "updatedAt": "2026-10-22T14:06:51+09:00",
    "publicationAllowed": true,
    "warningNotes": [
     "位置は WHO 基準でのみ確認。「WHO 基準では」と明記し、日本の教科書で確認済みと書かない",
@@ -409,11 +409,11 @@
    "examQuestionIds": [
     "32-129"
    ],
-   "sourceVersion": "shinkyuu-db@ee647cd+dirty",
+   "sourceVersion": "shinkyuu-db@d090183",
    "verifiedStatus": "JAPAN_VERIFIED",
    "sourceType": "acupoint_source_records",
    "relatedDbUrl": "https://shinkyuu-db.pages.dev/acupoints/lu10",
-   "updatedAt": "2026-10-12T20:53:05+09:00",
+   "updatedAt": "2026-10-22T14:06:51+09:00",
    "publicationAllowed": true,
    "warningNotes": [
     "位置は WHO 基準でのみ確認。「WHO 基準では」と明記し、日本の教科書で確認済みと書かない",
@@ -449,11 +449,11 @@
    "examRounds": [],
    "examQuestionCount": 0,
    "examQuestionIds": [],
-   "sourceVersion": "shinkyuu-db@ee647cd+dirty",
+   "sourceVersion": "shinkyuu-db@d090183",
    "verifiedStatus": "JAPAN_VERIFIED",
    "sourceType": "acupoint_source_records",
    "relatedDbUrl": "https://shinkyuu-db.pages.dev/acupoints/lu11",
-   "updatedAt": "2026-10-12T20:53:05+09:00",
+   "updatedAt": "2026-10-22T14:06:51+09:00",
    "publicationAllowed": true,
    "warningNotes": [
     "位置は WHO 基準でのみ確認。「WHO 基準では」と明記し、日本の教科書で確認済みと書かない",
@@ -495,11 +495,11 @@
     "30-116",
     "33-112"
    ],
-   "sourceVersion": "shinkyuu-db@ee647cd+dirty",
+   "sourceVersion": "shinkyuu-db@d090183",
    "verifiedStatus": "JAPAN_VERIFIED",
    "sourceType": "acupoint_source_records",
    "relatedDbUrl": "https://shinkyuu-db.pages.dev/acupoints/li1",
-   "updatedAt": "2026-10-12T20:53:05+09:00",
+   "updatedAt": "2026-10-22T14:06:51+09:00",
    "publicationAllowed": true,
    "warningNotes": [
     "位置は WHO 基準でのみ確認。「WHO 基準では」と明記し、日本の教科書で確認済みと書かない",
@@ -529,11 +529,11 @@
    "examRounds": [],
    "examQuestionCount": 0,
    "examQuestionIds": [],
-   "sourceVersion": "shinkyuu-db@ee647cd+dirty",
+   "sourceVersion": "shinkyuu-db@d090183",
    "verifiedStatus": "JAPAN_VERIFIED",
    "sourceType": "acupoint_source_records",
    "relatedDbUrl": "https://shinkyuu-db.pages.dev/acupoints/li2",
-   "updatedAt": "2026-10-12T20:53:05+09:00",
+   "updatedAt": "2026-10-22T14:06:51+09:00",
    "publicationAllowed": true,
    "warningNotes": [
     "読みは出典未確認のため書き出していない"
@@ -567,11 +567,11 @@
    "examRounds": [],
    "examQuestionCount": 0,
    "examQuestionIds": [],
-   "sourceVersion": "shinkyuu-db@ee647cd+dirty",
+   "sourceVersion": "shinkyuu-db@d090183",
    "verifiedStatus": "JAPAN_VERIFIED",
    "sourceType": "acupoint_source_records",
    "relatedDbUrl": "https://shinkyuu-db.pages.dev/acupoints/li3",
-   "updatedAt": "2026-10-12T20:53:05+09:00",
+   "updatedAt": "2026-10-22T14:06:51+09:00",
    "publicationAllowed": true,
    "warningNotes": [
     "位置は WHO 基準でのみ確認。「WHO 基準では」と明記し、日本の教科書で確認済みと書かない",
@@ -617,11 +617,11 @@
     "33-113",
     "33-159"
    ],
-   "sourceVersion": "shinkyuu-db@ee647cd+dirty",
+   "sourceVersion": "shinkyuu-db@d090183",
    "verifiedStatus": "JAPAN_VERIFIED",
    "sourceType": "acupoint_source_records",
    "relatedDbUrl": "https://shinkyuu-db.pages.dev/acupoints/li4",
-   "updatedAt": "2026-10-12T20:53:05+09:00",
+   "updatedAt": "2026-10-22T14:06:51+09:00",
    "publicationAllowed": true,
    "warningNotes": [
     "位置は WHO 基準でのみ確認。「WHO 基準では」と明記し、日本の教科書で確認済みと書かない",
@@ -657,11 +657,11 @@
    "examRounds": [],
    "examQuestionCount": 0,
    "examQuestionIds": [],
-   "sourceVersion": "shinkyuu-db@ee647cd+dirty",
+   "sourceVersion": "shinkyuu-db@d090183",
    "verifiedStatus": "JAPAN_VERIFIED",
    "sourceType": "acupoint_source_records",
    "relatedDbUrl": "https://shinkyuu-db.pages.dev/acupoints/li5",
-   "updatedAt": "2026-10-12T20:53:05+09:00",
+   "updatedAt": "2026-10-22T14:06:51+09:00",
    "publicationAllowed": true,
    "warningNotes": [
     "位置は WHO 基準でのみ確認。「WHO 基準では」と明記し、日本の教科書で確認済みと書かない",
@@ -697,11 +697,11 @@
    "examRounds": [],
    "examQuestionCount": 0,
    "examQuestionIds": [],
-   "sourceVersion": "shinkyuu-db@ee647cd+dirty",
+   "sourceVersion": "shinkyuu-db@d090183",
    "verifiedStatus": "JAPAN_VERIFIED",
    "sourceType": "acupoint_source_records",
    "relatedDbUrl": "https://shinkyuu-db.pages.dev/acupoints/li6",
-   "updatedAt": "2026-10-12T20:53:05+09:00",
+   "updatedAt": "2026-10-22T14:06:51+09:00",
    "publicationAllowed": true,
    "warningNotes": [
     "位置は WHO 基準でのみ確認。「WHO 基準では」と明記し、日本の教科書で確認済みと書かない",
@@ -737,11 +737,11 @@
    "examRounds": [],
    "examQuestionCount": 0,
    "examQuestionIds": [],
-   "sourceVersion": "shinkyuu-db@ee647cd+dirty",
+   "sourceVersion": "shinkyuu-db@d090183",
    "verifiedStatus": "JAPAN_VERIFIED",
    "sourceType": "acupoint_source_records",
    "relatedDbUrl": "https://shinkyuu-db.pages.dev/acupoints/li7",
-   "updatedAt": "2026-10-12T20:53:05+09:00",
+   "updatedAt": "2026-10-22T14:06:51+09:00",
    "publicationAllowed": true,
    "warningNotes": [
     "位置は WHO 基準でのみ確認。「WHO 基準では」と明記し、日本の教科書で確認済みと書かない",
@@ -771,11 +771,11 @@
    "examRounds": [],
    "examQuestionCount": 0,
    "examQuestionIds": [],
-   "sourceVersion": "shinkyuu-db@ee647cd+dirty",
+   "sourceVersion": "shinkyuu-db@d090183",
    "verifiedStatus": "NOT_APPLICABLE",
    "sourceType": "acupoint_source_records",
    "relatedDbUrl": "https://shinkyuu-db.pages.dev/acupoints/li8",
-   "updatedAt": "2026-10-12T20:53:05+09:00",
+   "updatedAt": "2026-10-22T14:06:51+09:00",
    "publicationAllowed": false,
    "warningNotes": [
     "名称が日本の資料で確認できていない。記事では WHO コードで書くか、扱わない",
@@ -804,11 +804,11 @@
    "examRounds": [],
    "examQuestionCount": 0,
    "examQuestionIds": [],
-   "sourceVersion": "shinkyuu-db@ee647cd+dirty",
+   "sourceVersion": "shinkyuu-db@d090183",
    "verifiedStatus": "NOT_APPLICABLE",
    "sourceType": "acupoint_source_records",
    "relatedDbUrl": "https://shinkyuu-db.pages.dev/acupoints/li9",
-   "updatedAt": "2026-10-12T20:53:05+09:00",
+   "updatedAt": "2026-10-22T14:06:51+09:00",
    "publicationAllowed": false,
    "warningNotes": [
     "名称が日本の資料で確認できていない。記事では WHO コードで書くか、扱わない",
@@ -841,11 +841,11 @@
    "examQuestionIds": [
     "33-141"
    ],
-   "sourceVersion": "shinkyuu-db@ee647cd+dirty",
+   "sourceVersion": "shinkyuu-db@d090183",
    "verifiedStatus": "JAPAN_VERIFIED",
    "sourceType": "acupoint_source_records",
    "relatedDbUrl": "https://shinkyuu-db.pages.dev/acupoints/li10",
-   "updatedAt": "2026-10-12T20:53:05+09:00",
+   "updatedAt": "2026-10-22T14:06:51+09:00",
    "publicationAllowed": true,
    "warningNotes": [
     "位置は WHO 基準でのみ確認。「WHO 基準では」と明記し、日本の教科書で確認済みと書かない",
@@ -884,11 +884,11 @@
    "examQuestionIds": [
     "33-123"
    ],
-   "sourceVersion": "shinkyuu-db@ee647cd+dirty",
+   "sourceVersion": "shinkyuu-db@d090183",
    "verifiedStatus": "JAPAN_VERIFIED",
    "sourceType": "acupoint_source_records",
    "relatedDbUrl": "https://shinkyuu-db.pages.dev/acupoints/li11",
-   "updatedAt": "2026-10-12T20:53:05+09:00",
+   "updatedAt": "2026-10-22T14:06:51+09:00",
    "publicationAllowed": true,
    "warningNotes": [
     "位置は根拠不足または資料と食い違い。記事に書かない",
@@ -918,11 +918,11 @@
    "examRounds": [],
    "examQuestionCount": 0,
    "examQuestionIds": [],
-   "sourceVersion": "shinkyuu-db@ee647cd+dirty",
+   "sourceVersion": "shinkyuu-db@d090183",
    "verifiedStatus": "NOT_APPLICABLE",
    "sourceType": "acupoint_source_records",
    "relatedDbUrl": "https://shinkyuu-db.pages.dev/acupoints/li12",
-   "updatedAt": "2026-10-12T20:53:05+09:00",
+   "updatedAt": "2026-10-22T14:06:51+09:00",
    "publicationAllowed": false,
    "warningNotes": [
     "名称が日本の資料で確認できていない。記事では WHO コードで書くか、扱わない",
@@ -951,11 +951,11 @@
    "examRounds": [],
    "examQuestionCount": 0,
    "examQuestionIds": [],
-   "sourceVersion": "shinkyuu-db@ee647cd+dirty",
+   "sourceVersion": "shinkyuu-db@d090183",
    "verifiedStatus": "JAPAN_VERIFIED",
    "sourceType": "acupoint_source_records",
    "relatedDbUrl": "https://shinkyuu-db.pages.dev/acupoints/li13",
-   "updatedAt": "2026-10-12T20:53:05+09:00",
+   "updatedAt": "2026-10-22T14:06:51+09:00",
    "publicationAllowed": true,
    "warningNotes": [
     "読みは出典未確認のため書き出していない"
@@ -983,11 +983,11 @@
    "examRounds": [],
    "examQuestionCount": 0,
    "examQuestionIds": [],
-   "sourceVersion": "shinkyuu-db@ee647cd+dirty",
+   "sourceVersion": "shinkyuu-db@d090183",
    "verifiedStatus": "JAPAN_VERIFIED",
    "sourceType": "acupoint_source_records",
    "relatedDbUrl": "https://shinkyuu-db.pages.dev/acupoints/li14",
-   "updatedAt": "2026-10-12T20:53:05+09:00",
+   "updatedAt": "2026-10-22T14:06:51+09:00",
    "publicationAllowed": true,
    "warningNotes": [
     "読みは出典未確認のため書き出していない"
@@ -1015,11 +1015,11 @@
    "examRounds": [],
    "examQuestionCount": 0,
    "examQuestionIds": [],
-   "sourceVersion": "shinkyuu-db@ee647cd+dirty",
+   "sourceVersion": "shinkyuu-db@d090183",
    "verifiedStatus": "JAPAN_VERIFIED",
    "sourceType": "acupoint_source_records",
    "relatedDbUrl": "https://shinkyuu-db.pages.dev/acupoints/li15",
-   "updatedAt": "2026-10-12T20:53:05+09:00",
+   "updatedAt": "2026-10-22T14:06:51+09:00",
    "publicationAllowed": true,
    "warningNotes": [
     "位置は WHO 基準でのみ確認。「WHO 基準では」と明記し、日本の教科書で確認済みと書かない",
@@ -1048,11 +1048,11 @@
    "examRounds": [],
    "examQuestionCount": 0,
    "examQuestionIds": [],
-   "sourceVersion": "shinkyuu-db@ee647cd+dirty",
+   "sourceVersion": "shinkyuu-db@d090183",
    "verifiedStatus": "JAPAN_VERIFIED",
    "sourceType": "acupoint_source_records",
    "relatedDbUrl": "https://shinkyuu-db.pages.dev/acupoints/li16",
-   "updatedAt": "2026-10-12T20:53:05+09:00",
+   "updatedAt": "2026-10-22T14:06:51+09:00",
    "publicationAllowed": true,
    "warningNotes": [
     "読みは出典未確認のため書き出していない"
@@ -1084,11 +1084,11 @@
    "examQuestionIds": [
     "30-154"
    ],
-   "sourceVersion": "shinkyuu-db@ee647cd+dirty",
+   "sourceVersion": "shinkyuu-db@d090183",
    "verifiedStatus": "JAPAN_VERIFIED",
    "sourceType": "acupoint_source_records",
    "relatedDbUrl": "https://shinkyuu-db.pages.dev/acupoints/li17",
-   "updatedAt": "2026-10-12T20:53:05+09:00",
+   "updatedAt": "2026-10-22T14:06:51+09:00",
    "publicationAllowed": true,
    "warningNotes": [
     "読みは出典未確認のため書き出していない"
@@ -1116,11 +1116,11 @@
    "examRounds": [],
    "examQuestionCount": 0,
    "examQuestionIds": [],
-   "sourceVersion": "shinkyuu-db@ee647cd+dirty",
+   "sourceVersion": "shinkyuu-db@d090183",
    "verifiedStatus": "JAPAN_VERIFIED",
    "sourceType": "acupoint_source_records",
    "relatedDbUrl": "https://shinkyuu-db.pages.dev/acupoints/li18",
-   "updatedAt": "2026-10-12T20:53:05+09:00",
+   "updatedAt": "2026-10-22T14:06:51+09:00",
    "publicationAllowed": true,
    "warningNotes": [
     "読みは出典未確認のため書き出していない"
@@ -1152,11 +1152,11 @@
    "examQuestionIds": [
     "33-111"
    ],
-   "sourceVersion": "shinkyuu-db@ee647cd+dirty",
+   "sourceVersion": "shinkyuu-db@d090183",
    "verifiedStatus": "JAPAN_VERIFIED",
    "sourceType": "acupoint_source_records",
    "relatedDbUrl": "https://shinkyuu-db.pages.dev/acupoints/li19",
-   "updatedAt": "2026-10-12T20:53:05+09:00",
+   "updatedAt": "2026-10-22T14:06:51+09:00",
    "publicationAllowed": true,
    "warningNotes": [
     "読みは出典未確認のため書き出していない"
@@ -1184,11 +1184,11 @@
    "examRounds": [],
    "examQuestionCount": 0,
    "examQuestionIds": [],
-   "sourceVersion": "shinkyuu-db@ee647cd+dirty",
+   "sourceVersion": "shinkyuu-db@d090183",
    "verifiedStatus": "JAPAN_VERIFIED",
    "sourceType": "acupoint_source_records",
    "relatedDbUrl": "https://shinkyuu-db.pages.dev/acupoints/li20",
-   "updatedAt": "2026-10-12T20:53:05+09:00",
+   "updatedAt": "2026-10-22T14:06:51+09:00",
    "publicationAllowed": true,
    "warningNotes": [
     "位置は WHO 基準でのみ確認。「WHO 基準では」と明記し、日本の教科書で確認済みと書かない",
@@ -1217,11 +1217,11 @@
    "examRounds": [],
    "examQuestionCount": 0,
    "examQuestionIds": [],
-   "sourceVersion": "shinkyuu-db@ee647cd+dirty",
+   "sourceVersion": "shinkyuu-db@d090183",
    "verifiedStatus": "JAPAN_VERIFIED",
    "sourceType": "acupoint_source_records",
    "relatedDbUrl": "https://shinkyuu-db.pages.dev/acupoints/st1",
-   "updatedAt": "2026-10-12T20:53:05+09:00",
+   "updatedAt": "2026-10-22T14:06:51+09:00",
    "publicationAllowed": true,
    "warningNotes": [
     "読みは出典未確認のため書き出していない"
@@ -1255,11 +1255,11 @@
     "29-130",
     "32-142"
    ],
-   "sourceVersion": "shinkyuu-db@ee647cd+dirty",
+   "sourceVersion": "shinkyuu-db@d090183",
    "verifiedStatus": "JAPAN_VERIFIED",
    "sourceType": "acupoint_source_records",
    "relatedDbUrl": "https://shinkyuu-db.pages.dev/acupoints/st2",
-   "updatedAt": "2026-10-12T20:53:05+09:00",
+   "updatedAt": "2026-10-22T14:06:51+09:00",
    "publicationAllowed": true,
    "warningNotes": [
     "位置は WHO 基準でのみ確認。「WHO 基準では」と明記し、日本の教科書で確認済みと書かない",
@@ -1292,11 +1292,11 @@
    "examQuestionIds": [
     "30-126"
    ],
-   "sourceVersion": "shinkyuu-db@ee647cd+dirty",
+   "sourceVersion": "shinkyuu-db@d090183",
    "verifiedStatus": "JAPAN_VERIFIED",
    "sourceType": "acupoint_source_records",
    "relatedDbUrl": "https://shinkyuu-db.pages.dev/acupoints/st3",
-   "updatedAt": "2026-10-12T20:53:05+09:00",
+   "updatedAt": "2026-10-22T14:06:51+09:00",
    "publicationAllowed": true,
    "warningNotes": [
     "読みは出典未確認のため書き出していない"
@@ -1324,11 +1324,11 @@
    "examRounds": [],
    "examQuestionCount": 0,
    "examQuestionIds": [],
-   "sourceVersion": "shinkyuu-db@ee647cd+dirty",
+   "sourceVersion": "shinkyuu-db@d090183",
    "verifiedStatus": "JAPAN_VERIFIED",
    "sourceType": "acupoint_source_records",
    "relatedDbUrl": "https://shinkyuu-db.pages.dev/acupoints/st4",
-   "updatedAt": "2026-10-12T20:53:05+09:00",
+   "updatedAt": "2026-10-22T14:06:51+09:00",
    "publicationAllowed": true,
    "warningNotes": [
     "位置は WHO 基準でのみ確認。「WHO 基準では」と明記し、日本の教科書で確認済みと書かない",
@@ -1357,11 +1357,11 @@
    "examRounds": [],
    "examQuestionCount": 0,
    "examQuestionIds": [],
-   "sourceVersion": "shinkyuu-db@ee647cd+dirty",
+   "sourceVersion": "shinkyuu-db@d090183",
    "verifiedStatus": "JAPAN_VERIFIED",
    "sourceType": "acupoint_source_records",
    "relatedDbUrl": "https://shinkyuu-db.pages.dev/acupoints/st5",
-   "updatedAt": "2026-10-12T20:53:05+09:00",
+   "updatedAt": "2026-10-22T14:06:51+09:00",
    "publicationAllowed": true,
    "warningNotes": [
     "読みは出典未確認のため書き出していない"
@@ -1393,11 +1393,11 @@
    "examQuestionIds": [
     "34-111"
    ],
-   "sourceVersion": "shinkyuu-db@ee647cd+dirty",
+   "sourceVersion": "shinkyuu-db@d090183",
    "verifiedStatus": "JAPAN_VERIFIED",
    "sourceType": "acupoint_source_records",
    "relatedDbUrl": "https://shinkyuu-db.pages.dev/acupoints/st6",
-   "updatedAt": "2026-10-12T20:53:05+09:00",
+   "updatedAt": "2026-10-22T14:06:51+09:00",
    "publicationAllowed": true,
    "warningNotes": [
     "位置は WHO 基準でのみ確認。「WHO 基準では」と明記し、日本の教科書で確認済みと書かない",
@@ -1432,11 +1432,11 @@
     "30-131",
     "32-139"
    ],
-   "sourceVersion": "shinkyuu-db@ee647cd+dirty",
+   "sourceVersion": "shinkyuu-db@d090183",
    "verifiedStatus": "JAPAN_VERIFIED",
    "sourceType": "acupoint_source_records",
    "relatedDbUrl": "https://shinkyuu-db.pages.dev/acupoints/st7",
-   "updatedAt": "2026-10-12T20:53:05+09:00",
+   "updatedAt": "2026-10-22T14:06:51+09:00",
    "publicationAllowed": true,
    "warningNotes": [
     "読みは出典未確認のため書き出していない"
@@ -1464,11 +1464,11 @@
    "examRounds": [],
    "examQuestionCount": 0,
    "examQuestionIds": [],
-   "sourceVersion": "shinkyuu-db@ee647cd+dirty",
+   "sourceVersion": "shinkyuu-db@d090183",
    "verifiedStatus": "JAPAN_VERIFIED",
    "sourceType": "acupoint_source_records",
    "relatedDbUrl": "https://shinkyuu-db.pages.dev/acupoints/st8",
-   "updatedAt": "2026-10-12T20:53:05+09:00",
+   "updatedAt": "2026-10-22T14:06:51+09:00",
    "publicationAllowed": true,
    "warningNotes": [
     "位置は WHO 基準でのみ確認。「WHO 基準では」と明記し、日本の教科書で確認済みと書かない",
@@ -1497,11 +1497,11 @@
    "examRounds": [],
    "examQuestionCount": 0,
    "examQuestionIds": [],
-   "sourceVersion": "shinkyuu-db@ee647cd+dirty",
+   "sourceVersion": "shinkyuu-db@d090183",
    "verifiedStatus": "JAPAN_VERIFIED",
    "sourceType": "acupoint_source_records",
    "relatedDbUrl": "https://shinkyuu-db.pages.dev/acupoints/st9",
-   "updatedAt": "2026-10-12T20:53:05+09:00",
+   "updatedAt": "2026-10-22T14:06:51+09:00",
    "publicationAllowed": true,
    "warningNotes": [
     "読みは出典未確認のため書き出していない"
@@ -1529,11 +1529,11 @@
    "examRounds": [],
    "examQuestionCount": 0,
    "examQuestionIds": [],
-   "sourceVersion": "shinkyuu-db@ee647cd+dirty",
+   "sourceVersion": "shinkyuu-db@d090183",
    "verifiedStatus": "NOT_APPLICABLE",
    "sourceType": "acupoint_source_records",
    "relatedDbUrl": "https://shinkyuu-db.pages.dev/acupoints/st10",
-   "updatedAt": "2026-10-12T20:53:05+09:00",
+   "updatedAt": "2026-10-22T14:06:51+09:00",
    "publicationAllowed": false,
    "warningNotes": [
     "名称が日本の資料で確認できていない。記事では WHO コードで書くか、扱わない",
@@ -1562,11 +1562,11 @@
    "examRounds": [],
    "examQuestionCount": 0,
    "examQuestionIds": [],
-   "sourceVersion": "shinkyuu-db@ee647cd+dirty",
+   "sourceVersion": "shinkyuu-db@d090183",
    "verifiedStatus": "JAPAN_VERIFIED",
    "sourceType": "acupoint_source_records",
    "relatedDbUrl": "https://shinkyuu-db.pages.dev/acupoints/st11",
-   "updatedAt": "2026-10-12T20:53:05+09:00",
+   "updatedAt": "2026-10-22T14:06:51+09:00",
    "publicationAllowed": true,
    "warningNotes": [
     "読みは出典未確認のため書き出していない"
@@ -1594,11 +1594,11 @@
    "examRounds": [],
    "examQuestionCount": 0,
    "examQuestionIds": [],
-   "sourceVersion": "shinkyuu-db@ee647cd+dirty",
+   "sourceVersion": "shinkyuu-db@d090183",
    "verifiedStatus": "JAPAN_VERIFIED",
    "sourceType": "acupoint_source_records",
    "relatedDbUrl": "https://shinkyuu-db.pages.dev/acupoints/st12",
-   "updatedAt": "2026-10-12T20:53:05+09:00",
+   "updatedAt": "2026-10-22T14:06:51+09:00",
    "publicationAllowed": true,
    "warningNotes": [
     "読みは出典未確認のため書き出していない"
@@ -1630,11 +1630,11 @@
    "examQuestionIds": [
     "34-115"
    ],
-   "sourceVersion": "shinkyuu-db@ee647cd+dirty",
+   "sourceVersion": "shinkyuu-db@d090183",
    "verifiedStatus": "JAPAN_VERIFIED",
    "sourceType": "acupoint_source_records",
    "relatedDbUrl": "https://shinkyuu-db.pages.dev/acupoints/st13",
-   "updatedAt": "2026-10-12T20:53:05+09:00",
+   "updatedAt": "2026-10-22T14:06:51+09:00",
    "publicationAllowed": true,
    "warningNotes": [
     "読みは出典未確認のため書き出していない"
@@ -1662,11 +1662,11 @@
    "examRounds": [],
    "examQuestionCount": 0,
    "examQuestionIds": [],
-   "sourceVersion": "shinkyuu-db@ee647cd+dirty",
+   "sourceVersion": "shinkyuu-db@d090183",
    "verifiedStatus": "JAPAN_VERIFIED",
    "sourceType": "acupoint_source_records",
    "relatedDbUrl": "https://shinkyuu-db.pages.dev/acupoints/st14",
-   "updatedAt": "2026-10-12T20:53:05+09:00",
+   "updatedAt": "2026-10-22T14:06:51+09:00",
    "publicationAllowed": true,
    "warningNotes": [
     "読みは出典未確認のため書き出していない"
@@ -1694,11 +1694,11 @@
    "examRounds": [],
    "examQuestionCount": 0,
    "examQuestionIds": [],
-   "sourceVersion": "shinkyuu-db@ee647cd+dirty",
+   "sourceVersion": "shinkyuu-db@d090183",
    "verifiedStatus": "JAPAN_VERIFIED",
    "sourceType": "acupoint_source_records",
    "relatedDbUrl": "https://shinkyuu-db.pages.dev/acupoints/st15",
-   "updatedAt": "2026-10-12T20:53:05+09:00",
+   "updatedAt": "2026-10-22T14:06:51+09:00",
    "publicationAllowed": true,
    "warningNotes": [
     "読みは出典未確認のため書き出していない"
@@ -1726,11 +1726,11 @@
    "examRounds": [],
    "examQuestionCount": 0,
    "examQuestionIds": [],
-   "sourceVersion": "shinkyuu-db@ee647cd+dirty",
+   "sourceVersion": "shinkyuu-db@d090183",
    "verifiedStatus": "JAPAN_VERIFIED",
    "sourceType": "acupoint_source_records",
    "relatedDbUrl": "https://shinkyuu-db.pages.dev/acupoints/st16",
-   "updatedAt": "2026-10-12T20:53:05+09:00",
+   "updatedAt": "2026-10-22T14:06:51+09:00",
    "publicationAllowed": true,
    "warningNotes": [
     "読みは出典未確認のため書き出していない"
@@ -1758,11 +1758,11 @@
    "examRounds": [],
    "examQuestionCount": 0,
    "examQuestionIds": [],
-   "sourceVersion": "shinkyuu-db@ee647cd+dirty",
+   "sourceVersion": "shinkyuu-db@d090183",
    "verifiedStatus": "NOT_APPLICABLE",
    "sourceType": "acupoint_source_records",
    "relatedDbUrl": "https://shinkyuu-db.pages.dev/acupoints/st17",
-   "updatedAt": "2026-10-12T20:53:05+09:00",
+   "updatedAt": "2026-10-22T14:06:51+09:00",
    "publicationAllowed": false,
    "warningNotes": [
     "名称が日本の資料で確認できていない。記事では WHO コードで書くか、扱わない",
@@ -1791,11 +1791,11 @@
    "examRounds": [],
    "examQuestionCount": 0,
    "examQuestionIds": [],
-   "sourceVersion": "shinkyuu-db@ee647cd+dirty",
+   "sourceVersion": "shinkyuu-db@d090183",
    "verifiedStatus": "JAPAN_VERIFIED",
    "sourceType": "acupoint_source_records",
    "relatedDbUrl": "https://shinkyuu-db.pages.dev/acupoints/st18",
-   "updatedAt": "2026-10-12T20:53:05+09:00",
+   "updatedAt": "2026-10-22T14:06:51+09:00",
    "publicationAllowed": true,
    "warningNotes": [
     "読みは出典未確認のため書き出していない"
@@ -1823,11 +1823,11 @@
    "examRounds": [],
    "examQuestionCount": 0,
    "examQuestionIds": [],
-   "sourceVersion": "shinkyuu-db@ee647cd+dirty",
+   "sourceVersion": "shinkyuu-db@d090183",
    "verifiedStatus": "JAPAN_VERIFIED",
    "sourceType": "acupoint_source_records",
    "relatedDbUrl": "https://shinkyuu-db.pages.dev/acupoints/st19",
-   "updatedAt": "2026-10-12T20:53:05+09:00",
+   "updatedAt": "2026-10-22T14:06:51+09:00",
    "publicationAllowed": true,
    "warningNotes": [
     "読みは出典未確認のため書き出していない"
@@ -1855,11 +1855,11 @@
    "examRounds": [],
    "examQuestionCount": 0,
    "examQuestionIds": [],
-   "sourceVersion": "shinkyuu-db@ee647cd+dirty",
+   "sourceVersion": "shinkyuu-db@d090183",
    "verifiedStatus": "JAPAN_VERIFIED",
    "sourceType": "acupoint_source_records",
    "relatedDbUrl": "https://shinkyuu-db.pages.dev/acupoints/st20",
-   "updatedAt": "2026-10-12T20:53:05+09:00",
+   "updatedAt": "2026-10-22T14:06:51+09:00",
    "publicationAllowed": true,
    "warningNotes": [
     "読みは出典未確認のため書き出していない"
@@ -1893,11 +1893,11 @@
     "30-147",
     "33-114"
    ],
-   "sourceVersion": "shinkyuu-db@ee647cd+dirty",
+   "sourceVersion": "shinkyuu-db@d090183",
    "verifiedStatus": "JAPAN_VERIFIED",
    "sourceType": "acupoint_source_records",
    "relatedDbUrl": "https://shinkyuu-db.pages.dev/acupoints/st21",
-   "updatedAt": "2026-10-12T20:53:05+09:00",
+   "updatedAt": "2026-10-22T14:06:51+09:00",
    "publicationAllowed": true,
    "warningNotes": [
     "読みは出典未確認のため書き出していない"
@@ -1925,11 +1925,11 @@
    "examRounds": [],
    "examQuestionCount": 0,
    "examQuestionIds": [],
-   "sourceVersion": "shinkyuu-db@ee647cd+dirty",
+   "sourceVersion": "shinkyuu-db@d090183",
    "verifiedStatus": "NOT_APPLICABLE",
    "sourceType": "acupoint_source_records",
    "relatedDbUrl": "https://shinkyuu-db.pages.dev/acupoints/st22",
-   "updatedAt": "2026-10-12T20:53:05+09:00",
+   "updatedAt": "2026-10-22T14:06:51+09:00",
    "publicationAllowed": false,
    "warningNotes": [
     "名称が日本の資料で確認できていない。記事では WHO コードで書くか、扱わない",
@@ -1958,11 +1958,11 @@
    "examRounds": [],
    "examQuestionCount": 0,
    "examQuestionIds": [],
-   "sourceVersion": "shinkyuu-db@ee647cd+dirty",
+   "sourceVersion": "shinkyuu-db@d090183",
    "verifiedStatus": "JAPAN_VERIFIED",
    "sourceType": "acupoint_source_records",
    "relatedDbUrl": "https://shinkyuu-db.pages.dev/acupoints/st23",
-   "updatedAt": "2026-10-12T20:53:05+09:00",
+   "updatedAt": "2026-10-22T14:06:51+09:00",
    "publicationAllowed": true,
    "warningNotes": [
     "読みは出典未確認のため書き出していない"
@@ -1990,11 +1990,11 @@
    "examRounds": [],
    "examQuestionCount": 0,
    "examQuestionIds": [],
-   "sourceVersion": "shinkyuu-db@ee647cd+dirty",
+   "sourceVersion": "shinkyuu-db@d090183",
    "verifiedStatus": "JAPAN_VERIFIED",
    "sourceType": "acupoint_source_records",
    "relatedDbUrl": "https://shinkyuu-db.pages.dev/acupoints/st24",
-   "updatedAt": "2026-10-12T20:53:05+09:00",
+   "updatedAt": "2026-10-22T14:06:51+09:00",
    "publicationAllowed": true,
    "warningNotes": [
     "読みは出典未確認のため書き出していない"
@@ -2032,11 +2032,11 @@
    "examQuestionIds": [
     "30-165"
    ],
-   "sourceVersion": "shinkyuu-db@ee647cd+dirty",
+   "sourceVersion": "shinkyuu-db@d090183",
    "verifiedStatus": "JAPAN_VERIFIED",
    "sourceType": "acupoint_source_records",
    "relatedDbUrl": "https://shinkyuu-db.pages.dev/acupoints/st25",
-   "updatedAt": "2026-10-12T20:53:05+09:00",
+   "updatedAt": "2026-10-22T14:06:51+09:00",
    "publicationAllowed": true,
    "warningNotes": [
     "位置は WHO 基準でのみ確認。「WHO 基準では」と明記し、日本の教科書で確認済みと書かない",
@@ -2066,11 +2066,11 @@
    "examRounds": [],
    "examQuestionCount": 0,
    "examQuestionIds": [],
-   "sourceVersion": "shinkyuu-db@ee647cd+dirty",
+   "sourceVersion": "shinkyuu-db@d090183",
    "verifiedStatus": "NOT_APPLICABLE",
    "sourceType": "acupoint_source_records",
    "relatedDbUrl": "https://shinkyuu-db.pages.dev/acupoints/st26",
-   "updatedAt": "2026-10-12T20:53:05+09:00",
+   "updatedAt": "2026-10-22T14:06:51+09:00",
    "publicationAllowed": false,
    "warningNotes": [
     "名称が日本の資料で確認できていない。記事では WHO コードで書くか、扱わない",
@@ -2099,11 +2099,11 @@
    "examRounds": [],
    "examQuestionCount": 0,
    "examQuestionIds": [],
-   "sourceVersion": "shinkyuu-db@ee647cd+dirty",
+   "sourceVersion": "shinkyuu-db@d090183",
    "verifiedStatus": "JAPAN_VERIFIED",
    "sourceType": "acupoint_source_records",
    "relatedDbUrl": "https://shinkyuu-db.pages.dev/acupoints/st27",
-   "updatedAt": "2026-10-12T20:53:05+09:00",
+   "updatedAt": "2026-10-22T14:06:51+09:00",
    "publicationAllowed": true,
    "warningNotes": [
     "読みは出典未確認のため書き出していない"
@@ -2131,11 +2131,11 @@
    "examRounds": [],
    "examQuestionCount": 0,
    "examQuestionIds": [],
-   "sourceVersion": "shinkyuu-db@ee647cd+dirty",
+   "sourceVersion": "shinkyuu-db@d090183",
    "verifiedStatus": "NOT_APPLICABLE",
    "sourceType": "acupoint_source_records",
    "relatedDbUrl": "https://shinkyuu-db.pages.dev/acupoints/st28",
-   "updatedAt": "2026-10-12T20:53:05+09:00",
+   "updatedAt": "2026-10-22T14:06:51+09:00",
    "publicationAllowed": false,
    "warningNotes": [
     "名称が日本の資料で確認できていない。記事では WHO コードで書くか、扱わない",
@@ -2164,11 +2164,11 @@
    "examRounds": [],
    "examQuestionCount": 0,
    "examQuestionIds": [],
-   "sourceVersion": "shinkyuu-db@ee647cd+dirty",
+   "sourceVersion": "shinkyuu-db@d090183",
    "verifiedStatus": "NOT_APPLICABLE",
    "sourceType": "acupoint_source_records",
    "relatedDbUrl": "https://shinkyuu-db.pages.dev/acupoints/st29",
-   "updatedAt": "2026-10-12T20:53:05+09:00",
+   "updatedAt": "2026-10-22T14:06:51+09:00",
    "publicationAllowed": false,
    "warningNotes": [
     "名称が日本の資料で確認できていない。記事では WHO コードで書くか、扱わない",
@@ -2197,11 +2197,11 @@
    "examRounds": [],
    "examQuestionCount": 0,
    "examQuestionIds": [],
-   "sourceVersion": "shinkyuu-db@ee647cd+dirty",
+   "sourceVersion": "shinkyuu-db@d090183",
    "verifiedStatus": "JAPAN_VERIFIED",
    "sourceType": "acupoint_source_records",
    "relatedDbUrl": "https://shinkyuu-db.pages.dev/acupoints/st30",
-   "updatedAt": "2026-10-12T20:53:05+09:00",
+   "updatedAt": "2026-10-22T14:06:51+09:00",
    "publicationAllowed": true,
    "warningNotes": [
     "読みは出典未確認のため書き出していない"
@@ -2233,11 +2233,11 @@
    "examQuestionIds": [
     "29-137"
    ],
-   "sourceVersion": "shinkyuu-db@ee647cd+dirty",
+   "sourceVersion": "shinkyuu-db@d090183",
    "verifiedStatus": "JAPAN_VERIFIED",
    "sourceType": "acupoint_source_records",
    "relatedDbUrl": "https://shinkyuu-db.pages.dev/acupoints/st31",
-   "updatedAt": "2026-10-12T20:53:05+09:00",
+   "updatedAt": "2026-10-22T14:06:51+09:00",
    "publicationAllowed": true,
    "warningNotes": [
     "読みは出典未確認のため書き出していない"
@@ -2269,11 +2269,11 @@
    "examQuestionIds": [
     "34-139"
    ],
-   "sourceVersion": "shinkyuu-db@ee647cd+dirty",
+   "sourceVersion": "shinkyuu-db@d090183",
    "verifiedStatus": "JAPAN_VERIFIED",
    "sourceType": "acupoint_source_records",
    "relatedDbUrl": "https://shinkyuu-db.pages.dev/acupoints/st32",
-   "updatedAt": "2026-10-12T20:53:05+09:00",
+   "updatedAt": "2026-10-22T14:06:51+09:00",
    "publicationAllowed": true,
    "warningNotes": [
     "読みは出典未確認のため書き出していない"
@@ -2301,11 +2301,11 @@
    "examRounds": [],
    "examQuestionCount": 0,
    "examQuestionIds": [],
-   "sourceVersion": "shinkyuu-db@ee647cd+dirty",
+   "sourceVersion": "shinkyuu-db@d090183",
    "verifiedStatus": "JAPAN_VERIFIED",
    "sourceType": "acupoint_source_records",
    "relatedDbUrl": "https://shinkyuu-db.pages.dev/acupoints/st33",
-   "updatedAt": "2026-10-12T20:53:05+09:00",
+   "updatedAt": "2026-10-22T14:06:51+09:00",
    "publicationAllowed": true,
    "warningNotes": [
     "読みは出典未確認のため書き出していない"
@@ -2343,11 +2343,11 @@
    "examQuestionIds": [
     "29-114"
    ],
-   "sourceVersion": "shinkyuu-db@ee647cd+dirty",
+   "sourceVersion": "shinkyuu-db@d090183",
    "verifiedStatus": "JAPAN_VERIFIED",
    "sourceType": "acupoint_source_records",
    "relatedDbUrl": "https://shinkyuu-db.pages.dev/acupoints/st34",
-   "updatedAt": "2026-10-12T20:53:05+09:00",
+   "updatedAt": "2026-10-22T14:06:51+09:00",
    "publicationAllowed": true,
    "warningNotes": [
     "位置は WHO 基準でのみ確認。「WHO 基準では」と明記し、日本の教科書で確認済みと書かない",
@@ -2377,11 +2377,11 @@
    "examRounds": [],
    "examQuestionCount": 0,
    "examQuestionIds": [],
-   "sourceVersion": "shinkyuu-db@ee647cd+dirty",
+   "sourceVersion": "shinkyuu-db@d090183",
    "verifiedStatus": "JAPAN_VERIFIED",
    "sourceType": "acupoint_source_records",
    "relatedDbUrl": "https://shinkyuu-db.pages.dev/acupoints/st35",
-   "updatedAt": "2026-10-12T20:53:05+09:00",
+   "updatedAt": "2026-10-22T14:06:51+09:00",
    "publicationAllowed": true,
    "warningNotes": [
     "読みは出典未確認のため書き出していない"
@@ -2432,11 +2432,11 @@
     "29-133",
     "30-124"
    ],
-   "sourceVersion": "shinkyuu-db@ee647cd+dirty",
+   "sourceVersion": "shinkyuu-db@d090183",
    "verifiedStatus": "JAPAN_VERIFIED",
    "sourceType": "acupoint_source_records",
    "relatedDbUrl": "https://shinkyuu-db.pages.dev/acupoints/st36",
-   "updatedAt": "2026-10-12T20:53:05+09:00",
+   "updatedAt": "2026-10-22T14:06:51+09:00",
    "publicationAllowed": true,
    "warningNotes": [
     "位置は根拠不足または資料と食い違い。記事に書かない",
@@ -2478,11 +2478,11 @@
     "30-123",
     "33-156"
    ],
-   "sourceVersion": "shinkyuu-db@ee647cd+dirty",
+   "sourceVersion": "shinkyuu-db@d090183",
    "verifiedStatus": "JAPAN_VERIFIED",
    "sourceType": "acupoint_source_records",
    "relatedDbUrl": "https://shinkyuu-db.pages.dev/acupoints/st37",
-   "updatedAt": "2026-10-12T20:53:05+09:00",
+   "updatedAt": "2026-10-22T14:06:51+09:00",
    "publicationAllowed": true,
    "warningNotes": [
     "位置は WHO 基準でのみ確認。「WHO 基準では」と明記し、日本の教科書で確認済みと書かない",
@@ -2518,11 +2518,11 @@
     "32-125",
     "33-129"
    ],
-   "sourceVersion": "shinkyuu-db@ee647cd+dirty",
+   "sourceVersion": "shinkyuu-db@d090183",
    "verifiedStatus": "JAPAN_VERIFIED",
    "sourceType": "acupoint_source_records",
    "relatedDbUrl": "https://shinkyuu-db.pages.dev/acupoints/st38",
-   "updatedAt": "2026-10-12T20:53:05+09:00",
+   "updatedAt": "2026-10-22T14:06:51+09:00",
    "publicationAllowed": true,
    "warningNotes": [
     "位置は根拠不足または資料と食い違い。記事に書かない",
@@ -2563,11 +2563,11 @@
     "29-128",
     "30-140"
    ],
-   "sourceVersion": "shinkyuu-db@ee647cd+dirty",
+   "sourceVersion": "shinkyuu-db@d090183",
    "verifiedStatus": "JAPAN_VERIFIED",
    "sourceType": "acupoint_source_records",
    "relatedDbUrl": "https://shinkyuu-db.pages.dev/acupoints/st39",
-   "updatedAt": "2026-10-12T20:53:05+09:00",
+   "updatedAt": "2026-10-22T14:06:51+09:00",
    "publicationAllowed": true,
    "warningNotes": [
     "位置は WHO 基準でのみ確認。「WHO 基準では」と明記し、日本の教科書で確認済みと書かない",
@@ -2607,11 +2607,11 @@
    "examQuestionIds": [
     "30-109"
    ],
-   "sourceVersion": "shinkyuu-db@ee647cd+dirty",
+   "sourceVersion": "shinkyuu-db@d090183",
    "verifiedStatus": "JAPAN_VERIFIED",
    "sourceType": "acupoint_source_records",
    "relatedDbUrl": "https://shinkyuu-db.pages.dev/acupoints/st40",
-   "updatedAt": "2026-10-12T20:53:05+09:00",
+   "updatedAt": "2026-10-22T14:06:51+09:00",
    "publicationAllowed": true,
    "warningNotes": [
     "位置は WHO 基準でのみ確認。「WHO 基準では」と明記し、日本の教科書で確認済みと書かない",
@@ -2653,11 +2653,11 @@
     "30-123",
     "32-120"
    ],
-   "sourceVersion": "shinkyuu-db@ee647cd+dirty",
+   "sourceVersion": "shinkyuu-db@d090183",
    "verifiedStatus": "JAPAN_VERIFIED",
    "sourceType": "acupoint_source_records",
    "relatedDbUrl": "https://shinkyuu-db.pages.dev/acupoints/st41",
-   "updatedAt": "2026-10-12T20:53:05+09:00",
+   "updatedAt": "2026-10-22T14:06:51+09:00",
    "publicationAllowed": true,
    "warningNotes": [
     "位置は WHO 基準でのみ確認。「WHO 基準では」と明記し、日本の教科書で確認済みと書かない",
@@ -2700,11 +2700,11 @@
     "29-149",
     "31-155"
    ],
-   "sourceVersion": "shinkyuu-db@ee647cd+dirty",
+   "sourceVersion": "shinkyuu-db@d090183",
    "verifiedStatus": "JAPAN_VERIFIED",
    "sourceType": "acupoint_source_records",
    "relatedDbUrl": "https://shinkyuu-db.pages.dev/acupoints/st42",
-   "updatedAt": "2026-10-12T20:53:05+09:00",
+   "updatedAt": "2026-10-22T14:06:51+09:00",
    "publicationAllowed": true,
    "warningNotes": [
     "位置は WHO 基準でのみ確認。「WHO 基準では」と明記し、日本の教科書で確認済みと書かない",
@@ -2739,11 +2739,11 @@
    "examQuestionIds": [
     "34-141"
    ],
-   "sourceVersion": "shinkyuu-db@ee647cd+dirty",
+   "sourceVersion": "shinkyuu-db@d090183",
    "verifiedStatus": "JAPAN_VERIFIED",
    "sourceType": "acupoint_source_records",
    "relatedDbUrl": "https://shinkyuu-db.pages.dev/acupoints/st43",
-   "updatedAt": "2026-10-12T20:53:05+09:00",
+   "updatedAt": "2026-10-22T14:06:51+09:00",
    "publicationAllowed": true,
    "warningNotes": [
     "読みは出典未確認のため書き出していない"
@@ -2783,11 +2783,11 @@
     "32-109",
     "34-154"
    ],
-   "sourceVersion": "shinkyuu-db@ee647cd+dirty",
+   "sourceVersion": "shinkyuu-db@d090183",
    "verifiedStatus": "JAPAN_VERIFIED",
    "sourceType": "acupoint_source_records",
    "relatedDbUrl": "https://shinkyuu-db.pages.dev/acupoints/st44",
-   "updatedAt": "2026-10-12T20:53:05+09:00",
+   "updatedAt": "2026-10-22T14:06:51+09:00",
    "publicationAllowed": true,
    "warningNotes": [
     "位置は WHO 基準でのみ確認。「WHO 基準では」と明記し、日本の教科書で確認済みと書かない",
@@ -2823,11 +2823,11 @@
    "examRounds": [],
    "examQuestionCount": 0,
    "examQuestionIds": [],
-   "sourceVersion": "shinkyuu-db@ee647cd+dirty",
+   "sourceVersion": "shinkyuu-db@d090183",
    "verifiedStatus": "JAPAN_VERIFIED",
    "sourceType": "acupoint_source_records",
    "relatedDbUrl": "https://shinkyuu-db.pages.dev/acupoints/st45",
-   "updatedAt": "2026-10-12T20:53:05+09:00",
+   "updatedAt": "2026-10-22T14:06:51+09:00",
    "publicationAllowed": true,
    "warningNotes": [
     "位置は WHO 基準でのみ確認。「WHO 基準では」と明記し、日本の教科書で確認済みと書かない",
@@ -2863,11 +2863,11 @@
    "examRounds": [],
    "examQuestionCount": 0,
    "examQuestionIds": [],
-   "sourceVersion": "shinkyuu-db@ee647cd+dirty",
+   "sourceVersion": "shinkyuu-db@d090183",
    "verifiedStatus": "JAPAN_VERIFIED",
    "sourceType": "acupoint_source_records",
    "relatedDbUrl": "https://shinkyuu-db.pages.dev/acupoints/sp1",
-   "updatedAt": "2026-10-12T20:53:05+09:00",
+   "updatedAt": "2026-10-22T14:06:51+09:00",
    "publicationAllowed": true,
    "warningNotes": [
     "位置は WHO 基準でのみ確認。「WHO 基準では」と明記し、日本の教科書で確認済みと書かない",
@@ -2897,11 +2897,11 @@
    "examRounds": [],
    "examQuestionCount": 0,
    "examQuestionIds": [],
-   "sourceVersion": "shinkyuu-db@ee647cd+dirty",
+   "sourceVersion": "shinkyuu-db@d090183",
    "verifiedStatus": "JAPAN_VERIFIED",
    "sourceType": "acupoint_source_records",
    "relatedDbUrl": "https://shinkyuu-db.pages.dev/acupoints/sp2",
-   "updatedAt": "2026-10-12T20:53:05+09:00",
+   "updatedAt": "2026-10-22T14:06:51+09:00",
    "publicationAllowed": true,
    "warningNotes": [
     "読みは出典未確認のため書き出していない"
@@ -2948,11 +2948,11 @@
     "32-143",
     "33-120"
    ],
-   "sourceVersion": "shinkyuu-db@ee647cd+dirty",
+   "sourceVersion": "shinkyuu-db@d090183",
    "verifiedStatus": "JAPAN_VERIFIED",
    "sourceType": "acupoint_source_records",
    "relatedDbUrl": "https://shinkyuu-db.pages.dev/acupoints/sp3",
-   "updatedAt": "2026-10-12T20:53:05+09:00",
+   "updatedAt": "2026-10-22T14:06:51+09:00",
    "publicationAllowed": true,
    "warningNotes": [
     "位置は WHO 基準でのみ確認。「WHO 基準では」と明記し、日本の教科書で確認済みと書かない",
@@ -3002,11 +3002,11 @@
     "32-116",
     "32-146"
    ],
-   "sourceVersion": "shinkyuu-db@ee647cd+dirty",
+   "sourceVersion": "shinkyuu-db@d090183",
    "verifiedStatus": "JAPAN_VERIFIED",
    "sourceType": "acupoint_source_records",
    "relatedDbUrl": "https://shinkyuu-db.pages.dev/acupoints/sp4",
-   "updatedAt": "2026-10-12T20:53:05+09:00",
+   "updatedAt": "2026-10-22T14:06:51+09:00",
    "publicationAllowed": true,
    "warningNotes": [
     "位置は WHO 基準でのみ確認。「WHO 基準では」と明記し、日本の教科書で確認済みと書かない",
@@ -3048,11 +3048,11 @@
     "31-122",
     "32-120"
    ],
-   "sourceVersion": "shinkyuu-db@ee647cd+dirty",
+   "sourceVersion": "shinkyuu-db@d090183",
    "verifiedStatus": "JAPAN_VERIFIED",
    "sourceType": "acupoint_source_records",
    "relatedDbUrl": "https://shinkyuu-db.pages.dev/acupoints/sp5",
-   "updatedAt": "2026-10-12T20:53:05+09:00",
+   "updatedAt": "2026-10-22T14:06:51+09:00",
    "publicationAllowed": true,
    "warningNotes": [
     "位置は WHO 基準でのみ確認。「WHO 基準では」と明記し、日本の教科書で確認済みと書かない",
@@ -3092,11 +3092,11 @@
    "examQuestionIds": [
     "29-138"
    ],
-   "sourceVersion": "shinkyuu-db@ee647cd+dirty",
+   "sourceVersion": "shinkyuu-db@d090183",
    "verifiedStatus": "JAPAN_VERIFIED",
    "sourceType": "acupoint_source_records",
    "relatedDbUrl": "https://shinkyuu-db.pages.dev/acupoints/sp6",
-   "updatedAt": "2026-10-12T20:53:05+09:00",
+   "updatedAt": "2026-10-22T14:06:51+09:00",
    "publicationAllowed": true,
    "warningNotes": [
     "位置は WHO 基準でのみ確認。「WHO 基準では」と明記し、日本の教科書で確認済みと書かない",
@@ -3130,11 +3130,11 @@
    "examQuestionIds": [
     "31-112"
    ],
-   "sourceVersion": "shinkyuu-db@ee647cd+dirty",
+   "sourceVersion": "shinkyuu-db@d090183",
    "verifiedStatus": "JAPAN_VERIFIED",
    "sourceType": "acupoint_source_records",
    "relatedDbUrl": "https://shinkyuu-db.pages.dev/acupoints/sp7",
-   "updatedAt": "2026-10-12T20:53:05+09:00",
+   "updatedAt": "2026-10-22T14:06:51+09:00",
    "publicationAllowed": true,
    "warningNotes": [
     "読みは出典未確認のため書き出していない"
@@ -3174,11 +3174,11 @@
     "32-116",
     "33-115"
    ],
-   "sourceVersion": "shinkyuu-db@ee647cd+dirty",
+   "sourceVersion": "shinkyuu-db@d090183",
    "verifiedStatus": "JAPAN_VERIFIED",
    "sourceType": "acupoint_source_records",
    "relatedDbUrl": "https://shinkyuu-db.pages.dev/acupoints/sp8",
-   "updatedAt": "2026-10-12T20:53:05+09:00",
+   "updatedAt": "2026-10-22T14:06:51+09:00",
    "publicationAllowed": true,
    "warningNotes": [
     "位置は WHO 基準でのみ確認。「WHO 基準では」と明記し、日本の教科書で確認済みと書かない",
@@ -3220,11 +3220,11 @@
     "33-115",
     "34-116"
    ],
-   "sourceVersion": "shinkyuu-db@ee647cd+dirty",
+   "sourceVersion": "shinkyuu-db@d090183",
    "verifiedStatus": "JAPAN_VERIFIED",
    "sourceType": "acupoint_source_records",
    "relatedDbUrl": "https://shinkyuu-db.pages.dev/acupoints/sp9",
-   "updatedAt": "2026-10-12T20:53:05+09:00",
+   "updatedAt": "2026-10-22T14:06:51+09:00",
    "publicationAllowed": true,
    "warningNotes": [
     "位置は WHO 基準でのみ確認。「WHO 基準では」と明記し、日本の教科書で確認済みと書かない",
@@ -3258,11 +3258,11 @@
    "examQuestionIds": [
     "29-116"
    ],
-   "sourceVersion": "shinkyuu-db@ee647cd+dirty",
+   "sourceVersion": "shinkyuu-db@d090183",
    "verifiedStatus": "JAPAN_VERIFIED",
    "sourceType": "acupoint_source_records",
    "relatedDbUrl": "https://shinkyuu-db.pages.dev/acupoints/sp10",
-   "updatedAt": "2026-10-12T20:53:05+09:00",
+   "updatedAt": "2026-10-22T14:06:51+09:00",
    "publicationAllowed": true,
    "warningNotes": [
     "位置は WHO 基準でのみ確認。「WHO 基準では」と明記し、日本の教科書で確認済みと書かない",
@@ -3291,11 +3291,11 @@
    "examRounds": [],
    "examQuestionCount": 0,
    "examQuestionIds": [],
-   "sourceVersion": "shinkyuu-db@ee647cd+dirty",
+   "sourceVersion": "shinkyuu-db@d090183",
    "verifiedStatus": "JAPAN_VERIFIED",
    "sourceType": "acupoint_source_records",
    "relatedDbUrl": "https://shinkyuu-db.pages.dev/acupoints/sp11",
-   "updatedAt": "2026-10-12T20:53:05+09:00",
+   "updatedAt": "2026-10-22T14:06:51+09:00",
    "publicationAllowed": true,
    "warningNotes": [
     "読みは出典未確認のため書き出していない"
@@ -3327,11 +3327,11 @@
    "examQuestionIds": [
     "29-134"
    ],
-   "sourceVersion": "shinkyuu-db@ee647cd+dirty",
+   "sourceVersion": "shinkyuu-db@d090183",
    "verifiedStatus": "JAPAN_VERIFIED",
    "sourceType": "acupoint_source_records",
    "relatedDbUrl": "https://shinkyuu-db.pages.dev/acupoints/sp12",
-   "updatedAt": "2026-10-12T20:53:05+09:00",
+   "updatedAt": "2026-10-22T14:06:51+09:00",
    "publicationAllowed": true,
    "warningNotes": [
     "読みは出典未確認のため書き出していない"
@@ -3359,11 +3359,11 @@
    "examRounds": [],
    "examQuestionCount": 0,
    "examQuestionIds": [],
-   "sourceVersion": "shinkyuu-db@ee647cd+dirty",
+   "sourceVersion": "shinkyuu-db@d090183",
    "verifiedStatus": "NOT_APPLICABLE",
    "sourceType": "acupoint_source_records",
    "relatedDbUrl": "https://shinkyuu-db.pages.dev/acupoints/sp13",
-   "updatedAt": "2026-10-12T20:53:05+09:00",
+   "updatedAt": "2026-10-22T14:06:51+09:00",
    "publicationAllowed": false,
    "warningNotes": [
     "名称が日本の資料で確認できていない。記事では WHO コードで書くか、扱わない",
@@ -3392,11 +3392,11 @@
    "examRounds": [],
    "examQuestionCount": 0,
    "examQuestionIds": [],
-   "sourceVersion": "shinkyuu-db@ee647cd+dirty",
+   "sourceVersion": "shinkyuu-db@d090183",
    "verifiedStatus": "JAPAN_VERIFIED",
    "sourceType": "acupoint_source_records",
    "relatedDbUrl": "https://shinkyuu-db.pages.dev/acupoints/sp14",
-   "updatedAt": "2026-10-12T20:53:05+09:00",
+   "updatedAt": "2026-10-22T14:06:51+09:00",
    "publicationAllowed": true,
    "warningNotes": [
     "読みは出典未確認のため書き出していない"
@@ -3424,11 +3424,11 @@
    "examRounds": [],
    "examQuestionCount": 0,
    "examQuestionIds": [],
-   "sourceVersion": "shinkyuu-db@ee647cd+dirty",
+   "sourceVersion": "shinkyuu-db@d090183",
    "verifiedStatus": "JAPAN_VERIFIED",
    "sourceType": "acupoint_source_records",
    "relatedDbUrl": "https://shinkyuu-db.pages.dev/acupoints/sp15",
-   "updatedAt": "2026-10-12T20:53:05+09:00",
+   "updatedAt": "2026-10-22T14:06:51+09:00",
    "publicationAllowed": true,
    "warningNotes": [
     "位置は WHO 基準でのみ確認。「WHO 基準では」と明記し、日本の教科書で確認済みと書かない",
@@ -3461,11 +3461,11 @@
    "examQuestionIds": [
     "29-113"
    ],
-   "sourceVersion": "shinkyuu-db@ee647cd+dirty",
+   "sourceVersion": "shinkyuu-db@d090183",
    "verifiedStatus": "JAPAN_VERIFIED",
    "sourceType": "acupoint_source_records",
    "relatedDbUrl": "https://shinkyuu-db.pages.dev/acupoints/sp16",
-   "updatedAt": "2026-10-12T20:53:05+09:00",
+   "updatedAt": "2026-10-22T14:06:51+09:00",
    "publicationAllowed": true,
    "warningNotes": [
     "読みは出典未確認のため書き出していない"
@@ -3493,11 +3493,11 @@
    "examRounds": [],
    "examQuestionCount": 0,
    "examQuestionIds": [],
-   "sourceVersion": "shinkyuu-db@ee647cd+dirty",
+   "sourceVersion": "shinkyuu-db@d090183",
    "verifiedStatus": "NOT_APPLICABLE",
    "sourceType": "acupoint_source_records",
    "relatedDbUrl": "https://shinkyuu-db.pages.dev/acupoints/sp17",
-   "updatedAt": "2026-10-12T20:53:05+09:00",
+   "updatedAt": "2026-10-22T14:06:51+09:00",
    "publicationAllowed": false,
    "warningNotes": [
     "名称が日本の資料で確認できていない。記事では WHO コードで書くか、扱わない",
@@ -3530,11 +3530,11 @@
    "examQuestionIds": [
     "32-114"
    ],
-   "sourceVersion": "shinkyuu-db@ee647cd+dirty",
+   "sourceVersion": "shinkyuu-db@d090183",
    "verifiedStatus": "JAPAN_VERIFIED",
    "sourceType": "acupoint_source_records",
    "relatedDbUrl": "https://shinkyuu-db.pages.dev/acupoints/sp18",
-   "updatedAt": "2026-10-12T20:53:05+09:00",
+   "updatedAt": "2026-10-22T14:06:51+09:00",
    "publicationAllowed": true,
    "warningNotes": [
     "読みは出典未確認のため書き出していない"
@@ -3562,11 +3562,11 @@
    "examRounds": [],
    "examQuestionCount": 0,
    "examQuestionIds": [],
-   "sourceVersion": "shinkyuu-db@ee647cd+dirty",
+   "sourceVersion": "shinkyuu-db@d090183",
    "verifiedStatus": "JAPAN_VERIFIED",
    "sourceType": "acupoint_source_records",
    "relatedDbUrl": "https://shinkyuu-db.pages.dev/acupoints/sp19",
-   "updatedAt": "2026-10-12T20:53:05+09:00",
+   "updatedAt": "2026-10-22T14:06:51+09:00",
    "publicationAllowed": true,
    "warningNotes": [
     "読みは出典未確認のため書き出していない"
@@ -3594,11 +3594,11 @@
    "examRounds": [],
    "examQuestionCount": 0,
    "examQuestionIds": [],
-   "sourceVersion": "shinkyuu-db@ee647cd+dirty",
+   "sourceVersion": "shinkyuu-db@d090183",
    "verifiedStatus": "NOT_APPLICABLE",
    "sourceType": "acupoint_source_records",
    "relatedDbUrl": "https://shinkyuu-db.pages.dev/acupoints/sp20",
-   "updatedAt": "2026-10-12T20:53:05+09:00",
+   "updatedAt": "2026-10-22T14:06:51+09:00",
    "publicationAllowed": false,
    "warningNotes": [
     "名称が日本の資料で確認できていない。記事では WHO コードで書くか、扱わない",
@@ -3637,11 +3637,11 @@
    "examQuestionIds": [
     "29-117"
    ],
-   "sourceVersion": "shinkyuu-db@ee647cd+dirty",
+   "sourceVersion": "shinkyuu-db@d090183",
    "verifiedStatus": "JAPAN_VERIFIED",
    "sourceType": "acupoint_source_records",
    "relatedDbUrl": "https://shinkyuu-db.pages.dev/acupoints/sp21",
-   "updatedAt": "2026-10-12T20:53:05+09:00",
+   "updatedAt": "2026-10-22T14:06:51+09:00",
    "publicationAllowed": true,
    "warningNotes": [
     "位置は WHO 基準でのみ確認。「WHO 基準では」と明記し、日本の教科書で確認済みと書かない",
@@ -3671,11 +3671,11 @@
    "examRounds": [],
    "examQuestionCount": 0,
    "examQuestionIds": [],
-   "sourceVersion": "shinkyuu-db@ee647cd+dirty",
+   "sourceVersion": "shinkyuu-db@d090183",
    "verifiedStatus": "JAPAN_VERIFIED",
    "sourceType": "acupoint_source_records",
    "relatedDbUrl": "https://shinkyuu-db.pages.dev/acupoints/ht1",
-   "updatedAt": "2026-10-12T20:53:05+09:00",
+   "updatedAt": "2026-10-22T14:06:51+09:00",
    "publicationAllowed": true,
    "warningNotes": [
     "読みは出典未確認のため書き出していない"
@@ -3703,11 +3703,11 @@
    "examRounds": [],
    "examQuestionCount": 0,
    "examQuestionIds": [],
-   "sourceVersion": "shinkyuu-db@ee647cd+dirty",
+   "sourceVersion": "shinkyuu-db@d090183",
    "verifiedStatus": "JAPAN_VERIFIED",
    "sourceType": "acupoint_source_records",
    "relatedDbUrl": "https://shinkyuu-db.pages.dev/acupoints/ht2",
-   "updatedAt": "2026-10-12T20:53:05+09:00",
+   "updatedAt": "2026-10-22T14:06:51+09:00",
    "publicationAllowed": true,
    "warningNotes": [
     "読みは出典未確認のため書き出していない"
@@ -3747,11 +3747,11 @@
     "29-135",
     "34-117"
    ],
-   "sourceVersion": "shinkyuu-db@ee647cd+dirty",
+   "sourceVersion": "shinkyuu-db@d090183",
    "verifiedStatus": "JAPAN_VERIFIED",
    "sourceType": "acupoint_source_records",
    "relatedDbUrl": "https://shinkyuu-db.pages.dev/acupoints/ht3",
-   "updatedAt": "2026-10-12T20:53:05+09:00",
+   "updatedAt": "2026-10-22T14:06:51+09:00",
    "publicationAllowed": true,
    "warningNotes": [
     "位置は WHO 基準でのみ確認。「WHO 基準では」と明記し、日本の教科書で確認済みと書かない",
@@ -3790,11 +3790,11 @@
    "examRounds": [],
    "examQuestionCount": 0,
    "examQuestionIds": [],
-   "sourceVersion": "shinkyuu-db@ee647cd+dirty",
+   "sourceVersion": "shinkyuu-db@d090183",
    "verifiedStatus": "JAPAN_VERIFIED",
    "sourceType": "acupoint_source_records",
    "relatedDbUrl": "https://shinkyuu-db.pages.dev/acupoints/ht4",
-   "updatedAt": "2026-10-12T20:53:05+09:00",
+   "updatedAt": "2026-10-22T14:06:51+09:00",
    "publicationAllowed": true,
    "warningNotes": [
     "位置は WHO 基準でのみ確認。「WHO 基準では」と明記し、日本の教科書で確認済みと書かない",
@@ -3838,11 +3838,11 @@
    "examQuestionIds": [
     "29-118"
    ],
-   "sourceVersion": "shinkyuu-db@ee647cd+dirty",
+   "sourceVersion": "shinkyuu-db@d090183",
    "verifiedStatus": "JAPAN_VERIFIED",
    "sourceType": "acupoint_source_records",
    "relatedDbUrl": "https://shinkyuu-db.pages.dev/acupoints/ht5",
-   "updatedAt": "2026-10-12T20:53:05+09:00",
+   "updatedAt": "2026-10-22T14:06:51+09:00",
    "publicationAllowed": true,
    "warningNotes": [
     "位置の文言が公式過去問（29-118・30-160）と22文字以上同じ。記事では言い換えるか表にする",
@@ -3881,11 +3881,11 @@
    "examRounds": [],
    "examQuestionCount": 0,
    "examQuestionIds": [],
-   "sourceVersion": "shinkyuu-db@ee647cd+dirty",
+   "sourceVersion": "shinkyuu-db@d090183",
    "verifiedStatus": "JAPAN_VERIFIED",
    "sourceType": "acupoint_source_records",
    "relatedDbUrl": "https://shinkyuu-db.pages.dev/acupoints/ht6",
-   "updatedAt": "2026-10-12T20:53:05+09:00",
+   "updatedAt": "2026-10-22T14:06:51+09:00",
    "publicationAllowed": true,
    "warningNotes": [
     "位置は WHO 基準でのみ確認。「WHO 基準では」と明記し、日本の教科書で確認済みと書かない",
@@ -3935,11 +3935,11 @@
     "34-121",
     "34-133"
    ],
-   "sourceVersion": "shinkyuu-db@ee647cd+dirty",
+   "sourceVersion": "shinkyuu-db@d090183",
    "verifiedStatus": "JAPAN_VERIFIED",
    "sourceType": "acupoint_source_records",
    "relatedDbUrl": "https://shinkyuu-db.pages.dev/acupoints/ht7",
-   "updatedAt": "2026-10-12T20:53:05+09:00",
+   "updatedAt": "2026-10-22T14:06:51+09:00",
    "publicationAllowed": true,
    "warningNotes": [
     "位置は WHO 基準でのみ確認。「WHO 基準では」と明記し、日本の教科書で確認済みと書かない",
@@ -3981,11 +3981,11 @@
     "30-117",
     "31-105"
    ],
-   "sourceVersion": "shinkyuu-db@ee647cd+dirty",
+   "sourceVersion": "shinkyuu-db@d090183",
    "verifiedStatus": "JAPAN_VERIFIED",
    "sourceType": "acupoint_source_records",
    "relatedDbUrl": "https://shinkyuu-db.pages.dev/acupoints/ht8",
-   "updatedAt": "2026-10-12T20:53:05+09:00",
+   "updatedAt": "2026-10-22T14:06:51+09:00",
    "publicationAllowed": true,
    "warningNotes": [
     "位置は WHO 基準でのみ確認。「WHO 基準では」と明記し、日本の教科書で確認済みと書かない",
@@ -4021,11 +4021,11 @@
    "examRounds": [],
    "examQuestionCount": 0,
    "examQuestionIds": [],
-   "sourceVersion": "shinkyuu-db@ee647cd+dirty",
+   "sourceVersion": "shinkyuu-db@d090183",
    "verifiedStatus": "JAPAN_VERIFIED",
    "sourceType": "acupoint_source_records",
    "relatedDbUrl": "https://shinkyuu-db.pages.dev/acupoints/ht9",
-   "updatedAt": "2026-10-12T20:53:05+09:00",
+   "updatedAt": "2026-10-22T14:06:51+09:00",
    "publicationAllowed": true,
    "warningNotes": [
     "位置は WHO 基準でのみ確認。「WHO 基準では」と明記し、日本の教科書で確認済みと書かない",
@@ -4061,11 +4061,11 @@
    "examRounds": [],
    "examQuestionCount": 0,
    "examQuestionIds": [],
-   "sourceVersion": "shinkyuu-db@ee647cd+dirty",
+   "sourceVersion": "shinkyuu-db@d090183",
    "verifiedStatus": "JAPAN_VERIFIED",
    "sourceType": "acupoint_source_records",
    "relatedDbUrl": "https://shinkyuu-db.pages.dev/acupoints/si1",
-   "updatedAt": "2026-10-12T20:53:05+09:00",
+   "updatedAt": "2026-10-22T14:06:51+09:00",
    "publicationAllowed": true,
    "warningNotes": [
     "位置は WHO 基準でのみ確認。「WHO 基準では」と明記し、日本の教科書で確認済みと書かない",
@@ -4095,11 +4095,11 @@
    "examRounds": [],
    "examQuestionCount": 0,
    "examQuestionIds": [],
-   "sourceVersion": "shinkyuu-db@ee647cd+dirty",
+   "sourceVersion": "shinkyuu-db@d090183",
    "verifiedStatus": "JAPAN_VERIFIED",
    "sourceType": "acupoint_source_records",
    "relatedDbUrl": "https://shinkyuu-db.pages.dev/acupoints/si2",
-   "updatedAt": "2026-10-12T20:53:05+09:00",
+   "updatedAt": "2026-10-22T14:06:51+09:00",
    "publicationAllowed": true,
    "warningNotes": [
     "読みは出典未確認のため書き出していない"
@@ -4138,11 +4138,11 @@
    "examRounds": [],
    "examQuestionCount": 0,
    "examQuestionIds": [],
-   "sourceVersion": "shinkyuu-db@ee647cd+dirty",
+   "sourceVersion": "shinkyuu-db@d090183",
    "verifiedStatus": "SOURCE_NEEDED",
    "sourceType": "acupoint_source_records",
    "relatedDbUrl": "https://shinkyuu-db.pages.dev/acupoints/si3",
-   "updatedAt": "2026-10-12T20:53:05+09:00",
+   "updatedAt": "2026-10-22T14:06:51+09:00",
    "publicationAllowed": false,
    "warningNotes": [
     "名称が日本の資料で確認できていない。記事では WHO コードで書くか、扱わない",
@@ -4179,11 +4179,11 @@
    "examRounds": [],
    "examQuestionCount": 0,
    "examQuestionIds": [],
-   "sourceVersion": "shinkyuu-db@ee647cd+dirty",
+   "sourceVersion": "shinkyuu-db@d090183",
    "verifiedStatus": "JAPAN_VERIFIED",
    "sourceType": "acupoint_source_records",
    "relatedDbUrl": "https://shinkyuu-db.pages.dev/acupoints/si4",
-   "updatedAt": "2026-10-12T20:53:05+09:00",
+   "updatedAt": "2026-10-22T14:06:51+09:00",
    "publicationAllowed": true,
    "warningNotes": [
     "位置は WHO 基準でのみ確認。「WHO 基準では」と明記し、日本の教科書で確認済みと書かない",
@@ -4223,11 +4223,11 @@
    "examQuestionIds": [
     "33-108"
    ],
-   "sourceVersion": "shinkyuu-db@ee647cd+dirty",
+   "sourceVersion": "shinkyuu-db@d090183",
    "verifiedStatus": "JAPAN_VERIFIED",
    "sourceType": "acupoint_source_records",
    "relatedDbUrl": "https://shinkyuu-db.pages.dev/acupoints/si5",
-   "updatedAt": "2026-10-12T20:53:05+09:00",
+   "updatedAt": "2026-10-22T14:06:51+09:00",
    "publicationAllowed": true,
    "warningNotes": [
     "位置は WHO 基準でのみ確認。「WHO 基準では」と明記し、日本の教科書で確認済みと書かない",
@@ -4263,11 +4263,11 @@
    "examRounds": [],
    "examQuestionCount": 0,
    "examQuestionIds": [],
-   "sourceVersion": "shinkyuu-db@ee647cd+dirty",
+   "sourceVersion": "shinkyuu-db@d090183",
    "verifiedStatus": "JAPAN_VERIFIED",
    "sourceType": "acupoint_source_records",
    "relatedDbUrl": "https://shinkyuu-db.pages.dev/acupoints/si6",
-   "updatedAt": "2026-10-12T20:53:05+09:00",
+   "updatedAt": "2026-10-22T14:06:51+09:00",
    "publicationAllowed": true,
    "warningNotes": [
     "位置は WHO 基準でのみ確認。「WHO 基準では」と明記し、日本の教科書で確認済みと書かない",
@@ -4305,11 +4305,11 @@
    "examRounds": [],
    "examQuestionCount": 0,
    "examQuestionIds": [],
-   "sourceVersion": "shinkyuu-db@ee647cd+dirty",
+   "sourceVersion": "shinkyuu-db@d090183",
    "verifiedStatus": "JAPAN_VERIFIED",
    "sourceType": "acupoint_source_records",
    "relatedDbUrl": "https://shinkyuu-db.pages.dev/acupoints/si7",
-   "updatedAt": "2026-10-12T20:53:05+09:00",
+   "updatedAt": "2026-10-22T14:06:51+09:00",
    "publicationAllowed": true,
    "warningNotes": [
     "位置は WHO 基準でのみ確認。「WHO 基準では」と明記し、日本の教科書で確認済みと書かない",
@@ -4346,11 +4346,11 @@
    "examRounds": [],
    "examQuestionCount": 0,
    "examQuestionIds": [],
-   "sourceVersion": "shinkyuu-db@ee647cd+dirty",
+   "sourceVersion": "shinkyuu-db@d090183",
    "verifiedStatus": "JAPAN_VERIFIED",
    "sourceType": "acupoint_source_records",
    "relatedDbUrl": "https://shinkyuu-db.pages.dev/acupoints/si8",
-   "updatedAt": "2026-10-12T20:53:05+09:00",
+   "updatedAt": "2026-10-22T14:06:51+09:00",
    "publicationAllowed": true,
    "warningNotes": [
     "位置は WHO 基準でのみ確認。「WHO 基準では」と明記し、日本の教科書で確認済みと書かない",
@@ -4380,11 +4380,11 @@
    "examRounds": [],
    "examQuestionCount": 0,
    "examQuestionIds": [],
-   "sourceVersion": "shinkyuu-db@ee647cd+dirty",
+   "sourceVersion": "shinkyuu-db@d090183",
    "verifiedStatus": "JAPAN_VERIFIED",
    "sourceType": "acupoint_source_records",
    "relatedDbUrl": "https://shinkyuu-db.pages.dev/acupoints/si9",
-   "updatedAt": "2026-10-12T20:53:05+09:00",
+   "updatedAt": "2026-10-22T14:06:51+09:00",
    "publicationAllowed": true,
    "warningNotes": [
     "読みは出典未確認のため書き出していない"
@@ -4412,11 +4412,11 @@
    "examRounds": [],
    "examQuestionCount": 0,
    "examQuestionIds": [],
-   "sourceVersion": "shinkyuu-db@ee647cd+dirty",
+   "sourceVersion": "shinkyuu-db@d090183",
    "verifiedStatus": "JAPAN_VERIFIED",
    "sourceType": "acupoint_source_records",
    "relatedDbUrl": "https://shinkyuu-db.pages.dev/acupoints/si10",
-   "updatedAt": "2026-10-12T20:53:05+09:00",
+   "updatedAt": "2026-10-22T14:06:51+09:00",
    "publicationAllowed": true,
    "warningNotes": [
     "読みは出典未確認のため書き出していない"
@@ -4448,11 +4448,11 @@
    "examQuestionIds": [
     "29-119"
    ],
-   "sourceVersion": "shinkyuu-db@ee647cd+dirty",
+   "sourceVersion": "shinkyuu-db@d090183",
    "verifiedStatus": "JAPAN_VERIFIED",
    "sourceType": "acupoint_source_records",
    "relatedDbUrl": "https://shinkyuu-db.pages.dev/acupoints/si11",
-   "updatedAt": "2026-10-12T20:53:05+09:00",
+   "updatedAt": "2026-10-22T14:06:51+09:00",
    "publicationAllowed": true,
    "warningNotes": [
     "位置は WHO 基準でのみ確認。「WHO 基準では」と明記し、日本の教科書で確認済みと書かない",
@@ -4485,11 +4485,11 @@
    "examQuestionIds": [
     "29-136"
    ],
-   "sourceVersion": "shinkyuu-db@ee647cd+dirty",
+   "sourceVersion": "shinkyuu-db@d090183",
    "verifiedStatus": "JAPAN_VERIFIED",
    "sourceType": "acupoint_source_records",
    "relatedDbUrl": "https://shinkyuu-db.pages.dev/acupoints/si12",
-   "updatedAt": "2026-10-12T20:53:05+09:00",
+   "updatedAt": "2026-10-22T14:06:51+09:00",
    "publicationAllowed": true,
    "warningNotes": [
     "読みは出典未確認のため書き出していない"
@@ -4523,11 +4523,11 @@
     "29-115",
     "33-116"
    ],
-   "sourceVersion": "shinkyuu-db@ee647cd+dirty",
+   "sourceVersion": "shinkyuu-db@d090183",
    "verifiedStatus": "JAPAN_VERIFIED",
    "sourceType": "acupoint_source_records",
    "relatedDbUrl": "https://shinkyuu-db.pages.dev/acupoints/si13",
-   "updatedAt": "2026-10-12T20:53:05+09:00",
+   "updatedAt": "2026-10-22T14:06:51+09:00",
    "publicationAllowed": true,
    "warningNotes": [
     "読みは出典未確認のため書き出していない"
@@ -4555,11 +4555,11 @@
    "examRounds": [],
    "examQuestionCount": 0,
    "examQuestionIds": [],
-   "sourceVersion": "shinkyuu-db@ee647cd+dirty",
+   "sourceVersion": "shinkyuu-db@d090183",
    "verifiedStatus": "JAPAN_VERIFIED",
    "sourceType": "acupoint_source_records",
    "relatedDbUrl": "https://shinkyuu-db.pages.dev/acupoints/si14",
-   "updatedAt": "2026-10-12T20:53:05+09:00",
+   "updatedAt": "2026-10-22T14:06:51+09:00",
    "publicationAllowed": true,
    "warningNotes": [
     "読みは出典未確認のため書き出していない"
@@ -4587,11 +4587,11 @@
    "examRounds": [],
    "examQuestionCount": 0,
    "examQuestionIds": [],
-   "sourceVersion": "shinkyuu-db@ee647cd+dirty",
+   "sourceVersion": "shinkyuu-db@d090183",
    "verifiedStatus": "JAPAN_VERIFIED",
    "sourceType": "acupoint_source_records",
    "relatedDbUrl": "https://shinkyuu-db.pages.dev/acupoints/si15",
-   "updatedAt": "2026-10-12T20:53:05+09:00",
+   "updatedAt": "2026-10-22T14:06:51+09:00",
    "publicationAllowed": true,
    "warningNotes": [
     "読みは出典未確認のため書き出していない"
@@ -4623,11 +4623,11 @@
    "examQuestionIds": [
     "31-117"
    ],
-   "sourceVersion": "shinkyuu-db@ee647cd+dirty",
+   "sourceVersion": "shinkyuu-db@d090183",
    "verifiedStatus": "JAPAN_VERIFIED",
    "sourceType": "acupoint_source_records",
    "relatedDbUrl": "https://shinkyuu-db.pages.dev/acupoints/si16",
-   "updatedAt": "2026-10-12T20:53:05+09:00",
+   "updatedAt": "2026-10-22T14:06:51+09:00",
    "publicationAllowed": true,
    "warningNotes": [
     "読みは出典未確認のため書き出していない"
@@ -4655,11 +4655,11 @@
    "examRounds": [],
    "examQuestionCount": 0,
    "examQuestionIds": [],
-   "sourceVersion": "shinkyuu-db@ee647cd+dirty",
+   "sourceVersion": "shinkyuu-db@d090183",
    "verifiedStatus": "JAPAN_VERIFIED",
    "sourceType": "acupoint_source_records",
    "relatedDbUrl": "https://shinkyuu-db.pages.dev/acupoints/si17",
-   "updatedAt": "2026-10-12T20:53:05+09:00",
+   "updatedAt": "2026-10-22T14:06:51+09:00",
    "publicationAllowed": true,
    "warningNotes": [
     "読みは出典未確認のため書き出していない"
@@ -4695,11 +4695,11 @@
     "30-118",
     "32-128"
    ],
-   "sourceVersion": "shinkyuu-db@ee647cd+dirty",
+   "sourceVersion": "shinkyuu-db@d090183",
    "verifiedStatus": "JAPAN_VERIFIED",
    "sourceType": "acupoint_source_records",
    "relatedDbUrl": "https://shinkyuu-db.pages.dev/acupoints/si18",
-   "updatedAt": "2026-10-12T20:53:05+09:00",
+   "updatedAt": "2026-10-22T14:06:51+09:00",
    "publicationAllowed": true,
    "warningNotes": [
     "読みは出典未確認のため書き出していない"
@@ -4731,11 +4731,11 @@
    "examQuestionIds": [
     "34-119"
    ],
-   "sourceVersion": "shinkyuu-db@ee647cd+dirty",
+   "sourceVersion": "shinkyuu-db@d090183",
    "verifiedStatus": "JAPAN_VERIFIED",
    "sourceType": "acupoint_source_records",
    "relatedDbUrl": "https://shinkyuu-db.pages.dev/acupoints/si19",
-   "updatedAt": "2026-10-12T20:53:05+09:00",
+   "updatedAt": "2026-10-22T14:06:51+09:00",
    "publicationAllowed": true,
    "warningNotes": [
     "位置は WHO 基準でのみ確認。「WHO 基準では」と明記し、日本の教科書で確認済みと書かない",
@@ -4764,11 +4764,11 @@
    "examRounds": [],
    "examQuestionCount": 0,
    "examQuestionIds": [],
-   "sourceVersion": "shinkyuu-db@ee647cd+dirty",
+   "sourceVersion": "shinkyuu-db@d090183",
    "verifiedStatus": "NOT_APPLICABLE",
    "sourceType": "acupoint_source_records",
    "relatedDbUrl": "https://shinkyuu-db.pages.dev/acupoints/bl1",
-   "updatedAt": "2026-10-12T20:53:05+09:00",
+   "updatedAt": "2026-10-22T14:06:51+09:00",
    "publicationAllowed": false,
    "warningNotes": [
     "名称が日本の資料で確認できていない。記事では WHO コードで書くか、扱わない",
@@ -4797,11 +4797,11 @@
    "examRounds": [],
    "examQuestionCount": 0,
    "examQuestionIds": [],
-   "sourceVersion": "shinkyuu-db@ee647cd+dirty",
+   "sourceVersion": "shinkyuu-db@d090183",
    "verifiedStatus": "JAPAN_VERIFIED",
    "sourceType": "acupoint_source_records",
    "relatedDbUrl": "https://shinkyuu-db.pages.dev/acupoints/bl2",
-   "updatedAt": "2026-10-12T20:53:05+09:00",
+   "updatedAt": "2026-10-22T14:06:51+09:00",
    "publicationAllowed": true,
    "warningNotes": [
     "位置は WHO 基準でのみ確認。「WHO 基準では」と明記し、日本の教科書で確認済みと書かない",
@@ -4830,11 +4830,11 @@
    "examRounds": [],
    "examQuestionCount": 0,
    "examQuestionIds": [],
-   "sourceVersion": "shinkyuu-db@ee647cd+dirty",
+   "sourceVersion": "shinkyuu-db@d090183",
    "verifiedStatus": "NOT_APPLICABLE",
    "sourceType": "acupoint_source_records",
    "relatedDbUrl": "https://shinkyuu-db.pages.dev/acupoints/bl3",
-   "updatedAt": "2026-10-12T20:53:05+09:00",
+   "updatedAt": "2026-10-22T14:06:51+09:00",
    "publicationAllowed": false,
    "warningNotes": [
     "名称が日本の資料で確認できていない。記事では WHO コードで書くか、扱わない",
@@ -4863,11 +4863,11 @@
    "examRounds": [],
    "examQuestionCount": 0,
    "examQuestionIds": [],
-   "sourceVersion": "shinkyuu-db@ee647cd+dirty",
+   "sourceVersion": "shinkyuu-db@d090183",
    "verifiedStatus": "JAPAN_VERIFIED",
    "sourceType": "acupoint_source_records",
    "relatedDbUrl": "https://shinkyuu-db.pages.dev/acupoints/bl4",
-   "updatedAt": "2026-10-12T20:53:05+09:00",
+   "updatedAt": "2026-10-22T14:06:51+09:00",
    "publicationAllowed": true,
    "warningNotes": [
     "読みは出典未確認のため書き出していない"
@@ -4895,11 +4895,11 @@
    "examRounds": [],
    "examQuestionCount": 0,
    "examQuestionIds": [],
-   "sourceVersion": "shinkyuu-db@ee647cd+dirty",
+   "sourceVersion": "shinkyuu-db@d090183",
    "verifiedStatus": "NOT_APPLICABLE",
    "sourceType": "acupoint_source_records",
    "relatedDbUrl": "https://shinkyuu-db.pages.dev/acupoints/bl5",
-   "updatedAt": "2026-10-12T20:53:05+09:00",
+   "updatedAt": "2026-10-22T14:06:51+09:00",
    "publicationAllowed": false,
    "warningNotes": [
     "名称が日本の資料で確認できていない。記事では WHO コードで書くか、扱わない",
@@ -4928,11 +4928,11 @@
    "examRounds": [],
    "examQuestionCount": 0,
    "examQuestionIds": [],
-   "sourceVersion": "shinkyuu-db@ee647cd+dirty",
+   "sourceVersion": "shinkyuu-db@d090183",
    "verifiedStatus": "NOT_APPLICABLE",
    "sourceType": "acupoint_source_records",
    "relatedDbUrl": "https://shinkyuu-db.pages.dev/acupoints/bl6",
-   "updatedAt": "2026-10-12T20:53:05+09:00",
+   "updatedAt": "2026-10-22T14:06:51+09:00",
    "publicationAllowed": false,
    "warningNotes": [
     "名称が日本の資料で確認できていない。記事では WHO コードで書くか、扱わない",
@@ -4961,11 +4961,11 @@
    "examRounds": [],
    "examQuestionCount": 0,
    "examQuestionIds": [],
-   "sourceVersion": "shinkyuu-db@ee647cd+dirty",
+   "sourceVersion": "shinkyuu-db@d090183",
    "verifiedStatus": "NOT_APPLICABLE",
    "sourceType": "acupoint_source_records",
    "relatedDbUrl": "https://shinkyuu-db.pages.dev/acupoints/bl7",
-   "updatedAt": "2026-10-12T20:53:05+09:00",
+   "updatedAt": "2026-10-22T14:06:51+09:00",
    "publicationAllowed": false,
    "warningNotes": [
     "名称が日本の資料で確認できていない。記事では WHO コードで書くか、扱わない",
@@ -4994,11 +4994,11 @@
    "examRounds": [],
    "examQuestionCount": 0,
    "examQuestionIds": [],
-   "sourceVersion": "shinkyuu-db@ee647cd+dirty",
+   "sourceVersion": "shinkyuu-db@d090183",
    "verifiedStatus": "NOT_APPLICABLE",
    "sourceType": "acupoint_source_records",
    "relatedDbUrl": "https://shinkyuu-db.pages.dev/acupoints/bl8",
-   "updatedAt": "2026-10-12T20:53:05+09:00",
+   "updatedAt": "2026-10-22T14:06:51+09:00",
    "publicationAllowed": false,
    "warningNotes": [
     "名称が日本の資料で確認できていない。記事では WHO コードで書くか、扱わない",
@@ -5031,11 +5031,11 @@
    "examQuestionIds": [
     "30-127"
    ],
-   "sourceVersion": "shinkyuu-db@ee647cd+dirty",
+   "sourceVersion": "shinkyuu-db@d090183",
    "verifiedStatus": "JAPAN_VERIFIED",
    "sourceType": "acupoint_source_records",
    "relatedDbUrl": "https://shinkyuu-db.pages.dev/acupoints/bl9",
-   "updatedAt": "2026-10-12T20:53:05+09:00",
+   "updatedAt": "2026-10-22T14:06:51+09:00",
    "publicationAllowed": true,
    "warningNotes": [
     "読みは出典未確認のため書き出していない"
@@ -5063,11 +5063,11 @@
    "examRounds": [],
    "examQuestionCount": 0,
    "examQuestionIds": [],
-   "sourceVersion": "shinkyuu-db@ee647cd+dirty",
+   "sourceVersion": "shinkyuu-db@d090183",
    "verifiedStatus": "JAPAN_VERIFIED",
    "sourceType": "acupoint_source_records",
    "relatedDbUrl": "https://shinkyuu-db.pages.dev/acupoints/bl10",
-   "updatedAt": "2026-10-12T20:53:05+09:00",
+   "updatedAt": "2026-10-22T14:06:51+09:00",
    "publicationAllowed": true,
    "warningNotes": [
     "位置は根拠不足または資料と食い違い。記事に書かない",
@@ -5102,11 +5102,11 @@
    "examRounds": [],
    "examQuestionCount": 0,
    "examQuestionIds": [],
-   "sourceVersion": "shinkyuu-db@ee647cd+dirty",
+   "sourceVersion": "shinkyuu-db@d090183",
    "verifiedStatus": "JAPAN_VERIFIED",
    "sourceType": "acupoint_source_records",
    "relatedDbUrl": "https://shinkyuu-db.pages.dev/acupoints/bl11",
-   "updatedAt": "2026-10-12T20:53:05+09:00",
+   "updatedAt": "2026-10-22T14:06:51+09:00",
    "publicationAllowed": true,
    "warningNotes": [
     "位置は WHO 基準でのみ確認。「WHO 基準では」と明記し、日本の教科書で確認済みと書かない",
@@ -5136,11 +5136,11 @@
    "examRounds": [],
    "examQuestionCount": 0,
    "examQuestionIds": [],
-   "sourceVersion": "shinkyuu-db@ee647cd+dirty",
+   "sourceVersion": "shinkyuu-db@d090183",
    "verifiedStatus": "JAPAN_VERIFIED",
    "sourceType": "acupoint_source_records",
    "relatedDbUrl": "https://shinkyuu-db.pages.dev/acupoints/bl12",
-   "updatedAt": "2026-10-12T20:53:05+09:00",
+   "updatedAt": "2026-10-22T14:06:51+09:00",
    "publicationAllowed": true,
    "warningNotes": [
     "読みは出典未確認のため書き出していない"
@@ -5178,11 +5178,11 @@
    "examQuestionIds": [
     "30-106"
    ],
-   "sourceVersion": "shinkyuu-db@ee647cd+dirty",
+   "sourceVersion": "shinkyuu-db@d090183",
    "verifiedStatus": "JAPAN_VERIFIED",
    "sourceType": "acupoint_source_records",
    "relatedDbUrl": "https://shinkyuu-db.pages.dev/acupoints/bl13",
-   "updatedAt": "2026-10-12T20:53:05+09:00",
+   "updatedAt": "2026-10-22T14:06:51+09:00",
    "publicationAllowed": true,
    "warningNotes": [
     "位置は WHO 基準でのみ確認。「WHO 基準では」と明記し、日本の教科書で確認済みと書かない",
@@ -5212,11 +5212,11 @@
    "examRounds": [],
    "examQuestionCount": 0,
    "examQuestionIds": [],
-   "sourceVersion": "shinkyuu-db@ee647cd+dirty",
+   "sourceVersion": "shinkyuu-db@d090183",
    "verifiedStatus": "JAPAN_VERIFIED",
    "sourceType": "acupoint_source_records",
    "relatedDbUrl": "https://shinkyuu-db.pages.dev/acupoints/bl14",
-   "updatedAt": "2026-10-12T20:53:05+09:00",
+   "updatedAt": "2026-10-22T14:06:51+09:00",
    "publicationAllowed": true,
    "warningNotes": [
     "読みは出典未確認のため書き出していない"
@@ -5250,11 +5250,11 @@
    "examRounds": [],
    "examQuestionCount": 0,
    "examQuestionIds": [],
-   "sourceVersion": "shinkyuu-db@ee647cd+dirty",
+   "sourceVersion": "shinkyuu-db@d090183",
    "verifiedStatus": "JAPAN_VERIFIED",
    "sourceType": "acupoint_source_records",
    "relatedDbUrl": "https://shinkyuu-db.pages.dev/acupoints/bl15",
-   "updatedAt": "2026-10-12T20:53:05+09:00",
+   "updatedAt": "2026-10-22T14:06:51+09:00",
    "publicationAllowed": true,
    "warningNotes": [
     "位置は WHO 基準でのみ確認。「WHO 基準では」と明記し、日本の教科書で確認済みと書かない",
@@ -5284,11 +5284,11 @@
    "examRounds": [],
    "examQuestionCount": 0,
    "examQuestionIds": [],
-   "sourceVersion": "shinkyuu-db@ee647cd+dirty",
+   "sourceVersion": "shinkyuu-db@d090183",
    "verifiedStatus": "NOT_APPLICABLE",
    "sourceType": "acupoint_source_records",
    "relatedDbUrl": "https://shinkyuu-db.pages.dev/acupoints/bl16",
-   "updatedAt": "2026-10-12T20:53:05+09:00",
+   "updatedAt": "2026-10-22T14:06:51+09:00",
    "publicationAllowed": false,
    "warningNotes": [
     "名称が日本の資料で確認できていない。記事では WHO コードで書くか、扱わない",
@@ -5329,11 +5329,11 @@
     "29-141",
     "30-122"
    ],
-   "sourceVersion": "shinkyuu-db@ee647cd+dirty",
+   "sourceVersion": "shinkyuu-db@d090183",
    "verifiedStatus": "JAPAN_VERIFIED",
    "sourceType": "acupoint_source_records",
    "relatedDbUrl": "https://shinkyuu-db.pages.dev/acupoints/bl17",
-   "updatedAt": "2026-10-12T20:53:05+09:00",
+   "updatedAt": "2026-10-22T14:06:51+09:00",
    "publicationAllowed": true,
    "warningNotes": [
     "位置は WHO 基準でのみ確認。「WHO 基準では」と明記し、日本の教科書で確認済みと書かない",
@@ -5379,11 +5379,11 @@
     "33-124",
     "34-150"
    ],
-   "sourceVersion": "shinkyuu-db@ee647cd+dirty",
+   "sourceVersion": "shinkyuu-db@d090183",
    "verifiedStatus": "JAPAN_VERIFIED",
    "sourceType": "acupoint_source_records",
    "relatedDbUrl": "https://shinkyuu-db.pages.dev/acupoints/bl18",
-   "updatedAt": "2026-10-12T20:53:05+09:00",
+   "updatedAt": "2026-10-22T14:06:51+09:00",
    "publicationAllowed": true,
    "warningNotes": [
     "位置は WHO 基準でのみ確認。「WHO 基準では」と明記し、日本の教科書で確認済みと書かない",
@@ -5413,11 +5413,11 @@
    "examRounds": [],
    "examQuestionCount": 0,
    "examQuestionIds": [],
-   "sourceVersion": "shinkyuu-db@ee647cd+dirty",
+   "sourceVersion": "shinkyuu-db@d090183",
    "verifiedStatus": "JAPAN_VERIFIED",
    "sourceType": "acupoint_source_records",
    "relatedDbUrl": "https://shinkyuu-db.pages.dev/acupoints/bl19",
-   "updatedAt": "2026-10-12T20:53:05+09:00",
+   "updatedAt": "2026-10-22T14:06:51+09:00",
    "publicationAllowed": true,
    "warningNotes": [
     "読みは出典未確認のため書き出していない"
@@ -5459,11 +5459,11 @@
     "33-124",
     "34-150"
    ],
-   "sourceVersion": "shinkyuu-db@ee647cd+dirty",
+   "sourceVersion": "shinkyuu-db@d090183",
    "verifiedStatus": "JAPAN_VERIFIED",
    "sourceType": "acupoint_source_records",
    "relatedDbUrl": "https://shinkyuu-db.pages.dev/acupoints/bl20",
-   "updatedAt": "2026-10-12T20:53:05+09:00",
+   "updatedAt": "2026-10-22T14:06:51+09:00",
    "publicationAllowed": true,
    "warningNotes": [
     "位置は WHO 基準でのみ確認。「WHO 基準では」と明記し、日本の教科書で確認済みと書かない",
@@ -5499,11 +5499,11 @@
    "examRounds": [],
    "examQuestionCount": 0,
    "examQuestionIds": [],
-   "sourceVersion": "shinkyuu-db@ee647cd+dirty",
+   "sourceVersion": "shinkyuu-db@d090183",
    "verifiedStatus": "JAPAN_VERIFIED",
    "sourceType": "acupoint_source_records",
    "relatedDbUrl": "https://shinkyuu-db.pages.dev/acupoints/bl21",
-   "updatedAt": "2026-10-12T20:53:05+09:00",
+   "updatedAt": "2026-10-22T14:06:51+09:00",
    "publicationAllowed": true,
    "warningNotes": [
     "位置は WHO 基準でのみ確認。「WHO 基準では」と明記し、日本の教科書で確認済みと書かない",
@@ -5533,11 +5533,11 @@
    "examRounds": [],
    "examQuestionCount": 0,
    "examQuestionIds": [],
-   "sourceVersion": "shinkyuu-db@ee647cd+dirty",
+   "sourceVersion": "shinkyuu-db@d090183",
    "verifiedStatus": "JAPAN_VERIFIED",
    "sourceType": "acupoint_source_records",
    "relatedDbUrl": "https://shinkyuu-db.pages.dev/acupoints/bl22",
-   "updatedAt": "2026-10-12T20:53:05+09:00",
+   "updatedAt": "2026-10-22T14:06:51+09:00",
    "publicationAllowed": true,
    "warningNotes": [
     "読みは出典未確認のため書き出していない"
@@ -5577,11 +5577,11 @@
     "30-156",
     "32-156"
    ],
-   "sourceVersion": "shinkyuu-db@ee647cd+dirty",
+   "sourceVersion": "shinkyuu-db@d090183",
    "verifiedStatus": "JAPAN_VERIFIED",
    "sourceType": "acupoint_source_records",
    "relatedDbUrl": "https://shinkyuu-db.pages.dev/acupoints/bl23",
-   "updatedAt": "2026-10-12T20:53:05+09:00",
+   "updatedAt": "2026-10-22T14:06:51+09:00",
    "publicationAllowed": true,
    "warningNotes": [
     "位置は WHO 基準でのみ確認。「WHO 基準では」と明記し、日本の教科書で確認済みと書かない",
@@ -5611,11 +5611,11 @@
    "examRounds": [],
    "examQuestionCount": 0,
    "examQuestionIds": [],
-   "sourceVersion": "shinkyuu-db@ee647cd+dirty",
+   "sourceVersion": "shinkyuu-db@d090183",
    "verifiedStatus": "NOT_APPLICABLE",
    "sourceType": "acupoint_source_records",
    "relatedDbUrl": "https://shinkyuu-db.pages.dev/acupoints/bl24",
-   "updatedAt": "2026-10-12T20:53:05+09:00",
+   "updatedAt": "2026-10-22T14:06:51+09:00",
    "publicationAllowed": false,
    "warningNotes": [
     "名称が日本の資料で確認できていない。記事では WHO コードで書くか、扱わない",
@@ -5650,11 +5650,11 @@
    "examRounds": [],
    "examQuestionCount": 0,
    "examQuestionIds": [],
-   "sourceVersion": "shinkyuu-db@ee647cd+dirty",
+   "sourceVersion": "shinkyuu-db@d090183",
    "verifiedStatus": "JAPAN_VERIFIED",
    "sourceType": "acupoint_source_records",
    "relatedDbUrl": "https://shinkyuu-db.pages.dev/acupoints/bl25",
-   "updatedAt": "2026-10-12T20:53:05+09:00",
+   "updatedAt": "2026-10-22T14:06:51+09:00",
    "publicationAllowed": true,
    "warningNotes": [
     "位置は WHO 基準でのみ確認。「WHO 基準では」と明記し、日本の教科書で確認済みと書かない",
@@ -5688,11 +5688,11 @@
    "examQuestionIds": [
     "29-126"
    ],
-   "sourceVersion": "shinkyuu-db@ee647cd+dirty",
+   "sourceVersion": "shinkyuu-db@d090183",
    "verifiedStatus": "JAPAN_VERIFIED",
    "sourceType": "acupoint_source_records",
    "relatedDbUrl": "https://shinkyuu-db.pages.dev/acupoints/bl26",
-   "updatedAt": "2026-10-12T20:53:05+09:00",
+   "updatedAt": "2026-10-22T14:06:51+09:00",
    "publicationAllowed": true,
    "warningNotes": [
     "読みは出典未確認のため書き出していない"
@@ -5720,11 +5720,11 @@
    "examRounds": [],
    "examQuestionCount": 0,
    "examQuestionIds": [],
-   "sourceVersion": "shinkyuu-db@ee647cd+dirty",
+   "sourceVersion": "shinkyuu-db@d090183",
    "verifiedStatus": "JAPAN_VERIFIED",
    "sourceType": "acupoint_source_records",
    "relatedDbUrl": "https://shinkyuu-db.pages.dev/acupoints/bl27",
-   "updatedAt": "2026-10-12T20:53:05+09:00",
+   "updatedAt": "2026-10-22T14:06:51+09:00",
    "publicationAllowed": true,
    "warningNotes": [
     "読みは出典未確認のため書き出していない"
@@ -5762,11 +5762,11 @@
    "examQuestionIds": [
     "31-118"
    ],
-   "sourceVersion": "shinkyuu-db@ee647cd+dirty",
+   "sourceVersion": "shinkyuu-db@d090183",
    "verifiedStatus": "JAPAN_VERIFIED",
    "sourceType": "acupoint_source_records",
    "relatedDbUrl": "https://shinkyuu-db.pages.dev/acupoints/bl28",
-   "updatedAt": "2026-10-12T20:53:05+09:00",
+   "updatedAt": "2026-10-22T14:06:51+09:00",
    "publicationAllowed": true,
    "warningNotes": [
     "位置は WHO 基準でのみ確認。「WHO 基準では」と明記し、日本の教科書で確認済みと書かない",
@@ -5796,11 +5796,11 @@
    "examRounds": [],
    "examQuestionCount": 0,
    "examQuestionIds": [],
-   "sourceVersion": "shinkyuu-db@ee647cd+dirty",
+   "sourceVersion": "shinkyuu-db@d090183",
    "verifiedStatus": "JAPAN_VERIFIED",
    "sourceType": "acupoint_source_records",
    "relatedDbUrl": "https://shinkyuu-db.pages.dev/acupoints/bl29",
-   "updatedAt": "2026-10-12T20:53:05+09:00",
+   "updatedAt": "2026-10-22T14:06:51+09:00",
    "publicationAllowed": true,
    "warningNotes": [
     "読みは出典未確認のため書き出していない"
@@ -5828,11 +5828,11 @@
    "examRounds": [],
    "examQuestionCount": 0,
    "examQuestionIds": [],
-   "sourceVersion": "shinkyuu-db@ee647cd+dirty",
+   "sourceVersion": "shinkyuu-db@d090183",
    "verifiedStatus": "NOT_APPLICABLE",
    "sourceType": "acupoint_source_records",
    "relatedDbUrl": "https://shinkyuu-db.pages.dev/acupoints/bl30",
-   "updatedAt": "2026-10-12T20:53:05+09:00",
+   "updatedAt": "2026-10-22T14:06:51+09:00",
    "publicationAllowed": false,
    "warningNotes": [
     "名称が日本の資料で確認できていない。記事では WHO コードで書くか、扱わない",
@@ -5861,11 +5861,11 @@
    "examRounds": [],
    "examQuestionCount": 0,
    "examQuestionIds": [],
-   "sourceVersion": "shinkyuu-db@ee647cd+dirty",
+   "sourceVersion": "shinkyuu-db@d090183",
    "verifiedStatus": "NOT_APPLICABLE",
    "sourceType": "acupoint_source_records",
    "relatedDbUrl": "https://shinkyuu-db.pages.dev/acupoints/bl31",
-   "updatedAt": "2026-10-12T20:53:05+09:00",
+   "updatedAt": "2026-10-22T14:06:51+09:00",
    "publicationAllowed": false,
    "warningNotes": [
     "名称が日本の資料で確認できていない。記事では WHO コードで書くか、扱わない",
@@ -5894,11 +5894,11 @@
    "examRounds": [],
    "examQuestionCount": 0,
    "examQuestionIds": [],
-   "sourceVersion": "shinkyuu-db@ee647cd+dirty",
+   "sourceVersion": "shinkyuu-db@d090183",
    "verifiedStatus": "JAPAN_VERIFIED",
    "sourceType": "acupoint_source_records",
    "relatedDbUrl": "https://shinkyuu-db.pages.dev/acupoints/bl32",
-   "updatedAt": "2026-10-12T20:53:05+09:00",
+   "updatedAt": "2026-10-22T14:06:51+09:00",
    "publicationAllowed": true,
    "warningNotes": [
     "読みは出典未確認のため書き出していない"
@@ -5932,11 +5932,11 @@
     "29-131",
     "32-130"
    ],
-   "sourceVersion": "shinkyuu-db@ee647cd+dirty",
+   "sourceVersion": "shinkyuu-db@d090183",
    "verifiedStatus": "JAPAN_VERIFIED",
    "sourceType": "acupoint_source_records",
    "relatedDbUrl": "https://shinkyuu-db.pages.dev/acupoints/bl33",
-   "updatedAt": "2026-10-12T20:53:05+09:00",
+   "updatedAt": "2026-10-22T14:06:51+09:00",
    "publicationAllowed": true,
    "warningNotes": [
     "読みは出典未確認のため書き出していない"
@@ -5964,11 +5964,11 @@
    "examRounds": [],
    "examQuestionCount": 0,
    "examQuestionIds": [],
-   "sourceVersion": "shinkyuu-db@ee647cd+dirty",
+   "sourceVersion": "shinkyuu-db@d090183",
    "verifiedStatus": "NOT_APPLICABLE",
    "sourceType": "acupoint_source_records",
    "relatedDbUrl": "https://shinkyuu-db.pages.dev/acupoints/bl34",
-   "updatedAt": "2026-10-12T20:53:05+09:00",
+   "updatedAt": "2026-10-22T14:06:51+09:00",
    "publicationAllowed": false,
    "warningNotes": [
     "名称が日本の資料で確認できていない。記事では WHO コードで書くか、扱わない",
@@ -5997,11 +5997,11 @@
    "examRounds": [],
    "examQuestionCount": 0,
    "examQuestionIds": [],
-   "sourceVersion": "shinkyuu-db@ee647cd+dirty",
+   "sourceVersion": "shinkyuu-db@d090183",
    "verifiedStatus": "NOT_APPLICABLE",
    "sourceType": "acupoint_source_records",
    "relatedDbUrl": "https://shinkyuu-db.pages.dev/acupoints/bl35",
-   "updatedAt": "2026-10-12T20:53:05+09:00",
+   "updatedAt": "2026-10-22T14:06:51+09:00",
    "publicationAllowed": false,
    "warningNotes": [
     "名称が日本の資料で確認できていない。記事では WHO コードで書くか、扱わない",
@@ -6030,11 +6030,11 @@
    "examRounds": [],
    "examQuestionCount": 0,
    "examQuestionIds": [],
-   "sourceVersion": "shinkyuu-db@ee647cd+dirty",
+   "sourceVersion": "shinkyuu-db@d090183",
    "verifiedStatus": "JAPAN_VERIFIED",
    "sourceType": "acupoint_source_records",
    "relatedDbUrl": "https://shinkyuu-db.pages.dev/acupoints/bl36",
-   "updatedAt": "2026-10-12T20:53:05+09:00",
+   "updatedAt": "2026-10-22T14:06:51+09:00",
    "publicationAllowed": true,
    "warningNotes": [
     "読みは出典未確認のため書き出していない"
@@ -6062,11 +6062,11 @@
    "examRounds": [],
    "examQuestionCount": 0,
    "examQuestionIds": [],
-   "sourceVersion": "shinkyuu-db@ee647cd+dirty",
+   "sourceVersion": "shinkyuu-db@d090183",
    "verifiedStatus": "JAPAN_VERIFIED",
    "sourceType": "acupoint_source_records",
    "relatedDbUrl": "https://shinkyuu-db.pages.dev/acupoints/bl37",
-   "updatedAt": "2026-10-12T20:53:05+09:00",
+   "updatedAt": "2026-10-22T14:06:51+09:00",
    "publicationAllowed": true,
    "warningNotes": [
     "読みは出典未確認のため書き出していない"
@@ -6094,11 +6094,11 @@
    "examRounds": [],
    "examQuestionCount": 0,
    "examQuestionIds": [],
-   "sourceVersion": "shinkyuu-db@ee647cd+dirty",
+   "sourceVersion": "shinkyuu-db@d090183",
    "verifiedStatus": "NOT_APPLICABLE",
    "sourceType": "acupoint_source_records",
    "relatedDbUrl": "https://shinkyuu-db.pages.dev/acupoints/bl38",
-   "updatedAt": "2026-10-12T20:53:05+09:00",
+   "updatedAt": "2026-10-22T14:06:51+09:00",
    "publicationAllowed": false,
    "warningNotes": [
     "名称が日本の資料で確認できていない。記事では WHO コードで書くか、扱わない",
@@ -6127,11 +6127,11 @@
    "examRounds": [],
    "examQuestionCount": 0,
    "examQuestionIds": [],
-   "sourceVersion": "shinkyuu-db@ee647cd+dirty",
+   "sourceVersion": "shinkyuu-db@d090183",
    "verifiedStatus": "JAPAN_VERIFIED",
    "sourceType": "acupoint_source_records",
    "relatedDbUrl": "https://shinkyuu-db.pages.dev/acupoints/bl39",
-   "updatedAt": "2026-10-12T20:53:05+09:00",
+   "updatedAt": "2026-10-22T14:06:51+09:00",
    "publicationAllowed": true,
    "warningNotes": [
     "読みは出典未確認のため書き出していない"
@@ -6179,11 +6179,11 @@
    "examQuestionIds": [
     "32-158"
    ],
-   "sourceVersion": "shinkyuu-db@ee647cd+dirty",
+   "sourceVersion": "shinkyuu-db@d090183",
    "verifiedStatus": "JAPAN_VERIFIED",
    "sourceType": "acupoint_source_records",
    "relatedDbUrl": "https://shinkyuu-db.pages.dev/acupoints/bl40",
-   "updatedAt": "2026-10-12T20:53:05+09:00",
+   "updatedAt": "2026-10-22T14:06:51+09:00",
    "publicationAllowed": true,
    "warningNotes": [
     "位置は WHO 基準でのみ確認。「WHO 基準では」と明記し、日本の教科書で確認済みと書かない",
@@ -6217,11 +6217,11 @@
    "examQuestionIds": [
     "29-127"
    ],
-   "sourceVersion": "shinkyuu-db@ee647cd+dirty",
+   "sourceVersion": "shinkyuu-db@d090183",
    "verifiedStatus": "JAPAN_VERIFIED",
    "sourceType": "acupoint_source_records",
    "relatedDbUrl": "https://shinkyuu-db.pages.dev/acupoints/bl41",
-   "updatedAt": "2026-10-12T20:53:05+09:00",
+   "updatedAt": "2026-10-22T14:06:51+09:00",
    "publicationAllowed": true,
    "warningNotes": [
     "読みは出典未確認のため書き出していない"
@@ -6249,11 +6249,11 @@
    "examRounds": [],
    "examQuestionCount": 0,
    "examQuestionIds": [],
-   "sourceVersion": "shinkyuu-db@ee647cd+dirty",
+   "sourceVersion": "shinkyuu-db@d090183",
    "verifiedStatus": "NOT_APPLICABLE",
    "sourceType": "acupoint_source_records",
    "relatedDbUrl": "https://shinkyuu-db.pages.dev/acupoints/bl42",
-   "updatedAt": "2026-10-12T20:53:05+09:00",
+   "updatedAt": "2026-10-22T14:06:51+09:00",
    "publicationAllowed": false,
    "warningNotes": [
     "名称が日本の資料で確認できていない。記事では WHO コードで書くか、扱わない",
@@ -6282,11 +6282,11 @@
    "examRounds": [],
    "examQuestionCount": 0,
    "examQuestionIds": [],
-   "sourceVersion": "shinkyuu-db@ee647cd+dirty",
+   "sourceVersion": "shinkyuu-db@d090183",
    "verifiedStatus": "JAPAN_VERIFIED",
    "sourceType": "acupoint_source_records",
    "relatedDbUrl": "https://shinkyuu-db.pages.dev/acupoints/bl43",
-   "updatedAt": "2026-10-12T20:53:05+09:00",
+   "updatedAt": "2026-10-22T14:06:51+09:00",
    "publicationAllowed": true,
    "warningNotes": [
     "読みは出典未確認のため書き出していない"
@@ -6314,11 +6314,11 @@
    "examRounds": [],
    "examQuestionCount": 0,
    "examQuestionIds": [],
-   "sourceVersion": "shinkyuu-db@ee647cd+dirty",
+   "sourceVersion": "shinkyuu-db@d090183",
    "verifiedStatus": "JAPAN_VERIFIED",
    "sourceType": "acupoint_source_records",
    "relatedDbUrl": "https://shinkyuu-db.pages.dev/acupoints/bl44",
-   "updatedAt": "2026-10-12T20:53:05+09:00",
+   "updatedAt": "2026-10-22T14:06:51+09:00",
    "publicationAllowed": true,
    "warningNotes": [
     "読みは出典未確認のため書き出していない"
@@ -6350,11 +6350,11 @@
    "examQuestionIds": [
     "33-125"
    ],
-   "sourceVersion": "shinkyuu-db@ee647cd+dirty",
+   "sourceVersion": "shinkyuu-db@d090183",
    "verifiedStatus": "JAPAN_VERIFIED",
    "sourceType": "acupoint_source_records",
    "relatedDbUrl": "https://shinkyuu-db.pages.dev/acupoints/bl45",
-   "updatedAt": "2026-10-12T20:53:05+09:00",
+   "updatedAt": "2026-10-22T14:06:51+09:00",
    "publicationAllowed": true,
    "warningNotes": [
     "読みは出典未確認のため書き出していない"
@@ -6382,11 +6382,11 @@
    "examRounds": [],
    "examQuestionCount": 0,
    "examQuestionIds": [],
-   "sourceVersion": "shinkyuu-db@ee647cd+dirty",
+   "sourceVersion": "shinkyuu-db@d090183",
    "verifiedStatus": "NOT_APPLICABLE",
    "sourceType": "acupoint_source_records",
    "relatedDbUrl": "https://shinkyuu-db.pages.dev/acupoints/bl46",
-   "updatedAt": "2026-10-12T20:53:05+09:00",
+   "updatedAt": "2026-10-22T14:06:51+09:00",
    "publicationAllowed": false,
    "warningNotes": [
     "名称が日本の資料で確認できていない。記事では WHO コードで書くか、扱わない",
@@ -6419,11 +6419,11 @@
    "examQuestionIds": [
     "32-122"
    ],
-   "sourceVersion": "shinkyuu-db@ee647cd+dirty",
+   "sourceVersion": "shinkyuu-db@d090183",
    "verifiedStatus": "JAPAN_VERIFIED",
    "sourceType": "acupoint_source_records",
    "relatedDbUrl": "https://shinkyuu-db.pages.dev/acupoints/bl47",
-   "updatedAt": "2026-10-12T20:53:05+09:00",
+   "updatedAt": "2026-10-22T14:06:51+09:00",
    "publicationAllowed": true,
    "warningNotes": [
     "読みは出典未確認のため書き出していない"
@@ -6451,11 +6451,11 @@
    "examRounds": [],
    "examQuestionCount": 0,
    "examQuestionIds": [],
-   "sourceVersion": "shinkyuu-db@ee647cd+dirty",
+   "sourceVersion": "shinkyuu-db@d090183",
    "verifiedStatus": "JAPAN_VERIFIED",
    "sourceType": "acupoint_source_records",
    "relatedDbUrl": "https://shinkyuu-db.pages.dev/acupoints/bl48",
-   "updatedAt": "2026-10-12T20:53:05+09:00",
+   "updatedAt": "2026-10-22T14:06:51+09:00",
    "publicationAllowed": true,
    "warningNotes": [
     "読みは出典未確認のため書き出していない"
@@ -6483,11 +6483,11 @@
    "examRounds": [],
    "examQuestionCount": 0,
    "examQuestionIds": [],
-   "sourceVersion": "shinkyuu-db@ee647cd+dirty",
+   "sourceVersion": "shinkyuu-db@d090183",
    "verifiedStatus": "NOT_APPLICABLE",
    "sourceType": "acupoint_source_records",
    "relatedDbUrl": "https://shinkyuu-db.pages.dev/acupoints/bl49",
-   "updatedAt": "2026-10-12T20:53:05+09:00",
+   "updatedAt": "2026-10-22T14:06:51+09:00",
    "publicationAllowed": false,
    "warningNotes": [
     "名称が日本の資料で確認できていない。記事では WHO コードで書くか、扱わない",
@@ -6516,11 +6516,11 @@
    "examRounds": [],
    "examQuestionCount": 0,
    "examQuestionIds": [],
-   "sourceVersion": "shinkyuu-db@ee647cd+dirty",
+   "sourceVersion": "shinkyuu-db@d090183",
    "verifiedStatus": "NOT_APPLICABLE",
    "sourceType": "acupoint_source_records",
    "relatedDbUrl": "https://shinkyuu-db.pages.dev/acupoints/bl50",
-   "updatedAt": "2026-10-12T20:53:05+09:00",
+   "updatedAt": "2026-10-22T14:06:51+09:00",
    "publicationAllowed": false,
    "warningNotes": [
     "名称が日本の資料で確認できていない。記事では WHO コードで書くか、扱わない",
@@ -6553,11 +6553,11 @@
    "examQuestionIds": [
     "31-125"
    ],
-   "sourceVersion": "shinkyuu-db@ee647cd+dirty",
+   "sourceVersion": "shinkyuu-db@d090183",
    "verifiedStatus": "JAPAN_VERIFIED",
    "sourceType": "acupoint_source_records",
    "relatedDbUrl": "https://shinkyuu-db.pages.dev/acupoints/bl51",
-   "updatedAt": "2026-10-12T20:53:05+09:00",
+   "updatedAt": "2026-10-22T14:06:51+09:00",
    "publicationAllowed": true,
    "warningNotes": [
     "読みは出典未確認のため書き出していない"
@@ -6589,11 +6589,11 @@
    "examQuestionIds": [
     "33-117"
    ],
-   "sourceVersion": "shinkyuu-db@ee647cd+dirty",
+   "sourceVersion": "shinkyuu-db@d090183",
    "verifiedStatus": "JAPAN_VERIFIED",
    "sourceType": "acupoint_source_records",
    "relatedDbUrl": "https://shinkyuu-db.pages.dev/acupoints/bl52",
-   "updatedAt": "2026-10-12T20:53:05+09:00",
+   "updatedAt": "2026-10-22T14:06:51+09:00",
    "publicationAllowed": true,
    "warningNotes": [
     "読みは出典未確認のため書き出していない"
@@ -6627,11 +6627,11 @@
     "30-158",
     "31-118"
    ],
-   "sourceVersion": "shinkyuu-db@ee647cd+dirty",
+   "sourceVersion": "shinkyuu-db@d090183",
    "verifiedStatus": "JAPAN_VERIFIED",
    "sourceType": "acupoint_source_records",
    "relatedDbUrl": "https://shinkyuu-db.pages.dev/acupoints/bl53",
-   "updatedAt": "2026-10-12T20:53:05+09:00",
+   "updatedAt": "2026-10-22T14:06:51+09:00",
    "publicationAllowed": true,
    "warningNotes": [
     "読みは出典未確認のため書き出していない"
@@ -6659,11 +6659,11 @@
    "examRounds": [],
    "examQuestionCount": 0,
    "examQuestionIds": [],
-   "sourceVersion": "shinkyuu-db@ee647cd+dirty",
+   "sourceVersion": "shinkyuu-db@d090183",
    "verifiedStatus": "JAPAN_VERIFIED",
    "sourceType": "acupoint_source_records",
    "relatedDbUrl": "https://shinkyuu-db.pages.dev/acupoints/bl54",
-   "updatedAt": "2026-10-12T20:53:05+09:00",
+   "updatedAt": "2026-10-22T14:06:51+09:00",
    "publicationAllowed": true,
    "warningNotes": [
     "読みは出典未確認のため書き出していない"
@@ -6691,11 +6691,11 @@
    "examRounds": [],
    "examQuestionCount": 0,
    "examQuestionIds": [],
-   "sourceVersion": "shinkyuu-db@ee647cd+dirty",
+   "sourceVersion": "shinkyuu-db@d090183",
    "verifiedStatus": "JAPAN_VERIFIED",
    "sourceType": "acupoint_source_records",
    "relatedDbUrl": "https://shinkyuu-db.pages.dev/acupoints/bl55",
-   "updatedAt": "2026-10-12T20:53:05+09:00",
+   "updatedAt": "2026-10-22T14:06:51+09:00",
    "publicationAllowed": true,
    "warningNotes": [
     "読みは出典未確認のため書き出していない"
@@ -6723,11 +6723,11 @@
    "examRounds": [],
    "examQuestionCount": 0,
    "examQuestionIds": [],
-   "sourceVersion": "shinkyuu-db@ee647cd+dirty",
+   "sourceVersion": "shinkyuu-db@d090183",
    "verifiedStatus": "JAPAN_VERIFIED",
    "sourceType": "acupoint_source_records",
    "relatedDbUrl": "https://shinkyuu-db.pages.dev/acupoints/bl56",
-   "updatedAt": "2026-10-12T20:53:05+09:00",
+   "updatedAt": "2026-10-22T14:06:51+09:00",
    "publicationAllowed": true,
    "warningNotes": [
     "読みは出典未確認のため書き出していない"
@@ -6755,11 +6755,11 @@
    "examRounds": [],
    "examQuestionCount": 0,
    "examQuestionIds": [],
-   "sourceVersion": "shinkyuu-db@ee647cd+dirty",
+   "sourceVersion": "shinkyuu-db@d090183",
    "verifiedStatus": "JAPAN_VERIFIED",
    "sourceType": "acupoint_source_records",
    "relatedDbUrl": "https://shinkyuu-db.pages.dev/acupoints/bl57",
-   "updatedAt": "2026-10-12T20:53:05+09:00",
+   "updatedAt": "2026-10-22T14:06:51+09:00",
    "publicationAllowed": true,
    "warningNotes": [
     "位置は WHO 基準でのみ確認。「WHO 基準では」と明記し、日本の教科書で確認済みと書かない",
@@ -6803,11 +6803,11 @@
     "31-139",
     "34-123"
    ],
-   "sourceVersion": "shinkyuu-db@ee647cd+dirty",
+   "sourceVersion": "shinkyuu-db@d090183",
    "verifiedStatus": "JAPAN_VERIFIED",
    "sourceType": "acupoint_source_records",
    "relatedDbUrl": "https://shinkyuu-db.pages.dev/acupoints/bl58",
-   "updatedAt": "2026-10-12T20:53:05+09:00",
+   "updatedAt": "2026-10-22T14:06:51+09:00",
    "publicationAllowed": true,
    "warningNotes": [
     "位置は WHO 基準でのみ確認。「WHO 基準では」と明記し、日本の教科書で確認済みと書かない",
@@ -6838,11 +6838,11 @@
    "examRounds": [],
    "examQuestionCount": 0,
    "examQuestionIds": [],
-   "sourceVersion": "shinkyuu-db@ee647cd+dirty",
+   "sourceVersion": "shinkyuu-db@d090183",
    "verifiedStatus": "JAPAN_VERIFIED",
    "sourceType": "acupoint_source_records",
    "relatedDbUrl": "https://shinkyuu-db.pages.dev/acupoints/bl59",
-   "updatedAt": "2026-10-12T20:53:05+09:00",
+   "updatedAt": "2026-10-22T14:06:51+09:00",
    "publicationAllowed": true,
    "warningNotes": [
     "読みは出典未確認のため書き出していない"
@@ -6880,11 +6880,11 @@
    "examQuestionIds": [
     "34-123"
    ],
-   "sourceVersion": "shinkyuu-db@ee647cd+dirty",
+   "sourceVersion": "shinkyuu-db@d090183",
    "verifiedStatus": "JAPAN_VERIFIED",
    "sourceType": "acupoint_source_records",
    "relatedDbUrl": "https://shinkyuu-db.pages.dev/acupoints/bl60",
-   "updatedAt": "2026-10-12T20:53:05+09:00",
+   "updatedAt": "2026-10-22T14:06:51+09:00",
    "publicationAllowed": true,
    "warningNotes": [
     "位置は WHO 基準でのみ確認。「WHO 基準では」と明記し、日本の教科書で確認済みと書かない",
@@ -6914,11 +6914,11 @@
    "examRounds": [],
    "examQuestionCount": 0,
    "examQuestionIds": [],
-   "sourceVersion": "shinkyuu-db@ee647cd+dirty",
+   "sourceVersion": "shinkyuu-db@d090183",
    "verifiedStatus": "NOT_APPLICABLE",
    "sourceType": "acupoint_source_records",
    "relatedDbUrl": "https://shinkyuu-db.pages.dev/acupoints/bl61",
-   "updatedAt": "2026-10-12T20:53:05+09:00",
+   "updatedAt": "2026-10-22T14:06:51+09:00",
    "publicationAllowed": false,
    "warningNotes": [
     "名称が日本の資料で確認できていない。記事では WHO コードで書くか、扱わない",
@@ -6957,11 +6957,11 @@
    "examQuestionIds": [
     "34-125"
    ],
-   "sourceVersion": "shinkyuu-db@ee647cd+dirty",
+   "sourceVersion": "shinkyuu-db@d090183",
    "verifiedStatus": "JAPAN_VERIFIED",
    "sourceType": "acupoint_source_records",
    "relatedDbUrl": "https://shinkyuu-db.pages.dev/acupoints/bl62",
-   "updatedAt": "2026-10-12T20:53:05+09:00",
+   "updatedAt": "2026-10-22T14:06:51+09:00",
    "publicationAllowed": true,
    "warningNotes": [
     "位置は WHO 基準でのみ確認。「WHO 基準では」と明記し、日本の教科書で確認済みと書かない",
@@ -6997,11 +6997,11 @@
    "examRounds": [],
    "examQuestionCount": 0,
    "examQuestionIds": [],
-   "sourceVersion": "shinkyuu-db@ee647cd+dirty",
+   "sourceVersion": "shinkyuu-db@d090183",
    "verifiedStatus": "JAPAN_VERIFIED",
    "sourceType": "acupoint_source_records",
    "relatedDbUrl": "https://shinkyuu-db.pages.dev/acupoints/bl63",
-   "updatedAt": "2026-10-12T20:53:05+09:00",
+   "updatedAt": "2026-10-22T14:06:51+09:00",
    "publicationAllowed": true,
    "warningNotes": [
     "位置は WHO 基準でのみ確認。「WHO 基準では」と明記し、日本の教科書で確認済みと書かない",
@@ -7037,11 +7037,11 @@
    "examRounds": [],
    "examQuestionCount": 0,
    "examQuestionIds": [],
-   "sourceVersion": "shinkyuu-db@ee647cd+dirty",
+   "sourceVersion": "shinkyuu-db@d090183",
    "verifiedStatus": "JAPAN_VERIFIED",
    "sourceType": "acupoint_source_records",
    "relatedDbUrl": "https://shinkyuu-db.pages.dev/acupoints/bl64",
-   "updatedAt": "2026-10-12T20:53:05+09:00",
+   "updatedAt": "2026-10-22T14:06:51+09:00",
    "publicationAllowed": true,
    "warningNotes": [
     "位置は WHO 基準でのみ確認。「WHO 基準では」と明記し、日本の教科書で確認済みと書かない",
@@ -7077,11 +7077,11 @@
    "examRounds": [],
    "examQuestionCount": 0,
    "examQuestionIds": [],
-   "sourceVersion": "shinkyuu-db@ee647cd+dirty",
+   "sourceVersion": "shinkyuu-db@d090183",
    "verifiedStatus": "JAPAN_VERIFIED",
    "sourceType": "acupoint_source_records",
    "relatedDbUrl": "https://shinkyuu-db.pages.dev/acupoints/bl65",
-   "updatedAt": "2026-10-12T20:53:05+09:00",
+   "updatedAt": "2026-10-22T14:06:51+09:00",
    "publicationAllowed": true,
    "warningNotes": [
     "位置は WHO 基準でのみ確認。「WHO 基準では」と明記し、日本の教科書で確認済みと書かない",
@@ -7115,11 +7115,11 @@
    "examQuestionIds": [
     "30-119"
    ],
-   "sourceVersion": "shinkyuu-db@ee647cd+dirty",
+   "sourceVersion": "shinkyuu-db@d090183",
    "verifiedStatus": "JAPAN_VERIFIED",
    "sourceType": "acupoint_source_records",
    "relatedDbUrl": "https://shinkyuu-db.pages.dev/acupoints/bl66",
-   "updatedAt": "2026-10-12T20:53:05+09:00",
+   "updatedAt": "2026-10-22T14:06:51+09:00",
    "publicationAllowed": true,
    "warningNotes": [
     "読みは出典未確認のため書き出していない"
@@ -7157,11 +7157,11 @@
    "examQuestionIds": [
     "33-149"
    ],
-   "sourceVersion": "shinkyuu-db@ee647cd+dirty",
+   "sourceVersion": "shinkyuu-db@d090183",
    "verifiedStatus": "JAPAN_VERIFIED",
    "sourceType": "acupoint_source_records",
    "relatedDbUrl": "https://shinkyuu-db.pages.dev/acupoints/bl67",
-   "updatedAt": "2026-10-12T20:53:05+09:00",
+   "updatedAt": "2026-10-22T14:06:51+09:00",
    "publicationAllowed": true,
    "warningNotes": [
     "位置は WHO 基準でのみ確認。「WHO 基準では」と明記し、日本の教科書で確認済みと書かない",
@@ -7201,11 +7201,11 @@
    "examQuestionIds": [
     "31-107"
    ],
-   "sourceVersion": "shinkyuu-db@ee647cd+dirty",
+   "sourceVersion": "shinkyuu-db@d090183",
    "verifiedStatus": "JAPAN_VERIFIED",
    "sourceType": "acupoint_source_records",
    "relatedDbUrl": "https://shinkyuu-db.pages.dev/acupoints/ki1",
-   "updatedAt": "2026-10-12T20:53:05+09:00",
+   "updatedAt": "2026-10-22T14:06:51+09:00",
    "publicationAllowed": true,
    "warningNotes": [
     "位置は WHO 基準でのみ確認。「WHO 基準では」と明記し、日本の教科書で確認済みと書かない",
@@ -7241,11 +7241,11 @@
    "examRounds": [],
    "examQuestionCount": 0,
    "examQuestionIds": [],
-   "sourceVersion": "shinkyuu-db@ee647cd+dirty",
+   "sourceVersion": "shinkyuu-db@d090183",
    "verifiedStatus": "JAPAN_VERIFIED",
    "sourceType": "acupoint_source_records",
    "relatedDbUrl": "https://shinkyuu-db.pages.dev/acupoints/ki2",
-   "updatedAt": "2026-10-12T20:53:05+09:00",
+   "updatedAt": "2026-10-22T14:06:51+09:00",
    "publicationAllowed": true,
    "warningNotes": [
     "位置は WHO 基準でのみ確認。「WHO 基準では」と明記し、日本の教科書で確認済みと書かない",
@@ -7292,11 +7292,11 @@
     "29-150",
     "31-142"
    ],
-   "sourceVersion": "shinkyuu-db@ee647cd+dirty",
+   "sourceVersion": "shinkyuu-db@d090183",
    "verifiedStatus": "JAPAN_VERIFIED",
    "sourceType": "acupoint_source_records",
    "relatedDbUrl": "https://shinkyuu-db.pages.dev/acupoints/ki3",
-   "updatedAt": "2026-10-12T20:53:05+09:00",
+   "updatedAt": "2026-10-22T14:06:51+09:00",
    "publicationAllowed": true,
    "warningNotes": [
     "位置は WHO 基準でのみ確認。「WHO 基準では」と明記し、日本の教科書で確認済みと書かない",
@@ -7332,11 +7332,11 @@
    "examRounds": [],
    "examQuestionCount": 0,
    "examQuestionIds": [],
-   "sourceVersion": "shinkyuu-db@ee647cd+dirty",
+   "sourceVersion": "shinkyuu-db@d090183",
    "verifiedStatus": "JAPAN_VERIFIED",
    "sourceType": "acupoint_source_records",
    "relatedDbUrl": "https://shinkyuu-db.pages.dev/acupoints/ki4",
-   "updatedAt": "2026-10-12T20:53:05+09:00",
+   "updatedAt": "2026-10-22T14:06:51+09:00",
    "publicationAllowed": true,
    "warningNotes": [
     "位置は WHO 基準でのみ確認。「WHO 基準では」と明記し、日本の教科書で確認済みと書かない",
@@ -7372,11 +7372,11 @@
    "examRounds": [],
    "examQuestionCount": 0,
    "examQuestionIds": [],
-   "sourceVersion": "shinkyuu-db@ee647cd+dirty",
+   "sourceVersion": "shinkyuu-db@d090183",
    "verifiedStatus": "JAPAN_VERIFIED",
    "sourceType": "acupoint_source_records",
    "relatedDbUrl": "https://shinkyuu-db.pages.dev/acupoints/ki5",
-   "updatedAt": "2026-10-12T20:53:05+09:00",
+   "updatedAt": "2026-10-22T14:06:51+09:00",
    "publicationAllowed": true,
    "warningNotes": [
     "位置は WHO 基準でのみ確認。「WHO 基準では」と明記し、日本の教科書で確認済みと書かない",
@@ -7416,11 +7416,11 @@
    "examQuestionIds": [
     "31-149"
    ],
-   "sourceVersion": "shinkyuu-db@ee647cd+dirty",
+   "sourceVersion": "shinkyuu-db@d090183",
    "verifiedStatus": "JAPAN_VERIFIED",
    "sourceType": "acupoint_source_records",
    "relatedDbUrl": "https://shinkyuu-db.pages.dev/acupoints/ki6",
-   "updatedAt": "2026-10-12T20:53:05+09:00",
+   "updatedAt": "2026-10-22T14:06:51+09:00",
    "publicationAllowed": true,
    "warningNotes": [
     "位置は WHO 基準でのみ確認。「WHO 基準では」と明記し、日本の教科書で確認済みと書かない",
@@ -7463,11 +7463,11 @@
     "33-118",
     "33-148"
    ],
-   "sourceVersion": "shinkyuu-db@ee647cd+dirty",
+   "sourceVersion": "shinkyuu-db@d090183",
    "verifiedStatus": "JAPAN_VERIFIED",
    "sourceType": "acupoint_source_records",
    "relatedDbUrl": "https://shinkyuu-db.pages.dev/acupoints/ki7",
-   "updatedAt": "2026-10-12T20:53:05+09:00",
+   "updatedAt": "2026-10-22T14:06:51+09:00",
    "publicationAllowed": true,
    "warningNotes": [
     "位置は WHO 基準でのみ確認。「WHO 基準では」と明記し、日本の教科書で確認済みと書かない",
@@ -7501,11 +7501,11 @@
    "examQuestionIds": [
     "33-118"
    ],
-   "sourceVersion": "shinkyuu-db@ee647cd+dirty",
+   "sourceVersion": "shinkyuu-db@d090183",
    "verifiedStatus": "JAPAN_VERIFIED",
    "sourceType": "acupoint_source_records",
    "relatedDbUrl": "https://shinkyuu-db.pages.dev/acupoints/ki8",
-   "updatedAt": "2026-10-12T20:53:05+09:00",
+   "updatedAt": "2026-10-22T14:06:51+09:00",
    "publicationAllowed": true,
    "warningNotes": [
     "読みは出典未確認のため書き出していない"
@@ -7533,11 +7533,11 @@
    "examRounds": [],
    "examQuestionCount": 0,
    "examQuestionIds": [],
-   "sourceVersion": "shinkyuu-db@ee647cd+dirty",
+   "sourceVersion": "shinkyuu-db@d090183",
    "verifiedStatus": "JAPAN_VERIFIED",
    "sourceType": "acupoint_source_records",
    "relatedDbUrl": "https://shinkyuu-db.pages.dev/acupoints/ki9",
-   "updatedAt": "2026-10-12T20:53:05+09:00",
+   "updatedAt": "2026-10-22T14:06:51+09:00",
    "publicationAllowed": true,
    "warningNotes": [
     "読みは出典未確認のため書き出していない"
@@ -7577,11 +7577,11 @@
     "32-117",
     "34-120"
    ],
-   "sourceVersion": "shinkyuu-db@ee647cd+dirty",
+   "sourceVersion": "shinkyuu-db@d090183",
    "verifiedStatus": "JAPAN_VERIFIED",
    "sourceType": "acupoint_source_records",
    "relatedDbUrl": "https://shinkyuu-db.pages.dev/acupoints/ki10",
-   "updatedAt": "2026-10-12T20:53:05+09:00",
+   "updatedAt": "2026-10-22T14:06:51+09:00",
    "publicationAllowed": true,
    "warningNotes": [
     "一部の要穴分類は未確認（推論のみ等）。値を出していない",
@@ -7610,11 +7610,11 @@
    "examRounds": [],
    "examQuestionCount": 0,
    "examQuestionIds": [],
-   "sourceVersion": "shinkyuu-db@ee647cd+dirty",
+   "sourceVersion": "shinkyuu-db@d090183",
    "verifiedStatus": "NOT_APPLICABLE",
    "sourceType": "acupoint_source_records",
    "relatedDbUrl": "https://shinkyuu-db.pages.dev/acupoints/ki11",
-   "updatedAt": "2026-10-12T20:53:05+09:00",
+   "updatedAt": "2026-10-22T14:06:51+09:00",
    "publicationAllowed": false,
    "warningNotes": [
     "名称が日本の資料で確認できていない。記事では WHO コードで書くか、扱わない",
@@ -7643,11 +7643,11 @@
    "examRounds": [],
    "examQuestionCount": 0,
    "examQuestionIds": [],
-   "sourceVersion": "shinkyuu-db@ee647cd+dirty",
+   "sourceVersion": "shinkyuu-db@d090183",
    "verifiedStatus": "NOT_APPLICABLE",
    "sourceType": "acupoint_source_records",
    "relatedDbUrl": "https://shinkyuu-db.pages.dev/acupoints/ki12",
-   "updatedAt": "2026-10-12T20:53:05+09:00",
+   "updatedAt": "2026-10-22T14:06:51+09:00",
    "publicationAllowed": false,
    "warningNotes": [
     "名称が日本の資料で確認できていない。記事では WHO コードで書くか、扱わない",
@@ -7676,11 +7676,11 @@
    "examRounds": [],
    "examQuestionCount": 0,
    "examQuestionIds": [],
-   "sourceVersion": "shinkyuu-db@ee647cd+dirty",
+   "sourceVersion": "shinkyuu-db@d090183",
    "verifiedStatus": "NOT_APPLICABLE",
    "sourceType": "acupoint_source_records",
    "relatedDbUrl": "https://shinkyuu-db.pages.dev/acupoints/ki13",
-   "updatedAt": "2026-10-12T20:53:05+09:00",
+   "updatedAt": "2026-10-22T14:06:51+09:00",
    "publicationAllowed": false,
    "warningNotes": [
     "名称が日本の資料で確認できていない。記事では WHO コードで書くか、扱わない",
@@ -7709,11 +7709,11 @@
    "examRounds": [],
    "examQuestionCount": 0,
    "examQuestionIds": [],
-   "sourceVersion": "shinkyuu-db@ee647cd+dirty",
+   "sourceVersion": "shinkyuu-db@d090183",
    "verifiedStatus": "NOT_APPLICABLE",
    "sourceType": "acupoint_source_records",
    "relatedDbUrl": "https://shinkyuu-db.pages.dev/acupoints/ki14",
-   "updatedAt": "2026-10-12T20:53:05+09:00",
+   "updatedAt": "2026-10-22T14:06:51+09:00",
    "publicationAllowed": false,
    "warningNotes": [
     "名称が日本の資料で確認できていない。記事では WHO コードで書くか、扱わない",
@@ -7742,11 +7742,11 @@
    "examRounds": [],
    "examQuestionCount": 0,
    "examQuestionIds": [],
-   "sourceVersion": "shinkyuu-db@ee647cd+dirty",
+   "sourceVersion": "shinkyuu-db@d090183",
    "verifiedStatus": "NOT_APPLICABLE",
    "sourceType": "acupoint_source_records",
    "relatedDbUrl": "https://shinkyuu-db.pages.dev/acupoints/ki15",
-   "updatedAt": "2026-10-12T20:53:05+09:00",
+   "updatedAt": "2026-10-22T14:06:51+09:00",
    "publicationAllowed": false,
    "warningNotes": [
     "名称が日本の資料で確認できていない。記事では WHO コードで書くか、扱わない",
@@ -7775,11 +7775,11 @@
    "examRounds": [],
    "examQuestionCount": 0,
    "examQuestionIds": [],
-   "sourceVersion": "shinkyuu-db@ee647cd+dirty",
+   "sourceVersion": "shinkyuu-db@d090183",
    "verifiedStatus": "JAPAN_VERIFIED",
    "sourceType": "acupoint_source_records",
    "relatedDbUrl": "https://shinkyuu-db.pages.dev/acupoints/ki16",
-   "updatedAt": "2026-10-12T20:53:05+09:00",
+   "updatedAt": "2026-10-22T14:06:51+09:00",
    "publicationAllowed": true,
    "warningNotes": [
     "読みは出典未確認のため書き出していない"
@@ -7807,11 +7807,11 @@
    "examRounds": [],
    "examQuestionCount": 0,
    "examQuestionIds": [],
-   "sourceVersion": "shinkyuu-db@ee647cd+dirty",
+   "sourceVersion": "shinkyuu-db@d090183",
    "verifiedStatus": "NOT_APPLICABLE",
    "sourceType": "acupoint_source_records",
    "relatedDbUrl": "https://shinkyuu-db.pages.dev/acupoints/ki17",
-   "updatedAt": "2026-10-12T20:53:05+09:00",
+   "updatedAt": "2026-10-22T14:06:51+09:00",
    "publicationAllowed": false,
    "warningNotes": [
     "名称が日本の資料で確認できていない。記事では WHO コードで書くか、扱わない",
@@ -7840,11 +7840,11 @@
    "examRounds": [],
    "examQuestionCount": 0,
    "examQuestionIds": [],
-   "sourceVersion": "shinkyuu-db@ee647cd+dirty",
+   "sourceVersion": "shinkyuu-db@d090183",
    "verifiedStatus": "NOT_APPLICABLE",
    "sourceType": "acupoint_source_records",
    "relatedDbUrl": "https://shinkyuu-db.pages.dev/acupoints/ki18",
-   "updatedAt": "2026-10-12T20:53:05+09:00",
+   "updatedAt": "2026-10-22T14:06:51+09:00",
    "publicationAllowed": false,
    "warningNotes": [
     "名称が日本の資料で確認できていない。記事では WHO コードで書くか、扱わない",
@@ -7877,11 +7877,11 @@
    "examQuestionIds": [
     "32-113"
    ],
-   "sourceVersion": "shinkyuu-db@ee647cd+dirty",
+   "sourceVersion": "shinkyuu-db@d090183",
    "verifiedStatus": "JAPAN_VERIFIED",
    "sourceType": "acupoint_source_records",
    "relatedDbUrl": "https://shinkyuu-db.pages.dev/acupoints/ki19",
-   "updatedAt": "2026-10-12T20:53:05+09:00",
+   "updatedAt": "2026-10-22T14:06:51+09:00",
    "publicationAllowed": true,
    "warningNotes": [
     "読みは出典未確認のため書き出していない"
@@ -7913,11 +7913,11 @@
    "examQuestionIds": [
     "30-119"
    ],
-   "sourceVersion": "shinkyuu-db@ee647cd+dirty",
+   "sourceVersion": "shinkyuu-db@d090183",
    "verifiedStatus": "JAPAN_VERIFIED",
    "sourceType": "acupoint_source_records",
    "relatedDbUrl": "https://shinkyuu-db.pages.dev/acupoints/ki20",
-   "updatedAt": "2026-10-12T20:53:05+09:00",
+   "updatedAt": "2026-10-22T14:06:51+09:00",
    "publicationAllowed": true,
    "warningNotes": [
     "読みは出典未確認のため書き出していない"
@@ -7945,11 +7945,11 @@
    "examRounds": [],
    "examQuestionCount": 0,
    "examQuestionIds": [],
-   "sourceVersion": "shinkyuu-db@ee647cd+dirty",
+   "sourceVersion": "shinkyuu-db@d090183",
    "verifiedStatus": "JAPAN_VERIFIED",
    "sourceType": "acupoint_source_records",
    "relatedDbUrl": "https://shinkyuu-db.pages.dev/acupoints/ki21",
-   "updatedAt": "2026-10-12T20:53:05+09:00",
+   "updatedAt": "2026-10-22T14:06:51+09:00",
    "publicationAllowed": true,
    "warningNotes": [
     "読みは出典未確認のため書き出していない"
@@ -7977,11 +7977,11 @@
    "examRounds": [],
    "examQuestionCount": 0,
    "examQuestionIds": [],
-   "sourceVersion": "shinkyuu-db@ee647cd+dirty",
+   "sourceVersion": "shinkyuu-db@d090183",
    "verifiedStatus": "NOT_APPLICABLE",
    "sourceType": "acupoint_source_records",
    "relatedDbUrl": "https://shinkyuu-db.pages.dev/acupoints/ki22",
-   "updatedAt": "2026-10-12T20:53:05+09:00",
+   "updatedAt": "2026-10-22T14:06:51+09:00",
    "publicationAllowed": false,
    "warningNotes": [
     "名称が日本の資料で確認できていない。記事では WHO コードで書くか、扱わない",
@@ -8010,11 +8010,11 @@
    "examRounds": [],
    "examQuestionCount": 0,
    "examQuestionIds": [],
-   "sourceVersion": "shinkyuu-db@ee647cd+dirty",
+   "sourceVersion": "shinkyuu-db@d090183",
    "verifiedStatus": "NOT_APPLICABLE",
    "sourceType": "acupoint_source_records",
    "relatedDbUrl": "https://shinkyuu-db.pages.dev/acupoints/ki23",
-   "updatedAt": "2026-10-12T20:53:05+09:00",
+   "updatedAt": "2026-10-22T14:06:51+09:00",
    "publicationAllowed": false,
    "warningNotes": [
     "名称が日本の資料で確認できていない。記事では WHO コードで書くか、扱わない",
@@ -8043,11 +8043,11 @@
    "examRounds": [],
    "examQuestionCount": 0,
    "examQuestionIds": [],
-   "sourceVersion": "shinkyuu-db@ee647cd+dirty",
+   "sourceVersion": "shinkyuu-db@d090183",
    "verifiedStatus": "NOT_APPLICABLE",
    "sourceType": "acupoint_source_records",
    "relatedDbUrl": "https://shinkyuu-db.pages.dev/acupoints/ki24",
-   "updatedAt": "2026-10-12T20:53:05+09:00",
+   "updatedAt": "2026-10-22T14:06:51+09:00",
    "publicationAllowed": false,
    "warningNotes": [
     "名称が日本の資料で確認できていない。記事では WHO コードで書くか、扱わない",
@@ -8076,11 +8076,11 @@
    "examRounds": [],
    "examQuestionCount": 0,
    "examQuestionIds": [],
-   "sourceVersion": "shinkyuu-db@ee647cd+dirty",
+   "sourceVersion": "shinkyuu-db@d090183",
    "verifiedStatus": "NOT_APPLICABLE",
    "sourceType": "acupoint_source_records",
    "relatedDbUrl": "https://shinkyuu-db.pages.dev/acupoints/ki25",
-   "updatedAt": "2026-10-12T20:53:05+09:00",
+   "updatedAt": "2026-10-22T14:06:51+09:00",
    "publicationAllowed": false,
    "warningNotes": [
     "名称が日本の資料で確認できていない。記事では WHO コードで書くか、扱わない",
@@ -8109,11 +8109,11 @@
    "examRounds": [],
    "examQuestionCount": 0,
    "examQuestionIds": [],
-   "sourceVersion": "shinkyuu-db@ee647cd+dirty",
+   "sourceVersion": "shinkyuu-db@d090183",
    "verifiedStatus": "NOT_APPLICABLE",
    "sourceType": "acupoint_source_records",
    "relatedDbUrl": "https://shinkyuu-db.pages.dev/acupoints/ki26",
-   "updatedAt": "2026-10-12T20:53:05+09:00",
+   "updatedAt": "2026-10-22T14:06:51+09:00",
    "publicationAllowed": false,
    "warningNotes": [
     "名称が日本の資料で確認できていない。記事では WHO コードで書くか、扱わない",
@@ -8146,11 +8146,11 @@
    "examQuestionIds": [
     "31-119"
    ],
-   "sourceVersion": "shinkyuu-db@ee647cd+dirty",
+   "sourceVersion": "shinkyuu-db@d090183",
    "verifiedStatus": "JAPAN_VERIFIED",
    "sourceType": "acupoint_source_records",
    "relatedDbUrl": "https://shinkyuu-db.pages.dev/acupoints/ki27",
-   "updatedAt": "2026-10-12T20:53:05+09:00",
+   "updatedAt": "2026-10-22T14:06:51+09:00",
    "publicationAllowed": true,
    "warningNotes": [
     "読みは出典未確認のため書き出していない"
@@ -8178,11 +8178,11 @@
    "examRounds": [],
    "examQuestionCount": 0,
    "examQuestionIds": [],
-   "sourceVersion": "shinkyuu-db@ee647cd+dirty",
+   "sourceVersion": "shinkyuu-db@d090183",
    "verifiedStatus": "JAPAN_VERIFIED",
    "sourceType": "acupoint_source_records",
    "relatedDbUrl": "https://shinkyuu-db.pages.dev/acupoints/pc1",
-   "updatedAt": "2026-10-12T20:53:05+09:00",
+   "updatedAt": "2026-10-22T14:06:51+09:00",
    "publicationAllowed": true,
    "warningNotes": [
     "読みは出典未確認のため書き出していない"
@@ -8216,11 +8216,11 @@
     "32-118",
     "34-118"
    ],
-   "sourceVersion": "shinkyuu-db@ee647cd+dirty",
+   "sourceVersion": "shinkyuu-db@d090183",
    "verifiedStatus": "JAPAN_VERIFIED",
    "sourceType": "acupoint_source_records",
    "relatedDbUrl": "https://shinkyuu-db.pages.dev/acupoints/pc2",
-   "updatedAt": "2026-10-12T20:53:05+09:00",
+   "updatedAt": "2026-10-22T14:06:51+09:00",
    "publicationAllowed": true,
    "warningNotes": [
     "読みは出典未確認のため書き出していない"
@@ -8254,11 +8254,11 @@
    "examRounds": [],
    "examQuestionCount": 0,
    "examQuestionIds": [],
-   "sourceVersion": "shinkyuu-db@ee647cd+dirty",
+   "sourceVersion": "shinkyuu-db@d090183",
    "verifiedStatus": "JAPAN_VERIFIED",
    "sourceType": "acupoint_source_records",
    "relatedDbUrl": "https://shinkyuu-db.pages.dev/acupoints/pc3",
-   "updatedAt": "2026-10-12T20:53:05+09:00",
+   "updatedAt": "2026-10-22T14:06:51+09:00",
    "publicationAllowed": true,
    "warningNotes": [
     "位置は WHO 基準でのみ確認。「WHO 基準では」と明記し、日本の教科書で確認済みと書かない",
@@ -8296,11 +8296,11 @@
    "examRounds": [],
    "examQuestionCount": 0,
    "examQuestionIds": [],
-   "sourceVersion": "shinkyuu-db@ee647cd+dirty",
+   "sourceVersion": "shinkyuu-db@d090183",
    "verifiedStatus": "JAPAN_VERIFIED",
    "sourceType": "acupoint_source_records",
    "relatedDbUrl": "https://shinkyuu-db.pages.dev/acupoints/pc4",
-   "updatedAt": "2026-10-12T20:53:05+09:00",
+   "updatedAt": "2026-10-22T14:06:51+09:00",
    "publicationAllowed": true,
    "warningNotes": [
     "位置は WHO 基準でのみ確認。「WHO 基準では」と明記し、日本の教科書で確認済みと書かない",
@@ -8345,11 +8345,11 @@
     "29-123",
     "30-145"
    ],
-   "sourceVersion": "shinkyuu-db@ee647cd+dirty",
+   "sourceVersion": "shinkyuu-db@d090183",
    "verifiedStatus": "JAPAN_VERIFIED",
    "sourceType": "acupoint_source_records",
    "relatedDbUrl": "https://shinkyuu-db.pages.dev/acupoints/pc5",
-   "updatedAt": "2026-10-12T20:53:05+09:00",
+   "updatedAt": "2026-10-22T14:06:51+09:00",
    "publicationAllowed": true,
    "warningNotes": [
     "位置は WHO 基準でのみ確認。「WHO 基準では」と明記し、日本の教科書で確認済みと書かない",
@@ -8399,11 +8399,11 @@
     "29-139",
     "30-132"
    ],
-   "sourceVersion": "shinkyuu-db@ee647cd+dirty",
+   "sourceVersion": "shinkyuu-db@d090183",
    "verifiedStatus": "JAPAN_VERIFIED",
    "sourceType": "acupoint_source_records",
    "relatedDbUrl": "https://shinkyuu-db.pages.dev/acupoints/pc6",
-   "updatedAt": "2026-10-12T20:53:05+09:00",
+   "updatedAt": "2026-10-22T14:06:51+09:00",
    "publicationAllowed": true,
    "warningNotes": [
     "位置は WHO 基準でのみ確認。「WHO 基準では」と明記し、日本の教科書で確認済みと書かない",
@@ -8451,11 +8451,11 @@
     "33-136",
     "34-145"
    ],
-   "sourceVersion": "shinkyuu-db@ee647cd+dirty",
+   "sourceVersion": "shinkyuu-db@d090183",
    "verifiedStatus": "JAPAN_VERIFIED",
    "sourceType": "acupoint_source_records",
    "relatedDbUrl": "https://shinkyuu-db.pages.dev/acupoints/pc7",
-   "updatedAt": "2026-10-12T20:53:05+09:00",
+   "updatedAt": "2026-10-22T14:06:51+09:00",
    "publicationAllowed": true,
    "warningNotes": [
     "位置は WHO 基準でのみ確認。「WHO 基準では」と明記し、日本の教科書で確認済みと書かない",
@@ -8500,11 +8500,11 @@
     "33-136",
     "34-142"
    ],
-   "sourceVersion": "shinkyuu-db@ee647cd+dirty",
+   "sourceVersion": "shinkyuu-db@d090183",
    "verifiedStatus": "JAPAN_VERIFIED",
    "sourceType": "acupoint_source_records",
    "relatedDbUrl": "https://shinkyuu-db.pages.dev/acupoints/pc8",
-   "updatedAt": "2026-10-12T20:53:05+09:00",
+   "updatedAt": "2026-10-22T14:06:51+09:00",
    "publicationAllowed": true,
    "warningNotes": [
     "位置は WHO 基準でのみ確認。「WHO 基準では」と明記し、日本の教科書で確認済みと書かない",
@@ -8544,11 +8544,11 @@
    "examQuestionIds": [
     "31-107"
    ],
-   "sourceVersion": "shinkyuu-db@ee647cd+dirty",
+   "sourceVersion": "shinkyuu-db@d090183",
    "verifiedStatus": "JAPAN_VERIFIED",
    "sourceType": "acupoint_source_records",
    "relatedDbUrl": "https://shinkyuu-db.pages.dev/acupoints/pc9",
-   "updatedAt": "2026-10-12T20:53:05+09:00",
+   "updatedAt": "2026-10-22T14:06:51+09:00",
    "publicationAllowed": true,
    "warningNotes": [
     "位置は WHO 基準でのみ確認。「WHO 基準では」と明記し、日本の教科書で確認済みと書かない",
@@ -8582,11 +8582,11 @@
    "examQuestionIds": [
     "29-107"
    ],
-   "sourceVersion": "shinkyuu-db@ee647cd+dirty",
+   "sourceVersion": "shinkyuu-db@d090183",
    "verifiedStatus": "JAPAN_VERIFIED",
    "sourceType": "acupoint_source_records",
    "relatedDbUrl": "https://shinkyuu-db.pages.dev/acupoints/te1",
-   "updatedAt": "2026-10-12T20:53:05+09:00",
+   "updatedAt": "2026-10-22T14:06:51+09:00",
    "publicationAllowed": true,
    "warningNotes": [
     "読みは出典未確認のため書き出していない"
@@ -8618,11 +8618,11 @@
    "examQuestionIds": [
     "30-150"
    ],
-   "sourceVersion": "shinkyuu-db@ee647cd+dirty",
+   "sourceVersion": "shinkyuu-db@d090183",
    "verifiedStatus": "JAPAN_VERIFIED",
    "sourceType": "acupoint_source_records",
    "relatedDbUrl": "https://shinkyuu-db.pages.dev/acupoints/te2",
-   "updatedAt": "2026-10-12T20:53:05+09:00",
+   "updatedAt": "2026-10-22T14:06:51+09:00",
    "publicationAllowed": true,
    "warningNotes": [
     "読みは出典未確認のため書き出していない"
@@ -8660,11 +8660,11 @@
    "examQuestionIds": [
     "33-146"
    ],
-   "sourceVersion": "shinkyuu-db@ee647cd+dirty",
+   "sourceVersion": "shinkyuu-db@d090183",
    "verifiedStatus": "JAPAN_VERIFIED",
    "sourceType": "acupoint_source_records",
    "relatedDbUrl": "https://shinkyuu-db.pages.dev/acupoints/te3",
-   "updatedAt": "2026-10-12T20:53:05+09:00",
+   "updatedAt": "2026-10-22T14:06:51+09:00",
    "publicationAllowed": true,
    "warningNotes": [
     "位置は WHO 基準でのみ確認。「WHO 基準では」と明記し、日本の教科書で確認済みと書かない",
@@ -8704,11 +8704,11 @@
    "examQuestionIds": [
     "29-111"
    ],
-   "sourceVersion": "shinkyuu-db@ee647cd+dirty",
+   "sourceVersion": "shinkyuu-db@d090183",
    "verifiedStatus": "JAPAN_VERIFIED",
    "sourceType": "acupoint_source_records",
    "relatedDbUrl": "https://shinkyuu-db.pages.dev/acupoints/te4",
-   "updatedAt": "2026-10-12T20:53:05+09:00",
+   "updatedAt": "2026-10-22T14:06:51+09:00",
    "publicationAllowed": true,
    "warningNotes": [
     "位置は WHO 基準でのみ確認。「WHO 基準では」と明記し、日本の教科書で確認済みと書かない",
@@ -8754,11 +8754,11 @@
     "30-128",
     "34-145"
    ],
-   "sourceVersion": "shinkyuu-db@ee647cd+dirty",
+   "sourceVersion": "shinkyuu-db@d090183",
    "verifiedStatus": "JAPAN_VERIFIED",
    "sourceType": "acupoint_source_records",
    "relatedDbUrl": "https://shinkyuu-db.pages.dev/acupoints/te5",
-   "updatedAt": "2026-10-12T20:53:05+09:00",
+   "updatedAt": "2026-10-22T14:06:51+09:00",
    "publicationAllowed": true,
    "warningNotes": [
     "位置は WHO 基準でのみ確認。「WHO 基準では」と明記し、日本の教科書で確認済みと書かない",
@@ -8794,11 +8794,11 @@
    "examRounds": [],
    "examQuestionCount": 0,
    "examQuestionIds": [],
-   "sourceVersion": "shinkyuu-db@ee647cd+dirty",
+   "sourceVersion": "shinkyuu-db@d090183",
    "verifiedStatus": "JAPAN_VERIFIED",
    "sourceType": "acupoint_source_records",
    "relatedDbUrl": "https://shinkyuu-db.pages.dev/acupoints/te6",
-   "updatedAt": "2026-10-12T20:53:05+09:00",
+   "updatedAt": "2026-10-22T14:06:51+09:00",
    "publicationAllowed": true,
    "warningNotes": [
     "位置は WHO 基準でのみ確認。「WHO 基準では」と明記し、日本の教科書で確認済みと書かない",
@@ -8840,11 +8840,11 @@
     "29-120",
     "34-122"
    ],
-   "sourceVersion": "shinkyuu-db@ee647cd+dirty",
+   "sourceVersion": "shinkyuu-db@d090183",
    "verifiedStatus": "JAPAN_VERIFIED",
    "sourceType": "acupoint_source_records",
    "relatedDbUrl": "https://shinkyuu-db.pages.dev/acupoints/te7",
-   "updatedAt": "2026-10-12T20:53:05+09:00",
+   "updatedAt": "2026-10-22T14:06:51+09:00",
    "publicationAllowed": true,
    "warningNotes": [
     "位置は WHO 基準でのみ確認。「WHO 基準では」と明記し、日本の教科書で確認済みと書かない",
@@ -8874,11 +8874,11 @@
    "examRounds": [],
    "examQuestionCount": 0,
    "examQuestionIds": [],
-   "sourceVersion": "shinkyuu-db@ee647cd+dirty",
+   "sourceVersion": "shinkyuu-db@d090183",
    "verifiedStatus": "JAPAN_VERIFIED",
    "sourceType": "acupoint_source_records",
    "relatedDbUrl": "https://shinkyuu-db.pages.dev/acupoints/te8",
-   "updatedAt": "2026-10-12T20:53:05+09:00",
+   "updatedAt": "2026-10-22T14:06:51+09:00",
    "publicationAllowed": true,
    "warningNotes": [
     "読みは出典未確認のため書き出していない"
@@ -8906,11 +8906,11 @@
    "examRounds": [],
    "examQuestionCount": 0,
    "examQuestionIds": [],
-   "sourceVersion": "shinkyuu-db@ee647cd+dirty",
+   "sourceVersion": "shinkyuu-db@d090183",
    "verifiedStatus": "JAPAN_VERIFIED",
    "sourceType": "acupoint_source_records",
    "relatedDbUrl": "https://shinkyuu-db.pages.dev/acupoints/te9",
-   "updatedAt": "2026-10-12T20:53:05+09:00",
+   "updatedAt": "2026-10-22T14:06:51+09:00",
    "publicationAllowed": true,
    "warningNotes": [
     "読みは出典未確認のため書き出していない"
@@ -8944,11 +8944,11 @@
    "examRounds": [],
    "examQuestionCount": 0,
    "examQuestionIds": [],
-   "sourceVersion": "shinkyuu-db@ee647cd+dirty",
+   "sourceVersion": "shinkyuu-db@d090183",
    "verifiedStatus": "JAPAN_VERIFIED",
    "sourceType": "acupoint_source_records",
    "relatedDbUrl": "https://shinkyuu-db.pages.dev/acupoints/te10",
-   "updatedAt": "2026-10-12T20:53:05+09:00",
+   "updatedAt": "2026-10-22T14:06:51+09:00",
    "publicationAllowed": true,
    "warningNotes": [
     "位置は WHO 基準でのみ確認。「WHO 基準では」と明記し、日本の教科書で確認済みと書かない",
@@ -8978,11 +8978,11 @@
    "examRounds": [],
    "examQuestionCount": 0,
    "examQuestionIds": [],
-   "sourceVersion": "shinkyuu-db@ee647cd+dirty",
+   "sourceVersion": "shinkyuu-db@d090183",
    "verifiedStatus": "NOT_APPLICABLE",
    "sourceType": "acupoint_source_records",
    "relatedDbUrl": "https://shinkyuu-db.pages.dev/acupoints/te11",
-   "updatedAt": "2026-10-12T20:53:05+09:00",
+   "updatedAt": "2026-10-22T14:06:51+09:00",
    "publicationAllowed": false,
    "warningNotes": [
     "名称が日本の資料で確認できていない。記事では WHO コードで書くか、扱わない",
@@ -9017,11 +9017,11 @@
     "30-128",
     "31-116"
    ],
-   "sourceVersion": "shinkyuu-db@ee647cd+dirty",
+   "sourceVersion": "shinkyuu-db@d090183",
    "verifiedStatus": "JAPAN_VERIFIED",
    "sourceType": "acupoint_source_records",
    "relatedDbUrl": "https://shinkyuu-db.pages.dev/acupoints/te12",
-   "updatedAt": "2026-10-12T20:53:05+09:00",
+   "updatedAt": "2026-10-22T14:06:51+09:00",
    "publicationAllowed": true,
    "warningNotes": [
     "読みは出典未確認のため書き出していない"
@@ -9049,11 +9049,11 @@
    "examRounds": [],
    "examQuestionCount": 0,
    "examQuestionIds": [],
-   "sourceVersion": "shinkyuu-db@ee647cd+dirty",
+   "sourceVersion": "shinkyuu-db@d090183",
    "verifiedStatus": "JAPAN_VERIFIED",
    "sourceType": "acupoint_source_records",
    "relatedDbUrl": "https://shinkyuu-db.pages.dev/acupoints/te13",
-   "updatedAt": "2026-10-12T20:53:05+09:00",
+   "updatedAt": "2026-10-22T14:06:51+09:00",
    "publicationAllowed": true,
    "warningNotes": [
     "読みは出典未確認のため書き出していない"
@@ -9081,11 +9081,11 @@
    "examRounds": [],
    "examQuestionCount": 0,
    "examQuestionIds": [],
-   "sourceVersion": "shinkyuu-db@ee647cd+dirty",
+   "sourceVersion": "shinkyuu-db@d090183",
    "verifiedStatus": "JAPAN_VERIFIED",
    "sourceType": "acupoint_source_records",
    "relatedDbUrl": "https://shinkyuu-db.pages.dev/acupoints/te14",
-   "updatedAt": "2026-10-12T20:53:05+09:00",
+   "updatedAt": "2026-10-22T14:06:51+09:00",
    "publicationAllowed": true,
    "warningNotes": [
     "読みは出典未確認のため書き出していない"
@@ -9113,11 +9113,11 @@
    "examRounds": [],
    "examQuestionCount": 0,
    "examQuestionIds": [],
-   "sourceVersion": "shinkyuu-db@ee647cd+dirty",
+   "sourceVersion": "shinkyuu-db@d090183",
    "verifiedStatus": "JAPAN_VERIFIED",
    "sourceType": "acupoint_source_records",
    "relatedDbUrl": "https://shinkyuu-db.pages.dev/acupoints/te15",
-   "updatedAt": "2026-10-12T20:53:05+09:00",
+   "updatedAt": "2026-10-22T14:06:51+09:00",
    "publicationAllowed": true,
    "warningNotes": [
     "読みは出典未確認のため書き出していない"
@@ -9151,11 +9151,11 @@
     "29-112",
     "32-112"
    ],
-   "sourceVersion": "shinkyuu-db@ee647cd+dirty",
+   "sourceVersion": "shinkyuu-db@d090183",
    "verifiedStatus": "JAPAN_VERIFIED",
    "sourceType": "acupoint_source_records",
    "relatedDbUrl": "https://shinkyuu-db.pages.dev/acupoints/te16",
-   "updatedAt": "2026-10-12T20:53:05+09:00",
+   "updatedAt": "2026-10-22T14:06:51+09:00",
    "publicationAllowed": true,
    "warningNotes": [
     "読みは出典未確認のため書き出していない"
@@ -9187,11 +9187,11 @@
    "examQuestionIds": [
     "29-158"
    ],
-   "sourceVersion": "shinkyuu-db@ee647cd+dirty",
+   "sourceVersion": "shinkyuu-db@d090183",
    "verifiedStatus": "JAPAN_VERIFIED",
    "sourceType": "acupoint_source_records",
    "relatedDbUrl": "https://shinkyuu-db.pages.dev/acupoints/te17",
-   "updatedAt": "2026-10-12T20:53:05+09:00",
+   "updatedAt": "2026-10-22T14:06:51+09:00",
    "publicationAllowed": true,
    "warningNotes": [
     "位置は WHO 基準でのみ確認。「WHO 基準では」と明記し、日本の教科書で確認済みと書かない",
@@ -9224,11 +9224,11 @@
    "examQuestionIds": [
     "30-134"
    ],
-   "sourceVersion": "shinkyuu-db@ee647cd+dirty",
+   "sourceVersion": "shinkyuu-db@d090183",
    "verifiedStatus": "JAPAN_VERIFIED",
    "sourceType": "acupoint_source_records",
    "relatedDbUrl": "https://shinkyuu-db.pages.dev/acupoints/te18",
-   "updatedAt": "2026-10-12T20:53:05+09:00",
+   "updatedAt": "2026-10-22T14:06:51+09:00",
    "publicationAllowed": true,
    "warningNotes": [
     "読みは出典未確認のため書き出していない"
@@ -9256,11 +9256,11 @@
    "examRounds": [],
    "examQuestionCount": 0,
    "examQuestionIds": [],
-   "sourceVersion": "shinkyuu-db@ee647cd+dirty",
+   "sourceVersion": "shinkyuu-db@d090183",
    "verifiedStatus": "NOT_APPLICABLE",
    "sourceType": "acupoint_source_records",
    "relatedDbUrl": "https://shinkyuu-db.pages.dev/acupoints/te19",
-   "updatedAt": "2026-10-12T20:53:05+09:00",
+   "updatedAt": "2026-10-22T14:06:51+09:00",
    "publicationAllowed": false,
    "warningNotes": [
     "名称が日本の資料で確認できていない。記事では WHO コードで書くか、扱わない",
@@ -9289,11 +9289,11 @@
    "examRounds": [],
    "examQuestionCount": 0,
    "examQuestionIds": [],
-   "sourceVersion": "shinkyuu-db@ee647cd+dirty",
+   "sourceVersion": "shinkyuu-db@d090183",
    "verifiedStatus": "JAPAN_VERIFIED",
    "sourceType": "acupoint_source_records",
    "relatedDbUrl": "https://shinkyuu-db.pages.dev/acupoints/te20",
-   "updatedAt": "2026-10-12T20:53:05+09:00",
+   "updatedAt": "2026-10-22T14:06:51+09:00",
    "publicationAllowed": true,
    "warningNotes": [
     "読みは出典未確認のため書き出していない"
@@ -9321,11 +9321,11 @@
    "examRounds": [],
    "examQuestionCount": 0,
    "examQuestionIds": [],
-   "sourceVersion": "shinkyuu-db@ee647cd+dirty",
+   "sourceVersion": "shinkyuu-db@d090183",
    "verifiedStatus": "JAPAN_VERIFIED",
    "sourceType": "acupoint_source_records",
    "relatedDbUrl": "https://shinkyuu-db.pages.dev/acupoints/te21",
-   "updatedAt": "2026-10-12T20:53:05+09:00",
+   "updatedAt": "2026-10-22T14:06:51+09:00",
    "publicationAllowed": true,
    "warningNotes": [
     "読みは出典未確認のため書き出していない"
@@ -9353,11 +9353,11 @@
    "examRounds": [],
    "examQuestionCount": 0,
    "examQuestionIds": [],
-   "sourceVersion": "shinkyuu-db@ee647cd+dirty",
+   "sourceVersion": "shinkyuu-db@d090183",
    "verifiedStatus": "JAPAN_VERIFIED",
    "sourceType": "acupoint_source_records",
    "relatedDbUrl": "https://shinkyuu-db.pages.dev/acupoints/te22",
-   "updatedAt": "2026-10-12T20:53:05+09:00",
+   "updatedAt": "2026-10-22T14:06:51+09:00",
    "publicationAllowed": true,
    "warningNotes": [
     "読みは出典未確認のため書き出していない"
@@ -9385,11 +9385,11 @@
    "examRounds": [],
    "examQuestionCount": 0,
    "examQuestionIds": [],
-   "sourceVersion": "shinkyuu-db@ee647cd+dirty",
+   "sourceVersion": "shinkyuu-db@d090183",
    "verifiedStatus": "JAPAN_VERIFIED",
    "sourceType": "acupoint_source_records",
    "relatedDbUrl": "https://shinkyuu-db.pages.dev/acupoints/te23",
-   "updatedAt": "2026-10-12T20:53:05+09:00",
+   "updatedAt": "2026-10-22T14:06:51+09:00",
    "publicationAllowed": true,
    "warningNotes": [
     "位置は WHO 基準でのみ確認。「WHO 基準では」と明記し、日本の教科書で確認済みと書かない",
@@ -9418,11 +9418,11 @@
    "examRounds": [],
    "examQuestionCount": 0,
    "examQuestionIds": [],
-   "sourceVersion": "shinkyuu-db@ee647cd+dirty",
+   "sourceVersion": "shinkyuu-db@d090183",
    "verifiedStatus": "JAPAN_VERIFIED",
    "sourceType": "acupoint_source_records",
    "relatedDbUrl": "https://shinkyuu-db.pages.dev/acupoints/gb1",
-   "updatedAt": "2026-10-12T20:53:05+09:00",
+   "updatedAt": "2026-10-22T14:06:51+09:00",
    "publicationAllowed": true,
    "warningNotes": [
     "読みは出典未確認のため書き出していない"
@@ -9450,11 +9450,11 @@
    "examRounds": [],
    "examQuestionCount": 0,
    "examQuestionIds": [],
-   "sourceVersion": "shinkyuu-db@ee647cd+dirty",
+   "sourceVersion": "shinkyuu-db@d090183",
    "verifiedStatus": "JAPAN_VERIFIED",
    "sourceType": "acupoint_source_records",
    "relatedDbUrl": "https://shinkyuu-db.pages.dev/acupoints/gb2",
-   "updatedAt": "2026-10-12T20:53:05+09:00",
+   "updatedAt": "2026-10-22T14:06:51+09:00",
    "publicationAllowed": true,
    "warningNotes": [
     "位置は WHO 基準でのみ確認。「WHO 基準では」と明記し、日本の教科書で確認済みと書かない",
@@ -9483,11 +9483,11 @@
    "examRounds": [],
    "examQuestionCount": 0,
    "examQuestionIds": [],
-   "sourceVersion": "shinkyuu-db@ee647cd+dirty",
+   "sourceVersion": "shinkyuu-db@d090183",
    "verifiedStatus": "NOT_APPLICABLE",
    "sourceType": "acupoint_source_records",
    "relatedDbUrl": "https://shinkyuu-db.pages.dev/acupoints/gb3",
-   "updatedAt": "2026-10-12T20:53:05+09:00",
+   "updatedAt": "2026-10-22T14:06:51+09:00",
    "publicationAllowed": false,
    "warningNotes": [
     "名称が日本の資料で確認できていない。記事では WHO コードで書くか、扱わない",
@@ -9516,11 +9516,11 @@
    "examRounds": [],
    "examQuestionCount": 0,
    "examQuestionIds": [],
-   "sourceVersion": "shinkyuu-db@ee647cd+dirty",
+   "sourceVersion": "shinkyuu-db@d090183",
    "verifiedStatus": "JAPAN_VERIFIED",
    "sourceType": "acupoint_source_records",
    "relatedDbUrl": "https://shinkyuu-db.pages.dev/acupoints/gb4",
-   "updatedAt": "2026-10-12T20:53:05+09:00",
+   "updatedAt": "2026-10-22T14:06:51+09:00",
    "publicationAllowed": true,
    "warningNotes": [
     "読みは出典未確認のため書き出していない"
@@ -9548,11 +9548,11 @@
    "examRounds": [],
    "examQuestionCount": 0,
    "examQuestionIds": [],
-   "sourceVersion": "shinkyuu-db@ee647cd+dirty",
+   "sourceVersion": "shinkyuu-db@d090183",
    "verifiedStatus": "JAPAN_VERIFIED",
    "sourceType": "acupoint_source_records",
    "relatedDbUrl": "https://shinkyuu-db.pages.dev/acupoints/gb5",
-   "updatedAt": "2026-10-12T20:53:05+09:00",
+   "updatedAt": "2026-10-22T14:06:51+09:00",
    "publicationAllowed": true,
    "warningNotes": [
     "読みは出典未確認のため書き出していない"
@@ -9580,11 +9580,11 @@
    "examRounds": [],
    "examQuestionCount": 0,
    "examQuestionIds": [],
-   "sourceVersion": "shinkyuu-db@ee647cd+dirty",
+   "sourceVersion": "shinkyuu-db@d090183",
    "verifiedStatus": "NOT_APPLICABLE",
    "sourceType": "acupoint_source_records",
    "relatedDbUrl": "https://shinkyuu-db.pages.dev/acupoints/gb6",
-   "updatedAt": "2026-10-12T20:53:05+09:00",
+   "updatedAt": "2026-10-22T14:06:51+09:00",
    "publicationAllowed": false,
    "warningNotes": [
     "名称が日本の資料で確認できていない。記事では WHO コードで書くか、扱わない",
@@ -9613,11 +9613,11 @@
    "examRounds": [],
    "examQuestionCount": 0,
    "examQuestionIds": [],
-   "sourceVersion": "shinkyuu-db@ee647cd+dirty",
+   "sourceVersion": "shinkyuu-db@d090183",
    "verifiedStatus": "JAPAN_VERIFIED",
    "sourceType": "acupoint_source_records",
    "relatedDbUrl": "https://shinkyuu-db.pages.dev/acupoints/gb7",
-   "updatedAt": "2026-10-12T20:53:05+09:00",
+   "updatedAt": "2026-10-22T14:06:51+09:00",
    "publicationAllowed": true,
    "warningNotes": [
     "読みは出典未確認のため書き出していない"
@@ -9645,11 +9645,11 @@
    "examRounds": [],
    "examQuestionCount": 0,
    "examQuestionIds": [],
-   "sourceVersion": "shinkyuu-db@ee647cd+dirty",
+   "sourceVersion": "shinkyuu-db@d090183",
    "verifiedStatus": "NOT_APPLICABLE",
    "sourceType": "acupoint_source_records",
    "relatedDbUrl": "https://shinkyuu-db.pages.dev/acupoints/gb8",
-   "updatedAt": "2026-10-12T20:53:05+09:00",
+   "updatedAt": "2026-10-22T14:06:51+09:00",
    "publicationAllowed": false,
    "warningNotes": [
     "名称が日本の資料で確認できていない。記事では WHO コードで書くか、扱わない",
@@ -9682,11 +9682,11 @@
    "examQuestionIds": [
     "33-119"
    ],
-   "sourceVersion": "shinkyuu-db@ee647cd+dirty",
+   "sourceVersion": "shinkyuu-db@d090183",
    "verifiedStatus": "JAPAN_VERIFIED",
    "sourceType": "acupoint_source_records",
    "relatedDbUrl": "https://shinkyuu-db.pages.dev/acupoints/gb9",
-   "updatedAt": "2026-10-12T20:53:05+09:00",
+   "updatedAt": "2026-10-22T14:06:51+09:00",
    "publicationAllowed": true,
    "warningNotes": [
     "読みは出典未確認のため書き出していない"
@@ -9714,11 +9714,11 @@
    "examRounds": [],
    "examQuestionCount": 0,
    "examQuestionIds": [],
-   "sourceVersion": "shinkyuu-db@ee647cd+dirty",
+   "sourceVersion": "shinkyuu-db@d090183",
    "verifiedStatus": "JAPAN_VERIFIED",
    "sourceType": "acupoint_source_records",
    "relatedDbUrl": "https://shinkyuu-db.pages.dev/acupoints/gb10",
-   "updatedAt": "2026-10-12T20:53:05+09:00",
+   "updatedAt": "2026-10-22T14:06:51+09:00",
    "publicationAllowed": true,
    "warningNotes": [
     "読みは出典未確認のため書き出していない"
@@ -9746,11 +9746,11 @@
    "examRounds": [],
    "examQuestionCount": 0,
    "examQuestionIds": [],
-   "sourceVersion": "shinkyuu-db@ee647cd+dirty",
+   "sourceVersion": "shinkyuu-db@d090183",
    "verifiedStatus": "JAPAN_VERIFIED",
    "sourceType": "acupoint_source_records",
    "relatedDbUrl": "https://shinkyuu-db.pages.dev/acupoints/gb11",
-   "updatedAt": "2026-10-12T20:53:05+09:00",
+   "updatedAt": "2026-10-22T14:06:51+09:00",
    "publicationAllowed": true,
    "warningNotes": [
     "読みは出典未確認のため書き出していない"
@@ -9778,11 +9778,11 @@
    "examRounds": [],
    "examQuestionCount": 0,
    "examQuestionIds": [],
-   "sourceVersion": "shinkyuu-db@ee647cd+dirty",
+   "sourceVersion": "shinkyuu-db@d090183",
    "verifiedStatus": "JAPAN_VERIFIED",
    "sourceType": "acupoint_source_records",
    "relatedDbUrl": "https://shinkyuu-db.pages.dev/acupoints/gb12",
-   "updatedAt": "2026-10-12T20:53:05+09:00",
+   "updatedAt": "2026-10-22T14:06:51+09:00",
    "publicationAllowed": true,
    "warningNotes": [
     "読みは出典未確認のため書き出していない"
@@ -9810,11 +9810,11 @@
    "examRounds": [],
    "examQuestionCount": 0,
    "examQuestionIds": [],
-   "sourceVersion": "shinkyuu-db@ee647cd+dirty",
+   "sourceVersion": "shinkyuu-db@d090183",
    "verifiedStatus": "JAPAN_VERIFIED",
    "sourceType": "acupoint_source_records",
    "relatedDbUrl": "https://shinkyuu-db.pages.dev/acupoints/gb13",
-   "updatedAt": "2026-10-12T20:53:05+09:00",
+   "updatedAt": "2026-10-22T14:06:51+09:00",
    "publicationAllowed": true,
    "warningNotes": [
     "読みは出典未確認のため書き出していない"
@@ -9848,11 +9848,11 @@
     "33-174",
     "34-134"
    ],
-   "sourceVersion": "shinkyuu-db@ee647cd+dirty",
+   "sourceVersion": "shinkyuu-db@d090183",
    "verifiedStatus": "JAPAN_VERIFIED",
    "sourceType": "acupoint_source_records",
    "relatedDbUrl": "https://shinkyuu-db.pages.dev/acupoints/gb14",
-   "updatedAt": "2026-10-12T20:53:05+09:00",
+   "updatedAt": "2026-10-22T14:06:51+09:00",
    "publicationAllowed": true,
    "warningNotes": [
     "位置は WHO 基準でのみ確認。「WHO 基準では」と明記し、日本の教科書で確認済みと書かない",
@@ -9881,11 +9881,11 @@
    "examRounds": [],
    "examQuestionCount": 0,
    "examQuestionIds": [],
-   "sourceVersion": "shinkyuu-db@ee647cd+dirty",
+   "sourceVersion": "shinkyuu-db@d090183",
    "verifiedStatus": "NOT_APPLICABLE",
    "sourceType": "acupoint_source_records",
    "relatedDbUrl": "https://shinkyuu-db.pages.dev/acupoints/gb15",
-   "updatedAt": "2026-10-12T20:53:05+09:00",
+   "updatedAt": "2026-10-22T14:06:51+09:00",
    "publicationAllowed": false,
    "warningNotes": [
     "名称が日本の資料で確認できていない。記事では WHO コードで書くか、扱わない",
@@ -9914,11 +9914,11 @@
    "examRounds": [],
    "examQuestionCount": 0,
    "examQuestionIds": [],
-   "sourceVersion": "shinkyuu-db@ee647cd+dirty",
+   "sourceVersion": "shinkyuu-db@d090183",
    "verifiedStatus": "JAPAN_VERIFIED",
    "sourceType": "acupoint_source_records",
    "relatedDbUrl": "https://shinkyuu-db.pages.dev/acupoints/gb16",
-   "updatedAt": "2026-10-12T20:53:05+09:00",
+   "updatedAt": "2026-10-22T14:06:51+09:00",
    "publicationAllowed": true,
    "warningNotes": [
     "読みは出典未確認のため書き出していない"
@@ -9946,11 +9946,11 @@
    "examRounds": [],
    "examQuestionCount": 0,
    "examQuestionIds": [],
-   "sourceVersion": "shinkyuu-db@ee647cd+dirty",
+   "sourceVersion": "shinkyuu-db@d090183",
    "verifiedStatus": "NOT_APPLICABLE",
    "sourceType": "acupoint_source_records",
    "relatedDbUrl": "https://shinkyuu-db.pages.dev/acupoints/gb17",
-   "updatedAt": "2026-10-12T20:53:05+09:00",
+   "updatedAt": "2026-10-22T14:06:51+09:00",
    "publicationAllowed": false,
    "warningNotes": [
     "名称が日本の資料で確認できていない。記事では WHO コードで書くか、扱わない",
@@ -9979,11 +9979,11 @@
    "examRounds": [],
    "examQuestionCount": 0,
    "examQuestionIds": [],
-   "sourceVersion": "shinkyuu-db@ee647cd+dirty",
+   "sourceVersion": "shinkyuu-db@d090183",
    "verifiedStatus": "NOT_APPLICABLE",
    "sourceType": "acupoint_source_records",
    "relatedDbUrl": "https://shinkyuu-db.pages.dev/acupoints/gb18",
-   "updatedAt": "2026-10-12T20:53:05+09:00",
+   "updatedAt": "2026-10-22T14:06:51+09:00",
    "publicationAllowed": false,
    "warningNotes": [
     "名称が日本の資料で確認できていない。記事では WHO コードで書くか、扱わない",
@@ -10012,11 +10012,11 @@
    "examRounds": [],
    "examQuestionCount": 0,
    "examQuestionIds": [],
-   "sourceVersion": "shinkyuu-db@ee647cd+dirty",
+   "sourceVersion": "shinkyuu-db@d090183",
    "verifiedStatus": "JAPAN_VERIFIED",
    "sourceType": "acupoint_source_records",
    "relatedDbUrl": "https://shinkyuu-db.pages.dev/acupoints/gb19",
-   "updatedAt": "2026-10-12T20:53:05+09:00",
+   "updatedAt": "2026-10-22T14:06:51+09:00",
    "publicationAllowed": true,
    "warningNotes": [
     "読みは出典未確認のため書き出していない"
@@ -10050,11 +10050,11 @@
     "30-113",
     "32-165"
    ],
-   "sourceVersion": "shinkyuu-db@ee647cd+dirty",
+   "sourceVersion": "shinkyuu-db@d090183",
    "verifiedStatus": "JAPAN_VERIFIED",
    "sourceType": "acupoint_source_records",
    "relatedDbUrl": "https://shinkyuu-db.pages.dev/acupoints/gb20",
-   "updatedAt": "2026-10-12T20:53:05+09:00",
+   "updatedAt": "2026-10-22T14:06:51+09:00",
    "publicationAllowed": true,
    "warningNotes": [
     "位置は WHO 基準でのみ確認。「WHO 基準では」と明記し、日本の教科書で確認済みと書かない",
@@ -10083,11 +10083,11 @@
    "examRounds": [],
    "examQuestionCount": 0,
    "examQuestionIds": [],
-   "sourceVersion": "shinkyuu-db@ee647cd+dirty",
+   "sourceVersion": "shinkyuu-db@d090183",
    "verifiedStatus": "JAPAN_VERIFIED",
    "sourceType": "acupoint_source_records",
    "relatedDbUrl": "https://shinkyuu-db.pages.dev/acupoints/gb21",
-   "updatedAt": "2026-10-12T20:53:05+09:00",
+   "updatedAt": "2026-10-22T14:06:51+09:00",
    "publicationAllowed": true,
    "warningNotes": [
     "位置は WHO 基準でのみ確認。「WHO 基準では」と明記し、日本の教科書で確認済みと書かない",
@@ -10116,11 +10116,11 @@
    "examRounds": [],
    "examQuestionCount": 0,
    "examQuestionIds": [],
-   "sourceVersion": "shinkyuu-db@ee647cd+dirty",
+   "sourceVersion": "shinkyuu-db@d090183",
    "verifiedStatus": "JAPAN_VERIFIED",
    "sourceType": "acupoint_source_records",
    "relatedDbUrl": "https://shinkyuu-db.pages.dev/acupoints/gb22",
-   "updatedAt": "2026-10-12T20:53:05+09:00",
+   "updatedAt": "2026-10-22T14:06:51+09:00",
    "publicationAllowed": true,
    "warningNotes": [
     "読みは出典未確認のため書き出していない"
@@ -10152,11 +10152,11 @@
    "examQuestionIds": [
     "31-121"
    ],
-   "sourceVersion": "shinkyuu-db@ee647cd+dirty",
+   "sourceVersion": "shinkyuu-db@d090183",
    "verifiedStatus": "JAPAN_VERIFIED",
    "sourceType": "acupoint_source_records",
    "relatedDbUrl": "https://shinkyuu-db.pages.dev/acupoints/gb23",
-   "updatedAt": "2026-10-12T20:53:05+09:00",
+   "updatedAt": "2026-10-22T14:06:51+09:00",
    "publicationAllowed": true,
    "warningNotes": [
     "読みは出典未確認のため書き出していない"
@@ -10194,11 +10194,11 @@
    "examQuestionIds": [
     "32-119"
    ],
-   "sourceVersion": "shinkyuu-db@ee647cd+dirty",
+   "sourceVersion": "shinkyuu-db@d090183",
    "verifiedStatus": "JAPAN_VERIFIED",
    "sourceType": "acupoint_source_records",
    "relatedDbUrl": "https://shinkyuu-db.pages.dev/acupoints/gb24",
-   "updatedAt": "2026-10-12T20:53:05+09:00",
+   "updatedAt": "2026-10-22T14:06:51+09:00",
    "publicationAllowed": true,
    "warningNotes": [
     "位置は WHO 基準でのみ確認。「WHO 基準では」と明記し、日本の教科書で確認済みと書かない",
@@ -10234,11 +10234,11 @@
    "examRounds": [],
    "examQuestionCount": 0,
    "examQuestionIds": [],
-   "sourceVersion": "shinkyuu-db@ee647cd+dirty",
+   "sourceVersion": "shinkyuu-db@d090183",
    "verifiedStatus": "JAPAN_VERIFIED",
    "sourceType": "acupoint_source_records",
    "relatedDbUrl": "https://shinkyuu-db.pages.dev/acupoints/gb25",
-   "updatedAt": "2026-10-12T20:53:05+09:00",
+   "updatedAt": "2026-10-22T14:06:51+09:00",
    "publicationAllowed": true,
    "warningNotes": [
     "位置は WHO 基準でのみ確認。「WHO 基準では」と明記し、日本の教科書で確認済みと書かない",
@@ -10268,11 +10268,11 @@
    "examRounds": [],
    "examQuestionCount": 0,
    "examQuestionIds": [],
-   "sourceVersion": "shinkyuu-db@ee647cd+dirty",
+   "sourceVersion": "shinkyuu-db@d090183",
    "verifiedStatus": "JAPAN_VERIFIED",
    "sourceType": "acupoint_source_records",
    "relatedDbUrl": "https://shinkyuu-db.pages.dev/acupoints/gb26",
-   "updatedAt": "2026-10-12T20:53:05+09:00",
+   "updatedAt": "2026-10-22T14:06:51+09:00",
    "publicationAllowed": true,
    "warningNotes": [
     "読みは出典未確認のため書き出していない"
@@ -10300,11 +10300,11 @@
    "examRounds": [],
    "examQuestionCount": 0,
    "examQuestionIds": [],
-   "sourceVersion": "shinkyuu-db@ee647cd+dirty",
+   "sourceVersion": "shinkyuu-db@d090183",
    "verifiedStatus": "JAPAN_VERIFIED",
    "sourceType": "acupoint_source_records",
    "relatedDbUrl": "https://shinkyuu-db.pages.dev/acupoints/gb27",
-   "updatedAt": "2026-10-12T20:53:05+09:00",
+   "updatedAt": "2026-10-22T14:06:51+09:00",
    "publicationAllowed": true,
    "warningNotes": [
     "読みは出典未確認のため書き出していない"
@@ -10332,11 +10332,11 @@
    "examRounds": [],
    "examQuestionCount": 0,
    "examQuestionIds": [],
-   "sourceVersion": "shinkyuu-db@ee647cd+dirty",
+   "sourceVersion": "shinkyuu-db@d090183",
    "verifiedStatus": "NOT_APPLICABLE",
    "sourceType": "acupoint_source_records",
    "relatedDbUrl": "https://shinkyuu-db.pages.dev/acupoints/gb28",
-   "updatedAt": "2026-10-12T20:53:05+09:00",
+   "updatedAt": "2026-10-22T14:06:51+09:00",
    "publicationAllowed": false,
    "warningNotes": [
     "名称が日本の資料で確認できていない。記事では WHO コードで書くか、扱わない",
@@ -10365,11 +10365,11 @@
    "examRounds": [],
    "examQuestionCount": 0,
    "examQuestionIds": [],
-   "sourceVersion": "shinkyuu-db@ee647cd+dirty",
+   "sourceVersion": "shinkyuu-db@d090183",
    "verifiedStatus": "JAPAN_VERIFIED",
    "sourceType": "acupoint_source_records",
    "relatedDbUrl": "https://shinkyuu-db.pages.dev/acupoints/gb29",
-   "updatedAt": "2026-10-12T20:53:05+09:00",
+   "updatedAt": "2026-10-22T14:06:51+09:00",
    "publicationAllowed": true,
    "warningNotes": [
     "読みは出典未確認のため書き出していない"
@@ -10397,11 +10397,11 @@
    "examRounds": [],
    "examQuestionCount": 0,
    "examQuestionIds": [],
-   "sourceVersion": "shinkyuu-db@ee647cd+dirty",
+   "sourceVersion": "shinkyuu-db@d090183",
    "verifiedStatus": "JAPAN_VERIFIED",
    "sourceType": "acupoint_source_records",
    "relatedDbUrl": "https://shinkyuu-db.pages.dev/acupoints/gb30",
-   "updatedAt": "2026-10-12T20:53:05+09:00",
+   "updatedAt": "2026-10-22T14:06:51+09:00",
    "publicationAllowed": true,
    "warningNotes": [
     "位置は WHO 基準でのみ確認。「WHO 基準では」と明記し、日本の教科書で確認済みと書かない",
@@ -10434,11 +10434,11 @@
    "examQuestionIds": [
     "32-136"
    ],
-   "sourceVersion": "shinkyuu-db@ee647cd+dirty",
+   "sourceVersion": "shinkyuu-db@d090183",
    "verifiedStatus": "JAPAN_VERIFIED",
    "sourceType": "acupoint_source_records",
    "relatedDbUrl": "https://shinkyuu-db.pages.dev/acupoints/gb31",
-   "updatedAt": "2026-10-12T20:53:05+09:00",
+   "updatedAt": "2026-10-22T14:06:51+09:00",
    "publicationAllowed": true,
    "warningNotes": [
     "位置は根拠不足または資料と食い違い。記事に書かない",
@@ -10467,11 +10467,11 @@
    "examRounds": [],
    "examQuestionCount": 0,
    "examQuestionIds": [],
-   "sourceVersion": "shinkyuu-db@ee647cd+dirty",
+   "sourceVersion": "shinkyuu-db@d090183",
    "verifiedStatus": "NOT_APPLICABLE",
    "sourceType": "acupoint_source_records",
    "relatedDbUrl": "https://shinkyuu-db.pages.dev/acupoints/gb32",
-   "updatedAt": "2026-10-12T20:53:05+09:00",
+   "updatedAt": "2026-10-22T14:06:51+09:00",
    "publicationAllowed": false,
    "warningNotes": [
     "名称が日本の資料で確認できていない。記事では WHO コードで書くか、扱わない",
@@ -10500,11 +10500,11 @@
    "examRounds": [],
    "examQuestionCount": 0,
    "examQuestionIds": [],
-   "sourceVersion": "shinkyuu-db@ee647cd+dirty",
+   "sourceVersion": "shinkyuu-db@d090183",
    "verifiedStatus": "JAPAN_VERIFIED",
    "sourceType": "acupoint_source_records",
    "relatedDbUrl": "https://shinkyuu-db.pages.dev/acupoints/gb33",
-   "updatedAt": "2026-10-12T20:53:05+09:00",
+   "updatedAt": "2026-10-22T14:06:51+09:00",
    "publicationAllowed": true,
    "warningNotes": [
     "読みは出典未確認のため書き出していない"
@@ -10555,11 +10555,11 @@
     "31-141",
     "34-158"
    ],
-   "sourceVersion": "shinkyuu-db@ee647cd+dirty",
+   "sourceVersion": "shinkyuu-db@d090183",
    "verifiedStatus": "JAPAN_VERIFIED",
    "sourceType": "acupoint_source_records",
    "relatedDbUrl": "https://shinkyuu-db.pages.dev/acupoints/gb34",
-   "updatedAt": "2026-10-12T20:53:05+09:00",
+   "updatedAt": "2026-10-22T14:06:51+09:00",
    "publicationAllowed": true,
    "warningNotes": [
     "位置は WHO 基準でのみ確認。「WHO 基準では」と明記し、日本の教科書で確認済みと書かない",
@@ -10595,11 +10595,11 @@
     "29-108",
     "30-120"
    ],
-   "sourceVersion": "shinkyuu-db@ee647cd+dirty",
+   "sourceVersion": "shinkyuu-db@d090183",
    "verifiedStatus": "JAPAN_VERIFIED",
    "sourceType": "acupoint_source_records",
    "relatedDbUrl": "https://shinkyuu-db.pages.dev/acupoints/gb35",
-   "updatedAt": "2026-10-12T20:53:05+09:00",
+   "updatedAt": "2026-10-22T14:06:51+09:00",
    "publicationAllowed": true,
    "warningNotes": [
     "読みは出典未確認のため書き出していない"
@@ -10639,11 +10639,11 @@
     "29-125",
     "34-156"
    ],
-   "sourceVersion": "shinkyuu-db@ee647cd+dirty",
+   "sourceVersion": "shinkyuu-db@d090183",
    "verifiedStatus": "JAPAN_VERIFIED",
    "sourceType": "acupoint_source_records",
    "relatedDbUrl": "https://shinkyuu-db.pages.dev/acupoints/gb36",
-   "updatedAt": "2026-10-12T20:53:05+09:00",
+   "updatedAt": "2026-10-22T14:06:51+09:00",
    "publicationAllowed": true,
    "warningNotes": [
     "位置は WHO 基準でのみ確認。「WHO 基準では」と明記し、日本の教科書で確認済みと書かない",
@@ -10678,11 +10678,11 @@
    "examRounds": [],
    "examQuestionCount": 0,
    "examQuestionIds": [],
-   "sourceVersion": "shinkyuu-db@ee647cd+dirty",
+   "sourceVersion": "shinkyuu-db@d090183",
    "verifiedStatus": "JAPAN_VERIFIED",
    "sourceType": "acupoint_source_records",
    "relatedDbUrl": "https://shinkyuu-db.pages.dev/acupoints/gb37",
-   "updatedAt": "2026-10-12T20:53:05+09:00",
+   "updatedAt": "2026-10-22T14:06:51+09:00",
    "publicationAllowed": true,
    "warningNotes": [
     "位置は WHO 基準でのみ確認。「WHO 基準では」と明記し、日本の教科書で確認済みと書かない",
@@ -10716,11 +10716,11 @@
    "examQuestionIds": [
     "32-121"
    ],
-   "sourceVersion": "shinkyuu-db@ee647cd+dirty",
+   "sourceVersion": "shinkyuu-db@d090183",
    "verifiedStatus": "JAPAN_VERIFIED",
    "sourceType": "acupoint_source_records",
    "relatedDbUrl": "https://shinkyuu-db.pages.dev/acupoints/gb38",
-   "updatedAt": "2026-10-12T20:53:05+09:00",
+   "updatedAt": "2026-10-22T14:06:51+09:00",
    "publicationAllowed": true,
    "warningNotes": [
     "読みは出典未確認のため書き出していない"
@@ -10754,11 +10754,11 @@
    "examRounds": [],
    "examQuestionCount": 0,
    "examQuestionIds": [],
-   "sourceVersion": "shinkyuu-db@ee647cd+dirty",
+   "sourceVersion": "shinkyuu-db@d090183",
    "verifiedStatus": "JAPAN_VERIFIED",
    "sourceType": "acupoint_source_records",
    "relatedDbUrl": "https://shinkyuu-db.pages.dev/acupoints/gb39",
-   "updatedAt": "2026-10-12T20:53:05+09:00",
+   "updatedAt": "2026-10-22T14:06:51+09:00",
    "publicationAllowed": true,
    "warningNotes": [
     "位置は WHO 基準でのみ確認。「WHO 基準では」と明記し、日本の教科書で確認済みと書かない",
@@ -10798,11 +10798,11 @@
    "examQuestionIds": [
     "33-121"
    ],
-   "sourceVersion": "shinkyuu-db@ee647cd+dirty",
+   "sourceVersion": "shinkyuu-db@d090183",
    "verifiedStatus": "JAPAN_VERIFIED",
    "sourceType": "acupoint_source_records",
    "relatedDbUrl": "https://shinkyuu-db.pages.dev/acupoints/gb40",
-   "updatedAt": "2026-10-12T20:53:05+09:00",
+   "updatedAt": "2026-10-22T14:06:51+09:00",
    "publicationAllowed": true,
    "warningNotes": [
     "位置は WHO 基準でのみ確認。「WHO 基準では」と明記し、日本の教科書で確認済みと書かない",
@@ -10849,11 +10849,11 @@
     "29-148",
     "34-148"
    ],
-   "sourceVersion": "shinkyuu-db@ee647cd+dirty",
+   "sourceVersion": "shinkyuu-db@d090183",
    "verifiedStatus": "JAPAN_VERIFIED",
    "sourceType": "acupoint_source_records",
    "relatedDbUrl": "https://shinkyuu-db.pages.dev/acupoints/gb41",
-   "updatedAt": "2026-10-12T20:53:05+09:00",
+   "updatedAt": "2026-10-22T14:06:51+09:00",
    "publicationAllowed": true,
    "warningNotes": [
     "位置は WHO 基準でのみ確認。「WHO 基準では」と明記し、日本の教科書で確認済みと書かない",
@@ -10883,11 +10883,11 @@
    "examRounds": [],
    "examQuestionCount": 0,
    "examQuestionIds": [],
-   "sourceVersion": "shinkyuu-db@ee647cd+dirty",
+   "sourceVersion": "shinkyuu-db@d090183",
    "verifiedStatus": "NOT_APPLICABLE",
    "sourceType": "acupoint_source_records",
    "relatedDbUrl": "https://shinkyuu-db.pages.dev/acupoints/gb42",
-   "updatedAt": "2026-10-12T20:53:05+09:00",
+   "updatedAt": "2026-10-22T14:06:51+09:00",
    "publicationAllowed": false,
    "warningNotes": [
     "名称が日本の資料で確認できていない。記事では WHO コードで書くか、扱わない",
@@ -10926,11 +10926,11 @@
    "examQuestionIds": [
     "29-106"
    ],
-   "sourceVersion": "shinkyuu-db@ee647cd+dirty",
+   "sourceVersion": "shinkyuu-db@d090183",
    "verifiedStatus": "JAPAN_VERIFIED",
    "sourceType": "acupoint_source_records",
    "relatedDbUrl": "https://shinkyuu-db.pages.dev/acupoints/gb43",
-   "updatedAt": "2026-10-12T20:53:05+09:00",
+   "updatedAt": "2026-10-22T14:06:51+09:00",
    "publicationAllowed": true,
    "warningNotes": [
     "位置は WHO 基準でのみ確認。「WHO 基準では」と明記し、日本の教科書で確認済みと書かない",
@@ -10970,11 +10970,11 @@
    "examQuestionIds": [
     "29-107"
    ],
-   "sourceVersion": "shinkyuu-db@ee647cd+dirty",
+   "sourceVersion": "shinkyuu-db@d090183",
    "verifiedStatus": "JAPAN_VERIFIED",
    "sourceType": "acupoint_source_records",
    "relatedDbUrl": "https://shinkyuu-db.pages.dev/acupoints/gb44",
-   "updatedAt": "2026-10-12T20:53:05+09:00",
+   "updatedAt": "2026-10-22T14:06:51+09:00",
    "publicationAllowed": true,
    "warningNotes": [
     "位置は WHO 基準でのみ確認。「WHO 基準では」と明記し、日本の教科書で確認済みと書かない",
@@ -11010,11 +11010,11 @@
    "examRounds": [],
    "examQuestionCount": 0,
    "examQuestionIds": [],
-   "sourceVersion": "shinkyuu-db@ee647cd+dirty",
+   "sourceVersion": "shinkyuu-db@d090183",
    "verifiedStatus": "JAPAN_VERIFIED",
    "sourceType": "acupoint_source_records",
    "relatedDbUrl": "https://shinkyuu-db.pages.dev/acupoints/lr1",
-   "updatedAt": "2026-10-12T20:53:05+09:00",
+   "updatedAt": "2026-10-22T14:06:51+09:00",
    "publicationAllowed": true,
    "warningNotes": [
     "位置は WHO 基準でのみ確認。「WHO 基準では」と明記し、日本の教科書で確認済みと書かない",
@@ -11056,11 +11056,11 @@
     "29-124",
     "34-154"
    ],
-   "sourceVersion": "shinkyuu-db@ee647cd+dirty",
+   "sourceVersion": "shinkyuu-db@d090183",
    "verifiedStatus": "JAPAN_VERIFIED",
    "sourceType": "acupoint_source_records",
    "relatedDbUrl": "https://shinkyuu-db.pages.dev/acupoints/lr2",
-   "updatedAt": "2026-10-12T20:53:05+09:00",
+   "updatedAt": "2026-10-22T14:06:51+09:00",
    "publicationAllowed": true,
    "warningNotes": [
     "位置は WHO 基準でのみ確認。「WHO 基準では」と明記し、日本の教科書で確認済みと書かない",
@@ -11101,11 +11101,11 @@
    "examRounds": [],
    "examQuestionCount": 0,
    "examQuestionIds": [],
-   "sourceVersion": "shinkyuu-db@ee647cd+dirty",
+   "sourceVersion": "shinkyuu-db@d090183",
    "verifiedStatus": "JAPAN_VERIFIED",
    "sourceType": "acupoint_source_records",
    "relatedDbUrl": "https://shinkyuu-db.pages.dev/acupoints/lr3",
-   "updatedAt": "2026-10-12T20:53:05+09:00",
+   "updatedAt": "2026-10-22T14:06:51+09:00",
    "publicationAllowed": true,
    "warningNotes": [
     "位置は WHO 基準でのみ確認。「WHO 基準では」と明記し、日本の教科書で確認済みと書かない",
@@ -11145,11 +11145,11 @@
    "examQuestionIds": [
     "32-120"
    ],
-   "sourceVersion": "shinkyuu-db@ee647cd+dirty",
+   "sourceVersion": "shinkyuu-db@d090183",
    "verifiedStatus": "JAPAN_VERIFIED",
    "sourceType": "acupoint_source_records",
    "relatedDbUrl": "https://shinkyuu-db.pages.dev/acupoints/lr4",
-   "updatedAt": "2026-10-12T20:53:05+09:00",
+   "updatedAt": "2026-10-22T14:06:51+09:00",
    "publicationAllowed": true,
    "warningNotes": [
     "位置は WHO 基準でのみ確認。「WHO 基準では」と明記し、日本の教科書で確認済みと書かない",
@@ -11193,11 +11193,11 @@
     "31-146",
     "32-111"
    ],
-   "sourceVersion": "shinkyuu-db@ee647cd+dirty",
+   "sourceVersion": "shinkyuu-db@d090183",
    "verifiedStatus": "JAPAN_VERIFIED",
    "sourceType": "acupoint_source_records",
    "relatedDbUrl": "https://shinkyuu-db.pages.dev/acupoints/lr5",
-   "updatedAt": "2026-10-12T20:53:05+09:00",
+   "updatedAt": "2026-10-22T14:06:51+09:00",
    "publicationAllowed": true,
    "warningNotes": [
     "一部の要穴分類は未確認（推論のみ等）。値を出していない",
@@ -11238,11 +11238,11 @@
     "30-149",
     "31-146"
    ],
-   "sourceVersion": "shinkyuu-db@ee647cd+dirty",
+   "sourceVersion": "shinkyuu-db@d090183",
    "verifiedStatus": "JAPAN_VERIFIED",
    "sourceType": "acupoint_source_records",
    "relatedDbUrl": "https://shinkyuu-db.pages.dev/acupoints/lr6",
-   "updatedAt": "2026-10-12T20:53:05+09:00",
+   "updatedAt": "2026-10-22T14:06:51+09:00",
    "publicationAllowed": true,
    "warningNotes": [
     "位置は WHO 基準でのみ確認。「WHO 基準では」と明記し、日本の教科書で確認済みと書かない",
@@ -11272,11 +11272,11 @@
    "examRounds": [],
    "examQuestionCount": 0,
    "examQuestionIds": [],
-   "sourceVersion": "shinkyuu-db@ee647cd+dirty",
+   "sourceVersion": "shinkyuu-db@d090183",
    "verifiedStatus": "JAPAN_VERIFIED",
    "sourceType": "acupoint_source_records",
    "relatedDbUrl": "https://shinkyuu-db.pages.dev/acupoints/lr7",
-   "updatedAt": "2026-10-12T20:53:05+09:00",
+   "updatedAt": "2026-10-22T14:06:51+09:00",
    "publicationAllowed": true,
    "warningNotes": [
     "読みは出典未確認のため書き出していない"
@@ -11310,11 +11310,11 @@
    "examRounds": [],
    "examQuestionCount": 0,
    "examQuestionIds": [],
-   "sourceVersion": "shinkyuu-db@ee647cd+dirty",
+   "sourceVersion": "shinkyuu-db@d090183",
    "verifiedStatus": "JAPAN_VERIFIED",
    "sourceType": "acupoint_source_records",
    "relatedDbUrl": "https://shinkyuu-db.pages.dev/acupoints/lr8",
-   "updatedAt": "2026-10-12T20:53:05+09:00",
+   "updatedAt": "2026-10-22T14:06:51+09:00",
    "publicationAllowed": true,
    "warningNotes": [
     "位置は WHO 基準でのみ確認。「WHO 基準では」と明記し、日本の教科書で確認済みと書かない",
@@ -11348,11 +11348,11 @@
    "examQuestionIds": [
     "30-114"
    ],
-   "sourceVersion": "shinkyuu-db@ee647cd+dirty",
+   "sourceVersion": "shinkyuu-db@d090183",
    "verifiedStatus": "JAPAN_VERIFIED",
    "sourceType": "acupoint_source_records",
    "relatedDbUrl": "https://shinkyuu-db.pages.dev/acupoints/lr9",
-   "updatedAt": "2026-10-12T20:53:05+09:00",
+   "updatedAt": "2026-10-22T14:06:51+09:00",
    "publicationAllowed": true,
    "warningNotes": [
     "読みは出典未確認のため書き出していない"
@@ -11380,11 +11380,11 @@
    "examRounds": [],
    "examQuestionCount": 0,
    "examQuestionIds": [],
-   "sourceVersion": "shinkyuu-db@ee647cd+dirty",
+   "sourceVersion": "shinkyuu-db@d090183",
    "verifiedStatus": "JAPAN_VERIFIED",
    "sourceType": "acupoint_source_records",
    "relatedDbUrl": "https://shinkyuu-db.pages.dev/acupoints/lr10",
-   "updatedAt": "2026-10-12T20:53:05+09:00",
+   "updatedAt": "2026-10-22T14:06:51+09:00",
    "publicationAllowed": true,
    "warningNotes": [
     "読みは出典未確認のため書き出していない"
@@ -11412,11 +11412,11 @@
    "examRounds": [],
    "examQuestionCount": 0,
    "examQuestionIds": [],
-   "sourceVersion": "shinkyuu-db@ee647cd+dirty",
+   "sourceVersion": "shinkyuu-db@d090183",
    "verifiedStatus": "NOT_APPLICABLE",
    "sourceType": "acupoint_source_records",
    "relatedDbUrl": "https://shinkyuu-db.pages.dev/acupoints/lr11",
-   "updatedAt": "2026-10-12T20:53:05+09:00",
+   "updatedAt": "2026-10-22T14:06:51+09:00",
    "publicationAllowed": false,
    "warningNotes": [
     "名称が日本の資料で確認できていない。記事では WHO コードで書くか、扱わない",
@@ -11445,11 +11445,11 @@
    "examRounds": [],
    "examQuestionCount": 0,
    "examQuestionIds": [],
-   "sourceVersion": "shinkyuu-db@ee647cd+dirty",
+   "sourceVersion": "shinkyuu-db@d090183",
    "verifiedStatus": "NOT_APPLICABLE",
    "sourceType": "acupoint_source_records",
    "relatedDbUrl": "https://shinkyuu-db.pages.dev/acupoints/lr12",
-   "updatedAt": "2026-10-12T20:53:05+09:00",
+   "updatedAt": "2026-10-22T14:06:51+09:00",
    "publicationAllowed": false,
    "warningNotes": [
     "名称が日本の資料で確認できていない。記事では WHO コードで書くか、扱わない",
@@ -11497,11 +11497,11 @@
     "32-123",
     "33-122"
    ],
-   "sourceVersion": "shinkyuu-db@ee647cd+dirty",
+   "sourceVersion": "shinkyuu-db@d090183",
    "verifiedStatus": "JAPAN_VERIFIED",
    "sourceType": "acupoint_source_records",
    "relatedDbUrl": "https://shinkyuu-db.pages.dev/acupoints/lr13",
-   "updatedAt": "2026-10-12T20:53:05+09:00",
+   "updatedAt": "2026-10-22T14:06:51+09:00",
    "publicationAllowed": true,
    "warningNotes": [
     "位置は WHO 基準でのみ確認。「WHO 基準では」と明記し、日本の教科書で確認済みと書かない",
@@ -11537,11 +11537,11 @@
    "examRounds": [],
    "examQuestionCount": 0,
    "examQuestionIds": [],
-   "sourceVersion": "shinkyuu-db@ee647cd+dirty",
+   "sourceVersion": "shinkyuu-db@d090183",
    "verifiedStatus": "JAPAN_VERIFIED",
    "sourceType": "acupoint_source_records",
    "relatedDbUrl": "https://shinkyuu-db.pages.dev/acupoints/lr14",
-   "updatedAt": "2026-10-12T20:53:05+09:00",
+   "updatedAt": "2026-10-22T14:06:51+09:00",
    "publicationAllowed": true,
    "warningNotes": [
     "位置は WHO 基準でのみ確認。「WHO 基準では」と明記し、日本の教科書で確認済みと書かない",
@@ -11571,11 +11571,11 @@
    "examRounds": [],
    "examQuestionCount": 0,
    "examQuestionIds": [],
-   "sourceVersion": "shinkyuu-db@ee647cd+dirty",
+   "sourceVersion": "shinkyuu-db@d090183",
    "verifiedStatus": "NOT_APPLICABLE",
    "sourceType": "acupoint_source_records",
    "relatedDbUrl": "https://shinkyuu-db.pages.dev/acupoints/cv1",
-   "updatedAt": "2026-10-12T20:53:05+09:00",
+   "updatedAt": "2026-10-22T14:06:51+09:00",
    "publicationAllowed": false,
    "warningNotes": [
     "名称が日本の資料で確認できていない。記事では WHO コードで書くか、扱わない",
@@ -11604,11 +11604,11 @@
    "examRounds": [],
    "examQuestionCount": 0,
    "examQuestionIds": [],
-   "sourceVersion": "shinkyuu-db@ee647cd+dirty",
+   "sourceVersion": "shinkyuu-db@d090183",
    "verifiedStatus": "NOT_APPLICABLE",
    "sourceType": "acupoint_source_records",
    "relatedDbUrl": "https://shinkyuu-db.pages.dev/acupoints/cv2",
-   "updatedAt": "2026-10-12T20:53:05+09:00",
+   "updatedAt": "2026-10-22T14:06:51+09:00",
    "publicationAllowed": false,
    "warningNotes": [
     "名称が日本の資料で確認できていない。記事では WHO コードで書くか、扱わない",
@@ -11647,11 +11647,11 @@
    "examQuestionIds": [
     "29-156"
    ],
-   "sourceVersion": "shinkyuu-db@ee647cd+dirty",
+   "sourceVersion": "shinkyuu-db@d090183",
    "verifiedStatus": "JAPAN_VERIFIED",
    "sourceType": "acupoint_source_records",
    "relatedDbUrl": "https://shinkyuu-db.pages.dev/acupoints/cv3",
-   "updatedAt": "2026-10-12T20:53:05+09:00",
+   "updatedAt": "2026-10-22T14:06:51+09:00",
    "publicationAllowed": true,
    "warningNotes": [
     "位置は WHO 基準でのみ確認。「WHO 基準では」と明記し、日本の教科書で確認済みと書かない",
@@ -11691,11 +11691,11 @@
    "examQuestionIds": [
     "33-110"
    ],
-   "sourceVersion": "shinkyuu-db@ee647cd+dirty",
+   "sourceVersion": "shinkyuu-db@d090183",
    "verifiedStatus": "JAPAN_VERIFIED",
    "sourceType": "acupoint_source_records",
    "relatedDbUrl": "https://shinkyuu-db.pages.dev/acupoints/cv4",
-   "updatedAt": "2026-10-12T20:53:05+09:00",
+   "updatedAt": "2026-10-22T14:06:51+09:00",
    "publicationAllowed": true,
    "warningNotes": [
     "位置は WHO 基準でのみ確認。「WHO 基準では」と明記し、日本の教科書で確認済みと書かない",
@@ -11735,11 +11735,11 @@
    "examQuestionIds": [
     "29-111"
    ],
-   "sourceVersion": "shinkyuu-db@ee647cd+dirty",
+   "sourceVersion": "shinkyuu-db@d090183",
    "verifiedStatus": "JAPAN_VERIFIED",
    "sourceType": "acupoint_source_records",
    "relatedDbUrl": "https://shinkyuu-db.pages.dev/acupoints/cv5",
-   "updatedAt": "2026-10-12T20:53:05+09:00",
+   "updatedAt": "2026-10-22T14:06:51+09:00",
    "publicationAllowed": true,
    "warningNotes": [
     "位置は WHO 基準でのみ確認。「WHO 基準では」と明記し、日本の教科書で確認済みと書かない",
@@ -11769,11 +11769,11 @@
    "examRounds": [],
    "examQuestionCount": 0,
    "examQuestionIds": [],
-   "sourceVersion": "shinkyuu-db@ee647cd+dirty",
+   "sourceVersion": "shinkyuu-db@d090183",
    "verifiedStatus": "JAPAN_VERIFIED",
    "sourceType": "acupoint_source_records",
    "relatedDbUrl": "https://shinkyuu-db.pages.dev/acupoints/cv6",
-   "updatedAt": "2026-10-12T20:53:05+09:00",
+   "updatedAt": "2026-10-22T14:06:51+09:00",
    "publicationAllowed": true,
    "warningNotes": [
     "位置は WHO 基準でのみ確認。「WHO 基準では」と明記し、日本の教科書で確認済みと書かない",
@@ -11802,11 +11802,11 @@
    "examRounds": [],
    "examQuestionCount": 0,
    "examQuestionIds": [],
-   "sourceVersion": "shinkyuu-db@ee647cd+dirty",
+   "sourceVersion": "shinkyuu-db@d090183",
    "verifiedStatus": "NOT_APPLICABLE",
    "sourceType": "acupoint_source_records",
    "relatedDbUrl": "https://shinkyuu-db.pages.dev/acupoints/cv7",
-   "updatedAt": "2026-10-12T20:53:05+09:00",
+   "updatedAt": "2026-10-22T14:06:51+09:00",
    "publicationAllowed": false,
    "warningNotes": [
     "名称が日本の資料で確認できていない。記事では WHO コードで書くか、扱わない",
@@ -11835,11 +11835,11 @@
    "examRounds": [],
    "examQuestionCount": 0,
    "examQuestionIds": [],
-   "sourceVersion": "shinkyuu-db@ee647cd+dirty",
+   "sourceVersion": "shinkyuu-db@d090183",
    "verifiedStatus": "JAPAN_VERIFIED",
    "sourceType": "acupoint_source_records",
    "relatedDbUrl": "https://shinkyuu-db.pages.dev/acupoints/cv8",
-   "updatedAt": "2026-10-12T20:53:05+09:00",
+   "updatedAt": "2026-10-22T14:06:51+09:00",
    "publicationAllowed": true,
    "warningNotes": [
     "位置は WHO 基準でのみ確認。「WHO 基準では」と明記し、日本の教科書で確認済みと書かない",
@@ -11868,11 +11868,11 @@
    "examRounds": [],
    "examQuestionCount": 0,
    "examQuestionIds": [],
-   "sourceVersion": "shinkyuu-db@ee647cd+dirty",
+   "sourceVersion": "shinkyuu-db@d090183",
    "verifiedStatus": "JAPAN_VERIFIED",
    "sourceType": "acupoint_source_records",
    "relatedDbUrl": "https://shinkyuu-db.pages.dev/acupoints/cv9",
-   "updatedAt": "2026-10-12T20:53:05+09:00",
+   "updatedAt": "2026-10-22T14:06:51+09:00",
    "publicationAllowed": true,
    "warningNotes": [
     "読みは出典未確認のため書き出していない"
@@ -11900,11 +11900,11 @@
    "examRounds": [],
    "examQuestionCount": 0,
    "examQuestionIds": [],
-   "sourceVersion": "shinkyuu-db@ee647cd+dirty",
+   "sourceVersion": "shinkyuu-db@d090183",
    "verifiedStatus": "NOT_APPLICABLE",
    "sourceType": "acupoint_source_records",
    "relatedDbUrl": "https://shinkyuu-db.pages.dev/acupoints/cv10",
-   "updatedAt": "2026-10-12T20:53:05+09:00",
+   "updatedAt": "2026-10-22T14:06:51+09:00",
    "publicationAllowed": false,
    "warningNotes": [
     "名称が日本の資料で確認できていない。記事では WHO コードで書くか、扱わない",
@@ -11933,11 +11933,11 @@
    "examRounds": [],
    "examQuestionCount": 0,
    "examQuestionIds": [],
-   "sourceVersion": "shinkyuu-db@ee647cd+dirty",
+   "sourceVersion": "shinkyuu-db@d090183",
    "verifiedStatus": "NOT_APPLICABLE",
    "sourceType": "acupoint_source_records",
    "relatedDbUrl": "https://shinkyuu-db.pages.dev/acupoints/cv11",
-   "updatedAt": "2026-10-12T20:53:05+09:00",
+   "updatedAt": "2026-10-22T14:06:51+09:00",
    "publicationAllowed": false,
    "warningNotes": [
     "名称が日本の資料で確認できていない。記事では WHO コードで書くか、扱わない",
@@ -11985,11 +11985,11 @@
     "32-113",
     "33-114"
    ],
-   "sourceVersion": "shinkyuu-db@ee647cd+dirty",
+   "sourceVersion": "shinkyuu-db@d090183",
    "verifiedStatus": "JAPAN_VERIFIED",
    "sourceType": "acupoint_source_records",
    "relatedDbUrl": "https://shinkyuu-db.pages.dev/acupoints/cv12",
-   "updatedAt": "2026-10-12T20:53:05+09:00",
+   "updatedAt": "2026-10-22T14:06:51+09:00",
    "publicationAllowed": true,
    "warningNotes": [
     "位置は WHO 基準でのみ確認。「WHO 基準では」と明記し、日本の教科書で確認済みと書かない",
@@ -12019,11 +12019,11 @@
    "examRounds": [],
    "examQuestionCount": 0,
    "examQuestionIds": [],
-   "sourceVersion": "shinkyuu-db@ee647cd+dirty",
+   "sourceVersion": "shinkyuu-db@d090183",
    "verifiedStatus": "NOT_APPLICABLE",
    "sourceType": "acupoint_source_records",
    "relatedDbUrl": "https://shinkyuu-db.pages.dev/acupoints/cv13",
-   "updatedAt": "2026-10-12T20:53:05+09:00",
+   "updatedAt": "2026-10-22T14:06:51+09:00",
    "publicationAllowed": false,
    "warningNotes": [
     "名称が日本の資料で確認できていない。記事では WHO コードで書くか、扱わない",
@@ -12056,11 +12056,11 @@
    "examQuestionIds": [
     "29-109"
    ],
-   "sourceVersion": "shinkyuu-db@ee647cd+dirty",
+   "sourceVersion": "shinkyuu-db@d090183",
    "verifiedStatus": "JAPAN_VERIFIED",
    "sourceType": "acupoint_source_records",
    "relatedDbUrl": "https://shinkyuu-db.pages.dev/acupoints/cv14",
-   "updatedAt": "2026-10-12T20:53:05+09:00",
+   "updatedAt": "2026-10-22T14:06:51+09:00",
    "publicationAllowed": true,
    "warningNotes": [
     "読みは出典未確認のため書き出していない"
@@ -12088,11 +12088,11 @@
    "examRounds": [],
    "examQuestionCount": 0,
    "examQuestionIds": [],
-   "sourceVersion": "shinkyuu-db@ee647cd+dirty",
+   "sourceVersion": "shinkyuu-db@d090183",
    "verifiedStatus": "JAPAN_VERIFIED",
    "sourceType": "acupoint_source_records",
    "relatedDbUrl": "https://shinkyuu-db.pages.dev/acupoints/cv15",
-   "updatedAt": "2026-10-12T20:53:05+09:00",
+   "updatedAt": "2026-10-22T14:06:51+09:00",
    "publicationAllowed": true,
    "warningNotes": [
     "読みは出典未確認のため書き出していない"
@@ -12120,11 +12120,11 @@
    "examRounds": [],
    "examQuestionCount": 0,
    "examQuestionIds": [],
-   "sourceVersion": "shinkyuu-db@ee647cd+dirty",
+   "sourceVersion": "shinkyuu-db@d090183",
    "verifiedStatus": "JAPAN_VERIFIED",
    "sourceType": "acupoint_source_records",
    "relatedDbUrl": "https://shinkyuu-db.pages.dev/acupoints/cv16",
-   "updatedAt": "2026-10-12T20:53:05+09:00",
+   "updatedAt": "2026-10-22T14:06:51+09:00",
    "publicationAllowed": true,
    "warningNotes": [
     "読みは出典未確認のため書き出していない"
@@ -12173,11 +12173,11 @@
     "33-165",
     "34-124"
    ],
-   "sourceVersion": "shinkyuu-db@ee647cd+dirty",
+   "sourceVersion": "shinkyuu-db@d090183",
    "verifiedStatus": "JAPAN_VERIFIED",
    "sourceType": "acupoint_source_records",
    "relatedDbUrl": "https://shinkyuu-db.pages.dev/acupoints/cv17",
-   "updatedAt": "2026-10-12T20:53:05+09:00",
+   "updatedAt": "2026-10-22T14:06:51+09:00",
    "publicationAllowed": true,
    "warningNotes": [
     "位置は根拠不足または資料と食い違い。記事に書かない",
@@ -12211,11 +12211,11 @@
    "examQuestionIds": [
     "30-111"
    ],
-   "sourceVersion": "shinkyuu-db@ee647cd+dirty",
+   "sourceVersion": "shinkyuu-db@d090183",
    "verifiedStatus": "JAPAN_VERIFIED",
    "sourceType": "acupoint_source_records",
    "relatedDbUrl": "https://shinkyuu-db.pages.dev/acupoints/cv18",
-   "updatedAt": "2026-10-12T20:53:05+09:00",
+   "updatedAt": "2026-10-22T14:06:51+09:00",
    "publicationAllowed": true,
    "warningNotes": [
     "読みは出典未確認のため書き出していない"
@@ -12243,11 +12243,11 @@
    "examRounds": [],
    "examQuestionCount": 0,
    "examQuestionIds": [],
-   "sourceVersion": "shinkyuu-db@ee647cd+dirty",
+   "sourceVersion": "shinkyuu-db@d090183",
    "verifiedStatus": "NOT_APPLICABLE",
    "sourceType": "acupoint_source_records",
    "relatedDbUrl": "https://shinkyuu-db.pages.dev/acupoints/cv19",
-   "updatedAt": "2026-10-12T20:53:05+09:00",
+   "updatedAt": "2026-10-22T14:06:51+09:00",
    "publicationAllowed": false,
    "warningNotes": [
     "名称が日本の資料で確認できていない。記事では WHO コードで書くか、扱わない",
@@ -12276,11 +12276,11 @@
    "examRounds": [],
    "examQuestionCount": 0,
    "examQuestionIds": [],
-   "sourceVersion": "shinkyuu-db@ee647cd+dirty",
+   "sourceVersion": "shinkyuu-db@d090183",
    "verifiedStatus": "NOT_APPLICABLE",
    "sourceType": "acupoint_source_records",
    "relatedDbUrl": "https://shinkyuu-db.pages.dev/acupoints/cv20",
-   "updatedAt": "2026-10-12T20:53:05+09:00",
+   "updatedAt": "2026-10-22T14:06:51+09:00",
    "publicationAllowed": false,
    "warningNotes": [
     "名称が日本の資料で確認できていない。記事では WHO コードで書くか、扱わない",
@@ -12309,11 +12309,11 @@
    "examRounds": [],
    "examQuestionCount": 0,
    "examQuestionIds": [],
-   "sourceVersion": "shinkyuu-db@ee647cd+dirty",
+   "sourceVersion": "shinkyuu-db@d090183",
    "verifiedStatus": "NOT_APPLICABLE",
    "sourceType": "acupoint_source_records",
    "relatedDbUrl": "https://shinkyuu-db.pages.dev/acupoints/cv21",
-   "updatedAt": "2026-10-12T20:53:05+09:00",
+   "updatedAt": "2026-10-22T14:06:51+09:00",
    "publicationAllowed": false,
    "warningNotes": [
     "名称が日本の資料で確認できていない。記事では WHO コードで書くか、扱わない",
@@ -12346,11 +12346,11 @@
    "examQuestionIds": [
     "33-126"
    ],
-   "sourceVersion": "shinkyuu-db@ee647cd+dirty",
+   "sourceVersion": "shinkyuu-db@d090183",
    "verifiedStatus": "JAPAN_VERIFIED",
    "sourceType": "acupoint_source_records",
    "relatedDbUrl": "https://shinkyuu-db.pages.dev/acupoints/cv22",
-   "updatedAt": "2026-10-12T20:53:05+09:00",
+   "updatedAt": "2026-10-22T14:06:51+09:00",
    "publicationAllowed": true,
    "warningNotes": [
     "位置は WHO 基準でのみ確認。「WHO 基準では」と明記し、日本の教科書で確認済みと書かない",
@@ -12379,11 +12379,11 @@
    "examRounds": [],
    "examQuestionCount": 0,
    "examQuestionIds": [],
-   "sourceVersion": "shinkyuu-db@ee647cd+dirty",
+   "sourceVersion": "shinkyuu-db@d090183",
    "verifiedStatus": "SOURCE_NEEDED",
    "sourceType": "acupoint_source_records",
    "relatedDbUrl": "https://shinkyuu-db.pages.dev/acupoints/cv23",
-   "updatedAt": "2026-10-12T20:53:05+09:00",
+   "updatedAt": "2026-10-22T14:06:51+09:00",
    "publicationAllowed": false,
    "warningNotes": [
     "名称が日本の資料で確認できていない。記事では WHO コードで書くか、扱わない",
@@ -12413,11 +12413,11 @@
    "examRounds": [],
    "examQuestionCount": 0,
    "examQuestionIds": [],
-   "sourceVersion": "shinkyuu-db@ee647cd+dirty",
+   "sourceVersion": "shinkyuu-db@d090183",
    "verifiedStatus": "SOURCE_NEEDED",
    "sourceType": "acupoint_source_records",
    "relatedDbUrl": "https://shinkyuu-db.pages.dev/acupoints/cv24",
-   "updatedAt": "2026-10-12T20:53:05+09:00",
+   "updatedAt": "2026-10-22T14:06:51+09:00",
    "publicationAllowed": false,
    "warningNotes": [
     "名称が日本の資料で確認できていない。記事では WHO コードで書くか、扱わない",
@@ -12453,11 +12453,11 @@
    "examRounds": [],
    "examQuestionCount": 0,
    "examQuestionIds": [],
-   "sourceVersion": "shinkyuu-db@ee647cd+dirty",
+   "sourceVersion": "shinkyuu-db@d090183",
    "verifiedStatus": "SOURCE_NEEDED",
    "sourceType": "acupoint_source_records",
    "relatedDbUrl": "https://shinkyuu-db.pages.dev/acupoints/gv1",
-   "updatedAt": "2026-10-12T20:53:05+09:00",
+   "updatedAt": "2026-10-22T14:06:51+09:00",
    "publicationAllowed": false,
    "warningNotes": [
     "名称が日本の資料で確認できていない。記事では WHO コードで書くか、扱わない",
@@ -12488,11 +12488,11 @@
    "examRounds": [],
    "examQuestionCount": 0,
    "examQuestionIds": [],
-   "sourceVersion": "shinkyuu-db@ee647cd+dirty",
+   "sourceVersion": "shinkyuu-db@d090183",
    "verifiedStatus": "JAPAN_VERIFIED",
    "sourceType": "acupoint_source_records",
    "relatedDbUrl": "https://shinkyuu-db.pages.dev/acupoints/gv2",
-   "updatedAt": "2026-10-12T20:53:05+09:00",
+   "updatedAt": "2026-10-22T14:06:51+09:00",
    "publicationAllowed": true,
    "warningNotes": [
     "読みは出典未確認のため書き出していない"
@@ -12520,11 +12520,11 @@
    "examRounds": [],
    "examQuestionCount": 0,
    "examQuestionIds": [],
-   "sourceVersion": "shinkyuu-db@ee647cd+dirty",
+   "sourceVersion": "shinkyuu-db@d090183",
    "verifiedStatus": "JAPAN_VERIFIED",
    "sourceType": "acupoint_source_records",
    "relatedDbUrl": "https://shinkyuu-db.pages.dev/acupoints/gv3",
-   "updatedAt": "2026-10-12T20:53:05+09:00",
+   "updatedAt": "2026-10-22T14:06:51+09:00",
    "publicationAllowed": true,
    "warningNotes": [
     "位置は WHO 基準でのみ確認。「WHO 基準では」と明記し、日本の教科書で確認済みと書かない",
@@ -12559,11 +12559,11 @@
     "32-115",
     "34-147"
    ],
-   "sourceVersion": "shinkyuu-db@ee647cd+dirty",
+   "sourceVersion": "shinkyuu-db@d090183",
    "verifiedStatus": "JAPAN_VERIFIED",
    "sourceType": "acupoint_source_records",
    "relatedDbUrl": "https://shinkyuu-db.pages.dev/acupoints/gv4",
-   "updatedAt": "2026-10-12T20:53:05+09:00",
+   "updatedAt": "2026-10-22T14:06:51+09:00",
    "publicationAllowed": true,
    "warningNotes": [
     "位置は WHO 基準でのみ確認。「WHO 基準では」と明記し、日本の教科書で確認済みと書かない",
@@ -12592,11 +12592,11 @@
    "examRounds": [],
    "examQuestionCount": 0,
    "examQuestionIds": [],
-   "sourceVersion": "shinkyuu-db@ee647cd+dirty",
+   "sourceVersion": "shinkyuu-db@d090183",
    "verifiedStatus": "JAPAN_VERIFIED",
    "sourceType": "acupoint_source_records",
    "relatedDbUrl": "https://shinkyuu-db.pages.dev/acupoints/gv5",
-   "updatedAt": "2026-10-12T20:53:05+09:00",
+   "updatedAt": "2026-10-22T14:06:51+09:00",
    "publicationAllowed": true,
    "warningNotes": [
     "読みは出典未確認のため書き出していない"
@@ -12624,11 +12624,11 @@
    "examRounds": [],
    "examQuestionCount": 0,
    "examQuestionIds": [],
-   "sourceVersion": "shinkyuu-db@ee647cd+dirty",
+   "sourceVersion": "shinkyuu-db@d090183",
    "verifiedStatus": "NOT_APPLICABLE",
    "sourceType": "acupoint_source_records",
    "relatedDbUrl": "https://shinkyuu-db.pages.dev/acupoints/gv6",
-   "updatedAt": "2026-10-12T20:53:05+09:00",
+   "updatedAt": "2026-10-22T14:06:51+09:00",
    "publicationAllowed": false,
    "warningNotes": [
     "名称が日本の資料で確認できていない。記事では WHO コードで書くか、扱わない",
@@ -12657,11 +12657,11 @@
    "examRounds": [],
    "examQuestionCount": 0,
    "examQuestionIds": [],
-   "sourceVersion": "shinkyuu-db@ee647cd+dirty",
+   "sourceVersion": "shinkyuu-db@d090183",
    "verifiedStatus": "JAPAN_VERIFIED",
    "sourceType": "acupoint_source_records",
    "relatedDbUrl": "https://shinkyuu-db.pages.dev/acupoints/gv7",
-   "updatedAt": "2026-10-12T20:53:05+09:00",
+   "updatedAt": "2026-10-22T14:06:51+09:00",
    "publicationAllowed": true,
    "warningNotes": [
     "読みは出典未確認のため書き出していない"
@@ -12689,11 +12689,11 @@
    "examRounds": [],
    "examQuestionCount": 0,
    "examQuestionIds": [],
-   "sourceVersion": "shinkyuu-db@ee647cd+dirty",
+   "sourceVersion": "shinkyuu-db@d090183",
    "verifiedStatus": "NOT_APPLICABLE",
    "sourceType": "acupoint_source_records",
    "relatedDbUrl": "https://shinkyuu-db.pages.dev/acupoints/gv8",
-   "updatedAt": "2026-10-12T20:53:05+09:00",
+   "updatedAt": "2026-10-22T14:06:51+09:00",
    "publicationAllowed": false,
    "warningNotes": [
     "名称が日本の資料で確認できていない。記事では WHO コードで書くか、扱わない",
@@ -12726,11 +12726,11 @@
    "examQuestionIds": [
     "30-122"
    ],
-   "sourceVersion": "shinkyuu-db@ee647cd+dirty",
+   "sourceVersion": "shinkyuu-db@d090183",
    "verifiedStatus": "JAPAN_VERIFIED",
    "sourceType": "acupoint_source_records",
    "relatedDbUrl": "https://shinkyuu-db.pages.dev/acupoints/gv9",
-   "updatedAt": "2026-10-12T20:53:05+09:00",
+   "updatedAt": "2026-10-22T14:06:51+09:00",
    "publicationAllowed": true,
    "warningNotes": [
     "位置は WHO 基準でのみ確認。「WHO 基準では」と明記し、日本の教科書で確認済みと書かない",
@@ -12763,11 +12763,11 @@
    "examQuestionIds": [
     "31-114"
    ],
-   "sourceVersion": "shinkyuu-db@ee647cd+dirty",
+   "sourceVersion": "shinkyuu-db@d090183",
    "verifiedStatus": "JAPAN_VERIFIED",
    "sourceType": "acupoint_source_records",
    "relatedDbUrl": "https://shinkyuu-db.pages.dev/acupoints/gv10",
-   "updatedAt": "2026-10-12T20:53:05+09:00",
+   "updatedAt": "2026-10-22T14:06:51+09:00",
    "publicationAllowed": true,
    "warningNotes": [
     "読みは出典未確認のため書き出していない"
@@ -12795,11 +12795,11 @@
    "examRounds": [],
    "examQuestionCount": 0,
    "examQuestionIds": [],
-   "sourceVersion": "shinkyuu-db@ee647cd+dirty",
+   "sourceVersion": "shinkyuu-db@d090183",
    "verifiedStatus": "JAPAN_VERIFIED",
    "sourceType": "acupoint_source_records",
    "relatedDbUrl": "https://shinkyuu-db.pages.dev/acupoints/gv11",
-   "updatedAt": "2026-10-12T20:53:05+09:00",
+   "updatedAt": "2026-10-22T14:06:51+09:00",
    "publicationAllowed": true,
    "warningNotes": [
     "読みは出典未確認のため書き出していない"
@@ -12832,11 +12832,11 @@
     "34-114",
     "34-150"
    ],
-   "sourceVersion": "shinkyuu-db@ee647cd+dirty",
+   "sourceVersion": "shinkyuu-db@d090183",
    "verifiedStatus": "JAPAN_VERIFIED",
    "sourceType": "acupoint_source_records",
    "relatedDbUrl": "https://shinkyuu-db.pages.dev/acupoints/gv12",
-   "updatedAt": "2026-10-12T20:53:05+09:00",
+   "updatedAt": "2026-10-22T14:06:51+09:00",
    "publicationAllowed": true,
    "warningNotes": [
     "読みは出典未確認のため書き出していない"
@@ -12868,11 +12868,11 @@
    "examQuestionIds": [
     "30-112"
    ],
-   "sourceVersion": "shinkyuu-db@ee647cd+dirty",
+   "sourceVersion": "shinkyuu-db@d090183",
    "verifiedStatus": "JAPAN_VERIFIED",
    "sourceType": "acupoint_source_records",
    "relatedDbUrl": "https://shinkyuu-db.pages.dev/acupoints/gv13",
-   "updatedAt": "2026-10-12T20:53:05+09:00",
+   "updatedAt": "2026-10-22T14:06:51+09:00",
    "publicationAllowed": true,
    "warningNotes": [
     "読みは出典未確認のため書き出していない"
@@ -12904,11 +12904,11 @@
    "examQuestionIds": [
     "31-111"
    ],
-   "sourceVersion": "shinkyuu-db@ee647cd+dirty",
+   "sourceVersion": "shinkyuu-db@d090183",
    "verifiedStatus": "JAPAN_VERIFIED",
    "sourceType": "acupoint_source_records",
    "relatedDbUrl": "https://shinkyuu-db.pages.dev/acupoints/gv14",
-   "updatedAt": "2026-10-12T20:53:05+09:00",
+   "updatedAt": "2026-10-22T14:06:51+09:00",
    "publicationAllowed": true,
    "warningNotes": [
     "位置は WHO 基準でのみ確認。「WHO 基準では」と明記し、日本の教科書で確認済みと書かない",
@@ -12941,11 +12941,11 @@
    "examQuestionIds": [
     "34-126"
    ],
-   "sourceVersion": "shinkyuu-db@ee647cd+dirty",
+   "sourceVersion": "shinkyuu-db@d090183",
    "verifiedStatus": "JAPAN_VERIFIED",
    "sourceType": "acupoint_source_records",
    "relatedDbUrl": "https://shinkyuu-db.pages.dev/acupoints/gv15",
-   "updatedAt": "2026-10-12T20:53:05+09:00",
+   "updatedAt": "2026-10-22T14:06:51+09:00",
    "publicationAllowed": true,
    "warningNotes": [
     "読みは出典未確認のため書き出していない"
@@ -12973,11 +12973,11 @@
    "examRounds": [],
    "examQuestionCount": 0,
    "examQuestionIds": [],
-   "sourceVersion": "shinkyuu-db@ee647cd+dirty",
+   "sourceVersion": "shinkyuu-db@d090183",
    "verifiedStatus": "SOURCE_NEEDED",
    "sourceType": "acupoint_source_records",
    "relatedDbUrl": "https://shinkyuu-db.pages.dev/acupoints/gv16",
-   "updatedAt": "2026-10-12T20:53:05+09:00",
+   "updatedAt": "2026-10-22T14:06:51+09:00",
    "publicationAllowed": false,
    "warningNotes": [
     "名称が日本の資料で確認できていない。記事では WHO コードで書くか、扱わない",
@@ -13007,11 +13007,11 @@
    "examRounds": [],
    "examQuestionCount": 0,
    "examQuestionIds": [],
-   "sourceVersion": "shinkyuu-db@ee647cd+dirty",
+   "sourceVersion": "shinkyuu-db@d090183",
    "verifiedStatus": "JAPAN_VERIFIED",
    "sourceType": "acupoint_source_records",
    "relatedDbUrl": "https://shinkyuu-db.pages.dev/acupoints/gv17",
-   "updatedAt": "2026-10-12T20:53:05+09:00",
+   "updatedAt": "2026-10-22T14:06:51+09:00",
    "publicationAllowed": true,
    "warningNotes": [
     "読みは出典未確認のため書き出していない"
@@ -13039,11 +13039,11 @@
    "examRounds": [],
    "examQuestionCount": 0,
    "examQuestionIds": [],
-   "sourceVersion": "shinkyuu-db@ee647cd+dirty",
+   "sourceVersion": "shinkyuu-db@d090183",
    "verifiedStatus": "NOT_APPLICABLE",
    "sourceType": "acupoint_source_records",
    "relatedDbUrl": "https://shinkyuu-db.pages.dev/acupoints/gv18",
-   "updatedAt": "2026-10-12T20:53:05+09:00",
+   "updatedAt": "2026-10-22T14:06:51+09:00",
    "publicationAllowed": false,
    "warningNotes": [
     "名称が日本の資料で確認できていない。記事では WHO コードで書くか、扱わない",
@@ -13072,11 +13072,11 @@
    "examRounds": [],
    "examQuestionCount": 0,
    "examQuestionIds": [],
-   "sourceVersion": "shinkyuu-db@ee647cd+dirty",
+   "sourceVersion": "shinkyuu-db@d090183",
    "verifiedStatus": "NOT_APPLICABLE",
    "sourceType": "acupoint_source_records",
    "relatedDbUrl": "https://shinkyuu-db.pages.dev/acupoints/gv19",
-   "updatedAt": "2026-10-12T20:53:05+09:00",
+   "updatedAt": "2026-10-22T14:06:51+09:00",
    "publicationAllowed": false,
    "warningNotes": [
     "名称が日本の資料で確認できていない。記事では WHO コードで書くか、扱わない",
@@ -13105,11 +13105,11 @@
    "examRounds": [],
    "examQuestionCount": 0,
    "examQuestionIds": [],
-   "sourceVersion": "shinkyuu-db@ee647cd+dirty",
+   "sourceVersion": "shinkyuu-db@d090183",
    "verifiedStatus": "JAPAN_VERIFIED",
    "sourceType": "acupoint_source_records",
    "relatedDbUrl": "https://shinkyuu-db.pages.dev/acupoints/gv20",
-   "updatedAt": "2026-10-12T20:53:05+09:00",
+   "updatedAt": "2026-10-22T14:06:51+09:00",
    "publicationAllowed": true,
    "warningNotes": [
     "位置は WHO 基準でのみ確認。「WHO 基準では」と明記し、日本の教科書で確認済みと書かない",
@@ -13138,11 +13138,11 @@
    "examRounds": [],
    "examQuestionCount": 0,
    "examQuestionIds": [],
-   "sourceVersion": "shinkyuu-db@ee647cd+dirty",
+   "sourceVersion": "shinkyuu-db@d090183",
    "verifiedStatus": "NOT_APPLICABLE",
    "sourceType": "acupoint_source_records",
    "relatedDbUrl": "https://shinkyuu-db.pages.dev/acupoints/gv21",
-   "updatedAt": "2026-10-12T20:53:05+09:00",
+   "updatedAt": "2026-10-22T14:06:51+09:00",
    "publicationAllowed": false,
    "warningNotes": [
     "名称が日本の資料で確認できていない。記事では WHO コードで書くか、扱わない",
@@ -13175,11 +13175,11 @@
    "examQuestionIds": [
     "31-115"
    ],
-   "sourceVersion": "shinkyuu-db@ee647cd+dirty",
+   "sourceVersion": "shinkyuu-db@d090183",
    "verifiedStatus": "JAPAN_VERIFIED",
    "sourceType": "acupoint_source_records",
    "relatedDbUrl": "https://shinkyuu-db.pages.dev/acupoints/gv22",
-   "updatedAt": "2026-10-12T20:53:05+09:00",
+   "updatedAt": "2026-10-22T14:06:51+09:00",
    "publicationAllowed": true,
    "warningNotes": [
     "読みは出典未確認のため書き出していない"
@@ -13207,11 +13207,11 @@
    "examRounds": [],
    "examQuestionCount": 0,
    "examQuestionIds": [],
-   "sourceVersion": "shinkyuu-db@ee647cd+dirty",
+   "sourceVersion": "shinkyuu-db@d090183",
    "verifiedStatus": "JAPAN_VERIFIED",
    "sourceType": "acupoint_source_records",
    "relatedDbUrl": "https://shinkyuu-db.pages.dev/acupoints/gv23",
-   "updatedAt": "2026-10-12T20:53:05+09:00",
+   "updatedAt": "2026-10-22T14:06:51+09:00",
    "publicationAllowed": true,
    "warningNotes": [
     "読みは出典未確認のため書き出していない"
@@ -13243,11 +13243,11 @@
    "examQuestionIds": [
     "34-113"
    ],
-   "sourceVersion": "shinkyuu-db@ee647cd+dirty",
+   "sourceVersion": "shinkyuu-db@d090183",
    "verifiedStatus": "JAPAN_VERIFIED",
    "sourceType": "acupoint_source_records",
    "relatedDbUrl": "https://shinkyuu-db.pages.dev/acupoints/gv24",
-   "updatedAt": "2026-10-12T20:53:05+09:00",
+   "updatedAt": "2026-10-22T14:06:51+09:00",
    "publicationAllowed": true,
    "warningNotes": [
     "位置は WHO 基準でのみ確認。「WHO 基準では」と明記し、日本の教科書で確認済みと書かない",
@@ -13276,11 +13276,11 @@
    "examRounds": [],
    "examQuestionCount": 0,
    "examQuestionIds": [],
-   "sourceVersion": "shinkyuu-db@ee647cd+dirty",
+   "sourceVersion": "shinkyuu-db@d090183",
    "verifiedStatus": "NOT_APPLICABLE",
    "sourceType": "acupoint_source_records",
    "relatedDbUrl": "https://shinkyuu-db.pages.dev/acupoints/gv25",
-   "updatedAt": "2026-10-12T20:53:05+09:00",
+   "updatedAt": "2026-10-22T14:06:51+09:00",
    "publicationAllowed": false,
    "warningNotes": [
     "名称が日本の資料で確認できていない。記事では WHO コードで書くか、扱わない",
@@ -13309,11 +13309,11 @@
    "examRounds": [],
    "examQuestionCount": 0,
    "examQuestionIds": [],
-   "sourceVersion": "shinkyuu-db@ee647cd+dirty",
+   "sourceVersion": "shinkyuu-db@d090183",
    "verifiedStatus": "SOURCE_NEEDED",
    "sourceType": "acupoint_source_records",
    "relatedDbUrl": "https://shinkyuu-db.pages.dev/acupoints/gv26",
-   "updatedAt": "2026-10-12T20:53:05+09:00",
+   "updatedAt": "2026-10-22T14:06:51+09:00",
    "publicationAllowed": false,
    "warningNotes": [
     "名称が日本の資料で確認できていない。記事では WHO コードで書くか、扱わない",
@@ -13343,11 +13343,11 @@
    "examRounds": [],
    "examQuestionCount": 0,
    "examQuestionIds": [],
-   "sourceVersion": "shinkyuu-db@ee647cd+dirty",
+   "sourceVersion": "shinkyuu-db@d090183",
    "verifiedStatus": "NOT_APPLICABLE",
    "sourceType": "acupoint_source_records",
    "relatedDbUrl": "https://shinkyuu-db.pages.dev/acupoints/gv27",
-   "updatedAt": "2026-10-12T20:53:05+09:00",
+   "updatedAt": "2026-10-22T14:06:51+09:00",
    "publicationAllowed": false,
    "warningNotes": [
     "名称が日本の資料で確認できていない。記事では WHO コードで書くか、扱わない",
@@ -13376,11 +13376,11 @@
    "examRounds": [],
    "examQuestionCount": 0,
    "examQuestionIds": [],
-   "sourceVersion": "shinkyuu-db@ee647cd+dirty",
+   "sourceVersion": "shinkyuu-db@d090183",
    "verifiedStatus": "NOT_APPLICABLE",
    "sourceType": "acupoint_source_records",
    "relatedDbUrl": "https://shinkyuu-db.pages.dev/acupoints/gv28",
-   "updatedAt": "2026-10-12T20:53:05+09:00",
+   "updatedAt": "2026-10-22T14:06:51+09:00",
    "publicationAllowed": false,
    "warningNotes": [
     "名称が日本の資料で確認できていない。記事では WHO コードで書くか、扱わない",

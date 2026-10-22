@@ -1,7 +1,7 @@
 {
  "stableId": "topic-statistics",
- "sourceVersion": "shinkyuu-db@ee647cd+dirty",
- "updatedAt": "2026-10-12T20:53:05+09:00",
+ "sourceVersion": "shinkyuu-db@d090183",
+ "updatedAt": "2026-10-22T14:06:51+09:00",
  "countMethod": "第29〜34回の公式過去問1080問を、当DBのテーマ分類（themeId・1問1テーマ）で数えた件数。テーマ分類は当DB独自（出題基準の項目を参考に作成）",
  "subjects": [
   {
@@ -18,11 +18,11 @@
     "34": 4
    },
    "practiceCount": 24,
-   "sourceVersion": "shinkyuu-db@ee647cd+dirty",
+   "sourceVersion": "shinkyuu-db@d090183",
    "verifiedStatus": "COMPUTED_FROM_OFFICIAL_EXAMS",
    "sourceType": "official_exam",
    "relatedDbUrl": "https://shinkyuu-db.pages.dev/past-exams/subject/medical-overview",
-   "updatedAt": "2026-10-12T20:53:05+09:00",
+   "updatedAt": "2026-10-22T14:06:51+09:00",
    "publicationAllowed": true,
    "warningNotes": [
     "母数：第29〜34回の1080問。科目は当DBの分類"
@@ -42,11 +42,11 @@
     "34": 6
    },
    "practiceCount": 36,
-   "sourceVersion": "shinkyuu-db@ee647cd+dirty",
+   "sourceVersion": "shinkyuu-db@d090183",
    "verifiedStatus": "COMPUTED_FROM_OFFICIAL_EXAMS",
    "sourceType": "official_exam",
    "relatedDbUrl": "https://shinkyuu-db.pages.dev/past-exams/subject/hygiene",
-   "updatedAt": "2026-10-12T20:53:05+09:00",
+   "updatedAt": "2026-10-22T14:06:51+09:00",
    "publicationAllowed": true,
    "warningNotes": [
     "母数：第29〜34回の1080問。科目は当DBの分類"
@@ -66,11 +66,11 @@
     "34": 4
    },
    "practiceCount": 24,
-   "sourceVersion": "shinkyuu-db@ee647cd+dirty",
+   "sourceVersion": "shinkyuu-db@d090183",
    "verifiedStatus": "COMPUTED_FROM_OFFICIAL_EXAMS",
    "sourceType": "official_exam",
    "relatedDbUrl": "https://shinkyuu-db.pages.dev/past-exams/subject/regulations",
-   "updatedAt": "2026-10-12T20:53:05+09:00",
+   "updatedAt": "2026-10-22T14:06:51+09:00",
    "publicationAllowed": true,
    "warningNotes": [
     "母数：第29〜34回の1080問。科目は当DBの分類"
@@ -90,11 +90,11 @@
     "34": 9
    },
    "practiceCount": 54,
-   "sourceVersion": "shinkyuu-db@ee647cd+dirty",
+   "sourceVersion": "shinkyuu-db@d090183",
    "verifiedStatus": "COMPUTED_FROM_OFFICIAL_EXAMS",
    "sourceType": "official_exam",
    "relatedDbUrl": "https://shinkyuu-db.pages.dev/past-exams/subject/anatomy",
-   "updatedAt": "2026-10-12T20:53:05+09:00",
+   "updatedAt": "2026-10-22T14:06:51+09:00",
    "publicationAllowed": true,
    "warningNotes": [
     "母数：第29〜34回の1080問。科目は当DBの分類"
@@ -114,11 +114,11 @@
     "34": 9
    },
    "practiceCount": 54,
-   "sourceVersion": "shinkyuu-db@ee647cd+dirty",
+   "sourceVersion": "shinkyuu-db@d090183",
    "verifiedStatus": "COMPUTED_FROM_OFFICIAL_EXAMS",
    "sourceType": "official_exam",
    "relatedDbUrl": "https://shinkyuu-db.pages.dev/past-exams/subject/physiology",
-   "updatedAt": "2026-10-12T20:53:05+09:00",
+   "updatedAt": "2026-10-22T14:06:51+09:00",
    "publicationAllowed": true,
    "warningNotes": [
     "母数：第29〜34回の1080問。科目は当DBの分類"
@@ -138,11 +138,11 @@
     "34": 6
    },
    "practiceCount": 36,
-   "sourceVersion": "shinkyuu-db@ee647cd+dirty",
+   "sourceVersion": "shinkyuu-db@d090183",
    "verifiedStatus": "COMPUTED_FROM_OFFICIAL_EXAMS",
    "sourceType": "official_exam",
    "relatedDbUrl": "https://shinkyuu-db.pages.dev/past-exams/subject/pathology",
-   "updatedAt": "2026-10-12T20:53:05+09:00",
+   "updatedAt": "2026-10-22T14:06:51+09:00",
    "publicationAllowed": true,
    "warningNotes": [
     "母数：第29〜34回の1080問。科目は当DBの分類"
@@ -162,11 +162,11 @@
     "34": 10
    },
    "practiceCount": 60,
-   "sourceVersion": "shinkyuu-db@ee647cd+dirty",
+   "sourceVersion": "shinkyuu-db@d090183",
    "verifiedStatus": "COMPUTED_FROM_OFFICIAL_EXAMS",
    "sourceType": "official_exam",
    "relatedDbUrl": "https://shinkyuu-db.pages.dev/past-exams/subject/clinical-general",
-   "updatedAt": "2026-10-12T20:53:05+09:00",
+   "updatedAt": "2026-10-22T14:06:51+09:00",
    "publicationAllowed": true,
    "warningNotes": [
     "母数：第29〜34回の1080問。科目は当DBの分類"
@@ -186,11 +186,11 @@
     "34": 29
    },
    "practiceCount": 175,
-   "sourceVersion": "shinkyuu-db@ee647cd+dirty",
+   "sourceVersion": "shinkyuu-db@d090183",
    "verifiedStatus": "COMPUTED_FROM_OFFICIAL_EXAMS",
    "sourceType": "official_exam",
    "relatedDbUrl": "https://shinkyuu-db.pages.dev/past-exams/subject/clinical-specific",
-   "updatedAt": "2026-10-12T20:53:05+09:00",
+   "updatedAt": "2026-10-22T14:06:51+09:00",
    "publicationAllowed": true,
    "warningNotes": [
     "母数：第29〜34回の1080問。科目は当DBの分類"
@@ -210,11 +210,11 @@
     "34": 13
    },
    "practiceCount": 77,
-   "sourceVersion": "shinkyuu-db@ee647cd+dirty",
+   "sourceVersion": "shinkyuu-db@d090183",
    "verifiedStatus": "COMPUTED_FROM_OFFICIAL_EXAMS",
    "sourceType": "official_exam",
    "relatedDbUrl": "https://shinkyuu-db.pages.dev/past-exams/subject/rehabilitation",
-   "updatedAt": "2026-10-12T20:53:05+09:00",
+   "updatedAt": "2026-10-22T14:06:51+09:00",
    "publicationAllowed": true,
    "warningNotes": [
     "母数：第29〜34回の1080問。科目は当DBの分類"
@@ -234,11 +234,11 @@
     "34": 16
    },
    "practiceCount": 96,
-   "sourceVersion": "shinkyuu-db@ee647cd+dirty",
+   "sourceVersion": "shinkyuu-db@d090183",
    "verifiedStatus": "COMPUTED_FROM_OFFICIAL_EXAMS",
    "sourceType": "official_exam",
    "relatedDbUrl": "https://shinkyuu-db.pages.dev/past-exams/subject/oriental-overview",
-   "updatedAt": "2026-10-12T20:53:05+09:00",
+   "updatedAt": "2026-10-22T14:06:51+09:00",
    "publicationAllowed": true,
    "warningNotes": [
     "母数：第29〜34回の1080問。科目は当DBの分類"
@@ -258,11 +258,11 @@
     "34": 20
    },
    "practiceCount": 120,
-   "sourceVersion": "shinkyuu-db@ee647cd+dirty",
+   "sourceVersion": "shinkyuu-db@d090183",
    "verifiedStatus": "COMPUTED_FROM_OFFICIAL_EXAMS",
    "sourceType": "official_exam",
    "relatedDbUrl": "https://shinkyuu-db.pages.dev/past-exams/subject/meridians-acupoints",
-   "updatedAt": "2026-10-12T20:53:05+09:00",
+   "updatedAt": "2026-10-22T14:06:51+09:00",
    "publicationAllowed": true,
    "warningNotes": [
     "母数：第29〜34回の1080問。科目は当DBの分類"
@@ -282,11 +282,11 @@
     "34": 10
    },
    "practiceCount": 60,
-   "sourceVersion": "shinkyuu-db@ee647cd+dirty",
+   "sourceVersion": "shinkyuu-db@d090183",
    "verifiedStatus": "COMPUTED_FROM_OFFICIAL_EXAMS",
    "sourceType": "official_exam",
    "relatedDbUrl": "https://shinkyuu-db.pages.dev/past-exams/subject/acupuncture-theory",
-   "updatedAt": "2026-10-12T20:53:05+09:00",
+   "updatedAt": "2026-10-22T14:06:51+09:00",
    "publicationAllowed": true,
    "warningNotes": [
     "母数：第29〜34回の1080問。科目は当DBの分類"
@@ -306,11 +306,11 @@
     "34": 10
    },
    "practiceCount": 60,
-   "sourceVersion": "shinkyuu-db@ee647cd+dirty",
+   "sourceVersion": "shinkyuu-db@d090183",
    "verifiedStatus": "COMPUTED_FROM_OFFICIAL_EXAMS",
    "sourceType": "official_exam",
    "relatedDbUrl": "https://shinkyuu-db.pages.dev/past-exams/subject/moxibustion-theory",
-   "updatedAt": "2026-10-12T20:53:05+09:00",
+   "updatedAt": "2026-10-22T14:06:51+09:00",
    "publicationAllowed": true,
    "warningNotes": [
     "母数：第29〜34回の1080問。科目は当DBの分類"
@@ -330,11 +330,11 @@
     "34": 34
    },
    "practiceCount": 204,
-   "sourceVersion": "shinkyuu-db@ee647cd+dirty",
+   "sourceVersion": "shinkyuu-db@d090183",
    "verifiedStatus": "COMPUTED_FROM_OFFICIAL_EXAMS",
    "sourceType": "official_exam",
    "relatedDbUrl": "https://shinkyuu-db.pages.dev/past-exams/subject/oriental-clinical",
-   "updatedAt": "2026-10-12T20:53:05+09:00",
+   "updatedAt": "2026-10-22T14:06:51+09:00",
    "publicationAllowed": true,
    "warningNotes": [
     "母数：第29〜34回の1080問。科目は当DBの分類"
@@ -365,7 +365,7 @@
    "pastExamPracticeCount": 3,
    "originalQuizCount": 0,
    "standard2026Status": null,
-   "sourceVersion": "shinkyuu-db@ee647cd+dirty",
+   "sourceVersion": "shinkyuu-db@d090183",
    "verifiedStatus": "COMPUTED_FROM_OFFICIAL_EXAMS",
    "sourceType": "official_exam",
    "relatedDbUrl": "https://shinkyuu-db.pages.dev/past-exams/theme/gen-ketsu",
@@ -373,7 +373,7 @@
     "theme": "https://shinkyuu-db.pages.dev/themes/gen-ketsu",
     "pastExams": "https://shinkyuu-db.pages.dev/past-exams/theme/gen-ketsu"
    },
-   "updatedAt": "2026-10-12T20:53:05+09:00",
+   "updatedAt": "2026-10-22T14:06:51+09:00",
    "publicationAllowed": true,
    "warningNotes": [
     "テーマ分類は当DB独自。出題数は「このテーマに分類した問題数」"
@@ -402,7 +402,7 @@
    "pastExamPracticeCount": 4,
    "originalQuizCount": 1,
    "standard2026Status": null,
-   "sourceVersion": "shinkyuu-db@ee647cd+dirty",
+   "sourceVersion": "shinkyuu-db@d090183",
    "verifiedStatus": "COMPUTED_FROM_OFFICIAL_EXAMS",
    "sourceType": "official_exam",
    "relatedDbUrl": "https://shinkyuu-db.pages.dev/past-exams/theme/geki-ketsu",
@@ -411,7 +411,7 @@
     "pastExams": "https://shinkyuu-db.pages.dev/past-exams/theme/geki-ketsu",
     "quiz": "https://shinkyuu-db.pages.dev/quiz/theme/geki-ketsu"
    },
-   "updatedAt": "2026-10-12T20:53:05+09:00",
+   "updatedAt": "2026-10-22T14:06:51+09:00",
    "publicationAllowed": true,
    "warningNotes": [
     "テーマ分類は当DB独自。出題数は「このテーマに分類した問題数」"
@@ -440,7 +440,7 @@
    "pastExamPracticeCount": 4,
    "originalQuizCount": 4,
    "standard2026Status": null,
-   "sourceVersion": "shinkyuu-db@ee647cd+dirty",
+   "sourceVersion": "shinkyuu-db@d090183",
    "verifiedStatus": "COMPUTED_FROM_OFFICIAL_EXAMS",
    "sourceType": "official_exam",
    "relatedDbUrl": "https://shinkyuu-db.pages.dev/past-exams/theme/bo-ketsu",
@@ -449,7 +449,7 @@
     "pastExams": "https://shinkyuu-db.pages.dev/past-exams/theme/bo-ketsu",
     "quiz": "https://shinkyuu-db.pages.dev/quiz/theme/bo-ketsu"
    },
-   "updatedAt": "2026-10-12T20:53:05+09:00",
+   "updatedAt": "2026-10-22T14:06:51+09:00",
    "publicationAllowed": true,
    "warningNotes": [
     "テーマ分類は当DB独自。出題数は「このテーマに分類した問題数」"
@@ -481,7 +481,7 @@
    "pastExamPracticeCount": 12,
    "originalQuizCount": 3,
    "standard2026Status": null,
-   "sourceVersion": "shinkyuu-db@ee647cd+dirty",
+   "sourceVersion": "shinkyuu-db@d090183",
    "verifiedStatus": "COMPUTED_FROM_OFFICIAL_EXAMS",
    "sourceType": "official_exam",
    "relatedDbUrl": "https://shinkyuu-db.pages.dev/past-exams/theme/go-yu-ketsu",
@@ -490,7 +490,7 @@
     "pastExams": "https://shinkyuu-db.pages.dev/past-exams/theme/go-yu-ketsu",
     "quiz": "https://shinkyuu-db.pages.dev/quiz/theme/go-yu-ketsu"
    },
-   "updatedAt": "2026-10-12T20:53:05+09:00",
+   "updatedAt": "2026-10-22T14:06:51+09:00",
    "publicationAllowed": true,
    "warningNotes": [
     "テーマ分類は当DB独自。出題数は「このテーマに分類した問題数」"
@@ -520,7 +520,7 @@
    "pastExamPracticeCount": 7,
    "originalQuizCount": 0,
    "standard2026Status": null,
-   "sourceVersion": "shinkyuu-db@ee647cd+dirty",
+   "sourceVersion": "shinkyuu-db@d090183",
    "verifiedStatus": "COMPUTED_FROM_OFFICIAL_EXAMS",
    "sourceType": "official_exam",
    "relatedDbUrl": "https://shinkyuu-db.pages.dev/past-exams/theme/kiki-hachi-myaku",
@@ -528,7 +528,7 @@
     "theme": "https://shinkyuu-db.pages.dev/themes/kiki-hachi-myaku",
     "pastExams": "https://shinkyuu-db.pages.dev/past-exams/theme/kiki-hachi-myaku"
    },
-   "updatedAt": "2026-10-12T20:53:05+09:00",
+   "updatedAt": "2026-10-22T14:06:51+09:00",
    "publicationAllowed": true,
    "warningNotes": [
     "テーマ分類は当DB独自。出題数は「このテーマに分類した問題数」"
@@ -560,7 +560,7 @@
    "pastExamPracticeCount": 51,
    "originalQuizCount": 0,
    "standard2026Status": null,
-   "sourceVersion": "shinkyuu-db@ee647cd+dirty",
+   "sourceVersion": "shinkyuu-db@d090183",
    "verifiedStatus": "COMPUTED_FROM_OFFICIAL_EXAMS",
    "sourceType": "official_exam",
    "relatedDbUrl": "https://shinkyuu-db.pages.dev/past-exams/theme/juni-kei-myaku",
@@ -568,7 +568,7 @@
     "theme": "https://shinkyuu-db.pages.dev/themes/juni-kei-myaku",
     "pastExams": "https://shinkyuu-db.pages.dev/past-exams/theme/juni-kei-myaku"
    },
-   "updatedAt": "2026-10-12T20:53:05+09:00",
+   "updatedAt": "2026-10-22T14:06:51+09:00",
    "publicationAllowed": true,
    "warningNotes": [
     "テーマ分類は当DB独自。出題数は「このテーマに分類した問題数」"
@@ -597,7 +597,7 @@
    "pastExamPracticeCount": 5,
    "originalQuizCount": 0,
    "standard2026Status": null,
-   "sourceVersion": "shinkyuu-db@ee647cd+dirty",
+   "sourceVersion": "shinkyuu-db@d090183",
    "verifiedStatus": "COMPUTED_FROM_OFFICIAL_EXAMS",
    "sourceType": "official_exam",
    "relatedDbUrl": "https://shinkyuu-db.pages.dev/past-exams/theme/kei-myaku-ryuchu",
@@ -605,7 +605,7 @@
     "theme": "https://shinkyuu-db.pages.dev/themes/kei-myaku-ryuchu",
     "pastExams": "https://shinkyuu-db.pages.dev/past-exams/theme/kei-myaku-ryuchu"
    },
-   "updatedAt": "2026-10-12T20:53:05+09:00",
+   "updatedAt": "2026-10-22T14:06:51+09:00",
    "publicationAllowed": true,
    "warningNotes": [
     "テーマ分類は当DB独自。出題数は「このテーマに分類した問題数」"
@@ -630,14 +630,14 @@
    "pastExamPracticeCount": 0,
    "originalQuizCount": 0,
    "standard2026Status": null,
-   "sourceVersion": "shinkyuu-db@ee647cd+dirty",
+   "sourceVersion": "shinkyuu-db@d090183",
    "verifiedStatus": "COMPUTED_FROM_OFFICIAL_EXAMS",
    "sourceType": "official_exam",
    "relatedDbUrl": "https://shinkyuu-db.pages.dev/themes/kei-ketsu-shuchi",
    "relatedDbUrls": {
     "theme": "https://shinkyuu-db.pages.dev/themes/kei-ketsu-shuchi"
    },
-   "updatedAt": "2026-10-12T20:53:05+09:00",
+   "updatedAt": "2026-10-22T14:06:51+09:00",
    "publicationAllowed": true,
    "warningNotes": [
     "テーマ分類は当DB独自。出題数は「このテーマに分類した問題数」",
@@ -667,7 +667,7 @@
    "pastExamPracticeCount": 3,
    "originalQuizCount": 0,
    "standard2026Status": null,
-   "sourceVersion": "shinkyuu-db@ee647cd+dirty",
+   "sourceVersion": "shinkyuu-db@d090183",
    "verifiedStatus": "COMPUTED_FROM_OFFICIAL_EXAMS",
    "sourceType": "official_exam",
    "relatedDbUrl": "https://shinkyuu-db.pages.dev/past-exams/theme/in-yo-ron",
@@ -675,7 +675,7 @@
     "theme": "https://shinkyuu-db.pages.dev/themes/in-yo-ron",
     "pastExams": "https://shinkyuu-db.pages.dev/past-exams/theme/in-yo-ron"
    },
-   "updatedAt": "2026-10-12T20:53:05+09:00",
+   "updatedAt": "2026-10-22T14:06:51+09:00",
    "publicationAllowed": true,
    "warningNotes": [
     "テーマ分類は当DB独自。出題数は「このテーマに分類した問題数」"
@@ -706,7 +706,7 @@
    "pastExamPracticeCount": 6,
    "originalQuizCount": 2,
    "standard2026Status": null,
-   "sourceVersion": "shinkyuu-db@ee647cd+dirty",
+   "sourceVersion": "shinkyuu-db@d090183",
    "verifiedStatus": "COMPUTED_FROM_OFFICIAL_EXAMS",
    "sourceType": "official_exam",
    "relatedDbUrl": "https://shinkyuu-db.pages.dev/past-exams/theme/go-gyo-ron",
@@ -715,7 +715,7 @@
     "pastExams": "https://shinkyuu-db.pages.dev/past-exams/theme/go-gyo-ron",
     "quiz": "https://shinkyuu-db.pages.dev/quiz/theme/go-gyo-ron"
    },
-   "updatedAt": "2026-10-12T20:53:05+09:00",
+   "updatedAt": "2026-10-22T14:06:51+09:00",
    "publicationAllowed": true,
    "warningNotes": [
     "テーマ分類は当DB独自。出題数は「このテーマに分類した問題数」"
@@ -747,7 +747,7 @@
    "pastExamPracticeCount": 11,
    "originalQuizCount": 1,
    "standard2026Status": null,
-   "sourceVersion": "shinkyuu-db@ee647cd+dirty",
+   "sourceVersion": "shinkyuu-db@d090183",
    "verifiedStatus": "COMPUTED_FROM_OFFICIAL_EXAMS",
    "sourceType": "official_exam",
    "relatedDbUrl": "https://shinkyuu-db.pages.dev/past-exams/theme/ki-ketsu-shin-eki",
@@ -756,7 +756,7 @@
     "pastExams": "https://shinkyuu-db.pages.dev/past-exams/theme/ki-ketsu-shin-eki",
     "quiz": "https://shinkyuu-db.pages.dev/quiz/theme/ki-ketsu-shin-eki"
    },
-   "updatedAt": "2026-10-12T20:53:05+09:00",
+   "updatedAt": "2026-10-22T14:06:51+09:00",
    "publicationAllowed": true,
    "warningNotes": [
     "テーマ分類は当DB独自。出題数は「このテーマに分類した問題数」"
@@ -788,7 +788,7 @@
    "pastExamPracticeCount": 11,
    "originalQuizCount": 5,
    "standard2026Status": null,
-   "sourceVersion": "shinkyuu-db@ee647cd+dirty",
+   "sourceVersion": "shinkyuu-db@d090183",
    "verifiedStatus": "COMPUTED_FROM_OFFICIAL_EXAMS",
    "sourceType": "official_exam",
    "relatedDbUrl": "https://shinkyuu-db.pages.dev/past-exams/theme/zo-sho",
@@ -797,7 +797,7 @@
     "pastExams": "https://shinkyuu-db.pages.dev/past-exams/theme/zo-sho",
     "quiz": "https://shinkyuu-db.pages.dev/quiz/theme/zo-sho"
    },
-   "updatedAt": "2026-10-12T20:53:05+09:00",
+   "updatedAt": "2026-10-22T14:06:51+09:00",
    "publicationAllowed": true,
    "warningNotes": [
     "テーマ分類は当DB独自。出題数は「このテーマに分類した問題数」"
@@ -829,7 +829,7 @@
    "pastExamPracticeCount": 7,
    "originalQuizCount": 1,
    "standard2026Status": null,
-   "sourceVersion": "shinkyuu-db@ee647cd+dirty",
+   "sourceVersion": "shinkyuu-db@d090183",
    "verifiedStatus": "COMPUTED_FROM_OFFICIAL_EXAMS",
    "sourceType": "official_exam",
    "relatedDbUrl": "https://shinkyuu-db.pages.dev/past-exams/theme/roku-in",
@@ -838,7 +838,7 @@
     "pastExams": "https://shinkyuu-db.pages.dev/past-exams/theme/roku-in",
     "quiz": "https://shinkyuu-db.pages.dev/quiz/theme/roku-in"
    },
-   "updatedAt": "2026-10-12T20:53:05+09:00",
+   "updatedAt": "2026-10-22T14:06:51+09:00",
    "publicationAllowed": true,
    "warningNotes": [
     "テーマ分類は当DB独自。出題数は「このテーマに分類した問題数」"
@@ -870,7 +870,7 @@
    "pastExamPracticeCount": 6,
    "originalQuizCount": 1,
    "standard2026Status": null,
-   "sourceVersion": "shinkyuu-db@ee647cd+dirty",
+   "sourceVersion": "shinkyuu-db@d090183",
    "verifiedStatus": "COMPUTED_FROM_OFFICIAL_EXAMS",
    "sourceType": "official_exam",
    "relatedDbUrl": "https://shinkyuu-db.pages.dev/past-exams/theme/shichi-jo",
@@ -879,7 +879,7 @@
     "pastExams": "https://shinkyuu-db.pages.dev/past-exams/theme/shichi-jo",
     "quiz": "https://shinkyuu-db.pages.dev/quiz/theme/shichi-jo"
    },
-   "updatedAt": "2026-10-12T20:53:05+09:00",
+   "updatedAt": "2026-10-22T14:06:51+09:00",
    "publicationAllowed": true,
    "warningNotes": [
     "テーマ分類は当DB独自。出題数は「このテーマに分類した問題数」"
@@ -904,14 +904,14 @@
    "pastExamPracticeCount": 0,
    "originalQuizCount": 0,
    "standard2026Status": "expanded",
-   "sourceVersion": "shinkyuu-db@ee647cd+dirty",
+   "sourceVersion": "shinkyuu-db@d090183",
    "verifiedStatus": "COMPUTED_FROM_OFFICIAL_EXAMS",
    "sourceType": "official_exam",
    "relatedDbUrl": "https://shinkyuu-db.pages.dev/themes/toyo-rekishi",
    "relatedDbUrls": {
     "theme": "https://shinkyuu-db.pages.dev/themes/toyo-rekishi"
    },
-   "updatedAt": "2026-10-12T20:53:05+09:00",
+   "updatedAt": "2026-10-22T14:06:51+09:00",
    "publicationAllowed": true,
    "warningNotes": [
     "テーマ分類は当DB独自。出題数は「このテーマに分類した問題数」",
@@ -940,7 +940,7 @@
    "pastExamPracticeCount": 1,
    "originalQuizCount": 0,
    "standard2026Status": null,
-   "sourceVersion": "shinkyuu-db@ee647cd+dirty",
+   "sourceVersion": "shinkyuu-db@d090183",
    "verifiedStatus": "COMPUTED_FROM_OFFICIAL_EXAMS",
    "sourceType": "official_exam",
    "relatedDbUrl": "https://shinkyuu-db.pages.dev/past-exams/theme/kenko-nihon-21",
@@ -948,7 +948,7 @@
     "theme": "https://shinkyuu-db.pages.dev/themes/kenko-nihon-21",
     "pastExams": "https://shinkyuu-db.pages.dev/past-exams/theme/kenko-nihon-21"
    },
-   "updatedAt": "2026-10-12T20:53:05+09:00",
+   "updatedAt": "2026-10-22T14:06:51+09:00",
    "publicationAllowed": true,
    "warningNotes": [
     "テーマ分類は当DB独自。出題数は「このテーマに分類した問題数」"
@@ -979,7 +979,7 @@
    "pastExamPracticeCount": 5,
    "originalQuizCount": 0,
    "standard2026Status": null,
-   "sourceVersion": "shinkyuu-db@ee647cd+dirty",
+   "sourceVersion": "shinkyuu-db@d090183",
    "verifiedStatus": "COMPUTED_FROM_OFFICIAL_EXAMS",
    "sourceType": "official_exam",
    "relatedDbUrl": "https://shinkyuu-db.pages.dev/past-exams/theme/kansen-sho",
@@ -987,7 +987,7 @@
     "theme": "https://shinkyuu-db.pages.dev/themes/kansen-sho",
     "pastExams": "https://shinkyuu-db.pages.dev/past-exams/theme/kansen-sho"
    },
-   "updatedAt": "2026-10-12T20:53:05+09:00",
+   "updatedAt": "2026-10-22T14:06:51+09:00",
    "publicationAllowed": true,
    "warningNotes": [
     "テーマ分類は当DB独自。出題数は「このテーマに分類した問題数」"
@@ -1016,7 +1016,7 @@
    "pastExamPracticeCount": 3,
    "originalQuizCount": 0,
    "standard2026Status": null,
-   "sourceVersion": "shinkyuu-db@ee647cd+dirty",
+   "sourceVersion": "shinkyuu-db@d090183",
    "verifiedStatus": "COMPUTED_FROM_OFFICIAL_EXAMS",
    "sourceType": "official_exam",
    "relatedDbUrl": "https://shinkyuu-db.pages.dev/past-exams/theme/seikatsu-shukan-byo",
@@ -1024,7 +1024,7 @@
     "theme": "https://shinkyuu-db.pages.dev/themes/seikatsu-shukan-byo",
     "pastExams": "https://shinkyuu-db.pages.dev/past-exams/theme/seikatsu-shukan-byo"
    },
-   "updatedAt": "2026-10-12T20:53:05+09:00",
+   "updatedAt": "2026-10-22T14:06:51+09:00",
    "publicationAllowed": true,
    "warningNotes": [
     "テーマ分類は当DB独自。出題数は「このテーマに分類した問題数」"
@@ -1052,7 +1052,7 @@
    "pastExamPracticeCount": 2,
    "originalQuizCount": 0,
    "standard2026Status": null,
-   "sourceVersion": "shinkyuu-db@ee647cd+dirty",
+   "sourceVersion": "shinkyuu-db@d090183",
    "verifiedStatus": "COMPUTED_FROM_OFFICIAL_EXAMS",
    "sourceType": "official_exam",
    "relatedDbUrl": "https://shinkyuu-db.pages.dev/past-exams/theme/kin-kishi-teishi",
@@ -1060,7 +1060,7 @@
     "theme": "https://shinkyuu-db.pages.dev/themes/kin-kishi-teishi",
     "pastExams": "https://shinkyuu-db.pages.dev/past-exams/theme/kin-kishi-teishi"
    },
-   "updatedAt": "2026-10-12T20:53:05+09:00",
+   "updatedAt": "2026-10-22T14:06:51+09:00",
    "publicationAllowed": true,
    "warningNotes": [
     "テーマ分類は当DB独自。出題数は「このテーマに分類した問題数」"
@@ -1089,7 +1089,7 @@
    "pastExamPracticeCount": 3,
    "originalQuizCount": 1,
    "standard2026Status": null,
-   "sourceVersion": "shinkyuu-db@ee647cd+dirty",
+   "sourceVersion": "shinkyuu-db@d090183",
    "verifiedStatus": "COMPUTED_FROM_OFFICIAL_EXAMS",
    "sourceType": "official_exam",
    "relatedDbUrl": "https://shinkyuu-db.pages.dev/past-exams/theme/no-shinkei",
@@ -1098,7 +1098,7 @@
     "pastExams": "https://shinkyuu-db.pages.dev/past-exams/theme/no-shinkei",
     "quiz": "https://shinkyuu-db.pages.dev/quiz/theme/no-shinkei"
    },
-   "updatedAt": "2026-10-12T20:53:05+09:00",
+   "updatedAt": "2026-10-22T14:06:51+09:00",
    "publicationAllowed": true,
    "warningNotes": [
     "テーマ分類は当DB独自。出題数は「このテーマに分類した問題数」"
@@ -1125,7 +1125,7 @@
    "pastExamPracticeCount": 1,
    "originalQuizCount": 0,
    "standard2026Status": null,
-   "sourceVersion": "shinkyuu-db@ee647cd+dirty",
+   "sourceVersion": "shinkyuu-db@d090183",
    "verifiedStatus": "COMPUTED_FROM_OFFICIAL_EXAMS",
    "sourceType": "official_exam",
    "relatedDbUrl": "https://shinkyuu-db.pages.dev/past-exams/theme/kansetsu-kozo",
@@ -1133,7 +1133,7 @@
     "theme": "https://shinkyuu-db.pages.dev/themes/kansetsu-kozo",
     "pastExams": "https://shinkyuu-db.pages.dev/past-exams/theme/kansetsu-kozo"
    },
-   "updatedAt": "2026-10-12T20:53:05+09:00",
+   "updatedAt": "2026-10-22T14:06:51+09:00",
    "publicationAllowed": true,
    "warningNotes": [
     "テーマ分類は当DB独自。出題数は「このテーマに分類した問題数」"
@@ -1161,7 +1161,7 @@
    "pastExamPracticeCount": 2,
    "originalQuizCount": 2,
    "standard2026Status": null,
-   "sourceVersion": "shinkyuu-db@ee647cd+dirty",
+   "sourceVersion": "shinkyuu-db@d090183",
    "verifiedStatus": "COMPUTED_FROM_OFFICIAL_EXAMS",
    "sourceType": "official_exam",
    "relatedDbUrl": "https://shinkyuu-db.pages.dev/past-exams/theme/jiritsu-shinkei",
@@ -1170,7 +1170,7 @@
     "pastExams": "https://shinkyuu-db.pages.dev/past-exams/theme/jiritsu-shinkei",
     "quiz": "https://shinkyuu-db.pages.dev/quiz/theme/jiritsu-shinkei"
    },
-   "updatedAt": "2026-10-12T20:53:05+09:00",
+   "updatedAt": "2026-10-22T14:06:51+09:00",
    "publicationAllowed": true,
    "warningNotes": [
     "テーマ分類は当DB独自。出題数は「このテーマに分類した問題数」"
@@ -1195,14 +1195,14 @@
    "pastExamPracticeCount": 0,
    "originalQuizCount": 0,
    "standard2026Status": null,
-   "sourceVersion": "shinkyuu-db@ee647cd+dirty",
+   "sourceVersion": "shinkyuu-db@d090183",
    "verifiedStatus": "COMPUTED_FROM_OFFICIAL_EXAMS",
    "sourceType": "official_exam",
    "relatedDbUrl": "https://shinkyuu-db.pages.dev/themes/junkan-kino",
    "relatedDbUrls": {
     "theme": "https://shinkyuu-db.pages.dev/themes/junkan-kino"
    },
-   "updatedAt": "2026-10-12T20:53:05+09:00",
+   "updatedAt": "2026-10-22T14:06:51+09:00",
    "publicationAllowed": true,
    "warningNotes": [
     "テーマ分類は当DB独自。出題数は「このテーマに分類した問題数」",
@@ -1231,7 +1231,7 @@
    "pastExamPracticeCount": 2,
    "originalQuizCount": 1,
    "standard2026Status": null,
-   "sourceVersion": "shinkyuu-db@ee647cd+dirty",
+   "sourceVersion": "shinkyuu-db@d090183",
    "verifiedStatus": "COMPUTED_FROM_OFFICIAL_EXAMS",
    "sourceType": "official_exam",
    "relatedDbUrl": "https://shinkyuu-db.pages.dev/past-exams/theme/kanke-hokki",
@@ -1240,7 +1240,7 @@
     "pastExams": "https://shinkyuu-db.pages.dev/past-exams/theme/kanke-hokki",
     "quiz": "https://shinkyuu-db.pages.dev/quiz/theme/kanke-hokki"
    },
-   "updatedAt": "2026-10-12T20:53:05+09:00",
+   "updatedAt": "2026-10-22T14:06:51+09:00",
    "publicationAllowed": true,
    "warningNotes": [
     "テーマ分類は当DB独自。出題数は「このテーマに分類した問題数」"
@@ -1269,7 +1269,7 @@
    "pastExamPracticeCount": 5,
    "originalQuizCount": 2,
    "standard2026Status": null,
-   "sourceVersion": "shinkyuu-db@ee647cd+dirty",
+   "sourceVersion": "shinkyuu-db@d090183",
    "verifiedStatus": "COMPUTED_FROM_OFFICIAL_EXAMS",
    "sourceType": "official_exam",
    "relatedDbUrl": "https://shinkyuu-db.pages.dev/past-exams/theme/hari-risk-kanri",
@@ -1278,7 +1278,7 @@
     "pastExams": "https://shinkyuu-db.pages.dev/past-exams/theme/hari-risk-kanri",
     "quiz": "https://shinkyuu-db.pages.dev/quiz/theme/hari-risk-kanri"
    },
-   "updatedAt": "2026-10-12T20:53:05+09:00",
+   "updatedAt": "2026-10-22T14:06:51+09:00",
    "publicationAllowed": true,
    "warningNotes": [
     "テーマ分類は当DB独自。出題数は「このテーマに分類した問題数」"
@@ -1307,7 +1307,7 @@
    "pastExamPracticeCount": 3,
    "originalQuizCount": 0,
    "standard2026Status": null,
-   "sourceVersion": "shinkyuu-db@ee647cd+dirty",
+   "sourceVersion": "shinkyuu-db@d090183",
    "verifiedStatus": "COMPUTED_FROM_OFFICIAL_EXAMS",
    "sourceType": "official_exam",
    "relatedDbUrl": "https://shinkyuu-db.pages.dev/past-exams/theme/hari-shigeki-ryo",
@@ -1315,7 +1315,7 @@
     "theme": "https://shinkyuu-db.pages.dev/themes/hari-shigeki-ryo",
     "pastExams": "https://shinkyuu-db.pages.dev/past-exams/theme/hari-shigeki-ryo"
    },
-   "updatedAt": "2026-10-12T20:53:05+09:00",
+   "updatedAt": "2026-10-22T14:06:51+09:00",
    "publicationAllowed": true,
    "warningNotes": [
     "テーマ分類は当DB独自。出題数は「このテーマに分類した問題数」"
@@ -1340,14 +1340,14 @@
    "pastExamPracticeCount": 0,
    "originalQuizCount": 0,
    "standard2026Status": null,
-   "sourceVersion": "shinkyuu-db@ee647cd+dirty",
+   "sourceVersion": "shinkyuu-db@d090183",
    "verifiedStatus": "COMPUTED_FROM_OFFICIAL_EXAMS",
    "sourceType": "official_exam",
    "relatedDbUrl": "https://shinkyuu-db.pages.dev/themes/kyu-fukusayo",
    "relatedDbUrls": {
     "theme": "https://shinkyuu-db.pages.dev/themes/kyu-fukusayo"
    },
-   "updatedAt": "2026-10-12T20:53:05+09:00",
+   "updatedAt": "2026-10-22T14:06:51+09:00",
    "publicationAllowed": true,
    "warningNotes": [
     "テーマ分類は当DB独自。出題数は「このテーマに分類した問題数」",
@@ -1378,7 +1378,7 @@
    "pastExamPracticeCount": 9,
    "originalQuizCount": 1,
    "standard2026Status": null,
-   "sourceVersion": "shinkyuu-db@ee647cd+dirty",
+   "sourceVersion": "shinkyuu-db@d090183",
    "verifiedStatus": "COMPUTED_FROM_OFFICIAL_EXAMS",
    "sourceType": "official_exam",
    "relatedDbUrl": "https://shinkyuu-db.pages.dev/past-exams/theme/ben-sho-ron-chi",
@@ -1387,7 +1387,7 @@
     "pastExams": "https://shinkyuu-db.pages.dev/past-exams/theme/ben-sho-ron-chi",
     "quiz": "https://shinkyuu-db.pages.dev/quiz/theme/ben-sho-ron-chi"
    },
-   "updatedAt": "2026-10-12T20:53:05+09:00",
+   "updatedAt": "2026-10-22T14:06:51+09:00",
    "publicationAllowed": true,
    "warningNotes": [
     "テーマ分類は当DB独自。出題数は「このテーマに分類した問題数」"
@@ -1416,7 +1416,7 @@
    "pastExamPracticeCount": 3,
    "originalQuizCount": 0,
    "standard2026Status": null,
-   "sourceVersion": "shinkyuu-db@ee647cd+dirty",
+   "sourceVersion": "shinkyuu-db@d090183",
    "verifiedStatus": "COMPUTED_FROM_OFFICIAL_EXAMS",
    "sourceType": "official_exam",
    "relatedDbUrl": "https://shinkyuu-db.pages.dev/past-exams/theme/kei-myaku-byo-sho",
@@ -1424,7 +1424,7 @@
     "theme": "https://shinkyuu-db.pages.dev/themes/kei-myaku-byo-sho",
     "pastExams": "https://shinkyuu-db.pages.dev/past-exams/theme/kei-myaku-byo-sho"
    },
-   "updatedAt": "2026-10-12T20:53:05+09:00",
+   "updatedAt": "2026-10-22T14:06:51+09:00",
    "publicationAllowed": true,
    "warningNotes": [
     "テーマ分類は当DB独自。出題数は「このテーマに分類した問題数」"
@@ -1449,14 +1449,14 @@
    "pastExamPracticeCount": 0,
    "originalQuizCount": 0,
    "standard2026Status": null,
-   "sourceVersion": "shinkyuu-db@ee647cd+dirty",
+   "sourceVersion": "shinkyuu-db@d090183",
    "verifiedStatus": "COMPUTED_FROM_OFFICIAL_EXAMS",
    "sourceType": "official_exam",
    "relatedDbUrl": "https://shinkyuu-db.pages.dev/themes/menekigaku",
    "relatedDbUrls": {
     "theme": "https://shinkyuu-db.pages.dev/themes/menekigaku"
    },
-   "updatedAt": "2026-10-12T20:53:05+09:00",
+   "updatedAt": "2026-10-22T14:06:51+09:00",
    "publicationAllowed": true,
    "warningNotes": [
     "テーマ分類は当DB独自。出題数は「このテーマに分類した問題数」",
@@ -1487,7 +1487,7 @@
    "pastExamPracticeCount": 10,
    "originalQuizCount": 4,
    "standard2026Status": null,
-   "sourceVersion": "shinkyuu-db@ee647cd+dirty",
+   "sourceVersion": "shinkyuu-db@d090183",
    "verifiedStatus": "COMPUTED_FROM_OFFICIAL_EXAMS",
    "sourceType": "official_exam",
    "relatedDbUrl": "https://shinkyuu-db.pages.dev/past-exams/theme/cg-vital-physical",
@@ -1496,7 +1496,7 @@
     "pastExams": "https://shinkyuu-db.pages.dev/past-exams/theme/cg-vital-physical",
     "quiz": "https://shinkyuu-db.pages.dev/quiz/theme/cg-vital-physical"
    },
-   "updatedAt": "2026-10-12T20:53:05+09:00",
+   "updatedAt": "2026-10-22T14:06:51+09:00",
    "publicationAllowed": true,
    "warningNotes": [
     "テーマ分類は当DB独自。出題数は「このテーマに分類した問題数」"
@@ -1525,7 +1525,7 @@
    "pastExamPracticeCount": 4,
    "originalQuizCount": 2,
    "standard2026Status": null,
-   "sourceVersion": "shinkyuu-db@ee647cd+dirty",
+   "sourceVersion": "shinkyuu-db@d090183",
    "verifiedStatus": "COMPUTED_FROM_OFFICIAL_EXAMS",
    "sourceType": "official_exam",
    "relatedDbUrl": "https://shinkyuu-db.pages.dev/past-exams/theme/cg-kensa-shindan",
@@ -1534,7 +1534,7 @@
     "pastExams": "https://shinkyuu-db.pages.dev/past-exams/theme/cg-kensa-shindan",
     "quiz": "https://shinkyuu-db.pages.dev/quiz/theme/cg-kensa-shindan"
    },
-   "updatedAt": "2026-10-12T20:53:05+09:00",
+   "updatedAt": "2026-10-22T14:06:51+09:00",
    "publicationAllowed": true,
    "warningNotes": [
     "テーマ分類は当DB独自。出題数は「このテーマに分類した問題数」"
@@ -1563,7 +1563,7 @@
    "pastExamPracticeCount": 3,
    "originalQuizCount": 2,
    "standard2026Status": null,
-   "sourceVersion": "shinkyuu-db@ee647cd+dirty",
+   "sourceVersion": "shinkyuu-db@d090183",
    "verifiedStatus": "COMPUTED_FROM_OFFICIAL_EXAMS",
    "sourceType": "official_exam",
    "relatedDbUrl": "https://shinkyuu-db.pages.dev/past-exams/theme/cg-kyukyu-bls",
@@ -1572,7 +1572,7 @@
     "pastExams": "https://shinkyuu-db.pages.dev/past-exams/theme/cg-kyukyu-bls",
     "quiz": "https://shinkyuu-db.pages.dev/quiz/theme/cg-kyukyu-bls"
    },
-   "updatedAt": "2026-10-12T20:53:05+09:00",
+   "updatedAt": "2026-10-22T14:06:51+09:00",
    "publicationAllowed": true,
    "warningNotes": [
     "テーマ分類は当DB独自。出題数は「このテーマに分類した問題数」"
@@ -1600,7 +1600,7 @@
    "pastExamPracticeCount": 2,
    "originalQuizCount": 0,
    "standard2026Status": null,
-   "sourceVersion": "shinkyuu-db@ee647cd+dirty",
+   "sourceVersion": "shinkyuu-db@d090183",
    "verifiedStatus": "COMPUTED_FROM_OFFICIAL_EXAMS",
    "sourceType": "official_exam",
    "relatedDbUrl": "https://shinkyuu-db.pages.dev/past-exams/theme/cg-chiryo-gaku",
@@ -1608,7 +1608,7 @@
     "theme": "https://shinkyuu-db.pages.dev/themes/cg-chiryo-gaku",
     "pastExams": "https://shinkyuu-db.pages.dev/past-exams/theme/cg-chiryo-gaku"
    },
-   "updatedAt": "2026-10-12T20:53:05+09:00",
+   "updatedAt": "2026-10-22T14:06:51+09:00",
    "publicationAllowed": true,
    "warningNotes": [
     "テーマ分類は当DB独自。出題数は「このテーマに分類した問題数」"
@@ -1633,7 +1633,7 @@
    "pastExamPracticeCount": 0,
    "originalQuizCount": 1,
    "standard2026Status": null,
-   "sourceVersion": "shinkyuu-db@ee647cd+dirty",
+   "sourceVersion": "shinkyuu-db@d090183",
    "verifiedStatus": "COMPUTED_FROM_OFFICIAL_EXAMS",
    "sourceType": "official_exam",
    "relatedDbUrl": "https://shinkyuu-db.pages.dev/themes/cg-innai-kansen",
@@ -1641,7 +1641,7 @@
     "theme": "https://shinkyuu-db.pages.dev/themes/cg-innai-kansen",
     "quiz": "https://shinkyuu-db.pages.dev/quiz/theme/cg-innai-kansen"
    },
-   "updatedAt": "2026-10-12T20:53:05+09:00",
+   "updatedAt": "2026-10-22T14:06:51+09:00",
    "publicationAllowed": true,
    "warningNotes": [
     "テーマ分類は当DB独自。出題数は「このテーマに分類した問題数」",
@@ -1672,7 +1672,7 @@
    "pastExamPracticeCount": 5,
    "originalQuizCount": 2,
    "standard2026Status": null,
-   "sourceVersion": "shinkyuu-db@ee647cd+dirty",
+   "sourceVersion": "shinkyuu-db@d090183",
    "verifiedStatus": "COMPUTED_FROM_OFFICIAL_EXAMS",
    "sourceType": "official_exam",
    "relatedDbUrl": "https://shinkyuu-db.pages.dev/past-exams/theme/mo-iryo-hoken-seido",
@@ -1681,7 +1681,7 @@
     "pastExams": "https://shinkyuu-db.pages.dev/past-exams/theme/mo-iryo-hoken-seido",
     "quiz": "https://shinkyuu-db.pages.dev/quiz/theme/mo-iryo-hoken-seido"
    },
-   "updatedAt": "2026-10-12T20:53:05+09:00",
+   "updatedAt": "2026-10-22T14:06:51+09:00",
    "publicationAllowed": true,
    "warningNotes": [
     "テーマ分類は当DB独自。出題数は「このテーマに分類した問題数」"
@@ -1709,7 +1709,7 @@
    "pastExamPracticeCount": 2,
    "originalQuizCount": 1,
    "standard2026Status": null,
-   "sourceVersion": "shinkyuu-db@ee647cd+dirty",
+   "sourceVersion": "shinkyuu-db@d090183",
    "verifiedStatus": "COMPUTED_FROM_OFFICIAL_EXAMS",
    "sourceType": "official_exam",
    "relatedDbUrl": "https://shinkyuu-db.pages.dev/past-exams/theme/mo-iryo-teikyo",
@@ -1718,7 +1718,7 @@
     "pastExams": "https://shinkyuu-db.pages.dev/past-exams/theme/mo-iryo-teikyo",
     "quiz": "https://shinkyuu-db.pages.dev/quiz/theme/mo-iryo-teikyo"
    },
-   "updatedAt": "2026-10-12T20:53:05+09:00",
+   "updatedAt": "2026-10-22T14:06:51+09:00",
    "publicationAllowed": true,
    "warningNotes": [
     "テーマ分類は当DB独自。出題数は「このテーマに分類した問題数」"
@@ -1746,7 +1746,7 @@
    "pastExamPracticeCount": 2,
    "originalQuizCount": 1,
    "standard2026Status": null,
-   "sourceVersion": "shinkyuu-db@ee647cd+dirty",
+   "sourceVersion": "shinkyuu-db@d090183",
    "verifiedStatus": "COMPUTED_FROM_OFFICIAL_EXAMS",
    "sourceType": "official_exam",
    "relatedDbUrl": "https://shinkyuu-db.pages.dev/past-exams/theme/mo-nanbyo",
@@ -1755,7 +1755,7 @@
     "pastExams": "https://shinkyuu-db.pages.dev/past-exams/theme/mo-nanbyo",
     "quiz": "https://shinkyuu-db.pages.dev/quiz/theme/mo-nanbyo"
    },
-   "updatedAt": "2026-10-12T20:53:05+09:00",
+   "updatedAt": "2026-10-22T14:06:51+09:00",
    "publicationAllowed": true,
    "warningNotes": [
     "テーマ分類は当DB独自。出題数は「このテーマに分類した問題数」"
@@ -1785,7 +1785,7 @@
    "pastExamPracticeCount": 4,
    "originalQuizCount": 2,
    "standard2026Status": null,
-   "sourceVersion": "shinkyuu-db@ee647cd+dirty",
+   "sourceVersion": "shinkyuu-db@d090183",
    "verifiedStatus": "COMPUTED_FROM_OFFICIAL_EXAMS",
    "sourceType": "official_exam",
    "relatedDbUrl": "https://shinkyuu-db.pages.dev/past-exams/theme/mo-informed-consent",
@@ -1794,7 +1794,7 @@
     "pastExams": "https://shinkyuu-db.pages.dev/past-exams/theme/mo-informed-consent",
     "quiz": "https://shinkyuu-db.pages.dev/quiz/theme/mo-informed-consent"
    },
-   "updatedAt": "2026-10-12T20:53:05+09:00",
+   "updatedAt": "2026-10-22T14:06:51+09:00",
    "publicationAllowed": true,
    "warningNotes": [
     "テーマ分類は当DB独自。出題数は「このテーマに分類した問題数」"
@@ -1823,7 +1823,7 @@
    "pastExamPracticeCount": 3,
    "originalQuizCount": 1,
    "standard2026Status": null,
-   "sourceVersion": "shinkyuu-db@ee647cd+dirty",
+   "sourceVersion": "shinkyuu-db@d090183",
    "verifiedStatus": "COMPUTED_FROM_OFFICIAL_EXAMS",
    "sourceType": "official_exam",
    "relatedDbUrl": "https://shinkyuu-db.pages.dev/past-exams/theme/mo-team-iryo",
@@ -1832,7 +1832,7 @@
     "pastExams": "https://shinkyuu-db.pages.dev/past-exams/theme/mo-team-iryo",
     "quiz": "https://shinkyuu-db.pages.dev/quiz/theme/mo-team-iryo"
    },
-   "updatedAt": "2026-10-12T20:53:05+09:00",
+   "updatedAt": "2026-10-22T14:06:51+09:00",
    "publicationAllowed": true,
    "warningNotes": [
     "テーマ分類は当DB独自。出題数は「このテーマに分類した問題数」"
@@ -1861,7 +1861,7 @@
    "pastExamPracticeCount": 3,
    "originalQuizCount": 1,
    "standard2026Status": "expanded",
-   "sourceVersion": "shinkyuu-db@ee647cd+dirty",
+   "sourceVersion": "shinkyuu-db@d090183",
    "verifiedStatus": "COMPUTED_FROM_OFFICIAL_EXAMS",
    "sourceType": "official_exam",
    "relatedDbUrl": "https://shinkyuu-db.pages.dev/past-exams/theme/mo-i-no-rinri",
@@ -1870,7 +1870,7 @@
     "pastExams": "https://shinkyuu-db.pages.dev/past-exams/theme/mo-i-no-rinri",
     "quiz": "https://shinkyuu-db.pages.dev/quiz/theme/mo-i-no-rinri"
    },
-   "updatedAt": "2026-10-12T20:53:05+09:00",
+   "updatedAt": "2026-10-22T14:06:51+09:00",
    "publicationAllowed": true,
    "warningNotes": [
     "テーマ分類は当DB独自。出題数は「このテーマに分類した問題数」",
@@ -1902,7 +1902,7 @@
    "pastExamPracticeCount": 5,
    "originalQuizCount": 2,
    "standard2026Status": null,
-   "sourceVersion": "shinkyuu-db@ee647cd+dirty",
+   "sourceVersion": "shinkyuu-db@d090183",
    "verifiedStatus": "COMPUTED_FROM_OFFICIAL_EXAMS",
    "sourceType": "official_exam",
    "relatedDbUrl": "https://shinkyuu-db.pages.dev/past-exams/theme/mo-kaigo-hoken",
@@ -1911,7 +1911,7 @@
     "pastExams": "https://shinkyuu-db.pages.dev/past-exams/theme/mo-kaigo-hoken",
     "quiz": "https://shinkyuu-db.pages.dev/quiz/theme/mo-kaigo-hoken"
    },
-   "updatedAt": "2026-10-12T20:53:05+09:00",
+   "updatedAt": "2026-10-22T14:06:51+09:00",
    "publicationAllowed": true,
    "warningNotes": [
     "テーマ分類は当DB独自。出題数は「このテーマに分類した問題数」"
@@ -1942,7 +1942,7 @@
    "pastExamPracticeCount": 9,
    "originalQuizCount": 1,
    "standard2026Status": null,
-   "sourceVersion": "shinkyuu-db@ee647cd+dirty",
+   "sourceVersion": "shinkyuu-db@d090183",
    "verifiedStatus": "COMPUTED_FROM_OFFICIAL_EXAMS",
    "sourceType": "official_exam",
    "relatedDbUrl": "https://shinkyuu-db.pages.dev/past-exams/theme/pa-junkan-shogai",
@@ -1951,7 +1951,7 @@
     "pastExams": "https://shinkyuu-db.pages.dev/past-exams/theme/pa-junkan-shogai",
     "quiz": "https://shinkyuu-db.pages.dev/quiz/theme/pa-junkan-shogai"
    },
-   "updatedAt": "2026-10-12T20:53:05+09:00",
+   "updatedAt": "2026-10-22T14:06:51+09:00",
    "publicationAllowed": true,
    "warningNotes": [
     "テーマ分類は当DB独自。出題数は「このテーマに分類した問題数」"
@@ -1981,7 +1981,7 @@
    "pastExamPracticeCount": 4,
    "originalQuizCount": 2,
    "standard2026Status": null,
-   "sourceVersion": "shinkyuu-db@ee647cd+dirty",
+   "sourceVersion": "shinkyuu-db@d090183",
    "verifiedStatus": "COMPUTED_FROM_OFFICIAL_EXAMS",
    "sourceType": "official_exam",
    "relatedDbUrl": "https://shinkyuu-db.pages.dev/past-exams/theme/pa-ensho",
@@ -1990,7 +1990,7 @@
     "pastExams": "https://shinkyuu-db.pages.dev/past-exams/theme/pa-ensho",
     "quiz": "https://shinkyuu-db.pages.dev/quiz/theme/pa-ensho"
    },
-   "updatedAt": "2026-10-12T20:53:05+09:00",
+   "updatedAt": "2026-10-22T14:06:51+09:00",
    "publicationAllowed": true,
    "warningNotes": [
     "テーマ分類は当DB独自。出題数は「このテーマに分類した問題数」"
@@ -2020,7 +2020,7 @@
    "pastExamPracticeCount": 4,
    "originalQuizCount": 2,
    "standard2026Status": null,
-   "sourceVersion": "shinkyuu-db@ee647cd+dirty",
+   "sourceVersion": "shinkyuu-db@d090183",
    "verifiedStatus": "COMPUTED_FROM_OFFICIAL_EXAMS",
    "sourceType": "official_exam",
    "relatedDbUrl": "https://shinkyuu-db.pages.dev/past-exams/theme/pa-shuyo",
@@ -2029,7 +2029,7 @@
     "pastExams": "https://shinkyuu-db.pages.dev/past-exams/theme/pa-shuyo",
     "quiz": "https://shinkyuu-db.pages.dev/quiz/theme/pa-shuyo"
    },
-   "updatedAt": "2026-10-12T20:53:05+09:00",
+   "updatedAt": "2026-10-22T14:06:51+09:00",
    "publicationAllowed": true,
    "warningNotes": [
     "テーマ分類は当DB独自。出題数は「このテーマに分類した問題数」"
@@ -2060,7 +2060,7 @@
    "pastExamPracticeCount": 7,
    "originalQuizCount": 0,
    "standard2026Status": null,
-   "sourceVersion": "shinkyuu-db@ee647cd+dirty",
+   "sourceVersion": "shinkyuu-db@d090183",
    "verifiedStatus": "COMPUTED_FROM_OFFICIAL_EXAMS",
    "sourceType": "official_exam",
    "relatedDbUrl": "https://shinkyuu-db.pages.dev/past-exams/theme/pa-kansen-meneki",
@@ -2068,7 +2068,7 @@
     "theme": "https://shinkyuu-db.pages.dev/themes/pa-kansen-meneki",
     "pastExams": "https://shinkyuu-db.pages.dev/past-exams/theme/pa-kansen-meneki"
    },
-   "updatedAt": "2026-10-12T20:53:05+09:00",
+   "updatedAt": "2026-10-22T14:06:51+09:00",
    "publicationAllowed": true,
    "warningNotes": [
     "テーマ分類は当DB独自。出題数は「このテーマに分類した問題数」"
@@ -2097,7 +2097,7 @@
    "pastExamPracticeCount": 3,
    "originalQuizCount": 4,
    "standard2026Status": null,
-   "sourceVersion": "shinkyuu-db@ee647cd+dirty",
+   "sourceVersion": "shinkyuu-db@d090183",
    "verifiedStatus": "COMPUTED_FROM_OFFICIAL_EXAMS",
    "sourceType": "official_exam",
    "relatedDbUrl": "https://shinkyuu-db.pages.dev/past-exams/theme/pa-saibo-shogai",
@@ -2106,7 +2106,7 @@
     "pastExams": "https://shinkyuu-db.pages.dev/past-exams/theme/pa-saibo-shogai",
     "quiz": "https://shinkyuu-db.pages.dev/quiz/theme/pa-saibo-shogai"
    },
-   "updatedAt": "2026-10-12T20:53:05+09:00",
+   "updatedAt": "2026-10-22T14:06:51+09:00",
    "publicationAllowed": true,
    "warningNotes": [
     "テーマ分類は当DB独自。出題数は「このテーマに分類した問題数」"
@@ -2134,7 +2134,7 @@
    "pastExamPracticeCount": 2,
    "originalQuizCount": 1,
    "standard2026Status": null,
-   "sourceVersion": "shinkyuu-db@ee647cd+dirty",
+   "sourceVersion": "shinkyuu-db@d090183",
    "verifiedStatus": "COMPUTED_FROM_OFFICIAL_EXAMS",
    "sourceType": "official_exam",
    "relatedDbUrl": "https://shinkyuu-db.pages.dev/past-exams/theme/pa-iden",
@@ -2143,7 +2143,7 @@
     "pastExams": "https://shinkyuu-db.pages.dev/past-exams/theme/pa-iden",
     "quiz": "https://shinkyuu-db.pages.dev/quiz/theme/pa-iden"
    },
-   "updatedAt": "2026-10-12T20:53:05+09:00",
+   "updatedAt": "2026-10-22T14:06:51+09:00",
    "publicationAllowed": true,
    "warningNotes": [
     "テーマ分類は当DB独自。出題数は「このテーマに分類した問題数」"
@@ -2171,7 +2171,7 @@
    "pastExamPracticeCount": 2,
    "originalQuizCount": 0,
    "standard2026Status": null,
-   "sourceVersion": "shinkyuu-db@ee647cd+dirty",
+   "sourceVersion": "shinkyuu-db@d090183",
    "verifiedStatus": "COMPUTED_FROM_OFFICIAL_EXAMS",
    "sourceType": "official_exam",
    "relatedDbUrl": "https://shinkyuu-db.pages.dev/past-exams/theme/pa-taisha-ijo",
@@ -2179,7 +2179,7 @@
     "theme": "https://shinkyuu-db.pages.dev/themes/pa-taisha-ijo",
     "pastExams": "https://shinkyuu-db.pages.dev/past-exams/theme/pa-taisha-ijo"
    },
-   "updatedAt": "2026-10-12T20:53:05+09:00",
+   "updatedAt": "2026-10-22T14:06:51+09:00",
    "publicationAllowed": true,
    "warningNotes": [
     "テーマ分類は当DB独自。出題数は「このテーマに分類した問題数」"
@@ -2209,7 +2209,7 @@
    "pastExamPracticeCount": 5,
    "originalQuizCount": 0,
    "standard2026Status": null,
-   "sourceVersion": "shinkyuu-db@ee647cd+dirty",
+   "sourceVersion": "shinkyuu-db@d090183",
    "verifiedStatus": "COMPUTED_FROM_OFFICIAL_EXAMS",
    "sourceType": "official_exam",
    "relatedDbUrl": "https://shinkyuu-db.pages.dev/past-exams/theme/pa-shippei-keika",
@@ -2217,7 +2217,7 @@
     "theme": "https://shinkyuu-db.pages.dev/themes/pa-shippei-keika",
     "pastExams": "https://shinkyuu-db.pages.dev/past-exams/theme/pa-shippei-keika"
    },
-   "updatedAt": "2026-10-12T20:53:05+09:00",
+   "updatedAt": "2026-10-22T14:06:51+09:00",
    "publicationAllowed": true,
    "warningNotes": [
     "テーマ分類は当DB独自。出題数は「このテーマに分類した問題数」"
@@ -2246,7 +2246,7 @@
    "pastExamPracticeCount": 5,
    "originalQuizCount": 0,
    "standard2026Status": null,
-   "sourceVersion": "shinkyuu-db@ee647cd+dirty",
+   "sourceVersion": "shinkyuu-db@d090183",
    "verifiedStatus": "COMPUTED_FROM_OFFICIAL_EXAMS",
    "sourceType": "official_exam",
    "relatedDbUrl": "https://shinkyuu-db.pages.dev/past-exams/theme/cs-nokekkan",
@@ -2254,7 +2254,7 @@
     "theme": "https://shinkyuu-db.pages.dev/themes/cs-nokekkan",
     "pastExams": "https://shinkyuu-db.pages.dev/past-exams/theme/cs-nokekkan"
    },
-   "updatedAt": "2026-10-12T20:53:05+09:00",
+   "updatedAt": "2026-10-22T14:06:51+09:00",
    "publicationAllowed": true,
    "warningNotes": [
     "テーマ分類は当DB独自。出題数は「このテーマに分類した問題数」"
@@ -2285,7 +2285,7 @@
    "pastExamPracticeCount": 6,
    "originalQuizCount": 1,
    "standard2026Status": null,
-   "sourceVersion": "shinkyuu-db@ee647cd+dirty",
+   "sourceVersion": "shinkyuu-db@d090183",
    "verifiedStatus": "COMPUTED_FROM_OFFICIAL_EXAMS",
    "sourceType": "official_exam",
    "relatedDbUrl": "https://shinkyuu-db.pages.dev/past-exams/theme/cs-ninchisho",
@@ -2294,7 +2294,7 @@
     "pastExams": "https://shinkyuu-db.pages.dev/past-exams/theme/cs-ninchisho",
     "quiz": "https://shinkyuu-db.pages.dev/quiz/theme/cs-ninchisho"
    },
-   "updatedAt": "2026-10-12T20:53:05+09:00",
+   "updatedAt": "2026-10-22T14:06:51+09:00",
    "publicationAllowed": true,
    "warningNotes": [
     "テーマ分類は当DB独自。出題数は「このテーマに分類した問題数」"
@@ -2323,7 +2323,7 @@
    "pastExamPracticeCount": 4,
    "originalQuizCount": 0,
    "standard2026Status": null,
-   "sourceVersion": "shinkyuu-db@ee647cd+dirty",
+   "sourceVersion": "shinkyuu-db@d090183",
    "verifiedStatus": "COMPUTED_FROM_OFFICIAL_EXAMS",
    "sourceType": "official_exam",
    "relatedDbUrl": "https://shinkyuu-db.pages.dev/past-exams/theme/cs-parkinson",
@@ -2331,7 +2331,7 @@
     "theme": "https://shinkyuu-db.pages.dev/themes/cs-parkinson",
     "pastExams": "https://shinkyuu-db.pages.dev/past-exams/theme/cs-parkinson"
    },
-   "updatedAt": "2026-10-12T20:53:05+09:00",
+   "updatedAt": "2026-10-22T14:06:51+09:00",
    "publicationAllowed": true,
    "warningNotes": [
     "テーマ分類は当DB独自。出題数は「このテーマに分類した問題数」"
@@ -2362,7 +2362,7 @@
    "pastExamPracticeCount": 12,
    "originalQuizCount": 1,
    "standard2026Status": null,
-   "sourceVersion": "shinkyuu-db@ee647cd+dirty",
+   "sourceVersion": "shinkyuu-db@d090183",
    "verifiedStatus": "COMPUTED_FROM_OFFICIAL_EXAMS",
    "sourceType": "official_exam",
    "relatedDbUrl": "https://shinkyuu-db.pages.dev/past-exams/theme/cs-shinkeikin",
@@ -2371,7 +2371,7 @@
     "pastExams": "https://shinkyuu-db.pages.dev/past-exams/theme/cs-shinkeikin",
     "quiz": "https://shinkyuu-db.pages.dev/quiz/theme/cs-shinkeikin"
    },
-   "updatedAt": "2026-10-12T20:53:05+09:00",
+   "updatedAt": "2026-10-22T14:06:51+09:00",
    "publicationAllowed": true,
    "warningNotes": [
     "テーマ分類は当DB独自。出題数は「このテーマに分類した問題数」"
@@ -2403,7 +2403,7 @@
    "pastExamPracticeCount": 6,
    "originalQuizCount": 1,
    "standard2026Status": null,
-   "sourceVersion": "shinkyuu-db@ee647cd+dirty",
+   "sourceVersion": "shinkyuu-db@d090183",
    "verifiedStatus": "COMPUTED_FROM_OFFICIAL_EXAMS",
    "sourceType": "official_exam",
    "relatedDbUrl": "https://shinkyuu-db.pages.dev/past-exams/theme/cs-seishin",
@@ -2412,7 +2412,7 @@
     "pastExams": "https://shinkyuu-db.pages.dev/past-exams/theme/cs-seishin",
     "quiz": "https://shinkyuu-db.pages.dev/quiz/theme/cs-seishin"
    },
-   "updatedAt": "2026-10-12T20:53:05+09:00",
+   "updatedAt": "2026-10-22T14:06:51+09:00",
    "publicationAllowed": true,
    "warningNotes": [
     "テーマ分類は当DB独自。出題数は「このテーマに分類した問題数」"
@@ -2443,7 +2443,7 @@
    "pastExamPracticeCount": 11,
    "originalQuizCount": 1,
    "standard2026Status": null,
-   "sourceVersion": "shinkyuu-db@ee647cd+dirty",
+   "sourceVersion": "shinkyuu-db@d090183",
    "verifiedStatus": "COMPUTED_FROM_OFFICIAL_EXAMS",
    "sourceType": "official_exam",
    "relatedDbUrl": "https://shinkyuu-db.pages.dev/past-exams/theme/cs-hentai-kansetsu",
@@ -2452,7 +2452,7 @@
     "pastExams": "https://shinkyuu-db.pages.dev/past-exams/theme/cs-hentai-kansetsu",
     "quiz": "https://shinkyuu-db.pages.dev/quiz/theme/cs-hentai-kansetsu"
    },
-   "updatedAt": "2026-10-12T20:53:05+09:00",
+   "updatedAt": "2026-10-22T14:06:51+09:00",
    "publicationAllowed": true,
    "warningNotes": [
     "テーマ分類は当DB独自。出題数は「このテーマに分類した問題数」"
@@ -2483,7 +2483,7 @@
    "pastExamPracticeCount": 10,
    "originalQuizCount": 1,
    "standard2026Status": null,
-   "sourceVersion": "shinkyuu-db@ee647cd+dirty",
+   "sourceVersion": "shinkyuu-db@d090183",
    "verifiedStatus": "COMPUTED_FROM_OFFICIAL_EXAMS",
    "sourceType": "official_exam",
    "relatedDbUrl": "https://shinkyuu-db.pages.dev/past-exams/theme/cs-sekitsui",
@@ -2492,7 +2492,7 @@
     "pastExams": "https://shinkyuu-db.pages.dev/past-exams/theme/cs-sekitsui",
     "quiz": "https://shinkyuu-db.pages.dev/quiz/theme/cs-sekitsui"
    },
-   "updatedAt": "2026-10-12T20:53:05+09:00",
+   "updatedAt": "2026-10-22T14:06:51+09:00",
    "publicationAllowed": true,
    "warningNotes": [
     "テーマ分類は当DB独自。出題数は「このテーマに分類した問題数」"
@@ -2524,7 +2524,7 @@
    "pastExamPracticeCount": 12,
    "originalQuizCount": 1,
    "standard2026Status": null,
-   "sourceVersion": "shinkyuu-db@ee647cd+dirty",
+   "sourceVersion": "shinkyuu-db@d090183",
    "verifiedStatus": "COMPUTED_FROM_OFFICIAL_EXAMS",
    "sourceType": "official_exam",
    "relatedDbUrl": "https://shinkyuu-db.pages.dev/past-exams/theme/cs-gaisho",
@@ -2533,7 +2533,7 @@
     "pastExams": "https://shinkyuu-db.pages.dev/past-exams/theme/cs-gaisho",
     "quiz": "https://shinkyuu-db.pages.dev/quiz/theme/cs-gaisho"
    },
-   "updatedAt": "2026-10-12T20:53:05+09:00",
+   "updatedAt": "2026-10-22T14:06:51+09:00",
    "publicationAllowed": true,
    "warningNotes": [
     "テーマ分類は当DB独自。出題数は「このテーマに分類した問題数」"
@@ -2565,7 +2565,7 @@
    "pastExamPracticeCount": 15,
    "originalQuizCount": 2,
    "standard2026Status": null,
-   "sourceVersion": "shinkyuu-db@ee647cd+dirty",
+   "sourceVersion": "shinkyuu-db@d090183",
    "verifiedStatus": "COMPUTED_FROM_OFFICIAL_EXAMS",
    "sourceType": "official_exam",
    "relatedDbUrl": "https://shinkyuu-db.pages.dev/past-exams/theme/cs-ketsueki",
@@ -2574,7 +2574,7 @@
     "pastExams": "https://shinkyuu-db.pages.dev/past-exams/theme/cs-ketsueki",
     "quiz": "https://shinkyuu-db.pages.dev/quiz/theme/cs-ketsueki"
    },
-   "updatedAt": "2026-10-12T20:53:05+09:00",
+   "updatedAt": "2026-10-22T14:06:51+09:00",
    "publicationAllowed": true,
    "warningNotes": [
     "テーマ分類は当DB独自。出題数は「このテーマに分類した問題数」"
@@ -2606,7 +2606,7 @@
    "pastExamPracticeCount": 23,
    "originalQuizCount": 3,
    "standard2026Status": null,
-   "sourceVersion": "shinkyuu-db@ee647cd+dirty",
+   "sourceVersion": "shinkyuu-db@d090183",
    "verifiedStatus": "COMPUTED_FROM_OFFICIAL_EXAMS",
    "sourceType": "official_exam",
    "relatedDbUrl": "https://shinkyuu-db.pages.dev/past-exams/theme/cs-kansen",
@@ -2615,7 +2615,7 @@
     "pastExams": "https://shinkyuu-db.pages.dev/past-exams/theme/cs-kansen",
     "quiz": "https://shinkyuu-db.pages.dev/quiz/theme/cs-kansen"
    },
-   "updatedAt": "2026-10-12T20:53:05+09:00",
+   "updatedAt": "2026-10-22T14:06:51+09:00",
    "publicationAllowed": true,
    "warningNotes": [
     "テーマ分類は当DB独自。出題数は「このテーマに分類した問題数」"
@@ -2647,7 +2647,7 @@
    "pastExamPracticeCount": 14,
    "originalQuizCount": 2,
    "standard2026Status": null,
-   "sourceVersion": "shinkyuu-db@ee647cd+dirty",
+   "sourceVersion": "shinkyuu-db@d090183",
    "verifiedStatus": "COMPUTED_FROM_OFFICIAL_EXAMS",
    "sourceType": "official_exam",
    "relatedDbUrl": "https://shinkyuu-db.pages.dev/past-exams/theme/cs-shokaki",
@@ -2656,7 +2656,7 @@
     "pastExams": "https://shinkyuu-db.pages.dev/past-exams/theme/cs-shokaki",
     "quiz": "https://shinkyuu-db.pages.dev/quiz/theme/cs-shokaki"
    },
-   "updatedAt": "2026-10-12T20:53:05+09:00",
+   "updatedAt": "2026-10-22T14:06:51+09:00",
    "publicationAllowed": true,
    "warningNotes": [
     "テーマ分類は当DB独自。出題数は「このテーマに分類した問題数」"
@@ -2686,7 +2686,7 @@
    "pastExamPracticeCount": 9,
    "originalQuizCount": 1,
    "standard2026Status": null,
-   "sourceVersion": "shinkyuu-db@ee647cd+dirty",
+   "sourceVersion": "shinkyuu-db@d090183",
    "verifiedStatus": "COMPUTED_FROM_OFFICIAL_EXAMS",
    "sourceType": "official_exam",
    "relatedDbUrl": "https://shinkyuu-db.pages.dev/past-exams/theme/cs-junkanki",
@@ -2695,7 +2695,7 @@
     "pastExams": "https://shinkyuu-db.pages.dev/past-exams/theme/cs-junkanki",
     "quiz": "https://shinkyuu-db.pages.dev/quiz/theme/cs-junkanki"
    },
-   "updatedAt": "2026-10-12T20:53:05+09:00",
+   "updatedAt": "2026-10-22T14:06:51+09:00",
    "publicationAllowed": true,
    "warningNotes": [
     "テーマ分類は当DB独自。出題数は「このテーマに分類した問題数」"
@@ -2726,7 +2726,7 @@
    "pastExamPracticeCount": 10,
    "originalQuizCount": 1,
    "standard2026Status": null,
-   "sourceVersion": "shinkyuu-db@ee647cd+dirty",
+   "sourceVersion": "shinkyuu-db@d090183",
    "verifiedStatus": "COMPUTED_FROM_OFFICIAL_EXAMS",
    "sourceType": "official_exam",
    "relatedDbUrl": "https://shinkyuu-db.pages.dev/past-exams/theme/cs-kokyuki",
@@ -2735,7 +2735,7 @@
     "pastExams": "https://shinkyuu-db.pages.dev/past-exams/theme/cs-kokyuki",
     "quiz": "https://shinkyuu-db.pages.dev/quiz/theme/cs-kokyuki"
    },
-   "updatedAt": "2026-10-12T20:53:05+09:00",
+   "updatedAt": "2026-10-22T14:06:51+09:00",
    "publicationAllowed": true,
    "warningNotes": [
     "テーマ分類は当DB独自。出題数は「このテーマに分類した問題数」"
@@ -2767,7 +2767,7 @@
    "pastExamPracticeCount": 13,
    "originalQuizCount": 2,
    "standard2026Status": null,
-   "sourceVersion": "shinkyuu-db@ee647cd+dirty",
+   "sourceVersion": "shinkyuu-db@d090183",
    "verifiedStatus": "COMPUTED_FROM_OFFICIAL_EXAMS",
    "sourceType": "official_exam",
    "relatedDbUrl": "https://shinkyuu-db.pages.dev/past-exams/theme/cs-jin-hinyoki",
@@ -2776,7 +2776,7 @@
     "pastExams": "https://shinkyuu-db.pages.dev/past-exams/theme/cs-jin-hinyoki",
     "quiz": "https://shinkyuu-db.pages.dev/quiz/theme/cs-jin-hinyoki"
    },
-   "updatedAt": "2026-10-12T20:53:05+09:00",
+   "updatedAt": "2026-10-22T14:06:51+09:00",
    "publicationAllowed": true,
    "warningNotes": [
     "テーマ分類は当DB独自。出題数は「このテーマに分類した問題数」"
@@ -2806,7 +2806,7 @@
    "pastExamPracticeCount": 10,
    "originalQuizCount": 1,
    "standard2026Status": null,
-   "sourceVersion": "shinkyuu-db@ee647cd+dirty",
+   "sourceVersion": "shinkyuu-db@d090183",
    "verifiedStatus": "COMPUTED_FROM_OFFICIAL_EXAMS",
    "sourceType": "official_exam",
    "relatedDbUrl": "https://shinkyuu-db.pages.dev/past-exams/theme/cs-naibunpi",
@@ -2815,7 +2815,7 @@
     "pastExams": "https://shinkyuu-db.pages.dev/past-exams/theme/cs-naibunpi",
     "quiz": "https://shinkyuu-db.pages.dev/quiz/theme/cs-naibunpi"
    },
-   "updatedAt": "2026-10-12T20:53:05+09:00",
+   "updatedAt": "2026-10-22T14:06:51+09:00",
    "publicationAllowed": true,
    "warningNotes": [
     "テーマ分類は当DB独自。出題数は「このテーマに分類した問題数」"
@@ -2845,7 +2845,7 @@
    "pastExamPracticeCount": 6,
    "originalQuizCount": 0,
    "standard2026Status": null,
-   "sourceVersion": "shinkyuu-db@ee647cd+dirty",
+   "sourceVersion": "shinkyuu-db@d090183",
    "verifiedStatus": "COMPUTED_FROM_OFFICIAL_EXAMS",
    "sourceType": "official_exam",
    "relatedDbUrl": "https://shinkyuu-db.pages.dev/past-exams/theme/cs-hifu-shuyo",
@@ -2853,7 +2853,7 @@
     "theme": "https://shinkyuu-db.pages.dev/themes/cs-hifu-shuyo",
     "pastExams": "https://shinkyuu-db.pages.dev/past-exams/theme/cs-hifu-shuyo"
    },
-   "updatedAt": "2026-10-12T20:53:05+09:00",
+   "updatedAt": "2026-10-22T14:06:51+09:00",
    "publicationAllowed": true,
    "warningNotes": [
     "テーマ分類は当DB独自。出題数は「このテーマに分類した問題数」"
@@ -2882,7 +2882,7 @@
    "pastExamPracticeCount": 4,
    "originalQuizCount": 1,
    "standard2026Status": null,
-   "sourceVersion": "shinkyuu-db@ee647cd+dirty",
+   "sourceVersion": "shinkyuu-db@d090183",
    "verifiedStatus": "COMPUTED_FROM_OFFICIAL_EXAMS",
    "sourceType": "official_exam",
    "relatedDbUrl": "https://shinkyuu-db.pages.dev/past-exams/theme/rh-soron",
@@ -2891,7 +2891,7 @@
     "pastExams": "https://shinkyuu-db.pages.dev/past-exams/theme/rh-soron",
     "quiz": "https://shinkyuu-db.pages.dev/quiz/theme/rh-soron"
    },
-   "updatedAt": "2026-10-12T20:53:05+09:00",
+   "updatedAt": "2026-10-22T14:06:51+09:00",
    "publicationAllowed": true,
    "warningNotes": [
     "テーマ分類は当DB独自。出題数は「このテーマに分類した問題数」"
@@ -2920,7 +2920,7 @@
    "pastExamPracticeCount": 5,
    "originalQuizCount": 0,
    "standard2026Status": null,
-   "sourceVersion": "shinkyuu-db@ee647cd+dirty",
+   "sourceVersion": "shinkyuu-db@d090183",
    "verifiedStatus": "COMPUTED_FROM_OFFICIAL_EXAMS",
    "sourceType": "official_exam",
    "relatedDbUrl": "https://shinkyuu-db.pages.dev/past-exams/theme/rh-nosocchu",
@@ -2928,7 +2928,7 @@
     "theme": "https://shinkyuu-db.pages.dev/themes/rh-nosocchu",
     "pastExams": "https://shinkyuu-db.pages.dev/past-exams/theme/rh-nosocchu"
    },
-   "updatedAt": "2026-10-12T20:53:05+09:00",
+   "updatedAt": "2026-10-22T14:06:51+09:00",
    "publicationAllowed": true,
    "warningNotes": [
     "テーマ分類は当DB独自。出題数は「このテーマに分類した問題数」"
@@ -2960,7 +2960,7 @@
    "pastExamPracticeCount": 8,
    "originalQuizCount": 1,
    "standard2026Status": null,
-   "sourceVersion": "shinkyuu-db@ee647cd+dirty",
+   "sourceVersion": "shinkyuu-db@d090183",
    "verifiedStatus": "COMPUTED_FROM_OFFICIAL_EXAMS",
    "sourceType": "official_exam",
    "relatedDbUrl": "https://shinkyuu-db.pages.dev/past-exams/theme/rh-sekizui",
@@ -2969,7 +2969,7 @@
     "pastExams": "https://shinkyuu-db.pages.dev/past-exams/theme/rh-sekizui",
     "quiz": "https://shinkyuu-db.pages.dev/quiz/theme/rh-sekizui"
    },
-   "updatedAt": "2026-10-12T20:53:05+09:00",
+   "updatedAt": "2026-10-22T14:06:51+09:00",
    "publicationAllowed": true,
    "warningNotes": [
     "テーマ分類は当DB独自。出題数は「このテーマに分類した問題数」"
@@ -3000,7 +3000,7 @@
    "pastExamPracticeCount": 5,
    "originalQuizCount": 1,
    "standard2026Status": null,
-   "sourceVersion": "shinkyuu-db@ee647cd+dirty",
+   "sourceVersion": "shinkyuu-db@d090183",
    "verifiedStatus": "COMPUTED_FROM_OFFICIAL_EXAMS",
    "sourceType": "official_exam",
    "relatedDbUrl": "https://shinkyuu-db.pages.dev/past-exams/theme/rh-noseimahi",
@@ -3009,7 +3009,7 @@
     "pastExams": "https://shinkyuu-db.pages.dev/past-exams/theme/rh-noseimahi",
     "quiz": "https://shinkyuu-db.pages.dev/quiz/theme/rh-noseimahi"
    },
-   "updatedAt": "2026-10-12T20:53:05+09:00",
+   "updatedAt": "2026-10-22T14:06:51+09:00",
    "publicationAllowed": true,
    "warningNotes": [
     "テーマ分類は当DB独自。出題数は「このテーマに分類した問題数」"
@@ -3041,7 +3041,7 @@
    "pastExamPracticeCount": 13,
    "originalQuizCount": 2,
    "standard2026Status": null,
-   "sourceVersion": "shinkyuu-db@ee647cd+dirty",
+   "sourceVersion": "shinkyuu-db@d090183",
    "verifiedStatus": "COMPUTED_FROM_OFFICIAL_EXAMS",
    "sourceType": "official_exam",
    "relatedDbUrl": "https://shinkyuu-db.pages.dev/past-exams/theme/rh-shinkei-undoki",
@@ -3050,7 +3050,7 @@
     "pastExams": "https://shinkyuu-db.pages.dev/past-exams/theme/rh-shinkei-undoki",
     "quiz": "https://shinkyuu-db.pages.dev/quiz/theme/rh-shinkei-undoki"
    },
-   "updatedAt": "2026-10-12T20:53:05+09:00",
+   "updatedAt": "2026-10-22T14:06:51+09:00",
    "publicationAllowed": true,
    "warningNotes": [
     "テーマ分類は当DB独自。出題数は「このテーマに分類した問題数」"
@@ -3081,7 +3081,7 @@
    "pastExamPracticeCount": 6,
    "originalQuizCount": 1,
    "standard2026Status": null,
-   "sourceVersion": "shinkyuu-db@ee647cd+dirty",
+   "sourceVersion": "shinkyuu-db@d090183",
    "verifiedStatus": "COMPUTED_FROM_OFFICIAL_EXAMS",
    "sourceType": "official_exam",
    "relatedDbUrl": "https://shinkyuu-db.pages.dev/past-exams/theme/rh-engo-shogai",
@@ -3090,7 +3090,7 @@
     "pastExams": "https://shinkyuu-db.pages.dev/past-exams/theme/rh-engo-shogai",
     "quiz": "https://shinkyuu-db.pages.dev/quiz/theme/rh-engo-shogai"
    },
-   "updatedAt": "2026-10-12T20:53:05+09:00",
+   "updatedAt": "2026-10-22T14:06:51+09:00",
    "publicationAllowed": true,
    "warningNotes": [
     "テーマ分類は当DB独自。出題数は「このテーマに分類した問題数」"
@@ -3120,7 +3120,7 @@
    "pastExamPracticeCount": 6,
    "originalQuizCount": 1,
    "standard2026Status": null,
-   "sourceVersion": "shinkyuu-db@ee647cd+dirty",
+   "sourceVersion": "shinkyuu-db@d090183",
    "verifiedStatus": "COMPUTED_FROM_OFFICIAL_EXAMS",
    "sourceType": "official_exam",
    "relatedDbUrl": "https://shinkyuu-db.pages.dev/past-exams/theme/rh-gishi-sogu",
@@ -3129,7 +3129,7 @@
     "pastExams": "https://shinkyuu-db.pages.dev/past-exams/theme/rh-gishi-sogu",
     "quiz": "https://shinkyuu-db.pages.dev/quiz/theme/rh-gishi-sogu"
    },
-   "updatedAt": "2026-10-12T20:53:05+09:00",
+   "updatedAt": "2026-10-22T14:06:51+09:00",
    "publicationAllowed": true,
    "warningNotes": [
     "テーマ分類は当DB独自。出題数は「このテーマに分類した問題数」"
@@ -3158,7 +3158,7 @@
    "pastExamPracticeCount": 3,
    "originalQuizCount": 0,
    "standard2026Status": "expanded",
-   "sourceVersion": "shinkyuu-db@ee647cd+dirty",
+   "sourceVersion": "shinkyuu-db@d090183",
    "verifiedStatus": "COMPUTED_FROM_OFFICIAL_EXAMS",
    "sourceType": "official_exam",
    "relatedDbUrl": "https://shinkyuu-db.pages.dev/past-exams/theme/rh-haiyo-frailty",
@@ -3166,7 +3166,7 @@
     "theme": "https://shinkyuu-db.pages.dev/themes/rh-haiyo-frailty",
     "pastExams": "https://shinkyuu-db.pages.dev/past-exams/theme/rh-haiyo-frailty"
    },
-   "updatedAt": "2026-10-12T20:53:05+09:00",
+   "updatedAt": "2026-10-22T14:06:51+09:00",
    "publicationAllowed": true,
    "warningNotes": [
     "テーマ分類は当DB独自。出題数は「このテーマに分類した問題数」",
@@ -3199,7 +3199,7 @@
    "pastExamPracticeCount": 8,
    "originalQuizCount": 5,
    "standard2026Status": "expanded",
-   "sourceVersion": "shinkyuu-db@ee647cd+dirty",
+   "sourceVersion": "shinkyuu-db@d090183",
    "verifiedStatus": "COMPUTED_FROM_OFFICIAL_EXAMS",
    "sourceType": "official_exam",
    "relatedDbUrl": "https://shinkyuu-db.pages.dev/past-exams/theme/rh-naibu-shogai",
@@ -3208,7 +3208,7 @@
     "pastExams": "https://shinkyuu-db.pages.dev/past-exams/theme/rh-naibu-shogai",
     "quiz": "https://shinkyuu-db.pages.dev/quiz/theme/rh-naibu-shogai"
    },
-   "updatedAt": "2026-10-12T20:53:05+09:00",
+   "updatedAt": "2026-10-22T14:06:51+09:00",
    "publicationAllowed": true,
    "warningNotes": [
     "テーマ分類は当DB独自。出題数は「このテーマに分類した問題数」",
@@ -3241,7 +3241,7 @@
    "pastExamPracticeCount": 19,
    "originalQuizCount": 2,
    "standard2026Status": null,
-   "sourceVersion": "shinkyuu-db@ee647cd+dirty",
+   "sourceVersion": "shinkyuu-db@d090183",
    "verifiedStatus": "COMPUTED_FROM_OFFICIAL_EXAMS",
    "sourceType": "official_exam",
    "relatedDbUrl": "https://shinkyuu-db.pages.dev/past-exams/theme/rh-team",
@@ -3250,7 +3250,7 @@
     "pastExams": "https://shinkyuu-db.pages.dev/past-exams/theme/rh-team",
     "quiz": "https://shinkyuu-db.pages.dev/quiz/theme/rh-team"
    },
-   "updatedAt": "2026-10-12T20:53:05+09:00",
+   "updatedAt": "2026-10-22T14:06:51+09:00",
    "publicationAllowed": true,
    "warningNotes": [
     "テーマ分類は当DB独自。出題数は「このテーマに分類した問題数」"
@@ -3282,7 +3282,7 @@
    "pastExamPracticeCount": 7,
    "originalQuizCount": 3,
    "standard2026Status": null,
-   "sourceVersion": "shinkyuu-db@ee647cd+dirty",
+   "sourceVersion": "shinkyuu-db@d090183",
    "verifiedStatus": "COMPUTED_FROM_OFFICIAL_EXAMS",
    "sourceType": "official_exam",
    "relatedDbUrl": "https://shinkyuu-db.pages.dev/past-exams/theme/hy-ekigaku",
@@ -3291,7 +3291,7 @@
     "pastExams": "https://shinkyuu-db.pages.dev/past-exams/theme/hy-ekigaku",
     "quiz": "https://shinkyuu-db.pages.dev/quiz/theme/hy-ekigaku"
    },
-   "updatedAt": "2026-10-12T20:53:05+09:00",
+   "updatedAt": "2026-10-22T14:06:51+09:00",
    "publicationAllowed": true,
    "warningNotes": [
     "テーマ分類は当DB独自。出題数は「このテーマに分類した問題数」"
@@ -3320,7 +3320,7 @@
    "pastExamPracticeCount": 4,
    "originalQuizCount": 2,
    "standard2026Status": null,
-   "sourceVersion": "shinkyuu-db@ee647cd+dirty",
+   "sourceVersion": "shinkyuu-db@d090183",
    "verifiedStatus": "COMPUTED_FROM_OFFICIAL_EXAMS",
    "sourceType": "official_exam",
    "relatedDbUrl": "https://shinkyuu-db.pages.dev/past-exams/theme/hy-kansen-yobo",
@@ -3329,7 +3329,7 @@
     "pastExams": "https://shinkyuu-db.pages.dev/past-exams/theme/hy-kansen-yobo",
     "quiz": "https://shinkyuu-db.pages.dev/quiz/theme/hy-kansen-yobo"
    },
-   "updatedAt": "2026-10-12T20:53:05+09:00",
+   "updatedAt": "2026-10-22T14:06:51+09:00",
    "publicationAllowed": true,
    "warningNotes": [
     "テーマ分類は当DB独自。出題数は「このテーマに分類した問題数」"
@@ -3359,7 +3359,7 @@
    "pastExamPracticeCount": 4,
    "originalQuizCount": 2,
    "standard2026Status": null,
-   "sourceVersion": "shinkyuu-db@ee647cd+dirty",
+   "sourceVersion": "shinkyuu-db@d090183",
    "verifiedStatus": "COMPUTED_FROM_OFFICIAL_EXAMS",
    "sourceType": "official_exam",
    "relatedDbUrl": "https://shinkyuu-db.pages.dev/past-exams/theme/hy-yobo-danal",
@@ -3368,7 +3368,7 @@
     "pastExams": "https://shinkyuu-db.pages.dev/past-exams/theme/hy-yobo-danal",
     "quiz": "https://shinkyuu-db.pages.dev/quiz/theme/hy-yobo-danal"
    },
-   "updatedAt": "2026-10-12T20:53:05+09:00",
+   "updatedAt": "2026-10-22T14:06:51+09:00",
    "publicationAllowed": true,
    "warningNotes": [
     "テーマ分類は当DB独自。出題数は「このテーマに分類した問題数」"
@@ -3396,7 +3396,7 @@
    "pastExamPracticeCount": 2,
    "originalQuizCount": 1,
    "standard2026Status": null,
-   "sourceVersion": "shinkyuu-db@ee647cd+dirty",
+   "sourceVersion": "shinkyuu-db@d090183",
    "verifiedStatus": "COMPUTED_FROM_OFFICIAL_EXAMS",
    "sourceType": "official_exam",
    "relatedDbUrl": "https://shinkyuu-db.pages.dev/past-exams/theme/hy-sangyo-hoken",
@@ -3405,7 +3405,7 @@
     "pastExams": "https://shinkyuu-db.pages.dev/past-exams/theme/hy-sangyo-hoken",
     "quiz": "https://shinkyuu-db.pages.dev/quiz/theme/hy-sangyo-hoken"
    },
-   "updatedAt": "2026-10-12T20:53:05+09:00",
+   "updatedAt": "2026-10-22T14:06:51+09:00",
    "publicationAllowed": true,
    "warningNotes": [
     "テーマ分類は当DB独自。出題数は「このテーマに分類した問題数」"
@@ -3434,7 +3434,7 @@
    "pastExamPracticeCount": 3,
    "originalQuizCount": 0,
    "standard2026Status": null,
-   "sourceVersion": "shinkyuu-db@ee647cd+dirty",
+   "sourceVersion": "shinkyuu-db@d090183",
    "verifiedStatus": "COMPUTED_FROM_OFFICIAL_EXAMS",
    "sourceType": "official_exam",
    "relatedDbUrl": "https://shinkyuu-db.pages.dev/past-exams/theme/hy-gakko-hoken",
@@ -3442,7 +3442,7 @@
     "theme": "https://shinkyuu-db.pages.dev/themes/hy-gakko-hoken",
     "pastExams": "https://shinkyuu-db.pages.dev/past-exams/theme/hy-gakko-hoken"
    },
-   "updatedAt": "2026-10-12T20:53:05+09:00",
+   "updatedAt": "2026-10-22T14:06:51+09:00",
    "publicationAllowed": true,
    "warningNotes": [
     "テーマ分類は当DB独自。出題数は「このテーマに分類した問題数」"
@@ -3471,7 +3471,7 @@
    "pastExamPracticeCount": 4,
    "originalQuizCount": 2,
    "standard2026Status": null,
-   "sourceVersion": "shinkyuu-db@ee647cd+dirty",
+   "sourceVersion": "shinkyuu-db@d090183",
    "verifiedStatus": "COMPUTED_FROM_OFFICIAL_EXAMS",
    "sourceType": "official_exam",
    "relatedDbUrl": "https://shinkyuu-db.pages.dev/past-exams/theme/hy-boshi-hoken",
@@ -3480,7 +3480,7 @@
     "pastExams": "https://shinkyuu-db.pages.dev/past-exams/theme/hy-boshi-hoken",
     "quiz": "https://shinkyuu-db.pages.dev/quiz/theme/hy-boshi-hoken"
    },
-   "updatedAt": "2026-10-12T20:53:05+09:00",
+   "updatedAt": "2026-10-22T14:06:51+09:00",
    "publicationAllowed": true,
    "warningNotes": [
     "テーマ分類は当DB独自。出題数は「このテーマに分類した問題数」"
@@ -3511,7 +3511,7 @@
    "pastExamPracticeCount": 5,
    "originalQuizCount": 3,
    "standard2026Status": null,
-   "sourceVersion": "shinkyuu-db@ee647cd+dirty",
+   "sourceVersion": "shinkyuu-db@d090183",
    "verifiedStatus": "COMPUTED_FROM_OFFICIAL_EXAMS",
    "sourceType": "official_exam",
    "relatedDbUrl": "https://shinkyuu-db.pages.dev/past-exams/theme/rg-menkyo",
@@ -3520,7 +3520,7 @@
     "pastExams": "https://shinkyuu-db.pages.dev/past-exams/theme/rg-menkyo",
     "quiz": "https://shinkyuu-db.pages.dev/quiz/theme/rg-menkyo"
    },
-   "updatedAt": "2026-10-12T20:53:05+09:00",
+   "updatedAt": "2026-10-22T14:06:51+09:00",
    "publicationAllowed": true,
    "warningNotes": [
     "テーマ分類は当DB独自。出題数は「このテーマに分類した問題数」"
@@ -3552,7 +3552,7 @@
    "pastExamPracticeCount": 7,
    "originalQuizCount": 2,
    "standard2026Status": null,
-   "sourceVersion": "shinkyuu-db@ee647cd+dirty",
+   "sourceVersion": "shinkyuu-db@d090183",
    "verifiedStatus": "COMPUTED_FROM_OFFICIAL_EXAMS",
    "sourceType": "official_exam",
    "relatedDbUrl": "https://shinkyuu-db.pages.dev/past-exams/theme/rg-seijutsujo",
@@ -3561,7 +3561,7 @@
     "pastExams": "https://shinkyuu-db.pages.dev/past-exams/theme/rg-seijutsujo",
     "quiz": "https://shinkyuu-db.pages.dev/quiz/theme/rg-seijutsujo"
    },
-   "updatedAt": "2026-10-12T20:53:05+09:00",
+   "updatedAt": "2026-10-22T14:06:51+09:00",
    "publicationAllowed": true,
    "warningNotes": [
     "テーマ分類は当DB独自。出題数は「このテーマに分類した問題数」"
@@ -3589,7 +3589,7 @@
    "pastExamPracticeCount": 2,
    "originalQuizCount": 1,
    "standard2026Status": null,
-   "sourceVersion": "shinkyuu-db@ee647cd+dirty",
+   "sourceVersion": "shinkyuu-db@d090183",
    "verifiedStatus": "COMPUTED_FROM_OFFICIAL_EXAMS",
    "sourceType": "official_exam",
    "relatedDbUrl": "https://shinkyuu-db.pages.dev/past-exams/theme/rg-kokoku",
@@ -3598,7 +3598,7 @@
     "pastExams": "https://shinkyuu-db.pages.dev/past-exams/theme/rg-kokoku",
     "quiz": "https://shinkyuu-db.pages.dev/quiz/theme/rg-kokoku"
    },
-   "updatedAt": "2026-10-12T20:53:05+09:00",
+   "updatedAt": "2026-10-22T14:06:51+09:00",
    "publicationAllowed": true,
    "warningNotes": [
     "テーマ分類は当DB独自。出題数は「このテーマに分類した問題数」"
@@ -3628,7 +3628,7 @@
    "pastExamPracticeCount": 4,
    "originalQuizCount": 2,
    "standard2026Status": null,
-   "sourceVersion": "shinkyuu-db@ee647cd+dirty",
+   "sourceVersion": "shinkyuu-db@d090183",
    "verifiedStatus": "COMPUTED_FROM_OFFICIAL_EXAMS",
    "sourceType": "official_exam",
    "relatedDbUrl": "https://shinkyuu-db.pages.dev/past-exams/theme/rg-bassoku",
@@ -3637,7 +3637,7 @@
     "pastExams": "https://shinkyuu-db.pages.dev/past-exams/theme/rg-bassoku",
     "quiz": "https://shinkyuu-db.pages.dev/quiz/theme/rg-bassoku"
    },
-   "updatedAt": "2026-10-12T20:53:05+09:00",
+   "updatedAt": "2026-10-22T14:06:51+09:00",
    "publicationAllowed": true,
    "warningNotes": [
     "テーマ分類は当DB独自。出題数は「このテーマに分類した問題数」"
@@ -3667,7 +3667,7 @@
    "pastExamPracticeCount": 4,
    "originalQuizCount": 1,
    "standard2026Status": null,
-   "sourceVersion": "shinkyuu-db@ee647cd+dirty",
+   "sourceVersion": "shinkyuu-db@d090183",
    "verifiedStatus": "COMPUTED_FROM_OFFICIAL_EXAMS",
    "sourceType": "official_exam",
    "relatedDbUrl": "https://shinkyuu-db.pages.dev/past-exams/theme/rg-iryo-kanren",
@@ -3676,7 +3676,7 @@
     "pastExams": "https://shinkyuu-db.pages.dev/past-exams/theme/rg-iryo-kanren",
     "quiz": "https://shinkyuu-db.pages.dev/quiz/theme/rg-iryo-kanren"
    },
-   "updatedAt": "2026-10-12T20:53:05+09:00",
+   "updatedAt": "2026-10-22T14:06:51+09:00",
    "publicationAllowed": true,
    "warningNotes": [
     "テーマ分類は当DB独自。出題数は「このテーマに分類した問題数」"
@@ -3708,7 +3708,7 @@
    "pastExamPracticeCount": 10,
    "originalQuizCount": 1,
    "standard2026Status": null,
-   "sourceVersion": "shinkyuu-db@ee647cd+dirty",
+   "sourceVersion": "shinkyuu-db@d090183",
    "verifiedStatus": "COMPUTED_FROM_OFFICIAL_EXAMS",
    "sourceType": "official_exam",
    "relatedDbUrl": "https://shinkyuu-db.pages.dev/past-exams/theme/ph-shinkei-seiri",
@@ -3717,7 +3717,7 @@
     "pastExams": "https://shinkyuu-db.pages.dev/past-exams/theme/ph-shinkei-seiri",
     "quiz": "https://shinkyuu-db.pages.dev/quiz/theme/ph-shinkei-seiri"
    },
-   "updatedAt": "2026-10-12T20:53:05+09:00",
+   "updatedAt": "2026-10-22T14:06:51+09:00",
    "publicationAllowed": true,
    "warningNotes": [
     "テーマ分類は当DB独自。出題数は「このテーマに分類した問題数」"
@@ -3747,7 +3747,7 @@
    "pastExamPracticeCount": 4,
    "originalQuizCount": 0,
    "standard2026Status": null,
-   "sourceVersion": "shinkyuu-db@ee647cd+dirty",
+   "sourceVersion": "shinkyuu-db@d090183",
    "verifiedStatus": "COMPUTED_FROM_OFFICIAL_EXAMS",
    "sourceType": "official_exam",
    "relatedDbUrl": "https://shinkyuu-db.pages.dev/past-exams/theme/ph-kinshukushuku",
@@ -3755,7 +3755,7 @@
     "theme": "https://shinkyuu-db.pages.dev/themes/ph-kinshukushuku",
     "pastExams": "https://shinkyuu-db.pages.dev/past-exams/theme/ph-kinshukushuku"
    },
-   "updatedAt": "2026-10-12T20:53:05+09:00",
+   "updatedAt": "2026-10-22T14:06:51+09:00",
    "publicationAllowed": true,
    "warningNotes": [
     "テーマ分類は当DB独自。出題数は「このテーマに分類した問題数」"
@@ -3786,7 +3786,7 @@
    "pastExamPracticeCount": 6,
    "originalQuizCount": 3,
    "standard2026Status": null,
-   "sourceVersion": "shinkyuu-db@ee647cd+dirty",
+   "sourceVersion": "shinkyuu-db@d090183",
    "verifiedStatus": "COMPUTED_FROM_OFFICIAL_EXAMS",
    "sourceType": "official_exam",
    "relatedDbUrl": "https://shinkyuu-db.pages.dev/past-exams/theme/ph-junkan-seiri",
@@ -3795,7 +3795,7 @@
     "pastExams": "https://shinkyuu-db.pages.dev/past-exams/theme/ph-junkan-seiri",
     "quiz": "https://shinkyuu-db.pages.dev/quiz/theme/ph-junkan-seiri"
    },
-   "updatedAt": "2026-10-12T20:53:05+09:00",
+   "updatedAt": "2026-10-22T14:06:51+09:00",
    "publicationAllowed": true,
    "warningNotes": [
     "テーマ分類は当DB独自。出題数は「このテーマに分類した問題数」"
@@ -3824,7 +3824,7 @@
    "pastExamPracticeCount": 3,
    "originalQuizCount": 0,
    "standard2026Status": null,
-   "sourceVersion": "shinkyuu-db@ee647cd+dirty",
+   "sourceVersion": "shinkyuu-db@d090183",
    "verifiedStatus": "COMPUTED_FROM_OFFICIAL_EXAMS",
    "sourceType": "official_exam",
    "relatedDbUrl": "https://shinkyuu-db.pages.dev/past-exams/theme/ph-kokyu-seiri",
@@ -3832,7 +3832,7 @@
     "theme": "https://shinkyuu-db.pages.dev/themes/ph-kokyu-seiri",
     "pastExams": "https://shinkyuu-db.pages.dev/past-exams/theme/ph-kokyu-seiri"
    },
-   "updatedAt": "2026-10-12T20:53:05+09:00",
+   "updatedAt": "2026-10-22T14:06:51+09:00",
    "publicationAllowed": true,
    "warningNotes": [
     "テーマ分類は当DB独自。出題数は「このテーマに分類した問題数」"
@@ -3863,7 +3863,7 @@
    "pastExamPracticeCount": 5,
    "originalQuizCount": 0,
    "standard2026Status": null,
-   "sourceVersion": "shinkyuu-db@ee647cd+dirty",
+   "sourceVersion": "shinkyuu-db@d090183",
    "verifiedStatus": "COMPUTED_FROM_OFFICIAL_EXAMS",
    "sourceType": "official_exam",
    "relatedDbUrl": "https://shinkyuu-db.pages.dev/past-exams/theme/ph-shokaku-seiri",
@@ -3871,7 +3871,7 @@
     "theme": "https://shinkyuu-db.pages.dev/themes/ph-shokaku-seiri",
     "pastExams": "https://shinkyuu-db.pages.dev/past-exams/theme/ph-shokaku-seiri"
    },
-   "updatedAt": "2026-10-12T20:53:05+09:00",
+   "updatedAt": "2026-10-22T14:06:51+09:00",
    "publicationAllowed": true,
    "warningNotes": [
     "テーマ分類は当DB独自。出題数は「このテーマに分類した問題数」"
@@ -3903,7 +3903,7 @@
    "pastExamPracticeCount": 9,
    "originalQuizCount": 2,
    "standard2026Status": null,
-   "sourceVersion": "shinkyuu-db@ee647cd+dirty",
+   "sourceVersion": "shinkyuu-db@d090183",
    "verifiedStatus": "COMPUTED_FROM_OFFICIAL_EXAMS",
    "sourceType": "official_exam",
    "relatedDbUrl": "https://shinkyuu-db.pages.dev/past-exams/theme/ph-naibunpi-seiri",
@@ -3912,7 +3912,7 @@
     "pastExams": "https://shinkyuu-db.pages.dev/past-exams/theme/ph-naibunpi-seiri",
     "quiz": "https://shinkyuu-db.pages.dev/quiz/theme/ph-naibunpi-seiri"
    },
-   "updatedAt": "2026-10-12T20:53:05+09:00",
+   "updatedAt": "2026-10-22T14:06:51+09:00",
    "publicationAllowed": true,
    "warningNotes": [
     "テーマ分類は当DB独自。出題数は「このテーマに分類した問題数」"
@@ -3943,7 +3943,7 @@
    "pastExamPracticeCount": 5,
    "originalQuizCount": 1,
    "standard2026Status": null,
-   "sourceVersion": "shinkyuu-db@ee647cd+dirty",
+   "sourceVersion": "shinkyuu-db@d090183",
    "verifiedStatus": "COMPUTED_FROM_OFFICIAL_EXAMS",
    "sourceType": "official_exam",
    "relatedDbUrl": "https://shinkyuu-db.pages.dev/past-exams/theme/ph-taion-taisha",
@@ -3952,7 +3952,7 @@
     "pastExams": "https://shinkyuu-db.pages.dev/past-exams/theme/ph-taion-taisha",
     "quiz": "https://shinkyuu-db.pages.dev/quiz/theme/ph-taion-taisha"
    },
-   "updatedAt": "2026-10-12T20:53:05+09:00",
+   "updatedAt": "2026-10-22T14:06:51+09:00",
    "publicationAllowed": true,
    "warningNotes": [
     "テーマ分類は当DB独自。出題数は「このテーマに分類した問題数」"
@@ -3982,7 +3982,7 @@
    "pastExamPracticeCount": 5,
    "originalQuizCount": 1,
    "standard2026Status": null,
-   "sourceVersion": "shinkyuu-db@ee647cd+dirty",
+   "sourceVersion": "shinkyuu-db@d090183",
    "verifiedStatus": "COMPUTED_FROM_OFFICIAL_EXAMS",
    "sourceType": "official_exam",
    "relatedDbUrl": "https://shinkyuu-db.pages.dev/past-exams/theme/ph-jin-taieki-meneki",
@@ -3991,7 +3991,7 @@
     "pastExams": "https://shinkyuu-db.pages.dev/past-exams/theme/ph-jin-taieki-meneki",
     "quiz": "https://shinkyuu-db.pages.dev/quiz/theme/ph-jin-taieki-meneki"
    },
-   "updatedAt": "2026-10-12T20:53:05+09:00",
+   "updatedAt": "2026-10-22T14:06:51+09:00",
    "publicationAllowed": true,
    "warningNotes": [
     "テーマ分類は当DB独自。出題数は「このテーマに分類した問題数」"
@@ -4021,7 +4021,7 @@
    "pastExamPracticeCount": 5,
    "originalQuizCount": 0,
    "standard2026Status": null,
-   "sourceVersion": "shinkyuu-db@ee647cd+dirty",
+   "sourceVersion": "shinkyuu-db@d090183",
    "verifiedStatus": "COMPUTED_FROM_OFFICIAL_EXAMS",
    "sourceType": "official_exam",
    "relatedDbUrl": "https://shinkyuu-db.pages.dev/past-exams/theme/ph-saibo-idenshi",
@@ -4029,7 +4029,7 @@
     "theme": "https://shinkyuu-db.pages.dev/themes/ph-saibo-idenshi",
     "pastExams": "https://shinkyuu-db.pages.dev/past-exams/theme/ph-saibo-idenshi"
    },
-   "updatedAt": "2026-10-12T20:53:05+09:00",
+   "updatedAt": "2026-10-22T14:06:51+09:00",
    "publicationAllowed": true,
    "warningNotes": [
     "テーマ分類は当DB独自。出題数は「このテーマに分類した問題数」"
@@ -4060,7 +4060,7 @@
    "pastExamPracticeCount": 13,
    "originalQuizCount": 5,
    "standard2026Status": null,
-   "sourceVersion": "shinkyuu-db@ee647cd+dirty",
+   "sourceVersion": "shinkyuu-db@d090183",
    "verifiedStatus": "COMPUTED_FROM_OFFICIAL_EXAMS",
    "sourceType": "official_exam",
    "relatedDbUrl": "https://shinkyuu-db.pages.dev/past-exams/theme/an-undoki",
@@ -4069,7 +4069,7 @@
     "pastExams": "https://shinkyuu-db.pages.dev/past-exams/theme/an-undoki",
     "quiz": "https://shinkyuu-db.pages.dev/quiz/theme/an-undoki"
    },
-   "updatedAt": "2026-10-12T20:53:05+09:00",
+   "updatedAt": "2026-10-22T14:06:51+09:00",
    "publicationAllowed": true,
    "warningNotes": [
     "テーマ分類は当DB独自。出題数は「このテーマに分類した問題数」"
@@ -4101,7 +4101,7 @@
    "pastExamPracticeCount": 11,
    "originalQuizCount": 1,
    "standard2026Status": null,
-   "sourceVersion": "shinkyuu-db@ee647cd+dirty",
+   "sourceVersion": "shinkyuu-db@d090183",
    "verifiedStatus": "COMPUTED_FROM_OFFICIAL_EXAMS",
    "sourceType": "official_exam",
    "relatedDbUrl": "https://shinkyuu-db.pages.dev/past-exams/theme/an-shinkei",
@@ -4110,7 +4110,7 @@
     "pastExams": "https://shinkyuu-db.pages.dev/past-exams/theme/an-shinkei",
     "quiz": "https://shinkyuu-db.pages.dev/quiz/theme/an-shinkei"
    },
-   "updatedAt": "2026-10-12T20:53:05+09:00",
+   "updatedAt": "2026-10-22T14:06:51+09:00",
    "publicationAllowed": true,
    "warningNotes": [
     "テーマ分類は当DB独自。出題数は「このテーマに分類した問題数」"
@@ -4142,7 +4142,7 @@
    "pastExamPracticeCount": 7,
    "originalQuizCount": 1,
    "standard2026Status": null,
-   "sourceVersion": "shinkyuu-db@ee647cd+dirty",
+   "sourceVersion": "shinkyuu-db@d090183",
    "verifiedStatus": "COMPUTED_FROM_OFFICIAL_EXAMS",
    "sourceType": "official_exam",
    "relatedDbUrl": "https://shinkyuu-db.pages.dev/past-exams/theme/an-junkanki",
@@ -4151,7 +4151,7 @@
     "pastExams": "https://shinkyuu-db.pages.dev/past-exams/theme/an-junkanki",
     "quiz": "https://shinkyuu-db.pages.dev/quiz/theme/an-junkanki"
    },
-   "updatedAt": "2026-10-12T20:53:05+09:00",
+   "updatedAt": "2026-10-22T14:06:51+09:00",
    "publicationAllowed": true,
    "warningNotes": [
     "テーマ分類は当DB独自。出題数は「このテーマに分類した問題数」"
@@ -4183,7 +4183,7 @@
    "pastExamPracticeCount": 11,
    "originalQuizCount": 2,
    "standard2026Status": null,
-   "sourceVersion": "shinkyuu-db@ee647cd+dirty",
+   "sourceVersion": "shinkyuu-db@d090183",
    "verifiedStatus": "COMPUTED_FROM_OFFICIAL_EXAMS",
    "sourceType": "official_exam",
    "relatedDbUrl": "https://shinkyuu-db.pages.dev/past-exams/theme/an-naizo",
@@ -4192,7 +4192,7 @@
     "pastExams": "https://shinkyuu-db.pages.dev/past-exams/theme/an-naizo",
     "quiz": "https://shinkyuu-db.pages.dev/quiz/theme/an-naizo"
    },
-   "updatedAt": "2026-10-12T20:53:05+09:00",
+   "updatedAt": "2026-10-22T14:06:51+09:00",
    "publicationAllowed": true,
    "warningNotes": [
     "テーマ分類は当DB独自。出題数は「このテーマに分類した問題数」"
@@ -4220,7 +4220,7 @@
    "pastExamPracticeCount": 2,
    "originalQuizCount": 0,
    "standard2026Status": null,
-   "sourceVersion": "shinkyuu-db@ee647cd+dirty",
+   "sourceVersion": "shinkyuu-db@d090183",
    "verifiedStatus": "COMPUTED_FROM_OFFICIAL_EXAMS",
    "sourceType": "official_exam",
    "relatedDbUrl": "https://shinkyuu-db.pages.dev/past-exams/theme/an-naibunpi",
@@ -4228,7 +4228,7 @@
     "theme": "https://shinkyuu-db.pages.dev/themes/an-naibunpi",
     "pastExams": "https://shinkyuu-db.pages.dev/past-exams/theme/an-naibunpi"
    },
-   "updatedAt": "2026-10-12T20:53:05+09:00",
+   "updatedAt": "2026-10-22T14:06:51+09:00",
    "publicationAllowed": true,
    "warningNotes": [
     "テーマ分類は当DB独自。出題数は「このテーマに分類した問題数」"
@@ -4258,7 +4258,7 @@
    "pastExamPracticeCount": 4,
    "originalQuizCount": 0,
    "standard2026Status": null,
-   "sourceVersion": "shinkyuu-db@ee647cd+dirty",
+   "sourceVersion": "shinkyuu-db@d090183",
    "verifiedStatus": "COMPUTED_FROM_OFFICIAL_EXAMS",
    "sourceType": "official_exam",
    "relatedDbUrl": "https://shinkyuu-db.pages.dev/past-exams/theme/an-soshiki",
@@ -4266,7 +4266,7 @@
     "theme": "https://shinkyuu-db.pages.dev/themes/an-soshiki",
     "pastExams": "https://shinkyuu-db.pages.dev/past-exams/theme/an-soshiki"
    },
-   "updatedAt": "2026-10-12T20:53:05+09:00",
+   "updatedAt": "2026-10-22T14:06:51+09:00",
    "publicationAllowed": true,
    "warningNotes": [
     "テーマ分類は当DB独自。出題数は「このテーマに分類した問題数」"
@@ -4296,7 +4296,7 @@
    "pastExamPracticeCount": 6,
    "originalQuizCount": 1,
    "standard2026Status": null,
-   "sourceVersion": "shinkyuu-db@ee647cd+dirty",
+   "sourceVersion": "shinkyuu-db@d090183",
    "verifiedStatus": "COMPUTED_FROM_OFFICIAL_EXAMS",
    "sourceType": "official_exam",
    "relatedDbUrl": "https://shinkyuu-db.pages.dev/past-exams/theme/ha-goshin-kozo",
@@ -4305,7 +4305,7 @@
     "pastExams": "https://shinkyuu-db.pages.dev/past-exams/theme/ha-goshin-kozo",
     "quiz": "https://shinkyuu-db.pages.dev/quiz/theme/ha-goshin-kozo"
    },
-   "updatedAt": "2026-10-12T20:53:05+09:00",
+   "updatedAt": "2026-10-22T14:06:51+09:00",
    "publicationAllowed": true,
    "warningNotes": [
     "テーマ分類は当DB独自。出題数は「このテーマに分類した問題数」"
@@ -4337,7 +4337,7 @@
    "pastExamPracticeCount": 11,
    "originalQuizCount": 2,
    "standard2026Status": null,
-   "sourceVersion": "shinkyuu-db@ee647cd+dirty",
+   "sourceVersion": "shinkyuu-db@d090183",
    "verifiedStatus": "COMPUTED_FROM_OFFICIAL_EXAMS",
    "sourceType": "official_exam",
    "relatedDbUrl": "https://shinkyuu-db.pages.dev/past-exams/theme/ha-shishinho",
@@ -4346,7 +4346,7 @@
     "pastExams": "https://shinkyuu-db.pages.dev/past-exams/theme/ha-shishinho",
     "quiz": "https://shinkyuu-db.pages.dev/quiz/theme/ha-shishinho"
    },
-   "updatedAt": "2026-10-12T20:53:05+09:00",
+   "updatedAt": "2026-10-22T14:06:51+09:00",
    "publicationAllowed": true,
    "warningNotes": [
     "テーマ分類は当DB独自。出題数は「このテーマに分類した問題数」"
@@ -4371,7 +4371,7 @@
    "pastExamPracticeCount": 0,
    "originalQuizCount": 1,
    "standard2026Status": null,
-   "sourceVersion": "shinkyuu-db@ee647cd+dirty",
+   "sourceVersion": "shinkyuu-db@d090183",
    "verifiedStatus": "COMPUTED_FROM_OFFICIAL_EXAMS",
    "sourceType": "official_exam",
    "relatedDbUrl": "https://shinkyuu-db.pages.dev/themes/ha-hosha",
@@ -4379,7 +4379,7 @@
     "theme": "https://shinkyuu-db.pages.dev/themes/ha-hosha",
     "quiz": "https://shinkyuu-db.pages.dev/quiz/theme/ha-hosha"
    },
-   "updatedAt": "2026-10-12T20:53:05+09:00",
+   "updatedAt": "2026-10-22T14:06:51+09:00",
    "publicationAllowed": true,
    "warningNotes": [
     "テーマ分類は当DB独自。出題数は「このテーマに分類した問題数」",
@@ -4408,7 +4408,7 @@
    "pastExamPracticeCount": 2,
    "originalQuizCount": 1,
    "standard2026Status": null,
-   "sourceVersion": "shinkyuu-db@ee647cd+dirty",
+   "sourceVersion": "shinkyuu-db@d090183",
    "verifiedStatus": "COMPUTED_FROM_OFFICIAL_EXAMS",
    "sourceType": "official_exam",
    "relatedDbUrl": "https://shinkyuu-db.pages.dev/past-exams/theme/ha-kodai-kyushin",
@@ -4417,7 +4417,7 @@
     "pastExams": "https://shinkyuu-db.pages.dev/past-exams/theme/ha-kodai-kyushin",
     "quiz": "https://shinkyuu-db.pages.dev/quiz/theme/ha-kodai-kyushin"
    },
-   "updatedAt": "2026-10-12T20:53:05+09:00",
+   "updatedAt": "2026-10-22T14:06:51+09:00",
    "publicationAllowed": true,
    "warningNotes": [
     "テーマ分類は当DB独自。出題数は「このテーマに分類した問題数」"
@@ -4444,7 +4444,7 @@
    "pastExamPracticeCount": 2,
    "originalQuizCount": 0,
    "standard2026Status": null,
-   "sourceVersion": "shinkyuu-db@ee647cd+dirty",
+   "sourceVersion": "shinkyuu-db@d090183",
    "verifiedStatus": "COMPUTED_FROM_OFFICIAL_EXAMS",
    "sourceType": "official_exam",
    "relatedDbUrl": "https://shinkyuu-db.pages.dev/past-exams/theme/ha-tokki",
@@ -4452,7 +4452,7 @@
     "theme": "https://shinkyuu-db.pages.dev/themes/ha-tokki",
     "pastExams": "https://shinkyuu-db.pages.dev/past-exams/theme/ha-tokki"
    },
-   "updatedAt": "2026-10-12T20:53:05+09:00",
+   "updatedAt": "2026-10-22T14:06:51+09:00",
    "publicationAllowed": true,
    "warningNotes": [
     "テーマ分類は当DB独自。出題数は「このテーマに分類した問題数」"
@@ -4483,7 +4483,7 @@
    "pastExamPracticeCount": 6,
    "originalQuizCount": 1,
    "standard2026Status": "expanded",
-   "sourceVersion": "shinkyuu-db@ee647cd+dirty",
+   "sourceVersion": "shinkyuu-db@d090183",
    "verifiedStatus": "COMPUTED_FROM_OFFICIAL_EXAMS",
    "sourceType": "official_exam",
    "relatedDbUrl": "https://shinkyuu-db.pages.dev/past-exams/theme/ha-kansen-taisaku",
@@ -4492,7 +4492,7 @@
     "pastExams": "https://shinkyuu-db.pages.dev/past-exams/theme/ha-kansen-taisaku",
     "quiz": "https://shinkyuu-db.pages.dev/quiz/theme/ha-kansen-taisaku"
    },
-   "updatedAt": "2026-10-12T20:53:05+09:00",
+   "updatedAt": "2026-10-22T14:06:51+09:00",
    "publicationAllowed": true,
    "warningNotes": [
     "テーマ分類は当DB独自。出題数は「このテーマに分類した問題数」",
@@ -4523,7 +4523,7 @@
    "pastExamPracticeCount": 8,
    "originalQuizCount": 1,
    "standard2026Status": null,
-   "sourceVersion": "shinkyuu-db@ee647cd+dirty",
+   "sourceVersion": "shinkyuu-db@d090183",
    "verifiedStatus": "COMPUTED_FROM_OFFICIAL_EXAMS",
    "sourceType": "official_exam",
    "relatedDbUrl": "https://shinkyuu-db.pages.dev/past-exams/theme/ha-chintsu-kiko",
@@ -4532,7 +4532,7 @@
     "pastExams": "https://shinkyuu-db.pages.dev/past-exams/theme/ha-chintsu-kiko",
     "quiz": "https://shinkyuu-db.pages.dev/quiz/theme/ha-chintsu-kiko"
    },
-   "updatedAt": "2026-10-12T20:53:05+09:00",
+   "updatedAt": "2026-10-22T14:06:51+09:00",
    "publicationAllowed": true,
    "warningNotes": [
     "テーマ分類は当DB独自。出題数は「このテーマに分類した問題数」"
@@ -4562,7 +4562,7 @@
    "pastExamPracticeCount": 8,
    "originalQuizCount": 1,
    "standard2026Status": null,
-   "sourceVersion": "shinkyuu-db@ee647cd+dirty",
+   "sourceVersion": "shinkyuu-db@d090183",
    "verifiedStatus": "COMPUTED_FROM_OFFICIAL_EXAMS",
    "sourceType": "official_exam",
    "relatedDbUrl": "https://shinkyuu-db.pages.dev/past-exams/theme/ha-tsukaku-dendoro",
@@ -4571,7 +4571,7 @@
     "pastExams": "https://shinkyuu-db.pages.dev/past-exams/theme/ha-tsukaku-dendoro",
     "quiz": "https://shinkyuu-db.pages.dev/quiz/theme/ha-tsukaku-dendoro"
    },
-   "updatedAt": "2026-10-12T20:53:05+09:00",
+   "updatedAt": "2026-10-22T14:06:51+09:00",
    "publicationAllowed": true,
    "warningNotes": [
     "テーマ分類は当DB独自。出題数は「このテーマに分類した問題数」"
@@ -4600,7 +4600,7 @@
    "pastExamPracticeCount": 3,
    "originalQuizCount": 0,
    "standard2026Status": null,
-   "sourceVersion": "shinkyuu-db@ee647cd+dirty",
+   "sourceVersion": "shinkyuu-db@d090183",
    "verifiedStatus": "COMPUTED_FROM_OFFICIAL_EXAMS",
    "sourceType": "official_exam",
    "relatedDbUrl": "https://shinkyuu-db.pages.dev/past-exams/theme/ha-hari-tsuden",
@@ -4608,7 +4608,7 @@
     "theme": "https://shinkyuu-db.pages.dev/themes/ha-hari-tsuden",
     "pastExams": "https://shinkyuu-db.pages.dev/past-exams/theme/ha-hari-tsuden"
    },
-   "updatedAt": "2026-10-12T20:53:05+09:00",
+   "updatedAt": "2026-10-22T14:06:51+09:00",
    "publicationAllowed": true,
    "warningNotes": [
     "テーマ分類は当DB独自。出題数は「このテーマに分類した問題数」"
@@ -4637,7 +4637,7 @@
    "pastExamPracticeCount": 6,
    "originalQuizCount": 0,
    "standard2026Status": null,
-   "sourceVersion": "shinkyuu-db@ee647cd+dirty",
+   "sourceVersion": "shinkyuu-db@d090183",
    "verifiedStatus": "COMPUTED_FROM_OFFICIAL_EXAMS",
    "sourceType": "official_exam",
    "relatedDbUrl": "https://shinkyuu-db.pages.dev/past-exams/theme/ha-shishin-seiri",
@@ -4645,7 +4645,7 @@
     "theme": "https://shinkyuu-db.pages.dev/themes/ha-shishin-seiri",
     "pastExams": "https://shinkyuu-db.pages.dev/past-exams/theme/ha-shishin-seiri"
    },
-   "updatedAt": "2026-10-12T20:53:05+09:00",
+   "updatedAt": "2026-10-22T14:06:51+09:00",
    "publicationAllowed": true,
    "warningNotes": [
     "テーマ分類は当DB独自。出題数は「このテーマに分類した問題数」"
@@ -4677,7 +4677,7 @@
    "pastExamPracticeCount": 8,
    "originalQuizCount": 2,
    "standard2026Status": null,
-   "sourceVersion": "shinkyuu-db@ee647cd+dirty",
+   "sourceVersion": "shinkyuu-db@d090183",
    "verifiedStatus": "COMPUTED_FROM_OFFICIAL_EXAMS",
    "sourceType": "official_exam",
    "relatedDbUrl": "https://shinkyuu-db.pages.dev/past-exams/theme/ky-mogusa",
@@ -4686,7 +4686,7 @@
     "pastExams": "https://shinkyuu-db.pages.dev/past-exams/theme/ky-mogusa",
     "quiz": "https://shinkyuu-db.pages.dev/quiz/theme/ky-mogusa"
    },
-   "updatedAt": "2026-10-12T20:53:05+09:00",
+   "updatedAt": "2026-10-22T14:06:51+09:00",
    "publicationAllowed": true,
    "warningNotes": [
     "テーマ分類は当DB独自。出題数は「このテーマに分類した問題数」"
@@ -4718,7 +4718,7 @@
    "pastExamPracticeCount": 10,
    "originalQuizCount": 3,
    "standard2026Status": null,
-   "sourceVersion": "shinkyuu-db@ee647cd+dirty",
+   "sourceVersion": "shinkyuu-db@d090183",
    "verifiedStatus": "COMPUTED_FROM_OFFICIAL_EXAMS",
    "sourceType": "official_exam",
    "relatedDbUrl": "https://shinkyuu-db.pages.dev/past-exams/theme/ky-kyuho-shurui",
@@ -4727,7 +4727,7 @@
     "pastExams": "https://shinkyuu-db.pages.dev/past-exams/theme/ky-kyuho-shurui",
     "quiz": "https://shinkyuu-db.pages.dev/quiz/theme/ky-kyuho-shurui"
    },
-   "updatedAt": "2026-10-12T20:53:05+09:00",
+   "updatedAt": "2026-10-22T14:06:51+09:00",
    "publicationAllowed": true,
    "warningNotes": [
     "テーマ分類は当DB独自。出題数は「このテーマに分類した問題数」"
@@ -4752,14 +4752,14 @@
    "pastExamPracticeCount": 0,
    "originalQuizCount": 0,
    "standard2026Status": null,
-   "sourceVersion": "shinkyuu-db@ee647cd+dirty",
+   "sourceVersion": "shinkyuu-db@d090183",
    "verifiedStatus": "COMPUTED_FROM_OFFICIAL_EXAMS",
    "sourceType": "official_exam",
    "relatedDbUrl": "https://shinkyuu-db.pages.dev/themes/ky-shigeki-ryo",
    "relatedDbUrls": {
     "theme": "https://shinkyuu-db.pages.dev/themes/ky-shigeki-ryo"
    },
-   "updatedAt": "2026-10-12T20:53:05+09:00",
+   "updatedAt": "2026-10-22T14:06:51+09:00",
    "publicationAllowed": true,
    "warningNotes": [
     "テーマ分類は当DB独自。出題数は「このテーマに分類した問題数」",
@@ -4789,7 +4789,7 @@
    "pastExamPracticeCount": 6,
    "originalQuizCount": 1,
    "standard2026Status": null,
-   "sourceVersion": "shinkyuu-db@ee647cd+dirty",
+   "sourceVersion": "shinkyuu-db@d090183",
    "verifiedStatus": "COMPUTED_FROM_OFFICIAL_EXAMS",
    "sourceType": "official_exam",
    "relatedDbUrl": "https://shinkyuu-db.pages.dev/past-exams/theme/ky-kinki",
@@ -4798,7 +4798,7 @@
     "pastExams": "https://shinkyuu-db.pages.dev/past-exams/theme/ky-kinki",
     "quiz": "https://shinkyuu-db.pages.dev/quiz/theme/ky-kinki"
    },
-   "updatedAt": "2026-10-12T20:53:05+09:00",
+   "updatedAt": "2026-10-22T14:06:51+09:00",
    "publicationAllowed": true,
    "warningNotes": [
     "テーマ分類は当DB独自。出題数は「このテーマに分類した問題数」"
@@ -4828,7 +4828,7 @@
    "pastExamPracticeCount": 6,
    "originalQuizCount": 1,
    "standard2026Status": null,
-   "sourceVersion": "shinkyuu-db@ee647cd+dirty",
+   "sourceVersion": "shinkyuu-db@d090183",
    "verifiedStatus": "COMPUTED_FROM_OFFICIAL_EXAMS",
    "sourceType": "official_exam",
    "relatedDbUrl": "https://shinkyuu-db.pages.dev/past-exams/theme/ky-kyokusho-hanno",
@@ -4837,7 +4837,7 @@
     "pastExams": "https://shinkyuu-db.pages.dev/past-exams/theme/ky-kyokusho-hanno",
     "quiz": "https://shinkyuu-db.pages.dev/quiz/theme/ky-kyokusho-hanno"
    },
-   "updatedAt": "2026-10-12T20:53:05+09:00",
+   "updatedAt": "2026-10-22T14:06:51+09:00",
    "publicationAllowed": true,
    "warningNotes": [
     "テーマ分類は当DB独自。出題数は「このテーマに分類した問題数」"
@@ -4869,7 +4869,7 @@
    "pastExamPracticeCount": 25,
    "originalQuizCount": 4,
    "standard2026Status": "expanded",
-   "sourceVersion": "shinkyuu-db@ee647cd+dirty",
+   "sourceVersion": "shinkyuu-db@d090183",
    "verifiedStatus": "COMPUTED_FROM_OFFICIAL_EXAMS",
    "sourceType": "official_exam",
    "relatedDbUrl": "https://shinkyuu-db.pages.dev/past-exams/theme/ky-zenshin-sayo",
@@ -4878,7 +4878,7 @@
     "pastExams": "https://shinkyuu-db.pages.dev/past-exams/theme/ky-zenshin-sayo",
     "quiz": "https://shinkyuu-db.pages.dev/quiz/theme/ky-zenshin-sayo"
    },
-   "updatedAt": "2026-10-12T20:53:05+09:00",
+   "updatedAt": "2026-10-22T14:06:51+09:00",
    "publicationAllowed": true,
    "warningNotes": [
     "テーマ分類は当DB独自。出題数は「このテーマに分類した問題数」",
@@ -4908,7 +4908,7 @@
    "pastExamPracticeCount": 5,
    "originalQuizCount": 2,
    "standard2026Status": null,
-   "sourceVersion": "shinkyuu-db@ee647cd+dirty",
+   "sourceVersion": "shinkyuu-db@d090183",
    "verifiedStatus": "COMPUTED_FROM_OFFICIAL_EXAMS",
    "sourceType": "official_exam",
    "relatedDbUrl": "https://shinkyuu-db.pages.dev/past-exams/theme/ky-fukusayo-hosoku",
@@ -4917,7 +4917,7 @@
     "pastExams": "https://shinkyuu-db.pages.dev/past-exams/theme/ky-fukusayo-hosoku",
     "quiz": "https://shinkyuu-db.pages.dev/quiz/theme/ky-fukusayo-hosoku"
    },
-   "updatedAt": "2026-10-12T20:53:05+09:00",
+   "updatedAt": "2026-10-22T14:06:51+09:00",
    "publicationAllowed": true,
    "warningNotes": [
     "テーマ分類は当DB独自。出題数は「このテーマに分類した問題数」"
@@ -4942,14 +4942,14 @@
    "pastExamPracticeCount": 0,
    "originalQuizCount": 0,
    "standard2026Status": null,
-   "sourceVersion": "shinkyuu-db@ee647cd+dirty",
+   "sourceVersion": "shinkyuu-db@d090183",
    "verifiedStatus": "COMPUTED_FROM_OFFICIAL_EXAMS",
    "sourceType": "official_exam",
    "relatedDbUrl": "https://shinkyuu-db.pages.dev/themes/oc-hakko-bensho",
    "relatedDbUrls": {
     "theme": "https://shinkyuu-db.pages.dev/themes/oc-hakko-bensho"
    },
-   "updatedAt": "2026-10-12T20:53:05+09:00",
+   "updatedAt": "2026-10-22T14:06:51+09:00",
    "publicationAllowed": true,
    "warningNotes": [
     "テーマ分類は当DB独自。出題数は「このテーマに分類した問題数」",
@@ -4981,7 +4981,7 @@
    "pastExamPracticeCount": 13,
    "originalQuizCount": 2,
    "standard2026Status": null,
-   "sourceVersion": "shinkyuu-db@ee647cd+dirty",
+   "sourceVersion": "shinkyuu-db@d090183",
    "verifiedStatus": "COMPUTED_FROM_OFFICIAL_EXAMS",
    "sourceType": "official_exam",
    "relatedDbUrl": "https://shinkyuu-db.pages.dev/past-exams/theme/oc-kiketsu-bensho",
@@ -4990,7 +4990,7 @@
     "pastExams": "https://shinkyuu-db.pages.dev/past-exams/theme/oc-kiketsu-bensho",
     "quiz": "https://shinkyuu-db.pages.dev/quiz/theme/oc-kiketsu-bensho"
    },
-   "updatedAt": "2026-10-12T20:53:05+09:00",
+   "updatedAt": "2026-10-22T14:06:51+09:00",
    "publicationAllowed": true,
    "warningNotes": [
     "テーマ分類は当DB独自。出題数は「このテーマに分類した問題数」"
@@ -5021,7 +5021,7 @@
    "pastExamPracticeCount": 24,
    "originalQuizCount": 3,
    "standard2026Status": null,
-   "sourceVersion": "shinkyuu-db@ee647cd+dirty",
+   "sourceVersion": "shinkyuu-db@d090183",
    "verifiedStatus": "COMPUTED_FROM_OFFICIAL_EXAMS",
    "sourceType": "official_exam",
    "relatedDbUrl": "https://shinkyuu-db.pages.dev/past-exams/theme/oc-zofu-bensho",
@@ -5030,7 +5030,7 @@
     "pastExams": "https://shinkyuu-db.pages.dev/past-exams/theme/oc-zofu-bensho",
     "quiz": "https://shinkyuu-db.pages.dev/quiz/theme/oc-zofu-bensho"
    },
-   "updatedAt": "2026-10-12T20:53:05+09:00",
+   "updatedAt": "2026-10-22T14:06:51+09:00",
    "publicationAllowed": true,
    "warningNotes": [
     "テーマ分類は当DB独自。出題数は「このテーマに分類した問題数」"
@@ -5059,7 +5059,7 @@
    "pastExamPracticeCount": 3,
    "originalQuizCount": 0,
    "standard2026Status": null,
-   "sourceVersion": "shinkyuu-db@ee647cd+dirty",
+   "sourceVersion": "shinkyuu-db@d090183",
    "verifiedStatus": "COMPUTED_FROM_OFFICIAL_EXAMS",
    "sourceType": "official_exam",
    "relatedDbUrl": "https://shinkyuu-db.pages.dev/past-exams/theme/oc-shinho-shindan",
@@ -5067,7 +5067,7 @@
     "theme": "https://shinkyuu-db.pages.dev/themes/oc-shinho-shindan",
     "pastExams": "https://shinkyuu-db.pages.dev/past-exams/theme/oc-shinho-shindan"
    },
-   "updatedAt": "2026-10-12T20:53:05+09:00",
+   "updatedAt": "2026-10-22T14:06:51+09:00",
    "publicationAllowed": true,
    "warningNotes": [
     "テーマ分類は当DB独自。出題数は「このテーマに分類した問題数」"
@@ -5099,7 +5099,7 @@
    "pastExamPracticeCount": 28,
    "originalQuizCount": 3,
    "standard2026Status": null,
-   "sourceVersion": "shinkyuu-db@ee647cd+dirty",
+   "sourceVersion": "shinkyuu-db@d090183",
    "verifiedStatus": "COMPUTED_FROM_OFFICIAL_EXAMS",
    "sourceType": "official_exam",
    "relatedDbUrl": "https://shinkyuu-db.pages.dev/past-exams/theme/oc-keiraku-chiryo",
@@ -5108,7 +5108,7 @@
     "pastExams": "https://shinkyuu-db.pages.dev/past-exams/theme/oc-keiraku-chiryo",
     "quiz": "https://shinkyuu-db.pages.dev/quiz/theme/oc-keiraku-chiryo"
    },
-   "updatedAt": "2026-10-12T20:53:05+09:00",
+   "updatedAt": "2026-10-22T14:06:51+09:00",
    "publicationAllowed": true,
    "warningNotes": [
     "テーマ分類は当DB独自。出題数は「このテーマに分類した問題数」"
@@ -5140,7 +5140,7 @@
    "pastExamPracticeCount": 48,
    "originalQuizCount": 8,
    "standard2026Status": "reorganized",
-   "sourceVersion": "shinkyuu-db@ee647cd+dirty",
+   "sourceVersion": "shinkyuu-db@d090183",
    "verifiedStatus": "COMPUTED_FROM_OFFICIAL_EXAMS",
    "sourceType": "official_exam",
    "relatedDbUrl": "https://shinkyuu-db.pages.dev/past-exams/theme/oc-kakka-chiryo",
@@ -5149,7 +5149,7 @@
     "pastExams": "https://shinkyuu-db.pages.dev/past-exams/theme/oc-kakka-chiryo",
     "quiz": "https://shinkyuu-db.pages.dev/quiz/theme/oc-kakka-chiryo"
    },
-   "updatedAt": "2026-10-12T20:53:05+09:00",
+   "updatedAt": "2026-10-22T14:06:51+09:00",
    "publicationAllowed": true,
    "warningNotes": [
     "テーマ分類は当DB独自。出題数は「このテーマに分類した問題数」",
@@ -5182,7 +5182,7 @@
    "pastExamPracticeCount": 71,
    "originalQuizCount": 6,
    "standard2026Status": null,
-   "sourceVersion": "shinkyuu-db@ee647cd+dirty",
+   "sourceVersion": "shinkyuu-db@d090183",
    "verifiedStatus": "COMPUTED_FROM_OFFICIAL_EXAMS",
    "sourceType": "official_exam",
    "relatedDbUrl": "https://shinkyuu-db.pages.dev/past-exams/theme/oc-undoki-shinkei",
@@ -5191,7 +5191,7 @@
     "pastExams": "https://shinkyuu-db.pages.dev/past-exams/theme/oc-undoki-shinkei",
     "quiz": "https://shinkyuu-db.pages.dev/quiz/theme/oc-undoki-shinkei"
    },
-   "updatedAt": "2026-10-12T20:53:05+09:00",
+   "updatedAt": "2026-10-22T14:06:51+09:00",
    "publicationAllowed": true,
    "warningNotes": [
     "テーマ分類は当DB独自。出題数は「このテーマに分類した問題数」"
@@ -5223,7 +5223,7 @@
    "pastExamPracticeCount": 42,
    "originalQuizCount": 1,
    "standard2026Status": null,
-   "sourceVersion": "shinkyuu-db@ee647cd+dirty",
+   "sourceVersion": "shinkyuu-db@d090183",
    "verifiedStatus": "COMPUTED_FROM_OFFICIAL_EXAMS",
    "sourceType": "official_exam",
    "relatedDbUrl": "https://shinkyuu-db.pages.dev/past-exams/theme/cg-shokogaku",
@@ -5232,7 +5232,7 @@
     "pastExams": "https://shinkyuu-db.pages.dev/past-exams/theme/cg-shokogaku",
     "quiz": "https://shinkyuu-db.pages.dev/quiz/theme/cg-shokogaku"
    },
-   "updatedAt": "2026-10-12T20:53:05+09:00",
+   "updatedAt": "2026-10-22T14:06:51+09:00",
    "publicationAllowed": true,
    "warningNotes": [
     "テーマ分類は当DB独自。出題数は「このテーマに分類した問題数」"
@@ -5264,7 +5264,7 @@
    "pastExamPracticeCount": 30,
    "originalQuizCount": 0,
    "standard2026Status": null,
-   "sourceVersion": "shinkyuu-db@ee647cd+dirty",
+   "sourceVersion": "shinkyuu-db@d090183",
    "verifiedStatus": "COMPUTED_FROM_OFFICIAL_EXAMS",
    "sourceType": "official_exam",
    "relatedDbUrl": "https://shinkyuu-db.pages.dev/past-exams/theme/oo-shinsatsu-bensho",
@@ -5272,7 +5272,7 @@
     "theme": "https://shinkyuu-db.pages.dev/themes/oo-shinsatsu-bensho",
     "pastExams": "https://shinkyuu-db.pages.dev/past-exams/theme/oo-shinsatsu-bensho"
    },
-   "updatedAt": "2026-10-12T20:53:05+09:00",
+   "updatedAt": "2026-10-22T14:06:51+09:00",
    "publicationAllowed": true,
    "warningNotes": [
     "テーマ分類は当DB独自。出題数は「このテーマに分類した問題数」"
@@ -5304,7 +5304,7 @@
    "pastExamPracticeCount": 14,
    "originalQuizCount": 0,
    "standard2026Status": null,
-   "sourceVersion": "shinkyuu-db@ee647cd+dirty",
+   "sourceVersion": "shinkyuu-db@d090183",
    "verifiedStatus": "COMPUTED_FROM_OFFICIAL_EXAMS",
    "sourceType": "official_exam",
    "relatedDbUrl": "https://shinkyuu-db.pages.dev/past-exams/theme/oo-keiraku-keimyaku",
@@ -5312,7 +5312,7 @@
     "theme": "https://shinkyuu-db.pages.dev/themes/oo-keiraku-keimyaku",
     "pastExams": "https://shinkyuu-db.pages.dev/past-exams/theme/oo-keiraku-keimyaku"
    },
-   "updatedAt": "2026-10-12T20:53:05+09:00",
+   "updatedAt": "2026-10-22T14:06:51+09:00",
    "publicationAllowed": true,
    "warningNotes": [
     "テーマ分類は当DB独自。出題数は「このテーマに分類した問題数」"
@@ -5344,7 +5344,7 @@
    "pastExamPracticeCount": 8,
    "originalQuizCount": 0,
    "standard2026Status": null,
-   "sourceVersion": "shinkyuu-db@ee647cd+dirty",
+   "sourceVersion": "shinkyuu-db@d090183",
    "verifiedStatus": "COMPUTED_FROM_OFFICIAL_EXAMS",
    "sourceType": "official_exam",
    "relatedDbUrl": "https://shinkyuu-db.pages.dev/past-exams/theme/oo-chiryo-gairon",
@@ -5352,7 +5352,7 @@
     "theme": "https://shinkyuu-db.pages.dev/themes/oo-chiryo-gairon",
     "pastExams": "https://shinkyuu-db.pages.dev/past-exams/theme/oo-chiryo-gairon"
    },
-   "updatedAt": "2026-10-12T20:53:05+09:00",
+   "updatedAt": "2026-10-22T14:06:51+09:00",
    "publicationAllowed": true,
    "warningNotes": [
     "テーマ分類は当DB独自。出題数は「このテーマに分類した問題数」"
@@ -5382,7 +5382,7 @@
    "pastExamPracticeCount": 7,
    "originalQuizCount": 1,
    "standard2026Status": null,
-   "sourceVersion": "shinkyuu-db@ee647cd+dirty",
+   "sourceVersion": "shinkyuu-db@d090183",
    "verifiedStatus": "COMPUTED_FROM_OFFICIAL_EXAMS",
    "sourceType": "official_exam",
    "relatedDbUrl": "https://shinkyuu-db.pages.dev/past-exams/theme/cs-ganka-jibi",
@@ -5391,7 +5391,7 @@
     "pastExams": "https://shinkyuu-db.pages.dev/past-exams/theme/cs-ganka-jibi",
     "quiz": "https://shinkyuu-db.pages.dev/quiz/theme/cs-ganka-jibi"
    },
-   "updatedAt": "2026-10-12T20:53:05+09:00",
+   "updatedAt": "2026-10-22T14:06:51+09:00",
    "publicationAllowed": true,
    "warningNotes": [
     "テーマ分類は当DB独自。出題数は「このテーマに分類した問題数」"
@@ -5421,7 +5421,7 @@
    "pastExamPracticeCount": 5,
    "originalQuizCount": 6,
    "standard2026Status": "expanded",
-   "sourceVersion": "shinkyuu-db@ee647cd+dirty",
+   "sourceVersion": "shinkyuu-db@d090183",
    "verifiedStatus": "COMPUTED_FROM_OFFICIAL_EXAMS",
    "sourceType": "official_exam",
    "relatedDbUrl": "https://shinkyuu-db.pages.dev/past-exams/theme/cs-fujinka-nyusen",
@@ -5430,7 +5430,7 @@
     "pastExams": "https://shinkyuu-db.pages.dev/past-exams/theme/cs-fujinka-nyusen",
     "quiz": "https://shinkyuu-db.pages.dev/quiz/theme/cs-fujinka-nyusen"
    },
-   "updatedAt": "2026-10-12T20:53:05+09:00",
+   "updatedAt": "2026-10-22T14:06:51+09:00",
    "publicationAllowed": true,
    "warningNotes": [
     "テーマ分類は当DB独自。出題数は「このテーマに分類した問題数」",
@@ -5462,7 +5462,7 @@
    "pastExamPracticeCount": 7,
    "originalQuizCount": 0,
    "standard2026Status": null,
-   "sourceVersion": "shinkyuu-db@ee647cd+dirty",
+   "sourceVersion": "shinkyuu-db@d090183",
    "verifiedStatus": "COMPUTED_FROM_OFFICIAL_EXAMS",
    "sourceType": "official_exam",
    "relatedDbUrl": "https://shinkyuu-db.pages.dev/past-exams/theme/me-kotsudo-shuketsu",
@@ -5470,7 +5470,7 @@
     "theme": "https://shinkyuu-db.pages.dev/themes/me-kotsudo-shuketsu",
     "pastExams": "https://shinkyuu-db.pages.dev/past-exams/theme/me-kotsudo-shuketsu"
    },
-   "updatedAt": "2026-10-12T20:53:05+09:00",
+   "updatedAt": "2026-10-22T14:06:51+09:00",
    "publicationAllowed": true,
    "warningNotes": [
     "テーマ分類は当DB独自。出題数は「このテーマに分類した問題数」"
@@ -5500,7 +5500,7 @@
    "pastExamPracticeCount": 6,
    "originalQuizCount": 0,
    "standard2026Status": null,
-   "sourceVersion": "shinkyuu-db@ee647cd+dirty",
+   "sourceVersion": "shinkyuu-db@d090183",
    "verifiedStatus": "COMPUTED_FROM_OFFICIAL_EXAMS",
    "sourceType": "official_exam",
    "relatedDbUrl": "https://shinkyuu-db.pages.dev/past-exams/theme/me-kiketsu",
@@ -5508,7 +5508,7 @@
     "theme": "https://shinkyuu-db.pages.dev/themes/me-kiketsu",
     "pastExams": "https://shinkyuu-db.pages.dev/past-exams/theme/me-kiketsu"
    },
-   "updatedAt": "2026-10-12T20:53:05+09:00",
+   "updatedAt": "2026-10-22T14:06:51+09:00",
    "publicationAllowed": true,
    "warningNotes": [
     "テーマ分類は当DB独自。出題数は「このテーマに分類した問題数」"
@@ -5539,7 +5539,7 @@
    "pastExamPracticeCount": 12,
    "originalQuizCount": 12,
    "standard2026Status": null,
-   "sourceVersion": "shinkyuu-db@ee647cd+dirty",
+   "sourceVersion": "shinkyuu-db@d090183",
    "verifiedStatus": "COMPUTED_FROM_OFFICIAL_EXAMS",
    "sourceType": "official_exam",
    "relatedDbUrl": "https://shinkyuu-db.pages.dev/past-exams/theme/me-sonota-tokketsu",
@@ -5548,7 +5548,7 @@
     "pastExams": "https://shinkyuu-db.pages.dev/past-exams/theme/me-sonota-tokketsu",
     "quiz": "https://shinkyuu-db.pages.dev/quiz/theme/me-sonota-tokketsu"
    },
-   "updatedAt": "2026-10-12T20:53:05+09:00",
+   "updatedAt": "2026-10-22T14:06:51+09:00",
    "publicationAllowed": true,
    "warningNotes": [
     "テーマ分類は当DB独自。出題数は「このテーマに分類した問題数」"
@@ -5579,7 +5579,7 @@
    "pastExamPracticeCount": 10,
    "originalQuizCount": 0,
    "standard2026Status": null,
-   "sourceVersion": "shinkyuu-db@ee647cd+dirty",
+   "sourceVersion": "shinkyuu-db@d090183",
    "verifiedStatus": "COMPUTED_FROM_OFFICIAL_EXAMS",
    "sourceType": "official_exam",
    "relatedDbUrl": "https://shinkyuu-db.pages.dev/past-exams/theme/me-shishin-anzen",
@@ -5587,7 +5587,7 @@
     "theme": "https://shinkyuu-db.pages.dev/themes/me-shishin-anzen",
     "pastExams": "https://shinkyuu-db.pages.dev/past-exams/theme/me-shishin-anzen"
    },
-   "updatedAt": "2026-10-12T20:53:05+09:00",
+   "updatedAt": "2026-10-22T14:06:51+09:00",
    "publicationAllowed": true,
    "warningNotes": [
     "テーマ分類は当DB独自。出題数は「このテーマに分類した問題数」"
@@ -5616,7 +5616,7 @@
    "pastExamPracticeCount": 3,
    "originalQuizCount": 0,
    "standard2026Status": null,
-   "sourceVersion": "shinkyuu-db@ee647cd+dirty",
+   "sourceVersion": "shinkyuu-db@d090183",
    "verifiedStatus": "COMPUTED_FROM_OFFICIAL_EXAMS",
    "sourceType": "official_exam",
    "relatedDbUrl": "https://shinkyuu-db.pages.dev/past-exams/theme/hy-chiiki-kokusai",
@@ -5624,7 +5624,7 @@
     "theme": "https://shinkyuu-db.pages.dev/themes/hy-chiiki-kokusai",
     "pastExams": "https://shinkyuu-db.pages.dev/past-exams/theme/hy-chiiki-kokusai"
    },
-   "updatedAt": "2026-10-12T20:53:05+09:00",
+   "updatedAt": "2026-10-22T14:06:51+09:00",
    "publicationAllowed": true,
    "warningNotes": [
     "テーマ分類は当DB独自。出題数は「このテーマに分類した問題数」"
@@ -5649,7 +5649,7 @@
    "pastExamPracticeCount": 0,
    "originalQuizCount": 5,
    "standard2026Status": "new",
-   "sourceVersion": "shinkyuu-db@ee647cd+dirty",
+   "sourceVersion": "shinkyuu-db@d090183",
    "verifiedStatus": "COMPUTED_FROM_OFFICIAL_EXAMS",
    "sourceType": "official_exam",
    "relatedDbUrl": "https://shinkyuu-db.pages.dev/themes/oc-ebm-kenkyu",
@@ -5657,7 +5657,7 @@
     "theme": "https://shinkyuu-db.pages.dev/themes/oc-ebm-kenkyu",
     "quiz": "https://shinkyuu-db.pages.dev/quiz/theme/oc-ebm-kenkyu"
    },
-   "updatedAt": "2026-10-12T20:53:05+09:00",
+   "updatedAt": "2026-10-22T14:06:51+09:00",
    "publicationAllowed": true,
    "warningNotes": [
     "テーマ分類は当DB独自。出題数は「このテーマに分類した問題数」",
@@ -5684,7 +5684,7 @@
    "pastExamPracticeCount": 0,
    "originalQuizCount": 3,
    "standard2026Status": "new",
-   "sourceVersion": "shinkyuu-db@ee647cd+dirty",
+   "sourceVersion": "shinkyuu-db@d090183",
    "verifiedStatus": "COMPUTED_FROM_OFFICIAL_EXAMS",
    "sourceType": "official_exam",
    "relatedDbUrl": "https://shinkyuu-db.pages.dev/themes/oc-kanwa-care",
@@ -5692,7 +5692,7 @@
     "theme": "https://shinkyuu-db.pages.dev/themes/oc-kanwa-care",
     "quiz": "https://shinkyuu-db.pages.dev/quiz/theme/oc-kanwa-care"
    },
-   "updatedAt": "2026-10-12T20:53:05+09:00",
+   "updatedAt": "2026-10-22T14:06:51+09:00",
    "publicationAllowed": true,
    "warningNotes": [
     "テーマ分類は当DB独自。出題数は「このテーマに分類した問題数」",
@@ -5719,7 +5719,7 @@
    "pastExamPracticeCount": 0,
    "originalQuizCount": 3,
    "standard2026Status": "new",
-   "sourceVersion": "shinkyuu-db@ee647cd+dirty",
+   "sourceVersion": "shinkyuu-db@d090183",
    "verifiedStatus": "COMPUTED_FROM_OFFICIAL_EXAMS",
    "sourceType": "official_exam",
    "relatedDbUrl": "https://shinkyuu-db.pages.dev/themes/oc-saigai-iryo",
@@ -5727,7 +5727,7 @@
     "theme": "https://shinkyuu-db.pages.dev/themes/oc-saigai-iryo",
     "quiz": "https://shinkyuu-db.pages.dev/quiz/theme/oc-saigai-iryo"
    },
-   "updatedAt": "2026-10-12T20:53:05+09:00",
+   "updatedAt": "2026-10-22T14:06:51+09:00",
    "publicationAllowed": true,
    "warningNotes": [
     "テーマ分類は当DB独自。出題数は「このテーマに分類した問題数」",
@@ -5754,7 +5754,7 @@
    "pastExamPracticeCount": 0,
    "originalQuizCount": 5,
    "standard2026Status": "new",
-   "sourceVersion": "shinkyuu-db@ee647cd+dirty",
+   "sourceVersion": "shinkyuu-db@d090183",
    "verifiedStatus": "COMPUTED_FROM_OFFICIAL_EXAMS",
    "sourceType": "official_exam",
    "relatedDbUrl": "https://shinkyuu-db.pages.dev/themes/oo-nihon-dento-igaku",
@@ -5762,7 +5762,7 @@
     "theme": "https://shinkyuu-db.pages.dev/themes/oo-nihon-dento-igaku",
     "quiz": "https://shinkyuu-db.pages.dev/quiz/theme/oo-nihon-dento-igaku"
    },
-   "updatedAt": "2026-10-12T20:53:05+09:00",
+   "updatedAt": "2026-10-22T14:06:51+09:00",
    "publicationAllowed": true,
    "warningNotes": [
     "テーマ分類は当DB独自。出題数は「このテーマに分類した問題数」",
@@ -5789,7 +5789,7 @@
    "pastExamPracticeCount": 0,
    "originalQuizCount": 4,
    "standard2026Status": "new",
-   "sourceVersion": "shinkyuu-db@ee647cd+dirty",
+   "sourceVersion": "shinkyuu-db@d090183",
    "verifiedStatus": "COMPUTED_FROM_OFFICIAL_EXAMS",
    "sourceType": "official_exam",
    "relatedDbUrl": "https://shinkyuu-db.pages.dev/themes/cs-koreisha-shikkan",
@@ -5797,7 +5797,7 @@
     "theme": "https://shinkyuu-db.pages.dev/themes/cs-koreisha-shikkan",
     "quiz": "https://shinkyuu-db.pages.dev/quiz/theme/cs-koreisha-shikkan"
    },
-   "updatedAt": "2026-10-12T20:53:05+09:00",
+   "updatedAt": "2026-10-22T14:06:51+09:00",
    "publicationAllowed": true,
    "warningNotes": [
     "テーマ分類は当DB独自。出題数は「このテーマに分類した問題数」",

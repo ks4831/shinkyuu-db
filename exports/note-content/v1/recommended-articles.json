@@ -1,7 +1,7 @@
 {
  "stableId": "recommended-articles",
- "sourceVersion": "shinkyuu-db@ee647cd+dirty",
- "updatedAt": "2026-10-12T20:53:05+09:00",
+ "sourceVersion": "shinkyuu-db@d090183",
+ "updatedAt": "2026-10-22T14:06:51+09:00",
  "candidates": [
   {
    "stableId": "candidate:C01",
@@ -18,11 +18,11 @@
     "noteId": "nb284e53363b1",
     "status": "overlap_existing"
    },
-   "sourceVersion": "shinkyuu-db@ee647cd+dirty",
+   "sourceVersion": "shinkyuu-db@d090183",
    "verifiedStatus": "EDITORIAL_CANDIDATE",
    "sourceType": "db_statistics",
    "relatedDbUrl": "https://shinkyuu-db.pages.dev/past-exams",
-   "updatedAt": "2026-10-12T20:53:05+09:00",
+   "updatedAt": "2026-10-22T14:06:51+09:00",
    "publicationAllowed": true,
    "warningNotes": [
     "公開済み記事と同じ主題。新記事ではなく既存記事の更新・内部リンクで対応",
@@ -70,11 +70,11 @@
     "noteId": "n1f60a0e5a4ec",
     "status": "overlap_existing"
    },
-   "sourceVersion": "shinkyuu-db@ee647cd+dirty",
+   "sourceVersion": "shinkyuu-db@d090183",
    "verifiedStatus": "EDITORIAL_CANDIDATE",
    "sourceType": "db_statistics",
    "relatedDbUrl": "https://shinkyuu-db.pages.dev/past-exams/theme/go-yu-ketsu",
-   "updatedAt": "2026-10-12T20:53:05+09:00",
+   "updatedAt": "2026-10-22T14:06:51+09:00",
    "publicationAllowed": true,
    "warningNotes": [
     "公開済み記事と主題が近い。「復習方法」に絞るか、既存記事の続編にする",
@@ -122,11 +122,11 @@
     "noteId": null,
     "status": "no_published_overlap"
    },
-   "sourceVersion": "shinkyuu-db@ee647cd+dirty",
+   "sourceVersion": "shinkyuu-db@d090183",
    "verifiedStatus": "EDITORIAL_CANDIDATE",
    "sourceType": "db_statistics",
    "relatedDbUrl": "https://shinkyuu-db.pages.dev/past-exams/theme/go-yu-ketsu",
-   "updatedAt": "2026-10-12T20:53:05+09:00",
+   "updatedAt": "2026-10-22T14:06:51+09:00",
    "publicationAllowed": true,
    "warningNotes": [
     "経穴の値は acupoint-learning.json の publish=allowed のものだけを使う",
@@ -174,11 +174,11 @@
     "noteId": null,
     "status": "no_published_overlap"
    },
-   "sourceVersion": "shinkyuu-db@ee647cd+dirty",
+   "sourceVersion": "shinkyuu-db@d090183",
    "verifiedStatus": "EDITORIAL_CANDIDATE",
    "sourceType": "db_statistics",
    "relatedDbUrl": "https://shinkyuu-db.pages.dev/past-exams/theme/gen-ketsu",
-   "updatedAt": "2026-10-12T20:53:05+09:00",
+   "updatedAt": "2026-10-22T14:06:51+09:00",
    "publicationAllowed": true,
    "warningNotes": [
     "絡穴の分類は未確認（excluded）の穴がある。個別の穴名は publish=allowed のものだけ",
@@ -226,11 +226,11 @@
     "noteId": null,
     "status": "no_published_overlap"
    },
-   "sourceVersion": "shinkyuu-db@ee647cd+dirty",
+   "sourceVersion": "shinkyuu-db@d090183",
    "verifiedStatus": "EDITORIAL_CANDIDATE",
    "sourceType": "db_statistics",
    "relatedDbUrl": "https://shinkyuu-db.pages.dev/past-exams/subject/oriental-overview",
-   "updatedAt": "2026-10-12T20:53:05+09:00",
+   "updatedAt": "2026-10-22T14:06:51+09:00",
    "publicationAllowed": true,
    "warningNotes": [
     "topic-statistics.json の科目内上位テーマから構成",
@@ -278,11 +278,11 @@
     "noteId": null,
     "status": "no_published_overlap"
    },
-   "sourceVersion": "shinkyuu-db@ee647cd+dirty",
+   "sourceVersion": "shinkyuu-db@d090183",
    "verifiedStatus": "EDITORIAL_CANDIDATE",
    "sourceType": "db_statistics",
    "relatedDbUrl": "https://shinkyuu-db.pages.dev/past-exams/subject/acupuncture-theory",
-   "updatedAt": "2026-10-12T20:53:05+09:00",
+   "updatedAt": "2026-10-22T14:06:51+09:00",
    "publicationAllowed": true,
    "warningNotes": [
     "はり理論・きゅう理論の2科目。きゅう理論の上位テーマも併記",
@@ -304,11 +304,11 @@
     "noteId": null,
     "status": "no_published_overlap"
    },
-   "sourceVersion": "shinkyuu-db@ee647cd+dirty",
+   "sourceVersion": "shinkyuu-db@d090183",
    "verifiedStatus": "EDITORIAL_CANDIDATE",
    "sourceType": "db_statistics",
    "relatedDbUrl": "https://shinkyuu-db.pages.dev/past-exams",
-   "updatedAt": "2026-10-12T20:53:05+09:00",
+   "updatedAt": "2026-10-22T14:06:51+09:00",
    "publicationAllowed": true,
    "warningNotes": [
     "有料教材候補（直前チェック）。科目別の出題数（subjectStats）で配分を示す",
@@ -330,11 +330,11 @@
     "noteId": null,
     "status": "no_published_overlap"
    },
-   "sourceVersion": "shinkyuu-db@ee647cd+dirty",
+   "sourceVersion": "shinkyuu-db@d090183",
    "verifiedStatus": "EDITORIAL_CANDIDATE",
    "sourceType": "db_statistics",
    "relatedDbUrl": "https://shinkyuu-db.pages.dev/past-exams",
-   "updatedAt": "2026-10-12T20:53:05+09:00",
+   "updatedAt": "2026-10-22T14:06:51+09:00",
    "publicationAllowed": true,
    "warningNotes": [
     "DB の弱点復習（/quiz/weak）への導線記事",
@@ -356,11 +356,11 @@
     "noteId": null,
     "status": "no_published_overlap"
    },
-   "sourceVersion": "shinkyuu-db@ee647cd+dirty",
+   "sourceVersion": "shinkyuu-db@d090183",
    "verifiedStatus": "EDITORIAL_CANDIDATE",
    "sourceType": "db_statistics",
    "relatedDbUrl": "https://shinkyuu-db.pages.dev/past-exams",
-   "updatedAt": "2026-10-12T20:53:05+09:00",
+   "updatedAt": "2026-10-22T14:06:51+09:00",
    "publicationAllowed": true,
    "warningNotes": [
     "DB の機能紹介。既存記事と重複しない（DB の使い方を主題にした記事はまだない）",
@@ -382,11 +382,11 @@
     "noteId": null,
     "status": "no_published_overlap"
    },
-   "sourceVersion": "shinkyuu-db@ee647cd+dirty",
+   "sourceVersion": "shinkyuu-db@d090183",
    "verifiedStatus": "EDITORIAL_CANDIDATE",
    "sourceType": "db_statistics",
    "relatedDbUrl": "https://shinkyuu-db.pages.dev/past-exams",
-   "updatedAt": "2026-10-12T20:53:05+09:00",
+   "updatedAt": "2026-10-22T14:06:51+09:00",
    "publicationAllowed": true,
    "warningNotes": [
     "有料教材候補。DB の /study/checklist と内容を重複させない（印刷用・科目横断の版にする）",

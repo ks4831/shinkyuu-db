@@ -1,9 +1,9 @@
 {
  "schemaVersion": "v1",
- "sourceVersion": "shinkyuu-db@ee647cd+dirty",
- "sourceCommit": "ee647cd",
- "dataDirty": true,
- "updatedAt": "2026-10-12T20:53:05+09:00",
+ "sourceVersion": "shinkyuu-db@d090183",
+ "sourceCommit": "d090183",
+ "dataDirty": false,
+ "updatedAt": "2026-10-22T14:06:51+09:00",
  "spec": "docs/note-export-spec.md",
  "counts": {
   "pastExamQuestions": 1080,
@@ -22,28 +22,28 @@
  "files": [
   {
    "name": "topic-statistics.json",
-   "sha256": "dc8487bb82bdd5269f880fd261adb053f41d662c6b5372cdddf1ed97b4c3167c",
-   "bytes": 165683
+   "sha256": "9e3661f278cec16a7c8c39f35622647155d7a0a51acae8b5aa50c74544ced2d7",
+   "bytes": 164741
   },
   {
    "name": "acupoint-learning.json",
-   "sha256": "0655c6dc11230562f586a67f279084b50d6cca47bd5b0da44ed680976d52686c",
-   "bytes": 379968
+   "sha256": "dc7b7250386a3213d6550da489c9bfdc6259fc3a93261a8ca66ebfc5ad09149f",
+   "bytes": 377796
   },
   {
    "name": "content-safety.json",
-   "sha256": "4db4ead2056916666ea74406dc10ad55b0d8f462e14dff9cb5f6980f81d81752",
-   "bytes": 3998
+   "sha256": "f73d64f6db5e61fd1282621a40cc7945e4fbcbf8b5c97dbffa658f80bf53895b",
+   "bytes": 3992
   },
   {
    "name": "recommended-articles.json",
-   "sha256": "dfe8db5a7ccf122ed7c1c83c623ab26ae541fbb36e4ef66f086211e4ea50c644",
-   "bytes": 13762
+   "sha256": "e88bdcf8b0f20843fde16a1e2ae3905d1e29a0962ab358e440ea640dd1bdfa36",
+   "bytes": 13696
   },
   {
    "name": "link-map.json",
-   "sha256": "0c515dd0a96d5017d0ceddfa123f5dab6c37e19b6ab8cb090fd73cc7daf7b6c4",
-   "bytes": 14924
+   "sha256": "7ac1faf93479eddcb7707ad2e6cd3b4ddeb19892683babc9ded919e2533db9be",
+   "bytes": 14918
   }
  ]
 }
