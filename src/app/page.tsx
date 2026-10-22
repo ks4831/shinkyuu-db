@@ -3,12 +3,16 @@ import Link from 'next/link'
 import { EXAM_ROUNDS, QUESTIONS_PER_ROUND } from '@/lib/examQuestions'
 import { pastExamCoverage } from '@/lib/pastExams'
 import { ALL_QUESTIONS } from '@/lib/quiz'
+import HomeResumeCard from '@/components/home/HomeResumeCard'
+import HomeNoteSection from '@/components/home/HomeNoteSection'
 
 const pastExamAvailable = pastExamCoverage().filter((c) => c.available)
 const PAST_EXAM_TOTAL = pastExamAvailable.reduce((sum, c) => sum + c.collected, 0).toLocaleString()
 const PAST_EXAM_ROUND_RANGE = pastExamAvailable.length
   ? `第${Math.min(...pastExamAvailable.map((c) => c.round))}〜${Math.max(...pastExamAvailable.map((c) => c.round))}回`
   : ''
+/** 回ごとの演習可能数（HOMEの「続きから解く」で進捗の分母に使う） */
+const PAST_EXAM_TOTALS: Record<number, number> = Object.fromEntries(pastExamAvailable.map((c) => [c.round, c.playable]))
 const QUIZ_TOTAL = ALL_QUESTIONS.length.toLocaleString()
 const ANALYSIS_ROUND_RANGE = `第${EXAM_ROUNDS[0]}〜${EXAM_ROUNDS[EXAM_ROUNDS.length - 1]}回`
 const ANALYSIS_TOTAL = (EXAM_ROUNDS.length * QUESTIONS_PER_ROUND).toLocaleString()
@@ -121,6 +125,9 @@ export default function HomePage() {
         </div>
       </section>
 
+      {/* ── 続きから解く（年度別過去問で途中の回があるときだけ） ── */}
+      <HomeResumeCard totals={PAST_EXAM_TOTALS} />
+
       {/* ── メイン3カード（スマホ縦1列 / PC 3カラム） ── */}
       <section className="px-4 pt-5 sm:pt-8">
         <div className="mx-auto grid max-w-5xl grid-cols-1 gap-3 md:grid-cols-3 md:gap-4">
@@ -174,6 +181,9 @@ export default function HomePage() {
           ))}
         </div>
       </section>
+
+      {/* ── 学習をもっと深める（note。学習機能の下に控えめに） ── */}
+      <HomeNoteSection />
 
       {/* ── ひとこと（1行） ────────────────────── */}
       <section className="px-4 pt-8">

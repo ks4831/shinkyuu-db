@@ -120,3 +120,58 @@ export function resetPastExamSession(round: number): void {
   delete map[String(round)]
   writeAll(map)
 }
+
+/* ── HOME・過去問一覧向けの読み取り専用サマリー ──────────────────
+   問題データ（1回180問）を読み込まずに、保存済みセッションだけから
+   「何問目まで進んだか」「次はどの問題か」を出す。書き込みは一切しない。
+   収録データは各回とも問1から連番（scripts/test-pastexam-resume.mts で検査）なので、
+   回答済みの問題番号が 1..n の連番であることを、Runner の「先頭からの連続一致」
+   （questionId 照合）と同じ条件として扱う。 */
+
+export type PastExamSessionSummary = {
+  examRound: number
+  /** in-progress＝途中（続きから解ける）／completed＝全問回答済み */
+  status: 'in-progress' | 'completed'
+  answered: number
+  correct: number
+  total: number
+  /** 次に解く問題番号（未回答の最初の問題）。completed では total + 1 */
+  nextQuestionNumber: number
+  updatedAt: number
+}
+
+/**
+ * 1回分のセッションを要約する。形が合わない（連番でない・収録数を超える等）場合は
+ * Runner 側でも再開対象にならないため null を返す。
+ * completed フラグが立っていなくても全問回答済みなら completed として扱う
+ * （最終問に回答したあと「結果を見る」を押さずに閉じた場合）。
+ */
+export function summarizePastExamSession(s: PastExamSession, total: number): PastExamSessionSummary | null {
+  if (total <= 0) return null
+  const numbers = s.answers.map((a) => a.questionNumber).sort((a, b) => a - b)
+  if (numbers.length === 0 || numbers.length > total) return null
+  if (!numbers.every((n, i) => n === i + 1)) return null
+  const completed = numbers.length === total
+  if (s.completed && !completed) return null
+  return {
+    examRound: s.examRound,
+    status: completed ? 'completed' : 'in-progress',
+    answered: numbers.length,
+    correct: s.answers.filter((a) => a.correct).length,
+    total,
+    nextQuestionNumber: numbers.length + 1,
+    updatedAt: s.updatedAt,
+  }
+}
+
+/** 保存済みの全回のサマリー（新しく学習した順）。totals は回ごとの演習可能数 */
+export function listPastExamSessionSummaries(totals: Record<number, number>): PastExamSessionSummary[] {
+  const list: PastExamSessionSummary[] = []
+  for (const key of Object.keys(totals)) {
+    const round = Number(key)
+    const s = getPastExamSession(round)
+    const summary = s ? summarizePastExamSession(s, totals[round]) : null
+    if (summary) list.push(summary)
+  }
+  return list.sort((a, b) => b.updatedAt - a.updatedAt)
+}

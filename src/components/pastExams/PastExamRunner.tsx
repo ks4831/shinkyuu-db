@@ -164,6 +164,21 @@ export default function PastExamRunner(props: PastExamRunnerProps) {
     el.scrollIntoView({ behavior: 'auto', block: 'start' })
   }, [phase, index, isReview, reviewQuestions])
 
+  /** 保存済みの回答済み分をresultsへ復元し、次の未回答問題から再開する（「続きから解く」とHOMEからの直接再開で共用） */
+  function resumeFrom(resumable: PastExamSession) {
+    if (round !== null) {
+      trackSessionOnceKeyed('pastexam_start', String(round), { exam_round: round, question_count: total })
+    }
+    setIsReview(false)
+    setReviewQuestions([])
+    setResults(resumable.answers.map((a) => a.correct))
+    setIndex(resumable.answers.length)
+    setSelected(null)
+    setAnswered(false)
+    requestScroll()
+    setPhase('question')
+  }
+
   /* 保存済みセッションを確認する。SSR/初回描画では常にnullのまま
      （サーバーとクライアントの初回出力を一致させ、hydration mismatchを避ける）。
      マウント後にのみLocalStorageを読み、
@@ -185,11 +200,28 @@ export default function PastExamRunner(props: PastExamRunnerProps) {
         const validFull = sorted.length === total && sorted.every((a, i) => questions[i]?.id === a.questionId)
         return validFull ? { resumable: null, completedSession: { ...s, answers: sorted } } : EMPTY_SESSION_CHECK
       }
-      if (sorted.length === 0 || sorted.length >= total) return EMPTY_SESSION_CHECK
+      if (sorted.length === 0 || sorted.length > total) return EMPTY_SESSION_CHECK
       const isContiguousPrefix = sorted.every((a, i) => questions[i]?.id === a.questionId)
-      return isContiguousPrefix ? { resumable: { ...s, answers: sorted }, completedSession: null } : EMPTY_SESSION_CHECK
+      if (!isContiguousPrefix) return EMPTY_SESSION_CHECK
+      // 最終問に回答したあと「結果を見る」を押さずに閉じた場合は、全問回答済みとして完了扱いにする
+      // （ここでは保存し直さない。復元経路からは書き込まない方針を維持する）
+      if (sorted.length === total) return { resumable: null, completedSession: { ...s, answers: sorted, completed: true } }
+      return { resumable: { ...s, answers: sorted }, completedSession: null }
     }
-    setSessionCheck(compute())
+    const check = compute()
+    // HOMEの「続きから解く」（?resume=1）から来た場合は、開始画面を挟まず次の未回答問題から始める。
+    // 再開できるセッションが無ければ通常の開始画面を出す。URLからは取り除き、共有・ブックマークに残さない
+    const params = new URLSearchParams(window.location.search)
+    if (params.has('resume')) {
+      params.delete('resume')
+      const qs = params.toString()
+      window.history.replaceState(window.history.state, '', `${window.location.pathname}${qs ? `?${qs}` : ''}`)
+      if (check.resumable) {
+        resumeFrom(check.resumable)
+        return
+      }
+    }
+    setSessionCheck(check)
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [round])
 
@@ -221,21 +253,9 @@ export default function PastExamRunner(props: PastExamRunnerProps) {
     setPhase('question')
   }
 
-  /** 「続きから解く」：保存済みの回答済み分をresultsへ復元し、次の未回答問題から再開する */
+  /** 「続きから解く」 */
   function handleResume() {
-    const { resumable } = sessionCheck
-    if (!resumable) return
-    if (round !== null) {
-      trackSessionOnceKeyed('pastexam_start', String(round), { exam_round: round, question_count: total })
-    }
-    setIsReview(false)
-    setReviewQuestions([])
-    setResults(resumable.answers.map((a) => a.correct))
-    setIndex(resumable.answers.length)
-    setSelected(null)
-    setAnswered(false)
-    requestScroll()
-    setPhase('question')
+    if (sessionCheck.resumable) resumeFrom(sessionCheck.resumable)
   }
 
   /** 「最初から解く」：この年度の保存セッションのみ削除しQ1から開始（回答履歴historyは削除しない） */

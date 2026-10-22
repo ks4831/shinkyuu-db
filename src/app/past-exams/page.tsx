@@ -9,6 +9,7 @@ import {
   pastExamPracticeTotal,
 } from '@/lib/pastExams'
 import PastExamsTabs from '@/components/pastExams/PastExamsTabs'
+import PastExamRoundStatus from '@/components/pastExams/PastExamRoundStatus'
 import PastExamThemePicker, { type PastExamThemeGroup } from '@/components/pastExams/PastExamThemePicker'
 import NoteArticleLinks from '@/components/NoteArticleLinks'
 
@@ -65,6 +66,7 @@ export default function PastExamsPage() {
                 <span className="mt-0.5 block text-xs text-gray-500">
                   {r.year}年・{r.playable} / {r.totalPerRound}問
                 </span>
+                <PastExamRoundStatus round={r.round} total={r.playable} />
               </span>
               <span className="flex-shrink-0 text-gray-300" aria-hidden="true">›</span>
             </Link>

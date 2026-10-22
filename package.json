@@ -17,7 +17,8 @@
     "test:export": "npx tsx scripts/test-note-export.mts",
     "test:classification": "npx tsx scripts/test-anatomy-classification.mts",
     "test:analytics": "npx tsx scripts/test-analytics.mts",
-    "test:transfer": "npx tsx scripts/test-learning-transfer.mts"
+    "test:transfer": "npx tsx scripts/test-learning-transfer.mts",
+    "test:resume": "npx tsx scripts/test-pastexam-resume.mts"
   },
   "dependencies": {
     "@next/third-parties": "16.3.4",

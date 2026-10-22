@@ -14,7 +14,7 @@
 export type NotePlacement = 'past-exams' | 'acupoints' | 'exam-35'
 
 /** リンクを置いた場所。UTM の utm_content と GA4 の placement に使う */
-export type NoteLinkPlacement = NotePlacement | 'subject-page' | 'theme-page' | 'exam-analysis' | 'pastexam-result'
+export type NoteLinkPlacement = NotePlacement | 'subject-page' | 'theme-page' | 'exam-analysis' | 'pastexam-result' | 'home'
 
 export type NoteArticle = {
   /** note の記事キー（URL の /n/ 以下）。安定ID として使う */
@@ -144,6 +144,26 @@ export const NOTE_ARTICLES: NoteArticle[] = [
     utmCampaign: 'physiology_2026',
   },
   {
+    // 無料記事。オリジナル四択5問（公式の過去問は載せていない）。2026-10-19 公開ページで題名・無料を確認
+    id: 'ncaa7b8608b3a',
+    title: '鍼灸国試｜解剖学で間違えやすい5問｜真肋・食道の狭窄部・胸管・大脳基底核・上皮小体をオリジナル四択で確認',
+    url: 'https://note.com/fine_hornet161/n/ncaa7b8608b3a',
+    topics: ['anatomy', 'original-questions'],
+    placements: [],
+    price: 'free',
+    publishedAt: '2026-10-19',
+  },
+  {
+    // 無料記事。関係法規で混同しやすい5つのポイント。2026-10-19 公開ページで題名・無料を確認
+    id: 'n69ee08ed4c1d',
+    title: '鍼灸国試｜関係法規で混同しやすいポイント5選｜第4条と第5条・消毒義務・許可と届出・病院と診療所',
+    url: 'https://note.com/fine_hornet161/n/n69ee08ed4c1d',
+    topics: ['regulations'],
+    placements: [],
+    price: 'free',
+    publishedAt: '2026-10-19',
+  },
+  {
     // 有料教材（980円）。内容はオリジナル問題で、DB の過去問データは使っていない
     id: 'n042d1f1052e6',
     title: '第35回鍼灸国試｜解剖学 頻出テーマ攻略ノート',
@@ -231,4 +251,20 @@ export function noteArticleHref(article: NoteArticle, placement: NoteLinkPlaceme
     utm_content: placement.replace(/-/g, '_'),
   })
   return `${article.url}?${params.toString()}`
+}
+
+/** HOME「学習をもっと深める」に出す記事と、HOME用の短い見出し（無料を先、有料教材を後に表示する） */
+const HOME_ARTICLES: { id: string; label: string }[] = [
+  { id: 'ncaa7b8608b3a', label: '解剖学で間違えやすい5問（オリジナル四択）' },
+  { id: 'n69ee08ed4c1d', label: '関係法規で混同しやすいポイント5選' },
+  { id: 'n042d1f1052e6', label: '解剖学 頻出テーマ攻略ノート（オリジナル60問・解説PDF）' },
+  { id: 'n71bb141488b4', label: '関係法規 直前整理ノート（整理表3枚＋○×40問）' },
+]
+
+export function noteArticlesForHome(): { article: NoteArticle; label: string }[] {
+  const list = HOME_ARTICLES.flatMap(({ id, label }) => {
+    const article = NOTE_ARTICLES.find((a) => a.id === id)
+    return article ? [{ article, label }] : []
+  })
+  return [...list.filter((x) => x.article.price === 'free'), ...list.filter((x) => x.article.price === 'paid')]
 }
