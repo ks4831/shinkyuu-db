@@ -19,7 +19,7 @@ export default function HomeNoteSection() {
   ].filter((g) => g.list.length > 0)
 
   return (
-    <section className="px-4 pt-8" aria-labelledby="home-note-heading">
+    <section id="home-note" className="scroll-mt-20 px-4 pt-8" aria-labelledby="home-note-heading">
       <div className="mx-auto max-w-5xl rounded-2xl border border-gray-100 bg-gray-50 p-4">
         <h2 id="home-note-heading" className="text-sm font-bold text-gray-700">
           学習をもっと深める
