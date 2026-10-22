@@ -307,7 +307,7 @@ export const subjectGuides: SubjectGuide[] = [
     roadmap: [
       { themeId: 'mo-iryo-hoken-seido', name: '医療保険制度と国民医療費', note: '被用者保険と国保の対象者、国民医療費に含まれない費用から始める' },
       { themeId: 'mo-kaigo-hoken', name: '介護保険制度と社会保障', note: '保険者は市町村。第1号・第2号被保険者の年齢区分を固める' },
-      { themeId: 'mo-iryo-teikyo', name: '医療提供体制（医療法・医療計画）', note: '5疾病5事業と病院の機能分化' },
+      { themeId: 'mo-iryo-teikyo', name: '医療提供体制（医療法・医療計画）', note: '5疾病・6事業と病院の機能分化' },
       { themeId: 'mo-informed-consent', name: 'インフォームド・コンセントと患者中心の医療', note: 'ICとパターナリズムの対立関係を理解' },
       { themeId: 'mo-i-no-rinri', name: '医の倫理・生命倫理', note: '主要宣言の対応（ヘルシンキ・ジュネーブ・リスボン）を最後に暗記' },
       { themeId: 'mo-team-iryo', name: 'チーム医療', note: '「対等な連携・情報共有」が望ましい姿という原則で解ける' },
