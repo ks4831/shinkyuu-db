@@ -442,7 +442,8 @@ export default function PastExamRunner(props: PastExamRunnerProps) {
           onClick={handleStart}
           className="mt-6 w-full rounded-xl bg-green-600 px-5 py-4 text-base font-bold text-white hover:bg-green-700"
         >
-          {crossInfo ? '演習を始める' : '過去問を解く'}
+          {/* 記録がない回はQ1から始まることを、ボタン名で伝える */}
+          {crossInfo ? '演習を始める' : '問1から解く'}
         </button>
       </div>
     )

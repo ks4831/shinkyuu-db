@@ -32,7 +32,7 @@ const MAIN_CARDS = [
     title: '過去問',
     stat: `${PAST_EXAM_TOTAL}問`,
     desc: `${PAST_EXAM_ROUND_RANGE}の国家試験を収録`,
-    note: '年度別・科目別・テーマ別',
+    note: '年度別・科目別・テーマ別\n途中でやめても、次回は続きから再開できます',
     cta: '過去問を解く',
     primary: true,
     tone: {
@@ -122,6 +122,13 @@ export default function HomePage() {
               記録の移し方
             </Link>
           </p>
+          {/* note セクションは学習機能の下に置いているため、最初の画面からは控えめな1行で場所だけ知らせる */}
+          <a
+            href="#home-note"
+            className="mt-2 inline-flex min-h-9 items-center text-xs font-semibold text-gray-600 underline decoration-gray-300 underline-offset-2 hover:text-gray-800"
+          >
+            note で学習記事を読む（無料あり）<span className="ml-1" aria-hidden="true">↓</span>
+          </a>
         </div>
       </section>
 
@@ -153,7 +160,7 @@ export default function HomePage() {
                 {c.stat}
               </span>
               <span className="mt-2 block whitespace-pre-line text-sm leading-relaxed text-gray-700">{c.desc}</span>
-              {c.note && <span className="mt-1 block text-xs text-gray-500">{c.note}</span>}
+              {c.note && <span className="mt-1 block whitespace-pre-line text-xs leading-relaxed text-gray-500">{c.note}</span>}
 
               <span className="min-h-4 flex-1" aria-hidden="true" />
               <span
