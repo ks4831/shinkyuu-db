@@ -181,8 +181,10 @@ export default function PastExamRunner(props: PastExamRunnerProps) {
      index等を監視して無条件にscrollすると、session復元・初回hydration・
      開始画面表示でも動いてしまうため、操作ハンドラ側で requestScroll() を呼んだ時だけ
      フラグを立てる（予想問題のQuizRunnerと同じ方式）。
-     テンポ優先で behavior:'auto'（即時）。既に先頭付近が見えている場合
-     （開始画面→1問目など）は動かさず、不要なジャンプを避ける。 */
+     テンポ優先で behavior:'auto'（即時）。移動先はページの上端にする。演習の先頭に
+     合わせると、その上にある「← 戻る」（layoutのBackButton。追従しない）が
+     sticky Headerの裏に隠れて押せなくなるため。間にあるのはパンくずだけなので、
+     上端でも出題画面の先頭は見える。 */
   const screenTopRef = useRef<HTMLDivElement>(null)
   const scrollPending = useRef(false)
   function requestScroll() {
@@ -191,12 +193,8 @@ export default function PastExamRunner(props: PastExamRunnerProps) {
   useEffect(() => {
     if (!scrollPending.current) return
     scrollPending.current = false
-    const el = screenTopRef.current
-    if (!el) return
-    const margin = parseFloat(getComputedStyle(el).scrollMarginTop) || 0
-    const top = el.getBoundingClientRect().top
-    if (top >= margin - 1 && top <= window.innerHeight / 3) return
-    el.scrollIntoView({ behavior: 'auto', block: 'start' })
+    if (!screenTopRef.current) return
+    if (window.scrollY > 0) window.scrollTo({ top: 0, behavior: 'auto' })
   }, [phase, index, isReview, reviewQuestions])
 
   /** 保存済みの回答済み分をresultsへ復元し、次の未回答問題から再開する（「続きから解く」とHOMEからの直接再開で共用） */
@@ -438,7 +436,7 @@ export default function PastExamRunner(props: PastExamRunnerProps) {
     if (resumable) {
       const answeredCount = resumable.answers.length
       return (
-        <div ref={screenTopRef} className="mx-auto max-w-md scroll-mt-20 px-4 py-10 text-center">
+        <div ref={screenTopRef} className="mx-auto max-w-md px-4 py-10 text-center">
           {startHeading}
           <p className="mt-2 text-sm text-gray-500">{startSubtitle}</p>
           <p className="mt-3 text-sm font-semibold text-green-700">
@@ -491,7 +489,7 @@ export default function PastExamRunner(props: PastExamRunnerProps) {
     if (completedSession) {
       const lastScore = completedSession.answers.filter((a) => a.correct).length
       return (
-        <div ref={screenTopRef} className="mx-auto max-w-md scroll-mt-20 px-4 py-10 text-center">
+        <div ref={screenTopRef} className="mx-auto max-w-md px-4 py-10 text-center">
           {startHeading}
           <p className="mt-2 text-sm text-gray-500">{startSubtitle}</p>
           <p className="mt-3 text-sm font-semibold text-gray-600">
@@ -516,7 +514,7 @@ export default function PastExamRunner(props: PastExamRunnerProps) {
     }
 
     return (
-      <div ref={screenTopRef} className="mx-auto max-w-md scroll-mt-20 px-4 py-10 text-center">
+      <div ref={screenTopRef} className="mx-auto max-w-md px-4 py-10 text-center">
         {startHeading}
         <p className="mt-2 text-sm text-gray-500">{startSubtitle}</p>
         {/* 初回の開始画面だけに出す。問題数の多さで身構えないよう、進め方を短く伝える */}
@@ -545,7 +543,7 @@ export default function PastExamRunner(props: PastExamRunnerProps) {
         .filter((_, i) => !results[i])
         .sort(byRoundThenNumber)
       return (
-        <div ref={screenTopRef} className="mx-auto max-w-md scroll-mt-20 px-4 py-8">
+        <div ref={screenTopRef} className="mx-auto max-w-md px-4 py-8">
           <div className="rounded-2xl border border-gray-100 bg-white p-6 text-center shadow-sm">
             <h1 className="text-base font-bold text-gray-900">苦手復習 完了</h1>
             <p className="mt-3 text-4xl font-black text-gray-900">
@@ -605,7 +603,7 @@ export default function PastExamRunner(props: PastExamRunnerProps) {
       : questions.filter((_, i) => !results[i]).sort(byRoundThenNumber)
 
     return (
-      <div ref={screenTopRef} className="mx-auto max-w-md scroll-mt-20 px-4 py-8">
+      <div ref={screenTopRef} className="mx-auto max-w-md px-4 py-8">
         <div className="rounded-2xl border border-gray-100 bg-white p-6 text-center shadow-sm">
           {crossInfo ? (
             <>
@@ -669,8 +667,8 @@ export default function PastExamRunner(props: PastExamRunnerProps) {
 
   return (
     <div className="mx-auto max-w-md px-4 pb-28 pt-4">
-      {/* 画面切替後のスクロール先。sticky Headerに隠れないよう scroll-mt で余白を確保 */}
-      <div ref={screenTopRef} className="mb-4 scroll-mt-20">
+      {/* 画面切替後のスクロールの対象（移動先はページ上端） */}
+      <div ref={screenTopRef} className="mb-4">
         {crossInfo && <p className="mb-1 text-xs font-semibold text-green-700">{crossInfo.name}</p>}
         <div className="flex items-center justify-between text-xs text-gray-500">
           <span className="font-semibold text-gray-700">

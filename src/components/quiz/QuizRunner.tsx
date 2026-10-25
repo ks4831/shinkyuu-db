@@ -110,24 +110,18 @@ export default function QuizRunner({
       : null,
   )
 
-  // 「次の問題」で問題が切り替わった直後だけ、問題カード先頭へスクロールする
+  // 「次の問題」で問題が切り替わった直後だけ、ページの上端へスクロールする。
+  // 問題カード先頭に合わせると、その上の「← 戻る」（layoutのBackButton。追従しない）が
+  // sticky ヘッダーの裏に隠れて押せなくなるため。上端でも問題カードの先頭は見える。
+  // 解説パネルが外れてページが縮むと smooth はクランプで途中キャンセルされるため、auto で即時に移動する。
   const questionTopRef = useRef<HTMLDivElement>(null)
   const scrollOnNextRender = useRef(false)
 
   useEffect(() => {
     if (!scrollOnNextRender.current) return
     scrollOnNextRender.current = false
-    const el = questionTopRef.current
-    if (!el) return
-    // 解説パネルが外れてページが縮むと、ブラウザが深いスクロール位置を
-    // クランプし、その巻き戻しが smooth アニメーションを即キャンセルしてしまう。
-    // そのため、まず auto で確実に問題カード先頭へスナップし、
-    // レイアウト確定後の次フレームで smooth を掛けて（クランプが無ければ）滑らかに整える。
-    el.scrollIntoView({ behavior: 'auto', block: 'start' })
-    const raf = requestAnimationFrame(() => {
-      questionTopRef.current?.scrollIntoView({ behavior: 'smooth', block: 'start' })
-    })
-    return () => cancelAnimationFrame(raf)
+    if (!questionTopRef.current) return
+    if (window.scrollY > 0) window.scrollTo({ top: 0, behavior: 'auto' })
   }, [index])
 
   useEffect(() => {
@@ -243,8 +237,8 @@ export default function QuizRunner({
   /* ── 出題画面（1問1画面） ──────────────────── */
   return (
     <div className="mx-auto max-w-md px-4 pb-28 pt-4">
-      {/* 進捗（「次の問題」後のスクロール先。sticky ヘッダーに隠れないよう余白を確保） */}
-      <div ref={questionTopRef} className="mb-4 scroll-mt-20">
+      {/* 進捗（「次の問題」後はページ上端へスクロールする） */}
+      <div ref={questionTopRef} className="mb-4">
         <div className="flex items-center justify-between text-xs text-gray-500">
           <span className="font-semibold text-gray-700">{title}</span>
           <span>第 {index + 1} / {total} 問</span>
