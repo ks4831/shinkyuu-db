@@ -6,6 +6,7 @@ import ImportanceBadge from '@/components/ImportanceBadge'
 import { kanaIncludes, expandSearchQuery } from '@/lib/kana'
 import type { Theme, Subject, Importance } from '@/lib/types'
 import type { ThemeExamStatsLite } from '@/lib/themeStats'
+import { useQuerySync } from '@/lib/urlQuery'
 
 const importanceOrder: Record<Importance, number> = { S: 0, A: 1, B: 2, C: 3 }
 const allRounds = [29, 30, 31, 32, 33, 34]
@@ -40,6 +41,23 @@ export default function ThemesSearch({ themes, subjects, examStats }: Props) {
   const [highlightIdx, setHighlightIdx] = useState(-1)
   const inputRef = useRef<HTMLInputElement>(null)
   const listRef = useRef<HTMLUListElement>(null)
+
+  // 検索語・絞り込み・並び順をURLに残し、テーマ詳細から戻ったときに同じ検索結果を出す
+  useQuerySync(
+    (p) => {
+      const q = p.get('q') ?? ''
+      setQuery(q)
+      setInputValue(q)
+      const subject = p.get('subject') ?? ''
+      if (subjects.some(s => s.id === subject)) setSelectedSubject(subject)
+      const imp = p.get('imp') ?? ''
+      if (imp === 'S' || imp === 'A' || imp === 'B' || imp === 'C') setSelectedImportance(imp)
+      const sort = p.get('sort') ?? ''
+      if (sort === 'importance' || sort === 'round') setSortBy(sort)
+    },
+    { q: query, subject: selectedSubject, imp: selectedImportance, sort: sortBy },
+    { sort: 'count' },
+  )
 
   const statsOf = useCallback(
     (themeId: string): ThemeExamStatsLite => examStats[themeId] ?? EMPTY_STATS,

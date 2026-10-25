@@ -1,4 +1,3 @@
-import Link from 'next/link'
 import { themes, subjects } from '@/lib/data'
 import { themeExamStatsRecord } from '@/lib/themeStats'
 import ThemesSearch from '@/components/ThemesSearch'
@@ -11,10 +10,7 @@ export default function ThemesPage() {
   return (
     <main className="max-w-5xl mx-auto px-4 py-8">
       <div className="mb-6">
-        <Link href="/" className="text-sm text-gray-400 hover:text-green-600 transition-colors">
-          ← トップに戻る
-        </Link>
-        <h1 className="text-2xl font-bold text-gray-900 mt-3">テーマ検索</h1>
+        <h1 className="text-2xl font-bold text-gray-900">テーマ検索</h1>
         <p className="text-sm text-gray-500 mt-1">
           キーワード・科目・重要度で絞り込みできます。全{themes.length}件収録。
         </p>

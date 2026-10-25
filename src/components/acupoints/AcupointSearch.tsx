@@ -3,10 +3,13 @@
 import { useMemo, useState } from 'react'
 import Link from 'next/link'
 import { searchAcupoints, type AcupointSearchRow } from '@/lib/acupointSearch'
+import { useQuerySync } from '@/lib/urlQuery'
 
 export default function AcupointSearch({ points }: { points: AcupointSearchRow[] }) {
   const [q, setQ] = useState('')
   const query = q.trim()
+  // 検索語をURL（?q=）に残し、詳細から戻ったときに同じ結果を出す
+  useQuerySync((p) => setQ(p.get('q') ?? ''), { q: query })
 
   const results = useMemo(() => searchAcupoints(points, query), [query, points])
 

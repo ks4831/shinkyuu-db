@@ -6,6 +6,7 @@ import ImportanceBadge from '@/components/ImportanceBadge'
 import type { Theme } from '@/lib/types'
 import type { Importance } from '@/lib/types'
 import type { ThemeExamStatsLite } from '@/lib/themeStats'
+import { useQuerySync } from '@/lib/urlQuery'
 
 const allRounds = [29, 30, 31, 32, 33, 34]
 
@@ -30,6 +31,15 @@ type Props = {
 export default function SubjectSearch({ themes, subjectName, examStats }: Props) {
   const [query, setQuery] = useState('')
   const [filterImp, setFilterImp] = useState<Importance | ''>('')
+  // 検索語・重要度をURL（?q=&imp=）に残し、テーマ詳細から戻ったときに同じ絞り込みを出す
+  useQuerySync(
+    (p) => {
+      setQuery(p.get('q') ?? '')
+      const imp = p.get('imp') ?? ''
+      if (imp === 'S' || imp === 'A' || imp === 'B' || imp === 'C') setFilterImp(imp)
+    },
+    { q: query, imp: filterImp },
+  )
 
   const statsOf = useCallback(
     (themeId: string): ThemeExamStatsLite => examStats[themeId] ?? EMPTY_STATS,

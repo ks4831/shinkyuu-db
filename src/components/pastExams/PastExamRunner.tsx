@@ -1,6 +1,7 @@
 'use client'
 
 import { useEffect, useMemo, useRef, useState } from 'react'
+import { useLeaveGuard } from '@/lib/leaveGuard'
 import Link from 'next/link'
 import PastExamResultMaterialCard from '@/components/pastExams/PastExamResultMaterialCard'
 import { themes } from '@/lib/data'
@@ -163,6 +164,16 @@ export default function PastExamRunner(props: PastExamRunnerProps) {
   const total = questions.length
   const activeQuestions = isReview ? reviewQuestions : questions
   const activeTotal = activeQuestions.length
+
+  // 「← 戻る」で離れる前の確認。年度別・科目別の通常演習は途中経過を端末に保存して再開できるので確認しない。
+  // テーマ別演習と苦手復習は途中経過を保存しないため、回答を始めていれば確認する（1問ごとの正誤は履歴に保存済み）。
+  const unsavedMode = isReview || (round === null && subjectId === null)
+  const remainingHere = activeTotal - results.length
+  useLeaveGuard(
+    unsavedMode && phase === 'question' && (results.length > 0 || selected !== null) && remainingHere > 0
+      ? `回答済みの問題の正誤は学習記録に保存されています。ただし、この${isReview ? '復習' : '演習'}の続き（あと${remainingHere}問）からは再開できません。`
+      : null,
+  )
 
   /* ── 画面切替時のスクロール（全modeで共通） ──
      「次の問題」等のユーザー操作で画面が切り替わった直後だけ、新しい画面の先頭

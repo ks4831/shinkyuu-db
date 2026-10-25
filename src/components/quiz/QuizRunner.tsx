@@ -6,6 +6,7 @@ import type { QuizQuestion } from '@/lib/quiz'
 import { subjectLabel } from '@/lib/quiz'
 import { QUIZ_CHOICE_LABELS } from '@/lib/choiceLabels'
 import { recordAttempt, toggleReview, isInReview } from '@/lib/quizStorage'
+import { useLeaveGuard } from '@/lib/leaveGuard'
 import DiagramView from './DiagramView'
 import ReviewTargetsLink from './ReviewTargetsLink'
 
@@ -98,6 +99,16 @@ export default function QuizRunner({
   const [finished, setFinished] = useState(false)
   // onFinished は「全問終了時に1度だけ」。二度押し等での二重呼び出しを防ぐ。
   const finishFired = useRef(false)
+
+  // 「← 戻る」で離れる前の確認。1問ずつの正誤は回答時に保存されるが、このセットの続きからは再開できない。
+  // onAnswered で途中経過を保存する演習（今日の10問）は再開できるので確認しない。
+  const answeredHere = results.length - (initialResults?.length ?? 0)
+  const remaining = prepared ? prepared.length - results.length : 0
+  useLeaveGuard(
+    !onAnswered && prepared && prepared.length > 0 && !finished && (answeredHere > 0 || selected !== null) && remaining > 0
+      ? `回答済みの問題の正誤は学習記録に保存されています。ただし、このセットの続き（あと${remaining}問）からは再開できません。`
+      : null,
+  )
 
   // 「次の問題」で問題が切り替わった直後だけ、問題カード先頭へスクロールする
   const questionTopRef = useRef<HTMLDivElement>(null)

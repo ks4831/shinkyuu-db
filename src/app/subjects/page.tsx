@@ -12,10 +12,7 @@ export default function SubjectsPage() {
   return (
     <main className="max-w-5xl mx-auto px-4 py-8">
       <div className="mb-6">
-        <Link href="/" className="text-sm text-gray-400 hover:text-green-600 transition-colors">
-          ← トップに戻る
-        </Link>
-        <h1 className="text-2xl font-bold text-gray-900 mt-3">科目一覧</h1>
+        <h1 className="text-2xl font-bold text-gray-900">科目一覧</h1>
         <p className="text-sm text-gray-500 mt-1">
           14科目から出題テーマを探せます。各科目カードをタップして詳細を確認。
         </p>
