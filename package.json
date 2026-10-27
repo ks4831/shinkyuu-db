@@ -22,7 +22,8 @@
     "test:subject-resume": "npx tsx scripts/test-pastexam-subject-resume.mts",
     "test:nav": "npx tsx scripts/test-nav-history.mts",
     "import:original-mock": "npx tsx scripts/import-original-mock.mts",
-    "test:original-mock": "npx tsx scripts/test-original-mock.mts"
+    "test:original-mock": "npx tsx scripts/test-original-mock.mts",
+    "test:mock-session": "npx tsx scripts/test-mock-session.mts"
   },
   "dependencies": {
     "@next/third-parties": "16.3.4",

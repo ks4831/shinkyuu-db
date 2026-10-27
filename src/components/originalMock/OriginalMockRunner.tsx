@@ -14,22 +14,43 @@ import {
   type OriginalMockQuestion,
   type OriginalMockResult,
 } from '@/lib/originalMock'
+import {
+  answeredCount,
+  canGoNext,
+  canGoPrev,
+  confirmAnswer,
+  createMockSession,
+  goNext,
+  goPrev,
+  goTo,
+  isLocked,
+  selectChoice,
+  shownChoice,
+  startEditing,
+  unansweredIndexes,
+  type MockSession,
+} from '@/lib/mockSession'
 
 const CIRCLED = PAST_EXAM_CHOICE_LABELS
 
 type Screen = 'start' | 'question' | 'result'
 
-/** 1問1画面で解き、最後に科目別の得点・全問の正答と解説を見せる。途中経過は保存しない */
+/**
+ * 1問1画面で解き、最後に科目別の得点・全問の正答と解説を見せる。途中経過は保存しない。
+ * 前後の移動・回答の保持と変更・未回答の確認は mockSession（総合模擬試験①と共通）に任せる。
+ */
 export default function OriginalMockRunner({ data }: { data: OriginalMockData }) {
   const [screen, setScreen] = useState<Screen>('start')
   const [active, setActive] = useState<OriginalMockQuestion[]>(data.questions)
   /** true＝間違えた問題だけの再挑戦（結果は保存しない） */
   const [isRetryWrong, setIsRetryWrong] = useState(false)
-  const [index, setIndex] = useState(0)
-  const [selected, setSelected] = useState<number | null>(null)
-  const [answered, setAnswered] = useState(false)
+  const [session, setSession] = useState<MockSession>(() => createMockSession(data.questions.map((q) => q.id)))
+  /** 採点したときの回答（結果画面用。未回答の問題は含まない） */
   const [answers, setAnswers] = useState<OriginalMockAnswer[]>([])
+  /** 未回答を残して採点しようとしたときの確認表示 */
+  const [confirmUnanswered, setConfirmUnanswered] = useState(false)
   const [lastResult, setLastResult] = useState<OriginalMockResult | null>(null)
+  const index = session.index
 
   useEffect(() => {
     setLastResult(getOriginalMockResult(data.mockId))
@@ -39,44 +60,51 @@ export default function OriginalMockRunner({ data }: { data: OriginalMockData })
     window.scrollTo({ top: 0 })
   }, [screen, index])
 
-  useLeaveGuard(screen === 'question' && (index > 0 || answered) ? '解答の途中です。このページを離れると、途中の解答は保存されません。' : null)
+  useLeaveGuard(screen === 'question' && (index > 0 || answeredCount(session) > 0) ? '解答の途中です。このページを離れると、途中の解答は保存されません。' : null)
 
   function start(questions: OriginalMockQuestion[], retryWrong: boolean) {
     setActive(questions)
     setIsRetryWrong(retryWrong)
-    setIndex(0)
-    setSelected(null)
-    setAnswered(false)
+    setSession(createMockSession(questions.map((q) => q.id)))
     setAnswers([])
+    setConfirmUnanswered(false)
     setScreen('question')
   }
 
-  function handleAnswer() {
-    if (selected === null) return
-    const q = active[index]
-    setAnswers((prev) => [...prev, { questionId: q.id, selected, correct: isOriginalMockCorrect(q, selected) }])
-    setAnswered(true)
+  function move(next: MockSession) {
+    setConfirmUnanswered(false)
+    setSession(next)
   }
 
-  function handleNext() {
-    if (index + 1 < active.length) {
-      setIndex(index + 1)
-      setSelected(null)
-      setAnswered(false)
-      return
-    }
+  /** 採点：各問の最新の確定回答を使う。未回答は不正解として数え、解き直しの対象に含める */
+  function finish() {
+    const final: OriginalMockAnswer[] = active.flatMap((q, i) => {
+      const a = session.answers[i]
+      return a === null ? [] : [{ questionId: q.id, selected: a, correct: isOriginalMockCorrect(q, a) }]
+    })
+    setAnswers(final)
     if (!isRetryWrong) {
+      const correctIds = new Set(final.filter((a) => a.correct).map((a) => a.questionId))
       const result: OriginalMockResult = {
         mockId: data.mockId,
-        correct: answers.filter((a) => a.correct).length,
+        correct: correctIds.size,
         total: active.length,
-        wrongIds: answers.filter((a) => !a.correct).map((a) => a.questionId),
+        wrongIds: active.filter((q) => !correctIds.has(q.id)).map((q) => q.id),
         completedAt: Date.now(),
       }
       saveOriginalMockResult(result)
       setLastResult(result)
     }
+    setConfirmUnanswered(false)
     setScreen('result')
+  }
+
+  function handleFinish() {
+    if (unansweredIndexes(session).length > 0) {
+      setConfirmUnanswered(true)
+      return
+    }
+    finish()
   }
 
   const subjectCounts = scoreBySubject(data.questions, []).map((r) => `${r.subject}${r.total}問`).join('・')
@@ -122,7 +150,8 @@ export default function OriginalMockRunner({ data }: { data: OriginalMockData })
   /* ── 結果画面 ── */
   if (screen === 'result') {
     const correctCount = answers.filter((a) => a.correct).length
-    const wrong = active.filter((q) => answers.find((a) => a.questionId === q.id && !a.correct))
+    const wrong = active.filter((q) => !answers.find((a) => a.questionId === q.id && a.correct))
+    const unansweredCount = active.length - answers.length
     const rows = scoreBySubject(active, answers)
     return (
       <div className="mx-auto max-w-md px-4 pb-28 pt-6">
@@ -148,7 +177,7 @@ export default function OriginalMockRunner({ data }: { data: OriginalMockData })
             onClick={() => start(wrong, true)}
             className="mt-5 w-full rounded-xl bg-teal-600 px-5 py-4 text-base font-bold text-white hover:bg-teal-700"
           >
-            まちがえた{wrong.length}問を解き直す
+            {unansweredCount > 0 ? 'まちがえた・未回答の' : 'まちがえた'}{wrong.length}問を解き直す
           </button>
         )}
         <button
@@ -166,9 +195,9 @@ export default function OriginalMockRunner({ data }: { data: OriginalMockData })
             return (
               <details key={q.id} className="rounded-xl border border-gray-200 bg-white px-3 py-2.5">
                 <summary className="flex cursor-pointer items-center gap-2 text-sm">
-                  <span className={`font-black ${a?.correct ? 'text-green-700' : 'text-red-600'}`}>{a?.correct ? '○' : '×'}</span>
+                  <span className={`font-black ${a?.correct ? 'text-green-700' : 'text-red-600'}`}>{a ? (a.correct ? '○' : '×') : '−'}</span>
                   <span className="font-semibold text-gray-800">第{q.questionNumber}問</span>
-                  <span className="truncate text-xs text-gray-500">{q.field}</span>
+                  <span className="truncate text-xs text-gray-500">{a ? q.field : `未回答・${q.field}`}</span>
                 </summary>
                 <QuestionExplanation q={q} selected={a?.selected ?? null} />
               </details>
@@ -184,7 +213,13 @@ export default function OriginalMockRunner({ data }: { data: OriginalMockData })
 
   /* ── 出題画面 ── */
   const q = active[index]
-  const correct = answered && selected !== null && isOriginalMockCorrect(q, selected)
+  const locked = isLocked(session, index)
+  const selected = shownChoice(session, index)
+  const editing = session.editing[index]
+  const correct = locked && selected !== null && isOriginalMockCorrect(q, selected)
+  const unanswered = unansweredIndexes(session)
+  const isLast = !canGoNext(session)
+  const previous = session.answers[index]
   return (
     <div className="mx-auto max-w-md px-4 pb-28 pt-4">
       <div className="mb-4">
@@ -192,13 +227,12 @@ export default function OriginalMockRunner({ data }: { data: OriginalMockData })
           <span className="font-semibold text-gray-700">
             {isRetryWrong && '解き直し　'}第{q.questionNumber}問
           </span>
-          <span>{index + 1} / {active.length}問</span>
+          <span>
+            {index + 1} / {active.length}問（回答済み {answeredCount(session)}）
+          </span>
         </div>
         <div className="mt-1.5 h-1.5 w-full rounded-full bg-gray-100">
-          <div
-            className="h-1.5 rounded-full bg-teal-500 transition-all"
-            style={{ width: `${((index + (answered ? 1 : 0)) / active.length) * 100}%` }}
-          />
+          <div className="h-1.5 rounded-full bg-teal-500 transition-all" style={{ width: `${(answeredCount(session) / active.length) * 100}%` }} />
         </div>
       </div>
 
@@ -210,7 +244,7 @@ export default function OriginalMockRunner({ data }: { data: OriginalMockData })
           const isSel = selected === i
           const isAns = i === q.answerIndex
           let cls = 'w-full text-left rounded-xl border-2 px-4 py-3.5 text-[15px] leading-relaxed transition-colors flex gap-3 items-start '
-          if (!answered) {
+          if (!locked) {
             cls += isSel ? 'border-teal-500 bg-teal-50 text-gray-900' : 'border-gray-200 bg-white text-gray-800 hover:border-teal-300'
           } else if (isAns) {
             cls += 'border-green-500 bg-green-50 text-gray-900'
@@ -220,7 +254,7 @@ export default function OriginalMockRunner({ data }: { data: OriginalMockData })
             cls += 'border-gray-200 bg-white text-gray-400'
           }
           return (
-            <button key={i} type="button" disabled={answered} aria-pressed={isSel} onClick={() => setSelected(i)} className={cls}>
+            <button key={i} type="button" disabled={locked} aria-pressed={isSel} onClick={() => setSession(selectChoice(session, i))} className={cls}>
               <span className="mt-0.5 flex-shrink-0 font-bold" aria-hidden="true">{CIRCLED[i]}</span>
               <span>{choice}</span>
             </button>
@@ -228,18 +262,25 @@ export default function OriginalMockRunner({ data }: { data: OriginalMockData })
         })}
       </div>
 
-      {!answered && (
-        <button
-          type="button"
-          onClick={handleAnswer}
-          disabled={selected === null}
-          className="mt-5 w-full rounded-xl bg-teal-600 px-5 py-4 text-base font-bold text-white transition-colors hover:bg-teal-700 disabled:bg-gray-200 disabled:text-gray-400"
-        >
-          回答する
-        </button>
+      {!locked && (
+        <>
+          {editing && previous !== null && (
+            <p className="mt-3 text-xs text-gray-500">
+              回答を変更中です。確定するまでは、前の回答（{CIRCLED[previous]}）が採点に使われます。
+            </p>
+          )}
+          <button
+            type="button"
+            onClick={() => setSession(confirmAnswer(session))}
+            disabled={selected === null}
+            className="mt-5 w-full rounded-xl bg-teal-600 px-5 py-4 text-base font-bold text-white transition-colors hover:bg-teal-700 disabled:bg-gray-200 disabled:text-gray-400"
+          >
+            {editing ? 'この回答に変更する' : '回答する'}
+          </button>
+        </>
       )}
 
-      {answered && (
+      {locked && (
         <div className="mt-5">
           <div className={`rounded-2xl border p-4 ${correct ? 'border-green-200 bg-green-50' : 'border-red-200 bg-red-50'}`}>
             <p className={`text-lg font-black ${correct ? 'text-green-700' : 'text-red-600'}`}>{correct ? '正解' : '不正解'}</p>
@@ -247,11 +288,57 @@ export default function OriginalMockRunner({ data }: { data: OriginalMockData })
           </div>
           <button
             type="button"
-            onClick={handleNext}
-            className="mt-4 w-full rounded-xl bg-gray-900 px-5 py-4 text-base font-bold text-white hover:bg-gray-800"
+            onClick={() => setSession(startEditing(session))}
+            className="mt-3 w-full rounded-xl border border-gray-300 px-5 py-3 text-sm font-bold text-gray-700 hover:bg-gray-50"
           >
-            {index + 1 >= active.length ? '結果を見る' : '次の問題 →'}
+            回答を変更する
           </button>
+        </div>
+      )}
+
+      {/* ── 前後の移動（回答していなくても移動できる。採点は最後の問題から） ── */}
+      <div className="mt-4 grid grid-cols-2 gap-3">
+        <button
+          type="button"
+          onClick={() => move(goPrev(session))}
+          disabled={!canGoPrev(session)}
+          className="min-h-12 rounded-xl border border-gray-300 bg-white px-3 py-3 text-sm font-bold text-gray-700 hover:bg-gray-50 disabled:border-gray-100 disabled:text-gray-300"
+        >
+          ← 前の問題へ
+        </button>
+        {isLast ? (
+          <button type="button" onClick={handleFinish} className="min-h-12 rounded-xl bg-gray-900 px-3 py-3 text-sm font-bold text-white hover:bg-gray-800">
+            採点する
+          </button>
+        ) : (
+          <button
+            type="button"
+            onClick={() => move(goNext(session))}
+            className={`min-h-12 rounded-xl px-3 py-3 text-sm font-bold ${locked ? 'bg-gray-900 text-white hover:bg-gray-800' : 'border border-gray-300 bg-white text-gray-700 hover:bg-gray-50'}`}
+          >
+            {locked ? '次の問題へ →' : 'あとで解く →'}
+          </button>
+        )}
+      </div>
+
+      {confirmUnanswered && (
+        <div role="alertdialog" aria-labelledby="unanswered-title" className="mt-4 rounded-2xl border border-amber-300 bg-amber-50 p-4">
+          <p id="unanswered-title" className="text-sm font-bold text-amber-900">
+            未回答の問題が{unanswered.length}問あります（第{unanswered.slice(0, 8).map((i) => active[i].questionNumber).join('・')}問{unanswered.length > 8 ? 'など' : ''}）。
+          </p>
+          <p className="mt-1 text-xs leading-relaxed text-amber-800">このまま採点すると、未回答の問題は不正解として数えます。</p>
+          <div className="mt-3 grid grid-cols-2 gap-2">
+            <button
+              type="button"
+              onClick={() => move(goTo(session, unanswered[0]))}
+              className="min-h-11 rounded-xl border border-amber-300 bg-white px-3 py-2 text-sm font-bold text-amber-900 hover:bg-amber-100"
+            >
+              未回答の問題へ
+            </button>
+            <button type="button" onClick={finish} className="min-h-11 rounded-xl bg-amber-600 px-3 py-2 text-sm font-bold text-white hover:bg-amber-700">
+              このまま採点する
+            </button>
+          </div>
         </div>
       )}
     </div>
