@@ -92,6 +92,26 @@ const MAIN_CARDS = [
   },
 ]
 
+/** オリジナル模擬試験（過去問のすぐ下）。公式問題ではないことをカードにも明記する */
+const ORIGINAL_MOCK_CARD = {
+  href: '/original-mock',
+  title: 'オリジナル模擬試験',
+  stat: '40問',
+  desc: '模擬試験②：経絡経穴概論20・はり理論10・きゅう理論10',
+  note: '公式問題ではありません（AIで作成・検証）',
+  cta: '模擬試験を解く',
+  primary: false,
+  tone: {
+    bar: 'bg-teal-500',
+    icon: 'bg-teal-50 text-teal-700',
+    stat: 'text-teal-700',
+    cta: 'border border-teal-200 text-teal-700 group-hover:bg-teal-50',
+    ring: 'hover:border-teal-300',
+  },
+  icon: <path d="M9 4h6M9 4a1 1 0 0 0-1 1v1h8V5a1 1 0 0 0-1-1M8 6H6.5A1.5 1.5 0 0 0 5 7.5v11A1.5 1.5 0 0 0 6.5 20h11a1.5 1.5 0 0 0 1.5-1.5v-11A1.5 1.5 0 0 0 17.5 6H16M9 12l2 2 4-4" />,
+}
+const HOME_CARDS = [MAIN_CARDS[0], ORIGINAL_MOCK_CARD, ...MAIN_CARDS.slice(1)]
+
 const SUB_LINKS = [
   { href: '/acupoints', label: '経穴' },
   { href: '/subjects', label: '科目' },
@@ -141,8 +161,8 @@ export default function HomePage() {
 
       {/* ── メイン3カード（スマホ縦1列 / PC 3カラム） ── */}
       <section className="px-4 pt-5 sm:pt-8">
-        <div className="mx-auto grid max-w-5xl grid-cols-1 gap-3 md:grid-cols-3 md:gap-4">
-          {MAIN_CARDS.map((c) => (
+        <div className={`mx-auto grid max-w-5xl grid-cols-1 gap-3 md:gap-4 ${HOME_CARDS.length === 4 ? 'md:grid-cols-2' : 'md:grid-cols-3'}`}>
+          {HOME_CARDS.map((c) => (
             <Link
               key={c.href}
               href={c.href}

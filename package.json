@@ -20,7 +20,9 @@
     "test:transfer": "npx tsx scripts/test-learning-transfer.mts",
     "test:resume": "npx tsx scripts/test-pastexam-resume.mts",
     "test:subject-resume": "npx tsx scripts/test-pastexam-subject-resume.mts",
-    "test:nav": "npx tsx scripts/test-nav-history.mts"
+    "test:nav": "npx tsx scripts/test-nav-history.mts",
+    "import:original-mock": "npx tsx scripts/import-original-mock.mts",
+    "test:original-mock": "npx tsx scripts/test-original-mock.mts"
   },
   "dependencies": {
     "@next/third-parties": "16.3.4",
