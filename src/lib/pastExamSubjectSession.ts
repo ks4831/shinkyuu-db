@@ -15,6 +15,8 @@ export const PAST_EXAM_SUBJECT_SESSION_KEY = 'shinkyuu_pastexam_subject_session_
 export type SubjectSessionAnswer = {
   questionId: string
   correct: boolean
+  /** 選んだ選択肢（0始まり）。「前の問題」で戻ったときの表示用。これより前の保存データには無い */
+  selectedIndex?: number
 }
 
 export type PastExamSubjectSession = {

@@ -23,6 +23,21 @@ import {
 import { trackSessionOnceKeyed } from '@/lib/analytics'
 import { getAcceptedAnswerIndexes, isPastExamAnswerCorrect, formatAcceptedAnswers } from '@/lib/pastExamAnswers'
 import { PAST_EXAM_CHOICE_LABELS } from '@/lib/choiceLabels'
+import {
+  answeredCount,
+  answeredResults,
+  canFinish,
+  canGoNext,
+  canGoPrev,
+  createPracticeNav,
+  goNext,
+  goPrev,
+  isAnswered,
+  recordAnswer,
+  selectDraft,
+  shownChoice,
+  type PracticeNav,
+} from '@/lib/practiceNav'
 
 const CIRCLED = PAST_EXAM_CHOICE_LABELS
 
@@ -68,7 +83,8 @@ type CrossInfo = {
 
 /** 年度別・科目別のセッションに共通する部分（回答済み設問と正誤。出題順に並べたもの） */
 type SessionView = {
-  answers: { questionId: string; correct: boolean }[]
+  /** selectedIndex は選んだ選択肢（これより前の保存データには無い） */
+  answers: { questionId: string; correct: boolean; selectedIndex?: number }[]
   /** 科目別だけ：再開に使う出題順（questionId）。年度別は問題番号順のため持たない */
   order?: string[]
 }
@@ -142,10 +158,8 @@ export default function PastExamRunner(props: PastExamRunnerProps) {
   const resultBackLabel = crossInfo ? `${crossInfo.label}の結果へ` : `${roundLabel}の結果へ`
 
   const [phase, setPhase] = useState<'start' | 'question' | 'result'>('start')
-  const [index, setIndex] = useState(0)
-  const [selected, setSelected] = useState<number | null>(null)
-  const [answered, setAnswered] = useState(false)
-  const [results, setResults] = useState<boolean[]>([])
+  /** 出題中の位置・選択・回答・正誤（「前の問題」で戻っても残す。src/lib/practiceNav.ts） */
+  const [nav, setNav] = useState<PracticeNav>(() => createPracticeNav(0))
   const [sessionCheck, setSessionCheck] = useState<SessionCheck>(EMPTY_SESSION_CHECK)
   /** 苦手復習モード中か。true の間は questions ではなく reviewQuestions を出題する */
   const [isReview, setIsReview] = useState(false)
@@ -164,6 +178,13 @@ export default function PastExamRunner(props: PastExamRunnerProps) {
   const total = questions.length
   const activeQuestions = isReview ? reviewQuestions : questions
   const activeTotal = activeQuestions.length
+  const index = nav.index
+  /** 今の問題に回答済みか（前の問題へ戻ったときも true） */
+  const answered = isAnswered(nav, index)
+  /** 今の問題で表示する選択（回答済みは回答した選択肢。再開分で記録がなければ null） */
+  const selected = shownChoice(nav, index)
+  /** 回答済みの正誤（出題順・先頭から連続） */
+  const results = answeredResults(nav)
 
   // 「← 戻る」で離れる前の確認。年度別・科目別の通常演習は途中経過を端末に保存して再開できるので確認しない。
   // テーマ別演習と苦手復習は途中経過を保存しないため、回答を始めていれば確認する（1問ごとの正誤は履歴に保存済み）。
@@ -205,10 +226,14 @@ export default function PastExamRunner(props: PastExamRunnerProps) {
     setIsReview(false)
     setReviewQuestions([])
     setResumeOrder(resumable.order ?? null)
-    setResults(resumable.answers.map((a) => a.correct))
-    setIndex(resumable.answers.length)
-    setSelected(null)
-    setAnswered(false)
+    // 回答済み分は正誤と（保存されていれば）選んだ選択肢を復元し、「前の問題」で戻ったときに表示する
+    setNav(
+      createPracticeNav(
+        total,
+        resumable.answers.map((a) => a.correct),
+        resumable.answers.map((a) => (typeof a.selectedIndex === 'number' ? a.selectedIndex : null)),
+      ),
+    )
     requestScroll()
     setPhase('question')
   }
@@ -290,10 +315,7 @@ export default function PastExamRunner(props: PastExamRunnerProps) {
     }
     if (subjectId !== null) resetPastExamSubjectSession(subjectId)
     setResumeOrder(null)
-    setIndex(0)
-    setSelected(null)
-    setAnswered(false)
-    setResults([])
+    setNav(createPracticeNav(total))
     setSessionCheck(EMPTY_SESSION_CHECK)
     setIsReview(false)
     setReviewQuestions([])
@@ -318,10 +340,7 @@ export default function PastExamRunner(props: PastExamRunnerProps) {
     setSessionCheck(EMPTY_SESSION_CHECK)
     setIsReview(false)
     setReviewQuestions([])
-    setIndex(0)
-    setSelected(null)
-    setAnswered(false)
-    setResults([])
+    setNav(createPracticeNav(total))
     requestScroll()
     setPhase('question')
   }
@@ -339,10 +358,7 @@ export default function PastExamRunner(props: PastExamRunnerProps) {
     if (wrongQuestions.length === 0) return
     setReviewQuestions(wrongQuestions)
     setIsReview(true)
-    setIndex(0)
-    setSelected(null)
-    setAnswered(false)
-    setResults([])
+    setNav(createPracticeNav(wrongQuestions.length))
     requestScroll()
     setPhase('question')
   }
@@ -358,8 +374,7 @@ export default function PastExamRunner(props: PastExamRunnerProps) {
     const q = activeQuestions[index]
     if (selected === null || answered) return
     const isCorrect = isPastExamAnswerCorrect(q, selected)
-    setAnswered(true)
-    setResults((r) => [...r, isCorrect])
+    setNav(recordAnswer(nav, isCorrect))
     // 実際に回答した事実は、通常演習・苦手復習・テーマ演習のいずれでも履歴に残す。
     // examRoundは必ず設問自身の値を使う（round propではない。テーマ横断演習では
     // round propが存在しない／一致しないことがあるため）。
@@ -367,18 +382,36 @@ export default function PastExamRunner(props: PastExamRunnerProps) {
     // 年度sessionへの保存は「通常演習（苦手復習でない）かつ round mode」の時のみ。
     // theme modeではround自体が存在しないため、年度sessionには一切触れない。
     if (!isReview && round !== null) {
-      savePastExamProgress(round, { questionId: q.id, questionNumber: q.questionNumber, correct: isCorrect })
+      savePastExamProgress(round, {
+        questionId: q.id,
+        questionNumber: q.questionNumber,
+        correct: isCorrect,
+        selectedIndex: selected,
+      })
     }
     // 科目別は科目ごとの別キーに保存する（年度別のセッションには触れない）
     if (!isReview && subjectId !== null) {
-      savePastExamSubjectProgress(subjectId, questions.map((x) => x.id), { questionId: q.id, correct: isCorrect })
+      savePastExamSubjectProgress(subjectId, questions.map((x) => x.id), {
+        questionId: q.id,
+        correct: isCorrect,
+        selectedIndex: selected,
+      })
     }
   }
 
+  /** 「← 前の問題」：回答済みの問題を、回答・正誤・解説ごと表示し直す（回答の変更はできない） */
+  function handlePrev() {
+    if (!canGoPrev(nav)) return
+    requestScroll()
+    setNav(goPrev(nav))
+  }
+
   function handleNext() {
+    // 未回答の問題を飛ばして先へは進めない（回答済みの範囲内でだけ移動できる）
+    if (!canGoNext(nav) && !canFinish(nav)) return
     // 次の問題・結果画面のどちらへ進む場合も、切替後の画面先頭へ移動する
     requestScroll()
-    if (index + 1 >= activeTotal) {
+    if (canFinish(nav)) {
       if (isReview) {
         // 苦手復習の完走はセッションに保存しない（元の完走結果とは独立）
         setPhase('result')
@@ -399,9 +432,7 @@ export default function PastExamRunner(props: PastExamRunnerProps) {
       setPhase('result')
       return
     }
-    setIndex((i) => i + 1)
-    setSelected(null)
-    setAnswered(false)
+    setNav(goNext(nav))
   }
 
   /** 「もう一度{total}問解く」：この年度のセッションを削除し、新しいセッションとしてQ1からやり直す */
@@ -412,10 +443,7 @@ export default function PastExamRunner(props: PastExamRunnerProps) {
     setSessionCheck(EMPTY_SESSION_CHECK)
     setIsReview(false)
     setReviewQuestions([])
-    setIndex(0)
-    setSelected(null)
-    setAnswered(false)
-    setResults([])
+    setNav(createPracticeNav(total))
     requestScroll()
     setPhase('start')
   }
@@ -662,7 +690,10 @@ export default function PastExamRunner(props: PastExamRunnerProps) {
   /* ── 出題画面（1問1画面。通常演習・苦手復習の両方でこのブロックを共用する） ── */
   const q = activeQuestions[index]
   const acceptedIndexes = getAcceptedAnswerIndexes(q)
-  const correct = answered && selected !== null && isPastExamAnswerCorrect(q, selected)
+  // 正誤は回答時に記録した値を使う（再開分で選んだ選択肢の記録がない問題も正しく出せる）
+  const correct = answered && nav.results[index] === true
+  /** 途中再開した回答済みの問題で、選んだ選択肢が保存されていない（この機能より前の保存データ） */
+  const choiceUnknown = answered && selected === null
   const tName = themeName(q.themeId)
 
   return (
@@ -679,7 +710,7 @@ export default function PastExamRunner(props: PastExamRunnerProps) {
         <div className="mt-1.5 h-1.5 w-full rounded-full bg-gray-100">
           <div
             className="h-1.5 rounded-full bg-green-500 transition-all"
-            style={{ width: `${((index + (answered ? 1 : 0)) / activeTotal) * 100}%` }}
+            style={{ width: `${(answeredCount(nav) / activeTotal) * 100}%` }}
           />
         </div>
       </div>
@@ -715,7 +746,7 @@ export default function PastExamRunner(props: PastExamRunnerProps) {
               type="button"
               disabled={answered}
               aria-pressed={isSel}
-              onClick={() => setSelected(i)}
+              onClick={() => setNav(selectDraft(nav, i))}
               className={cls}
             >
               <span className="mt-0.5 flex-shrink-0 font-bold" aria-hidden="true">{CIRCLED[i]}</span>
@@ -744,6 +775,9 @@ export default function PastExamRunner(props: PastExamRunnerProps) {
             <p className={`text-lg font-black ${correct ? 'text-green-700' : 'text-red-600'}`}>
               {correct ? '正解' : '不正解'}
             </p>
+            {choiceUnknown && (
+              <p className="mt-1 text-xs text-gray-500">前回の回答です。選んだ選択肢はこの端末に記録されていません。</p>
+            )}
             <p className="mt-2 text-sm font-bold text-gray-700">正答：{formatAcceptedAnswers(q)}</p>
             <p className="mt-2 text-sm leading-relaxed text-gray-700">{q.explanation}</p>
             {q.themeId && tName && (
@@ -763,16 +797,29 @@ export default function PastExamRunner(props: PastExamRunnerProps) {
               {q.sourceOrg}
             </div>
           </div>
-
-          <button
-            type="button"
-            onClick={handleNext}
-            className="mt-4 w-full rounded-xl bg-gray-900 px-5 py-4 text-base font-bold text-white hover:bg-gray-800"
-          >
-            {index + 1 >= activeTotal ? '結果を見る' : '次の問題 →'}
-          </button>
         </div>
       )}
+
+      {/* ── 前後の移動（回答済みの範囲内だけ。未回答の問題を飛ばして先へは進めない） ── */}
+      <div className="mt-4 grid grid-cols-2 gap-3">
+        <button
+          type="button"
+          onClick={handlePrev}
+          disabled={!canGoPrev(nav)}
+          className="min-h-12 rounded-xl border border-gray-300 bg-white px-3 py-3 text-sm font-bold text-gray-700 hover:bg-gray-50 disabled:border-gray-100 disabled:text-gray-300"
+        >
+          ← 前の問題
+        </button>
+        <button
+          type="button"
+          onClick={handleNext}
+          disabled={!answered}
+          className="min-h-12 rounded-xl bg-gray-900 px-3 py-3 text-sm font-bold text-white hover:bg-gray-800 disabled:bg-gray-100 disabled:text-gray-300"
+        >
+          {index + 1 >= activeTotal ? '結果を見る' : '次の問題 →'}
+        </button>
+      </div>
+      {!answered && <p className="mt-2 text-center text-xs text-gray-400">回答すると次の問題へ進めます</p>}
     </div>
   )
 }

@@ -17,6 +17,8 @@ export type PastExamSessionAnswer = {
   questionId: string
   questionNumber: number
   correct: boolean
+  /** 選んだ選択肢（0始まり）。「前の問題」で戻ったときの表示用。これより前の保存データには無い */
+  selectedIndex?: number
 }
 
 export type PastExamSession = {
