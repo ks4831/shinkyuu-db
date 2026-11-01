@@ -35,10 +35,12 @@ const SITE = process.env.NEXT_PUBLIC_SITE_URL ?? 'https://shinkyuu-db.pages.dev'
 
 const git = (cmd: string) => execSync(`git ${cmd}`, { cwd: ROOT, encoding: 'utf8' }).trim()
 // 版は「学習データ（src/data）を最後に変えた commit」。DB の画面や台本だけの commit では変わらないので、書き出しが無駄に古くならない
-const DATA_PATHS = 'src/data ":!src/data/noteArticles.ts"'
+// 除くもの：note の記事台帳（noteArticles.ts。学習データではない）と、オリジナル模擬試験（originalMocks/。この書き出しでは読まない）。
+// originalMocks を読むようにしたら除外を外すこと（npm run test:export の 15 が、書き出しの読み込み先に除外したデータが無いことを確かめる）
+const DATA_PATHS = 'src/data ":!src/data/noteArticles.ts" ":!src/data/originalMocks"'
 const sourceCommit = git(`log -1 --format=%h -- ${DATA_PATHS}`)
 const updatedAt = git(`log -1 --format=%cI -- ${DATA_PATHS}`)
-// 学習データ（src/data）が commit と違うときは +dirty を付ける。note の記事台帳（noteArticles.ts）は学習データではないので除く
+// 学習データ（src/data。上の2つは除く）が commit と違うときは +dirty を付ける
 const dataDirty = git(`status --porcelain -- ${DATA_PATHS}`) !== ''
 const sourceVersion = `shinkyuu-db@${sourceCommit}${dataDirty ? '+dirty' : ''}`
 

@@ -210,4 +210,38 @@ test('14. 学習データ（src/data。note の記事台帳 noteArticles.ts は�
   assert.equal(changed, '', `変更あり: ${changed}`)
 })
 
+console.log('版の判定')
+test('15. 版の判定から除いたオリジナル模擬試験（src/data/originalMocks）を、書き出しが読み込んでいない', () => {
+  // 書き出しスクリプトから import をたどり、読み込むファイルのどこにも originalMocks の参照がないことを確かめる
+  const resolve = (from: string, spec: string): string | null => {
+    const base = spec.startsWith('@/') ? path.join(ROOT, 'src', spec.slice(2)) : spec.startsWith('.') ? path.resolve(path.dirname(from), spec) : null
+    if (!base) return null // node_modules・node: の組み込み
+    for (const c of [base, `${base}.ts`, `${base}.tsx`, `${base}.mts`, path.join(base, 'index.ts')]) if (fs.existsSync(c) && fs.statSync(c).isFile()) return c
+    throw new Error(`読み込み先が見つからない: ${spec}（${path.relative(ROOT, from)}）`)
+  }
+  const exporter = path.join(ROOT, 'scripts', 'export-note-content.mts')
+  const seen = new Set<string>()
+  const queue = [exporter]
+  while (queue.length) {
+    const f = queue.pop()!
+    if (seen.has(f)) continue
+    seen.add(f)
+    if (f.endsWith('.json')) continue
+    const text = fs.readFileSync(f, 'utf8')
+    for (const m of text.matchAll(/(?:from\s+|import\s*\(\s*)['"]([^'"]+)['"]/g)) {
+      const r = resolve(f, m[1])
+      if (r) queue.push(r)
+    }
+  }
+  const files = [...seen].map((f) => path.relative(ROOT, f).replace(/\\/g, '/'))
+  assert.ok(files.includes('src/lib/examQuestions.ts') && files.includes('src/data/acupoints.ts'), '読み込み先をたどれていない')
+  for (const f of seen) {
+    let text = fs.readFileSync(f, 'utf8')
+    // 書き出しスクリプト自身は、除外を指定する行とコメントだけに書いてよい
+    if (f === exporter) text = text.split('\n').filter((l) => !l.trim().startsWith('//') && !l.includes('const DATA_PATHS')).join('\n')
+    assert.ok(!/originalMocks|original-mock/.test(text), `${path.relative(ROOT, f)} が模擬試験のデータを参照している。export-note-content.mts の DATA_PATHS から除外を外す`)
+  }
+  assert.ok(fs.readFileSync(exporter, 'utf8').includes(`":!src/data/originalMocks"`), 'DATA_PATHS の除外指定が見つからない')
+})
+
 console.log(`\n${n} tests passed`)

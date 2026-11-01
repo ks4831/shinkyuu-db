@@ -20,7 +20,7 @@ note「鍼灸国試ラボ｜かず」（旧：治療家の道｜かず）の記�
 ## 共通項目
 stableId・title・subject・sourceVersion・verifiedStatus・sourceType・relatedDbUrl・updatedAt・publicationAllowed・warningNotes。
 
-- `sourceVersion` は `shinkyuu-db@<commit>` で、学習データ（`src/data`。note の記事台帳 `noteArticles.ts` は除く）を最後に変えた commit です。画面やスクリプトだけの commit では変わりません。
+- `sourceVersion` は `shinkyuu-db@<commit>` で、学習データ（`src/data`。note の記事台帳 `noteArticles.ts` と、この書き出しでは読まないオリジナル模擬試験 `originalMocks/` は除く）を最後に変えた commit です。画面やスクリプトだけの commit では変わりません。
 - `updatedAt` は、書き出した時刻ではなくその commit の日時です（同じデータから同じファイルができるようにするため）。
 - 学習データが commit と違うときは `+dirty` が付きます（`test:export` で失敗します）。
 
