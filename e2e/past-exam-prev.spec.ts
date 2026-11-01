@@ -236,6 +236,48 @@ test('科目別：複数正答の問題（第29回問11）と途中再開・前�
   ])
 })
 
+test('科目別：選択肢を保存していない旧データでも再開でき、前へ戻ると正誤と解説を表示する', async ({ page }) => {
+  await page.goto('/past-exams/subject/regulations')
+  await press(page, page.getByRole('button', { name: '演習を始める' }))
+  const a1 = await answer(page, 'right')
+  await press(page, nextBtn(page))
+  const a2 = await answer(page, 'wrong')
+  await press(page, nextBtn(page))
+  // 保存データから selectedIndex を外し、この機能より前の形に戻す
+  await page.evaluate(() => {
+    const key = 'shinkyuu_pastexam_subject_session_v1'
+    const map = JSON.parse(localStorage.getItem(key)!)
+    map.regulations.answers = map.regulations.answers.map((a: { questionId: string; correct: boolean }) => ({
+      questionId: a.questionId,
+      correct: a.correct,
+    }))
+    localStorage.setItem(key, JSON.stringify(map))
+  })
+  await page.reload()
+  await expect(page.getByText('2問回答済み・残り22問')).toBeVisible()
+  await press(page, page.getByRole('button', { name: '続きから解く' }))
+  await expect(page.getByText('3 / 24問')).toBeVisible()
+  await expect(nextBtn(page)).toBeDisabled()
+  await press(page, prevBtn(page))
+  await expectAnswered(page, a2.q, null)
+  await expect(verdict(page)).toHaveText('不正解')
+  await expect(page.getByText('選んだ選択肢はこの端末に記録されていません')).toBeVisible()
+  await press(page, prevBtn(page))
+  await expectAnswered(page, a1.q, null)
+  await expect(verdict(page)).toHaveText('正解')
+  await expect(prevBtn(page)).toBeDisabled()
+  // 再開後に新しく回答した問題は selectedIndex 付きで保存される（旧データの2問はそのまま）
+  await press(page, nextBtn(page))
+  await press(page, nextBtn(page))
+  const a3 = await answer(page, 'right')
+  const saved = await page.evaluate(() => JSON.parse(localStorage.getItem('shinkyuu_pastexam_subject_session_v1')!).regulations)
+  expect(saved.answers).toEqual([
+    { questionId: a1.q.id, correct: true },
+    { questionId: a2.q.id, correct: false },
+    { questionId: a3.q.id, correct: true, selectedIndex: a3.idx },
+  ])
+})
+
 test('テーマ別：最後の問題から戻る→結果の採点→間違えた問題の復習でも前へ戻れる', async ({ page }) => {
   await page.goto('/past-exams/theme/rg-menkyo')
   await press(page, page.getByRole('button', { name: '演習を始める' }))
