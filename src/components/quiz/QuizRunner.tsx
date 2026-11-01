@@ -7,12 +7,29 @@ import { subjectLabel } from '@/lib/quiz'
 import { QUIZ_CHOICE_LABELS } from '@/lib/choiceLabels'
 import { recordAttempt, toggleReview, isInReview } from '@/lib/quizStorage'
 import { useLeaveGuard } from '@/lib/leaveGuard'
+import {
+  createPracticeNav,
+  isAnswered,
+  selectDraft,
+  recordAnswer,
+  shownChoice,
+  canGoPrev,
+  canGoNext,
+  goPrev,
+  goNext,
+  canFinish,
+  answeredResults,
+  answeredCount,
+  type PracticeNav,
+} from '@/lib/practiceNav'
 import DiagramView from './DiagramView'
 import ReviewTargetsLink from './ReviewTargetsLink'
 
 type PreparedQuestion = QuizQuestion & {
   shownChoices: string[]
   shownCorrect: number
+  /** 表示順 → 元の選択肢の番号（q.choices の添字）。保存・途中再開は元の番号で行う */
+  shownOrder: number[]
 }
 
 function shuffleInPlace<T>(a: T[]): T[] {
@@ -46,6 +63,7 @@ function buildSet(
       ...q,
       shownChoices: idx.map((i) => q.choices[i]),
       shownCorrect: idx.indexOf(q.correctAnswer),
+      shownOrder: idx,
     }
   })
 }
@@ -58,8 +76,8 @@ export default function QuizRunner({
   count = 10,
   biasToStart = false,
   preserveOrder = false,
-  initialIndex = 0,
   initialResults,
+  initialChoices,
   title,
   reviewHref = '/quiz/weak',
   retryHref,
@@ -75,15 +93,15 @@ export default function QuizRunner({
   biasToStart?: boolean
   /** questions をシャッフルせず与えられた順で出す（今日の10問など） */
   preserveOrder?: boolean
-  /** 途中再開する開始位置 */
-  initialIndex?: number
-  /** 途中再開時の既回答結果（initialIndex 個） */
+  /** 途中再開時の既回答結果（先頭から順。その次の問題から再開する） */
   initialResults?: boolean[]
+  /** 途中再開時に選んでいた選択肢（元の番号。記録がなければ null） */
+  initialChoices?: (number | null)[]
   title: string
   reviewHref?: string
   retryHref?: string
-  /** 1問回答するたびに呼ばれる（永続化フック） */
-  onAnswered?: (qid: string, correct: boolean, index: number) => void
+  /** 1問回答するたびに呼ばれる（永続化フック）。choice は選んだ選択肢の元の番号 */
+  onAnswered?: (qid: string, correct: boolean, index: number, choice: number) => void
   /** 全問終了時に1度だけ呼ばれる */
   onFinished?: (results: boolean[]) => void
   /** 終了画面を差し替える。指定時は既定の結果画面の代わりに描画 */
@@ -91,14 +109,20 @@ export default function QuizRunner({
 }) {
   // すべての抽選・シャッフルはマウント後（クライアント）で行い、SSR不一致を避ける
   const [prepared, setPrepared] = useState<PreparedQuestion[] | null>(null)
-  const [index, setIndex] = useState(initialIndex)
-  const [selected, setSelected] = useState<number | null>(null)
-  const [answered, setAnswered] = useState(false)
+  /** 出題中の位置・選択・回答・正誤（「前の問題」で戻っても残す。src/lib/practiceNav.ts）。選択肢は表示順の番号 */
+  const [nav, setNav] = useState<PracticeNav>(() => createPracticeNav(0))
   const [inReview, setInReview] = useState(false)
-  const [results, setResults] = useState<boolean[]>(initialResults ?? [])
   const [finished, setFinished] = useState(false)
   // onFinished は「全問終了時に1度だけ」。二度押し等での二重呼び出しを防ぐ。
   const finishFired = useRef(false)
+
+  const index = nav.index
+  /** 今の問題に回答済みか（前の問題へ戻ったときも true） */
+  const answered = isAnswered(nav, index)
+  /** 回答済みなら回答した選択肢、未回答なら回答前の選択（表示順の番号） */
+  const selected = shownChoice(nav, index)
+  /** 回答済みの正誤（出題順。途中再開の分を含む） */
+  const results = answeredResults(nav)
 
   // 「← 戻る」で離れる前の確認。1問ずつの正誤は回答時に保存されるが、このセットの続きからは再開できない。
   // onAnswered で途中経過を保存する演習（今日の10問）は再開できるので確認しない。
@@ -126,7 +150,19 @@ export default function QuizRunner({
 
   useEffect(() => {
     const src = questions ?? pool ?? []
-    setPrepared(buildSet(src, questions ? src.length : count, biasToStart, preserveOrder))
+    const set = buildSet(src, questions ? src.length : count, biasToStart, preserveOrder)
+    setPrepared(set)
+    // 途中再開：回答済みの正誤と、（保存されていれば）選んだ選択肢を表示順に直して復元し、次の未回答から始める
+    setNav(
+      createPracticeNav(
+        set.length,
+        initialResults ?? [],
+        (initialChoices ?? []).map((c, i) => {
+          const shown = c === null || !set[i] ? -1 : set[i].shownOrder.indexOf(c)
+          return shown >= 0 ? shown : null
+        }),
+      ),
+    )
     // questions/pool は親でメモ化されない場合があるため中身の id で依存を張る
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [(questions ?? pool ?? []).map((q) => q.id).join(','), count, biasToStart, preserveOrder])
@@ -153,32 +189,46 @@ export default function QuizRunner({
   }
 
   const q = prepared[index]
-  const correct = answered && selected === q.shownCorrect
+  // 正誤は回答時に記録した値を使う（途中再開で選んだ選択肢の記録がない問題も正しく出せる）
+  const correct = answered && nav.results[index] === true
+  /** 途中再開した回答済みの問題で、選んだ選択肢が保存されていない（この機能より前の保存データ） */
+  const choiceUnknown = answered && selected === null
 
   function handleAnswer() {
     if (selected === null || answered) return
     const isCorrect = selected === q.shownCorrect
-    setAnswered(true)
+    setNav(recordAnswer(nav, isCorrect))
     setInReview(isInReview(q.id))
-    setResults((r) => [...r, isCorrect])
     recordAttempt({ qid: q.id, subject: q.subject, correct: isCorrect })
-    onAnswered?.(q.id, isCorrect, index)
+    onAnswered?.(q.id, isCorrect, index, q.shownOrder[selected])
+  }
+
+  /** 移動先の問題を表示する（復習リストの表示は保存データから読み直す） */
+  function showNav(next: PracticeNav) {
+    if (next === nav) return
+    // 問題が描画されたら先頭までスクロール
+    scrollOnNextRender.current = true
+    setNav(next)
+    setInReview(isInReview(prepared![next.index].id))
+  }
+
+  /** 「← 前の問題」：回答済みの問題を、回答・正誤・解説ごと表示し直す（回答の変更はできない） */
+  function handlePrev() {
+    if (!canGoPrev(nav)) return
+    showNav(goPrev(nav))
   }
 
   function handleNext() {
-    if (index + 1 >= total) {
+    if (canFinish(nav)) {
       if (finishFired.current) return
       finishFired.current = true
       setFinished(true)
-      onFinished?.([...results])
+      onFinished?.(results)
       return
     }
-    // 最終問題以外：次の問題が描画されたら先頭までスクロール
-    scrollOnNextRender.current = true
-    setIndex((i) => i + 1)
-    setSelected(null)
-    setAnswered(false)
-    setInReview(false)
+    // 未回答の問題を飛ばして先へは進めない（回答済みの範囲内でだけ移動できる）
+    if (!canGoNext(nav)) return
+    showNav(goNext(nav))
   }
 
   function handleReviewToggle() {
@@ -246,7 +296,7 @@ export default function QuizRunner({
         <div className="mt-1.5 h-1.5 w-full rounded-full bg-gray-100">
           <div
             className="h-1.5 rounded-full bg-green-500 transition-all"
-            style={{ width: `${((index + (answered ? 1 : 0)) / total) * 100}%` }}
+            style={{ width: `${(answeredCount(nav) / total) * 100}%` }}
           />
         </div>
       </div>
@@ -283,7 +333,7 @@ export default function QuizRunner({
               type="button"
               disabled={answered}
               aria-pressed={isSel}
-              onClick={() => setSelected(i)}
+              onClick={() => setNav(selectDraft(nav, i))}
               className={cls}
             >
               <span
@@ -328,6 +378,9 @@ export default function QuizRunner({
             <p className={`text-lg font-black ${correct ? 'text-green-700' : 'text-red-600'}`}>
               {correct ? '正解！' : '惜しい！'}
             </p>
+            {choiceUnknown && (
+              <p className="mt-1 text-xs text-gray-500">前回の回答です。選んだ選択肢はこの端末に記録されていません。</p>
+            )}
 
             <dl className="mt-3 space-y-3 text-sm">
               <div>
@@ -378,16 +431,29 @@ export default function QuizRunner({
               {inReview ? '★ 復習リストに追加済み' : '☆ 復習に追加'}
             </button>
           </div>
-
-          <button
-            type="button"
-            onClick={handleNext}
-            className="mt-4 w-full rounded-xl bg-gray-900 px-5 py-4 text-base font-bold text-white hover:bg-gray-800"
-          >
-            {index + 1 >= total ? '結果を見る' : '次の問題 →'}
-          </button>
         </div>
       )}
+
+      {/* ── 前後の移動（回答済みの範囲内だけ。未回答の問題を飛ばして先へは進めない） ── */}
+      <div className="mt-4 grid grid-cols-2 gap-3">
+        <button
+          type="button"
+          onClick={handlePrev}
+          disabled={!canGoPrev(nav)}
+          className="min-h-12 rounded-xl border border-gray-300 bg-white px-3 py-3 text-sm font-bold text-gray-700 hover:bg-gray-50 disabled:border-gray-100 disabled:text-gray-300"
+        >
+          ← 前の問題
+        </button>
+        <button
+          type="button"
+          onClick={handleNext}
+          disabled={!answered}
+          className="min-h-12 rounded-xl bg-gray-900 px-3 py-3 text-sm font-bold text-white hover:bg-gray-800 disabled:bg-gray-100 disabled:text-gray-300"
+        >
+          {index + 1 >= total ? '結果を見る' : '次の問題 →'}
+        </button>
+      </div>
+      {!answered && <p className="mt-2 text-center text-xs text-gray-400">回答すると次の問題へ進めます</p>}
     </div>
   )
 }

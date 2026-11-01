@@ -10,6 +10,7 @@ import {
   recordDailyAnswer,
   finalizeDailyIfComplete,
   displayStreak,
+  dailyChoices,
   setThemeExamCount,
   type DailyState,
 } from '@/lib/dailyQuiz'
@@ -45,17 +46,19 @@ export default function DailyQuizClient({ themeExamCount }: { themeExamCount: Re
   }
 
   const priorResults = state.answers.slice(0, state.currentIndex).map((a) => a === true)
+  // 選んだ選択肢（元の番号）。この機能より前の保存データでは null（正誤と解説だけ表示する）
+  const priorChoices = dailyChoices(state).slice(0, state.currentIndex)
 
   return (
     <QuizRunner
       questions={questions}
       preserveOrder
-      initialIndex={state.currentIndex}
       initialResults={priorResults}
+      initialChoices={priorChoices}
       title="今日の10問"
       reviewHref="/quiz/weak"
-      onAnswered={(_qid, correct, index) => {
-        recordDailyAnswer(index, correct)
+      onAnswered={(_qid, correct, index, choice) => {
+        recordDailyAnswer(index, correct, choice)
       }}
       onFinished={() => {
         const finalized = finalizeDailyIfComplete()

@@ -6,6 +6,8 @@
    - 戻っても回答・正誤が残り、回答の変更はできない
    - 途中再開：前回までの正誤と（保存されていれば）選択肢を復元し、次の未回答から始める
    - 年度別・科目別の保存データに selectedIndex を足しても、旧データ（無し）と一緒に読める
+   - 今日の10問の保存データに choices を足しても、旧データ（無し）を読め、学習記録の移行でも通る
+   - 今日の10問の保存データに choices を足しても、旧データ（無し）を読め、学習記録の移行でも通る
    ────────────────────────────────────────────────────────────── */
 import assert from 'node:assert/strict'
 
@@ -15,11 +17,14 @@ const localStorage = {
   setItem: (k: string, v: string) => void store.set(k, String(v)),
   removeItem: (k: string) => void store.delete(k),
 }
-;(globalThis as unknown as { window: unknown }).window = { localStorage }
+;(globalThis as unknown as { window: unknown }).window = { localStorage, dispatchEvent: () => true }
 
 const N = await import('../src/lib/practiceNav')
 const S = await import('../src/lib/pastExamSession')
 const SS = await import('../src/lib/pastExamSubjectSession')
+const D = await import('../src/lib/dailyQuiz')
+const T = await import('../src/lib/learningDataTransfer')
+const { ALL_QUESTIONS } = await import('../src/lib/quiz')
 
 let n = 0
 function test(name: string, fn: () => void) {
@@ -166,6 +171,52 @@ test('13. 科目別：selectedIndex 付きで保存でき、並べ直し後も�
   assert.equal(r.status, 'in-progress')
   assert.equal(r.answers[0].selectedIndex, 0)
   assert.equal(r.answers[1].selectedIndex, undefined)
+})
+
+/** 今日の日付の今日の10問（旧データの形＝choices なし）を保存しておく */
+function seedDaily(extra: Record<string, unknown> = {}) {
+  const ids = ALL_QUESTIONS.slice(0, D.DAILY_COUNT).map((q) => q.id)
+  const answers = ids.map((_, i) => (i === 0 ? true : i === 1 ? false : null))
+  store.set(D.DAILY_STATE_KEY, JSON.stringify({ date: D.tokyoDateKey(), questionIds: ids, answers, currentIndex: 2, completed: false, ...extra }))
+}
+
+test('14. 今日の10問：旧データ（choices なし）はそのまま読め、選択肢は「記録なし」になる', () => {
+  seedDaily()
+  const s = D.getOrCreateDailyState()
+  assert.equal(s.currentIndex, 2)
+  assert.deepEqual(s.answers.slice(0, 3), [true, false, null])
+  assert.equal(s.choices, undefined)
+  assert.deepEqual(D.dailyChoices(s), Array(D.DAILY_COUNT).fill(null))
+})
+
+test('15. 今日の10問：回答すると choices に元の選択肢の番号を保存し、既存の項目は変わらない', () => {
+  seedDaily()
+  D.recordDailyAnswer(2, true, 3)
+  const raw = JSON.parse(store.get(D.DAILY_STATE_KEY)!)
+  assert.deepEqual(raw.answers.slice(0, 4), [true, false, true, null])
+  assert.equal(raw.currentIndex, 3)
+  assert.equal(raw.completed, false)
+  assert.deepEqual(raw.choices.slice(0, 4), [null, null, 3, null], '旧データの2問は記録なしのまま')
+  assert.equal(raw.choices.length, D.DAILY_COUNT)
+  // choice を渡さない呼び出し（旧コード）でも壊れない
+  D.recordDailyAnswer(3, false)
+  const raw2 = JSON.parse(store.get(D.DAILY_STATE_KEY)!)
+  assert.equal(raw2.currentIndex, 4)
+  assert.equal(raw2.choices[3], null)
+})
+
+test('16. 今日の10問：壊れた choices は無視する（全問「記録なし」）', () => {
+  seedDaily({ choices: 'x' })
+  assert.deepEqual(D.dailyChoices(D.getOrCreateDailyState()), Array(D.DAILY_COUNT).fill(null))
+  seedDaily({ choices: [1, -1, 1.5, 'a'] })
+  assert.deepEqual(D.dailyChoices(D.getOrCreateDailyState()).slice(0, 4), [1, null, null, null])
+})
+
+test('17. 学習記録の移行：choices 付きの今日の10問も検査を通る', () => {
+  seedDaily({ choices: [2, 0, null, null, null, null, null, null, null, null] })
+  const v = JSON.parse(store.get(D.DAILY_STATE_KEY)!)
+  const k = T.LEARNING_KEYS.find((x) => x.key === D.DAILY_STATE_KEY)!
+  assert.equal(k.validate(v), true)
 })
 
 console.log(`\n${n} tests passed`)

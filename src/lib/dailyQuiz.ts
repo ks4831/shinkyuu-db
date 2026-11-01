@@ -65,8 +65,21 @@ export type DailyState = {
   questionIds: string[]
   /** 各問の結果。null=未回答 / true=正解 / false=不正解 */
   answers: (boolean | null)[]
+  /**
+   * 各問で選んだ選択肢（元の選択肢の番号。表示はシャッフルされるため）。null=未回答・記録なし。
+   * 「前の問題」で戻ったときの表示用。これより前の保存データには無い
+   */
+  choices?: (number | null)[]
   currentIndex: number
   completed: boolean
+}
+
+const isChoice = (c: unknown): c is number => typeof c === 'number' && Number.isInteger(c) && c >= 0
+
+/** 保存されている choices を読む（形が合わなければ全問「記録なし」） */
+export function dailyChoices(state: DailyState): (number | null)[] {
+  const c = state.choices
+  return state.questionIds.map((_, i) => (Array.isArray(c) && isChoice(c[i]) ? c[i] : null))
 }
 
 export type DailyStreak = {
@@ -148,11 +161,16 @@ export function resolveDailyQuestions(state: DailyState): QuizQuestion[] {
 
 /* ── 回答の記録 ─────────────────────────────────────────── */
 
-/** index 番目の問題の結果を保存し、currentIndex を進める */
-export function recordDailyAnswer(index: number, correct: boolean) {
+/** index 番目の問題の結果（と選んだ選択肢の元の番号）を保存し、currentIndex を進める */
+export function recordDailyAnswer(index: number, correct: boolean, choice?: number) {
   const state = getOrCreateDailyState()
   if (index < 0 || index >= DAILY_COUNT) return
   state.answers[index] = correct
+  if (isChoice(choice)) {
+    const choices = dailyChoices(state)
+    choices[index] = choice
+    state.choices = choices
+  }
   state.currentIndex = Math.max(state.currentIndex, index + 1)
   write(DAILY_STATE_KEY, state)
 }
