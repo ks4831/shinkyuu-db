@@ -23,6 +23,7 @@
     "test:nav": "npx tsx scripts/test-nav-history.mts",
     "import:original-mock": "npx tsx scripts/import-original-mock.mts",
     "test:original-mock": "npx tsx scripts/test-original-mock.mts",
+    "test:original-mock-results": "npx tsx scripts/test-original-mock-results.mts",
     "test:mock-session": "npx tsx scripts/test-mock-session.mts",
     "test:practice-nav": "npx tsx scripts/test-practice-nav.mts",
     "test:e2e": "next build && playwright test"

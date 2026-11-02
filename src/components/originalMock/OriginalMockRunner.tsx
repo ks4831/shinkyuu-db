@@ -5,6 +5,7 @@ import Link from 'next/link'
 import { useLeaveGuard } from '@/lib/leaveGuard'
 import { PAST_EXAM_CHOICE_LABELS } from '@/lib/choiceLabels'
 import {
+  getLegacyOriginalMockResult,
   getOriginalMockResult,
   isOriginalMockCorrect,
   saveOriginalMockResult,
@@ -39,7 +40,7 @@ type Screen = 'start' | 'question' | 'result'
  * 1問1画面で解き、最後に科目別の得点・全問の正答と解説を見せる。途中経過は保存しない。
  * 前後の移動・回答の保持と変更・未回答の確認は mockSession（総合模擬試験①と共通）に任せる。
  */
-export default function OriginalMockRunner({ data }: { data: OriginalMockData }) {
+export default function OriginalMockRunner({ data, updateNote }: { data: OriginalMockData; updateNote?: string }) {
   const [screen, setScreen] = useState<Screen>('start')
   const [active, setActive] = useState<OriginalMockQuestion[]>(data.questions)
   /** true＝間違えた問題だけの再挑戦（結果は保存しない） */
@@ -50,10 +51,13 @@ export default function OriginalMockRunner({ data }: { data: OriginalMockData })
   /** 未回答を残して採点しようとしたときの確認表示 */
   const [confirmUnanswered, setConfirmUnanswered] = useState(false)
   const [lastResult, setLastResult] = useState<OriginalMockResult | null>(null)
+  /** 問題数を増やす前（旧保存キー）の結果。読むだけで、上書きしない */
+  const [legacyResult, setLegacyResult] = useState<OriginalMockResult | null>(null)
   const index = session.index
 
   useEffect(() => {
     setLastResult(getOriginalMockResult(data.mockId))
+    setLegacyResult(getLegacyOriginalMockResult(data.mockId))
   }, [data.mockId])
 
   useEffect(() => {
@@ -111,7 +115,10 @@ export default function OriginalMockRunner({ data }: { data: OriginalMockData })
 
   /* ── 開始画面 ── */
   if (screen === 'start') {
+    const total = data.questions.length
     const lastWrong = lastResult ? data.questions.filter((q) => lastResult.wrongIds.includes(q.id)) : []
+    /** 旧版の結果の再挑戦は、新しい結果がまだ無いときだけ出す（旧版の問題だけが選ばれる） */
+    const legacyWrong = legacyResult && !lastResult ? data.questions.filter((q) => legacyResult.wrongIds.includes(q.id)) : []
     return (
       <div className="mx-auto max-w-md px-4 pb-28 pt-6">
         <p className="text-xs font-semibold text-teal-700">オリジナル模擬試験</p>
@@ -122,9 +129,17 @@ export default function OriginalMockRunner({ data }: { data: OriginalMockData })
         <p className="mt-3 rounded-xl border border-amber-200 bg-amber-50 px-3 py-2 text-xs leading-relaxed text-amber-800">
           オリジナル問題です（国家試験の公式問題・過去問ではありません）。AIを使って作成・検証しており、有資格者による最終確認は未実施です。根拠資料は各問の解説に示しています。
         </p>
+        {updateNote && (
+          <p className="mt-3 rounded-xl border border-teal-200 bg-teal-50 px-3 py-2 text-xs leading-relaxed text-teal-800">{updateNote}</p>
+        )}
         {lastResult && (
           <p className="mt-3 text-sm text-gray-700">
-            前回の結果：<span className="font-bold">{lastResult.correct} / {lastResult.total}問</span>
+            前回の結果{lastResult.total !== total && `（${lastResult.total}問版）`}：<span className="font-bold">{lastResult.correct} / {lastResult.total}問</span>
+          </p>
+        )}
+        {legacyResult && (
+          <p className="mt-2 text-xs leading-relaxed text-gray-500">
+            {legacyResult.total}問版の結果（問題を追加する前）：<span className="font-bold text-gray-700">{legacyResult.correct} / {legacyResult.total}問</span>
           </p>
         )}
         <button
@@ -141,6 +156,15 @@ export default function OriginalMockRunner({ data }: { data: OriginalMockData })
             className="mt-3 w-full rounded-xl border border-teal-200 px-5 py-3.5 text-sm font-bold text-teal-700 hover:bg-teal-50"
           >
             前回まちがえた{lastWrong.length}問だけ解く
+          </button>
+        )}
+        {legacyWrong.length > 0 && (
+          <button
+            type="button"
+            onClick={() => start(legacyWrong, true)}
+            className="mt-3 w-full rounded-xl border border-teal-200 px-5 py-3.5 text-sm font-bold text-teal-700 hover:bg-teal-50"
+          >
+            {legacyResult!.total}問版でまちがえた{legacyWrong.length}問だけ解く
           </button>
         )}
       </div>

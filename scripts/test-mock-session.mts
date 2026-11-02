@@ -68,7 +68,7 @@ check('未回答の問題を返す', JSON.stringify(unansweredIndexes(s)) === JS
 check('回答済みでない問題は変更開始できない', startEditing(goTo(s, 1)).editing[1] === false)
 check('選択せずに確定しても何も起きない', confirmAnswer(goTo(s, 1)).answers[1] === null)
 
-// 6. 模擬試験②の40問：回答を変更した最新の回答で採点する
+// 6. 模擬試験②の全問（58問）：回答を変更した最新の回答で採点する
 const data = JSON.parse(readFileSync(join(import.meta.dirname, '..', 'src/data/originalMocks/original-mock-02.json'), 'utf8')) as OriginalMockData
 const qs = data.questions
 let m = createMockSession(qs.map((q) => q.id))
@@ -81,10 +81,20 @@ for (let i = qs.length - 1; i >= 0; i--) {
   if (canGoPrev(m)) m = goPrev(m)
 }
 const score = qs.filter((q, i) => m.answers[i] !== null && isOriginalMockCorrect(q, m.answers[i]!)).length
-check('40問：後から変更した回答が採点に反映される（20/40）', score === 20 && unansweredIndexes(m).length === 0, String(score))
-check('40問：移動後も順序が出題順のまま', JSON.stringify(m.order) === JSON.stringify(qs.map((q) => q.id)))
+check(`全${qs.length}問：後から変更した回答が採点に反映される（${Math.ceil(qs.length / 2)}/${qs.length}）`, qs.length === 58 && score === Math.ceil(qs.length / 2) && unansweredIndexes(m).length === 0, String(score))
+check(`全${qs.length}問：移動後も順序が出題順のまま`, JSON.stringify(m.order) === JSON.stringify(qs.map((q) => q.id)))
 
 // 7. 解き直し（問題の一部だけのセッション）でも同じ操作ができる
+// 第40問と第41問（既存と追加の境目）をまたいで前後に移動できる
+let b = createMockSession(qs.map((q) => q.id))
+b = goTo(b, 39)
+b = answer(b, qs[39].answerIndex)
+b = goNext(b)
+const at41 = b.index === 40 && qs[b.index].id === 'om02-41'
+b = answer(b, qs[40].answerIndex)
+b = goPrev(b)
+check('第40問→第41問→第40問と移動でき、両方の回答が保持される', at41 && b.index === 39 && b.answers[39] === qs[39].answerIndex && b.answers[40] === qs[40].answerIndex)
+
 let r = createMockSession(['om02-05', 'om02-22', 'om02-37'])
 r = answer(r, 0)
 r = goNext(r)

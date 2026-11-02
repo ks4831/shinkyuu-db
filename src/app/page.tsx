@@ -6,6 +6,8 @@ import { subjects } from '@/lib/data'
 import { ALL_QUESTIONS } from '@/lib/quiz'
 import HomeResumeCard from '@/components/home/HomeResumeCard'
 import HomeNoteSection from '@/components/home/HomeNoteSection'
+import mock02Json from '@/data/originalMocks/original-mock-02.json'
+import { scoreBySubject, type OriginalMockData } from '@/lib/originalMock'
 
 const pastExamAvailable = pastExamCoverage().filter((c) => c.available)
 const PAST_EXAM_TOTAL = pastExamAvailable.reduce((sum, c) => sum + c.collected, 0).toLocaleString()
@@ -92,12 +94,13 @@ const MAIN_CARDS = [
   },
 ]
 
-/** オリジナル模擬試験（過去問のすぐ下）。公式問題ではないことをカードにも明記する */
+/** オリジナル模擬試験（過去問のすぐ下）。公式問題ではないことをカードにも明記する。問題数・科目の内訳はデータから作る */
+const MOCK02 = mock02Json as OriginalMockData
 const ORIGINAL_MOCK_CARD = {
   href: '/original-mock',
   title: 'オリジナル模擬試験',
-  stat: '40問',
-  desc: '模擬試験②：経絡経穴概論20・はり理論10・きゅう理論10',
+  stat: `${MOCK02.questions.length}問`,
+  desc: `模擬試験②：${scoreBySubject(MOCK02.questions, []).map((r) => `${r.subject}${r.total}`).join('・')}`,
   note: '公式問題ではありません（AIで作成・検証）',
   cta: '模擬試験を解く',
   primary: false,
