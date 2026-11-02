@@ -68,7 +68,7 @@ check('未回答の問題を返す', JSON.stringify(unansweredIndexes(s)) === JS
 check('回答済みでない問題は変更開始できない', startEditing(goTo(s, 1)).editing[1] === false)
 check('選択せずに確定しても何も起きない', confirmAnswer(goTo(s, 1)).answers[1] === null)
 
-// 6. 模擬試験②の全問（58問）：回答を変更した最新の回答で採点する
+// 6. 模擬試験②の全問（68問）：回答を変更した最新の回答で採点する
 const data = JSON.parse(readFileSync(join(import.meta.dirname, '..', 'src/data/originalMocks/original-mock-02.json'), 'utf8')) as OriginalMockData
 const qs = data.questions
 let m = createMockSession(qs.map((q) => q.id))
@@ -81,7 +81,7 @@ for (let i = qs.length - 1; i >= 0; i--) {
   if (canGoPrev(m)) m = goPrev(m)
 }
 const score = qs.filter((q, i) => m.answers[i] !== null && isOriginalMockCorrect(q, m.answers[i]!)).length
-check(`全${qs.length}問：後から変更した回答が採点に反映される（${Math.ceil(qs.length / 2)}/${qs.length}）`, qs.length === 58 && score === Math.ceil(qs.length / 2) && unansweredIndexes(m).length === 0, String(score))
+check(`全${qs.length}問：後から変更した回答が採点に反映される（${Math.ceil(qs.length / 2)}/${qs.length}）`, qs.length === 68 && score === Math.ceil(qs.length / 2) && unansweredIndexes(m).length === 0, String(score))
 check(`全${qs.length}問：移動後も順序が出題順のまま`, JSON.stringify(m.order) === JSON.stringify(qs.map((q) => q.id)))
 
 // 7. 解き直し（問題の一部だけのセッション）でも同じ操作ができる
@@ -94,6 +94,17 @@ const at41 = b.index === 40 && qs[b.index].id === 'om02-41'
 b = answer(b, qs[40].answerIndex)
 b = goPrev(b)
 check('第40問→第41問→第40問と移動でき、両方の回答が保持される', at41 && b.index === 39 && b.answers[39] === qs[39].answerIndex && b.answers[40] === qs[40].answerIndex)
+// 第58問と第59問（58問版と追加10問の境目）
+let c = createMockSession(qs.map((q) => q.id))
+c = goTo(c, 57)
+c = answer(c, qs[57].answerIndex)
+c = goNext(c)
+const at59 = c.index === 58 && qs[c.index].id === 'om02-59'
+c = answer(c, (qs[58].answerIndex + 1) % 4)
+c = goPrev(c)
+check('第58問→第59問→第58問と移動でき、両方の回答が保持される', at59 && c.index === 57 && c.answers[57] === qs[57].answerIndex && c.answers[58] === (qs[58].answerIndex + 1) % 4)
+c = goTo(c, 67)
+check('最終問題（第68問）では次へ進めない', qs[c.index].id === 'om02-68' && !canGoNext(c))
 
 let r = createMockSession(['om02-05', 'om02-22', 'om02-37'])
 r = answer(r, 0)

@@ -1,15 +1,15 @@
 /* ──────────────────────────────────────────────────────────────
-   オリジナル模擬試験②（58問：既存40問＋臨床医学18問）の画面テスト
+   オリジナル模擬試験②（68問：既存40問＋臨床医学18問＋臨床医学・リハビリテーション医学10問）の画面テスト
    `npm run test:e2e`（next build のあと Playwright を pc / sp390 の2画面幅で実行）
-   - HOME・一覧・開始画面の問題数と科目の内訳、臨床医学を追加した案内
-   - 第1〜58問の表示（番号・4択・解説・根拠資料）と、全問正解で 58/58・科目別5区分
-   - 第40問⇔第41問の移動と回答の保持
-   - 第1〜40問だけ正解で 40/58（臨床医学の2区分が0点）
-   - 40問版の過去の結果（旧キー v1）の表示・再挑戦・上書きしないこと／58問版の結果（v2）
+   - HOME・一覧・開始画面の問題数と科目の内訳、問題を追加した案内
+   - 第1〜68問の表示（番号・4択・解説・根拠資料）と、全問正解で 68/68・科目別6区分
+   - 第40問⇔第41問、第58問⇔第59問の移動と回答の保持、最終問題（第68問）
+   - 第1〜40問だけ正解で 40/68（臨床医学・リハビリテーション医学の3区分が0点）
+   - 40問版（旧キー v1）・58問版（旧キー v2）の過去の結果の表示・再挑戦・上書きしないこと／68問版の結果（v3）
    - 壊れた保存データでも開始画面が表示される
    - 横スクロールが出ない
    正答・解説・根拠資料は問題データ（src/data/originalMocks/original-mock-02.json）から読む。データは読むだけで変更しない。
-   スクリーンショット：環境変数 E2E_SHOT_DIR を指定したときだけ、第41〜58問などを保存する（目視の確認用）。
+   スクリーンショット：環境変数 E2E_SHOT_DIR を指定したときだけ、第41〜68問などを保存する（目視の確認用）。
    ────────────────────────────────────────────────────────────── */
 import { test, expect, type Page } from '@playwright/test'
 import { readFileSync, mkdirSync } from 'node:fs'
@@ -18,17 +18,21 @@ import path from 'node:path'
 type Q = { id: string; questionNumber: number; subject: string; choices: string[]; answerIndex: number; choiceNotes: string[]; point: string; sources: string[] }
 const DATA = JSON.parse(readFileSync(path.join(process.cwd(), 'src', 'data', 'originalMocks', 'original-mock-02.json'), 'utf8')) as { questions: Q[] }
 const QS = DATA.questions
+const N = QS.length
 const V1 = 'shinkyuu_original_mock_results_v1'
 const V2 = 'shinkyuu_original_mock_results_v2'
+const V3 = 'shinkyuu_original_mock_results_v3'
 const MOCK_ID = 'original-mock-02'
 const SUBJECTS: [string, number][] = [
   ['経絡経穴概論', 20],
   ['はり理論', 10],
   ['きゅう理論', 10],
-  ['臨床医学各論', 15],
-  ['臨床医学総論', 3],
+  ['臨床医学各論', 22],
+  ['臨床医学総論', 5],
+  ['リハビリテーション医学', 1],
 ]
-const LEGACY = { mockId: MOCK_ID, correct: 35, total: 40, wrongIds: ['om02-05', 'om02-12', 'om02-22', 'om02-30', 'om02-37'], completedAt: 1761800000000 }
+const LEGACY40 = { mockId: MOCK_ID, correct: 35, total: 40, wrongIds: ['om02-05', 'om02-12', 'om02-22', 'om02-30', 'om02-37'], completedAt: 1761800000000 }
+const LEGACY58 = { mockId: MOCK_ID, correct: 50, total: 58, wrongIds: ['om02-41', 'om02-50'], completedAt: 1762100000000 }
 
 const SHOT_DIR = process.env.E2E_SHOT_DIR
 async function shot(p: Page, name: string, fullPage = false) {
@@ -63,7 +67,7 @@ async function tap(p: Page, loc: ReturnType<Page['locator']>) {
   await loc.click()
 }
 
-/** 出題画面の表示（番号・進み具合・科目・4択） */
+/** 出題画面の表示（番号・進み具合・4択） */
 async function expectQuestion(p: Page, q: Q, pos: number, total: number) {
   await expect(p.getByText(new RegExp(`第${q.questionNumber}問$`)).first()).toBeVisible()
   await expect(p.getByText(new RegExp(`^${pos} / ${total}問`))).toBeVisible()
@@ -94,6 +98,9 @@ async function resultRows(p: Page) {
   return p.locator('table tr').evaluateAll((trs) => trs.map((tr) => [...tr.querySelectorAll('td')].map((td) => td.textContent!.trim())))
 }
 
+const getItem = (p: Page, k: string) => p.evaluate((key) => localStorage.getItem(key), k)
+const setItems = (p: Page, items: [string, string][]) => p.evaluate((xs) => xs.forEach(([k, v]) => localStorage.setItem(k, v)), items)
+
 const errors: string[] = []
 test.beforeEach(async ({ page }) => {
   errors.length = 0
@@ -109,60 +116,66 @@ test.afterEach(() => {
   expect(errors, '画面のスクリプトエラーがない').toEqual([])
 })
 
-test('HOME・一覧・開始画面：58問と科目別5区分、臨床医学18問を追加した案内', async ({ page }) => {
+test('HOME・一覧・開始画面：68問と科目別6区分、問題を追加した案内', async ({ page }) => {
+  expect(N).toBe(68)
+  const breakdown = '経絡経穴概論20・はり理論10・きゅう理論10・臨床医学各論22・臨床医学総論5・リハビリテーション医学1'
   await page.goto('/')
   const card = page.locator('a[href="/original-mock"]').first()
-  await expect(card).toContainText('58問')
-  await expect(card).toContainText('模擬試験②：経絡経穴概論20・はり理論10・きゅう理論10・臨床医学各論15・臨床医学総論3')
-  await expect(card).not.toContainText('40問')
+  await expect(card).toContainText('68問')
+  await expect(card).toContainText(`模擬試験②：${breakdown}`)
+  await expect(card).not.toContainText('58問')
   await card.scrollIntoViewIfNeeded()
   await shot(page, '01-home-card')
   await expectNoHorizontalScroll(page)
 
   await page.goto('/original-mock')
   const item = page.locator('a[href="/original-mock/02"]')
-  await expect(item).toContainText('58問')
-  await expect(item).toContainText('経絡経穴概論20・はり理論10・きゅう理論10・臨床医学各論15・臨床医学総論3')
+  await expect(item).toContainText('68問')
+  await expect(item).toContainText(breakdown)
   await expectNoHorizontalScroll(page)
   await tap(page, item)
 
   await expect(page).toHaveURL(/\/original-mock\/02\/?$/)
-  await expect(page.getByText('全58問（経絡経穴概論20問・はり理論10問・きゅう理論10問・臨床医学各論15問・臨床医学総論3問）・四肢択一')).toBeVisible()
-  await expect(page.getByText(/臨床医学18問（第41〜58問：臨床医学各論15問・臨床医学総論3問）を追加し、全58問になりました/)).toBeVisible()
+  await expect(page.getByText('全68問（経絡経穴概論20問・はり理論10問・きゅう理論10問・臨床医学各論22問・臨床医学総論5問・リハビリテーション医学1問）・四肢択一')).toBeVisible()
+  await expect(page.getByText(/臨床医学・リハビリテーション医学10問（第59〜68問）を追加し、全68問になりました/)).toBeVisible()
   await expect(page.getByText(/有資格者による最終確認は未実施/)).toBeVisible()
   await expect(page.getByRole('button', { name: '解き始める' })).toBeVisible()
-  await expect(page.getByText(/前回の結果|40問版/)).toHaveCount(1) // 案内文の「40問版」だけ（結果の行はない）
+  await expect(page.getByText(/^前回の結果|問版の結果（問題を追加する前）/)).toHaveCount(0)
   await shot(page, '02-start', true)
   await expectNoHorizontalScroll(page)
 })
 
-test('第1〜58問：番号・4択・解説・根拠資料が出て、全問正解で 58/58・科目別5区分が満点', async ({ page }) => {
-  await page.evaluate(([k, v]) => localStorage.setItem(k, v), [V1, JSON.stringify({ [MOCK_ID]: LEGACY })])
-  const v1Before = await page.evaluate((k) => localStorage.getItem(k), V1)
+test('第1〜68問：番号・4択・解説・根拠資料が出て、全問正解で 68/68・科目別6区分が満点', async ({ page }) => {
+  await setItems(page, [
+    [V1, JSON.stringify({ [MOCK_ID]: LEGACY40 })],
+    [V2, JSON.stringify({ [MOCK_ID]: LEGACY58 })],
+  ])
+  const v1Before = await getItem(page, V1)
+  const v2Before = await getItem(page, V2)
   await startFull(page)
   await expect(prevBtn(page)).toBeDisabled()
-  for (let i = 0; i < QS.length; i++) {
+  for (let i = 0; i < N; i++) {
     const q = QS[i]
-    await expectQuestion(page, q, i + 1, 58)
+    await expectQuestion(page, q, i + 1, N)
     await expect(page.getByText(q.subject, { exact: true }).first()).toBeVisible()
     await answer(page, q.answerIndex)
     await expectExplanation(page, q, q.answerIndex)
-    if (i === 0 || i === 39 || i >= 40) {
+    if (i === 0 || i === 39 || i >= 57) {
       await expectNoHorizontalScroll(page)
       await shot(page, `q${String(q.questionNumber).padStart(2, '0')}-answered`, true)
     }
-    if (i < QS.length - 1) await tap(page, nextBtn(page))
+    if (i < N - 1) await tap(page, nextBtn(page))
   }
+  await expect(page.getByText(/第68問$/).first()).toBeVisible()
   await expect(nextBtn(page)).toHaveCount(0)
   await tap(page, finishBtn(page))
 
   await expect(page.getByRole('heading', { name: '結果' })).toBeVisible()
-  await expect(page.locator('p', { hasText: /^58 \/ 58問$/ })).toBeVisible()
+  await expect(page.locator('p', { hasText: /^68 \/ 68問$/ })).toBeVisible()
   expect(await resultRows(page)).toEqual(SUBJECTS.map(([s, n]) => [s, `${n} / ${n}`]))
-  await expect(page.getByRole('button', { name: '全58問をもう一度解く' })).toBeVisible()
-  await expect(page.locator('details')).toHaveCount(58)
-  // 結果画面の解説（第41・56・58問を開く）
-  for (const n of [41, 56, 58]) {
+  await expect(page.getByRole('button', { name: '全68問をもう一度解く' })).toBeVisible()
+  await expect(page.locator('details')).toHaveCount(68)
+  for (const n of [41, 58, 59, 67, 68]) {
     const q = QS[n - 1]
     const d = page.locator('details', { has: page.getByText(`第${n}問`, { exact: true }) })
     await d.locator('summary').click()
@@ -172,84 +185,103 @@ test('第1〜58問：番号・4択・解説・根拠資料が出て、全問正�
   await shot(page, '10-result-full', true)
   await expectNoHorizontalScroll(page)
 
-  // 保存：58問版は v2 に、40問版（v1）は一字一句そのまま
-  const v2 = await page.evaluate((k) => JSON.parse(localStorage.getItem(k)!), V2)
-  expect(v2[MOCK_ID]).toMatchObject({ mockId: MOCK_ID, correct: 58, total: 58, wrongIds: [] })
-  expect(await page.evaluate((k) => localStorage.getItem(k), V1)).toBe(v1Before)
+  // 保存：68問版は v3 に、40問版（v1）・58問版（v2）は一字一句そのまま
+  const v3 = JSON.parse((await getItem(page, V3))!)
+  expect(v3[MOCK_ID]).toMatchObject({ mockId: MOCK_ID, correct: 68, total: 68, wrongIds: [] })
+  expect(await getItem(page, V1)).toBe(v1Before)
+  expect(await getItem(page, V2)).toBe(v2Before)
 
-  // 開始画面に戻ると、58問版の結果（注記なし）と40問版の結果が別々に出る
+  // 開始画面に戻ると、68問版の結果と、58問版・40問版の結果が別々に出る
   await page.goto('/original-mock/02')
-  await expect(page.getByText('前回の結果：58 / 58問', { exact: true })).toBeVisible()
+  await expect(page.getByText('前回の結果：68 / 68問', { exact: true })).toBeVisible()
+  await expect(page.getByText('58問版の結果（問題を追加する前）：50 / 58問', { exact: true })).toBeVisible()
   await expect(page.getByText('40問版の結果（問題を追加する前）：35 / 40問', { exact: true })).toBeVisible()
-  await expect(page.getByRole('button', { name: /40問版でまちがえた/ })).toHaveCount(0)
-  await expect(page.getByRole('button', { name: 'もう一度、全問を解く' })).toBeVisible()
-  await shot(page, '11-start-after-58', true)
+  await expect(page.getByRole('button', { name: /問版でまちがえた/ })).toHaveCount(0)
+  await shot(page, '11-start-after-68', true)
 })
 
-test('第40問⇔第41問：境目をまたいで移動でき、回答・正誤・解説が保持される', async ({ page }) => {
+test('第40問⇔第41問・第58問⇔第59問：境目をまたいで移動でき、回答・正誤・解説が保持される', async ({ page }) => {
   await startFull(page)
   for (let i = 0; i < 39; i++) await tap(page, nextBtn(page)) // 「あとで解く」で第40問へ
   const q40 = QS[39]
   const q41 = QS[40]
   const wrong41 = (q41.answerIndex + 1) % 4
-  await expectQuestion(page, q40, 40, 58)
+  await expectQuestion(page, q40, 40, N)
   await answer(page, q40.answerIndex)
   await tap(page, nextBtn(page))
-  await expectQuestion(page, q41, 41, 58)
-  await expect(page.getByText('臨床医学各論', { exact: true }).first()).toBeVisible()
+  await expectQuestion(page, q41, 41, N)
   await answer(page, wrong41)
   await expectExplanation(page, q41, wrong41)
-
   await tap(page, prevBtn(page))
-  await expectQuestion(page, q40, 40, 58)
+  await expectQuestion(page, q40, 40, N)
   await expect(choices(page).nth(q40.answerIndex)).toHaveAttribute('aria-pressed', 'true')
   await expectExplanation(page, q40, q40.answerIndex)
-
   await tap(page, nextBtn(page))
-  await expectQuestion(page, q41, 41, 58)
+  await expectQuestion(page, q41, 41, N)
   await expect(choices(page).nth(wrong41)).toHaveAttribute('aria-pressed', 'true')
-  await expectExplanation(page, q41, wrong41)
-  await expect(page.getByText('（回答済み 2）', { exact: false })).toBeVisible()
 
-  // 未回答を残して第58問から採点 → 未回答の確認
-  for (let i = 41; i < 58; i++) await tap(page, nextBtn(page))
-  await expectQuestion(page, QS[57], 58, 58)
+  // 第58問⇔第59問
+  for (let i = 40; i < 57; i++) await tap(page, nextBtn(page)) // 第41問 → 第58問
+  const q58 = QS[57]
+  const q59 = QS[58]
+  const wrong59 = (q59.answerIndex + 1) % 4
+  await expectQuestion(page, q58, 58, N)
+  await answer(page, q58.answerIndex)
+  await tap(page, nextBtn(page))
+  await expectQuestion(page, q59, 59, N)
+  await expect(page.getByText(q59.subject, { exact: true }).first()).toBeVisible()
+  await answer(page, wrong59)
+  await expectExplanation(page, q59, wrong59)
+  await tap(page, prevBtn(page))
+  await expectQuestion(page, q58, 58, N)
+  await expect(choices(page).nth(q58.answerIndex)).toHaveAttribute('aria-pressed', 'true')
+  await expectExplanation(page, q58, q58.answerIndex)
+  await tap(page, nextBtn(page))
+  await expectQuestion(page, q59, 59, N)
+  await expect(choices(page).nth(wrong59)).toHaveAttribute('aria-pressed', 'true')
+  await expectExplanation(page, q59, wrong59)
+  await expect(page.getByText('（回答済み 4）', { exact: false })).toBeVisible()
+
+  // 最終問題（第68問）まで進み、未回答を残して採点 → 未回答の確認
+  for (let i = 59; i < N; i++) await tap(page, nextBtn(page))
+  await expectQuestion(page, QS[N - 1], N, N)
+  await expect(nextBtn(page)).toHaveCount(0)
   await tap(page, finishBtn(page))
-  await expect(page.getByText(/^未回答の問題が56問あります（第1・2・3・4・5・6・7・8問など）。$/)).toBeVisible()
+  await expect(page.getByText(/^未回答の問題が64問あります（第1・2・3・4・5・6・7・8問など）。$/)).toBeVisible()
   await tap(page, page.getByRole('button', { name: '未回答の問題へ' }))
-  await expectQuestion(page, QS[0], 1, 58)
+  await expectQuestion(page, QS[0], 1, N)
 })
 
-test('第1〜40問だけ正解：40/58、臨床医学の2区分は0点', async ({ page }) => {
+test('第1〜40問だけ正解：40/68、臨床医学・リハビリテーション医学の3区分は0点', async ({ page }) => {
   await startFull(page)
-  for (let i = 0; i < QS.length; i++) {
+  for (let i = 0; i < N; i++) {
     const q = QS[i]
     await answer(page, i < 40 ? q.answerIndex : (q.answerIndex + 1) % 4)
-    if (i < QS.length - 1) await tap(page, nextBtn(page))
+    if (i < N - 1) await tap(page, nextBtn(page))
   }
   await tap(page, finishBtn(page))
-  await expect(page.locator('p', { hasText: /^40 \/ 58問$/ })).toBeVisible()
-  expect(await resultRows(page)).toEqual(SUBJECTS.map(([s, n]) => [s, s.startsWith('臨床医学') ? `0 / ${n}` : `${n} / ${n}`]))
-  await expect(page.getByRole('button', { name: 'まちがえた18問を解き直す' })).toBeVisible()
-  await shot(page, '12-result-40of58', true)
+  await expect(page.locator('p', { hasText: /^40 \/ 68問$/ })).toBeVisible()
+  expect(await resultRows(page)).toEqual(SUBJECTS.map(([s, n]) => [s, s.startsWith('臨床医学') || s === 'リハビリテーション医学' ? `0 / ${n}` : `${n} / ${n}`]))
+  await expect(page.getByRole('button', { name: 'まちがえた28問を解き直す' })).toBeVisible()
+  await shot(page, '12-result-40of68', true)
 
-  // 解き直し：第41〜58問だけ、番号は元のまま、結果は保存しない
-  const before = await page.evaluate((k) => localStorage.getItem(k), V2)
-  await tap(page, page.getByRole('button', { name: 'まちがえた18問を解き直す' }))
+  // 解き直し：第41〜68問だけ、番号は元のまま、結果は保存しない
+  const before = await getItem(page, V3)
+  await tap(page, page.getByRole('button', { name: 'まちがえた28問を解き直す' }))
   await expect(page.getByText(/^解き直し\s+第41問$/)).toBeVisible()
-  await expect(page.getByText(/^1 \/ 18問/)).toBeVisible()
-  for (let i = 40; i < 58; i++) {
+  await expect(page.getByText(/^1 \/ 28問/)).toBeVisible()
+  for (let i = 40; i < N; i++) {
     await answer(page, QS[i].answerIndex)
-    if (i < 57) await tap(page, nextBtn(page))
+    if (i < N - 1) await tap(page, nextBtn(page))
   }
   await tap(page, finishBtn(page))
-  await expect(page.locator('p', { hasText: /^18 \/ 18問$/ })).toBeVisible()
-  expect(await page.evaluate((k) => localStorage.getItem(k), V2)).toBe(before)
+  await expect(page.locator('p', { hasText: /^28 \/ 28問$/ })).toBeVisible()
+  expect(await getItem(page, V3)).toBe(before)
 })
 
-test('40問版の過去の結果（旧キー v1）：「40問版」と明示し、再挑戦でき、上書きしない', async ({ page }) => {
-  const raw = JSON.stringify({ [MOCK_ID]: LEGACY })
-  await page.evaluate(([k, v]) => localStorage.setItem(k, v), [V1, raw])
+test('40問版（v1）の過去の結果：「40問版」と明示し、再挑戦でき、上書きしない', async ({ page }) => {
+  const raw = JSON.stringify({ [MOCK_ID]: LEGACY40 })
+  await setItems(page, [[V1, raw]])
   await page.goto('/original-mock/02')
   await expect(page.getByText('40問版の結果（問題を追加する前）：35 / 40問', { exact: true })).toBeVisible()
   await expect(page.getByText(/^前回の結果/)).toHaveCount(0)
@@ -270,37 +302,75 @@ test('40問版の過去の結果（旧キー v1）：「40問版」と明示し�
   }
   await tap(page, finishBtn(page))
   await expect(page.locator('p', { hasText: /^5 \/ 5問$/ })).toBeVisible()
-  // 再挑戦は保存しない：v1 はそのまま、v2 は作られない
-  expect(await page.evaluate((k) => localStorage.getItem(k), V1)).toBe(raw)
-  expect(await page.evaluate((k) => localStorage.getItem(k), V2)).toBeNull()
+  expect(await getItem(page, V1)).toBe(raw)
+  expect(await getItem(page, V2)).toBeNull()
+  expect(await getItem(page, V3)).toBeNull()
 })
 
-test('壊れた保存データでも開始画面が表示され、58問を解いて保存できる', async ({ page }) => {
-  for (const [v1, v2] of [
-    ['{oops', '{oops'],
-    ['[1,2]', 'null'],
-    [JSON.stringify({ [MOCK_ID]: { correct: 3, total: '40', wrongIds: [] } }), JSON.stringify({ [MOCK_ID]: { correct: 99, total: 58, wrongIds: 'x' } })],
-  ]) {
-    await page.evaluate(([a, b, k1, k2]) => {
-      localStorage.setItem(k1, a)
-      localStorage.setItem(k2, b)
-    }, [v1, v2, V1, V2])
-    await page.goto('/original-mock/02')
-    await expect(page.getByText(/^全58問/)).toBeVisible()
-    await expect(page.getByRole('button', { name: '解き始める' })).toBeVisible()
-    await expect(page.getByText(/^前回の結果|^40問版の結果/)).toHaveCount(0)
+test('58問版（v2）と40問版（v1）の過去の結果：両方を明示し、新しい58問版から再挑戦でき、上書きしない', async ({ page }) => {
+  const raw1 = JSON.stringify({ [MOCK_ID]: LEGACY40 })
+  const raw2 = JSON.stringify({ [MOCK_ID]: LEGACY58 })
+  await setItems(page, [
+    [V1, raw1],
+    [V2, raw2],
+  ])
+  await page.goto('/original-mock/02')
+  await expect(page.getByText('58問版の結果（問題を追加する前）：50 / 58問', { exact: true })).toBeVisible()
+  await expect(page.getByText('40問版の結果（問題を追加する前）：35 / 40問', { exact: true })).toBeVisible()
+  const retry = page.getByRole('button', { name: '58問版でまちがえた2問だけ解く' })
+  await expect(retry).toBeVisible()
+  await expect(page.getByRole('button', { name: /40問版でまちがえた/ })).toHaveCount(0)
+  await shot(page, '21-start-legacy58-40', true)
+  await expectNoHorizontalScroll(page)
+
+  await tap(page, retry)
+  for (const [i, n] of [41, 50].entries()) {
+    const q = QS[n - 1]
+    await expect(page.getByText(new RegExp(`^解き直し\\s+第${n}問$`))).toBeVisible()
+    await expectQuestion(page, q, i + 1, 2)
+    await answer(page, q.answerIndex)
+    if (i === 0) await tap(page, nextBtn(page))
   }
-  // 壊れた v2 のままでも採点・保存でき、旧キーの中身は消さない
-  await page.evaluate(([k1, k2]) => {
-    localStorage.setItem(k1, '{oops')
-    localStorage.setItem(k2, '{oops')
-  }, [V1, V2])
+  await tap(page, finishBtn(page))
+  await expect(page.locator('p', { hasText: /^2 \/ 2問$/ })).toBeVisible()
+  expect(await getItem(page, V1)).toBe(raw1)
+  expect(await getItem(page, V2)).toBe(raw2)
+  expect(await getItem(page, V3)).toBeNull()
+})
+
+test('壊れた保存データでも開始画面が表示され、68問を解いて保存できる', async ({ page }) => {
+  for (const [v1, v2, v3] of [
+    ['{oops', '{oops', '{oops'],
+    ['[1,2]', 'null', '"x"'],
+    [
+      JSON.stringify({ [MOCK_ID]: { correct: 3, total: '40', wrongIds: [] } }),
+      JSON.stringify({ [MOCK_ID]: { correct: 99, total: 58, wrongIds: 'x' } }),
+      JSON.stringify({ [MOCK_ID]: { correct: 1, total: 0, wrongIds: [] } }),
+    ],
+  ]) {
+    await setItems(page, [
+      [V1, v1],
+      [V2, v2],
+      [V3, v3],
+    ])
+    await page.goto('/original-mock/02')
+    await expect(page.getByText(/^全68問/)).toBeVisible()
+    await expect(page.getByRole('button', { name: '解き始める' })).toBeVisible()
+    await expect(page.getByText(/^前回の結果|問版の結果（問題を追加する前）/)).toHaveCount(0)
+  }
+  // 壊れた v3 のままでも採点・保存でき、旧キーの中身は消さない
+  await setItems(page, [
+    [V1, '{oops'],
+    [V2, '{oops'],
+    [V3, '{oops'],
+  ])
   await startFull(page)
-  for (let i = 0; i < 57; i++) await tap(page, nextBtn(page))
-  await answer(page, QS[57].answerIndex)
+  for (let i = 0; i < N - 1; i++) await tap(page, nextBtn(page))
+  await answer(page, QS[N - 1].answerIndex)
   await tap(page, finishBtn(page))
   await tap(page, page.getByRole('button', { name: 'このまま採点する' }))
-  await expect(page.locator('p', { hasText: /^1 \/ 58問$/ })).toBeVisible()
-  expect(await page.evaluate((k) => JSON.parse(localStorage.getItem(k)!)['original-mock-02'].total, V2)).toBe(58)
-  expect(await page.evaluate((k) => localStorage.getItem(k), V1)).toBe('{oops')
+  await expect(page.locator('p', { hasText: /^1 \/ 68問$/ })).toBeVisible()
+  expect(JSON.parse((await getItem(page, V3))!)[MOCK_ID].total).toBe(68)
+  expect(await getItem(page, V1)).toBe('{oops')
+  expect(await getItem(page, V2)).toBe('{oops')
 })

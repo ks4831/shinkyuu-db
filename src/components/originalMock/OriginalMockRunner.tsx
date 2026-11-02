@@ -5,7 +5,7 @@ import Link from 'next/link'
 import { useLeaveGuard } from '@/lib/leaveGuard'
 import { PAST_EXAM_CHOICE_LABELS } from '@/lib/choiceLabels'
 import {
-  getLegacyOriginalMockResult,
+  getLegacyOriginalMockResults,
   getOriginalMockResult,
   isOriginalMockCorrect,
   saveOriginalMockResult,
@@ -51,13 +51,13 @@ export default function OriginalMockRunner({ data, updateNote }: { data: Origina
   /** 未回答を残して採点しようとしたときの確認表示 */
   const [confirmUnanswered, setConfirmUnanswered] = useState(false)
   const [lastResult, setLastResult] = useState<OriginalMockResult | null>(null)
-  /** 問題数を増やす前（旧保存キー）の結果。読むだけで、上書きしない */
-  const [legacyResult, setLegacyResult] = useState<OriginalMockResult | null>(null)
+  /** 問題数を増やす前の版（旧保存キー）の結果。新しい版から順。読むだけで、上書きしない */
+  const [legacyResults, setLegacyResults] = useState<OriginalMockResult[]>([])
   const index = session.index
 
   useEffect(() => {
     setLastResult(getOriginalMockResult(data.mockId))
-    setLegacyResult(getLegacyOriginalMockResult(data.mockId))
+    setLegacyResults(getLegacyOriginalMockResults(data.mockId))
   }, [data.mockId])
 
   useEffect(() => {
@@ -117,7 +117,8 @@ export default function OriginalMockRunner({ data, updateNote }: { data: Origina
   if (screen === 'start') {
     const total = data.questions.length
     const lastWrong = lastResult ? data.questions.filter((q) => lastResult.wrongIds.includes(q.id)) : []
-    /** 旧版の結果の再挑戦は、新しい結果がまだ無いときだけ出す（旧版の問題だけが選ばれる） */
+    /** 旧版の結果の再挑戦は、新しい結果がまだ無いときだけ、いちばん新しい旧版について出す（その版の問題だけが選ばれる） */
+    const legacyResult = legacyResults[0] ?? null
     const legacyWrong = legacyResult && !lastResult ? data.questions.filter((q) => legacyResult.wrongIds.includes(q.id)) : []
     return (
       <div className="mx-auto max-w-md px-4 pb-28 pt-6">
@@ -137,11 +138,11 @@ export default function OriginalMockRunner({ data, updateNote }: { data: Origina
             前回の結果{lastResult.total !== total && `（${lastResult.total}問版）`}：<span className="font-bold">{lastResult.correct} / {lastResult.total}問</span>
           </p>
         )}
-        {legacyResult && (
-          <p className="mt-2 text-xs leading-relaxed text-gray-500">
-            {legacyResult.total}問版の結果（問題を追加する前）：<span className="font-bold text-gray-700">{legacyResult.correct} / {legacyResult.total}問</span>
+        {legacyResults.map((r) => (
+          <p key={r.total} className="mt-2 text-xs leading-relaxed text-gray-500">
+            {r.total}問版の結果（問題を追加する前）：<span className="font-bold text-gray-700">{r.correct} / {r.total}問</span>
           </p>
-        )}
+        ))}
         <button
           type="button"
           onClick={() => start(data.questions, false)}

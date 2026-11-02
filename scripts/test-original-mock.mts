@@ -1,8 +1,8 @@
 /**
  * オリジナル模擬試験②のデータと採点の検査。
- * - 先頭40問・追加18問が承認済みの基準値（SHA-256）と一字一句同じか
- * - 取り込んだデータが作業フォルダの2つの成果物（questions-40.json・additions-18.json）と同じか
- * - 58問・科目別の問題数・4択・正答1つ・解説の正誤表示と正答の一致
+ * - 先頭40問・追加18問・追加10問・公開済み58問が基準値（SHA-256）と一字一句同じか
+ * - 取り込んだデータが作業フォルダの3つの成果物（questions-40.json・additions-18.json・additions-10.json）と同じか
+ * - 68問・科目別の問題数・4択・正答1つ・解説の正誤表示と正答の一致
  * - 問題IDが重複せず、過去問・予想問題のIDとも重ならないか
  * - 採点（科目別の集計）
  * 実行：npm run test:original-mock
@@ -11,12 +11,13 @@ import { readFileSync, existsSync, readdirSync } from 'node:fs'
 import { join } from 'node:path'
 import { createHash } from 'node:crypto'
 import { isOriginalMockCorrect, scoreBySubject, type OriginalMockData } from '../src/lib/originalMock'
-import { FIRST40_QUESTIONS_SHA256, ADDITIONS18_QUESTIONS_SHA256, QUESTION_KEYS } from './original-mock-02-lock'
+import { FIRST40_QUESTIONS_SHA256, ADDITIONS18_QUESTIONS_SHA256, ADDITIONS10_QUESTIONS_SHA256, FIRST58_QUESTIONS_SHA256, QUESTION_KEYS } from './original-mock-02-lock'
 
 const ROOT = join(import.meta.dirname, '..')
 const SRC = 'C:/Users/serap/shinkyuu-db-audit/2026-10-original-mock-02/out/questions-40.json'
 const ADD_SRC = 'C:/Users/serap/shinkyuu-db-audit/2026-11-original-mock-02-additions/out/additions-18.json'
-const data = JSON.parse(readFileSync(join(ROOT, 'src/data/originalMocks/original-mock-02.json'), 'utf8')) as OriginalMockData & { sourceSha256: string; additionsSourceSha256: string }
+const ADD2_SRC = 'C:/Users/serap/shinkyuu-db-audit/2026-11-original-mock-02-additions/out/additions-10.json'
+const data = JSON.parse(readFileSync(join(ROOT, 'src/data/originalMocks/original-mock-02.json'), 'utf8')) as OriginalMockData & { sourceSha256: string; additionsSourceSha256: string; additions2SourceSha256: string }
 const sha256 = (s: string) => createHash('sha256').update(s).digest('hex')
 
 let fail = 0
@@ -26,26 +27,28 @@ function check(label: string, cond: boolean, detail = '') {
 }
 
 const qs = data.questions
-check('58問', qs.length === 58, String(qs.length))
+check('68問', qs.length === 68, String(qs.length))
 check('既存40問（第1〜40問）が承認済みの基準値と一字一句同じ（SHA-256）', sha256(JSON.stringify(qs.slice(0, 40))) === FIRST40_QUESTIONS_SHA256)
-check('追加18問（第41〜58問）が承認済みの基準値と一字一句同じ（SHA-256）', sha256(JSON.stringify(qs.slice(40))) === ADDITIONS18_QUESTIONS_SHA256)
+check('追加18問（第41〜58問）が承認済みの基準値と一字一句同じ（SHA-256）', sha256(JSON.stringify(qs.slice(40, 58))) === ADDITIONS18_QUESTIONS_SHA256)
+check('公開済み58問（第1〜58問）が68問化の前と一字一句同じ（SHA-256）', sha256(JSON.stringify(qs.slice(0, 58))) === FIRST58_QUESTIONS_SHA256)
+check('追加10問（第59〜68問）が基準値と一字一句同じ（SHA-256）', sha256(JSON.stringify(qs.slice(58))) === ADDITIONS10_QUESTIONS_SHA256)
 const rows = scoreBySubject(qs, [])
 check(
-  '科目別：経絡経穴概論20・はり理論10・きゅう理論10・臨床医学各論15・臨床医学総論3（この順）',
-  JSON.stringify(rows.map((r) => [r.subject, r.total])) === JSON.stringify([['経絡経穴概論', 20], ['はり理論', 10], ['きゅう理論', 10], ['臨床医学各論', 15], ['臨床医学総論', 3]]),
+  '科目別：経絡経穴概論20・はり理論10・きゅう理論10・臨床医学各論22・臨床医学総論5・リハビリテーション医学1（この順）',
+  JSON.stringify(rows.map((r) => [r.subject, r.total])) === JSON.stringify([['経絡経穴概論', 20], ['はり理論', 10], ['きゅう理論', 10], ['臨床医学各論', 22], ['臨床医学総論', 5], ['リハビリテーション医学', 1]]),
   JSON.stringify(rows.map((r) => [r.subject, r.total])),
 )
-check('第41〜58問は臨床医学だけ', qs.slice(40).every((q) => q.subject === '臨床医学各論' || q.subject === '臨床医学総論'))
-check('問題番号が1〜58の連番', qs.every((q, i) => q.questionNumber === i + 1))
-check('IDが om02-01〜om02-58 の連番', qs.every((q, i) => q.id === `om02-${String(i + 1).padStart(2, '0')}`))
+check('第41〜68問は臨床医学・リハビリテーション医学だけ', qs.slice(40).every((q) => ['臨床医学各論', '臨床医学総論', 'リハビリテーション医学'].includes(q.subject)))
+check('問題番号が1〜68の連番', qs.every((q, i) => q.questionNumber === i + 1))
+check('IDが om02-01〜om02-68 の連番', qs.every((q, i) => q.id === `om02-${String(i + 1).padStart(2, '0')}`))
 check('全問のキーが同じ名前・同じ並び', qs.every((q) => JSON.stringify(Object.keys(q)) === JSON.stringify(QUESTION_KEYS)))
-check('問題文・作業IDが重複しない', new Set(qs.map((q) => q.questionText)).size === 58 && new Set(qs.map((q) => q.workId)).size === 58)
+check('問題文・作業IDが重複しない', new Set(qs.map((q) => q.questionText)).size === 68 && new Set(qs.map((q) => q.workId)).size === 68)
 check('問題文・選択肢・解説・学習のポイント・分野・根拠資料に空欄がない', qs.every((q) => q.questionText && q.field && q.point && q.choices.every(Boolean) && q.choiceNotes.every(Boolean) && q.sources.length > 0 && q.sources.every(Boolean)))
 check('根拠資料は資料名だけ（URL・HTML・「同上」を含まない）', qs.every((q) => q.sources.every((x) => !/https?:|<|>|\]\(|同上/.test(x))))
 check('全問4択・選択肢の重複なし', qs.every((q) => q.choices.length === 4 && new Set(q.choices).size === 4))
 check('正答が0〜3の1つ', qs.every((q) => Number.isInteger(q.answerIndex) && q.answerIndex >= 0 && q.answerIndex <= 3))
 const noteBad = qs.filter((q) => q.choiceNotes.length !== 4 || q.choiceNotes.some((n, i) => (i === q.answerIndex ? !n.startsWith('正しい') : !n.startsWith('誤り'))))
-check('選択肢の解説の「正しい／誤り」が正答と一致（232選択肢）', noteBad.length === 0, noteBad.map((q) => q.id).join(','))
+check('選択肢の解説の「正しい／誤り」が正答と一致（272選択肢）', noteBad.length === 0, noteBad.map((q) => q.id).join(','))
 check('全問に学習のポイントと根拠資料がある', qs.every((q) => q.point.length > 0 && q.sources.length > 0))
 
 // 作業フォルダの最新版との一致
@@ -64,9 +67,16 @@ if (existsSync(SRC)) {
 if (existsSync(ADD_SRC)) {
   const raw = readFileSync(ADD_SRC, 'utf8')
   check('追加18問の取り込み元が取り込み時から変わっていない（SHA-256）', sha256(raw) === data.additionsSourceSha256)
-  check('第41〜58問が取り込み元（additions-18.json）と一字一句同じ', JSON.stringify(JSON.parse(raw).questions) === JSON.stringify(qs.slice(40)))
+  check('第41〜58問が取り込み元（additions-18.json）と一字一句同じ', JSON.stringify(JSON.parse(raw).questions) === JSON.stringify(qs.slice(40, 58)))
 } else {
   console.log('SKIP  追加18問の取り込み元が見つからないため、照合を省略（基準値の照合は上で実施済み）')
+}
+if (existsSync(ADD2_SRC)) {
+  const raw = readFileSync(ADD2_SRC, 'utf8')
+  check('追加10問の取り込み元が取り込み時から変わっていない（SHA-256）', sha256(raw) === data.additions2SourceSha256)
+  check('第59〜68問が取り込み元（additions-10.json）と一字一句同じ', JSON.stringify(JSON.parse(raw).questions) === JSON.stringify(qs.slice(58)))
+} else {
+  console.log('SKIP  追加10問の取り込み元が見つからないため、照合を省略（基準値の照合は上で実施済み）')
 }
 
 // IDの重複
@@ -87,13 +97,15 @@ check('正答を選ぶと正解', isOriginalMockCorrect(q0, q0.answerIndex))
 check('正答以外は不正解', [0, 1, 2, 3].filter((i) => i !== q0.answerIndex).every((i) => !isOriginalMockCorrect(q0, i)))
 const allRight = qs.map((q) => ({ questionId: q.id, selected: q.answerIndex, correct: true }))
 const s = scoreBySubject(qs, allRight)
-check('全問正解なら科目別5区分も満点（58/58）', s.length === 5 && s.every((r) => r.correct === r.total) && s.reduce((a, r) => a + r.correct, 0) === 58)
+check('全問正解なら科目別6区分も満点（68/68）', s.length === 6 && s.every((r) => r.correct === r.total) && s.reduce((a, r) => a + r.correct, 0) === 68)
 const half = qs.map((q, i) => ({ questionId: q.id, selected: 0, correct: i % 2 === 0 }))
-check('一部正解の集計（29/58）', scoreBySubject(qs, half).reduce((a, r) => a + r.correct, 0) === 29)
+check('一部正解の集計（34/68）', scoreBySubject(qs, half).reduce((a, r) => a + r.correct, 0) === 34)
 const onlyFirst40 = qs.slice(0, 40).map((q) => ({ questionId: q.id, selected: q.answerIndex, correct: true }))
 const s40 = scoreBySubject(qs, onlyFirst40)
-check('第1〜40問だけ正解なら 40/58、臨床医学の2区分は0点', s40.reduce((a, r) => a + r.correct, 0) === 40 && s40.filter((r) => r.subject.startsWith('臨床医学')).every((r) => r.correct === 0))
-check('追加18問すべてで、正答は正解・他の3つは不正解', qs.slice(40).every((q) => [0, 1, 2, 3].every((i) => isOriginalMockCorrect(q, i) === (i === q.answerIndex))))
+check('第1〜40問だけ正解なら 40/68、臨床医学・リハビリテーション医学の3区分は0点', s40.reduce((a, r) => a + r.correct, 0) === 40 && s40.filter((r) => r.subject.startsWith('臨床医学') || r.subject === 'リハビリテーション医学').every((r) => r.correct === 0))
+const only58 = scoreBySubject(qs, qs.slice(0, 58).map((q) => ({ questionId: q.id, selected: q.answerIndex, correct: true })))
+check('第1〜58問だけ正解なら 58/68（臨床医学各論 15/22・臨床医学総論 3/5・リハビリテーション医学 0/1）', only58.reduce((a, r) => a + r.correct, 0) === 58 && JSON.stringify(only58.slice(3).map((r) => [r.correct, r.total])) === '[[15,22],[3,5],[0,1]]')
+check('追加28問すべてで、正答は正解・他の3つは不正解', qs.slice(40).every((q) => [0, 1, 2, 3].every((i) => isOriginalMockCorrect(q, i) === (i === q.answerIndex))))
 check('未回答は不正解として数える', scoreBySubject(qs, []).every((r) => r.correct === 0))
 
 console.log(fail ? `\n${fail} 件失敗` : '\nすべて成功')
