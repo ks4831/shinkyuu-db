@@ -10,11 +10,13 @@
  * - v1：模擬試験②が40問だったときの結果（2026-10-27〜）
  * - v2：58問だったときの結果（2026-11-02〜）
  * - v3：68問だったときの結果（2026-11-02〜）
- * - v4：80問化以降の結果（2026-11-03〜）。新しい結果はここにだけ保存する
+ * - v4：80問だったときの結果（2026-11-03〜）
+ * - v5：100問化以降の結果（2026-11-03〜）。新しい結果はここにだけ保存する
  */
-export const ORIGINAL_MOCK_RESULT_KEY = 'shinkyuu_original_mock_results_v4'
+export const ORIGINAL_MOCK_RESULT_KEY = 'shinkyuu_original_mock_results_v5'
 /** 前の版の保存キー（新しい順） */
 export const ORIGINAL_MOCK_LEGACY_RESULT_KEYS = [
+  'shinkyuu_original_mock_results_v4',
   'shinkyuu_original_mock_results_v3',
   'shinkyuu_original_mock_results_v2',
   'shinkyuu_original_mock_results_v1',
@@ -100,17 +102,17 @@ function readAll(key: string): Record<string, unknown> {
   }
 }
 
-/** 現在の版の直近の結果（v4） */
+/** 現在の版の直近の結果（v5） */
 export function getOriginalMockResult(mockId: string): OriginalMockResult | null {
   return toResult(mockId, readAll(ORIGINAL_MOCK_RESULT_KEY)[mockId])
 }
 
-/** 前の版（68問・58問・40問）の結果。読むだけ。新しい版から順に、壊れていないものだけを返す */
+/** 前の版（80問・68問・58問・40問）の結果。読むだけ。新しい版から順に、壊れていないものだけを返す */
 export function getLegacyOriginalMockResults(mockId: string): OriginalMockResult[] {
   return ORIGINAL_MOCK_LEGACY_RESULT_KEYS.map((k) => toResult(mockId, readAll(k)[mockId])).filter((r): r is OriginalMockResult => r !== null)
 }
 
-/** 全問を解き終えたときだけ保存する（苦手だけの再挑戦は保存しない）。保存先は v4 だけ */
+/** 全問を解き終えたときだけ保存する（苦手だけの再挑戦は保存しない）。保存先は v5 だけ */
 export function saveOriginalMockResult(result: OriginalMockResult) {
   if (typeof window === 'undefined') return
   try {

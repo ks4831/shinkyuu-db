@@ -68,7 +68,7 @@ check('未回答の問題を返す', JSON.stringify(unansweredIndexes(s)) === JS
 check('回答済みでない問題は変更開始できない', startEditing(goTo(s, 1)).editing[1] === false)
 check('選択せずに確定しても何も起きない', confirmAnswer(goTo(s, 1)).answers[1] === null)
 
-// 6. 模擬試験②の全問（80問）：回答を変更した最新の回答で採点する
+// 6. 模擬試験②の全問（100問）：回答を変更した最新の回答で採点する
 const data = JSON.parse(readFileSync(join(import.meta.dirname, '..', 'src/data/originalMocks/original-mock-02.json'), 'utf8')) as OriginalMockData
 const qs = data.questions
 let m = createMockSession(qs.map((q) => q.id))
@@ -81,7 +81,7 @@ for (let i = qs.length - 1; i >= 0; i--) {
   if (canGoPrev(m)) m = goPrev(m)
 }
 const score = qs.filter((q, i) => m.answers[i] !== null && isOriginalMockCorrect(q, m.answers[i]!)).length
-check(`全${qs.length}問：後から変更した回答が採点に反映される（${Math.ceil(qs.length / 2)}/${qs.length}）`, qs.length === 80 && score === Math.ceil(qs.length / 2) && unansweredIndexes(m).length === 0, String(score))
+check(`全${qs.length}問：後から変更した回答が採点に反映される（${Math.ceil(qs.length / 2)}/${qs.length}）`, qs.length === 100 && score === Math.ceil(qs.length / 2) && unansweredIndexes(m).length === 0, String(score))
 check(`全${qs.length}問：移動後も順序が出題順のまま`, JSON.stringify(m.order) === JSON.stringify(qs.map((q) => q.id)))
 
 // 7. 解き直し（問題の一部だけのセッション）でも同じ操作ができる
@@ -111,8 +111,16 @@ const at69 = c.index === 68 && qs[c.index].id === 'om02-69'
 c = answer(c, (qs[68].answerIndex + 1) % 4)
 c = goPrev(c)
 check('第68問→第69問→第68問と移動でき、両方の回答が保持される', at69 && c.index === 67 && c.answers[67] === qs[67].answerIndex && c.answers[68] === (qs[68].answerIndex + 1) % 4)
+// 第80問と第81問（80問版と追加20問の境目）
 c = goTo(c, 79)
-check('最終問題（第80問）では次へ進めない', qs[c.index].id === 'om02-80' && !canGoNext(c))
+c = answer(c, qs[79].answerIndex)
+c = goNext(c)
+const at81 = c.index === 80 && qs[c.index].id === 'om02-81'
+c = answer(c, (qs[80].answerIndex + 1) % 4)
+c = goPrev(c)
+check('第80問→第81問→第80問と移動でき、両方の回答が保持される', at81 && c.index === 79 && c.answers[79] === qs[79].answerIndex && c.answers[80] === (qs[80].answerIndex + 1) % 4)
+c = goTo(c, 99)
+check('最終問題（第100問）では次へ進めない', qs[c.index].id === 'om02-100' && !canGoNext(c))
 
 let r = createMockSession(['om02-05', 'om02-22', 'om02-37'])
 r = answer(r, 0)

@@ -4,9 +4,10 @@
  *   2. 追加18問：2026-11-original-mock-02-additions/out/additions-18.json（第41〜58問。アプリと同じ形のまま写す）
  *   3. 追加10問：2026-11-original-mock-02-additions/out/additions-10.json（第59〜68問。アプリと同じ形のまま写す）
  *   4. 追加12問：2026-11-original-mock-02-additions/out/additions-12.json（第69〜80問。アプリと同じ形のまま写す）
+ *   5. 追加20問：2026-11-original-mock-02-additions/out/additions-20.json（第81〜100問。アプリと同じ形のまま写す）
  * 問題文・選択肢・正答・解説は書き換えない（そのまま写す）。根拠資料は資料名だけを持つ。
- * 先頭40問・追加18問・追加10問・追加12問・公開済み58問・公開済み68問の SHA-256（JSON.stringify）が基準値と違うときは、ファイルを書かずに止める。
- * 実行：npx tsx scripts/import-original-mock.mts [questions-40.json] [additions-18.json] [additions-10.json] [additions-12.json]
+ * 先頭40問・追加18問・追加10問・追加12問・追加20問・公開済み58問・68問・80問の SHA-256（JSON.stringify）が基準値と違うときは、ファイルを書かずに止める。
+ * 実行：npx tsx scripts/import-original-mock.mts [questions-40.json] [additions-18.json] [additions-10.json] [additions-12.json] [additions-20.json]
  */
 import { readFileSync, writeFileSync, mkdirSync } from 'node:fs'
 import { dirname, join } from 'node:path'
@@ -16,8 +17,10 @@ import {
   ADDITIONS18_QUESTIONS_SHA256,
   ADDITIONS10_QUESTIONS_SHA256,
   ADDITIONS12_QUESTIONS_SHA256,
+  ADDITIONS20_QUESTIONS_SHA256,
   FIRST58_QUESTIONS_SHA256,
   FIRST68_QUESTIONS_SHA256,
+  FIRST80_QUESTIONS_SHA256,
   QUESTION_KEYS,
 } from './original-mock-02-lock'
 
@@ -33,6 +36,9 @@ const ADD2_SRC =
 const ADD3_SRC =
   process.argv[5] ??
   'C:/Users/serap/shinkyuu-db-audit/2026-11-original-mock-02-additions/out/additions-12.json'
+const ADD4_SRC =
+  process.argv[6] ??
+  'C:/Users/serap/shinkyuu-db-audit/2026-11-original-mock-02-additions/out/additions-20.json'
 const OUT = join(import.meta.dirname, '..', 'src', 'data', 'originalMocks', 'original-mock-02.json')
 
 const sha256 = (s: string) => createHash('sha256').update(s).digest('hex')
@@ -103,17 +109,26 @@ if (additions3.length !== 12) stop(`追加の問題数が12ではない: ${addit
 const h12 = sha256(JSON.stringify(additions3))
 if (h12 !== ADDITIONS12_QUESTIONS_SHA256) stop(`追加12問の SHA-256 が違う: ${h12}`)
 
-/* ── 5. 80問の形の検査（公開済み58問・68問が変わらないことも確かめる） ── */
-const questions = [...first40, ...additions, ...additions2, ...additions3] as (typeof first40)[number][]
-if (questions.length !== 80) stop(`問題数が80ではない: ${questions.length}`)
+/* ── 5. 追加20問（additions-20.json の questions をそのまま写す） ── */
+const add4Raw = readFileSync(ADD4_SRC, 'utf8')
+const additions4 = (JSON.parse(add4Raw) as { questions: Record<string, unknown>[] }).questions
+if (additions4.length !== 20) stop(`追加の問題数が20ではない: ${additions4.length}`)
+const h20 = sha256(JSON.stringify(additions4))
+if (h20 !== ADDITIONS20_QUESTIONS_SHA256) stop(`追加20問の SHA-256 が違う: ${h20}`)
+
+/* ── 6. 100問の形の検査（公開済み58問・68問・80問が基準値と同じことも確かめる） ── */
+const questions = [...first40, ...additions, ...additions2, ...additions3, ...additions4] as (typeof first40)[number][]
+if (questions.length !== 100) stop(`問題数が100ではない: ${questions.length}`)
 const h58 = sha256(JSON.stringify(questions.slice(0, 58)))
 if (h58 !== FIRST58_QUESTIONS_SHA256) stop(`公開済み58問の SHA-256 が違う: ${h58}`)
 const h68 = sha256(JSON.stringify(questions.slice(0, 68)))
 if (h68 !== FIRST68_QUESTIONS_SHA256) stop(`公開済み68問の SHA-256 が違う: ${h68}`)
+const h80 = sha256(JSON.stringify(questions.slice(0, 80)))
+if (h80 !== FIRST80_QUESTIONS_SHA256) stop(`公開済み80問の SHA-256 が違う: ${h80}`)
 questions.forEach((q, i) => {
   const n = i + 1
   if (JSON.stringify(Object.keys(q)) !== JSON.stringify(QUESTION_KEYS)) stop(`第${n}問のキーが違う`)
-  if (q.id !== `om02-${String(n).padStart(2, '0')}` || q.questionNumber !== n) stop(`第${n}問の id・問題番号が違う: ${q.id} ${q.questionNumber}`)
+  if (q.id !== `om02-${String(n).padStart(n >= 100 ? 3 : 2, '0')}` || q.questionNumber !== n) stop(`第${n}問の id・問題番号が違う: ${q.id} ${q.questionNumber}`)
   if (q.choices.length !== 4 || q.choiceNotes.length !== 4) stop(`${q.id}: 選択肢・解説が4つではない`)
   if (!Number.isInteger(q.answerIndex) || q.answerIndex < 0 || q.answerIndex > 3) stop(`${q.id}: 正答が0〜3ではない`)
   if (!q.point || q.sources.length === 0 || q.sources.some((s) => !s)) stop(`${q.id}: 学習のポイント・根拠資料が欠けている`)
@@ -126,7 +141,7 @@ for (const key of ['id', 'workId', 'questionText'] as const) {
 const data = {
   mockId: 'original-mock-02',
   title: 'オリジナル模擬試験②',
-  status: 'AI作成・AI監査のみ。有資格者の最終確認は未実施。公式問題ではないことを明記して公開。2026-11 臨床医学18問（第41〜58問）、臨床医学・リハビリテーション医学10問（第59〜68問）、基礎6科目12問（第69〜80問：医療概論・衛生学・公衆衛生学・関係法規・解剖学・生理学・病理学概論 各2問）を追加',
+  status: 'AI作成・AI監査のみ。有資格者の最終確認は未実施。公式問題ではないことを明記して公開。2026-11 臨床医学18問（第41〜58問）、臨床医学・リハビリテーション医学10問（第59〜68問）、基礎6科目12問（第69〜80問：医療概論・衛生学・公衆衛生学・関係法規・解剖学・生理学・病理学概論 各2問）、基礎6科目20問（第81〜100問：医療概論2・衛生学・公衆衛生学3・関係法規2・解剖学5・生理学5・病理学概論3）を追加。om02-62 の学習のポイントにAWGS2025の注記を追加',
   sourceFile: SRC.replace(/^.*shinkyuu-db-audit[\/]/, 'shinkyuu-db-audit/'),
   sourceSha256: sha256(raw),
   additionsSourceFile: ADD_SRC.replace(/^.*shinkyuu-db-audit[\/]/, 'shinkyuu-db-audit/'),
@@ -135,6 +150,8 @@ const data = {
   additions2SourceSha256: sha256(add2Raw),
   additions3SourceFile: ADD3_SRC.replace(/^.*shinkyuu-db-audit[\/]/, 'shinkyuu-db-audit/'),
   additions3SourceSha256: sha256(add3Raw),
+  additions4SourceFile: ADD4_SRC.replace(/^.*shinkyuu-db-audit[\/]/, 'shinkyuu-db-audit/'),
+  additions4SourceSha256: sha256(add4Raw),
   questions,
 }
 
@@ -145,5 +162,7 @@ console.log(`既存40問 ${h40}`)
 console.log(`追加18問 ${h18}`)
 console.log(`追加10問 ${h10}`)
 console.log(`追加12問 ${h12}`)
+console.log(`追加20問 ${h20}`)
 console.log(`公開済み58問 ${h58}`)
 console.log(`公開済み68問 ${h68}`)
+console.log(`公開済み80問 ${h80}`)
