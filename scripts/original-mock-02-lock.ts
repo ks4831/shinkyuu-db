@@ -12,6 +12,7 @@
  * - 公開済み58問：第1〜58問をまとめた値（68問化の前後で変わらないことの確認用）
  * - 公開済み68問：第1〜68問をまとめた値（om02-62 の注記追加後の値。注記前＝main 49c6d6b の値は be2ed3b8…83d5）
  * - 公開済み80問：第1〜80問をまとめた値（100問化の前後で変わらないことの確認用。om02-62 の注記追加後の値。注記前＝main 49c6d6b の値は 19a42025…0a0a）
+ * - 公開済み100問：第1〜100問をまとめた値（2026-11-04 最終品質検査の時点。試験前の固定の確認用）
  * この値を書き換えるのは、問題の変更が承認されたときだけ。
  */
 export const FIRST40_QUESTIONS_SHA256 = 'f3fd339f066f92000195c4f2f57cb424c192ee7c2a4acc69ebfcf38d8da6b2a9'
@@ -22,4 +23,5 @@ export const ADDITIONS20_QUESTIONS_SHA256 = 'cad4f902ada6188cd6189c4a611225c0f63
 export const FIRST68_QUESTIONS_SHA256 = '9d208633459e4d80450ea26eb29d8bf585443c400aecab5b1f86fa9862688189'
 export const FIRST80_QUESTIONS_SHA256 = '5f847ce8b33d2c6b1b1e10a7f722be0ef416b2902c23174abc212799ac391df0'
 export const FIRST58_QUESTIONS_SHA256 = '7629fb1f9e48f8586bdd35fff8b59741aa9874ce02006f20b4693a4ac3c794d7'
+export const ALL100_QUESTIONS_SHA256 = '69fd14814a429d43920d461233487ea0b3ac1f8541a853923fc48b4ff45a7bb1'
 export const QUESTION_KEYS = ['id', 'workId', 'questionNumber', 'subject', 'field', 'questionText', 'choices', 'answerIndex', 'choiceNotes', 'point', 'sources']

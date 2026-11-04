@@ -11,7 +11,7 @@ import { readFileSync, existsSync, readdirSync } from 'node:fs'
 import { join } from 'node:path'
 import { createHash } from 'node:crypto'
 import { isOriginalMockCorrect, scoreBySubject, type OriginalMockData } from '../src/lib/originalMock'
-import { FIRST40_QUESTIONS_SHA256, ADDITIONS18_QUESTIONS_SHA256, ADDITIONS10_QUESTIONS_SHA256, ADDITIONS12_QUESTIONS_SHA256, ADDITIONS20_QUESTIONS_SHA256, FIRST58_QUESTIONS_SHA256, FIRST68_QUESTIONS_SHA256, FIRST80_QUESTIONS_SHA256, QUESTION_KEYS } from './original-mock-02-lock'
+import { FIRST40_QUESTIONS_SHA256, ADDITIONS18_QUESTIONS_SHA256, ADDITIONS10_QUESTIONS_SHA256, ADDITIONS12_QUESTIONS_SHA256, ADDITIONS20_QUESTIONS_SHA256, FIRST58_QUESTIONS_SHA256, FIRST68_QUESTIONS_SHA256, FIRST80_QUESTIONS_SHA256, ALL100_QUESTIONS_SHA256, QUESTION_KEYS } from './original-mock-02-lock'
 
 const ROOT = join(import.meta.dirname, '..')
 const SRC = 'C:/Users/serap/shinkyuu-db-audit/2026-10-original-mock-02/out/questions-40.json'
@@ -37,6 +37,7 @@ check('追加10問（第59〜68問）が基準値と一字一句同じ（SHA-256
 check('公開済み68問（第1〜68問）が基準値と一字一句同じ（SHA-256。om02-62 の注記追加後）', sha256(JSON.stringify(qs.slice(0, 68))) === FIRST68_QUESTIONS_SHA256)
 check('追加12問（第69〜80問）が基準値と一字一句同じ（SHA-256）', sha256(JSON.stringify(qs.slice(68, 80))) === ADDITIONS12_QUESTIONS_SHA256)
 check('公開済み80問（第1〜80問）が基準値と一字一句同じ（SHA-256。om02-62 の注記追加後）', sha256(JSON.stringify(qs.slice(0, 80))) === FIRST80_QUESTIONS_SHA256)
+check('公開済み100問（第1〜100問）が基準値と一字一句同じ（SHA-256）', sha256(JSON.stringify(qs)) === ALL100_QUESTIONS_SHA256)
 check('追加20問（第81〜100問）が基準値と一字一句同じ（SHA-256）', sha256(JSON.stringify(qs.slice(80))) === ADDITIONS20_QUESTIONS_SHA256)
 const q62 = qs[61]
 check('om02-62 は問題文・正答が変わらず、学習のポイントにAWGS2025の注記と根拠資料がある', q62.answerIndex === 3 && q62.questionText.startsWith('AWGS2019（') && q62.point.includes('AWGS2025') && q62.sources.some((x) => x.includes('日本肥満学会')))

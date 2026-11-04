@@ -7,6 +7,7 @@
    - 第1〜40問だけ正解で 40/100（臨床医学・リハビリテーション医学・基礎6科目の9区分が0点）
    - 40問版（旧キー v1）・58問版（v2）・68問版（v3）・80問版（v4）の過去の結果の表示・再挑戦・上書きしないこと／100問版の結果（v5）
    - 壊れた保存データでも開始画面が表示される
+   - 採点後の復習：まちがえた問題だけの表示、問題文・自分の回答・正答・解説、元の問題番号へ戻る、科目別の正答率、全問不正解、再読み込み後の見直し
    - 横スクロールが出ない
    正答・解説・根拠資料は問題データ（src/data/originalMocks/original-mock-02.json）から読む。データは読むだけで変更しない。
    スクリーンショット：環境変数 E2E_SHOT_DIR を指定したときだけ、第41〜100問などを保存する（目視の確認用）。
@@ -24,6 +25,7 @@ const V2 = 'shinkyuu_original_mock_results_v2'
 const V3 = 'shinkyuu_original_mock_results_v3'
 const V4 = 'shinkyuu_original_mock_results_v4'
 const V5 = 'shinkyuu_original_mock_results_v5'
+const REVIEW = 'shinkyuu_original_mock_review_v1'
 const MOCK_ID = 'original-mock-02'
 const SUBJECTS: [string, number][] = [
   ['経絡経穴概論', 20],
@@ -187,9 +189,9 @@ test('第1〜100問：番号・4択・解説・根拠資料が出て、全問正
   await expect(nextBtn(page)).toHaveCount(0)
   await tap(page, finishBtn(page))
 
-  await expect(page.getByRole('heading', { name: '結果' })).toBeVisible()
+  await expect(page.getByRole('heading', { name: '結果', exact: true })).toBeVisible()
   await expect(page.locator('p', { hasText: /^100 \/ 100問$/ })).toBeVisible()
-  expect(await resultRows(page)).toEqual(SUBJECTS.map(([s, n]) => [s, `${n} / ${n}`]))
+  expect(await resultRows(page)).toEqual(SUBJECTS.map(([s, n]) => [s, `${n} / ${n}`, '100%']))
   await expect(page.getByRole('button', { name: '全100問をもう一度解く' })).toBeVisible()
   await expect(page.locator('details')).toHaveCount(100)
   for (const n of [41, 58, 59, 62, 68, 69, 80, 81, 88, 93, 100]) {
@@ -329,7 +331,7 @@ test('第1〜40問だけ正解：40/100、臨床医学・リハビリテーシ�
   await tap(page, finishBtn(page))
   await expect(page.locator('p', { hasText: /^40 \/ 100問$/ })).toBeVisible()
   expect(await resultRows(page)).toEqual(
-    SUBJECTS.map(([s, n]) => [s, s.startsWith('臨床医学') || s === 'リハビリテーション医学' || BASIC6.includes(s) ? `0 / ${n}` : `${n} / ${n}`]),
+    SUBJECTS.map(([s, n]) => (s.startsWith('臨床医学') || s === 'リハビリテーション医学' || BASIC6.includes(s) ? [s, `0 / ${n}`, '0%'] : [s, `${n} / ${n}`, '100%'])),
   )
   await expect(page.getByRole('button', { name: 'まちがえた60問を解き直す' })).toBeVisible()
   await shot(page, '12-result-40of100', true)
@@ -528,4 +530,187 @@ test('壊れた保存データでも開始画面が表示され、100問を解�
   expect(await getItem(page, V1)).toBe('{oops')
   expect(await getItem(page, V2)).toBe('{oops')
   expect(await getItem(page, V3)).toBe('{oops')
+})
+
+/** 第1〜100問を解く。pick が null の問題は回答せずに進み、未回答があれば確認のうえ採点する */
+async function solveAll(p: Page, pick: (q: Q, i: number) => number | null) {
+  await startFull(p)
+  let skipped = false
+  for (let i = 0; i < N; i++) {
+    const c = pick(QS[i], i)
+    if (c === null) skipped = true
+    else await answer(p, c)
+    if (i < N - 1) await tap(p, nextBtn(p))
+  }
+  await tap(p, finishBtn(p))
+  if (skipped) await tap(p, p.getByRole('button', { name: 'このまま採点する' }))
+  await expect(p.getByRole('heading', { name: '結果', exact: true })).toBeVisible()
+}
+
+const card = (p: Page, n: number) => p.locator('details', { has: p.getByText(`第${n}問`, { exact: true }) })
+
+/** 復習カードの中身：問題文・4択・自分の回答・正答・解説・根拠資料 */
+async function expectReviewCard(p: Page, q: Q, selected: number | null, noAnswer = '未回答') {
+  const d = card(p, q.questionNumber)
+  await expect(d.getByText(q.choices[q.answerIndex]).first()).toBeVisible()
+  await expect(d.locator('li', { hasText: '（正答）' })).toContainText(q.choices[q.answerIndex])
+  if (selected === null) await expect(d.getByText(`あなたの回答：${noAnswer}`, { exact: true })).toBeVisible()
+  else await expect(d.locator('li', { hasText: '（あなたの回答）' })).toContainText(q.choices[selected])
+  await expect(d.getByText(`正答：${'①②③④'[q.answerIndex]}`, { exact: true })).toBeVisible()
+  await expect(d.getByText(q.choiceNotes[q.answerIndex], { exact: true })).toBeVisible()
+  await expect(d.locator('div', { hasText: /^根拠資料：/ }).filter({ hasText: q.sources.join('／') }).last()).toBeVisible()
+}
+
+test('採点後の復習：まちがえた問題だけ表示し、回答と解説を確かめ、元の問題へ戻って結果に帰れる。再読み込み後も見直せる', async ({ page }) => {
+  test.setTimeout(360_000)
+  await setItems(page, [
+    [V1, JSON.stringify({ [MOCK_ID]: LEGACY40 })],
+    [V2, JSON.stringify({ [MOCK_ID]: LEGACY58 })],
+    [V3, JSON.stringify({ [MOCK_ID]: LEGACY68 })],
+    [V4, JSON.stringify({ [MOCK_ID]: LEGACY80 })],
+  ])
+  const legacyBefore = await Promise.all([V1, V2, V3, V4].map((k) => getItem(page, k)))
+  // 第3問・第62問はまちがえ、第90問は未回答、ほかは正解
+  const WRONG = new Set([3, 62])
+  const pickOf = (q: Q) => (q.answerIndex + 1) % 4
+  await solveAll(page, (q) => (q.questionNumber === 90 ? null : WRONG.has(q.questionNumber) ? pickOf(q) : q.answerIndex))
+  await expect(page.locator('p', { hasText: /^97 \/ 100問$/ })).toBeVisible()
+
+  // 科目別の正答率
+  const rows = await resultRows(page)
+  expect(rows.find((r) => r[0] === '経絡経穴概論')).toEqual(['経絡経穴概論', '19 / 20', '95%'])
+  expect(rows.find((r) => r[0] === '臨床医学各論')).toEqual(['臨床医学各論', '21 / 22', '95%'])
+  expect(rows.find((r) => r[0] === '解剖学')).toEqual(['解剖学', '6 / 7', '86%'])
+  expect(rows.find((r) => r[0] === 'はり理論')).toEqual(['はり理論', '10 / 10', '100%'])
+
+  // まちがえた問題だけが最初から表示される（案内ボタンで一覧へ移動できる）
+  await expect(page.locator('details')).toHaveCount(3)
+  await tap(page, page.getByRole('button', { name: 'まちがえた・未回答の3問の解説を見る' }))
+  await expect(page.getByRole('heading', { name: '正答と解説' })).toBeInViewport()
+  await shot(page, '20-review-list')
+  for (const n of [3, 62, 90]) await tap(page, card(page, n).locator('summary'))
+  await expectReviewCard(page, QS[2], pickOf(QS[2]))
+  await expectReviewCard(page, QS[61], pickOf(QS[61]))
+  await expectReviewCard(page, QS[89], null)
+  await expectNoHorizontalScroll(page)
+  await shot(page, '21-review-open', true)
+
+  // 全問に切り替えと、まちがえた問題に戻す
+  await tap(page, page.getByRole('tab', { name: '全問（100）' }))
+  await expect(page.locator('details')).toHaveCount(100)
+  await tap(page, page.getByRole('tab', { name: 'まちがえた問題（3）' }))
+  await expect(page.locator('details')).toHaveCount(3)
+
+  // 元の問題番号へ戻る：回答は変更できず、前後に移動でき、結果に戻るとその問題の解説が開いている
+  const v5Before = await getItem(page, V5)
+  await tap(page, card(page, 62).getByRole('button', { name: '第62問へ戻る' }))
+  await expect(page.getByText(/^見直し\s+第62問$/)).toBeVisible()
+  await expect(verdict(page)).toHaveText('不正解')
+  await expect(choices(page).nth(pickOf(QS[61]))).toHaveAttribute('aria-pressed', 'true')
+  for (let i = 0; i < 4; i++) await expect(choices(page).nth(i)).toBeDisabled()
+  await expect(page.getByRole('button', { name: '回答を変更する' })).toHaveCount(0)
+  await expect(finishBtn(page)).toHaveCount(0)
+  await expectNoHorizontalScroll(page)
+  await shot(page, '22-review-question')
+  await tap(page, prevBtn(page))
+  await expect(page.getByText(/^見直し\s+第61問$/)).toBeVisible()
+  await expect(verdict(page)).toHaveText('正解')
+  await tap(page, page.getByRole('button', { name: '結果に戻る', exact: true }))
+  await expect(page.locator('details')).toHaveCount(100) // 正解の問題を見ていたので全問の表示で戻る
+  await expect(card(page, 61)).toHaveAttribute('open', '')
+  await expect(card(page, 61).locator('summary')).toBeInViewport()
+  // 未回答の問題も開ける
+  await tap(page, page.getByRole('tab', { name: 'まちがえた問題（3）' }))
+  await tap(page, card(page, 90).locator('summary'))
+  await tap(page, card(page, 90).getByRole('button', { name: '第90問へ戻る' }))
+  await expect(verdict(page)).toHaveCount(0)
+  await expect(page.locator('p', { hasText: /^未回答$/ })).toBeVisible()
+  await tap(page, page.getByRole('button', { name: '結果に戻る', exact: true }))
+  await expect(page.locator('details')).toHaveCount(3)
+  await expect(card(page, 90)).toBeInViewport()
+  expect(await getItem(page, V5), '見直しでは成績を保存し直さない').toBe(v5Before)
+
+  // 再読み込み：開始画面から同じ内容を見直せる。成績は変わらない
+  await page.reload()
+  await expect(page.getByText('前回の結果：97 / 100問', { exact: true })).toBeVisible()
+  await tap(page, page.getByRole('button', { name: '前回の結果と解説を見る' }))
+  await expect(page.locator('p', { hasText: /^97 \/ 100問$/ })).toBeVisible()
+  expect(await resultRows(page)).toEqual(rows)
+  await expect(page.locator('details')).toHaveCount(3)
+  for (const n of [3, 62, 90]) await tap(page, card(page, n).locator('summary'))
+  await expectReviewCard(page, QS[2], pickOf(QS[2]))
+  await expectReviewCard(page, QS[89], null)
+  await tap(page, card(page, 3).getByRole('button', { name: '第3問へ戻る' }))
+  await expect(verdict(page)).toHaveText('不正解')
+  await tap(page, page.getByRole('button', { name: '結果に戻る', exact: true }))
+  expect(await getItem(page, V5)).toBe(v5Before)
+  expect(await Promise.all([V1, V2, V3, V4].map((k) => getItem(page, k)))).toEqual(legacyBefore)
+
+  // 解き直しは成績も見直しの記録も変えない
+  const reviewBefore = await getItem(page, REVIEW)
+  await tap(page, page.getByRole('button', { name: 'まちがえた・未回答の3問を解き直す' }))
+  await expect(page.getByText(/^解き直し\s+第3問$/)).toBeVisible()
+  for (let i = 0; i < 3; i++) {
+    await answer(page, QS[[2, 61, 89][i]].answerIndex)
+    if (i < 2) await tap(page, nextBtn(page))
+  }
+  await tap(page, finishBtn(page))
+  await expect(page.locator('p', { hasText: /^3 \/ 3問$/ })).toBeVisible()
+  await expect(page.locator('details')).toHaveCount(3)
+  expect(await getItem(page, V5)).toBe(v5Before)
+  expect(await getItem(page, REVIEW)).toBe(reviewBefore)
+})
+
+test('全問不正解：0/100、全科目0%、100問すべてが復習の対象になる', async ({ page }) => {
+  await solveAll(page, (q) => (q.answerIndex + 1) % 4)
+  await expect(page.locator('p', { hasText: /^0 \/ 100問$/ })).toBeVisible()
+  expect(await resultRows(page)).toEqual(SUBJECTS.map(([s, n]) => [s, `0 / ${n}`, '0%']))
+  await expect(page.getByRole('button', { name: 'まちがえた100問の解説を見る' })).toBeVisible()
+  await expect(page.locator('details')).toHaveCount(100)
+  const v5 = JSON.parse((await getItem(page, V5))!)[MOCK_ID]
+  expect(v5).toMatchObject({ correct: 0, total: 100 })
+  expect(v5.wrongIds).toEqual(QS.map((q) => q.id))
+  await tap(page, card(page, 100).locator('summary'))
+  await expectReviewCard(page, QS[99], (QS[99].answerIndex + 1) % 4)
+  await expectNoHorizontalScroll(page)
+  await shot(page, '23-all-wrong')
+})
+
+test('見直しの記録が無い以前の100問版の結果（v5）も、まちがえた問題と解説を見られる。解答途中の再読み込みでは成績が変わらない', async ({ page }) => {
+  const OLD = { mockId: MOCK_ID, correct: 98, total: 100, wrongIds: ['om02-07', 'om02-75'], completedAt: 1762200000000 }
+  await setItems(page, [[V5, JSON.stringify({ [MOCK_ID]: OLD })]])
+  const before = await getItem(page, V5)
+  await page.goto('/original-mock/02')
+  await tap(page, page.getByRole('button', { name: '前回の結果と解説を見る' }))
+  await expect(page.locator('p', { hasText: /^98 \/ 100問$/ })).toBeVisible()
+  await expect(page.locator('details')).toHaveCount(2)
+  await tap(page, card(page, 7).locator('summary'))
+  await expectReviewCard(page, QS[6], null, '回答の記録なし')
+  await tap(page, card(page, 7).getByRole('button', { name: '第7問へ戻る' }))
+  await expect(page.locator('p', { hasText: /^回答の記録なし$/ })).toBeVisible()
+  await tap(page, page.getByRole('button', { name: '結果に戻る', exact: true }))
+  await expect(page.getByRole('button', { name: 'まちがえた2問を解き直す' })).toBeVisible()
+  expect(await getItem(page, V5)).toBe(before)
+  expect(await getItem(page, REVIEW)).toBeNull()
+
+  // 別の回の見直し記録は使わない
+  await setItems(page, [[REVIEW, JSON.stringify({ [MOCK_ID]: { completedAt: 1, selected: { 'om02-07': 2 } } })]])
+  await page.goto('/original-mock/02')
+  await tap(page, page.getByRole('button', { name: '前回の結果と解説を見る' }))
+  await tap(page, card(page, 7).locator('summary'))
+  await expectReviewCard(page, QS[6], null, '回答の記録なし')
+
+  // 壊れた見直し記録でも開ける
+  await setItems(page, [[REVIEW, '{oops']])
+  await page.goto('/original-mock/02')
+  await tap(page, page.getByRole('button', { name: '前回の結果と解説を見る' }))
+  await expect(page.locator('details')).toHaveCount(2)
+
+  // 解答の途中で再読み込み：開始画面に戻り、前回の成績はそのまま
+  await page.goto('/original-mock/02')
+  await startFull(page)
+  await answer(page, QS[0].answerIndex)
+  await page.reload()
+  await expect(page.getByText('前回の結果：98 / 100問', { exact: true })).toBeVisible()
+  expect(await getItem(page, V5)).toBe(before)
 })

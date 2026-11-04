@@ -8,9 +8,12 @@
 import {
   ORIGINAL_MOCK_LEGACY_RESULT_KEYS,
   ORIGINAL_MOCK_RESULT_KEY,
+  ORIGINAL_MOCK_REVIEW_KEY,
   getLegacyOriginalMockResults,
   getOriginalMockResult,
+  getOriginalMockReview,
   saveOriginalMockResult,
+  saveOriginalMockReview,
 } from '../src/lib/originalMock'
 
 let fail = 0
@@ -129,6 +132,26 @@ try {
   threw = true
 }
 check('localStorage が使えなくても例外を出さない', !threw)
+
+// 見直し用の記録：成績のキーとは別で、completedAt が同じ結果にだけ使う
+;(globalThis as unknown as { window: unknown }).window = {
+  localStorage: {
+    getItem: (k: string) => (store.has(k) ? store.get(k)! : null),
+    setItem: (k: string, v: string) => void store.set(k, String(v)),
+    removeItem: (k: string) => void store.delete(k),
+  },
+}
+store.clear()
+for (const k of [V1, V2, V3, V4, V5]) store.set(k, `keep-${k}`)
+saveOriginalMockReview(ID, 123, { 'om02-03': 2 })
+check('見直しの記録は v1〜v5 を書き換えない', [V1, V2, V3, V4, V5].every((k) => store.get(k) === `keep-${k}`))
+check('見直しの記録は専用キーに入る', ORIGINAL_MOCK_REVIEW_KEY === 'shinkyuu_original_mock_review_v1' && store.has(ORIGINAL_MOCK_REVIEW_KEY))
+check('同じ回の記録を読める', JSON.stringify(getOriginalMockReview(ID, 123)) === JSON.stringify({ 'om02-03': 2 }))
+check('別の回の記録は使わない', getOriginalMockReview(ID, 124) === null)
+store.set(ORIGINAL_MOCK_REVIEW_KEY, JSON.stringify({ [ID]: { completedAt: 123, selected: { 'om02-03': 9 } } }))
+check('範囲外の選択肢は無効', getOriginalMockReview(ID, 123) === null)
+store.set(ORIGINAL_MOCK_REVIEW_KEY, '{oops')
+check('壊れた記録は null', getOriginalMockReview(ID, 123) === null)
 
 console.log(fail ? `\n${fail} 件失敗` : '\nすべて成功')
 process.exit(fail ? 1 : 0)

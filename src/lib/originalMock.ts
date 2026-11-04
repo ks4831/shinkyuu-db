@@ -22,6 +22,12 @@ export const ORIGINAL_MOCK_LEGACY_RESULT_KEYS = [
   'shinkyuu_original_mock_results_v1',
 ] as const
 
+/**
+ * 見直し用の記録の保存キー。直近の全問の結果について「まちがえた問題で選んだ選択肢」だけを持つ。
+ * 成績（v1〜v5）とは別のキーで、成績の読み書きには影響しない。
+ */
+export const ORIGINAL_MOCK_REVIEW_KEY = 'shinkyuu_original_mock_review_v1'
+
 export type OriginalMockQuestion = {
   /** om02-01 のように、模擬試験の番号と問題番号から作る（過去問・予想問題のIDと重ならない） */
   id: string
@@ -122,4 +128,31 @@ export function saveOriginalMockResult(result: OriginalMockResult) {
   } catch {
     /* 保存できない環境では黙って無視 */
   }
+}
+
+/** 問題ID → 選んだ選択肢（0〜3）。まちがえた問題のうち回答したものだけ */
+export type OriginalMockSelections = Record<string, number>
+
+/** 直近の結果の見直し用記録を保存する。成績のキー（v1〜v5）には触れない */
+export function saveOriginalMockReview(mockId: string, completedAt: number, selected: OriginalMockSelections) {
+  if (typeof window === 'undefined') return
+  try {
+    const all = readAll(ORIGINAL_MOCK_REVIEW_KEY)
+    all[mockId] = { completedAt, selected }
+    window.localStorage.setItem(ORIGINAL_MOCK_REVIEW_KEY, JSON.stringify(all))
+  } catch {
+    /* 保存できない環境では黙って無視 */
+  }
+}
+
+/** その結果（completedAt で対応づける）の見直し用記録。無い・壊れている・別の回の記録なら null */
+export function getOriginalMockReview(mockId: string, completedAt: number): OriginalMockSelections | null {
+  const v = readAll(ORIGINAL_MOCK_REVIEW_KEY)[mockId]
+  if (!v || typeof v !== 'object' || Array.isArray(v)) return null
+  const r = v as Record<string, unknown>
+  if (r.completedAt !== completedAt) return null
+  const selected = r.selected
+  if (!selected || typeof selected !== 'object' || Array.isArray(selected)) return null
+  const ok = Object.values(selected).every((n) => typeof n === 'number' && Number.isInteger(n) && n >= 0 && n <= 3)
+  return ok ? (selected as OriginalMockSelections) : null
 }
