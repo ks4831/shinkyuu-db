@@ -27,6 +27,24 @@ export function createMockSession(questionIds: string[]): MockSession {
   }
 }
 
+/**
+ * 保存データから解答セッションを復元する。出題順が今の問題と一致し、形がすべて正しいときだけ返す。
+ * 少しでも合わなければ null（呼び出し側は「途中データなし」として扱う）。
+ */
+export function parseMockSession(v: unknown, expectedOrder: string[], choiceCount = 4): MockSession | null {
+  if (!v || typeof v !== 'object' || Array.isArray(v)) return null
+  const r = v as Record<string, unknown>
+  const n = expectedOrder.length
+  const isChoice = (c: unknown) => c === null || (typeof c === 'number' && Number.isInteger(c) && c >= 0 && c < choiceCount)
+  const isChoices = (a: unknown): a is (number | null)[] => Array.isArray(a) && a.length === n && a.every(isChoice)
+  const { order, index, answers, drafts, editing } = r
+  if (!Array.isArray(order) || order.length !== n || order.some((id, i) => id !== expectedOrder[i])) return null
+  if (typeof index !== 'number' || !Number.isInteger(index) || index < 0 || index >= n) return null
+  if (!isChoices(answers) || !isChoices(drafts)) return null
+  if (!Array.isArray(editing) || editing.length !== n || editing.some((e, i) => typeof e !== 'boolean' || (e && answers[i] === null))) return null
+  return { order: [...expectedOrder], index, answers: [...answers], drafts: [...drafts], editing: [...(editing as boolean[])] }
+}
+
 /** 今の問題で選択肢を選ぶ（回答済みで変更中でなければ何もしない） */
 export function selectChoice(s: MockSession, choice: number): MockSession {
   if (isLocked(s, s.index)) return s
@@ -89,4 +107,9 @@ export function unansweredIndexes(s: MockSession): number[] {
 
 export function answeredCount(s: MockSession): number {
   return s.answers.filter((a) => a !== null).length
+}
+
+/** 解き始めた形跡があるか（先へ進んだ・選択した・回答した）。開いただけのセッションは false */
+export function hasProgress(s: MockSession): boolean {
+  return s.index > 0 || s.answers.some((a) => a !== null) || s.drafts.some((d) => d !== null)
 }

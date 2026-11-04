@@ -1,21 +1,30 @@
 'use client'
 
-import { useEffect, useState } from 'react'
+import { useEffect, useMemo, useState } from 'react'
 import Link from 'next/link'
 import { useLeaveGuard } from '@/lib/leaveGuard'
 import { PAST_EXAM_CHOICE_LABELS } from '@/lib/choiceLabels'
 import {
+  clearOriginalMockProgress,
   getLegacyOriginalMockResults,
+  getOriginalMockProgress,
   getOriginalMockResult,
   getOriginalMockReview,
+  getOriginalMockSubjectResult,
   isOriginalMockCorrect,
+  questionsBySubject,
+  questionsFingerprint,
+  saveOriginalMockProgress,
   saveOriginalMockResult,
   saveOriginalMockReview,
+  saveOriginalMockSubjectResult,
   scoreBySubject,
   type OriginalMockAnswer,
   type OriginalMockData,
   type OriginalMockQuestion,
   type OriginalMockResult,
+  type OriginalMockSelections,
+  type OriginalMockSubjectResult,
 } from '@/lib/originalMock'
 import {
   answeredCount,
@@ -26,6 +35,7 @@ import {
   goNext,
   goPrev,
   goTo,
+  hasProgress,
   isLocked,
   selectChoice,
   shownChoice,
@@ -36,11 +46,13 @@ import {
 
 const CIRCLED = PAST_EXAM_CHOICE_LABELS
 
-type Screen = 'start' | 'question' | 'result'
+type Screen = 'start' | 'subjects' | 'question' | 'result'
 type ReviewFilter = 'wrong' | 'all'
 
 /**
- * 1問1画面で解き、最後に科目別の得点・全問の正答と解説を見せる。途中経過は保存しない。
+ * 1問1画面で解き、最後に科目別の得点・全問の正答と解説を見せる。
+ * 全問に挑戦するほか、1科目だけを選んで解ける（科目別の結果は全問の成績と別のキーに保存する）。
+ * 解答の途中は全問・科目ごとに別々の枠へ自動保存し、再読み込み後に続きから再開できる（まちがえた問題の解き直しは保存しない）。
  * 結果画面からは、まちがえた問題の確認と、元の問題の画面（見直し：回答は変更できない）へ移動できる。
  * 前後の移動・回答の保持と変更・未回答の確認は mockSession（総合模擬試験①と共通）に任せる。
  */
@@ -64,12 +76,45 @@ export default function OriginalMockRunner({ data, updateNote }: { data: Origina
   const [focusId, setFocusId] = useState<string | null>(null)
   /** true＝保存済みの結果を開いたが、選んだ選択肢の記録が無い（見直し機能より前の結果） */
   const [noSelectionRecord, setNoSelectionRecord] = useState(false)
+  /** 解いている科目（null＝全問）。まちがえた問題の解き直しでも、その科目のまま */
+  const [subject, setSubject] = useState<string | null>(null)
+  /** 保存済みの途中経過（全問）・科目ごとの途中経過と直近の結果 */
+  const [fullProgress, setFullProgress] = useState<MockSession | null>(null)
+  const [subjectProgress, setSubjectProgress] = useState<Record<string, MockSession>>({})
+  const [subjectResults, setSubjectResults] = useState<Record<string, OriginalMockSubjectResult>>({})
+  /** true＝途中経過をこの端末に保存できなかった（離れる前の確認を出す） */
+  const [saveFailed, setSaveFailed] = useState(false)
   const index = session.index
+  const subjects = useMemo(() => questionsBySubject(data.questions), [data.questions])
+  const subjectQuestions = subjects.find((s) => s.subject === subject)?.questions ?? null
+
+  /** 画面に表示する問題番号：科目別は科目内の番号（解き直しでも同じ）、全問は元の番号 */
+  function numberOf(q: OriginalMockQuestion): number {
+    return subjectQuestions ? subjectQuestions.indexOf(q) + 1 : q.questionNumber
+  }
 
   useEffect(() => {
     setLastResult(getOriginalMockResult(data.mockId))
     setLegacyResults(getLegacyOriginalMockResults(data.mockId))
-  }, [data.mockId])
+    setFullProgress(getOriginalMockProgress(data.mockId, null, data.questions))
+    const progress: Record<string, MockSession> = {}
+    const results: Record<string, OriginalMockSubjectResult> = {}
+    for (const s of subjects) {
+      const p = getOriginalMockProgress(data.mockId, s.subject, s.questions)
+      if (p) progress[s.subject] = p
+      const r = getOriginalMockSubjectResult(data.mockId, s.subject, s.questions)
+      if (r) results[s.subject] = r
+    }
+    setSubjectProgress(progress)
+    setSubjectResults(results)
+    // 開始画面・科目選択に戻るたびに読み直す
+  }, [data.mockId, data.questions, subjects, screen])
+
+  /** 回答を選ぶたびに途中経過を保存する。開いただけのセッションでは保存せず、以前の途中データを残す */
+  useEffect(() => {
+    if (screen !== 'question' || reviewing || isRetryWrong || !hasProgress(session)) return
+    setSaveFailed(!saveOriginalMockProgress(data.mockId, subject, active, session))
+  }, [session, screen, reviewing, isRetryWrong, subject, active, data.mockId])
 
   useEffect(() => {
     const card = screen === 'result' && focusId ? document.getElementById(`review-${focusId}`) : null
@@ -79,12 +124,14 @@ export default function OriginalMockRunner({ data, updateNote }: { data: Origina
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [screen, index])
 
-  useLeaveGuard(screen === 'question' && !reviewing && (index > 0 || answeredCount(session) > 0) ? '解答の途中です。このページを離れると、途中の解答は保存されません。' : null)
+  useLeaveGuard(screen === 'question' && !reviewing && (isRetryWrong || saveFailed) && (index > 0 || answeredCount(session) > 0) ? '解答の途中です。このページを離れると、途中の解答は保存されません。' : null)
 
-  function start(questions: OriginalMockQuestion[], retryWrong: boolean) {
+  function start(questions: OriginalMockQuestion[], retryWrong: boolean, nextSubject: string | null = null, saved?: MockSession) {
     setActive(questions)
     setIsRetryWrong(retryWrong)
-    setSession(createMockSession(questions.map((q) => q.id)))
+    setSubject(nextSubject)
+    setSaveFailed(false)
+    setSession(saved ?? createMockSession(questions.map((q) => q.id)))
     setAnswers([])
     setConfirmUnanswered(false)
     setReviewing(false)
@@ -95,18 +142,18 @@ export default function OriginalMockRunner({ data, updateNote }: { data: Origina
   }
 
   /** 保存済みの直近の結果を結果画面で開く。成績は読むだけで、保存し直さない */
-  function openSavedResult(saved: OriginalMockResult) {
-    const selections = getOriginalMockReview(data.mockId, saved.completedAt)
+  function openSavedResult(saved: OriginalMockResult, questions: OriginalMockQuestion[], selections: OriginalMockSelections | null, savedSubject: string | null) {
     const wrongIds = new Set(saved.wrongIds)
-    const restored = data.questions.flatMap((q): OriginalMockAnswer[] => {
+    const restored = questions.flatMap((q): OriginalMockAnswer[] => {
       if (!wrongIds.has(q.id)) return [{ questionId: q.id, selected: q.answerIndex, correct: true }]
       const selected = selections?.[q.id]
       return selected === undefined ? [] : [{ questionId: q.id, selected, correct: false }]
     })
     const byId = new Map(restored.map((a) => [a.questionId, a.selected]))
-    setActive(data.questions)
+    setActive(questions)
     setIsRetryWrong(false)
-    setSession({ ...createMockSession(data.questions.map((q) => q.id)), answers: data.questions.map((q) => byId.get(q.id) ?? null) })
+    setSubject(savedSubject)
+    setSession({ ...createMockSession(questions.map((q) => q.id)), answers: questions.map((q) => byId.get(q.id) ?? null) })
     setAnswers(restored)
     setReviewing(false)
     setReviewFilter('wrong')
@@ -152,9 +199,15 @@ export default function OriginalMockRunner({ data, updateNote }: { data: Origina
         wrongIds: active.filter((q) => !correctIds.has(q.id)).map((q) => q.id),
         completedAt: Date.now(),
       }
-      saveOriginalMockResult(result)
-      saveOriginalMockReview(data.mockId, result.completedAt, Object.fromEntries(final.filter((a) => !a.correct).map((a) => [a.questionId, a.selected])))
-      setLastResult(result)
+      const selected: OriginalMockSelections = Object.fromEntries(final.filter((a) => !a.correct).map((a) => [a.questionId, a.selected]))
+      if (subject === null) {
+        saveOriginalMockResult(result)
+        saveOriginalMockReview(data.mockId, result.completedAt, selected)
+        setLastResult(result)
+      } else {
+        saveOriginalMockSubjectResult({ ...result, subject, fingerprint: questionsFingerprint(active), selected })
+      }
+      clearOriginalMockProgress(data.mockId, subject)
     }
     setConfirmUnanswered(false)
     setScreen('result')
@@ -200,12 +253,23 @@ export default function OriginalMockRunner({ data, updateNote }: { data: Origina
             {r.total}問版の結果（問題を追加する前）：<span className="font-bold text-gray-700">{r.correct} / {r.total}問</span>
           </p>
         ))}
+        <p className="mt-3 text-xs leading-relaxed text-gray-500">解答の途中は、この端末のブラウザに自動で保存されます。再読み込みしても、続きから再開できます。</p>
+        <h2 className="mt-6 text-base font-black text-gray-900">① 全{total}問に挑戦</h2>
+        {fullProgress && (
+          <button
+            type="button"
+            onClick={() => start(data.questions, false, null, fullProgress)}
+            className="mt-3 w-full rounded-xl bg-teal-600 px-5 py-4 text-base font-bold text-white transition-colors hover:bg-teal-700"
+          >
+            続きから解く（回答済み {answeredCount(fullProgress)} / {total}問）
+          </button>
+        )}
         <button
           type="button"
           onClick={() => start(data.questions, false)}
-          className="mt-5 w-full rounded-xl bg-teal-600 px-5 py-4 text-base font-bold text-white transition-colors hover:bg-teal-700"
+          className={fullProgress ? 'mt-3 w-full rounded-xl border border-teal-200 px-5 py-3.5 text-sm font-bold text-teal-700 hover:bg-teal-50' : 'mt-3 w-full rounded-xl bg-teal-600 px-5 py-4 text-base font-bold text-white transition-colors hover:bg-teal-700'}
         >
-          {lastResult ? 'もう一度、全問を解く' : '解き始める'}
+          {fullProgress ? 'はじめから解く' : lastResult ? 'もう一度、全問を解く' : '解き始める'}
         </button>
         {lastWrong.length > 0 && (
           <button
@@ -228,12 +292,86 @@ export default function OriginalMockRunner({ data, updateNote }: { data: Origina
         {lastResult && lastResult.total === total && (
           <button
             type="button"
-            onClick={() => openSavedResult(lastResult)}
+            onClick={() => openSavedResult(lastResult, data.questions, getOriginalMockReview(data.mockId, lastResult.completedAt), null)}
             className="mt-3 w-full rounded-xl border border-gray-300 px-5 py-3.5 text-sm font-bold text-gray-700 hover:bg-gray-50"
           >
             前回の結果と解説を見る
           </button>
         )}
+        <h2 className="mt-8 text-base font-black text-gray-900">② 科目別に挑戦</h2>
+        <p className="mt-1 text-sm leading-relaxed text-gray-700">
+          {subjects.length}科目から1科目を選び、その科目の問題だけを解きます。
+          {Object.keys(subjectProgress).length > 0 && `途中の科目が${Object.keys(subjectProgress).length}つあります。`}
+        </p>
+        <button
+          type="button"
+          onClick={() => setScreen('subjects')}
+          className="mt-3 w-full rounded-xl bg-gray-900 px-5 py-4 text-base font-bold text-white hover:bg-gray-800"
+        >
+          科目を選ぶ
+        </button>
+      </div>
+    )
+  }
+
+  /* ── 科目選択画面 ── */
+  if (screen === 'subjects') {
+    return (
+      <div className="mx-auto max-w-md px-4 pb-28 pt-6">
+        <p className="text-xs font-semibold text-teal-700">{data.title}</p>
+        <h1 className="mt-1 text-2xl font-black text-gray-900">科目を選ぶ</h1>
+        <p className="mt-2 text-sm leading-relaxed text-gray-700">科目別の結果は、全{data.questions.length}問の成績とは別に保存します。</p>
+        <ul className="mt-4 space-y-3">
+          {subjects.map(({ subject: name, questions }) => {
+            const progress = subjectProgress[name]
+            const result = subjectResults[name]
+            return (
+              <li key={name} aria-label={name} className="rounded-2xl border border-gray-200 bg-white p-4">
+                <div className="flex items-baseline justify-between gap-3">
+                  <h2 className="text-base font-bold text-gray-900">{name}</h2>
+                  <span className="flex-shrink-0 text-sm font-semibold text-gray-600">{questions.length}問</span>
+                </div>
+                {result && (
+                  <p className="mt-1 text-xs text-gray-600">
+                    前回：<span className="font-bold">{result.correct} / {result.total}問（{Math.round((result.correct / result.total) * 100)}%）</span>
+                  </p>
+                )}
+                {progress && (
+                  <button
+                    type="button"
+                    onClick={() => start(questions, false, name, progress)}
+                    className="mt-3 min-h-11 w-full rounded-xl bg-teal-600 px-3 py-2.5 text-sm font-bold text-white hover:bg-teal-700"
+                  >
+                    続きから解く（回答済み {answeredCount(progress)} / {questions.length}問）
+                  </button>
+                )}
+                <button
+                  type="button"
+                  onClick={() => start(questions, false, name)}
+                  className={`mt-3 min-h-11 w-full rounded-xl px-3 py-2.5 text-sm font-bold ${progress ? 'border border-teal-200 text-teal-700 hover:bg-teal-50' : 'bg-teal-600 text-white hover:bg-teal-700'}`}
+                >
+                  {progress ? 'はじめから解く' : 'この科目を解く'}
+                </button>
+                {result && (
+                  <button
+                    type="button"
+                    onClick={() => openSavedResult(result, questions, result.selected, name)}
+                    className="mt-2 min-h-11 w-full rounded-xl border border-gray-300 px-3 py-2.5 text-sm font-bold text-gray-700 hover:bg-gray-50"
+                  >
+                    前回の結果と解説を見る
+                  </button>
+                )}
+              </li>
+            )
+          })}
+        </ul>
+        <button
+          type="button"
+          onClick={() => setScreen('start')}
+          className="mt-5 min-h-11 w-full rounded-xl border border-gray-300 px-3 py-2.5 text-sm font-bold text-gray-700 hover:bg-gray-50"
+        >
+          開始画面に戻る
+        </button>
       </div>
     )
   }
@@ -249,23 +387,29 @@ export default function OriginalMockRunner({ data, updateNote }: { data: Origina
     const noAnswerLabel = noSelectionRecord ? '回答の記録なし' : '未回答'
     return (
       <div className="mx-auto max-w-md px-4 pb-28 pt-6">
-        <p className="text-xs font-semibold text-teal-700">{data.title}{isRetryWrong && '（まちがえた問題）'}</p>
+        <p className="text-xs font-semibold text-teal-700">{data.title}{subject && `・${subject}`}{isRetryWrong && '（まちがえた問題）'}</p>
         <h1 className="mt-1 text-2xl font-black text-gray-900">結果</h1>
         <p className="mt-3 text-4xl font-black text-teal-700">
           {correctCount}<span className="text-lg text-gray-500"> / {active.length}問</span>
         </p>
-        <h2 className="mt-4 text-sm font-bold text-gray-700">科目別の結果</h2>
-        <table className="mt-1 w-full text-sm">
-          <tbody>
-            {rows.map((r) => (
-              <tr key={r.subject} className="border-b border-gray-100">
-                <td className="py-2 text-gray-700">{r.subject}</td>
-                <td className="py-2 text-right font-bold text-gray-900">{r.correct} / {r.total}</td>
-                <td className="w-14 py-2 text-right text-gray-600">{Math.round((r.correct / r.total) * 100)}%</td>
-              </tr>
-            ))}
-          </tbody>
-        </table>
+        {subject ? (
+          <p className="mt-1 text-sm font-bold text-gray-700">正答率 {Math.round((correctCount / active.length) * 100)}%</p>
+        ) : (
+          <>
+            <h2 className="mt-4 text-sm font-bold text-gray-700">科目別の結果</h2>
+            <table className="mt-1 w-full text-sm">
+              <tbody>
+                {rows.map((r) => (
+                  <tr key={r.subject} className="border-b border-gray-100">
+                    <td className="py-2 text-gray-700">{r.subject}</td>
+                    <td className="py-2 text-right font-bold text-gray-900">{r.correct} / {r.total}</td>
+                    <td className="w-14 py-2 text-right text-gray-600">{Math.round((r.correct / r.total) * 100)}%</td>
+                  </tr>
+                ))}
+              </tbody>
+            </table>
+          </>
+        )}
 
         {wrong.length > 0 && (
           <>
@@ -281,19 +425,36 @@ export default function OriginalMockRunner({ data, updateNote }: { data: Origina
             </button>
             <button
               type="button"
-              onClick={() => start(wrong, true)}
+              onClick={() => start(wrong, true, subject)}
               className="mt-3 w-full rounded-xl border border-teal-200 px-5 py-3.5 text-sm font-bold text-teal-700 hover:bg-teal-50"
             >
               {unansweredCount > 0 ? 'まちがえた・未回答の' : 'まちがえた'}{wrong.length}問を解き直す
             </button>
           </>
         )}
+        {subject && subjectQuestions ? (
+          <button
+            type="button"
+            onClick={() => start(subjectQuestions, false, subject)}
+            className="mt-3 w-full rounded-xl border border-teal-200 px-5 py-3.5 text-sm font-bold text-teal-700 hover:bg-teal-50"
+          >
+            {subject}に再挑戦する
+          </button>
+        ) : (
+          <button
+            type="button"
+            onClick={() => start(data.questions, false)}
+            className="mt-3 w-full rounded-xl border border-teal-200 px-5 py-3.5 text-sm font-bold text-teal-700 hover:bg-teal-50"
+          >
+            全{data.questions.length}問をもう一度解く
+          </button>
+        )}
         <button
           type="button"
-          onClick={() => start(data.questions, false)}
-          className="mt-3 w-full rounded-xl border border-teal-200 px-5 py-3.5 text-sm font-bold text-teal-700 hover:bg-teal-50"
+          onClick={() => setScreen('subjects')}
+          className="mt-3 w-full rounded-xl border border-gray-300 px-5 py-3.5 text-sm font-bold text-gray-700 hover:bg-gray-50"
         >
-          全{data.questions.length}問をもう一度解く
+          {subject ? '科目選択に戻る' : '科目を選んで解く'}
         </button>
 
         <h2 id="review-list" className="mt-8 scroll-mt-20 text-base font-black text-gray-900">正答と解説</h2>
@@ -320,7 +481,8 @@ export default function OriginalMockRunner({ data, updateNote }: { data: Origina
               <details key={q.id} id={`review-${q.id}`} open={focusId === q.id} className="scroll-mt-20 rounded-xl border border-gray-200 bg-white px-3 py-2.5">
                 <summary className="flex cursor-pointer items-center gap-2 text-sm">
                   <span className={`font-black ${a?.correct ? 'text-green-700' : 'text-red-600'}`}>{a ? (a.correct ? '○' : '×') : '−'}</span>
-                  <span className="font-semibold text-gray-800">第{q.questionNumber}問</span>
+                  <span className="font-semibold text-gray-800">第{numberOf(q)}問</span>
+                  {subject && <span className="flex-shrink-0 text-xs text-gray-500">元の第{q.questionNumber}問</span>}
                   <span className="truncate text-xs text-gray-500">{a ? q.field : `${noAnswerLabel}・${q.field}`}</span>
                 </summary>
                 <ReviewQuestion q={q} selected={a?.selected ?? null} noAnswerLabel={noAnswerLabel} />
@@ -330,7 +492,7 @@ export default function OriginalMockRunner({ data, updateNote }: { data: Origina
                   onClick={() => openQuestion(active.indexOf(q))}
                   className="mt-3 min-h-11 w-full rounded-xl border border-gray-300 bg-white px-3 py-2 text-sm font-bold text-gray-700 hover:bg-gray-50"
                 >
-                  第{q.questionNumber}問へ戻る
+                  第{numberOf(q)}問へ戻る
                 </button>
               </details>
             )
@@ -357,7 +519,7 @@ export default function OriginalMockRunner({ data, updateNote }: { data: Origina
       <div className="mb-4">
         <div className="flex items-center justify-between text-xs text-gray-500">
           <span className="font-semibold text-gray-700">
-            {reviewing ? '見直し　' : isRetryWrong && '解き直し　'}第{q.questionNumber}問
+            {reviewing ? '見直し　' : isRetryWrong && '解き直し　'}第{numberOf(q)}問{subject && (reviewing || isRetryWrong) && `（元の第${q.questionNumber}問）`}
           </span>
           <span>
             {index + 1} / {active.length}問（回答済み {answeredCount(session)}）
@@ -471,7 +633,7 @@ export default function OriginalMockRunner({ data, updateNote }: { data: Origina
       {confirmUnanswered && (
         <div role="alertdialog" aria-labelledby="unanswered-title" className="mt-4 rounded-2xl border border-amber-300 bg-amber-50 p-4">
           <p id="unanswered-title" className="text-sm font-bold text-amber-900">
-            未回答の問題が{unanswered.length}問あります（第{unanswered.slice(0, 8).map((i) => active[i].questionNumber).join('・')}問{unanswered.length > 8 ? 'など' : ''}）。
+            未回答の問題が{unanswered.length}問あります（第{unanswered.slice(0, 8).map((i) => numberOf(active[i])).join('・')}問{unanswered.length > 8 ? 'など' : ''}）。
           </p>
           <p className="mt-1 text-xs leading-relaxed text-amber-800">このまま採点すると、未回答の問題は不正解として数えます。</p>
           <div className="mt-3 grid grid-cols-2 gap-2">
@@ -486,6 +648,15 @@ export default function OriginalMockRunner({ data, updateNote }: { data: Origina
               このまま採点する
             </button>
           </div>
+        </div>
+      )}
+
+      {subject && !reviewing && !isRetryWrong && (
+        <div className="mt-6 text-center">
+          <button type="button" onClick={() => setScreen('subjects')} className="min-h-11 px-3 text-sm font-semibold text-gray-600 underline">
+            科目選択に戻る
+          </button>
+          <p className="text-xs text-gray-500">{saveFailed ? 'この端末に保存できないため、戻ると途中の回答は消えます。' : '途中の回答は自動で保存されます。'}</p>
         </div>
       )}
     </div>

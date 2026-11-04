@@ -5,6 +5,8 @@
    - 保存するのは模擬試験ごとの直近の結果だけ。個人情報は保存しない。
    ────────────────────────────────────────────────────────────── */
 
+import { parseMockSession, type MockSession } from './mockSession'
+
 /**
  * 結果の保存キー。問題数を変えるたびに新しいキーへ保存し、前の版の結果は**読むだけで、書き込み・削除はしない**。
  * - v1：模擬試験②が40問だったときの結果（2026-10-27〜）
@@ -27,6 +29,16 @@ export const ORIGINAL_MOCK_LEGACY_RESULT_KEYS = [
  * 成績（v1〜v5）とは別のキーで、成績の読み書きには影響しない。
  */
 export const ORIGINAL_MOCK_REVIEW_KEY = 'shinkyuu_original_mock_review_v1'
+
+/**
+ * 科目別に解いた結果の保存キー。科目ごとの直近の結果を持つ。全問の成績（v1〜v5）とは別のキーで、互いに上書きしない。
+ */
+export const ORIGINAL_MOCK_SUBJECT_RESULT_KEY = 'shinkyuu_original_mock_subject_results_v1'
+
+/**
+ * 解答途中の自動保存のキー。全問と科目ごとに別々の枠を持ち、採点すると消す。成績のキーには触れない。
+ */
+export const ORIGINAL_MOCK_PROGRESS_KEY = 'shinkyuu_original_mock_progress_v1'
 
 export type OriginalMockQuestion = {
   /** om02-01 のように、模擬試験の番号と問題番号から作る（過去問・予想問題のIDと重ならない） */
@@ -155,4 +167,103 @@ export function getOriginalMockReview(mockId: string, completedAt: number): Orig
   if (!selected || typeof selected !== 'object' || Array.isArray(selected)) return null
   const ok = Object.values(selected).every((n) => typeof n === 'number' && Number.isInteger(n) && n >= 0 && n <= 3)
   return ok ? (selected as OriginalMockSelections) : null
+}
+
+export type SubjectQuestions = { subject: string; questions: OriginalMockQuestion[] }
+
+/** 科目ごとの問題（科目は最初に出てくる順、科目内は元データの順） */
+export function questionsBySubject(questions: OriginalMockQuestion[]): SubjectQuestions[] {
+  const rows: SubjectQuestions[] = []
+  for (const q of questions) {
+    let row = rows.find((r) => r.subject === q.subject)
+    if (!row) rows.push((row = { subject: q.subject, questions: [] }))
+    row.questions.push(q)
+  }
+  return rows
+}
+
+/**
+ * 問題の内容の指紋。問題文・選択肢・正答が変わると値が変わり、古い途中データ・見直し用の記録を使わないようにする
+ * （選択の番号が別の選択肢を指してしまうのを防ぐ）。解説だけの修正では変わらない。改ざん検知の用途ではない。
+ */
+export function questionsFingerprint(questions: OriginalMockQuestion[]): string {
+  const text = JSON.stringify(questions.map((q) => [q.id, q.questionText, q.choices, q.answerIndex]))
+  let h = 0x811c9dc5
+  for (let i = 0; i < text.length; i++) {
+    h ^= text.charCodeAt(i)
+    h = Math.imul(h, 0x01000193)
+  }
+  return `${questions.length}-${(h >>> 0).toString(16)}`
+}
+
+function asRecord(v: unknown): Record<string, unknown> {
+  return v && typeof v === 'object' && !Array.isArray(v) ? (v as Record<string, unknown>) : {}
+}
+
+export type OriginalMockSubjectResult = OriginalMockResult & {
+  subject: string
+  fingerprint: string
+  /** まちがえた問題で選んだ選択肢（未回答の問題は含まない） */
+  selected: OriginalMockSelections
+}
+
+/** 科目の直近の結果。壊れている・今の問題と合わないときは null */
+export function getOriginalMockSubjectResult(mockId: string, subject: string, questions: OriginalMockQuestion[]): OriginalMockSubjectResult | null {
+  const raw = asRecord(asRecord(readAll(ORIGINAL_MOCK_SUBJECT_RESULT_KEY)[mockId])[subject])
+  const base = toResult(mockId, raw)
+  if (!base || raw.fingerprint !== questionsFingerprint(questions)) return null
+  const ids = new Set(questions.map((q) => q.id))
+  if (base.total !== questions.length || base.correct !== base.total - base.wrongIds.length || !base.wrongIds.every((id) => ids.has(id))) return null
+  const selected = raw.selected
+  if (!selected || typeof selected !== 'object' || Array.isArray(selected)) return null
+  const entries = Object.entries(selected)
+  if (!entries.every(([id, n]) => base.wrongIds.includes(id) && typeof n === 'number' && Number.isInteger(n) && n >= 0 && n <= 3)) return null
+  return { ...base, subject, fingerprint: raw.fingerprint as string, selected: selected as OriginalMockSelections }
+}
+
+/** 科目の結果を保存する。保存先は科目別のキーだけで、全問の成績（v1〜v5）・見直しの記録には触れない */
+export function saveOriginalMockSubjectResult(result: OriginalMockSubjectResult) {
+  if (typeof window === 'undefined') return
+  try {
+    const all = readAll(ORIGINAL_MOCK_SUBJECT_RESULT_KEY)
+    all[result.mockId] = { ...asRecord(all[result.mockId]), [result.subject]: result }
+    window.localStorage.setItem(ORIGINAL_MOCK_SUBJECT_RESULT_KEY, JSON.stringify(all))
+  } catch {
+    /* 保存できない環境では黙って無視 */
+  }
+}
+
+/** 途中データの枠。subject が null なら全問、文字列ならその科目 */
+const progressSlot = (mockId: string, subject: string | null) => (subject === null ? `${mockId}/full` : `${mockId}/subject/${subject}`)
+
+/** 途中経過を保存する。保存できたら true（保存できない環境では false） */
+export function saveOriginalMockProgress(mockId: string, subject: string | null, questions: OriginalMockQuestion[], session: MockSession): boolean {
+  if (typeof window === 'undefined') return false
+  try {
+    const all = readAll(ORIGINAL_MOCK_PROGRESS_KEY)
+    all[progressSlot(mockId, subject)] = { fingerprint: questionsFingerprint(questions), savedAt: Date.now(), session }
+    window.localStorage.setItem(ORIGINAL_MOCK_PROGRESS_KEY, JSON.stringify(all))
+    return true
+  } catch {
+    return false
+  }
+}
+
+/** 途中経過を読む。壊れている・今の問題と合わないときは null（画面は「途中データなし」として扱う） */
+export function getOriginalMockProgress(mockId: string, subject: string | null, questions: OriginalMockQuestion[]): MockSession | null {
+  const raw = asRecord(readAll(ORIGINAL_MOCK_PROGRESS_KEY)[progressSlot(mockId, subject)])
+  if (raw.fingerprint !== questionsFingerprint(questions)) return null
+  return parseMockSession(raw.session, questions.map((q) => q.id))
+}
+
+/** 採点が済んだ枠の途中経過を消す（ほかの枠には触れない） */
+export function clearOriginalMockProgress(mockId: string, subject: string | null) {
+  if (typeof window === 'undefined') return
+  try {
+    const all = readAll(ORIGINAL_MOCK_PROGRESS_KEY)
+    delete all[progressSlot(mockId, subject)]
+    window.localStorage.setItem(ORIGINAL_MOCK_PROGRESS_KEY, JSON.stringify(all))
+  } catch {
+    /* 保存できない環境では黙って無視 */
+  }
 }
