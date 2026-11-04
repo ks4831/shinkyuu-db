@@ -111,6 +111,14 @@ const errors: string[] = []
 test.beforeEach(async ({ page }) => {
   errors.length = 0
   page.on('pageerror', (e) => errors.push(String(e)))
+  // テストで遮断した計測タグの読み込み失敗以外のコンソールエラーも不合格にする。
+  // 例外：Windows のローカルビルドは先読みファイルを別の階層に出力するので、ローカル配信の __next.*.txt の404だけ除く（本番では除かない）
+  page.on('console', (m) => {
+    const url = m.location().url
+    const blocked = /google-analytics\.com|googletagmanager\.com/.test(url)
+    const localPrefetch = /^http:\/\/127\.0\.0\.1:\d+\/.*__next\.[^/]*\.txt/.test(url)
+    if (m.type() === 'error' && !blocked && !localPrefetch) errors.push(`console: ${m.text()} ${url}`)
+  })
   await page.route(/google-analytics\.com|googletagmanager\.com/, (r) => r.abort())
   await page.goto('/')
   await page.evaluate(() => {
@@ -127,6 +135,7 @@ test('開始画面に2つのモード、科目選択に12枚のカード（科�
   await expect(page.getByRole('heading', { name: '① 全100問に挑戦' })).toBeVisible()
   await expect(page.getByRole('heading', { name: '② 科目別に挑戦' })).toBeVisible()
   await expect(btn(page, '解き始める')).toBeVisible()
+  await expect(page.getByText('解答途中の内容は、この端末・ブラウザに自動保存されます。別の端末への引き継ぎはできません。', { exact: false })).toBeVisible()
   await shot(page, '01-start', true)
   await noHScroll(page)
   await tap(page, btn(page, '科目を選ぶ'))

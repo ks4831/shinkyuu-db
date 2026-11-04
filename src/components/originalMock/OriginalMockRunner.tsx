@@ -253,7 +253,7 @@ export default function OriginalMockRunner({ data, updateNote }: { data: Origina
             {r.total}問版の結果（問題を追加する前）：<span className="font-bold text-gray-700">{r.correct} / {r.total}問</span>
           </p>
         ))}
-        <p className="mt-3 text-xs leading-relaxed text-gray-500">解答の途中は、この端末のブラウザに自動で保存されます。再読み込みしても、続きから再開できます。</p>
+        <p className="mt-3 text-xs leading-relaxed text-gray-500">解答途中の内容は、この端末・ブラウザに自動保存されます。別の端末への引き継ぎはできません。再読み込みしても、続きから再開できます。</p>
         <h2 className="mt-6 text-base font-black text-gray-900">① 全{total}問に挑戦</h2>
         {fullProgress && (
           <button
