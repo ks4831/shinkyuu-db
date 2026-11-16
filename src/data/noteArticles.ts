@@ -253,18 +253,22 @@ export function noteArticleHref(article: NoteArticle, placement: NoteLinkPlaceme
   return `${article.url}?${params.toString()}`
 }
 
-/** HOME「学習をもっと深める」に出す記事と、HOME用の短い見出し（無料を先、有料教材を後に表示する） */
-const HOME_ARTICLES: { id: string; label: string }[] = [
+/** HOME「学習をもっと深める」に出す記事と、HOME用の短い見出し（無料を先、有料教材を後に表示する）
+    usage：有料教材の利用条件。販売ページの記載（2026-11-16確認）と同じ内容だけを短く書く
+    - 解剖学：「パソコンでの利用が前提です（ZIPの解凍とExcelを使います）」
+    - 関係法規：「note の記事の中で読む教材です。…スマホでもパソコンでも読めます」 */
+type HomeArticleEntry = { id: string; label: string; usage?: string }
+const HOME_ARTICLES: HomeArticleEntry[] = [
   { id: 'ncaa7b8608b3a', label: '解剖学で間違えやすい5問（オリジナル四択）' },
   { id: 'n69ee08ed4c1d', label: '関係法規で混同しやすいポイント5選' },
-  { id: 'n042d1f1052e6', label: '解剖学 頻出テーマ攻略ノート（オリジナル60問・解説PDF）' },
-  { id: 'n71bb141488b4', label: '関係法規 直前整理ノート（整理表3枚＋○×40問）' },
+  { id: 'n042d1f1052e6', label: '解剖学 頻出テーマ攻略ノート（オリジナル60問・解説PDF）', usage: 'パソコンが必要（ZIP解凍・Excel）' },
+  { id: 'n71bb141488b4', label: '関係法規 直前整理ノート（整理表3枚＋○×40問）', usage: 'スマホ対応（noteの記事内で読む）' },
 ]
 
-export function noteArticlesForHome(): { article: NoteArticle; label: string }[] {
-  const list = HOME_ARTICLES.flatMap(({ id, label }) => {
+export function noteArticlesForHome(): { article: NoteArticle; label: string; usage?: string }[] {
+  const list = HOME_ARTICLES.flatMap(({ id, label, usage }) => {
     const article = NOTE_ARTICLES.find((a) => a.id === id)
-    return article ? [{ article, label }] : []
+    return article ? [{ article, label, usage }] : []
   })
   return [...list.filter((x) => x.article.price === 'free'), ...list.filter((x) => x.article.price === 'paid')]
 }

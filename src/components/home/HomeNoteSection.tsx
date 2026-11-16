@@ -30,7 +30,7 @@ export default function HomeNoteSection() {
             <div key={g.key}>
               <h3 className="text-xs font-bold text-gray-500">{g.heading}</h3>
               <ul className="mt-1.5 space-y-1.5">
-                {g.list.map(({ article, label }) => {
+                {g.list.map(({ article, label, usage }) => {
                   const href = noteArticleHref(article, 'home')
                   const isPaid = article.price === 'paid'
                   return (
@@ -49,7 +49,12 @@ export default function HomeNoteSection() {
                         >
                           {isPaid ? `有料 ${article.priceYen?.toLocaleString()}円` : '無料'}
                         </span>
-                        <span className="min-w-0 flex-1 text-sm leading-snug text-gray-800">{label}</span>
+                        <span className="min-w-0 flex-1">
+                          <span className="block text-sm leading-snug text-gray-800">{label}</span>
+                          {isPaid && usage && (
+                            <span className="mt-0.5 block text-xs leading-snug text-gray-600">{usage}</span>
+                          )}
+                        </span>
                         <span className="flex-shrink-0 text-gray-300" aria-hidden="true">↗</span>
                       </a>
                     </li>
