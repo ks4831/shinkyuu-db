@@ -150,9 +150,10 @@ test('10. 要約・一覧は読み取りだけで、localStorage に書き込ま
   assert.equal(writes, 0)
   assert.deepEqual(store, snapshot)
 })
+// learningDataTransfer.ts は Sprint 25 で午前・午後の続きのキーを追加したため対象から外した（検査は test:transfer・test:parts）
 test('11. 過去問データ（問題・選択肢・正答）と学習記録の保存処理が HEAD から変わっていない', () => {
   const changed = execSync(
-    'git diff --name-only HEAD -- src/data/pastExams src/lib/pastExamStorage.ts src/lib/pastExamAnswers.ts src/lib/quizStorage.ts src/lib/dailyQuiz.ts src/lib/learningDataTransfer.ts',
+    'git diff --name-only HEAD -- src/data/pastExams src/lib/pastExamStorage.ts src/lib/pastExamAnswers.ts src/lib/quizStorage.ts src/lib/dailyQuiz.ts',
     { encoding: 'utf8' },
   ).trim()
   assert.equal(changed, '', `変更あり: ${changed}`)

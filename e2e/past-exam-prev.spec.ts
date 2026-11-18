@@ -93,6 +93,8 @@ test.beforeEach(async ({ page }) => {
 
 test('年度別：回答→次へ→前へで回答・正誤・解説が残り、回答済みの範囲内だけ移動できる', async ({ page }) => {
   await page.goto('/past-exams/34')
+  // Sprint 25：年度別は最初に範囲（午前・午後・全問）を選ぶ
+  await press(page, page.getByRole('button', { name: /^全180問を解く/ }))
   await press(page, page.getByRole('button', { name: '問1から解く' }))
 
   // 最初の問題では「前の問題」は押せない。未回答では「次の問題」も押せない（飛ばせない）
@@ -141,6 +143,8 @@ test('年度別：回答→次へ→前へで回答・正誤・解説が残り�
 
 test('年度別：途中再開で回答済みの問題の選択肢まで復元し、前へ戻れる', async ({ page }) => {
   await page.goto('/past-exams/34')
+  // Sprint 25：年度別は最初に範囲（午前・午後・全問）を選ぶ
+  await press(page, page.getByRole('button', { name: /^全180問を解く/ }))
   await press(page, page.getByRole('button', { name: '問1から解く' }))
   const done = []
   for (const how of ['right', 'wrong', 2] as const) {
@@ -190,6 +194,7 @@ test('年度別：選択肢を保存していない旧データでも再開で�
     [q1.id, q2.id],
   )
   await page.goto('/past-exams/34')
+  await press(page, page.getByRole('button', { name: /^全180問を解く/ }))
   await expect(page.getByText('2問回答済み・残り178問')).toBeVisible()
   await press(page, page.getByRole('button', { name: '続きから解く' }))
   expect((await current(page)).questionNumber).toBe(3)
@@ -318,6 +323,8 @@ test('テーマ別：最後の問題から戻る→結果の採点→間違え�
 test('年度別：全180問を解いて採点し、完了の記録が残る（前後に移動しても採点は変わらない）', async ({ page }, info) => {
   test.skip(info.project.name !== 'pc', '時間がかかるため PC 幅だけで実行')
   await page.goto('/past-exams/33')
+  // Sprint 25：年度別は最初に範囲（午前・午後・全問）を選ぶ
+  await press(page, page.getByRole('button', { name: /^全180問を解く/ }))
   await press(page, page.getByRole('button', { name: '問1から解く' }))
   let expected = 0
   for (let i = 1; i <= 180; i++) {
@@ -349,6 +356,8 @@ test('年度別：全180問を解いて採点し、完了の記録が残る（�
 
 test('表示：前後のボタンが画面内に並び、スクリーンショットを残す', async ({ page }, info) => {
   await page.goto('/past-exams/34')
+  // Sprint 25：年度別は最初に範囲（午前・午後・全問）を選ぶ
+  await press(page, page.getByRole('button', { name: /^全180問を解く/ }))
   await press(page, page.getByRole('button', { name: '問1から解く' }))
   await answer(page, 'right')
   await press(page, nextBtn(page))

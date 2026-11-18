@@ -55,6 +55,8 @@ const SAMPLE: Record<string, unknown> = {
   shinkyuu_daily_history_v1: [{ date: '2026-10-15', correct: 7, total: 10, completed: true }],
   shinkyuu_pastexam_history_v1: [{ questionId: '34-001', examRound: 34, correct: true, answeredAt: 1760000200000 }],
   shinkyuu_pastexam_session_v1: { '34': { examRound: 34, answers: [{ questionId: '34-001', questionNumber: 1, correct: true }], completed: false, updatedAt: 1760000200000 } },
+  // Sprint 25：午前・午後だけの演習の続き（キーは「回-区分」）
+  shinkyuu_pastexam_part_session_v1: { '34-pm': { examRound: 34, part: 'pm', answers: [{ questionId: '34-091', questionNumber: 91, correct: false, selectedIndex: 2 }], completed: false, updatedAt: 1760000300000 } },
   shinkyuu_checked: ['an-undoki'],
   shinkyuu_favorites: ['rg-menkyo'],
   shinkyuu_weakness: ['an-shinkei'],
@@ -83,8 +85,8 @@ function test(name: string, fn: () => void) {
 
 out('learningDataTransfer.ts')
 
-test('対象キーは学習用の11個。計測用のキーは含めない', () => {
-  assert.equal(T.LEARNING_KEYS.length, 11)
+test('対象キーは学習用の12個（Sprint 25で午前・午後の続きを追加）。計測用のキーは含めない', () => {
+  assert.equal(T.LEARNING_KEYS.length, 12)
   assert.deepEqual(T.LEARNING_KEYS.map((k) => k.key).sort(), Object.keys(SAMPLE).sort())
   oldSite.setItem('shinkyuu_analytics_fired_v1', JSON.stringify(['d:daily_start:2026-10-16']))
   seed(oldSite, SAMPLE)
@@ -98,7 +100,7 @@ test('旧サイトで書き出し → 新サイトで読み込み：全項目が
   const r = T.parseImport(text)
   assert.ok(r.ok)
   const res = T.applyImport(r.file, 'fill')
-  assert.equal(res.written.length, 11)
+  assert.equal(res.written.length, 12)
   for (const k of Object.keys(SAMPLE)) assert.deepEqual(JSON.parse(newSite.getItem(k)!), SAMPLE[k])
   // 既存の読み出し処理がそのまま使える（形式を変えていない）
   assert.equal(Q.getHistory().attempts.length, 2)
@@ -153,7 +155,7 @@ test('空の項目だけ読み込む（fill）：この端末の記録は上書�
   const plan = T.planImport(r.file, 'fill')
   assert.equal(plan.find((p) => p.key === 'shinkyuu_weakness')!.write, false)
   const res = T.applyImport(r.file, 'fill')
-  assert.equal(res.written.length, 10)
+  assert.equal(res.written.length, 11)
   assert.deepEqual(JSON.parse(newSite.getItem('shinkyuu_weakness')!), mine)
 })
 
@@ -193,7 +195,7 @@ test('保存に失敗した項目は failed として返し、ほかの項目は
   const res = T.applyImport(r.file, 'fill')
   newSite.setItem = orig
   assert.deepEqual(res.failed, ['shinkyuu_quiz_history_v1'])
-  assert.equal(res.written.length, 10)
+  assert.equal(res.written.length, 11)
 })
 
 test('件数の表示：中身は出さず件数だけ', () => {
@@ -286,7 +288,7 @@ await testAsync('旧サイト用ブックマーク：保存したファイルを
   const parsed = T.parseImport(r.text!)
   assert.ok(parsed.ok)
   assert.deepEqual(parsed.file.data, SAMPLE)
-  // 旧サイトの記録は変わらない（読むだけ）。読むのは対象の11キーだけ
+  // 旧サイトの記録は変わらない（読むだけ）。読むのは対象の12キーだけ
   assert.deepEqual(oldSite.map, before)
   assert.ok(!r.calls.some((c) => c === 'set' || c === 'remove' || c === 'clear'))
   assert.deepEqual(r.calls.map((c) => c.slice(4)).sort(), T.LEARNING_KEYS.map((k) => k.key).sort())

@@ -2,6 +2,7 @@ import fs from 'fs'
 import path from 'path'
 import type { PastExamContent } from './types'
 import { loadAllExamQuestions, EXAM_ROUNDS, QUESTIONS_PER_ROUND } from './examQuestions'
+import { pastExamPartFromSourceUrl, pastExamPartRanges, type PastExamPart, type PastExamPartRange } from './pastExamParts'
 
 /* ──────────────────────────────────────────────────────────────
    過去問（実際の国家試験問題）の読み込み・既存分析データとの結合
@@ -24,6 +25,8 @@ export type PastExamQuestion = PastExamContent & {
   subject?: string
   themeId?: string
   subTheme?: string
+  /** 午前・午後の区分。公式PDF（sourceUrl の _am.pdf／_pm.pdf）から決める（src/lib/pastExamParts.ts） */
+  part?: PastExamPart
 }
 
 export type PastExamCoverage = {
@@ -37,6 +40,8 @@ export type PastExamCoverage = {
   totalPerRound: number
   /** playable > 0 のとき true。/past-exams 一覧のリンク可否に使う */
   available: boolean
+  /** 演習可能な問題の午前・午後の範囲。区分が確認できない回は null（午前・午後の選択肢を出さない） */
+  parts: PastExamPartRange[] | null
 }
 
 function pastExamFilePath(round: number): string {
@@ -69,7 +74,8 @@ function isPlayable(q: PastExamContent): boolean {
 export function pastExamCoverage(): PastExamCoverage[] {
   return PAST_EXAM_ALL_ROUNDS.map((round) => {
     const content = loadPastExamContentRaw(round)
-    const playable = content.filter(isPlayable).length
+    const playableContent = content.filter(isPlayable)
+    const playable = playableContent.length
     return {
       round,
       year: round + 1992,
@@ -77,6 +83,11 @@ export function pastExamCoverage(): PastExamCoverage[] {
       playable,
       totalPerRound: QUESTIONS_PER_ROUND,
       available: playable > 0,
+      parts: pastExamPartRanges(
+        playableContent
+          .map((c) => ({ questionNumber: c.questionNumber, part: pastExamPartFromSourceUrl(c.sourceUrl) }))
+          .sort((a, b) => a.questionNumber - b.questionNumber),
+      ),
     }
   })
 }
@@ -102,6 +113,7 @@ export function loadPastExamQuestions(round: number): PastExamQuestion[] {
         subject: m?.subject,
         themeId: m?.themeId,
         subTheme: m?.subTheme,
+        part: pastExamPartFromSourceUrl(c.sourceUrl),
       }
     })
     .sort((a, b) => a.questionNumber - b.questionNumber)

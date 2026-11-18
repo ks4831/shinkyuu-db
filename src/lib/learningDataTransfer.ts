@@ -97,6 +97,19 @@ export const LEARNING_KEYS: { key: string; label: string; validate: Validator }[
       Object.keys(v).length <= 100 &&
       Object.entries(v).every(([round, s]) => pastExamSession(s) && String((s as { examRound: number }).examRound) === round),
   },
+  {
+    // Sprint 25：午前・午後だけの演習の続き。キーは「回-区分」（例：'34-am'）
+    key: 'shinkyuu_pastexam_part_session_v1',
+    label: '過去問の続き（午前・午後）',
+    validate: (v) =>
+      isObj(v) &&
+      Object.keys(v).length <= 200 &&
+      Object.entries(v).every(([id, s]) => {
+        if (!pastExamSession(s)) return false
+        const o = s as { examRound: number; part?: unknown }
+        return (o.part === 'am' || o.part === 'pm') && `${o.examRound}-${o.part}` === id
+      }),
+  },
   { key: 'shinkyuu_checked', label: '理解済みのテーマ', validate: strList },
   { key: 'shinkyuu_favorites', label: 'お気に入りのテーマ', validate: strList },
   { key: 'shinkyuu_weakness', label: '苦手なテーマ', validate: strList },
@@ -144,7 +157,7 @@ export function countItems(key: string, v: unknown): number {
     // 解答がなく学習日だけある場合も「記録あり」とみなす
     return a > 0 ? a : Array.isArray(h.studyDays) && h.studyDays.length > 0 ? 1 : 0
   }
-  return Object.keys(v).length > 0 ? (key === 'shinkyuu_pastexam_session_v1' ? Object.keys(v).length : 1) : 0
+  return Object.keys(v).length > 0 ? (key === 'shinkyuu_pastexam_session_v1' || key === 'shinkyuu_pastexam_part_session_v1' ? Object.keys(v).length : 1) : 0
 }
 
 /** 記録として中身があるか（空配列・空オブジェクトは「なし」とみなす） */

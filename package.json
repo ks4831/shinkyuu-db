@@ -19,6 +19,7 @@
     "test:analytics": "npx tsx scripts/test-analytics.mts",
     "test:transfer": "npx tsx scripts/test-learning-transfer.mts",
     "test:resume": "npx tsx scripts/test-pastexam-resume.mts",
+    "test:parts": "npx tsx scripts/test-pastexam-parts.mts",
     "test:subject-resume": "npx tsx scripts/test-pastexam-subject-resume.mts",
     "test:nav": "npx tsx scripts/test-nav-history.mts",
     "import:original-mock": "npx tsx scripts/import-original-mock.mts",

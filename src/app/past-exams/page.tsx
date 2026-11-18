@@ -67,7 +67,7 @@ export default function PastExamsPage() {
                 <span className="mt-0.5 block text-xs text-gray-500">
                   {r.year}年・{r.playable} / {r.totalPerRound}問
                 </span>
-                <PastExamRoundStatus round={r.round} total={r.playable} />
+                <PastExamRoundStatus round={r.round} total={r.playable} parts={r.parts} />
               </span>
               <span className="flex-shrink-0 text-gray-300" aria-hidden="true">›</span>
             </Link>

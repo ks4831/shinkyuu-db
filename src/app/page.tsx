@@ -16,6 +16,8 @@ const PAST_EXAM_ROUND_RANGE = pastExamAvailable.length
   : ''
 /** 回ごとの演習可能数（HOMEの「続きから解く」で進捗の分母に使う） */
 const PAST_EXAM_TOTALS: Record<number, number> = Object.fromEntries(pastExamAvailable.map((c) => [c.round, c.playable]))
+/** 回ごとの午前・午後の範囲（HOMEの「続きから解く」で午前・午後だけの演習の進捗に使う） */
+const PAST_EXAM_PART_RANGES = Object.fromEntries(pastExamAvailable.map((c) => [c.round, c.parts]))
 /** 科目ごとの過去問数と科目名（HOMEの「続きから解く」の科目別で使う） */
 const PAST_EXAM_SUBJECT_TOTALS = pastExamCountsBySubject()
 const SUBJECT_NAMES: Record<string, string> = Object.fromEntries(subjects.map((s) => [s.id, s.name]))
@@ -160,7 +162,7 @@ export default function HomePage() {
       </section>
 
       {/* ── 続きから解く（年度別・科目別の過去問で途中のものがあるときだけ） ── */}
-      <HomeResumeCard totals={PAST_EXAM_TOTALS} subjectTotals={PAST_EXAM_SUBJECT_TOTALS} subjectNames={SUBJECT_NAMES} />
+      <HomeResumeCard totals={PAST_EXAM_TOTALS} partRanges={PAST_EXAM_PART_RANGES} subjectTotals={PAST_EXAM_SUBJECT_TOTALS} subjectNames={SUBJECT_NAMES} />
 
       {/* ── メイン3カード（スマホ縦1列 / PC 3カラム） ── */}
       <section className="px-4 pt-5 sm:pt-8">

@@ -11,6 +11,8 @@
      ページ全体をクラッシュさせない。
    ────────────────────────────────────────────────────────────── */
 
+import type { PastExamPart } from './pastExamParts'
+
 export const PAST_EXAM_SESSION_KEY = 'shinkyuu_pastexam_session_v1'
 
 export type PastExamSessionAnswer = {
@@ -54,10 +56,10 @@ function isValidSession(s: unknown, round: number): s is PastExamSession {
   )
 }
 
-function readAll(): SessionMap {
+function readAll(key: string = PAST_EXAM_SESSION_KEY): SessionMap {
   if (typeof window === 'undefined') return {}
   try {
-    const raw = window.localStorage.getItem(PAST_EXAM_SESSION_KEY)
+    const raw = window.localStorage.getItem(key)
     if (!raw) return {}
     const parsed = JSON.parse(raw)
     if (!parsed || typeof parsed !== 'object' || Array.isArray(parsed)) return {}
@@ -67,10 +69,10 @@ function readAll(): SessionMap {
   }
 }
 
-function writeAll(map: SessionMap) {
+function writeAll(map: SessionMap, key: string = PAST_EXAM_SESSION_KEY) {
   if (typeof window === 'undefined') return
   try {
-    window.localStorage.setItem(PAST_EXAM_SESSION_KEY, JSON.stringify(map))
+    window.localStorage.setItem(key, JSON.stringify(map))
   } catch {
     /* 保存できない環境では黙って無視 */
   }
@@ -137,7 +139,7 @@ export type PastExamSessionSummary = {
   answered: number
   correct: number
   total: number
-  /** 次に解く問題番号（未回答の最初の問題）。completed では total + 1 */
+  /** 次に解く問題番号（未回答の最初の問題）。completed では firstNumber + total */
   nextQuestionNumber: number
   updatedAt: number
 }
@@ -148,11 +150,12 @@ export type PastExamSessionSummary = {
  * completed フラグが立っていなくても全問回答済みなら completed として扱う
  * （最終問に回答したあと「結果を見る」を押さずに閉じた場合）。
  */
-export function summarizePastExamSession(s: PastExamSession, total: number): PastExamSessionSummary | null {
+export function summarizePastExamSession(s: PastExamSession, total: number, firstNumber = 1): PastExamSessionSummary | null {
   if (total <= 0) return null
   const numbers = s.answers.map((a) => a.questionNumber).sort((a, b) => a - b)
   if (numbers.length === 0 || numbers.length > total) return null
-  if (!numbers.every((n, i) => n === i + 1)) return null
+  // 午後だけの演習（問91〜）は firstNumber から連番。全問・午前は従来どおり問1から
+  if (!numbers.every((n, i) => n === firstNumber + i)) return null
   const completed = numbers.length === total
   if (s.completed && !completed) return null
   return {
@@ -161,7 +164,7 @@ export function summarizePastExamSession(s: PastExamSession, total: number): Pas
     answered: numbers.length,
     correct: s.answers.filter((a) => a.correct).length,
     total,
-    nextQuestionNumber: numbers.length + 1,
+    nextQuestionNumber: firstNumber + numbers.length,
     updatedAt: s.updatedAt,
   }
 }
@@ -174,6 +177,75 @@ export function listPastExamSessionSummaries(totals: Record<number, number>): Pa
     const s = getPastExamSession(round)
     const summary = s ? summarizePastExamSession(s, totals[round]) : null
     if (summary) list.push(summary)
+  }
+  return list.sort((a, b) => b.updatedAt - a.updatedAt)
+}
+
+/* ── 午前・午後だけの演習の途中経過（Sprint 25） ──────────────────
+   全問（180問）の演習の記録（上の shinkyuu_pastexam_session_v1）とは別キーに、
+   「回-区分」（例：'34-am'）ごとに保存する。全問の記録の形・中身には一切触れないので、
+   既存の「続きから」・HOME・一覧・学習記録の書き出しはそのまま動く。
+   1件の形は全問と同じ PastExamSession に part を足したもの。 */
+
+export const PAST_EXAM_PART_SESSION_KEY = 'shinkyuu_pastexam_part_session_v1'
+
+export type PastExamPartSession = PastExamSession & { part: PastExamPart }
+
+export function pastExamPartSessionId(round: number, part: PastExamPart): string {
+  return `${round}-${part}`
+}
+
+function isValidPartSession(s: unknown, round: number, part: PastExamPart): s is PastExamPartSession {
+  return isValidSession(s, round) && (s as Record<string, unknown>).part === part
+}
+
+export function getPastExamPartSession(round: number, part: PastExamPart): PastExamPartSession | null {
+  const s = readAll(PAST_EXAM_PART_SESSION_KEY)[pastExamPartSessionId(round, part)]
+  return isValidPartSession(s, round, part) ? s : null
+}
+
+/** 1問に回答が確定した時点で呼ぶ（全問の savePastExamProgress と同じ規則・別キー） */
+export function savePastExamPartProgress(round: number, part: PastExamPart, answer: PastExamSessionAnswer): void {
+  const map = readAll(PAST_EXAM_PART_SESSION_KEY)
+  const id = pastExamPartSessionId(round, part)
+  const current = isValidPartSession(map[id], round, part) ? map[id] : { answers: [] as PastExamSessionAnswer[] }
+  const answers = current.answers.filter((a) => a.questionId !== answer.questionId)
+  answers.push(answer)
+  const next: PastExamPartSession = { examRound: round, part, answers, completed: false, updatedAt: Date.now() }
+  map[id] = next
+  writeAll(map, PAST_EXAM_PART_SESSION_KEY)
+}
+
+export function markPastExamPartSessionCompleted(round: number, part: PastExamPart): void {
+  const map = readAll(PAST_EXAM_PART_SESSION_KEY)
+  const id = pastExamPartSessionId(round, part)
+  const current = isValidPartSession(map[id], round, part) ? map[id] : { answers: [] as PastExamSessionAnswer[] }
+  const next: PastExamPartSession = { examRound: round, part, answers: current.answers, completed: true, updatedAt: Date.now() }
+  map[id] = next
+  writeAll(map, PAST_EXAM_PART_SESSION_KEY)
+}
+
+/** その回・その区分の記録だけを消す（全問の記録・もう一方の区分・回答履歴には触れない） */
+export function resetPastExamPartSession(round: number, part: PastExamPart): void {
+  const map = readAll(PAST_EXAM_PART_SESSION_KEY)
+  delete map[pastExamPartSessionId(round, part)]
+  writeAll(map, PAST_EXAM_PART_SESSION_KEY)
+}
+
+export type PastExamPartSessionSummary = PastExamSessionSummary & { part: PastExamPart }
+
+/** ranges は回ごとの午前・午後の範囲（サーバー側で問題データから算出したもの） */
+export function listPastExamPartSessionSummaries(
+  ranges: Record<number, { part: PastExamPart; count: number; firstNumber: number }[] | null>,
+): PastExamPartSessionSummary[] {
+  const list: PastExamPartSessionSummary[] = []
+  for (const key of Object.keys(ranges)) {
+    const round = Number(key)
+    for (const r of ranges[round] ?? []) {
+      const s = getPastExamPartSession(round, r.part)
+      const summary = s ? summarizePastExamSession(s, r.count, r.firstNumber) : null
+      if (summary) list.push({ ...summary, part: r.part })
+    }
   }
   return list.sort((a, b) => b.updatedAt - a.updatedAt)
 }

@@ -8,7 +8,7 @@ import { LEARNING_KEYS, TRANSFER_FORMAT, TRANSFER_VERSION } from './learningData
 
    - localStorage を読むだけ（setItem・removeItem・clear は使わない）
    - 通信しない（fetch・XMLHttpRequest・画像の読み込みなどは使わない）
-   - 対象は LEARNING_KEYS の11キーだけ。計測用のキーや他の値は読まない
+   - 対象は LEARNING_KEYS のキーだけ。計測用のキーや他の値は読まない
    - 書き出す形式は新サイトの読み込み（parseImport）と同じ
    - 旧サイト以外のページで実行したときは何もしない
    ────────────────────────────────────────────────────────────── */

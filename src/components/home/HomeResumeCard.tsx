@@ -2,7 +2,12 @@
 
 import { useEffect, useState, type ReactNode } from 'react'
 import Link from 'next/link'
-import { listPastExamSessionSummaries, type PastExamSessionSummary } from '@/lib/pastExamSession'
+import {
+  listPastExamPartSessionSummaries,
+  listPastExamSessionSummaries,
+  type PastExamSessionSummary,
+} from '@/lib/pastExamSession'
+import { PAST_EXAM_PART_LABEL, type PastExamPart, type PastExamPartRange } from '@/lib/pastExamParts'
 import { listSubjectSessionSummaries, type PastExamSubjectSessionSummary } from '@/lib/pastExamSubjectSession'
 
 /** HOMEに並べる途中の回・科目の上限（それぞれ）。これを超えた分は過去問一覧で確認する */
@@ -16,6 +21,8 @@ function formatDate(ms: number): string {
 type Props = {
   /** 回ごとの演習可能数 */
   totals: Record<number, number>
+  /** 回ごとの午前・午後の範囲（区分が確認できない回は null） */
+  partRanges?: Record<number, PastExamPartRange[] | null>
   /** 科目ごとの過去問数 */
   subjectTotals: Record<string, number>
   /** 科目名 */
@@ -77,13 +84,21 @@ function ResumeItem({
    - 年度別と科目別は見出しを分けて並べる（記録も別キーで、混ざらない）。それぞれ最近解いた順に最大3件
    - 「続きから」は開始画面を挟まず次の未回答問題へ（?resume=1）。
      「最初から」は開始画面へ移動し、そこで選び直す（HOMEからは記録を消さない） */
-export default function HomeResumeCard({ totals, subjectTotals, subjectNames }: Props) {
-  const [rounds, setRounds] = useState<PastExamSessionSummary[]>([])
+/** 年度別の1件。part が無いものは全問（従来の記録） */
+type RoundItem = PastExamSessionSummary & { part?: PastExamPart }
+
+export default function HomeResumeCard({ totals, partRanges, subjectTotals, subjectNames }: Props) {
+  const [rounds, setRounds] = useState<RoundItem[]>([])
   const [subjects, setSubjects] = useState<PastExamSubjectSessionSummary[]>([])
 
   useEffect(() => {
     const sync = () => {
-      setRounds(listPastExamSessionSummaries(totals).filter((s) => s.status === 'in-progress'))
+      // 全問と午前・午後だけの演習を、最近解いた順にまとめて並べる（記録は別キーで、混ざらない）
+      const all: RoundItem[] = [
+        ...listPastExamSessionSummaries(totals),
+        ...(partRanges ? listPastExamPartSessionSummaries(partRanges) : []),
+      ]
+      setRounds(all.filter((s) => s.status === 'in-progress').sort((a, b) => b.updatedAt - a.updatedAt))
       setSubjects(listSubjectSessionSummaries(subjectTotals).filter((s) => s.status === 'in-progress'))
     }
     sync()
@@ -94,11 +109,11 @@ export default function HomeResumeCard({ totals, subjectTotals, subjectNames }: 
       window.removeEventListener('storage', sync)
       window.removeEventListener('pageshow', sync)
     }
-  }, [totals, subjectTotals])
+  }, [totals, partRanges, subjectTotals])
 
   if (rounds.length === 0 && subjects.length === 0) return null
   const groups = [
-    { key: 'round', label: '年度別過去問', count: rounds.length, unit: '回' },
+    { key: 'round', label: '年度別過去問', count: rounds.length, unit: '件' },
     { key: 'subject', label: '科目別過去問', count: subjects.length, unit: '科目' },
   ].filter((g) => g.count > 0)
 
@@ -118,8 +133,8 @@ export default function HomeResumeCard({ totals, subjectTotals, subjectNames }: 
               {g.key === 'round'
                 ? rounds.slice(0, MAX_ITEMS).map((s) => (
                     <ResumeItem
-                      key={s.examRound}
-                      title={`第${s.examRound}回 過去問`}
+                      key={`${s.examRound}-${s.part ?? 'all'}`}
+                      title={s.part ? `第${s.examRound}回 ${PAST_EXAM_PART_LABEL[s.part]} 過去問` : `第${s.examRound}回 過去問`}
                       updatedAt={s.updatedAt}
                       answered={s.answered}
                       total={s.total}
@@ -128,8 +143,8 @@ export default function HomeResumeCard({ totals, subjectTotals, subjectNames }: 
                           次は<span className="font-bold text-gray-900">問{s.nextQuestionNumber}</span>から
                         </>
                       }
-                      resumeHref={`/past-exams/${s.examRound}?resume=1`}
-                      restartHref={`/past-exams/${s.examRound}`}
+                      resumeHref={s.part ? `/past-exams/${s.examRound}?part=${s.part}&resume=1` : `/past-exams/${s.examRound}?resume=1`}
+                      restartHref={`/past-exams/${s.examRound}?part=${s.part ?? 'all'}`}
                       resumeLabel={`問${s.nextQuestionNumber}から再開`}
                     />
                   ))
