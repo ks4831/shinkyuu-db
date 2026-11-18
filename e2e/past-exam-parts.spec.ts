@@ -359,3 +359,176 @@ test('表示：範囲の選択・結果・間違えた問題の一覧のスク�
   await page.screenshot({ path: `test-results/sprint25-${info.project.name}-3-list.png`, fullPage: true })
   await expectNoHorizontalScroll(page)
 })
+
+/* ── Sprint 26：午前・午後の合算の検証 ──
+   - 午後を先に完了 → 午前を完了でも、全体（180問）の成績が正しい
+   - 午前は途中採点だけ → 午後を完了：途中採点は完了扱いにせず、全体には合算しない
+     （その後に午前を最後まで解くと合算される）
+   - 復習から結果へ戻っても全体の行は元のまま。再読み込み後の「前回の結果を見る」でも同じ
+   - 合算した側をやり直す（もう一度90問解く）と、合計は出なくなる */
+/** 問題番号 n の正誤の決め方（午前・午後で違う割合にして、取り違えを見つけやすくする） */
+const rightAm = (n: number) => n % 3 !== 0 // 午前：問1〜89 のうち29問不正解
+const rightPm = (n: number) => n % 5 !== 0 // 午後：問91〜179 のうち17問不正解
+const amCorrectOf = (lastRight: boolean) => [...Array(89)].filter((_, i) => rightAm(i + 1)).length + (lastRight ? 1 : 0)
+const pmCorrectOf = (lastRight: boolean) => [...Array(89)].filter((_, i) => rightPm(i + 91)).length + (lastRight ? 1 : 0)
+
+function partSeed(round: number, part: 'am' | 'pm', count: number, completed = false) {
+  const [first] = PART_RANGE[part]
+  const answers = []
+  for (let n = first; n < first + count; n++) answers.push(seedAnswer(round, n, part === 'am' ? rightAm(n) : rightPm(n)))
+  return { examRound: round, part, answers, completed, updatedAt: 1 }
+}
+
+/** 範囲の最後の1問（問90／問180）を正解で解いて結果画面へ */
+async function finishLast(page: Page, round: number, part: 'am' | 'pm') {
+  await page.goto(`/past-exams/${round}?part=${part}`)
+  await expect(page.getByText('89問回答済み・残り1問')).toBeVisible()
+  await press(page, page.getByRole('button', { name: '続きから解く' }))
+  expect((await current(page)).questionNumber).toBe(PART_RANGE[part][1])
+  await answer(page, 'right')
+  await press(page, nextBtn(page))
+}
+
+const scoreRow = (c: number, t: number) => [String(c), String(t - c), '0', pct(c, t)]
+
+for (const round of ROUNDS) {
+  test(`第${round}回：午後を先に完了 → 午前を完了すると、全体180問の成績が正しく出る`, async ({ page }) => {
+    await page.evaluate(
+      (v) => localStorage.setItem('shinkyuu_pastexam_part_session_v1', v),
+      JSON.stringify({ [`${round}-pm`]: partSeed(round, 'pm', 89), [`${round}-am`]: partSeed(round, 'am', 89) }),
+    )
+    const am = amCorrectOf(true)
+    const pm = pmCorrectOf(true)
+    await finishLast(page, round, 'pm')
+    expect(await breakdownRow(page, '午後')).toEqual(scoreRow(pm, 90))
+    expect(await breakdownRow(page, '午前')).toEqual(['途中（89 / 90問）'])
+    expect(await breakdownRow(page, '全体')).toEqual(['午前・午後とも全問解くと表示'])
+
+    await finishLast(page, round, 'am')
+    expect(await counts(page)).toEqual({ correct: am, wrong: 90 - am, unanswered: 0 })
+    expect(await breakdownRow(page, '午前')).toEqual(scoreRow(am, 90))
+    expect(await breakdownRow(page, '午後')).toEqual(scoreRow(pm, 90))
+    expect(await breakdownRow(page, '全体')).toEqual(scoreRow(am + pm, 180))
+
+    await page.goto(`/past-exams/${round}`)
+    await expect(page.getByTestId('both-parts-score')).toHaveText(
+      `午前＋午後の合計　${am + pm} / 180問正解（正答率 ${pct(am + pm, 180)}）`,
+    )
+  })
+
+  test(`第${round}回：午前は途中採点だけ → 午後を完了しても全体には合算しない（午前を完了すると合算）`, async ({ page }) => {
+    await page.evaluate(
+      (v) => localStorage.setItem('shinkyuu_pastexam_part_session_v1', v),
+      JSON.stringify({ [`${round}-am`]: partSeed(round, 'am', 40), [`${round}-pm`]: partSeed(round, 'pm', 89) }),
+    )
+    // 午前：1問解いて途中採点（41問回答・未回答49問）
+    await page.goto(`/past-exams/${round}?part=am`)
+    await press(page, page.getByRole('button', { name: '続きから解く' }))
+    expect((await current(page)).questionNumber).toBe(41)
+    await answer(page, 'right')
+    await press(page, page.getByRole('button', { name: 'ここまでで採点する（未回答49問）' }))
+    await expect(page.getByText('途中までの採点（41 / 90問 回答）')).toBeVisible()
+    expect((await counts(page)).unanswered).toBe(49)
+    const amSaved = await page.evaluate((r) => JSON.parse(localStorage.getItem('shinkyuu_pastexam_part_session_v1')!)[`${r}-am`], round)
+    expect(amSaved.completed).toBe(false)
+    expect(amSaved.answers.length).toBe(41)
+
+    // 午後を完了：午前は「途中」のまま、全体は出さない
+    const pm = pmCorrectOf(true)
+    await finishLast(page, round, 'pm')
+    expect(await breakdownRow(page, '午後')).toEqual(scoreRow(pm, 90))
+    expect(await breakdownRow(page, '午前')).toEqual(['途中（41 / 90問）'])
+    expect(await breakdownRow(page, '全体')).toEqual(['午前・午後とも全問解くと表示'])
+    await page.goto(`/past-exams/${round}`)
+    await expect(page.getByRole('button', { name: /^午前の問題を解く/ })).toContainText('途中・41問回答済み（次は問42）')
+    await expect(page.getByTestId('both-parts-score')).toHaveCount(0)
+
+    // 午前の残りを保存データで用意し、最後の1問を解くと合算される
+    await page.evaluate(
+      ([r, v]) => {
+        const all = JSON.parse(localStorage.getItem('shinkyuu_pastexam_part_session_v1')!)
+        all[`${r}-am`] = JSON.parse(v as string)
+        localStorage.setItem('shinkyuu_pastexam_part_session_v1', JSON.stringify(all))
+      },
+      [round, JSON.stringify(partSeed(round, 'am', 89))],
+    )
+    await finishLast(page, round, 'am')
+    const am = amCorrectOf(true)
+    expect(await breakdownRow(page, '全体')).toEqual(scoreRow(am + pm, 180))
+  })
+}
+
+test('第34回：合算後の復習・再読み込み・やり直しでも全体の成績を取り違えない', async ({ page }) => {
+  await page.evaluate(
+    (v) => localStorage.setItem('shinkyuu_pastexam_part_session_v1', v),
+    JSON.stringify({ '34-am': partSeed(34, 'am', 90, true), '34-pm': partSeed(34, 'pm', 89) }),
+  )
+  const am = amCorrectOf(rightAm(90))
+  const pm = pmCorrectOf(true)
+  await finishLast(page, 34, 'pm')
+  expect(await breakdownRow(page, '全体')).toEqual(scoreRow(am + pm, 180))
+  const savedBefore = await page.evaluate(() => localStorage.getItem('shinkyuu_pastexam_part_session_v1'))
+
+  // 復習（全部正解）→ 結果へ戻る：午後・全体とも元のまま、保存データも変わらない
+  const wrong = 90 - pm
+  await press(page, page.getByRole('button', { name: `間違えた${wrong}問を復習` }))
+  for (let i = 0; i < wrong; i++) {
+    await answer(page, 'right')
+    await press(page, nextBtn(page))
+  }
+  await expect(page.getByText(new RegExp(`^${wrong}\\s*/ ${wrong}問 正解$`))).toBeVisible()
+  await press(page, page.getByRole('button', { name: '第34回 午後の結果へ' }))
+  expect(await breakdownRow(page, '午後')).toEqual(scoreRow(pm, 90))
+  expect(await breakdownRow(page, '全体')).toEqual(scoreRow(am + pm, 180))
+  expect(await page.evaluate(() => localStorage.getItem('shinkyuu_pastexam_part_session_v1'))).toBe(savedBefore)
+
+  // 再読み込み → 午後の「前回の結果を見る」でも同じ
+  await page.reload()
+  await press(page, page.getByRole('button', { name: '前回の結果を見る' }))
+  expect(await breakdownRow(page, '午後')).toEqual(scoreRow(pm, 90))
+  expect(await breakdownRow(page, '全体')).toEqual(scoreRow(am + pm, 180))
+
+  // 午前をやり直すと午前の記録は消え、合計は出なくなる（午後の記録は残る）
+  await page.goto('/past-exams/34?part=am')
+  await press(page, page.getByRole('button', { name: '前回の結果を見る' }))
+  expect(await breakdownRow(page, '全体')).toEqual(scoreRow(am + pm, 180))
+  await press(page, page.getByRole('button', { name: 'もう一度90問解く' }))
+  await expect(page.getByRole('button', { name: '問1から解く' })).toBeVisible() // やり直しは午前の開始画面へ戻る（従来どおり）
+  await page.goto('/past-exams/34')
+  await expect(page.getByTestId('both-parts-score')).toHaveCount(0)
+  await expect(page.getByRole('button', { name: /^午後の問題を解く/ })).toContainText(`完了・${pm} / 90問正解`)
+})
+
+/* ── Sprint 26：選択肢を押したとき「回答する」が下部メニューに隠れない ──
+   ボタンを中央へスクロールする press() は使わず、利用者と同じく「見えている選択肢を押しただけ」の状態で確かめる。
+   対象は、修正前に390px幅で「回答する」が下部メニューの裏に来ていた問題（第30回 問160・第29回 問86・第33回 問84）、
+   一部が重なっていた問題（第32回 問127）、最も長い問題（第31回 問156） */
+for (const [round, num] of [[30, 160], [29, 86], [33, 84], [32, 127], [31, 156]] as const) {
+  test(`第${round}回 問${num}：選択肢を押すと「回答する」が下部メニューの上に見える`, async ({ page }) => {
+    const part = num <= 90 ? 'am' : 'pm'
+    const first = PART_RANGE[part][0]
+    const answers = []
+    for (let n = first; n < num; n++) answers.push(seedAnswer(round, n, true))
+    await page.evaluate(
+      (v) => localStorage.setItem('shinkyuu_pastexam_part_session_v1', v),
+      JSON.stringify({ [`${round}-${part}`]: { examRound: round, part, answers, completed: false, updatedAt: 1 } }),
+    )
+    await page.goto(`/past-exams/${round}?part=${part}`)
+    await press(page, page.getByRole('button', { name: '続きから解く' }))
+    expect((await current(page)).questionNumber).toBe(num)
+    await page.evaluate(() => window.scrollTo(0, 0))
+    await choices(page).nth(3).click() // Playwright は「見える位置まで」だけスクロールして押す
+    const r = await answerBtn(page).evaluate((el) => {
+      const b = el.getBoundingClientRect()
+      const nav = document.querySelector('nav[aria-label="下部ナビゲーション"]')!.getBoundingClientRect()
+      const navTop = nav.height > 0 ? nav.top : window.innerHeight // PC では下部メニューを表示しない
+      const hit = document.elementFromPoint(b.left + b.width / 2, b.top + b.height / 2)
+      return { top: b.top, bottom: b.bottom, navTop, hit: hit === el }
+    })
+    expect(r.top, '画面の上にはみ出さない').toBeGreaterThanOrEqual(0)
+    expect(r.bottom, '下部メニューより上に全体が出ている').toBeLessThanOrEqual(r.navTop)
+    expect(r.hit, '中央を押すと「回答する」に当たる').toBe(true)
+    await answerBtn(page).click()
+    await expect(page.getByText(/^(正解|不正解)$/).first()).toBeVisible()
+  })
+}

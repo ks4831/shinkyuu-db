@@ -465,6 +465,20 @@ export default function PastExamRunner(props: PastExamRunnerProps) {
      上端でも出題画面の先頭は見える。 */
   const screenTopRef = useRef<HTMLDivElement>(null)
   const scrollPending = useRef(false)
+
+  /* ── 選択肢を選んだあと、「回答する」を見える位置へ（Sprint 26） ──
+     スマホでは画面下に固定の下部メニュー（BottomNav・高さ約58px＋セーフエリア）がある。
+     選択肢4つがちょうど画面に収まる長さの問題では、「回答する」が下部メニューの裏に来て、
+     選択肢を押しても回答ボタンが見えなかった。選んだ直後に、ボタンの下端が下部メニューの上に
+     出るところまでだけ動かす（scroll-margin-bottom＝下部メニューの高さ分。PCは少しの余白だけ）。
+     すでに見えていれば動かさない（block:'nearest'）。 */
+  const answerBtnRef = useRef<HTMLButtonElement>(null)
+  const revealAnswerPending = useRef(false)
+  useEffect(() => {
+    if (!revealAnswerPending.current) return
+    revealAnswerPending.current = false
+    answerBtnRef.current?.scrollIntoView({ block: 'nearest', behavior: 'auto' })
+  }, [nav])
   function requestScroll() {
     scrollPending.current = true
   }
@@ -1261,7 +1275,10 @@ export default function PastExamRunner(props: PastExamRunnerProps) {
               type="button"
               disabled={answered}
               aria-pressed={isSel}
-              onClick={() => setNav(selectDraft(nav, i))}
+              onClick={() => {
+                revealAnswerPending.current = true
+                setNav(selectDraft(nav, i))
+              }}
               className={cls}
             >
               <span className="mt-0.5 flex-shrink-0 font-bold" aria-hidden="true">{CIRCLED[i]}</span>
@@ -1273,10 +1290,11 @@ export default function PastExamRunner(props: PastExamRunnerProps) {
 
       {!answered && (
         <button
+          ref={answerBtnRef}
           type="button"
           onClick={handleAnswer}
           disabled={selected === null}
-          className="mt-5 w-full rounded-xl bg-green-600 px-5 py-4 text-base font-bold text-white transition-colors hover:bg-green-700 disabled:bg-gray-200 disabled:text-gray-400"
+          className="mt-5 w-full scroll-mb-[calc(env(safe-area-inset-bottom)+4.5rem)] sm:scroll-mb-4 rounded-xl bg-green-600 px-5 py-4 text-base font-bold text-white transition-colors hover:bg-green-700 disabled:bg-gray-200 disabled:text-gray-400"
         >
           回答する
         </button>
